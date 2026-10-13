@@ -11,38 +11,101 @@
 </head>
 <body>
 <div class="hub">
-<header class="header"><p class="brand">Sezen’s Psychology Study Hub · Year 2</p><nav class="courses" aria-label="Courses"><button type="button" data-course="cognitive" aria-pressed="true">Cognitive Psychology</button><button type="button" data-course="statistics" aria-pressed="false">Statistics 2</button><button type="button" data-course="spss" aria-pressed="false">SPSS 2</button></nav></header>
-<main id="main"><section id="overview"><h1 id="course-title">Cognitive Psychology</h1><p class="hint">Choose a theme</p><div class="grid" id="tiles"></div></section><section id="detail" hidden><button type="button" class="back" id="back">← All themes</button><h1 id="detail-title"></h1><p class="hint" id="detail-course"></p><ul class="resources" id="resources"></ul></section><noscript>Please enable JavaScript to browse the course cards. All original links are also available in the repository README.</noscript></main>
+<header class="header"><p class="brand">Sezen’s Psychology Study Hub · Year 2</p><nav class="courses" aria-label="Courses"></nav></header>
+<main id="main"><section id="overview"><h1 id="course-title">Loading your study links…</h1><p class="hint">Psychology · Year 2</p><div class="grid" id="tiles"></div></section><section id="detail" hidden><button type="button" class="back" id="back">← All themes</button><h1 id="detail-title"></h1><p class="hint" id="detail-course"></p><ul class="resources" id="resources"></ul></section><noscript>Please enable JavaScript to browse the course cards. All original links are also available in the repository README.</noscript></main>
 <footer class="footer"><a href="https://sezsaracoglu-lab.github.io/NID_NL/" target="_blank" rel="noopener noreferrer">NID ↗</a></footer>
 </div>
 <script>
-// Add or edit study links here. Keep each URL exactly as it appears in your repository.
+// Edit README.md in psychology_year_2 to update this dashboard.
+const README_URL='https://raw.githubusercontent.com/sezsaracoglu-lab/psychology_year_2/main/README.md';
+const SOURCE_URL='https://github.com/sezsaracoglu-lab/psychology_year_2/blob/main/README.md';
 const base='https://sezsaracoglu-lab.github.io/';
-const data={
-cognitive:{title:'Cognitive Psychology',hint:'Choose a theme',groups:[
-{title:'Theme 1',links:[['Lecture 1 Slide Visuals','cognitive_psychology_lecture_1/'],['Easy high level teaching','theme1_visualteachig_v2/']]},
-{title:'Theme 2',links:[['Objectives and checklist','cognitive_theme2_objectiveandchecklist/'],['Deep dives checklist','cognitive_theme2_deepdive_Problem2/'],['Article','cognitive_theme2_article/'],['Lecture 2 Slide Visuals','cognitive_psychology_lecture_2/'],['Concept Explainer','concept-explainer_visual/']]},
-{title:'Theme 3',links:[['Objectives','cognitive_theme3_Objectives/'],['Deep dive','cognitive_theme3/']]},
-{title:'Theme 4',links:[['Objective Checklist','cognitive_theme4_objectives'],['Objective Checklist 2','cognitive_theme4_objective/'],['Deep dive','cognitive_theme4_problem-statements/']]},
-{title:'Theme 6',links:[['Objective Checklist and Tutorial in Depth','cognitive_theme-5/']]}
-]},
-statistics:{title:'Statistics 2',hint:'Choose a week or exam collection',groups:[
-{title:'Weeks 1 & 2',links:[['Week 1 and Week 2 Lectures','STAT_2_WEEK1_2/'],['Week 1 Lecture 1','stat2_theme1/'],['Week 2 Lecture 2','stat2_lecture2/']]},
-{title:'Week 3',links:[['Week 3 Lecture 3 Additional','stat_2_lecture_3/'],['Week 3 Lecture 3','stat2_lecture3/']]},
-{title:'Week 4 · Regression',links:[['Week 4 Lecture 4','stat2_lecture4/'],['Week 4 Homework 4 Regression','stat2_homework4/'],['Week 4 Homework 4 and Extra','stat2_homework4_Extra/'],['Week 4 Practice questions','theme4_practisetest/']]},
-{title:'Week 5 · Multiple Regression',links:[['Week 5 Lecture 5 Multiple Regression','stat2_lecture5/'],['Week 5 Homework 5','stat2_theme5_homework/'],['Multiple Regression','stat2_theme5_focusedteachig/'],['Week 5 Homework 5 and Extra','stat2_theme5_homework_Assigment/']]},
-{title:'Week 6 · One Way ANOVA',links:[['Week 6 Lecture 6 One Way ANOVA','stat2_theme6_annova/'],['One Way ANOVA · 12 Steps','stat2_theme6_short-teaching/'],['Week 6 Homework 6','stat2_theme6_homework/']]},
-{title:'Week 7 · Two Way ANOVA',links:[['Week 7 Lecture 7 Two Way ANOVA','stat2_theme7_lecture/'],['Week 7 Homework 7 and Extra','stat2_theme7_solved_homework/'],['Two Way ANOVA','stat2_theme7_focus-/']]},
-{title:'Practice Exams',links:[['Theme 2 Practice exam','stat_2_theme2_practise-exam/'],['Theme 3 Practice exam','stat2_theme2_practise-exam/'],['Theme 4 Practice exam','stat2_regression_practise_Exam/']]},
-{title:'Mock Exams',links:[['Stat 1 Topics · Mock 1','stat2_moc_1/']]}
-]},
-spss:{title:'SPSS 2',hint:'Choose a meeting',groups:[{title:'Meeting 2',links:[['SPSS Meeting 2','SPSS_year2_theme1/']]}]}
-};
+const data={};
 const overview=document.getElementById('overview'),detail=document.getElementById('detail'),tiles=document.getElementById('tiles');
-let active='cognitive';
-function showCourse(key,focus=false){active=key;document.querySelectorAll('[data-course]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.course===key)));document.getElementById('course-title').textContent=data[key].title;overview.querySelector('.hint').textContent=data[key].hint;tiles.replaceChildren();data[key].groups.forEach((group,index)=>{const tile=document.createElement('article');tile.className='tile';const title=document.createElement('h2');title.textContent=group.title;const button=document.createElement('button');button.type='button';button.className='open';button.textContent=key==='cognitive'?'Open theme →':key==='spss'?'Open meeting →':'Open collection →';button.setAttribute('aria-label','Open '+group.title);button.addEventListener('click',()=>showGroup(index));tile.append(title,button);tiles.append(tile)});detail.hidden=true;overview.hidden=false;if(focus)document.querySelector('[data-course="'+key+'"]').focus()}
-function showGroup(index){const group=data[active].groups[index];document.getElementById('detail-title').textContent=group.title;document.getElementById('detail-course').textContent=data[active].title;document.getElementById('back').textContent=active==='cognitive'?'← All themes':active==='spss'?'← All meetings':'← All collections';const list=document.getElementById('resources');list.replaceChildren();group.links.forEach(([label,path])=>{const li=document.createElement('li'),a=document.createElement('a'),text=document.createElement('span'),arrow=document.createElement('span');a.href=base+path;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',label+' (opens in a new tab)');text.textContent=label;arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');a.append(text,arrow);li.append(a);list.append(li)});overview.hidden=true;detail.hidden=false;document.getElementById('back').focus()}
-document.querySelectorAll('[data-course]').forEach(b=>b.addEventListener('click',()=>showCourse(b.dataset.course)));document.getElementById('back').addEventListener('click',()=>showCourse(active,true));showCourse(active);
+let active='';
+function parseReadme(markdown){
+  const courses=[],extras=[];
+  let course=null,group=null,inCode=false;
+  for(const raw of markdown.split(/\r?\n/)){
+    const line=raw.trim();
+    if(/^```|^~~~/.test(line)){inCode=!inCode;continue}
+    if(inCode)continue;
+    const heading=line.match(/^##\s+(.+?)(?:\s+#+)?$/);
+    if(heading){
+      const title=heading[1].trim();
+      if(/^courses$/i.test(title)){course=null;group=null;continue}
+      course={title,hint:'Choose a theme or collection',groups:[]};courses.push(course);group=null;continue;
+    }
+    const section=line.match(/^\*\*(.+?)\*\*\s*$/)||line.match(/^###\s+(.+?)(?:\s+#+)?$/);
+    if(section&&course){group={title:section[1].trim(),links:[]};course.groups.push(group);continue}
+    const linkPattern=/(?<!!)\[([^\]]+)\]\(\s*(https?:\/\/[^\s)]+)\s*\)/g;
+    for(const match of line.matchAll(linkPattern)){
+      const label=match[1].trim(),url=match[2];
+      if(!label)continue;
+      if(course){if(!group){group={title:'Study materials',links:[]};course.groups.push(group)}group.links.push([label,url])}
+      else extras.push([label,url]);
+    }
+  }
+  for(const course of courses)course.groups=course.groups.filter(g=>g.links.length);
+  return {courses:courses.filter(c=>c.groups.length),extras};
+}
+function showCourse(key,focus=false){
+  active=key;
+  document.querySelectorAll('[data-course]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.course===key)));
+  document.getElementById('course-title').textContent=data[key].title;
+  overview.querySelector('.hint').textContent=data[key].hint;
+  tiles.replaceChildren();
+  data[key].groups.forEach((group,index)=>{
+    const tile=document.createElement('article');tile.className='tile';
+    const title=document.createElement('h2');title.textContent=group.title;
+    const button=document.createElement('button');button.type='button';button.className='open';
+    button.textContent=/^theme\b/i.test(group.title)?'Open theme →':'Open collection →';
+    button.setAttribute('aria-label','Open '+group.title);button.addEventListener('click',()=>showGroup(index));
+    tile.append(title,button);tiles.append(tile);
+  });
+  detail.hidden=true;overview.hidden=false;
+  if(focus)document.querySelector('[data-course="'+key+'"]').focus();
+}
+function showGroup(index){
+  const group=data[active].groups[index];
+  document.getElementById('detail-title').textContent=group.title;
+  document.getElementById('detail-course').textContent=data[active].title;
+  document.getElementById('back').textContent='← All collections';
+  const list=document.getElementById('resources');list.replaceChildren();
+  group.links.forEach(([label,url])=>{
+    const li=document.createElement('li'),a=document.createElement('a'),text=document.createElement('span'),arrow=document.createElement('span');
+    a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',label+' (opens in a new tab)');
+    text.textContent=label;arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');a.append(text,arrow);li.append(a);list.append(li);
+  });
+  overview.hidden=true;detail.hidden=false;document.getElementById('back').focus();
+}
+function renderReadme(parsed){
+  if(!parsed.courses.length)throw new Error('No course links found');
+  const nav=document.querySelector('.courses');nav.replaceChildren();
+  parsed.courses.forEach((course,index)=>{
+    const key='course'+index;data[key]=course;
+    const button=document.createElement('button');button.type='button';button.dataset.course=key;button.textContent=course.title;
+    button.setAttribute('aria-pressed','false');button.addEventListener('click',()=>showCourse(key));nav.append(button);
+  });
+  const footer=document.querySelector('.footer');footer.replaceChildren();
+  for(const [label,url] of parsed.extras){const a=document.createElement('a');a.href=url;a.textContent=label+' ↗';a.target='_blank';a.rel='noopener noreferrer';footer.append(a,document.createTextNode('   '))}
+  const edit=document.createElement('a');edit.href=SOURCE_URL;edit.textContent='Edit study links in README ↗';edit.target='_blank';edit.rel='noopener noreferrer';footer.append(edit);
+  showCourse('course0');
+}
+document.getElementById('back').addEventListener('click',()=>showCourse(active,true));
+async function loadReadme(){
+  try{
+    const response=await fetch(README_URL+'?t='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(15000)});
+    if(!response.ok)throw new Error('README unavailable');
+    renderReadme(parseReadme(await response.text()));
+  }catch(error){
+    document.getElementById('course-title').textContent='Study links could not load';
+    overview.querySelector('.hint').textContent='Refresh to try again. The source README must be public and contain course headings and links.';
+    const a=document.createElement('a');a.href=SOURCE_URL;a.textContent='Open the original README →';tiles.replaceChildren(a);
+  }
+}
+loadReadme();
+
 </script>
 </body>
 </html>
