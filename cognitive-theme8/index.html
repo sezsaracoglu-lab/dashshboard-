@@ -1,0 +1,857 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theme 8 · LLMs in Psychology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>:root{--bg:#faf7f1;--card:#fff;--line:#e8e1d3;--gold:#c9a96e;--dgold:#a8854a;--pgold:#f6eedd;--navy:#34466b;--ink:#2b2f3a;--muted:#6b7280;--blue:#e3ecf7;--rose:#f7e4e4;--green:#e2f1e6;--lav:#ece6f6;--peach:#fbe9d9;--ok:#2f8a57;--bad:#c0392b}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.6}
+h1,h2,h3,.brand{font-family:'Cormorant Garamond',Georgia,serif;color:var(--navy);text-wrap:balance}
+h1{font-size:2.4rem;margin:.2em 0}h2{font-size:2rem;margin:.1em 0}h3{font-size:1.6rem;margin:1.6em 0 .5em}h4{color:var(--navy);margin:1.4em 0 .5em;font-size:1.05rem}h5{color:var(--dgold);margin:1em 0 .3em;font-size:.95rem}
+.app{display:grid;grid-template-columns:240px minmax(0,1fr);min-height:100vh}
+.side{position:sticky;top:0;height:100vh;background:#fff;border-right:1px solid var(--line);padding:24px 18px;display:flex;flex-direction:column;gap:16px}
+.brand{font-size:1.7rem;font-weight:700;line-height:1.1}.brand span{color:var(--dgold);font-size:1.2rem}
+.nav{display:flex;flex-direction:column;gap:8px}
+.nb{border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:11px 14px;text-align:left;font:inherit;font-weight:500;color:var(--navy);cursor:pointer}
+.nb.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.nb:focus-visible,.btn:focus-visible,.pill:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.prep{margin-top:auto;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--dgold);font-weight:700}
+.prog span{font-size:.82rem;color:var(--muted)}.pbar{height:9px;background:var(--pgold);border-radius:9px;overflow:hidden;margin-bottom:4px}.pbar i{display:block;height:100%;width:0;background:var(--gold);transition:width .4s}
+main{padding:28px clamp(16px,4vw,48px) 60px;min-width:0;max-width:1180px}
+.panel{display:none}.panel.on{display:block}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dgold);font-weight:700}
+.sub{color:var(--muted);margin:.2em 0 1em;font-size:1.05rem}
+.notebox{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 24px}
+.notebox p{margin:.5em 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:18px 0}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center}.stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--navy);line-height:1}.stat span{color:var(--muted);font-size:.9rem}
+.los{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.locol{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 18px}.locol ul{margin:.3em 0;padding-left:1.1em}
+.tw{overflow-x:auto;margin:10px 0}
+table.tb{border-collapse:collapse;width:100%;background:#fff;font-size:.92rem;border-radius:14px;overflow:hidden}
+.tb th{background:var(--navy);color:#fff;text-align:left;padding:8px 10px;font-weight:600}.tb td{border-top:1px solid var(--line);padding:8px 10px;vertical-align:top}
+.tb tr:nth-child(even) td{background:#fcfaf6}.st td:first-child{font-weight:700;color:var(--navy);width:150px}
+.tlw{overflow-x:auto;padding:10px 0}.tl{display:flex;gap:0;min-width:900px;position:relative;padding-top:10px}
+.tl:before{content:"";position:absolute;left:10px;right:10px;top:21px;height:3px;background:var(--gold)}
+.tp{flex:1;background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;font:inherit;position:relative;padding:0 2px}
+.tp .dot{width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--navy);z-index:1}.tp.on .dot{background:var(--gold)}
+.tp .ty{font-weight:700;color:var(--navy);font-size:.85rem;margin-top:4px}.tp .tw2{font-size:.72rem;color:var(--muted);text-align:center;line-height:1.2}
+.tlbox{background:var(--pgold);border-radius:14px;padding:12px 16px;margin-top:6px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.ltile{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;text-align:left;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:2px;transition:transform .15s,box-shadow .15s}
+.ltile:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(52,70,107,.1)}
+.ltile .le{font-size:1.6rem}.ltile .ln{font-size:.7rem;letter-spacing:.12em;color:var(--dgold);font-weight:700}.ltile b{color:var(--navy)}.ltile .ls{font-size:.82rem;color:var(--muted);line-height:1.35}
+.ltile .tick{position:absolute;top:10px;right:12px;width:24px;height:24px;border-radius:50%;background:var(--ok);color:#fff;display:none;align-items:center;justify-content:center;font-size:.8rem}
+.ltile.seen .tick{display:flex}
+.synth{background:var(--lav);border-radius:16px;padding:14px 20px;margin-top:22px}
+.refs{font-size:.85rem;color:var(--muted);margin-top:24px}
+.pills{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:12px;position:sticky;top:0;background:var(--bg);z-index:5;padding-top:6px}
+.pill{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 13px;font:inherit;font-size:.84rem;cursor:pointer;color:var(--navy)}.pill.on{background:var(--navy);color:#fff}
+.lesson{display:none;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px clamp(16px,3vw,32px)}.lesson.on{display:block}
+.two{display:grid;grid-template-columns:3fr 2fr;gap:22px;align-items:start;margin:12px 0}
+.two>*{min-width:0}
+.diag{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:8px}
+.diag svg{width:100%;height:auto;display:block;font-family:'DM Sans',sans-serif}
+.bul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}.bul li{background:var(--bg);border-radius:12px;padding:9px 12px;font-size:.93rem;line-height:1.5}
+.hook{background:var(--peach);border-radius:14px;padding:11px 16px;margin:10px 0}.friend{background:var(--blue);border-radius:14px;padding:11px 16px;margin:10px 0}
+.key{background:var(--pgold);border:2px solid var(--gold);border-radius:14px;padding:12px 16px;margin:12px 0}
+.note{font-size:.84rem;color:var(--muted);font-style:italic}
+.demo{background:var(--green);border-radius:16px;padding:14px 18px;margin:16px 0}.demo h4{margin-top:.2em}
+.btn{border:0;background:var(--navy);color:#fff;border-radius:12px;padding:8px 16px;font:inherit;font-weight:600;cursor:pointer}.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}.btn:disabled{opacity:.4;cursor:default}
+.fb{font-weight:600;color:var(--navy);min-height:1.4em}
+.watch{margin:14px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.wbtn{background:var(--rose);color:var(--bad);border-radius:999px;padding:5px 12px;text-decoration:none;font-size:.85rem}
+details.cc{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:9px 14px;margin:8px 0}details.cc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.cc p{margin:.5em 0 0}
+.pn{display:flex;justify-content:space-between;margin-top:22px}
+.clist{display:flex;flex-direction:column;gap:6px}.citem{display:flex;flex-wrap:wrap;align-items:center;gap:8px;background:#fff;border-radius:10px;padding:7px 10px}.citem span{flex:1 1 220px}
+.citem button{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:4px 10px;cursor:pointer;font:inherit;font-size:.85rem}.citem.ok{outline:2px solid var(--ok)}.citem.no{outline:2px solid var(--bad)}
+.river{display:grid;grid-template-columns:1fr 150px 1fr;gap:10px}.bank,.boat{background:#fff;border-radius:12px;padding:8px;min-height:110px}.bank b{font-size:.8rem;color:var(--navy)}
+.boatw{display:flex;flex-direction:column;gap:6px}.boat{background:#cfe2f3;min-height:70px}
+.pcs{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}.pc{font-size:1.5rem;background:none;border:1px solid var(--line);border-radius:8px;cursor:pointer;padding:2px 4px}
+.maprow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}.maprow span{flex:0 0 190px;font-weight:600}.maprow select{flex:1 1 200px;padding:6px;border-radius:8px;border:1px solid var(--line);font:inherit}
+.jq{background:#fff;border-radius:10px;padding:8px 10px;margin:6px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.jq input{width:140px;padding:5px 8px;border:1px solid var(--line);border-radius:8px;font:inherit}.jq .r{font-size:.88rem}
+.rid .rq{background:#fff;border-radius:10px;padding:8px 12px;margin:6px 0}.rid .ra{display:none;color:var(--ok);font-weight:600;margin-top:4px}.rid .rq.show .ra{display:block}
+textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:8px;font:inherit}
+.eggout{margin-top:8px}.eggout .tag{display:inline-block;border-radius:999px;padding:2px 10px;margin:3px;font-size:.85rem}.tag.fx{background:var(--rose)}.tag.ex{background:#c8e6d2}.tag.un{background:#eee}
+.stbox{background:#fff;border-radius:12px;padding:14px;text-align:center}.stw{font-size:2.2rem;font-weight:700;margin:8px 0 12px;min-height:1.4em;letter-spacing:.05em}
+.stbtns{display:flex;justify-content:center;gap:8px;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 13px;cursor:pointer;font:inherit;font-size:.86rem;color:var(--navy)}.chip.on{background:var(--navy);color:#fff}
+.fctl{display:flex;gap:10px;align-items:center;margin:8px 0 16px}#fcount{color:var(--muted);font-size:.9rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.fcard{perspective:1000px;height:200px;cursor:pointer}.fcard .in{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}.fcard.flip .in{transform:rotateY(180deg)}
+.fcard .f,.fcard .b{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:center;border:1px solid var(--line);overflow:auto}
+.fcard .f{background:#fff}.fcard .f b{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--navy);line-height:1.2}.fcard .b{background:var(--pgold);transform:rotateY(180deg);font-size:.92rem}
+.fcard .t{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dgold);margin-bottom:6px}
+.scorebar{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff;border-radius:14px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center}
+.q{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:12px 0}.q p{font-weight:600;color:var(--navy);margin:.2em 0 .6em}
+.q .o{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:9px 12px;margin:6px 0;font:inherit;cursor:pointer}
+.q .o.ok{background:var(--green);border-color:var(--ok)}.q .o.no{background:var(--rose);border-color:var(--bad)}.q .ex{display:none;font-size:.9rem;margin-top:6px}.q.done .ex{display:block}
+.final{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--navy);text-align:center;margin:16px 0}
+@media (max-width:860px){.app{grid-template-columns:minmax(0,1fr)}.side{position:sticky;top:0;height:auto;z-index:20;flex-direction:row;flex-wrap:wrap;align-items:center;padding:10px 14px;gap:10px;border-right:0;border-bottom:1px solid var(--line)}
+.brand{font-size:1.1rem}.brand br{display:none}.nav{flex-direction:row;overflow-x:auto;flex:1 1 100%}.nb{flex:0 0 auto;padding:7px 11px;font-size:.88rem}.prep{margin-top:0;font-size:.95rem}.prog{flex:1}
+.two{grid-template-columns:minmax(0,1fr)}.diag{overflow-x:auto}.diag svg{min-width:560px}.river{grid-template-columns:minmax(0,1fr)}.pills{top:0}h1{font-size:2rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.segtag{display:inline-block;border-radius:999px;padding:4px 12px;font-size:.78rem;font-weight:700;margin-bottom:8px}
+.segAB{background:var(--blue);color:var(--navy)}.segC{background:var(--peach);color:var(--dgold)}.segD{background:var(--green);color:var(--ok)}
+.segABb{border-top:4px solid #9fb4d6!important}.segCb{border-top:4px solid var(--gold)!important}.segDb{border-top:4px solid var(--ok)!important}
+.qbox{background:#fff;border:2px solid var(--navy);border-radius:16px;padding:12px 16px;margin:12px 0 16px}
+.qhead{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);font-weight:700;margin-bottom:6px}
+.qitem{display:flex;gap:12px;align-items:flex-start;padding:6px 0;border-top:1px dashed var(--line)}.qitem:first-of-type{border-top:0}
+.qcode{flex:0 0 auto;background:var(--navy);color:#fff;border-radius:10px;padding:2px 9px;font-weight:700;font-size:.85rem}
+.qq{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--navy);line-height:1.2}.qa{margin:.3em 0 0;font-size:.95rem}
+.pseg{flex:0 0 auto;align-self:center;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:8px;padding:4px 8px;margin-left:6px}
+.lolist{list-style:none;padding:0;margin:.3em 0;display:flex;flex-direction:column;gap:6px}
+.lolink{width:100%;display:flex;flex-wrap:wrap;gap:8px;align-items:center;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:8px 10px;font:inherit;color:var(--ink);cursor:pointer}
+.lolink:hover{border-color:var(--gold)}.lolink span:nth-child(2){flex:1 1 160px}.lgo{font-size:.8rem;color:var(--dgold);font-weight:700}
+.idsec{border-bottom:3px solid var(--gold);padding-bottom:4px}
+.idq{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px clamp(14px,3vw,26px);margin:16px 0;scroll-margin-top:70px}
+.idhead{display:flex;gap:12px;align-items:flex-start}.idqt{margin:0;font-weight:600;color:var(--navy);font-size:1.02rem}
+.triage{background:var(--green);border-radius:14px;padding:10px 14px;margin:12px 0}
+.tri3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:6px}.tri3>div{background:#fff;border-radius:10px;padding:8px 10px;font-size:.9rem}
+.tri3 span{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ok);font-weight:700}
+.plainq{background:var(--blue);border-radius:14px;padding:10px 14px;margin:10px 0}
+.idfig{max-width:760px}
+details.idans{border:2px solid var(--gold);border-radius:14px;padding:10px 16px;margin:12px 0;background:#fffdf8}
+details.idans summary{cursor:pointer;font-weight:700;color:var(--dgold)}.model2 p{margin:.6em 0}.model2 ul{margin:.4em 0;padding-left:1.2em}.model2 li{margin:.3em 0}
+.idnav{position:sticky;top:0}
+@media (max-width:860px){.tri3{grid-template-columns:minmax(0,1fr)}}
+.ltabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.ltab{border:2px solid var(--line);background:#fff;border-radius:16px;padding:12px 16px;font:inherit;font-weight:700;color:var(--navy);cursor:pointer;text-align:left;font-size:1.02rem}
+.ltab small{display:block;font-weight:500;color:var(--muted);font-size:.8rem}.ltab.on{background:var(--navy);color:#fff;border-color:var(--navy)}.ltab.on small{color:#dfe5f1}
+.ltab:focus-visible,.cbtn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.stage{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:22px;align-items:start;margin:14px 0}
+.side2{display:flex;flex-direction:column;gap:6px}
+.chipbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0 6px;padding-top:12px;border-top:1px dashed var(--line)}
+.tapl{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.cbtn{border:1px solid var(--line);background:var(--bg);color:var(--navy);border-radius:999px;padding:7px 14px;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}
+.cbtn:hover{border-color:var(--gold)}.cbtn.on{background:var(--gold);border-color:var(--gold);color:#fff}
+.drawer{display:none;background:#fffdf8;border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:8px 0}.drawer.on{display:block}
+.drawer .friend,.drawer .demo,.drawer .synth{margin:4px 0}
+.qsm{font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600}
+.segW{background:var(--lav);color:var(--navy)}.segWb{border-top:4px solid #a99bd0!important}
+.lesson h2{font-size:1.9rem}
+@media (max-width:860px){.stage{grid-template-columns:minmax(0,1fr)}.ltabs{grid-template-columns:minmax(0,1fr)}.ltab{padding:9px 12px;font-size:.95rem}}
+.pills[hidden]{display:none!important}
+
+.tilehead{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--dgold);margin:18px 0 8px}
+.ccbox{background:var(--blue);border-radius:16px;padding:6px 16px 10px;margin:14px 0}.ccbox h4{margin:.6em 0 .3em}
+.drawer h5{margin:.8em 0 .3em}
+.ltabs3{grid-template-columns:repeat(3,minmax(0,1fr))}@media (max-width:860px){.ltabs3{grid-template-columns:minmax(0,1fr)}}</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<marker id="ah1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a8854a"/></marker>
+<marker id="ah1s" markerWidth="10" markerHeight="10" refX="2" refY="5" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#a8854a"/></marker>
+<marker id="ahN" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#34466b"/></marker>
+<marker id="ahR" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="ahG" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f8a57"/></marker></defs></svg>
+<div class="app"><aside class="side"><div class="brand">Theme 8<br> <span>Large language models in psychology</span></div>
+<nav class="nav"><button class="nb on" data-p="vz">🎨 Visual lecture notes</button></nav>
+<div class="prep">Prepared for Sezen</div></aside>
+<main>
+<section class="panel on" id="p-vz"><style>
+/* ===== visual tab ===== */
+#p-vz{--vn:#34466b;--vg:#c9a96e;--vdg:#a8854a}
+#p-vz .vpage{max-width:1120px;margin:0 auto;padding:28px 24px 90px}
+#p-vz .vhero{background:linear-gradient(135deg,#fdf8ee 0%,#eef3fa 100%);border:1px solid var(--line);border-radius:26px;padding:30px 32px;position:relative;overflow:hidden}
+#p-vz .vhero h1{font-size:2.7rem;margin:.1em 0 .15em}
+#p-vz .vhero .big-emoji{position:absolute;right:26px;top:18px;font-size:4.2rem;opacity:.9}
+#p-vz .vstats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px}
+#p-vz .vstat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;text-align:center}
+#p-vz .vstat b{display:block;font-family:'Cormorant Garamond',serif;font-size:2.1rem;color:var(--navy);line-height:1}
+#p-vz .vstat span{font-size:.78rem;color:var(--muted)}
+#p-vz .vnav{position:sticky;top:0;z-index:30;background:var(--bg);display:flex;gap:6px;overflow-x:auto;padding:10px 0;border-bottom:1px solid var(--line);margin:18px 0 6px}
+#p-vz .vnav a{flex:0 0 auto;text-decoration:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font-size:.84rem;color:var(--navy)}
+#p-vz .vnav a.blk{background:var(--pgold);border-color:var(--gold);font-weight:700}
+#p-vz section.vsec{scroll-margin-top:120px;margin:34px 0}
+#p-vz .vblock{border-radius:22px;padding:22px 26px;margin:44px 0 10px;color:#fff;background:linear-gradient(120deg,#34466b,#4b5f88);scroll-margin-top:120px}
+#p-vz .vblock h2{color:#fff;margin:0}
+#p-vz .vblock .eyebrow{color:#f3dfb4}
+#p-vz .vblock p{margin:.5em 0 0;opacity:.95}
+#p-vz .vlec{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px 28px;margin:22px 0;scroll-margin-top:120px}
+#p-vz .vlec-h{display:flex;gap:16px;align-items:center;margin-bottom:6px}
+#p-vz .vnum{flex:0 0 auto;width:64px;height:64px;border-radius:18px;background:var(--pgold);border:2px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;color:var(--dgold);font-size:.85rem;line-height:1.1}
+#p-vz .vnum i{font-style:normal;font-size:1.5rem}
+#p-vz .vlec h2{font-size:1.9rem;margin:0}
+#p-vz .vq{background:var(--blue);border-radius:14px;padding:10px 16px;margin:12px 0;font-size:.96rem}
+#p-vz .vgrid{display:grid;grid-template-columns:3fr 2fr;gap:20px;align-items:start;margin:14px 0}
+#p-vz .vfig{background:#fffdf9;border:1px solid var(--line);border-radius:18px;padding:10px;margin:0}
+#p-vz .vfig svg{width:100%;height:auto;display:block}
+#p-vz .vfig figcaption{font-size:.8rem;color:var(--muted);text-align:center;font-style:italic;margin-top:4px}
+#p-vz .vpts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+#p-vz .vpts li{background:#fcfaf5;border:1px solid var(--line);border-radius:14px;padding:10px 14px 10px 44px;position:relative;font-size:.94rem;line-height:1.45}
+#p-vz .vpts li b.e{position:absolute;left:12px;top:9px;font-size:1.2rem}
+#p-vz .vana{display:flex;gap:16px;align-items:center;background:linear-gradient(90deg,#f6eedd,#fff);border:1px solid var(--gold);border-radius:18px;padding:14px 18px;margin:14px 0}
+#p-vz .vana .ae{font-size:2.6rem;flex:0 0 auto}
+#p-vz .vana b:first-child{color:var(--dgold);letter-spacing:.1em;font-size:.72rem;display:block}
+#p-vz .vtrio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+#p-vz .vtrio div{border-radius:16px;padding:12px 14px;font-size:.92rem;line-height:1.45}
+#p-vz .vtrio .f{background:var(--green)}#p-vz .vtrio .h{background:var(--lav)}#p-vz .vtrio .t{background:var(--peach)}
+#p-vz .vtrio b:first-child{display:block;font-size:.75rem;letter-spacing:.1em;color:var(--navy);margin-bottom:3px}
+#p-vz .vtrap{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:16px;overflow:hidden;border:1px solid #e6c9c3;margin:14px 0}
+#p-vz .vtrap div{padding:12px 16px;font-size:.92rem}
+#p-vz .vtrap .x{background:#fbecea}#p-vz .vtrap .ok{background:#eaf6ee}
+#p-vz .vtrap b:first-child{display:block;font-size:.75rem;letter-spacing:.1em;margin-bottom:3px}
+#p-vz .vdemo{background:#f2f6fc;border:2px dashed #a9bede;border-radius:20px;padding:18px 20px;margin:18px 0}
+#p-vz .vdemo h4{margin:0 0 6px}
+#p-vz .vdemo .lbl{display:inline-block;background:#34466b;color:#fff;border-radius:8px;padding:2px 9px;font-size:.72rem;letter-spacing:.1em;font-weight:700;margin-bottom:6px}
+#p-vz .vbtn{border:1px solid var(--gold);background:#fff;color:var(--navy);border-radius:10px;padding:8px 14px;font:inherit;font-size:.9rem;cursor:pointer;font-weight:600;margin:3px}
+#p-vz .vbtn:hover{background:var(--pgold)}
+#p-vz .vbtn.p{background:var(--navy);color:#fff;border-color:var(--navy)}
+#p-vz .vbtn:disabled{opacity:.45;cursor:default}
+#p-vz .vout{background:#fff;border-radius:12px;padding:10px 14px;margin-top:10px;min-height:20px;font-size:.93rem}
+#p-vz .vwatch{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+#p-vz .vwatch a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.86rem;color:var(--navy)}
+#p-vz .vwatch a:hover{border-color:var(--gold);background:var(--pgold)}
+#p-vz details.vchk{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:6px 0}
+#p-vz details.vchk summary{cursor:pointer;font-weight:600;color:var(--navy)}
+#p-vz details.vchk p{margin:.5em 0 0;background:var(--peach);border-radius:10px;padding:8px 12px;font-size:.93rem}
+#p-vz .vcall{background:var(--pgold);border-left:6px solid var(--gold);border-radius:12px;padding:14px 18px;margin:14px 0;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--navy);font-style:italic}
+#p-vz .vtl{overflow-x:auto;padding:4px 0 10px}
+#p-vz .vtl-in{position:relative;display:flex;min-width:1750px;padding:10px 10px 4px}
+#p-vz .vtl-in:before{content:"";position:absolute;left:10px;right:10px;top:45px;height:4px;border-radius:4px;background:linear-gradient(90deg,#c9a96e,#34466b,#c0392b)}
+#p-vz .vtp{flex:1;display:flex;flex-direction:column;align-items:center;background:none;border:0;cursor:pointer;font:inherit;padding:0 2px}
+#p-vz .vtp .y{height:18px;font-weight:700;color:var(--navy);font-size:.82rem;white-space:nowrap}
+#p-vz .vtp .d{width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--gold);margin-top:8px;position:relative;z-index:1;display:flex;align-items:center;justify-content:center;font-size:.7rem;transition:.2s}
+#p-vz .vtp .w{font-size:.7rem;color:var(--muted);margin-top:6px;text-align:center;line-height:1.2;max-width:90px}
+#p-vz .vtp.on .d,#p-vz .vtp:hover .d{transform:scale(1.35);background:var(--pgold)}
+#p-vz .vtp.A .d{border-color:#34466b}#p-vz .vtp.D .d{border-color:#c0392b}
+#p-vz .vtl-info{background:var(--blue);border-radius:14px;padding:12px 16px;min-height:60px;margin-top:6px}
+#p-vz .vone{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+#p-vz .vone div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:.9rem;line-height:1.45}
+#p-vz .vone div b.k{display:inline-block;background:var(--navy);color:#fff;border-radius:8px;padding:1px 9px;margin-right:6px;font-size:.8rem}
+#p-vz .vone div .e{font-size:1.6rem;float:right}
+#p-vz .vone div h4{margin:.2em 0}
+#p-vz .vfriend{background:var(--green);border-radius:18px;padding:16px 20px;margin-top:14px;font-style:italic}
+#p-vz svg text{font-family:'DM Sans',sans-serif}
+#p-vz .t-h{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:21px;fill:#34466b}
+#p-vz .t-b{font-size:13px;font-weight:700;fill:#34466b}
+#p-vz .t-t{font-size:12.5px;fill:#2f3542}
+#p-vz .t-s{font-size:11px;fill:#6b7280}
+#p-vz .t-g{font-size:12px;font-weight:700;fill:#a8854a}
+#p-vz .t-r{font-size:12px;font-weight:700;fill:#c0392b}
+#p-vz .t-ok{font-size:12px;font-weight:700;fill:#2f8a57}
+#p-vz .rot-stage{display:flex;gap:30px;justify-content:center;align-items:center;background:#fff;border-radius:14px;padding:16px;min-height:150px}
+#p-vz .rot-stage div{font-size:88px;font-weight:700;color:#34466b;font-family:'DM Sans',sans-serif;line-height:1;width:110px;height:110px;display:flex;align-items:center;justify-content:center}
+#p-vz canvas{max-width:100%;border-radius:12px;display:block}
+#p-vz .sent{font-size:1.25rem;font-family:'Cormorant Garamond',serif;color:var(--navy);background:#fff;border-radius:12px;padding:20px;text-align:center;min-height:70px;font-weight:600}
+#p-vz .wordgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:8px 0}
+#p-vz .wordgrid label{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 8px;font-size:.9rem;cursor:pointer}
+#p-vz .island{position:relative;max-width:560px;margin:0 auto}
+#p-vz .pill-ok{display:inline-block;border-radius:999px;padding:2px 10px;font-size:.8rem;font-weight:700}
+@media (max-width:900px){
+ #p-vz .vgrid,#p-vz .vtrap{grid-template-columns:1fr}
+ #p-vz .vtrio{grid-template-columns:1fr}
+ #p-vz .vstats{grid-template-columns:repeat(2,1fr)}
+ #p-vz .vhero h1{font-size:2rem}
+ #p-vz .vhero .big-emoji{display:none}
+ #p-vz .vnav{position:static}
+ #p-vz .vpage{padding:18px 14px 70px}
+ #p-vz .vlec{padding:18px 16px}
+ #p-vz .wordgrid{grid-template-columns:repeat(2,1fr)}
+ #p-vz .rot-stage div{font-size:64px;width:80px;height:80px}
+}
+</style><style>
+#p-vz .vpage{padding:0 0 60px;max-width:none}
+#p-vz .vnav{margin-top:14px}
+#p-vz .bg{font-size:.72rem;background:#e3ecf7;color:#34466b;border-radius:6px;padding:1px 7px;font-weight:700;vertical-align:middle;white-space:nowrap}
+#p-vz .vsubs{display:flex;flex-direction:column;gap:8px}
+@media (min-width:901px){#p-vz .vgrid>.vfig:first-child{position:sticky;top:96px;align-self:start}}
+#p-vz .vsub{background:#fcfaf5;border:1px solid var(--line);border-left:4px solid #c9a96e;border-radius:12px;padding:8px 12px}
+#p-vz .vsub .n{display:inline-block;font-size:.72rem;font-weight:800;color:#fff;background:#34466b;border-radius:6px;padding:1px 7px;margin-right:6px;vertical-align:middle}
+#p-vz .vsub h5{display:inline;font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--navy);margin:0;vertical-align:middle}
+#p-vz .vsub p{margin:4px 0 0;font-size:.9rem;line-height:1.42}
+#p-vz .lmrow{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:8px 0}
+#p-vz .lmrow .vbtn.p,#p-vz .lmcol .vbtn.p{background:var(--navy);color:#fff}
+#p-vz .lmcol{display:flex;flex-direction:column;gap:6px;max-width:740px;margin:8px auto}
+#p-vz .lmcol .vbtn{text-align:left}
+#p-vz .lmscreen{background:#fff;border:1px solid var(--line);border-radius:14px;min-height:90px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;padding:14px;margin:10px auto;max-width:700px;text-align:center}
+#p-vz .lmscreen .w{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--navy)}
+#p-vz .lmpoll{display:flex;flex-wrap:wrap;align-items:center;gap:8px;background:#fff;border-radius:10px;padding:7px 10px;margin:5px 0}
+#p-vz .lmpoll span{flex:1 1 240px;font-weight:600;color:var(--navy)}
+#p-vz .lmtok{display:inline-block;padding:4px 10px;margin:3px;border-radius:999px;background:#f3f1ec;font-weight:700;color:var(--navy)}
+#p-vz .lmtok.hit{background:#c9a96e;color:#fff}
+#p-vz .lmgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-width:760px;margin:10px auto}
+#p-vz .lmgrid button{padding:8px 4px;border-radius:10px;border:1px solid var(--line);background:#fff;font:inherit;font-size:.85rem;color:var(--navy);cursor:pointer}
+#p-vz .lmgrid button.p{background:var(--navy);color:#fff}
+#p-vz .lmrange{width:100%;max-width:520px}
+@media (max-width:700px){#p-vz .lmgrid{grid-template-columns:repeat(2,1fr)}#p-vz .lmscreen .w{font-size:1.3rem}}
+</style>
+<div class="vpage">
+<div class="vhero">
+  <div class="big-emoji">🤖🧠</div>
+  <div class="eyebrow">Theme 8 · Visual companion to your Word lecture notes · Prepared for Sezen</div>
+  <h1>Large Language Models in Psychology, Visually</h1>
+  <p class="sub" style="max-width:780px">Same numbering as your Word document (A.1–A.3, B.1–B.3, C.1–C.3). Read a lecture in Word, then come here to <b>see it, try it on yourself and test yourself</b>. Graphs labelled <span class="bg">real data</span> use numbers from your readings; <span class="bg">illustrative</span> shows the idea only.</p>
+  <div class="vstats">
+    <div class="vstat"><b>5 examples</b><span>prompt-tuned an LLM to near-expert growth-mindset speeches</span></div>
+    <div class="vstat"><b>n = 393</b><span>4 × 2 experiment on AI timing and time</span></div>
+    <div class="vstat"><b>3.80 → 4.51</b><span>early AI: essay score barely gains from 10 to 30 min</span></div>
+    <div class="vstat"><b>1.86 → 5.77</b><span>late AI: essay score jumps with time</span></div>
+    <div class="vstat"><b>4–6 uses</b><span>of ChatGPT gave the most creative ideas</span></div>
+  </div>
+</div>
+
+<nav class="vnav">
+  <a href="#lm-map">🗺️ Map</a><a href="#lm-time">⏳ Timeline</a>
+  <a class="blk" href="#lm-blockA">Block A</a><a href="#lm-A1">A.1</a><a href="#lm-A2">A.2</a><a href="#lm-A3">A.3</a>
+  <a class="blk" href="#lm-blockB">Block B</a><a href="#lm-B1">B.1</a><a href="#lm-B2">B.2</a><a href="#lm-B3">B.3</a>
+  <a class="blk" href="#lm-blockC">Block C</a><a href="#lm-C1">C.1</a><a href="#lm-C2">C.2</a><a href="#lm-C3">C.3</a>
+  <a href="#lm-synth">🧵 Synthesis</a><a href="#lm-one">📄 One page</a>
+</nav>
+
+<section class="vsec" id="lm-map">
+<h2>🗺️ The whole theme in one picture</h2>
+<p class="mini">Click any box to jump to that lecture.</p>
+<figure class="vfig"><svg viewBox="0 0 1000 420" role="img" aria-label="Theme map">
+ <defs><marker id="lmar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a8854a"/></marker></defs>
+ <rect x="200" y="12" width="600" height="66" rx="18" fill="#34466b"/>
+ <text x="500" y="40" text-anchor="middle" fill="#fff" font-size="18" font-family="Cormorant Garamond" font-weight="700">THE BIG QUESTION</text>
+ <text x="500" y="63" text-anchor="middle" fill="#f3dfb4" font-size="13">What can LLMs do for psychology, and what does using them do to our thinking?</text>
+ <path d="M380 78 L170 112" stroke="#a8854a" stroke-width="2.5" marker-end="url(#lmar)"/><path d="M500 78 L500 112" stroke="#a8854a" stroke-width="2.5" marker-end="url(#lmar)"/><path d="M620 78 L830 112" stroke="#a8854a" stroke-width="2.5" marker-end="url(#lmar)"/>
+ <rect x="20" y="114" width="310" height="40" rx="12" fill="#c9a96e"/><text x="175" y="139" text-anchor="middle" fill="#fff" font-weight="700" font-size="13.5">A · LLMs as a tool (Demszky et al.)</text>
+ <rect x="345" y="114" width="310" height="40" rx="12" fill="#34466b"/><text x="500" y="139" text-anchor="middle" fill="#fff" font-weight="700" font-size="13.5">B · Critical thinking (Zhi et al.)</text>
+ <rect x="670" y="114" width="310" height="40" rx="12" fill="#2f8a57"/><text x="825" y="139" text-anchor="middle" fill="#fff" font-weight="700" font-size="13.5">C · Creativity (Huang)</text>
+ <g class="lmmap" data-go="lm-A1" style="cursor:pointer"><rect x="20" y="170" width="98" height="128" rx="14" fill="#fff" stroke="#c9a96e" stroke-width="2"/><text x="69" y="202" text-anchor="middle" font-size="22">🔮</text><text x="69" y="228" text-anchor="middle" class="t-b">A.1</text><text x="69" y="248" text-anchor="middle" class="t-s">What LLMs</text><text x="69" y="264" text-anchor="middle" class="t-s">are: plausible,</text><text x="69" y="280" text-anchor="middle" class="t-s">not correct</text></g>
+ <g class="lmmap" data-go="lm-A2" style="cursor:pointer"><rect x="126" y="170" width="98" height="128" rx="14" fill="#fff" stroke="#c9a96e" stroke-width="2"/><text x="175" y="202" text-anchor="middle" font-size="22">🎛️</text><text x="175" y="228" text-anchor="middle" class="t-b">A.2</text><text x="175" y="248" text-anchor="middle" class="t-s">Fine-tuning</text><text x="175" y="264" text-anchor="middle" class="t-s">vs prompt-</text><text x="175" y="280" text-anchor="middle" class="t-s">tuning</text></g>
+ <g class="lmmap" data-go="lm-A3" style="cursor:pointer"><rect x="232" y="170" width="98" height="128" rx="14" fill="#fff" stroke="#c9a96e" stroke-width="2"/><text x="281" y="202" text-anchor="middle" font-size="22">⚠️</text><text x="281" y="228" text-anchor="middle" class="t-b">A.3</text><text x="281" y="248" text-anchor="middle" class="t-s">Four concerns,</text><text x="281" y="264" text-anchor="middle" class="t-s">three</text><text x="281" y="280" text-anchor="middle" class="t-s">investments</text></g>
+ <g class="lmmap" data-go="lm-B1" style="cursor:pointer"><rect x="345" y="170" width="98" height="128" rx="14" fill="#fff" stroke="#34466b" stroke-width="2"/><text x="394" y="202" text-anchor="middle" font-size="22">🧪</text><text x="394" y="228" text-anchor="middle" class="t-b">B.1</text><text x="394" y="248" text-anchor="middle" class="t-s">Measuring CT;</text><text x="394" y="264" text-anchor="middle" class="t-s">the 4 × 2</text><text x="394" y="280" text-anchor="middle" class="t-s">design</text></g>
+ <g class="lmmap" data-go="lm-B2" style="cursor:pointer"><rect x="451" y="170" width="98" height="128" rx="14" fill="#fff" stroke="#34466b" stroke-width="2"/><text x="500" y="202" text-anchor="middle" font-size="22">🔀</text><text x="500" y="228" text-anchor="middle" class="t-b">B.2</text><text x="500" y="248" text-anchor="middle" class="t-s">Temporal</text><text x="500" y="264" text-anchor="middle" class="t-s">reversal,</text><text x="500" y="280" text-anchor="middle" class="t-s">myside, recall</text></g>
+ <g class="lmmap" data-go="lm-B3" style="cursor:pointer"><rect x="557" y="170" width="98" height="128" rx="14" fill="#fff" stroke="#34466b" stroke-width="2"/><text x="606" y="202" text-anchor="middle" font-size="22">⚓</text><text x="606" y="228" text-anchor="middle" class="t-b">B.3</text><text x="606" y="248" text-anchor="middle" class="t-s">Anchoring,</text><text x="606" y="264" text-anchor="middle" class="t-s">design, limits</text></g>
+ <g class="lmmap" data-go="lm-C1" style="cursor:pointer"><rect x="670" y="170" width="98" height="128" rx="14" fill="#fff" stroke="#2f8a57" stroke-width="2"/><text x="719" y="202" text-anchor="middle" font-size="22">🐻</text><text x="719" y="228" text-anchor="middle" class="t-b">C.1</text><text x="719" y="248" text-anchor="middle" class="t-s">Goldilocks</text><text x="719" y="264" text-anchor="middle" class="t-s">idea; Study 1</text><text x="719" y="280" text-anchor="middle" class="t-s">design</text></g>
+ <g class="lmmap" data-go="lm-C2" style="cursor:pointer"><rect x="776" y="170" width="98" height="128" rx="14" fill="#fff" stroke="#2f8a57" stroke-width="2"/><text x="825" y="202" text-anchor="middle" font-size="22">📊</text><text x="825" y="228" text-anchor="middle" class="t-b">C.2</text><text x="825" y="248" text-anchor="middle" class="t-s">Inverted U;</text><text x="825" y="264" text-anchor="middle" class="t-s">knowledge</text><text x="825" y="280" text-anchor="middle" class="t-s">diversity</text></g>
+ <g class="lmmap" data-go="lm-C3" style="cursor:pointer"><rect x="882" y="170" width="98" height="128" rx="14" fill="#fff" stroke="#2f8a57" stroke-width="2"/><text x="931" y="202" text-anchor="middle" font-size="22">🎨</text><text x="931" y="228" text-anchor="middle" class="t-b">C.3</text><text x="931" y="248" text-anchor="middle" class="t-s">Field study;</text><text x="931" y="264" text-anchor="middle" class="t-s">evaluation</text></g>
+ <rect x="20" y="320" width="960" height="84" rx="16" fill="#f6eedd"/>
+ <text x="500" y="350" text-anchor="middle" class="t-b">The storyline</text>
+ <text x="500" y="374" text-anchor="middle" class="t-t">A: LLMs give the typical, plausible answer; tune and test them before trusting them</text>
+ <text x="500" y="394" text-anchor="middle" class="t-t">B + C: they help human thinking only at the right time (think first) and in the right dose (moderate)</text>
+</svg><figcaption>Figure 0. How the three blocks connect.</figcaption></figure>
+</section>
+
+<section class="vsec" id="lm-time">
+<h2>⏳ Timeline</h2>
+<p class="mini">Tap a dot. Gold = Block A, navy = Block B, green = Block C.</p>
+<div class="vtl"><div class="vtl-in" id="lmtl"></div></div>
+<div class="vtl-info" id="lmtlinfo">👆 Tap a dot to see what happened and why it matters.</div>
+</section>
+
+<div class="vblock" id="lm-blockA" style="background:linear-gradient(120deg,#8a6a2f,#c9a96e)"><div class="eyebrow">Demszky, Yang, Yeager et al. (2023), Nature Reviews Psychology, 2, 688–701 · Perspective</div><h2>Block A · Large Language Models as a Research Tool</h2><p>❓ <i>What are large language models, how can psychologists adapt them for research, and what must be solved before they can be trusted?</i></p></div>
+
+<article class="vlec" id="lm-A1">
+ <div class="vlec-h"><div class="vnum"><i>🔮</i>A.1</div><h2>What LLMs Are and How They Work</h2></div>
+ <div class="vq">❓ <b>This lecture answers:</b> What is an LLM, how is it fitted, and why does it produce plausible rather than correct language?</div>
+ <div class="vgrid">
+  <figure class="vfig"><svg viewBox="0 0 560 380">
+   <text x="280" y="26" text-anchor="middle" class="t-h">Pre-training: guess the hidden word</text>
+   <rect x="20" y="46" width="520" height="56" rx="12" fill="#fff" stroke="#34466b"/>
+   <text x="280" y="80" text-anchor="middle" font-size="18" fill="#34466b">I am <tspan font-weight="700" fill="#a8854a">[MASK]</tspan> about my grades.</text>
+   <path d="M280 104 L280 136" stroke="#a8854a" stroke-width="2.5" marker-end="url(#lmar)"/>
+   <rect x="170" y="140" width="220" height="62" rx="12" fill="#34466b"/>
+   <text x="280" y="166" text-anchor="middle" fill="#fff" font-weight="700">Transformer</text>
+   <text x="280" y="186" text-anchor="middle" fill="#f3dfb4" font-size="12">millions of parameters</text>
+   <path d="M280 204 L280 232" stroke="#a8854a" stroke-width="2.5" marker-end="url(#lmar)"/>
+   <rect x="60" y="236" width="440" height="44" rx="10" fill="#f6eedd" stroke="#c9a96e"/>
+   <text x="280" y="264" text-anchor="middle" class="t-b">predicts “worried” → error → update (backpropagation)</text>
+   <rect x="20" y="300" width="250" height="66" rx="12" fill="#fff" stroke="#5b6b8c"/>
+   <text x="145" y="326" text-anchor="middle" class="t-b">Good at</text><text x="145" y="348" text-anchor="middle" class="t-s">sounding right: fluent, typical</text>
+   <rect x="290" y="300" width="250" height="66" rx="12" fill="#fbecea" stroke="#a2463a"/>
+   <text x="415" y="326" text-anchor="middle" class="t-b">Not built for</text><text x="415" y="348" text-anchor="middle" class="t-s">being right or helpful</text>
+  </svg><figcaption>Figure A.1a. Pre-training by masked language modelling (after Demszky et al.’s Fig. 2a). <span class="bg">illustrative</span></figcaption></figure>
+  <div class="vsubs">
+   <div class="vsub"><b class="n">A.1.1</b><h5>From counting words to meaning in context</h5><p>📜 Word counting (1960s) → latent semantic analysis (1990s) → <b>LIWC</b>, topic models (2010s) → <b>LLMs</b>. <b>Bag-of-words</b> ignores context; LLMs approximate <b>meaning in context</b>, trained on hundreds of billions of utterances. 40% of US teachers used ChatGPT weekly after 3 months.</p></div>
+   <div class="vsub"><b class="n">A.1.2</b><h5>How the models are fitted</h5><p>🧮 <b>Transformer</b> ≈ a massive system of nonlinear regressions. <b>Pre-training</b>: masked language modelling + next-sentence classification; <b>backpropagation</b>. Newer models add instruction tuning and RLHF.</p></div>
+   <div class="vsub"><b class="n">A.1.3</b><h5>Plausible, not correct: the college-advising example</h5><p>🎓 The LLM advisor suggests a timeline and online courses (no effect in a randomised trial) and “reduce stress”: a <b>stress-is-debilitating mindset</b>. LLMs parrot their training culture; that bias can be studied as <b>digital ethnography</b>.</p></div>
+   <div class="vsub"><b class="n">A.1.4</b><h5>What LLMs could do for psychology</h5><p>🧰 <b>Measurement</b> (score belonging, suicide risk), <b>experimentation</b> (stimuli, items, synthetic pilots), <b>practice</b> (therapist training, teacher feedback). Each needs validation.</p></div>
+  </div>
+ </div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · BE THE LANGUAGE MODEL</span><h4>🔮 Predict the masked word</h4><p class="mini">Pick the word you think fills the gap. Then see what a model trained on typical text would favour (<span class="bg">illustrative</span> probabilities). Notice: “most typical” is not the same as “true” or “helpful”.</p>
+  <div class="lmscreen"><div class="w" id="lmMaskS">…</div></div>
+  <div class="lmrow" id="lmMaskO"></div>
+  <div class="lmrow"><button class="vbtn" id="lmMaskN">Next sentence ▶</button></div>
+  <div class="vout" id="lmMaskOut"></div></div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · BAG OF WORDS VS CONTEXT</span><h4>📦 Does the word list get it right?</h4><p class="mini">A word counter tallies “negative emotion” words. Tap each message: what does the counter say, and what does the message really mean?</p>
+  <div class="lmcol" id="lmBow"></div><div class="vout" id="lmBowOut"></div></div>
+ <div class="vana"><div class="ae">🦜</div><div><b>THINK OF IT LIKE…</b>A parrot that has listened to the whole internet. It can finish any sentence beautifully and in the right tone. But it repeats what people usually say, so if everyone says “stress is bad for you”, so will the parrot, however wrong that is.</div></div>
+ <div class="vtrap"><div class="x"><b>✗ THE MISTAKE</b>“It passes the Bar Exam and the GRE, so its psychological advice must be good.”</div><div class="ok"><b>✓ CORRECT</b>Computer scientists judge LLMs by fluency and coherence; psychologists need correct, helpful effects on people. The same ability (predicting typical text) explains both high test scores and useless or harmful output.</div></div>
+ <div class="vtrio"><div class="f"><b>💬 SAY IT TO A FRIEND</b>An LLM is a giant prediction machine that has read a huge chunk of the internet. It’s brilliant at sounding right and reading meaning in context, much better than counting words. But it predicts what people usually say, not what’s true, so it repeats our myths.</div><div class="h"><b>🔑 MEMORY HOOK</b>Plausible, not correct.</div><div class="t"><b>✎ EXAM TIP</b>Separate “sounds human” from “is valid or helpful”, and say which one a question is about.</div></div>
+ <p class="mini" style="background:#fcfaf5;border:1px solid var(--line);border-radius:12px;padding:10px 12px">📚 <b>All details in this lecture:</b> language in developmental, cognitive, social, clinical, affective, health and personality psychology and metascience; Latent Dirichlet allocation; GPT, LaMDA, Bard, BERT; Figure 1 (GPT-3, text-davinci-003, temperature 0.7): emotions, reassurance, stern advisor, three themes in 120 messages, a dialogue; randomised college-advising study funded by the US Department of Education; enhancing role of stress (oxygenated blood to brain and muscles); guardrails; LLMs lack non-language cognitive capacities, so tests of their “reasoning” face validity concerns. Table 1: belonging, suicide risk, Reddit after trauma, essentialism, word difficulty, children’s retellings, P-hacking red flags, vignette stimuli, item generation, synthetic data, harmful-language scoring, tailored nudges, trait-simulating partners, therapist simulators, teacher feedback.</p>
+ <div class="vwatch"><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=how+large+language+models+work+explained">▶ Find a video: how LLMs work</a><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=transformer+masked+language+modeling+explained">▶ Find a video: masked language modelling</a></div>
+ <details class="vchk"><summary>✅ Quick check: why did the LLM advisor recommend “self-care” and “taking breaks”?</summary><p>Because these are common in the advice text it was trained on. LLMs reproduce typical language, here a stress-is-debilitating mindset, not what stress research shows is helpful.</p></details>
+</article>
+
+<article class="vlec" id="lm-A2">
+ <div class="vlec-h"><div class="vnum"><i>🎛️</i>A.2</div><h2>Adapting LLMs for Psychological Purposes</h2></div>
+ <div class="vq">❓ <b>This lecture answers:</b> How can psychologists teach an LLM the scientific version of a construct?</div>
+ <div class="vgrid">
+  <figure class="vfig"><svg viewBox="0 0 560 380">
+   <text x="280" y="26" text-anchor="middle" class="t-h">Two ways to tune a pre-trained LLM</text>
+   <rect x="14" y="44" width="258" height="320" rx="14" fill="#f6eedd" stroke="#c9a96e"/>
+   <text x="143" y="72" text-anchor="middle" class="t-b">FINE-TUNING</text>
+   <text x="143" y="100" text-anchor="middle" class="t-t">new labelled data</text>
+   <text x="143" y="120" text-anchor="middle" class="t-t">→ parameters UPDATED</text>
+   <text x="143" y="156" text-anchor="middle" font-size="26" font-weight="700" fill="#a8854a">5–100</text>
+   <text x="143" y="176" text-anchor="middle" class="t-s">examples can be enough</text>
+   <text x="143" y="214" text-anchor="middle" class="t-ok">+ subtle constructs</text>
+   <text x="143" y="234" text-anchor="middle" class="t-ok">+ better against bias</text>
+   <text x="143" y="264" text-anchor="middle" class="t-r">− compute, annotations</text>
+   <text x="143" y="284" text-anchor="middle" class="t-r">− can keep/amplify bias</text>
+   <text x="143" y="330" text-anchor="middle" class="t-g">Box 2: belonging essays</text>
+   <rect x="288" y="44" width="258" height="320" rx="14" fill="#fff" stroke="#5b6b8c"/>
+   <text x="417" y="72" text-anchor="middle" class="t-b">PROMPT-TUNING</text>
+   <text x="417" y="100" text-anchor="middle" class="t-t">examples in the prompt</text>
+   <text x="417" y="120" text-anchor="middle" class="t-t">→ parameters UNCHANGED</text>
+   <text x="417" y="156" text-anchor="middle" font-size="26" font-weight="700" fill="#5b6b8c">1–10</text>
+   <text x="417" y="176" text-anchor="middle" class="t-s">examples</text>
+   <text x="417" y="214" text-anchor="middle" class="t-ok">+ fast, cheap</text>
+   <text x="417" y="234" text-anchor="middle" class="t-ok">+ works on GPT-4/Bard</text>
+   <text x="417" y="264" text-anchor="middle" class="t-r">− wording-sensitive</text>
+   <text x="417" y="284" text-anchor="middle" class="t-r">− weaker on subtlety, bias</text>
+   <text x="417" y="330" text-anchor="middle" class="t-g">Box 3: growth-mindset speeches</text>
+  </svg><figcaption>Figure A.2a. Fine-tuning vs prompt-tuning (Demszky et al., Fig. 2b–c). <span class="bg">real data</span> numbers from the text.</figcaption></figure>
+  <div class="vsubs">
+   <div class="vsub"><b class="n">A.2.1</b><h5>Why off-the-shelf is not enough</h5><p>🎯 Off-the-shelf = the internet’s view of a construct. Science needs the expert version, so <b>tune</b> on curated data and then <b>evaluate</b>. Example: DocsGPT for medical prose.</p></div>
+   <div class="vsub"><b class="n">A.2.2</b><h5>Fine-tuning</h5><p>🔧 New data, <b>parameters change</b>; 5–100 examples vs hundreds of thousands from scratch. Box 2: 650 coded essays fine-tuned <b>RoBERTa</b> to score ≈11,000; belonging themes predicted better outcomes, more so for minoritized students.</p></div>
+   <div class="vsub"><b class="n">A.2.3</b><h5>Prompt-tuning</h5><p>💬 In-context learning; <b>parameters unchanged</b>; 1–10 examples; <b>prompt engineering</b>. Box 3 (Clapper et al.): 5 expert speeches → ratings n.s. from experts (P &gt; 0.05), <b>75%</b> of the gap closed; ≈1,000 adolescent raters.</p></div>
+   <div class="vsub"><b class="n">A.2.4</b><h5>Tools for using LLMs</h5><p>🛠️ APIs/online interfaces (easy, limited, paid) vs downloading/hosting (control, privacy, needs GPUs). Hugging Face, DLATK, openai, langchain, chainlit; R: text, TheOpenAIR, askgpt, reticulate.</p></div>
+  </div>
+ </div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · PROMPT-TUNE A SPEECH (BOX 3)</span><h4>📣 How many expert examples do you add?</h4><p class="mini">Move the slider to add expert growth-mindset examples to the prompt and watch the speech change. The final step reflects Box 3: rated about as high as experts. <span class="bg">illustrative</span> wording; the two quoted speeches are from Box 3.</p>
+  <input type="range" class="lmrange" id="lmPT" min="0" max="5" value="0">
+  <div class="lmscreen" style="text-align:left;align-items:stretch"><div class="mini" id="lmPTn"></div><div id="lmPTs" style="font-size:.95rem;line-height:1.5"></div></div>
+  <div class="vout" id="lmPTout"></div></div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · WHICH TUNING WOULD YOU USE?</span><h4>🔧 or 💬? Advise the researcher</h4>
+  <div class="lmcol" id="lmWhich"></div><div class="vout" id="lmWhichOut"></div></div>
+ <div class="vana"><div class="ae">👩‍🍳</div><div><b>THINK OF IT LIKE…</b>Teaching a chef a new dish. Fine-tuning is sending her on a course: she really changes how she cooks, but it takes time and money. Prompt-tuning is handing her three photos of the dish before service: quick, often good, but she may miss the subtle flavours.</div></div>
+ <div class="vtrap"><div class="x"><b>✗ THE MISTAKE</b>“Prompt-tuning retrains the model.”</div><div class="ok"><b>✓ CORRECT</b>Only <b>fine-tuning</b> changes the parameters. <b>Prompt-tuning</b> changes the input, which is why it is fast, needs few examples, is sensitive to wording, and is weaker against bias.</div></div>
+ <div class="vtrio"><div class="f"><b>💬 SAY IT TO A FRIEND</b>Out of the box, an LLM knows the internet’s version of a concept. Fine-tuning retrains it on expert-labelled examples: powerful but costly. Prompt-tuning just shows it a few good examples. Five expert speeches made it sound almost like an expert teacher.</div><div class="h"><b>🔑 MEMORY HOOK</b>Fine-tune the brain, prompt-tune the instructions.</div><div class="t"><b>✎ EXAM TIP</b>Weigh four things: how subtle the construct is, how much labelled data, bias, and whether the model can be fine-tuned at all.</div></div>
+ <p class="mini" style="background:#fcfaf5;border:1px solid var(--line);border-radius:12px;padding:10px 12px">📚 <b>All details in this lecture:</b> fine-tuning data: expert, lay or metadata labels, unlabelled domain text (parent–child talk, speech-related disability); classifier layer (x-by-2 matrix) outputs, e.g., 70% concern; coders may disagree on narcissism, growth mindset, bad stress advice. Box 2 themes: concerns common, change over time, connected to personal life; 26+ colleges; identity-threat theory. Prompt-tuning example: stress advice for work, then relationships. Providers favour prompt-tuning (GPT-4, Bard not publicly fine-tunable; guardrails); system messages; open-source LLaMA2 for thorough customisation. Box 3: GPT-3 and LaMDA; un-tuned speech ignored fixed-mindset fears; expert speeches took three days. Box 1: Google Colab, smaller models (BERT, RoBERTa, GPT-2), SheetGPT.ai, gptstudio/gpttools, chatgpt R package.</p>
+ <div class="vwatch"><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=fine-tuning+vs+prompting+LLM+explained">▶ Find a video: fine-tuning vs prompting</a></div>
+ <details class="vchk"><summary>✅ Quick check: why is prompt-tuning less likely to overcome bias than fine-tuning?</summary><p>Because the model’s parameters are not updated; the biases learned in pre-training stay in the model, and a few examples in the prompt only steer its output.</p></details>
+</article>
+
+<article class="vlec" id="lm-A3">
+ <div class="vlec-h"><div class="vnum"><i>⚠️</i>A.3</div><h2>Four Concerns and the Way Forward</h2></div>
+ <div class="vq">❓ <b>This lecture answers:</b> What must be solved before psychologists can trust LLMs, and what should the field invest in?</div>
+ <div class="vgrid">
+  <figure class="vfig"><svg viewBox="0 0 560 380">
+   <text x="280" y="26" text-anchor="middle" class="t-h">Four concerns, four remedies</text>
+   <g font-size="13">
+   <rect x="14" y="44" width="258" height="150" rx="14" fill="#fff" stroke="#c9a96e"/><text x="143" y="70" text-anchor="middle" class="t-b">1 · EVALUATION</text><text x="143" y="96" text-anchor="middle" class="t-s">expert ≈ construct validity</text><text x="143" y="114" text-anchor="middle" class="t-s">impact ≈ predictive validity</text><text x="143" y="140" text-anchor="middle" class="t-r">intersubjectivity problem</text><text x="143" y="172" text-anchor="middle" class="t-ok">→ use both, in a loop</text>
+   <rect x="288" y="44" width="258" height="150" rx="14" fill="#fff" stroke="#a2463a"/><text x="417" y="70" text-anchor="middle" class="t-b">2 · BIAS</text><text x="417" y="96" text-anchor="middle" class="t-s">representational harm</text><text x="417" y="114" text-anchor="middle" class="t-s">allocational harm</text><text x="417" y="140" text-anchor="middle" class="t-r">AI text trains AI → entrenched</text><text x="417" y="172" text-anchor="middle" class="t-ok">→ audits, humans in charge</text>
+   <rect x="14" y="210" width="258" height="150" rx="14" fill="#fff" stroke="#34466b"/><text x="143" y="236" text-anchor="middle" class="t-b">3 · BLACK BOX</text><text x="143" y="262" text-anchor="middle" class="t-s">readable outputs,</text><text x="143" y="280" text-anchor="middle" class="t-s">opaque processes</text><text x="143" y="306" text-anchor="middle" class="t-r">self-explanation is circular</text><text x="143" y="338" text-anchor="middle" class="t-ok">→ probing + lexical analysis</text>
+   <rect x="288" y="210" width="258" height="150" rx="14" fill="#fff" stroke="#2f8a57"/><text x="417" y="236" text-anchor="middle" class="t-b">4 · REPRODUCIBILITY</text><text x="417" y="262" text-anchor="middle" class="t-s">stochastic outputs;</text><text x="417" y="280" text-anchor="middle" class="t-s">temperature setting</text><text x="417" y="306" text-anchor="middle" class="t-r">not: temperature 0</text><text x="417" y="338" text-anchor="middle" class="t-ok">→ many outputs, publish all</text>
+   </g>
+  </svg><figcaption>Figure A.3a. The four concerns of Demszky et al. (2023) and their proposed solutions.</figcaption></figure>
+  <div class="vsubs">
+   <div class="vsub"><b class="n">A.3.1</b><h5>How to evaluate an LLM</h5><p>⚖️ <b>Expert evaluation</b> (agreement with experts) suffers from the <b>intersubjectivity problem</b>: coders guess, cross-group and power gaps, no single right answer (compliments and low self-esteem). <b>Impact evaluation</b>: effect on real people (attitudes before/after); failures are ambiguous. Use both iteratively.</p></div>
+   <div class="vsub"><b class="n">A.3.2</b><h5>Bias in LLMs</h5><p>⚖️ <b>Representational</b> (portrayal) vs <b>allocational</b> (resources) harm. Web text is engagement-driven, and LLM text trains future LLMs. <b>Audits</b> vary names/pronouns but miss intersectional bias; guardrails can hide bias. <b>AI-in-the-loop, humans in charge</b>.</p></div>
+   <div class="vsub"><b class="n">A.3.3</b><h5>The black box</h5><p>📦 Outputs are easy to read (unlike LIWC or topic models), but processes are opaque. <b>Probing</b>: vary one feature (“I care” vs “I don’t care”). Asking the LLM to explain itself is circular.</p></div>
+   <div class="vsub"><b class="n">A.3.4</b><h5>Reproducibility</h5><p>🎲 <b>Stochastic</b> outputs; <b>temperature</b> 0 = always the most likely word. Treat like participant variability: generate many responses, publish parameters and outputs; don’t set temperature to 0.</p></div>
+   <div class="vsub"><b class="n">A.3.5</b><h5>Outlook: three investments</h5><p>🏗️ <b>Keystone datasets</b> (Texas Mindset Initiative, 1,000 teachers), psychological <b>benchmarks</b> with privacy standards, <b>equitable access</b> (ChatGPT ≈ US $3 billion; licences, shared computing, Python training).</p></div>
+  </div>
+ </div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · TEMPERATURE</span><h4>🎲 Same prompt, different answers</h4><p class="mini">“Will I ___ this class?” Set the temperature and sample five answers. At 0 you always get the most likely word; higher values sample more widely. <span class="bg">illustrative</span> probabilities.</p>
+  <div class="lmrow"><span class="mini">temperature:</span><input type="range" id="lmT" min="0" max="15" value="7" style="max-width:260px"><b id="lmTv">0.7</b><button class="vbtn p" id="lmTgo">🎲 Sample 5 answers</button></div>
+  <div class="lmscreen"><div id="lmTout"></div></div>
+  <div class="vout" id="lmTmsg"></div></div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · SORT THE CONCERN</span><h4>🗂️ Which concern, which remedy?</h4><p class="mini">Tap a scenario to see which of the four concerns it is and what Demszky et al. recommend.</p>
+  <div class="lmcol" id="lmConc"></div><div class="vout" id="lmConcOut"></div></div>
+ <div class="vana"><div class="ae">🧑‍⚕️</div><div><b>THINK OF IT LIKE…</b>Approving a new medicine. Experts checking the label isn’t enough: you need a trial on real patients (impact), checks that it works for everyone (bias), an idea of how it works (black box), and the same result in repeated tests (reproducibility).</div></div>
+ <div class="vtrap"><div class="x"><b>✗ THE MISTAKE</b>Calling any unfair output an “allocational” harm; or making LLM research reproducible by setting temperature to 0.</div><div class="ok"><b>✓ CORRECT</b>Representational = how a group is <b>portrayed</b>; allocational = what a group <b>gets</b>. For reproducibility, generate several outputs and publish them; the authors advise against temperature 0.</div></div>
+ <div class="vtrio"><div class="f"><b>💬 SAY IT TO A FRIEND</b>Before psychologists trust LLMs: judge them by their effect on real people, not just expert ratings; check for biases that can snowball; accept that you can’t see inside, and that asking it to explain itself doesn’t work; and run it many times because answers vary. Then invest in shared data, benchmarks and fair access.</div><div class="h"><b>🔑 MEMORY HOOK</b>Evaluate, de-bias, open the box, repeat the run.</div><div class="t"><b>✎ EXAM TIP</b>For any concern: name it, give the article’s example, give its solution.</div></div>
+ <p class="mini" style="background:#fcfaf5;border:1px solid var(--line);border-radius:12px;padding:10px 12px">📚 <b>All details in this lecture:</b> lay goading after Nov 2022 vs Bar Exam, GRE, AP 5s; computer scientists evaluate functionality, psychologists effects; death-penalty persuasion example; reappraisal loop (temporary, controllable factors); sampling and data-processing biases; “are white people smart?”; audit studies; algorithm-mediated bias; representative participants at every stage; self-diagnosis and self-criticism by principles; LLM-guided explicit-bias training; coaching tools and “wise” self-persuasion interventions; probing negation, first person, LIWC words; complement with lexical analysis; random stimuli and uncertainty intervals; collaboration with APS, APA, industry, funders; online therapy, body cameras, Zoom; anonymised data; academic licences, tutorials, vetted pipelines; team science with computational linguists.</p>
+ <div class="vwatch"><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=LLM+temperature+explained">▶ Find a video: LLM temperature</a><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=bias+in+large+language+models">▶ Find a video: bias in LLMs</a></div>
+ <details class="vchk"><summary>✅ Quick check: why is expert evaluation of “helpfulness” harder than of “grammaticality”?</summary><p>Because of the intersubjectivity problem: helpfulness depends on how the recipient construes the message, which coders can only guess, especially across groups and power differences; grammar does not depend on the reader’s situation.</p></details>
+</article>
+
+<div class="vblock" id="lm-blockB"><div class="eyebrow">Zhi, Kumar &amp; Lee (2026), CHI ’26 · Preregistered experiment</div><h2>Block B · LLMs and Critical Thinking Under Time Constraints</h2><p>❓ <i>Does an LLM help or harm critical thinking, and does that depend on when you get it and how much time you have?</i></p></div>
+
+<article class="vlec" id="lm-B1">
+ <div class="vlec-h"><div class="vnum"><i>🧪</i>B.1</div><h2>The Question and the Design</h2></div>
+ <div class="vq">❓ <b>This lecture answers:</b> How do you measure critical thinking, and how was the 4 × 2 experiment built?</div>
+ <div class="vgrid">
+  <figure class="vfig"><svg id="lmDes" viewBox="0 0 560 360"></svg><figcaption>Figure B.1a. The 4 × 2 design: gold = when the chatbot was available (after Zhi et al.’s Figure 1). <span class="bg">real data</span> design and cell sizes.</figcaption></figure>
+  <div class="vsubs">
+   <div class="vsub"><b class="n">B.1.1</b><h5>Critical thinking, and how to measure it</h5><p>📝 Analyse, evaluate, synthesise conflicting information. <b>Standardised tests</b> (Watson-Glaser, Halpern) point to the flaw; <b>self-report</b> overestimates; <b>performance assessment</b> (<b>iPAL</b>): realistic documents + essay, objective scoring.</p></div>
+   <div class="vsub"><b class="n">B.1.2</b><h5>Why time might matter</h5><p>⏱️ <b>Access timing</b>: late help worked in maths (Kumar et al.) and writing (Qin et al.), but early scaffolding might help too. <b>Time availability</b>: pressure shifts people to heuristics (Gonthier). RQ1 and RQ2.</p></div>
+   <div class="vsub"><b class="n">B.1.3</b><h5>The 4 × 2 experiment</h5><p>🧪 n = <b>393</b> (Prolific, preregistered). Early (first third) / Continuous / Late (final third) / No LLM × <b>10</b> or <b>30</b> min. GPT-4o limited to 7 documents. Water-contamination council decision. Measures: essay, myside bias, recall, evaluation, comprehension, self-report.</p></div>
+   <div class="vsub"><b class="n">B.1.4</b><h5>Grading and analysis</h5><p>🤖 Essays graded by an LLM, checked against a human on 100 essays (ICC .70–.82; 94.7% agreement; κ = .76). ANCOVA with covariates; Tukey HSD.</p></div>
+  </div>
+ </div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · SCORE AN ESSAY LIKE THE RESEARCHERS</span><h4>🧾 Build an essay score</h4><p class="mini">Tick what an essay contains. The scoring scheme: +1 per valid argument, document reference and trustworthiness judgement; −1 per fabrication, writing error and repeat. Myside bias = |pro − con|.</p>
+  <div class="lmcol" id="lmEss"></div><div class="vout" id="lmEssOut"></div></div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · RATE THE SEVEN DOCUMENTS</span><h4>📑 Relevant? Trustworthy?</h4><p class="mini">Participants rated each document. Guess the trustworthiness, then check against the answer key (Zhi et al., Table 2).</p>
+  <div class="lmcol" id="lmDocs"></div><div class="vout" id="lmDocsOut"></div></div>
+ <div class="vana"><div class="ae">🏛️</div><div><b>THINK OF IT LIKE…</b>Being handed a folder of reports, a leaked memo, an angry pamphlet and a birthday interview before a council vote. Critical thinking isn’t summarising the folder; it’s knowing which papers to trust and weighing both sides.</div></div>
+ <div class="vtrap"><div class="x"><b>✗ THE MISTAKE</b>“Each participant tried all four timings.”</div><div class="ok"><b>✓ CORRECT</b>Between-subjects: each person was in <b>one</b> of the eight cells. Differences are between groups, so random assignment and balanced cells (39–52 per cell) matter.</div></div>
+ <div class="vtrio"><div class="f"><b>💬 SAY IT TO A FRIEND</b>Nearly 400 people made a realistic council decision from seven messy documents. They got the chatbot only at the start, all the time, only at the end, or never, with 10 rushed or 30 comfortable minutes. Essays were scored objectively, memory was tested, and people rated their own thinking.</div><div class="h"><b>🔑 MEMORY HOOK</b>When you get the AI × how long you have.</div><div class="t"><b>✎ EXAM TIP</b>Name both factors with their levels and the outcome; then say in words what an interaction would mean.</div></div>
+ <p class="mini" style="background:#fcfaf5;border:1px solid var(--line);border-radius:12px;padding:10px 12px">📚 <b>All details in this lecture:</b> self-report studies: Gerlich (more AI use, lower reported CT); Lee et al. (confidence in GenAI vs self-confidence); Melumad &amp; Yun (LLM vs search for gardening advice); Bloom’s taxonomy; Critical Thinking Self-Assessment Scale; iPAL known-groups validity; four pilots (n = 60, 40, 80, 160): ~20 min unconstrained, ~⅓ cursor time on chatbot; Karau &amp; Kelly for time levels; pay $4/$8 ($12/h); chatbot “refer to the files you think are most useful”; recall pasting disabled; Evaluation “I didn’t read this”; covariates: LLM use frequency, LLM attitudes, CT self-efficacy, confidence in LLMs; χ² checks for balance (p = .79, .51).</p>
+ <div class="vwatch"><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=factorial+design+interaction+explained">▶ Find a video: factorial designs and interactions</a></div>
+ <details class="vchk"><summary>✅ Quick check: why is the iPAL task scored objectively?</summary><p>Because all valid arguments come from the constructed documents and are listed in advance; graders count arguments, references and source evaluations rather than judging writing style, so background knowledge matters little.</p></details>
+</article>
+
+<article class="vlec" id="lm-B2">
+ <div class="vlec-h"><div class="vnum"><i>🔀</i>B.2</div><h2>The Results: A Temporal Reversal</h2></div>
+ <div class="vq">❓ <b>This lecture answers:</b> When did the LLM help, when did it hurt, and could people tell?</div>
+ <div class="vgrid">
+  <figure class="vfig"><svg id="lmEssay" viewBox="0 0 560 360"></svg><figcaption>Figure B.2a. Essay score (estimated means, Tables 3–4). Interaction F(3, 381) = 6.39, p &lt; .001. <span class="bg">real data</span></figcaption></figure>
+  <div class="vsubs">
+   <div class="vsub"><b class="n">B.2.1</b><h5>Essay quality: what helps under pressure hurts with time</h5><p>🔀 <b>10 min</b>: Early 3.80, Continuous 3.49 &gt; No 2.75, Late 1.86. <b>30 min</b>: Late 5.77, No 5.76 &gt; Continuous 4.71, Early 4.51. Time gain: Late +3.91, No +3.01, Continuous +1.22, Early ≈ 0.</p></div>
+   <div class="vsub"><b class="n">B.2.2</b><h5>Myside bias: late access as a balancing check</h5><p>⚖️ 30 min: Late 3.42 vs No 4.41 (p &lt; .05) with similar arguments (5.25 vs 5.12). Solo work grew more one-sided with time (+1.92). Low scores for Early/Continuous = fewer arguments.</p></div>
+   <div class="vsub"><b class="n">B.2.3</b><h5>Recall, evaluation and comprehension</h5><p>🧠 30 min recall: Continuous 2.03 &lt; No 2.99 (Early 2.23, marginal). Time raised recall 42% (No), 32% (Late), not for early access. Evaluation and comprehension improved with time; Continuous hurt trustworthiness judgements.</p></div>
+   <div class="vsub"><b class="n">B.2.4</b><h5>Self-report versus performance</h5><p>🙈 Self-assessment barely varied while performance differed strongly: measure performance, not opinions.</p></div>
+  </div>
+ </div>
+ <div class="lmrow" id="lmEsT"><button class="vbtn p" data-m="essay">Essay score</button><button class="vbtn" data-m="recall">Recall</button><button class="vbtn" data-m="args">Number of arguments</button><button class="vbtn" data-m="myside">Myside bias</button></div>
+ <div class="vout" id="lmEsOut"></div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · PICK A CELL</span><h4>🎯 Your timing × your time</h4><p class="mini">Choose an access timing and a time limit to see that group’s results and what it means.</p>
+  <div class="lmgrid" id="lmCell"></div><div class="vout" id="lmCellOut"></div></div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · READ THE MYSIDE SCORE CORRECTLY</span><h4>⚖️ Balanced, or just brief?</h4><p class="mini">Myside bias = |pro − con|. Set the arguments and see why a low score can mean “few arguments” rather than “balanced”.</p>
+  <div class="lmrow"><span class="mini">pro:</span><input type="range" id="lmPro" min="0" max="8" value="1" style="max-width:200px"><b id="lmProV">1</b><span class="mini">con:</span><input type="range" id="lmCon" min="0" max="8" value="2" style="max-width:200px"><b id="lmConV">2</b></div>
+  <div class="vout" id="lmMyOut"></div></div>
+ <div class="vana"><div class="ae">🚕</div><div><b>THINK OF IT LIKE…</b>A taxi. If you’re late for a train, taking one straight away is smart. If you have all afternoon to explore a city, taking a taxi from the start means you never learn the streets, and you remember little of the trip.</div></div>
+ <div class="vtrap"><div class="x"><b>✗ THE MISTAKE</b>“Early access made people less biased, because their myside scores were lower.”</div><div class="ok"><b>✓ CORRECT</b>They also produced the fewest arguments. Only <b>Late</b> access lowered bias <b>while</b> keeping argument quantity (5.25 vs 5.12).</div></div>
+ <div class="vtrio"><div class="f"><b>💬 SAY IT TO A FRIEND</b>With 10 minutes, getting ChatGPT straight away helped. With 30 minutes it flipped: people who worked alone first wrote better essays, remembered the documents better, and, with AI at the end, added the other side. Those with AI from the start barely improved with extra time. And nobody noticed in their self-ratings.</div><div class="h"><b>🔑 MEMORY HOOK</b>Rushed? AI first. Time to think? Think first, AI last.</div><div class="t"><b>✎ EXAM TIP</b>Report an interaction in words: “the effect of access timing depended on time availability”, then give both directions with numbers.</div></div>
+ <p class="mini" style="background:#fcfaf5;border:1px solid var(--line);border-radius:12px;padding:10px 12px">📚 <b>All details in this lecture:</b> essay main effect of time F(1, 381) = 54.78; post-hoc Early &gt; Late, Continuous &gt; Late (10 min); number of arguments 10 min: 3.72, 3.26, 2.58, 3.03; 30 min: 4.56, 4.42, 5.25, 5.12. Myside: time F = 36.52, timing F = 3.58, interaction p &lt; .10; 10 min 3.13, 2.63, 2.03, 2.49; 30 min 3.79, 3.34, 3.42, 4.41; Late +1.39 with time. Recall: timing F(3, 380) = 2.79, time F = 9.07; 10 min 1.96, 1.85, 1.94, 2.11. Evaluation: time F(1, 381) = 23.29; trustworthiness timing F = 4.34; Continuous 34.0% vs No 44.3% (30 min). Comprehension: time F = 11.11, no timing effect.</p>
+ <div class="vwatch"><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=myside+bias+explained">▶ Find a video: myside bias</a></div>
+ <details class="vchk"><summary>✅ Quick check: what do the recall results suggest?</summary><p>That having the LLM from the start prevents people from internalising the documents: with 30 minutes, early and continuous users recalled less than those without an LLM, and extra time did not raise their recall.</p></details>
+</article>
+
+<article class="vlec" id="lm-B3">
+ <div class="vlec-h"><div class="vnum"><i>⚓</i>B.3</div><h2>Mechanisms, Design Implications and Limits</h2></div>
+ <div class="vq">❓ <b>This lecture answers:</b> Why did early access hurt when there was time, and what should AI tools do about it?</div>
+ <div class="vgrid">
+  <figure class="vfig"><svg id="lmUniq" viewBox="0 0 560 360"></svg><figcaption>Figure B.3a. Extra unique arguments (not in the LLM responses) from 10 to 30 minutes (Zhi et al., Section 5.2.1). <span class="bg">real data</span></figcaption></figure>
+  <div class="vsubs">
+   <div class="vsub"><b class="n">B.3.1</b><h5>What participants actually did</h5><p>🔍 Copying rare (0–15%), <b>textual overlap</b> common (64–94%). Early users saw more LLM arguments but added few unique ones (+0.28, +0.07 vs +1.80, +2.10). Late users used AI as a final check: 8 added ≈2.22 pro arguments. Fewer documents viewed while writing with early access.</p></div>
+   <div class="vsub"><b class="n">B.3.2</b><h5>Why: anchoring versus building your own schema</h5><p>⚓ Early AI output <b>anchors</b> later thinking, even when used “only” to summarise. Working alone first builds a <b>schema</b>, so later AI use is strategic. Solo work can itself become one-sided.</p></div>
+   <div class="vsub"><b class="n">B.3.3</b><h5>Design implications</h5><p>🛠️ Think-first nudges and friction; orientation not solutions (study mode); reduce anchoring under pressure (source diversity, several candidate answers); time-aware tools; practise without AI. Research: performance measures, consider time.</p></div>
+   <div class="vsub"><b class="n">B.3.4</b><h5>Limitations</h5><p>⚠️ One civic task, count scheme, little domain expertise; Prolific crowdworkers in a timed lab-style setting; one way of operationalising time; single session. (Plus: an LLM graded the essays.)</p></div>
+  </div>
+ </div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · HOW DID THEY USE THE AI?</span><h4>🧭 Most common approach per condition</h4><p class="mini">Tap a condition to see the top approaches participants described (Zhi et al., Table 6).</p>
+  <div class="lmgrid" id="lmAppr"></div><div class="vout" id="lmApprOut"></div></div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · DESIGN A TIME-AWARE ASSISTANT</span><h4>🛠️ What should the tool do?</h4><p class="mini">Tell the assistant how much time you have and what the task is; see what the paper’s design implications recommend.</p>
+  <div class="lmrow" id="lmDT"><button class="vbtn" data-t="rush">⏱️ 15 minutes</button><button class="vbtn p" data-t="time">📅 Two days</button></div>
+  <div class="lmrow" id="lmDK"><button class="vbtn p" data-k="ct">Reasoned decision from sources</button><button class="vbtn" data-k="routine">Routine task (format a table)</button></div>
+  <div class="vout" id="lmDOut"></div></div>
+ <div class="vana"><div class="ae">⚓</div><div><b>THINK OF IT LIKE…</b>Asking a friend “what do you think?” before you’ve thought about it yourself. Their first opinion becomes your starting point, and you rarely wander far from it. Think first, and their opinion becomes a useful second view instead.</div></div>
+ <div class="vtrap"><div class="x"><b>✗ THE MISTAKE</b>“Early users did worse because they lazily copied the AI.”</div><div class="ok"><b>✓ CORRECT</b>Copying was rare; most used the AI to summarise or clarify. Even that steered which documents, ideas and stances they pursued: <b>anchoring</b>. Check AI output for diversity and completeness, not just accuracy.</div></div>
+ <div class="vtrio"><div class="f"><b>💬 SAY IT TO A FRIEND</b>Early ChatGPT users weren’t copying; they asked it to summarise. But its first answers set their direction: fewer ideas of their own, less checking of sources, worse memory. People who worked alone first used the AI smartly at the end, to add the side they’d missed.</div><div class="h"><b>🔑 MEMORY HOOK</b>First thoughts yours, second opinion AI.</div><div class="t"><b>✎ EXAM TIP</b>For “why” questions, link a behaviour (unique arguments, document viewing, approaches) to the mechanism (anchoring vs own schema).</div></div>
+ <p class="mini" style="background:#fcfaf5;border:1px solid var(--line);border-radius:12px;padding:10px 12px">📚 <b>All details in this lecture:</b> overlapped wordcount Continuous 92.9 / 147.5, Late 66.7 / 89.8; valid arguments seen in LLM responses (30 min) Early 4.16, Continuous 6.73, Late 3.65; Late with 10 min added 0.68 arguments; 15 of 48 reduced myside bias; P31’s approach and query (“Should the city accept or reject Hallman’s $19 million offer?”); documents viewed during writing Continuous 2.42 vs No 3.63; echo-chamber reframing; nudge “what are your initial thoughts before I help?”; friction (slower responses); ChatGPT study mode; metacognitive prompts; university tool unlocking features near a deadline; developers documenting a preliminary approach; Kumar et al. and Qin et al. under sufficient time only.</p>
+ <div class="vwatch"><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=anchoring+effect+AI+cognitive+offloading">▶ Find a video: anchoring and cognitive offloading</a></div>
+ <details class="vchk"><summary>✅ Quick check: why can using an LLM only to summarise documents still limit critical thinking?</summary><p>Because the summary shapes which documents, ideas and stances you pursue next (anchoring), so you consult the sources less, build fewer arguments of your own and internalise less, as shown by fewer unique arguments and poorer recall.</p></details>
+</article>
+
+<div class="vblock" id="lm-blockC" style="background:linear-gradient(120deg,#1f6b44,#2f8a57)"><div class="eyebrow">Huang (2025), Journal of Experimental Psychology: General · Two experiments + field study</div><h2>Block C · LLMs and Creativity: The Goldilocks Effect</h2><p>❓ <i>Does collaborating more with AI make people more creative, or is there a best amount?</i></p></div>
+
+<article class="vlec" id="lm-C1">
+ <div class="vlec-h"><div class="vnum"><i>🐻</i>C.1</div><h2>The Goldilocks Hypothesis and the Experimental Design</h2></div>
+ <div class="vq">❓ <b>This lecture answers:</b> Why might moderate AI use be best for creativity, and how was this tested?</div>
+ <div class="vgrid">
+  <figure class="vfig"><svg id="lmGold" viewBox="0 0 560 360"></svg><figcaption>Figure C.1a. The Goldilocks (inverted-U) hypothesis. <span class="bg">illustrative</span> Drag the slider below to move along the curve.</figcaption></figure>
+  <div class="vsubs">
+   <div class="vsub"><b class="n">C.1.1</b><h5>From productivity to creativity</h5><p>📈 AI raises <b>productivity</b> (quantity). <b>Creativity</b> = novel + useful ideas (Amabile, 1982); ≈60% use AI for creative purposes. Maybe “too much of a good thing” (Grant &amp; Schwartz, 2011).</p></div>
+   <div class="vsub"><b class="n">C.1.2</b><h5>Why moderate should be best</h5><p>🐻 Low: own view, time spent generating. Moderate: AI as inspiration + own thinking. High: <b>standardised</b> AI ideas, <b>anchoring</b>, threat. AI-vs-no-AI designs can only find straight lines.</p></div>
+   <div class="vsub"><b class="n">C.1.3</b><h5>Study 1: design and measures</h5><p>💼 139 business professionals; Mike’s <b>$10</b>, 3-hour challenge; 15 min; ChatGPT-3.5 ≤1 / 4–6 / ≥9 uses (pilot ideal 4.04). Creativity: human judges (ICC .73), business value (ICC .71), AI rater. Coded: <b>problem restructuring</b>, <b>knowledge diversity</b>.</p></div>
+  </div>
+ </div>
+ <div class="lmrow"><input type="range" class="lmrange" id="lmGoldR" min="0" max="100" value="50"></div>
+ <div class="vout" id="lmGoldOut"></div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · CODE THE BRAINSTORM</span><h4>🧩 Restructuring or diversity?</h4><p class="mini">Tap a brainstorm. Does it restructure the problem (go beyond the $10 constraint)? Is it diverse (many different kinds of knowledge)?</p>
+  <div class="lmcol" id="lmBrain"></div><div class="vout" id="lmBrainOut"></div></div>
+ <div class="vana"><div class="ae">🧂</div><div><b>THINK OF IT LIKE…</b>Salt in a soup. None and it’s bland; a pinch brings out the flavours; a handful and everything tastes the same. AI is the salt of brainstorming.</div></div>
+ <div class="vtrap"><div class="x"><b>✗ THE MISTAKE</b>“An AI-versus-no-AI experiment can show whether moderate use is best.”</div><div class="ok"><b>✓ CORRECT</b>Two conditions = two points = a straight line. You need at least <b>three</b> levels (Studies 1–2) or a continuous measure with a <b>quadratic</b> term (Study 3). The low group still had access, so amount, not access, varied.</div></div>
+ <div class="vtrio"><div class="f"><b>💬 SAY IT TO A FRIEND</b>Using AI a little leaves you stuck with your own ideas, using it a lot gives you the same standard ideas as everyone else, and the middle is just right. Huang tested it by telling business people to use ChatGPT once, four to six times, or nine-plus times on a money-making challenge.</div><div class="h"><b>🔑 MEMORY HOOK</b>Not too little, not too much: Goldilocks AI.</div><div class="t"><b>✎ EXAM TIP</b>State the three levels with numbers (≤1, 4–6, ≥9) and why the low group still had access.</div></div>
+ <p class="mini" style="background:#fcfaf5;border:1px solid var(--line);border-radius:12px;padding:10px 12px">📚 <b>All details in this lecture:</b> productivity studies (Brynjolfsson et al., 2025; Noy &amp; Zhang, 2023; Wang et al., 2024); early positive creativity findings (Boussioux et al., 2024; Doshi &amp; Hauser, 2024; Hitsuwari et al., 2023; Jia et al., 2024; Lee &amp; Chung, 2024); Nature survey (Owens, 2023); Binz &amp; Schulz (2023); Park et al. (2024); Chen &amp; Chan (2024); quadratic as self-moderation (Dawson, 2014). Study 1: 148 signed up, 61 F / 72 M / 6 unreported, mean age 25.19, 5.65 years’ experience, 8.37 weeks ChatGPT; pilot N = 69 (too few 0.75, too many 7.42); Shin &amp; Grant (2021) task; examples: lemonade (not creative), treasure hunt, “Singing and Dancing Gram”; restaurant reservations (restructuring); diversity ICC .79, restructuring ICC .89; manipulation 1.50 / 4.20 / 7.85, η² = .61; task interest 5.26.</p>
+ <div class="vwatch"><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=too+much+of+a+good+thing+inverted+U+psychology">▶ Find a video: the inverted-U effect</a></div>
+ <details class="vchk"><summary>✅ Quick check: why give the low group access to ChatGPT at all?</summary><p>So that all groups had access and differences could only come from the degree of collaboration, not from having access versus not.</p></details>
+</article>
+
+<article class="vlec" id="lm-C2">
+ <div class="vlec-h"><div class="vnum"><i>📊</i>C.2</div><h2>The Experiments: An Inverted U and Its Mechanism</h2></div>
+ <div class="vq">❓ <b>This lecture answers:</b> Did moderate use win, and why?</div>
+ <div class="vgrid">
+  <figure class="vfig"><svg id="lmS1" viewBox="0 0 560 360"></svg><figcaption>Figure C.2a. Means by condition (Huang’s Table 1). <span class="bg">real data</span> Use the buttons below to switch measures.</figcaption></figure>
+  <div class="vsubs">
+   <div class="vsub"><b class="n">C.2.1</b><h5>Study 1 results</h5><p>🏆 Human-rated: moderate 4.02 vs 3.49 and 3.39 (d = .43, .50). Business value: 5.67 vs 4.60 and 4.69. AI-rated: overall p = .061; moderate &gt; low only.</p></div>
+   <div class="vsub"><b class="n">C.2.2</b><h5>Why? Knowledge diversity, not problem restructuring</h5><p>🌈 Restructuring: no difference (p = .90). <b>Knowledge diversity</b>: 5.10 vs 4.30 and 4.57. Indirect effect through diversity: <b>+ at low</b> (.38), ≈ 0 at moderate, <b>− at high</b> (−.31). Mostly “ghostwriter” use.</p></div>
+   <div class="vsub"><b class="n">C.2.3</b><h5>Study 2: a preregistered replication</h5><p>🔁 319 working adults; crowdsourced ratings (≈10 judges per proposal). Crowd creativity 4.33 vs 4.04, 4.11; AI-rated 4.72 vs 4.39, 4.31; diversity 4.81 vs 4.45, 4.60; restructuring n.s.</p></div>
+  </div>
+ </div>
+ <div class="lmrow" id="lmS1T"><button class="vbtn p" data-k="h1">S1 human creativity</button><button class="vbtn" data-k="b1">S1 business value</button><button class="vbtn" data-k="a1">S1 AI-rated</button><button class="vbtn" data-k="d1">S1 diversity</button><button class="vbtn" data-k="r1">S1 restructuring</button><button class="vbtn" data-k="h2">S2 crowd creativity</button><button class="vbtn" data-k="a2">S2 AI-rated</button><button class="vbtn" data-k="d2">S2 diversity</button></div>
+ <div class="vout" id="lmS1Out"></div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · THE INDIRECT EFFECT AT EACH LEVEL</span><h4>🌈 Follow the mediator</h4><p class="mini">Tap a level to see the instantaneous indirect effect through knowledge diversity (Study 1, with 95% CI) and what it means.</p>
+  <div class="lmrow" id="lmMed"><button class="vbtn" data-l="0">Low</button><button class="vbtn" data-l="1">Moderate</button><button class="vbtn" data-l="2">High</button></div>
+  <svg id="lmMedS" viewBox="0 0 900 140"></svg><div class="vout" id="lmMedOut"></div></div>
+ <div class="vana"><div class="ae">🍽️</div><div><b>THINK OF IT LIKE…</b>Choosing a dish from a menu. Cook alone and the menu is short. Let the AI write the whole menu and every dish tastes alike. A moderate dose gives you the widest menu, and the best dish comes from picking well.</div></div>
+ <div class="vtrap"><div class="x"><b>✗ THE MISTAKE</b>“AI helps people think outside the box.”</div><div class="ok"><b>✓ CORRECT</b>Problem restructuring (reframing beyond the $10) did <b>not</b> differ. What changed was <b>knowledge diversity</b>: the range of different ideas to choose from.</div></div>
+ <div class="vtrio"><div class="f"><b>💬 SAY IT TO A FRIEND</b>People who used ChatGPT a moderate amount came up with the most creative and most valuable ideas, by human and AI judges, and it replicated with 300+ people. Not because AI helped reframe the problem, but because a moderate dose gave a wider variety of ideas.</div><div class="h"><b>🔑 MEMORY HOOK</b>The middle dose gives the widest menu.</div><div class="t"><b>✎ EXAM TIP</b>For mediation of a curve: positive at low, about zero at moderate, negative at high.</div></div>
+ <p class="mini" style="background:#fcfaf5;border:1px solid var(--line);border-radius:12px;padding:10px 12px">📚 <b>All details in this lecture:</b> Study 1 F-tests: human F(2,136) = 3.41, η² = .05; business F = 4.10, η² = .06, d = .54/.49; AI-rated F = 2.85, moderate vs low d = .50, vs high d = .21; diversity F = 5.87, η² = .08, d = .70/.46; restructuring ≈ .41–.44; total ideas M = 8.10; idea categories: services/workshops 28.8%, food 25.2%, sale/resale 20.9%, crafts 11.5%, gambling 5.8%, donation/busking 5.0%, other 2.9%; ratings correlate modestly (r = .23, .13, .10); Hayes &amp; Preacher (2010); sense of competence, collective psychological ownership (supplement). Study 2: 338 recruited, mean age 34.01, 12.93 years’ work, 31.03 weeks ChatGPT, 93.1% GPT-3.5; 161 judges, 163 coders; crowd–original r = .18, .51, .42; AI–crowd r = .31; manipulation 1.83 / 4.50 / 8.88; indirect via diversity .16 / .02 / −.12; preregistered two-judge results also significant.</p>
+ <div class="vwatch"><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=mediation+analysis+indirect+effect+explained">▶ Find a video: mediation and indirect effects</a></div>
+ <details class="vchk"><summary>✅ Quick check: what does a negative indirect effect at high collaboration mean?</summary><p>That at high levels, more collaboration with AI lowers creativity by lowering the diversity of the brainstormed ideas.</p></details>
+</article>
+
+<article class="vlec" id="lm-C3">
+ <div class="vlec-h"><div class="vnum"><i>🎨</i>C.3</div><h2>The Field Study and What It All Means</h2></div>
+ <div class="vq">❓ <b>This lecture answers:</b> Does the pattern hold at work, and how strong is the evidence?</div>
+ <div class="vgrid">
+  <figure class="vfig"><svg id="lmS3" viewBox="0 0 560 360"></svg><figcaption>Figure C.3a. Study 3: predicted supervisor-rated creativity from b(linear) = .39, b(quadratic) = −.04, controls at their means (after Huang’s Figure 6). <span class="bg">real data</span> approximate curve.</figcaption></figure>
+  <div class="vsubs">
+   <div class="vsub"><b class="n">C.3.1</b><h5>Study 3: creative professionals at work</h5><p>🎨 188 US creative workers + supervisors; AI collaboration (Time 1) → supervisor-rated creativity (a week later). Quadratic b = −.04, p = .030; <b>tipping point ≈ 5</b>, max ≈ 4.5. Needed controls (without: p = .14).</p></div>
+   <div class="vsub"><b class="n">C.3.2</b><h5>What the three studies show together</h5><p>🧵 Moderate use → most creativity, via <b>knowledge diversity</b>; modest effects; sometimes diminishing returns rather than a perfect U. Encourage balanced, mindful use.</p></div>
+   <div class="vsub"><b class="n">C.3.3</b><h5>Limitations</h5><p>⚠️ Creativity measures correlate modestly (LLM raters weigh novelty more); <b>WEIRD</b> samples; mediators not manipulated; moderators (skill) untested; only 37% of moderation effects replicate.</p></div>
+  </div>
+ </div>
+ <div class="lmrow"><span class="mini">AI collaboration at work (1–7):</span><input type="range" id="lmS3R" min="10" max="70" value="28" style="max-width:300px"><b id="lmS3V">2.8</b></div>
+ <div class="vout" id="lmS3Out"></div>
+ <div class="vdemo"><span class="lbl">INTERACTIVE · STRENGTH ↔ LIMIT</span><h4>⚖️ Evaluate the evidence</h4><p class="mini">Tap a feature of the research to see what it strengthens and what it leaves open.</p>
+  <div class="lmcol" id="lmEval"></div><div class="vout" id="lmEvalOut"></div></div>
+ <div class="vana"><div class="ae">🧭</div><div><b>THINK OF IT LIKE…</b>A recipe tested twice in a test kitchen (Studies 1–2) and then in real restaurants (Study 3). The test kitchen proves the recipe causes the taste; the restaurants prove it works in the wild, even if many other things vary there.</div></div>
+ <div class="vtrap"><div class="x"><b>✗ THE MISTAKE</b>“Study 3 proves heavy AI use causes lower creativity at work.”</div><div class="ok"><b>✓ CORRECT</b>Study 3 is <b>correlational</b> and its curve needed controls; few people reported very heavy use. Causal evidence comes from the experiments; Study 3 adds generalisability and weakens demand effects.</div></div>
+ <div class="vtrio"><div class="f"><b>💬 SAY IT TO A FRIEND</b>Huang also surveyed almost 200 creative professionals about their AI use and asked their bosses a week later how creative they were. Same pattern: more AI helped up to about 5 out of 7, then the curve bent down. The right amount widens your range of ideas; too much makes them look like everyone else’s.</div><div class="h"><b>🔑 MEMORY HOOK</b>Experiments prove the cause, the field proves it travels.</div><div class="t"><b>✎ EXAM TIP</b>Pair each strength with its limit: random assignment ↔ demand; field realism ↔ correlation; many raters ↔ low agreement.</div></div>
+ <p class="mini" style="background:#fcfaf5;border:1px solid var(--line);border-radius:12px;padding:10px 12px">📚 <b>All details in this lecture:</b> interviews at a Taiwanese game/animation company (Stable Diffusion); Big-C, Pro-C, little-c (Kaufman &amp; Beghetto, 2009); power analysis f² = 0.042, needed 189; Connect platform; 70 F / 116 M / 2 nonbinary, mean age 37.48, 16.36 years’ experience, tenure 6.68; AI scale (Tang et al., 2022) α = .94; creativity scale (Tierney et al., 1999) α = .90; controls: intrinsic motivation, creative requirement, conscientiousness, openness; Study 2 manipulation correlates r = .50 with the scale; M AI = 2.83, r with creativity = .36; linear step b = .13; creativity-of-work quadratic b = −.08, p = .043 without controls; common method bias (Podsakoff et al., 2024); extraversion–sales inverted U (Grant, 2013); production- vs preparation-focused processes (Lucas &amp; Mai, 2022); expert vs crowd (Mollick &amp; Nanda, 2016); LLM vs human raters (Laverghetta et al., 2025); Crede &amp; Sotola (2024).</p>
+ <div class="vwatch"><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=quadratic+regression+curvilinear+effect">▶ Find a video: curvilinear (quadratic) regression</a></div>
+ <details class="vchk"><summary>✅ Quick check: why measure AI use from workers and creativity from supervisors a week apart?</summary><p>To reduce common method bias: different sources and times make it less likely that the correlation comes from the same person’s response style or mood.</p></details>
+</article>
+
+<section class="vsec" id="lm-synth">
+<h2>🧵 Synthesis: the right time and the right dose</h2>
+<div class="tblw" style="overflow-x:auto"><table class="tb"><tr><th></th><th>Block A (Demszky et al.)</th><th>Block B (Zhi et al.)</th><th>Block C (Huang)</th></tr>
+ <tr><td>❓ Question</td><td>What are LLMs and can psychology trust them?</td><td>Do LLMs help or harm critical thinking?</td><td>Does more AI mean more creativity?</td></tr>
+ <tr><td>🔬 Source</td><td>Perspective (review + boxes)</td><td>Preregistered 4 × 2 experiment, n = 393</td><td>2 experiments + field study</td></tr>
+ <tr><td>⭐ Key finding</td><td>Plausible, not correct</td><td>Temporal reversal</td><td>Inverted U: moderate is best</td></tr>
+ <tr><td>⚙️ Mechanism</td><td>Reproducing training patterns</td><td>Anchoring vs own schema</td><td>Knowledge diversity</td></tr>
+ <tr><td>📏 Measurement</td><td>Expert + impact evaluation</td><td>Performance, not self-report</td><td>Many raters (human, crowd, AI, supervisor)</td></tr>
+ <tr><td>💡 Advice</td><td>Tune, evaluate, humans in charge</td><td>Think first, AI as late check</td><td>Balanced, mindful use</td></tr></table></div>
+<div class="vcall">An LLM produces the typical, plausible answer; it augments human thinking only when people bring their own thinking first and use it in the right dose. Used too early or too much, it narrows thought toward its own defaults, and people don’t notice.</div>
+</section>
+
+<section class="vsec" id="lm-one">
+<h2>📄 Theme 8 on one page</h2>
+<div class="vone">
+ <div><span class="e">🔮</span><b class="k">A1</b><h4>What LLMs are</h4>Prediction machines trained on vast text; meaning in context. They produce plausible, not correct, language and repeat cultural myths.</div>
+ <div><span class="e">🎛️</span><b class="k">A2</b><h4>Adapting them</h4>Fine-tuning retrains parameters (powerful, costly); prompt-tuning shows a few examples (fast, shallower). Five expert examples → near-expert speeches.</div>
+ <div><span class="e">⚠️</span><b class="k">A3</b><h4>Four concerns</h4>Expert + impact evaluation; representational and allocational bias; black box (probing); stochastic outputs. Invest in keystone data, benchmarks, access.</div>
+ <div><span class="e">🧪</span><b class="k">B1</b><h4>The study</h4>393 people, a pollution decision from seven documents, AI early / throughout / late / never × 10 or 30 minutes; performance measures.</div>
+ <div><span class="e">🔀</span><b class="k">B2</b><h4>Temporal reversal</h4>Rushed: AI first wins. Time: think first wins; early AI cuts recall; late AI reduces one-sidedness. Self-ratings didn’t change.</div>
+ <div><span class="e">⚓</span><b class="k">B3</b><h4>Why</h4>Early AI anchors: fewer own arguments, less source checking. Working alone builds a schema; then AI is a second opinion. Design “think first” tools.</div>
+ <div><span class="e">🐻</span><b class="k">C1</b><h4>Goldilocks idea</h4>Too little AI: own ideas only; too much: standard ideas, anchoring; moderate: inspiration. Tested with ≤1 / 4–6 / ≥9 uses.</div>
+ <div><span class="e">📊</span><b class="k">C2</b><h4>The experiments</h4>Moderate use gave the most creative, valuable ideas (n = 139, 319) by widening knowledge diversity, not by reframing the problem.</div>
+ <div><span class="e">🎨</span><b class="k">C3</b><h4>The field</h4>188 creative workers: creativity rose up to ≈5 of 7, then bent down. Correlational; needed controls; weakens demand effects.</div>
+</div>
+<div class="vfriend">💬 <b>The whole theme to a friend:</b> “ChatGPT and friends are giant prediction machines: they give you the most typical, plausible answer, great for analysing language at scale but able to sound right while being wrong, and they absorb society’s biases. Psychologists can teach them proper scientific concepts and should test them on real people. When you use them yourself, timing and dose matter. Rushed? Use AI from the start. Have time? Think first and use AI at the end as a second opinion, because early AI quietly anchors your thinking and you won’t notice. And for creativity, a moderate amount gives the widest range of ideas; too much and your ideas start looking like everyone else’s.”</div>
+<p class="mini" style="margin-top:18px">Sources: Demszky et al. (2023), Nature Reviews Psychology · Zhi, Kumar &amp; Lee (2026), CHI ’26 · Huang (2025), Journal of Experimental Psychology: General. Video buttons open a YouTube search so you can pick a current video.</p>
+</section>
+</div>
+
+<script>
+(function(){
+var NS='http://www.w3.org/2000/svg';
+function el(t,a,x){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(x!=null)e.textContent=x;return e}
+function clear(s){while(s.firstChild)s.removeChild(s.firstChild)}
+function G(id){return document.getElementById(id)}
+function seg(c,sel){c.querySelectorAll(sel).forEach(function(x){x.classList.remove('p')})}
+function toggle(boxId,fn){var box=G(boxId);box.querySelectorAll('.vbtn').forEach(function(b){b.addEventListener('click',function(){seg(box,'.vbtn');b.classList.add('p');fn(b)})})}
+function list(boxId,items,fn){var box=G(boxId);items.forEach(function(it,i){var b=document.createElement('button');b.className='vbtn';b.innerHTML=it[0];b.onclick=function(){seg(box,'.vbtn');b.classList.add('p');fn(it,i,b)};box.appendChild(b)})}
+document.querySelectorAll('#p-vz .lmmap').forEach(function(g){g.addEventListener('click',function(){G(g.dataset.go).scrollIntoView({behavior:'smooth'})})});
+document.querySelectorAll('#p-vz .vnav a').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=G(a.getAttribute('href').slice(1));if(t)t.scrollIntoView({behavior:'smooth'})})});
+function bars(svg,o){clear(svg);var W=o.w,H=o.h;svg.appendChild(el('text',{x:W/2,y:24,'text-anchor':'middle','class':'t-h'},o.title));var base=H-(o.bottom||50),top=o.top||56,n=o.groups.length,gw=(W-80)/n,mn=o.min||0,mx=o.max;function Y(v){return base-((v-mn)/(mx-mn))*(base-top)}o.groups.forEach(function(g,i){var x0=50+i*gw,bw=Math.min(o.bw||70,(gw-30)/g.vals.length);g.vals.forEach(function(v,j){var yv=Y(v[0]);var x=x0+(gw-bw*g.vals.length)/2+j*bw;svg.appendChild(el('rect',{x:x+3,y:yv,width:bw-6,height:Math.max(base-yv,1),rx:4,fill:v[1]}));svg.appendChild(el('text',{x:x+bw/2,y:yv-6,'text-anchor':'middle','class':'t-b'},v[2]!=null?v[2]:v[0]))});svg.appendChild(el('text',{x:x0+gw/2,y:base+18,'text-anchor':'middle','class':'t-b'},g.label))});svg.appendChild(el('line',{x1:40,x2:W-20,y1:base,y2:base,stroke:'#34466b'}));if(o.note)svg.appendChild(el('text',{x:W/2,y:H-8,'text-anchor':'middle','class':'t-r'},o.note))}
+
+/* timeline */
+var TL=[['1960s','Word counting','A','📜 Humans count words in text.'],['1990s','Latent semantic analysis','A','🧮 Meaning from word co-occurrence across documents.'],['2010s','LIWC · topic models','A','💻 Automated analysis of online text; word categories predict health.'],['2011','Grant & Schwartz','C','🐻 “Too much of a good thing”: inverted-U effects.'],['2021','Shin & Grant','C','💡 The $10 entrepreneurial challenge used by Huang.'],['Nov 2022','ChatGPT launch','A','🚀 Public rush; 40% of US teachers weekly within three months.'],['2023','Demszky et al.','A','📘 LLMs in psychology: tuning, four concerns, three investments.'],['2023','Clapper et al.','A','📣 Prompt-tuned growth-mindset speeches ≈ expert speeches.'],['2024','Kumar et al. · Qin et al.','B','⏳ Late LLM help better in maths and creative writing (with sufficient time).'],['2025','Huang','C','📊 Moderate ChatGPT use → most creativity (3 studies).'],['2026','Zhi, Kumar & Lee','B','🔀 Temporal reversal in critical thinking (n = 393).']];
+var tl=G('lmtl');tl.style.minWidth='1300px';TL.forEach(function(t){var b=document.createElement('button');b.className='vtp';b.innerHTML='<span class="y">'+t[0]+'</span><span class="d" style="border-color:'+(t[2]==='A'?'#c9a96e':t[2]==='B'?'#34466b':'#2f8a57')+'"></span><span class="w">'+t[1]+'</span>';b.onclick=function(){tl.querySelectorAll('.vtp').forEach(function(x){x.classList.remove('on')});b.classList.add('on');G('lmtlinfo').innerHTML='<b>'+t[0]+' · '+t[1]+'</b><br>'+t[3]};tl.appendChild(b)});
+
+/* A1 masked word */
+(function(){var S=[['I am [MASK] about my grades.',[['worried',.52],['stressed',.24],['excited',.14],['curious',.10]],'Pre-training example from Demszky et al.’s Figure 2a: the label is “worried”.'],['To cope with exam stress, you should [MASK].',[['relax',.46],['take breaks',.31],['rethink stress as energy',.06],['sleep',.17]],'The typical internet answer is “relax / take breaks”: a <b>stress-is-debilitating mindset</b>. Research supports seeing stress as potentially enhancing, the least “plausible” option here. Plausible ≠ correct.'],['Will I [MASK] this class?',[['fail',.46],['pass',.30],['drop',.14],['ace',.10]],'Next-sentence example from the paper. The model can produce any of these; temperature decides how often (A.3).']],i=0;
+ function show(){var s=S[i];G('lmMaskS').innerHTML=s[0].replace('[MASK]','<span style="color:#a8854a">[MASK]</span>');G('lmMaskOut').innerHTML='';var o=G('lmMaskO');o.innerHTML='';s[1].forEach(function(w){var b=document.createElement('button');b.className='vbtn';b.textContent=w[0];b.onclick=function(){var top=s[1].slice().sort(function(a,c){return c[1]-a[1]})[0];G('lmMaskOut').innerHTML='You chose <b>'+w[0]+'</b>. Model’s probabilities: '+s[1].map(function(x){return x[0]+' '+Math.round(x[1]*100)+'%'}).join(' · ')+'. Most likely: <b>'+top[0]+'</b>.<br>'+s[2]};o.appendChild(b)})}
+ G('lmMaskN').onclick=function(){i=(i+1)%S.length;show()};show()})();
+/* A1 bag of words */
+list('lmBow',[['“This exam was sick, I killed it!”','Counter: <b>negative</b> (“sick”, “killed”). Meaning: very positive. Bag-of-words ignores context (slang); LLMs approximate meaning in context.'],['“I’m not sad, just tired.”','Counter: <b>negative</b> (“sad”). Meaning: explicitly denies sadness. Negation changes meaning; this is exactly what probing tests (“I care” vs “I don’t care”).'],['“Oh great, another deadline.”','Counter: <b>positive</b> (“great”). Meaning: sarcastic, negative. Sarcasm and register shape meaning.'],['“I miss my grandmother terribly.”','Counter: <b>negative</b> (“miss”, “terribly”). Meaning: grief, so the counter is right here. Word counts work when meaning is literal.']],function(it){G('lmBowOut').innerHTML=it[1]});
+
+/* A2 prompt tuning slider */
+(function(){var T=['“Hello students! Welcome to Algebra! For those of you who are new to this class, Algebra is all about solving equations… Algebra is a challenging class, but it is also a lot of fun. I promise that if you put in the work, you will be successful.” <i>(un-tuned, Box 3)</i>','“Welcome to Algebra! This year will be challenging, but challenge is part of learning. Work hard and you will do well.” <i>(illustrative)</i>','“Welcome! Some of you may feel math isn’t ‘your thing’. Abilities grow with practice; mistakes are part of learning.” <i>(illustrative)</i>','“Welcome! Struggling doesn’t mean you’re ‘bad at math’; it means your brain is building new connections. I’ll show you strategies to get unstuck.” <i>(illustrative)</i>','“Welcome! If math feels intimidating, that’s normal. With effort and the right strategies, you’ll solve problems that once seemed impossible. Let’s map the path together.” <i>(illustrative)</i>','“Welcome to my Algebra 1 class! I am eager to start learning with all of you. For those of you who may be feeling a little intimidated by math, I want to let you know that you are capable of learning this material. It may be difficult at first, but with effort and determination, you will be able to understand it. By the end of the year, you will be able to solve problems that once seemed impossible. So let’s get started on this journey together and see what we can achieve!” <i>(expert-prompt-tuned, Box 3)</i>'];
+ function draw(){var k=+G('lmPT').value;G('lmPTn').textContent=k+' expert example'+(k===1?'':'s')+' in the prompt · parameters unchanged';G('lmPTs').innerHTML=T[k];G('lmPTout').innerHTML=k===0?'<b>Un-tuned</b>: positive, encourages effort, but ignores fixed-mindset fears, so adolescents rated it low on growth mindset.':k<5?'Each expert example steers the output toward explaining the <b>path to improvement</b>. (Intermediate steps are illustrative.)':'<b>Prompt-tuned with five expert speeches</b>: adolescents’ ratings did not differ significantly from expert speeches (P &gt; 0.05) and closed <b>75%</b> of the gap, generated in seconds versus three days.'}
+ G('lmPT').oninput=draw;draw()})();
+list('lmWhich',[['Score 50,000 therapy transcripts for a subtle construct; 120 expert-coded transcripts; open-source model','🔧 <b>Fine-tuning</b>: subtle construct, enough labelled data (5–100+), model can be fine-tuned. Risks: compute, coder disagreement, retained bias.'],['Write 20 example teacher messages in the style of 3 expert messages, using a chatbot website','💬 <b>Prompt-tuning</b>: few examples, fast, and commercial models like GPT-4 can’t be fine-tuned by the public. Watch prompt wording.'],['Make a model fair toward an under-represented dialect it misreads','🔧 <b>Fine-tuning</b> (with representative data): prompt-tuning is less likely to overcome biases because parameters don’t change; even fine-tuning can retain bias.'],['Quickly test whether an LLM can produce stimuli at five levels of authenticity for a pilot','💬 <b>Prompt-tuning</b> first: quick and cheap; then validate the stimuli (expert and impact evaluation).']],function(it){G('lmWhichOut').innerHTML=it[1]});
+
+/* A3 temperature */
+(function(){var W=[['fail',.46],['pass',.30],['drop',.12],['ace',.08],['skip',.04]];function sample(T){if(T<=0.001)return W[0][0];var ps=W.map(function(w){return Math.pow(w[1],1/T)}),s=ps.reduce(function(a,b){return a+b},0),r=Math.random()*s,c=0;for(var i=0;i<ps.length;i++){c+=ps[i];if(r<=c)return W[i][0]}return W[0][0]}
+ function T(){return (+G('lmT').value)/10}
+ G('lmT').oninput=function(){G('lmTv').textContent=T().toFixed(1)};G('lmTv').textContent=T().toFixed(1);
+ G('lmTgo').onclick=function(){var t=T(),out=[];for(var i=0;i<5;i++)out.push(sample(t));G('lmTout').innerHTML=out.map(function(w){return '<span class="lmtok'+(w==='fail'?' hit':'')+'">Will I '+w+' this class?</span>'}).join('');var u=out.filter(function(v,i,a){return a.indexOf(v)===i}).length;G('lmTmsg').innerHTML='<b>'+u+' different</b> answer'+(u>1?'s':'')+' in 5 runs at temperature '+t.toFixed(1)+'. '+(t===0?'Temperature 0 always picks the most likely word: reproducible, but you lose the diversity of the model’s language. Demszky et al. do <b>not</b> recommend it.':'Outputs are stochastic, like a participant answering differently each time. Recommendation: generate several responses and publish prompts, parameters and outputs.')}})();
+list('lmConc',[['Three psychologists rate LLM messages as “very supportive”, but students who read them feel no better.','<b>Evaluation</b>: expert evaluation ≠ impact. Intersubjectivity: coders guess how recipients construe the text. → Combine expert and impact evaluation iteratively.'],['An LLM screening tool refers fewer people from one group to therapy.','<b>Bias: allocational harm</b> (opportunities shared unfairly). → Humans in charge; audits; representative people at every stage.'],['An LLM writes stories in which one group is always the villain.','<b>Bias: representational harm</b> (how a group is portrayed). → Audits varying names/pronouns; transparency about guardrails.'],['A researcher asks the LLM why it rated a text as anxious, and reports its explanation as the mechanism.','<b>Black box</b>: self-explanation is circular. → Probing (manipulate one feature) plus traditional lexical analysis.'],['Two labs run the same prompt and get different scores.','<b>Reproducibility</b>: stochastic outputs. → Generate many responses; publish prompts, parameters and outputs (not temperature 0).']],function(it){G('lmConcOut').innerHTML=it[1]});
+
+/* B1 design */
+(function(){var s=G('lmDes');clear(s);s.appendChild(el('text',{x:280,y:24,'text-anchor':'middle','class':'t-h'},'LLM access timing × time availability'));var C=['Early','Continuous','Late','No LLM'],win=[[0,1/3],[0,1],[2/3,1],null],N=[[39,50,50,51],[51,52,48,52]];C.forEach(function(c,i){s.appendChild(el('text',{x:150+i*105,y:64,'text-anchor':'middle','class':'t-b'},c))});[['10 min',0.4],['30 min',1]].forEach(function(r,ri){var y=96+ri*120;s.appendChild(el('text',{x:44,y:y+28,'text-anchor':'middle','class':'t-b'},r[0]));C.forEach(function(c,i){var x=104+i*105,w=92*r[1];s.appendChild(el('rect',{x:x,y:y,width:w,height:46,rx:6,fill:'#f3f1ec',stroke:'#34466b'}));if(win[i])s.appendChild(el('rect',{x:x+w*win[i][0],y:y,width:w*(win[i][1]-win[i][0]),height:46,rx:6,fill:'#c9a96e'}));s.appendChild(el('text',{x:x+46,y:y+70,'text-anchor':'middle','class':'t-s'},'n = '+N[ri][i]))})});s.appendChild(el('text',{x:280,y:350,'text-anchor':'middle','class':'t-s'},'GPT-4o, documents only · bar length = task time'))})();
+/* B1 essay builder */
+(function(){var I=[['Valid argument: contamination risks residents’ health (con)',1,'c'],['Valid argument: settlement brings immediate financial relief (pro)',1,'p'],['Valid argument: the company should bear full cleanup costs (con)',1,'c'],['Cites the EPA brochure explicitly',1,''],['Notes the activist pamphlet is not a neutral source',1,''],['States the chemical is harmless at all levels (not in the documents)',-1,''],['Repeats the health argument a second time',-1,'']],on={};var box=G('lmEss');I.forEach(function(it,k){var b=document.createElement('button');b.className='vbtn';b.textContent=(it[1]>0?'+1 ':'−1 ')+it[0];b.onclick=function(){on[k]=!on[k];b.classList.toggle('p',on[k]);var sc=0,pro=0,con=0;I.forEach(function(x,j){if(on[j]){sc+=x[1];if(x[2]==='p')pro++;if(x[2]==='c')con++}});G('lmEssOut').innerHTML='Essay score: <b>'+sc+'</b> · arguments: '+(pro+con)+' (pro '+pro+', con '+con+') · myside bias = |'+pro+' − '+con+'| = <b>'+Math.abs(pro-con)+'</b>.'+(on[5]?' The fabrication costs a point.':'')+(on[4]?' Judging source trustworthiness earns a point: that is critical thinking, not summarising.':'')};box.appendChild(b)})})();
+/* B1 docs */
+list('lmDocs',[['Map of Bryn Bower indicating contaminated areas','Relevant · <b>trustworthy</b> · neutral'],['A leaked Hallman document estimating cleanup costs','Relevant · <b>trustworthy</b> · pro/neutral'],['Newspaper article on a tumultuous town-hall meeting','Mixed · <b>untrustworthy</b> · neutral/con'],['Pamphlet of the Clean Bryn Bower Initiative','Relevant · <b>untrustworthy</b> · con'],['EPA brochure on toxicity of Exafluoran','Relevant · <b>trustworthy</b> · neutral (risks at low levels unknown)'],['Interview with founder David Hallman Sr. on his 90th birthday','<b>Irrelevant</b> · mixed · pro'],['Resolution of the Chemical Workers Union','Relevant · <b>trustworthy</b> · pro']],function(it){G('lmDocsOut').innerHTML=it[0]+' → '+it[1]+'. <span class="mini">Overall, participants judged only about a third to under half of the document characteristics correctly.</span>'});
+
+/* B2 interaction charts */
+(function(){var D={essay:['Essay score',[3.80,3.49,1.86,2.75],[4.51,4.71,5.77,5.76],[0,7],'<b>Temporal reversal</b>: with 10 min, Early (3.80) and Continuous (3.49) beat Late (1.86). With 30 min, Late (5.77) and No LLM (5.76) beat Continuous (4.71) and Early (4.51). Extra time: Late +3.91, No +3.01, Continuous +1.22, Early ≈ 0.'],recall:['Recall score',[1.96,1.85,1.94,2.11],[2.23,2.03,2.56,2.99],[1,3.5],'With 10 min, recall was similarly poor. With 30 min, Continuous (2.03) recalled less than No LLM (2.99, p &lt; .05); Early (2.23) only marginally (p &lt; .10). Time raised recall 42% (No) and 32% (Late), not for early access.'],args:['Number of arguments',[3.72,3.26,2.58,3.03],[4.56,4.42,5.25,5.12],[1,6],'Arguments follow the essay pattern. With 30 min, Late (5.25) and No (5.12) produced the most; Early and Continuous the fewest.'],myside:['Myside bias (|pro − con|)',[3.13,2.63,2.03,2.49],[3.79,3.34,3.42,4.41],[1,5],'With 30 min, Late (3.42) &lt; No LLM (4.41) with similar argument counts: genuine balance. Early/Continuous scores are low because they had fewer arguments.']};
+ function draw(k){var d=D[k],s=G('lmEssay');clear(s);s.appendChild(el('text',{x:280,y:24,'text-anchor':'middle','class':'t-h'},d[0]+' (estimated means)'));var L=60,R=530,T=50,B=300;function X(i){return L+i*(R-L)/3}function Y(v){return B-(v-d[3][0])/(d[3][1]-d[3][0])*(B-T)}s.appendChild(el('line',{x1:L,x2:R,y1:B,y2:B,stroke:'#34466b'}));['Early','Continuous','Late','No LLM'].forEach(function(t,i){s.appendChild(el('text',{x:X(i),y:B+20,'text-anchor':'middle','class':'t-b'},t))});[[d[1],'#5b6b8c','10 min',16],[d[2],'#c9a96e','30 min',-10]].forEach(function(sr){var p='';sr[0].forEach(function(v,i){p+=(i?'L':'M')+X(i)+' '+Y(v);s.appendChild(el('circle',{cx:X(i),cy:Y(v),r:6,fill:sr[1]}));s.appendChild(el('text',{x:X(i)+8,y:Y(v)+sr[3],'class':'t-s'},v.toFixed(2)))});s.appendChild(el('path',{d:p,fill:'none',stroke:sr[1],'stroke-width':3.5}))});s.appendChild(el('rect',{x:L,y:330,width:12,height:12,fill:'#5b6b8c'}));s.appendChild(el('text',{x:L+18,y:340,'class':'t-t'},'Insufficient (10 min)'));s.appendChild(el('rect',{x:L+200,y:330,width:12,height:12,fill:'#c9a96e'}));s.appendChild(el('text',{x:L+218,y:340,'class':'t-t'},'Sufficient (30 min)'));G('lmEsOut').innerHTML=d[4]}
+ draw('essay');toggle('lmEsT',function(b){draw(b.dataset.m)})})();
+/* B2 cell picker */
+(function(){var C=['Early','Continuous','Late','No LLM'],E=[[3.80,3.49,1.86,2.75],[4.51,4.71,5.77,5.76]],R=[[1.96,1.85,1.94,2.11],[2.23,2.03,2.56,2.99]],M=[[3.13,2.63,2.03,2.49],[3.79,3.34,3.42,4.41]],A=[['AI for Summarizing Documents (35.9%)','AI for Verification & Clarification (28.0%)','Minimal/No AI Use (38.0%)','Systematic Document Review (51.0%)'],['AI for Verification & Clarification (35.3%)','AI for Verification & Clarification (37.8%)','AI for Confidence & Reassurance (31.3%)','Systematic Document Review (50.0%)']],W=[['Best essays under pressure: the LLM scaffolds quick argument generation.','Also strong under pressure, with the most content adoption.','Worst under pressure: the LLM came too late to use.','Middle: working alone with too little time.'],['Barely better than with 10 min: anchored on early AI ideas, few unique arguments.','Modest gain; lowest recall and worse trustworthiness judgements.','Best essay and balanced: AI used as a final check to add the other side.','Equal-best essays, best recall, but the most one-sided reasoning.']];var g=G('lmCell');[0,1].forEach(function(t){C.forEach(function(c,i){var b=document.createElement('button');b.textContent=c+' · '+(t?'30':'10')+' min';b.onclick=function(){g.querySelectorAll('button').forEach(function(x){x.classList.remove('p')});b.classList.add('p');G('lmCellOut').innerHTML='<b>'+c+' access, '+(t?'30':'10')+' minutes</b>: essay '+E[t][i].toFixed(2)+' · recall '+R[t][i].toFixed(2)+' · myside bias '+M[t][i].toFixed(2)+'<br>Most common approach: '+A[t][i]+'<br>'+W[t][i]};g.appendChild(b)})})})();
+/* B2 myside */
+(function(){function d(){var p=+G('lmPro').value,c=+G('lmCon').value;G('lmProV').textContent=p;G('lmConV').textContent=c;var m=Math.abs(p-c),n=p+c;G('lmMyOut').innerHTML='Arguments: <b>'+n+'</b> · myside bias = |'+p+' − '+c+'| = <b>'+m+'</b>. '+(n<=3&&m<=1?'Low bias, but with so few arguments that says little: like Early/Continuous access with 30 min.':m<=1?'Low bias <b>and</b> many arguments: genuine balance, like Late access with 30 min (3.42 with 5.25 arguments).':'One-sided: like working alone for 30 min (4.41), where independent work entrenched one side.')}G('lmPro').oninput=d;G('lmCon').oninput=d;d()})();
+
+/* B3 unique */
+bars(G('lmUniq'),{w:560,h:360,title:'Extra unique arguments, 10 → 30 min',min:0,max:2.6,bw:90,groups:[{label:'Early',vals:[[0.28,'#5b6b8c','+0.28']]},{label:'Continuous',vals:[[0.07,'#5b6b8c','+0.07']]},{label:'Late',vals:[[1.80,'#c9a96e','+1.80']]},{label:'No LLM',vals:[[2.10,'#34466b','+2.10']]}],note:'More time only helped those who started on their own.'});
+/* B3 approaches */
+(function(){var C=['Early','Continuous','Late','No LLM'],A=[[['AI for Summarizing Documents 35.9%','AI for Content Adoption 20.5%','AI for Verification & Clarification 20.5%'],['AI for Verification & Clarification 28.0%','AI for Content Adoption 26.0%','AI for Summarizing Documents 22.0%'],['Minimal/No AI Use 38.0%','AI for Verification & Clarification 22.0%','AI for Confidence & Reassurance 10.0%'],['Systematic Document Review 51.0%','Selective Document Review 27.5%','Time Management Strategy 11.8%']],[['AI for Verification & Clarification 35.3%','AI for Summarizing Documents 27.5%','AI for Content Adoption 23.5%'],['AI for Verification & Clarification 37.8%','AI for Summarizing Documents 20.3%','AI for Structuring Pros & Cons 13.5%'],['AI for Confidence & Reassurance 31.3%','AI for Verification & Clarification 27.1%','AI for Structuring Pros & Cons 20.8%'],['Systematic Document Review 50.0%','Heuristic Judgments 18.8%','Time Management Strategy 16.2%']]];var g=G('lmAppr');[0,1].forEach(function(t){C.forEach(function(c,i){var b=document.createElement('button');b.textContent=c+' · '+(t?'30':'10')+' min';b.onclick=function(){g.querySelectorAll('button').forEach(function(x){x.classList.remove('p')});b.classList.add('p');G('lmApprOut').innerHTML='<b>'+c+', '+(t?'30':'10')+' min</b>: 1) '+A[t][i][0]+' · 2) '+A[t][i][1]+' · 3) '+A[t][i][2]+(t===1&&i===2?'<br>Late users with time strategically strengthened what they already had.':t===0&&i===2?'<br>Under pressure, late access often went unused.':'')};g.appendChild(b)})})})();
+/* B3 design tool */
+(function(){var st={t:'time',k:'ct'};function out(){var m;if(st.k==='routine')m='Routine task: no friction needed; give quick help. Interventions should be applied <b>selectively</b> to tasks that require critical thinking, otherwise they frustrate users.';else if(st.t==='time')m='Critical thinking + plenty of time: <b>encourage independent work first</b> (“what are your initial thoughts before I help?”, friction such as slower responses), offer orientation rather than solutions (study mode), then unlock the assistant as a <b>second opinion</b> to add overlooked perspectives. Remind users to practise without AI.';else m='Critical thinking + tight deadline: give help <b>from the start</b> (it boosted essays under pressure), but reduce anchoring: prompt users to check <b>source diversity and balance</b>, or show several candidate answers grounded in different sources.';G('lmDOut').innerHTML=m}toggle('lmDT',function(b){st.t=b.dataset.t;out()});toggle('lmDK',function(b){st.k=b.dataset.k;out()});out()})();
+
+/* C1 goldilocks */
+(function(){function draw(v){var s=G('lmGold');clear(s);s.appendChild(el('text',{x:280,y:24,'text-anchor':'middle','class':'t-h'},'Creativity across degrees of human–AI collaboration'));var L=50,R=530,T=60,B=300;function X(x){return L+x*(R-L)}function Y(x){return B-(1-Math.pow(2*x-1,2))*(B-T)*0.85-20}var d='';for(var i=0;i<=50;i++){var x=i/50;d+=(i?'L':'M')+X(x)+' '+Y(x)}s.appendChild(el('path',{d:d,fill:'none',stroke:'#34466b','stroke-width':4}));s.appendChild(el('line',{x1:L,x2:R,y1:B,y2:B,stroke:'#34466b'}));[['low',.08],['moderate',.5],['high',.92]].forEach(function(l){s.appendChild(el('text',{x:X(l[1]),y:B+22,'text-anchor':'middle','class':'t-b'},l[0]))});var x=v/100;var c=x<.33||x>.67?'#a2463a':'#2f8a57';s.appendChild(el('circle',{cx:X(x),cy:Y(x),r:11,fill:c}));s.appendChild(el('text',{x:280,y:344,'text-anchor':'middle','class':'t-s'},'Illustrative shape · move the slider'));G('lmGoldOut').innerHTML=x<.33?'<b>Low collaboration</b> (≤1 use): you rely on your own viewpoint and spend your time generating ideas, leaving little for selecting and refining. Fewer perspectives → lower knowledge diversity.':x>.67?'<b>High collaboration</b> (≥9 uses): AI trained on historical data gives standardised, similar ideas; you may anchor on its approach and feel less competent. Diversity drops.':'<b>Moderate collaboration</b> (4–6 uses): AI as a source of inspiration while you still think for yourself. The widest range of ideas → the most creative proposal.'}G('lmGoldR').oninput=function(){draw(+this.value)};draw(50)})();
+/* C1 brainstorm coder */
+list('lmBrain',[['Lemonade stand · sell baked goods · sell iced tea','Restructures? <b>No</b> (all use the $10 to buy and sell). Diverse? <b>Low</b>: all the same knowledge (food sales). Rated around 1–2 for diversity.'],['Buy lottery tickets · offer house cleaning · busk with a guitar','Restructures? Mostly <b>no</b>, but diverse? <b>High</b>: gambling, services and performance draw on very different knowledge (Huang’s example of a high diversity rating).'],['Ignore the $10: book popular restaurant tables on Saturday night and sell the reservations','Restructures? <b>Yes</b>: goes beyond the initial framing (the original Stanford students’ idea). Diversity depends on the other ideas in the set.'],['A mini treasure hunt with entrance fees','A final proposal rated <b>very creative</b> by Study 1 judges (novel and useful). Compare: a lemonade stand was rated not creative.']],function(it){G('lmBrainOut').innerHTML=it[1]+' <span class="mini">Key result: restructuring did not differ between conditions; diversity did.</span>'});
+
+/* C2 charts */
+(function(){var D={h1:['Study 1 · human-rated creativity (1–7)',[3.49,4.02,3.39],7,'F(2, 136) = 3.41, p = .036. Moderate &gt; low (d = .43) and &gt; high (d = .50); low = high.'],b1:['Study 1 · business value (1–10)',[4.60,5.67,4.69],10,'F(2, 136) = 4.10, p = .019. Moderate &gt; low (d = .54) and &gt; high (d = .49).'],a1:['Study 1 · AI-rated creativity (1–7)',[3.33,3.91,3.66],7,'F(2, 136) = 2.85, p = .061 (not significant). Exploratory: moderate &gt; low (d = .50) but not &gt; high (d = .21): diminishing returns rather than a clean U.'],d1:['Study 1 · knowledge diversity (1–7)',[4.30,5.10,4.57],7,'F(2, 136) = 5.87, p = .004. Moderate &gt; low (d = .70) and &gt; high (d = .46): the mediator follows the inverted U.'],r1:['Study 1 · problem restructuring (proportion)',[.41,.43,.44],1,'F(2, 136) = 0.10, p = .90. No difference: AI did not change how people reframed the problem.'],h2:['Study 2 · crowd-rated creativity (1–7)',[4.04,4.33,4.11],7,'F(2, 316) = 4.57, p = .011. Moderate &gt; low (d = .39) and &gt; high (d = .31). Preregistered replication, ≈10 crowd judges per proposal.'],a2:['Study 2 · AI-rated creativity (1–7)',[4.39,4.72,4.31],7,'F(2, 316) = 3.69, p = .026. Moderate &gt; low (d = .28) and &gt; high (d = .35).'],d2:['Study 2 · knowledge diversity (1–7)',[4.45,4.81,4.60],7,'F(2, 316) = 6.07, p = .003. Moderate &gt; low (d = .47) and &gt; high (d = .28); restructuring again n.s. (p = .75).']};
+ function draw(k){var d=D[k];bars(G('lmS1'),{w:560,h:360,title:d[0],min:0,max:d[2],bw:110,groups:['Low','Moderate','High'].map(function(l,i){return{label:l,vals:[[d[1][i],i===1?'#c9a96e':'#5b6b8c',d[1][i]<1?d[1][i].toFixed(2):d[1][i].toFixed(2)]]}})});G('lmS1Out').innerHTML=d[3]}draw('h1');toggle('lmS1T',function(b){draw(b.dataset.k)})})();
+/* C2 mediation */
+(function(){var M=[['Low',.38,.11,.79,'From low to moderate, more collaboration <b>raised</b> creativity by raising the diversity of ideas (CI excludes 0).'],['Moderate',.04,-.02,.13,'At moderate collaboration, the indirect effect is <b>about zero</b> (CI includes 0): the top of the curve.'],['High',-.31,-.68,-.08,'From moderate to high, more collaboration <b>lowered</b> creativity by lowering the diversity of ideas (CI excludes 0).']];
+ function draw(k){var s=G('lmMedS');clear(s);var L=60,R=860;function X(v){return L+(v+.8)/1.7*(R-L)}s.appendChild(el('line',{x1:L,x2:R,y1:70,y2:70,stroke:'#34466b'}));s.appendChild(el('line',{x1:X(0),x2:X(0),y1:40,y2:100,stroke:'#a2463a','stroke-dasharray':'4 3'}));[-.8,-.4,0,.4,.8].forEach(function(t){s.appendChild(el('text',{x:X(t),y:120,'text-anchor':'middle','class':'t-s'},t))});if(k!=null){var m=M[k];s.appendChild(el('line',{x1:X(m[2]),x2:X(m[3]),y1:70,y2:70,stroke:'#c9a96e','stroke-width':8,'stroke-linecap':'round'}));s.appendChild(el('circle',{cx:X(m[1]),cy:70,r:9,fill:'#34466b'}));s.appendChild(el('text',{x:X(m[1]),y:40,'text-anchor':'middle','class':'t-b'},'θ = '+m[1]+'  [' +m[2]+', '+m[3]+']'));G('lmMedOut').innerHTML='<b>'+m[0]+' collaboration</b>: '+m[4]+' <span class="mini">Through problem restructuring, the indirect effect was zero at every level.</span>'}}draw(null);toggle('lmMed',function(b){draw(+b.dataset.l)})})();
+
+/* C3 field curve */
+(function(){function f(x){return 3.55+.39*x-.04*x*x}function draw(v){var s=G('lmS3');clear(s);s.appendChild(el('text',{x:280,y:24,'text-anchor':'middle','class':'t-h'},'Supervisor-rated creativity (Study 3)'));var L=60,R=530,T=50,B=300;function X(x){return L+(x-1)/6*(R-L)}function Y(y){return B-(y-3.6)/(4.8-3.6)*(B-T)}var d='';for(var i=0;i<=60;i++){var x=1+i/10;d+=(i?'L':'M')+X(x)+' '+Y(f(x))}s.appendChild(el('path',{d:d,fill:'none',stroke:'#34466b','stroke-width':4}));s.appendChild(el('line',{x1:L,x2:R,y1:B,y2:B,stroke:'#34466b'}));[1,2,3,4,5,6,7].forEach(function(t){s.appendChild(el('text',{x:X(t),y:B+20,'text-anchor':'middle','class':'t-s'},t))});s.appendChild(el('line',{x1:X(4.9),x2:X(4.9),y1:T,y2:B,stroke:'#c9a96e','stroke-dasharray':'6 4'}));s.appendChild(el('text',{x:X(4.9)+6,y:T+14,'class':'t-g'},'tipping ≈ 5'));s.appendChild(el('circle',{cx:X(v),cy:Y(f(v)),r:10,fill:'#c9a96e'}));s.appendChild(el('text',{x:280,y:344,'text-anchor':'middle','class':'t-s'},'AI collaboration at work (1–7) · sample mean 2.83'));G('lmS3V').textContent=v.toFixed(1);G('lmS3Out').innerHTML='Predicted creativity at '+v.toFixed(1)+': <b>≈ '+f(v).toFixed(2)+'</b> (scale 1–6). '+(v<4.5?'Rising part: more AI collaboration goes with higher creativity.':v<=5.3?'Near the top: around the tipping point (≈5, maximum ≈4.5).':'Past the tipping point: the regression predicts a decline, but few workers reported such high use, so this part is partly extrapolated.')}G('lmS3R').oninput=function(){draw(+this.value/10)};draw(2.8)})();
+/* C3 evaluation */
+list('lmEval',[['Random assignment to low / moderate / high use (Studies 1–2)','<b>Strength</b>: causal evidence. <b>Limit</b>: instructing how much to use AI may create demand effects; short, artificial task.'],['Crowdsourced ratings, ≈10 judges per proposal (Study 2)','<b>Strength</b>: wisdom of the crowd, robust. <b>Limit</b>: deviation from the preregistered two-judge plan (those results were also significant); crowds may weigh writing quality.'],['AI rater of creativity','<b>Strength</b>: scalable, consistent. <b>Limit</b>: LLMs seem to weigh novelty more than usefulness; needs validation against humans (Block A).'],['Field study with supervisor ratings a week later (Study 3)','<b>Strength</b>: real professionals, less common-method bias, fewer demand effects. <b>Limit</b>: correlational; quadratic term needed controls (p = .14 without); one participant short of the power target.'],['Measured mediators (knowledge diversity, restructuring)','<b>Strength</b>: tests two mechanisms. <b>Limit</b>: mediators not manipulated, so no definite causal claims about the mechanism.'],['Samples from Canada and the US','<b>Limit</b>: WEIRD samples; cross-cultural generality unknown. Moderators (e.g., skill) untested.']],function(it){G('lmEvalOut').innerHTML=it[1]});
+})();
+</script>
+<style>
+#p-vz .vnav{display:none!important}
+#p-vz .vz-step{display:none}
+#p-vz .vz-step.on{display:block;animation:vzfade .25s ease}
+@keyframes vzfade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+#p-vz .vz-bar{position:sticky;top:0;z-index:30;background:var(--bg,#faf7f1);padding:10px 0 8px;margin:12px 0 4px;border-bottom:1px solid var(--line,#e8e1d3)}
+#p-vz .vz-pills{display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:4px}
+#p-vz .vz-pill{flex:0 0 auto;border:1px solid var(--line,#e8e1d3);background:#fff;border-radius:999px;padding:5px 12px;font:inherit;font-size:.82rem;color:var(--navy,#34466b);cursor:pointer;white-space:nowrap}
+#p-vz .vz-pill.blk{font-weight:700;background:#f6eedd;border-color:#c9a96e}
+#p-vz .vz-pill.seen{background:#e2f1e6;border-color:#b9dcc6}
+#p-vz .vz-pill.on{background:var(--navy,#34466b);color:#fff;border-color:var(--navy,#34466b)}
+#p-vz .vz-prog{height:6px;background:#efe7d6;border-radius:6px;overflow:hidden;margin-top:6px}
+#p-vz .vz-prog i{display:block;height:100%;background:linear-gradient(90deg,#c9a96e,#a8854a);width:0;transition:width .3s}
+#p-vz .vz-where{font-size:.78rem;color:var(--muted,#6b7280);margin-top:4px}
+#p-vz .vz-chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 6px;padding-top:12px;border-top:1px dashed var(--line,#e8e1d3)}
+#p-vz .vz-chips .lab{width:100%;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted,#6b7280);font-weight:700}
+#p-vz .vz-chip{border:1px solid var(--line,#e8e1d3);background:#fff;color:var(--navy,#34466b);border-radius:999px;padding:8px 15px;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}
+#p-vz .vz-chip:hover{border-color:#c9a96e;background:#f6eedd}
+#p-vz .vz-chip.on{background:#c9a96e;border-color:#c9a96e;color:#fff}
+#p-vz .vz-drawer{display:none}
+#p-vz .vz-drawer.on{display:block;animation:vzfade .2s ease}
+#p-vz .vz-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:22px 0 4px;padding:12px 0;border-top:1px solid var(--line,#e8e1d3);position:sticky;bottom:0;background:var(--bg,#faf7f1);z-index:25}
+#p-vz .vz-foot button{border:1px solid var(--navy,#34466b);background:#fff;color:var(--navy,#34466b);border-radius:12px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer;max-width:46%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#p-vz .vz-foot button.next{background:var(--navy,#34466b);color:#fff}
+#p-vz .vz-foot button:disabled{opacity:.35;cursor:default}
+#p-vz .vz-foot span{font-size:.82rem;color:var(--muted,#6b7280);white-space:nowrap}
+#p-vz .vz-step .vlec{margin-top:10px}
+#p-vz .vz-step .vblock{margin:10px 0}
+#p-vz .vz-hint{font-size:.8rem;color:var(--muted,#6b7280);text-align:center;margin-top:4px}
+@media (max-width:900px){#p-vz .vz-bar{position:static}#p-vz .vz-foot button{padding:9px 12px;font-size:.88rem}#p-vz .vz-foot span{display:none}}
+</style>
+<script>
+(function(){
+var P=document.getElementById('p-vz');if(!P||P.dataset.vzStep)return;P.dataset.vzStep='1';
+var page=P.querySelector('.vpage');if(!page)return;
+var kids=[].slice.call(page.children);
+var hero=page.querySelector('.vhero'),nav=page.querySelector('.vnav');
+/* ---------- build steps ---------- */
+var steps=[],pendingBlock=null;
+kids.forEach(function(k){
+ if(k===hero||k===nav||k.tagName==='SCRIPT'||k.tagName==='STYLE')return;
+ if(k.classList.contains('vblock')){pendingBlock=k;return}
+ if(k.classList.contains('vsec')||k.classList.contains('vlec')){
+  var w=document.createElement('div');w.className='vz-step';
+  var label,blk=false,em='';
+  var h=k.querySelector('h2');var t=h?h.textContent.trim():'Section';
+  if(k.classList.contains('vlec')){var n=k.querySelector('.vnum');var num=n?n.textContent.replace(/[^A-Z0-9.]/g,'').replace(/^\.+/,''):'';label=num||t;}
+  else{var id=k.id||'';label=/map$/.test(id)?'🗺️ Map':/time$/.test(id)?'⏳ Timeline':/synth$/.test(id)?'🧵 Synthesis':/one$/.test(id)?'📄 One page':t.split(/[:(]/)[0];}
+  if(pendingBlock){w.appendChild(pendingBlock);blk=true;}
+  page.insertBefore(w,k);w.appendChild(k);
+  steps.push({el:w,label:label,title:t,blockStart:blk,blockName:pendingBlock?(pendingBlock.querySelector('h2')||{}).textContent:'',isLec:k.classList.contains('vlec')});
+  pendingBlock=null;
+ }
+});
+if(!steps.length)return;
+/* hero goes on the first step only */
+if(hero){steps[0].el.insertBefore(hero,steps[0].el.firstChild);}
+/* ---------- chips inside lectures ---------- */
+function chipLabel(n){
+ var c=n.classList;
+ if(c.contains('vdemo')){var l=n.querySelector('.lbl');var lt=l?l.textContent:'';var h4=n.querySelector('h4');var ht=h4?h4.textContent.trim():'Try it';
+   if(/REAL DATA/i.test(lt))return '📊 '+ht.replace(/^[^\w"']+/,'');
+   return '🎮 '+ht.replace(/^[^\w"'(]+/,'');}
+ if(c.contains('vana'))return '🧠 Think of it like…';
+ if(c.contains('vtrap'))return '⚠️ The trap';
+ if(c.contains('vtrio'))return '💬 Friend · 🔑 Hook · ✎ Tip';
+ if(c.contains('vwatch'))return '▶ Videos & links';
+ if(n.tagName==='DETAILS')return '✅ Quick check';
+ if(c.contains('vcall'))return '★ Key idea';
+ if(c.contains('cards2'))return '⚖️ Side by side';
+ if(c.contains('tblw')||n.querySelector&&n.querySelector('table'))return '📋 Comparison table';
+ if(n.tagName==='FIGURE'||c.contains('vfig')){var fc=n.querySelector('figcaption');var tx=fc?fc.textContent:'';var m=tx.match(/^Figure\s+([A-Z]?\.?\d*[a-z]?)/);var svgT=n.querySelector('svg .t-h');var name=svgT?svgT.textContent:(tx.replace(/^Figure[^.]*\.\s*/,'').split(/[.:(]/)[0]);name=name.length>38?name.slice(0,36)+'…':name;return (/real data/i.test(tx)?'📊 ':'🖼️ ')+name;}
+ if(n.tagName==='P')return 'ℹ️ More';
+ return '➕ More';
+}
+steps.forEach(function(s){
+ if(!s.isLec)return;
+ var art=s.el.querySelector('.vlec');if(!art)return;
+ var ch=[].slice.call(art.children);
+ var keep=[],rest=[];var heroFound=false;
+ var hasGrid=ch.some(function(n){return n.classList&&n.classList.contains('vgrid')});
+ ch.forEach(function(n){
+  if(n.classList.contains('vlec-h')||n.classList.contains('vq')){keep.push(n);return}
+  if(!heroFound&&((hasGrid&&n.classList.contains('vgrid'))||(!hasGrid&&(n.tagName==='FIGURE'||n.classList.contains('vdemo')||n.classList.contains('cards2'))))){heroFound=true;keep.push(n);return}
+  rest.push(n);
+ });
+ if(!rest.length)return;
+ /* merge consecutive details into one drawer */
+ var groups=[];rest.forEach(function(n){var last=groups[groups.length-1];if(n.tagName==='DETAILS'&&last&&last.type==='DETAILS'){last.nodes.push(n)}else groups.push({type:n.tagName,nodes:[n]})});
+ var bar=document.createElement('div');bar.className='vz-chips';bar.innerHTML='<span class="lab">Tap to open · '+groups.length+' more on this screen</span>';
+ var holder=document.createElement('div');
+ groups.forEach(function(g,i){
+  var d=document.createElement('div');d.className='vz-drawer';g.nodes.forEach(function(n){d.appendChild(n)});
+  if(g.type==='DETAILS'){g.nodes.forEach(function(n){n.open=true});}
+  var b=document.createElement('button');b.type='button';b.className='vz-chip';var lab=chipLabel(g.nodes[0]);if(g.type==='DETAILS'&&g.nodes.length>1)lab='✅ Quick checks ('+g.nodes.length+')';b.textContent=lab;
+  b.onclick=function(){var on=!d.classList.contains('on');d.classList.toggle('on',on);b.classList.toggle('on',on);if(on){setTimeout(function(){var r=d.getBoundingClientRect();if(r.top>window.innerHeight*.75||r.top<0)d.scrollIntoView({behavior:'smooth',block:'start'})},30)}};
+  bar.appendChild(b);holder.appendChild(d);
+ });
+ art.appendChild(bar);art.appendChild(holder);
+});
+/* ---------- top bar + footer ---------- */
+var top=document.createElement('div');top.className='vz-bar';
+var pills=document.createElement('div');pills.className='vz-pills';
+var prog=document.createElement('div');prog.className='vz-prog';prog.innerHTML='<i></i>';
+var where=document.createElement('div');where.className='vz-where';
+top.appendChild(pills);top.appendChild(prog);top.appendChild(where);
+page.insertBefore(top,steps[0].el);
+var seen={};var cur=0;
+steps.forEach(function(s,i){var b=document.createElement('button');b.type='button';b.className='vz-pill'+(s.blockStart?' blk':'');b.textContent=(s.blockStart&&s.isLec?'▸ ':'')+s.label;b.title=s.title;b.onclick=function(){go(i)};pills.appendChild(b);s.pill=b});
+var foot=document.createElement('div');foot.className='vz-foot';
+var prev=document.createElement('button');prev.type='button';var nxt=document.createElement('button');nxt.type='button';nxt.className='next';var mid=document.createElement('span');
+foot.appendChild(prev);foot.appendChild(mid);foot.appendChild(nxt);
+page.appendChild(foot);
+var hint=document.createElement('div');hint.className='vz-hint';hint.textContent='Tip: use ← → arrow keys to move between screens.';page.appendChild(hint);
+prev.onclick=function(){go(cur-1)};nxt.onclick=function(){go(cur+1)};
+function short(t){return t.length>34?t.slice(0,32)+'…':t}
+function go(i,noScroll){if(i<0||i>=steps.length)return;cur=i;steps.forEach(function(s,j){s.el.classList.toggle('on',j===i);s.pill.classList.toggle('on',j===i)});seen[i]=1;steps.forEach(function(s,j){s.pill.classList.toggle('seen',!!seen[j]&&j!==i)});
+ prog.firstChild.style.width=Math.round((i+1)/steps.length*100)+'%';
+ where.textContent='Screen '+(i+1)+' of '+steps.length+' · '+steps[i].title;
+ prev.disabled=i===0;nxt.disabled=i===steps.length-1;
+ prev.textContent='← '+(i>0?short(steps[i-1].label):'Back');nxt.textContent=(i<steps.length-1?short(steps[i+1].label+(steps[i+1].isLec?' · '+steps[i+1].title.split(/[:,]/)[0]:'')):'Done')+' →';
+ mid.textContent=(i+1)+' / '+steps.length;
+ steps[i].pill.scrollIntoView({block:'nearest',inline:'center'});
+ try{localStorage.setItem('vzStep:'+location.pathname,i)}catch(e){}
+ if(!noScroll){var r=P.getBoundingClientRect();window.scrollTo({top:window.scrollY+r.top-10,behavior:'smooth'})}}
+/* jump links (map boxes, data-go) go to the right screen */
+P.addEventListener('click',function(e){var g=e.target.closest&&e.target.closest('[data-go]');if(!g||!P.contains(g))return;var id=g.getAttribute('data-go');var t=document.getElementById(id);if(!t)return;for(var i=0;i<steps.length;i++){if(steps[i].el.contains(t)){e.stopImmediatePropagation();e.preventDefault();go(i);return}}},true);
+document.addEventListener('keydown',function(e){if(!P.classList.contains('on'))return;var tg=e.target.tagName;if(tg==='INPUT'||tg==='TEXTAREA'||tg==='SELECT')return;if(e.key==='ArrowRight')go(cur+1);else if(e.key==='ArrowLeft')go(cur-1)});
+var start=0;try{var sv=+localStorage.getItem('vzStep:'+location.pathname);if(sv>=0&&sv<steps.length)start=sv}catch(e){}
+go(start,true);
+})();
+</script>
+</section>
+</main></div>
+<script>document.querySelectorAll(".nb").forEach(function(b){b.onclick=function(){document.querySelectorAll(".panel").forEach(function(x){x.classList.toggle("on",x.id==="p-"+b.dataset.p)});document.querySelectorAll(".nb").forEach(function(x){x.classList.toggle("on",x===b)})}});</script>
+</body></html>
