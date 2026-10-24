@@ -1,0 +1,829 @@
+WEBVTT
+
+1
+00:00:00.600 --> 00:00:06.040
+<v Ava>Welcome to the Theme 8 deep dive: large language models in psychology. I'm Ava.
+
+2
+00:00:06.380 --> 00:00:12.285
+<v Leo>And I'm Leo. You probably used a chatbot this week, and this theme asks what that does,
+
+3
+00:00:12.285 --> 00:00:14.593
+<v Leo>for science and for your own mind.
+
+4
+00:00:14.933 --> 00:00:21.397
+<v Ava>Block A, Demszky and colleagues: what are these models, and can psychologists trust them as research tools?
+
+5
+00:00:21.597 --> 00:00:28.061
+<v Ava>Block B, Zhi, Kumar and Lee: does an LLM help or hurt critical thinking, and does it matter when you get it?
+
+6
+00:00:28.261 --> 00:00:33.509
+<v Ava>And Block C, Huang: does more AI make you more creative, or is there a best amount?
+
+7
+00:00:33.849 --> 00:00:42.114
+<v Leo>And same structure as before: logic, evidence, verdict, then practice questions. Theme 8 has no Canvas questions,
+
+8
+00:00:42.114 --> 00:00:46.137
+<v Leo>so we use the new exam-style questions from your notes.
+
+9
+00:00:47.437 --> 00:00:50.979
+<v Leo>Block A. What's the essence of a large language model?
+
+10
+00:00:51.319 --> 00:00:58.573
+<v Ava>Start with the old way. Methods like LIWC count words and ignore order and context. So the word sick counts as ill,
+
+11
+00:00:58.573 --> 00:01:01.537
+<v Ava>even in a teenager's text where it means great.
+
+12
+00:01:01.737 --> 00:01:10.105
+<v Ava>An LLM is different. It's a massive statistical model that predicts the next word, trained on hundreds of billions of utterances.
+
+13
+00:01:10.105 --> 00:01:12.959
+<v Ava>That lets it approximate meaning in context.
+
+14
+00:01:13.159 --> 00:01:19.754
+<v Ava>Demszky and colleagues give psychologists a nice comparison. It's like a gigantic system of regressions.
+
+15
+00:01:19.754 --> 00:01:25.335
+<v Ava>Hide a word: I am blank about my grades. The model predicts worried, measures its error,
+
+16
+00:01:25.335 --> 00:01:29.457
+<v Ava>adjusts millions of parameters, and repeats. That's pre-training.
+
+17
+00:01:30.757 --> 00:01:32.976
+<v Leo>And why should psychologists care?
+
+18
+00:01:33.316 --> 00:01:40.103
+<v Ava>Because language runs through all of psychology. LLMs could score texts for constructs like anxiety,
+
+19
+00:01:40.103 --> 00:01:44.175
+<v Ava>belonging or suicide risk, or code papers for meta-analyses.
+
+20
+00:01:44.375 --> 00:01:50.775
+<v Ava>They could generate experimental stimuli, or hundreds of candidate questionnaire items to be validated.
+
+21
+00:01:50.975 --> 00:01:58.100
+<v Ava>And in practice, they could simulate sessions to train therapists, or give teachers feedback on their growth-mindset language.
+
+22
+00:01:58.300 --> 00:02:04.401
+<v Ava>But the authors stress that every one of these uses still has to be tested. And the next example shows why.
+
+23
+00:02:05.701 --> 00:02:09.136
+<v Leo>So if it's that good at language, can we trust what it says?
+
+24
+00:02:09.476 --> 00:02:16.314
+<v Ava>Here's the key example. Asked to play a college advisor, the model told a nervous applicant to make a timeline,
+
+25
+00:02:16.314 --> 00:02:19.887
+<v Ava>take online courses, reduce stress and practise self-care.
+
+26
+00:02:20.087 --> 00:02:27.484
+<v Ava>Sounds sensible. But a large randomised trial found that this kind of advising has no effect on college persistence.
+
+27
+00:02:27.484 --> 00:02:32.012
+<v Ava>And stress research shows stress can be enhancing: it mobilises energy.
+
+28
+00:02:32.212 --> 00:02:39.520
+<v Ava>So the essence of Block A: LLMs predict what people usually say, not what is true. The authors call it on-topic,
+
+29
+00:02:39.520 --> 00:02:42.260
+<v Ava>grammatically correct useless information.
+
+30
+00:02:42.600 --> 00:02:43.965
+<v Leo>But there's a twist.
+
+31
+00:02:44.305 --> 00:02:50.444
+<v Ava>Yes. Because the model outputs an average of its culture, you can probe it to learn how that culture thinks.
+
+32
+00:02:50.444 --> 00:02:52.433
+<v Ava>They call that digital ethnography.
+
+33
+00:02:53.733 --> 00:02:59.067
+<v Leo>So how do you get the scientific version of a concept instead of the internet's version?
+
+34
+00:02:59.407 --> 00:03:06.531
+<v Ava>Two ways. Fine-tuning trains the model further on expert-labelled data, and its parameters actually change.
+
+35
+00:03:06.531 --> 00:03:12.722
+<v Ava>It needs surprisingly few examples, maybe five to a hundred, but it's computationally costly,
+
+36
+00:03:12.722 --> 00:03:17.583
+<v Ava>experts may disagree on the labels, and it can keep or even amplify bias.
+
+37
+00:03:17.783 --> 00:03:24.740
+<v Ava>Prompt-tuning leaves the model alone. You put a few expert examples into the prompt, and it imitates them.
+
+38
+00:03:24.740 --> 00:03:32.288
+<v Ava>Fast and cheap, but sensitive to wording, shallower, and weaker against bias. And for commercial models like GPT-4,
+
+39
+00:03:32.288 --> 00:03:34.060
+<v Ava>it's often the only option.
+
+40
+00:03:34.400 --> 00:03:37.408
+<v Leo>Fine-tune the brain, prompt-tune the instructions.
+
+41
+00:03:38.708 --> 00:03:40.777
+<v Leo>Is there evidence that tuning works?
+
+42
+00:03:41.117 --> 00:03:51.740
+<v Ava>Two boxed examples. In Box 2, experts coded six hundred and fifty essays, and a fine-tuned model scored around eleven thousand essays from a belonging intervention.
+
+43
+00:03:51.740 --> 00:03:59.059
+<v Ava>Students whose essays reflected the intervention's themes did better in college, especially minoritized students.
+
+44
+00:03:59.259 --> 00:04:07.152
+<v Ava>In Box 3, an untuned model wrote a first-day maths speech that was positive, but ignored students' fear of being bad at maths.
+
+45
+00:04:07.152 --> 00:04:13.542
+<v Ava>With five expert speeches in the prompt, it closed seventy-five percent of the gap to expert teachers,
+
+46
+00:04:13.542 --> 00:04:17.989
+<v Ava>with no significant difference left. In seconds, instead of three days.
+
+47
+00:04:19.289 --> 00:04:23.193
+<v Leo>And what has to be solved before psychologists can trust them?
+
+48
+00:04:23.533 --> 00:04:31.320
+<v Ava>Four concerns. One: evaluation. Checking whether experts agree is not enough, because of the intersubjectivity problem:
+
+49
+00:04:31.320 --> 00:04:37.210
+<v Ava>you can't fully know how someone else reads a message. So you also need impact evaluation:
+
+50
+00:04:37.210 --> 00:04:41.005
+<v Ava>does the text actually change people? Use both, in a loop.
+
+51
+00:04:41.205 --> 00:04:48.291
+<v Ava>Two: bias. Representational harm is how a group is portrayed. Allocational harm is what a group gets,
+
+52
+00:04:48.291 --> 00:04:54.816
+<v Ava>like loans or therapy. And because AI-written text now trains the next AI, bias can snowball.
+
+53
+00:04:55.016 --> 00:05:01.557
+<v Ava>Three: the black box. The output is easy to read, but the process is opaque. Researchers use probing:
+
+54
+00:05:01.557 --> 00:05:11.336
+<v Ava>change one feature, like I care versus I don't care, and see what changes. Asking the model to explain itself just explains one black box with another.
+
+55
+00:05:11.536 --> 00:05:18.744
+<v Ava>Four: reproducibility. Ask twice and you get two answers. The authors don't recommend setting temperature to zero.
+
+56
+00:05:18.744 --> 00:05:24.245
+<v Ava>Treat it like participant variability: generate many outputs, and publish your prompts,
+
+57
+00:05:24.245 --> 00:05:25.573
+<v Ava>settings and outputs.
+
+58
+00:05:26.873 --> 00:05:28.388
+<v Leo>Verdict on Block A?
+
+59
+00:05:28.728 --> 00:05:33.699
+<v Ava>LLMs predict plausible language. Fluent is not the same as true or helpful.
+
+60
+00:05:33.899 --> 00:05:37.781
+<v Ava>To study a scientific construct, you tune them, and then you evaluate.
+
+61
+00:05:37.981 --> 00:05:43.699
+<v Ava>Four concerns stand in the way: evaluation, bias, the black box and reproducibility.
+
+62
+00:05:43.899 --> 00:05:49.641
+<v Ava>And the authors call for three investments: keystone datasets linked to real outcomes,
+
+63
+00:05:49.641 --> 00:05:57.253
+<v Ava>psychology-specific benchmarks, and fair access, since a model like ChatGPT reportedly cost three billion dollars.
+
+64
+00:05:57.593 --> 00:05:59.108
+<v Leo>Plausible, not correct.
+
+65
+00:06:00.408 --> 00:06:08.819
+<v Leo>Practice question A point three. Messages are called validated because three psychologists rated them as motivating.
+
+66
+00:06:08.819 --> 00:06:11.139
+<v Leo>Why is a reviewer not convinced?
+
+67
+00:06:11.479 --> 00:06:16.949
+<v Ava>Reason one: that's an expert evaluation, and it suffers from the intersubjectivity problem.
+
+68
+00:06:16.949 --> 00:06:23.020
+<v Ava>Raters guess how someone else would feel, and that's even harder across groups and power differences.
+
+69
+00:06:23.220 --> 00:06:30.196
+<v Ava>Reason two: motivation is an effect on the recipients. Expert ratings don't show the messages actually work.
+
+70
+00:06:30.396 --> 00:06:39.602
+<v Ava>Stronger strategy: use the expert check first, then an impact evaluation, a randomised test of LLM messages against control messages,
+
+71
+00:06:39.602 --> 00:06:46.247
+<v Ava>and revise in a loop. And generate several outputs per prompt, publish them, and check for bias.
+
+72
+00:06:47.547 --> 00:06:56.464
+<v Leo>And A point four. An LLM pre-screens mentoring applications, and one group is invited less often with similar applications.
+
+73
+00:06:56.804 --> 00:07:04.098
+<v Ava>That's an allocational harm: an opportunity is distributed unequally. If the model had portrayed the group in a demeaning way,
+
+74
+00:07:04.098 --> 00:07:05.892
+<v Ava>that would be representational.
+
+75
+00:07:06.092 --> 00:07:14.094
+<v Ava>It arises from biased training data: privileged groups over-represented, majority annotators misreading minority groups,
+
+76
+00:07:14.094 --> 00:07:19.895
+<v Ava>biased historical decisions, and web text shaped by engagement algorithms and other AI.
+
+77
+00:07:20.095 --> 00:07:30.120
+<v Ava>Two fixes: keep humans in charge, accepting or rejecting the model's suggestions. And run audits that swap names in otherwise identical applications,
+
+78
+00:07:30.120 --> 00:07:34.089
+<v Ava>knowing that audits miss unknown and intersectional biases.
+
+79
+00:07:35.389 --> 00:07:38.760
+<v Leo>Block B. Zhi, Kumar and Lee. What's the logic?
+
+80
+00:07:39.100 --> 00:07:45.611
+<v Ava>Critical thinking means reasoning through diverse, sometimes conflicting information, by analysing,
+
+81
+00:07:45.611 --> 00:07:49.425
+<v Ava>evaluating and synthesising, to reach a reasoned decision.
+
+82
+00:07:49.625 --> 00:07:56.066
+<v Ava>Earlier work mostly asked people how they thought AI affected them. These authors measured performance:
+
+83
+00:07:56.066 --> 00:08:02.319
+<v Ava>a realistic council decision with seven documents of mixed quality, and an essay scored objectively.
+
+84
+00:08:02.519 --> 00:08:08.469
+<v Ava>Their idea is that time matters. Early AI could help, as scaffolding: it does the lower-order work,
+
+85
+00:08:08.469 --> 00:08:11.415
+<v Ava>like finding information, and frees you to think.
+
+86
+00:08:11.615 --> 00:08:19.188
+<v Ava>Or it could hurt, as an anchor. Earlier studies in maths and creative writing found that help coming later beat help from the start.
+
+87
+00:08:19.388 --> 00:08:25.724
+<v Ava>And time pressure itself pushes people from careful deliberation to quick heuristics. So they crossed the two.
+
+88
+00:08:27.024 --> 00:08:28.859
+<v Leo>How was the experiment built?
+
+89
+00:08:29.199 --> 00:08:35.378
+<v Ava>Three hundred and ninety-three people, each in one of eight conditions. The chatbot was available early,
+
+90
+00:08:35.378 --> 00:08:40.548
+<v Ava>in the first third of the time, or continuously, or late, in the final third, or never.
+
+91
+00:08:40.748 --> 00:08:44.673
+<v Ava>Crossed with time: ten minutes, which isn't enough, or thirty minutes, which is.
+
+92
+00:08:44.873 --> 00:08:51.064
+<v Ava>The task: as a city-council member, decide whether to accept a polluting company's settlement,
+
+93
+00:08:51.064 --> 00:08:57.519
+<v Ava>using seven documents, with GPT-4o limited to those documents. They scored the essay, myside bias,
+
+94
+00:08:57.519 --> 00:09:04.500
+<v Ava>which is the gap between pro and con arguments, recall of the documents, and people's own self-assessment.
+
+95
+00:09:05.800 --> 00:09:08.424
+<v Leo>So, the results. Essay quality first.
+
+96
+00:09:08.764 --> 00:09:15.223
+<v Ava>With only ten minutes, having the AI from the start helped. Early access scored about three point eight,
+
+97
+00:09:15.223 --> 00:09:21.372
+<v Ava>continuous three point five, and late access was lowest at one point nine. It simply came too late.
+
+98
+00:09:21.572 --> 00:09:27.135
+<v Ava>With thirty minutes, it reversed. Late access and no AI scored about five point eight,
+
+99
+00:09:27.135 --> 00:09:29.593
+<v Ava>and early access only four point five.
+
+100
+00:09:29.793 --> 00:09:35.118
+<v Ava>Look at it the other way: extra time helped people who started on their own enormously,
+
+101
+00:09:35.118 --> 00:09:40.444
+<v Ava>plus three point nine and plus three. People who had AI from the start barely improved.
+
+102
+00:09:40.444 --> 00:09:42.892
+<v Ava>The authors call it a temporal reversal.
+
+103
+00:09:43.232 --> 00:09:47.115
+<v Leo>Rushed? AI first. Time to think? Think first, AI last.
+
+104
+00:09:48.415 --> 00:09:50.100
+<v Leo>What about one-sidedness?
+
+105
+00:09:50.440 --> 00:09:57.070
+<v Ava>With thirty minutes, people working alone became more one-sided over time. Late access cut myside bias,
+
+106
+00:09:57.070 --> 00:10:05.181
+<v Ava>three point four versus four point four, with the same number of arguments. The AI worked as a final check for the other side.
+
+107
+00:10:05.381 --> 00:10:12.888
+<v Ava>And recall: with thirty minutes, people who had AI from the start remembered the documents less well than those without AI.
+
+108
+00:10:12.888 --> 00:10:17.221
+<v Ava>Having it from the start seems to stop you from taking the material in.
+
+109
+00:10:17.421 --> 00:10:24.368
+<v Ava>And here's the striking part: when asked to rate their own critical thinking, people barely differed between conditions.
+
+110
+00:10:24.368 --> 00:10:27.725
+<v Ava>Their performance did. So self-reports miss these effects.
+
+111
+00:10:29.025 --> 00:10:31.564
+<v Leo>Why would early AI hurt when there's time?
+
+112
+00:10:31.904 --> 00:10:40.258
+<v Ava>Look at unique arguments, the ones that weren't in the AI's answers. With extra time, people who started alone added about two more.
+
+113
+00:10:40.258 --> 00:10:43.296
+<v Ava>People with AI from the start added almost none.
+
+114
+00:10:43.496 --> 00:10:50.259
+<v Ava>And they weren't lazily copying. Copying was rare. Early users mostly asked for summaries and clarification.
+
+115
+00:10:50.459 --> 00:10:56.448
+<v Ava>But those first answers set the direction. The authors call it anchoring: fewer ideas of your own,
+
+116
+00:10:56.448 --> 00:10:58.587
+<v Ava>and fewer returns to the documents.
+
+117
+00:10:58.787 --> 00:11:04.793
+<v Ava>People who worked alone first built their own picture of the problem, and then used the AI strategically,
+
+118
+00:11:04.793 --> 00:11:06.509
+<v Ava>to add the side they'd missed.
+
+119
+00:11:07.809 --> 00:11:09.388
+<v Leo>Verdict on Block B?
+
+120
+00:11:09.728 --> 00:11:14.101
+<v Ava>The effect of an LLM on critical thinking depends on timing and time.
+
+121
+00:11:14.301 --> 00:11:20.882
+<v Ava>Under pressure, early AI scaffolds. With enough time, it anchors: worse essays, fewer of your own arguments,
+
+122
+00:11:20.882 --> 00:11:21.917
+<v Ava>and worse recall.
+
+123
+00:11:22.117 --> 00:11:25.744
+<v Ava>Late AI works as a check, and self-reports miss all of this.
+
+124
+00:11:25.944 --> 00:11:34.237
+<v Ava>The authors' design advice follows: nudge people to think first when there's time, give early help for orientation rather than answers,
+
+125
+00:11:34.237 --> 00:11:36.141
+<v Ava>and keep practising without AI.
+
+126
+00:11:36.341 --> 00:11:42.418
+<v Ava>The limits: one civic task, crowdworkers, a single session. And the essays were graded by an LLM,
+
+127
+00:11:42.418 --> 00:11:48.181
+<v Ava>though it agreed well with a human on a hundred essays. That links straight back to Block A.
+
+128
+00:11:48.521 --> 00:11:51.721
+<v Leo>First thoughts yours, second opinion AI.
+
+129
+00:11:53.021 --> 00:11:58.998
+<v Leo>Practice question B point two. Students with AI from the start were the least one-sided,
+
+130
+00:11:58.998 --> 00:12:03.005
+<v Leo>so a teacher wants to give it from the start. Is she right?
+
+131
+00:12:03.345 --> 00:12:12.526
+<v Ava>No, she misreads the measure. Myside bias is the gap between pro and con arguments. Students with AI from the start wrote the fewest arguments,
+
+132
+00:12:12.526 --> 00:12:17.212
+<v Ava>so their small gap reflects having little to say, not balanced reasoning.
+
+133
+00:12:17.412 --> 00:12:22.963
+<v Ava>Only late access lowered bias while keeping the number of arguments. And with enough time,
+
+134
+00:12:22.963 --> 00:12:29.995
+<v Ava>early access led to worse essays and recall. So the evidence supports giving the assistant after independent work,
+
+135
+00:12:29.995 --> 00:12:31.044
+<v Ava>as a final check.
+
+136
+00:12:32.344 --> 00:12:38.851
+<v Leo>And B point three. Self-ratings were the same everywhere, but the essays differed. What does that imply?
+
+137
+00:12:39.191 --> 00:12:46.394
+<v Ava>For research: self-reports are not a valid way to measure how AI affects thinking. Use performance tasks:
+
+138
+00:12:46.394 --> 00:12:48.727
+<v Ava>essays, recall, source evaluation.
+
+139
+00:12:48.927 --> 00:12:57.410
+<v Ava>And why people don't notice: the effects are subtle. No copying, just summaries, yet they steered which ideas and documents people pursued.
+
+140
+00:12:57.410 --> 00:13:02.964
+<v Ava>And people generally overestimate themselves and have poor insight into their own thinking.
+
+141
+00:13:04.264 --> 00:13:06.931
+<v Leo>Block C. Huang. What's the logic?
+
+142
+00:13:07.271 --> 00:13:12.711
+<v Ava>AI clearly boosts productivity, the amount of work done. There, more seems to be better.
+
+143
+00:13:12.911 --> 00:13:19.360
+<v Ava>But creativity, ideas that are both new and useful, may follow a different pattern: an inverted U.
+
+144
+00:13:19.360 --> 00:13:23.769
+<v Ava>Huang calls it the Goldilocks effect. Not too little, not too much.
+
+145
+00:13:23.969 --> 00:13:31.863
+<v Ava>With too little AI, you rely only on your own viewpoint, and spend all your time generating ideas instead of refining the best one.
+
+146
+00:13:32.063 --> 00:13:37.097
+<v Ava>With a moderate amount, AI is a source of inspiration, while you still use your own thinking.
+
+147
+00:13:37.297 --> 00:13:44.668
+<v Ava>And with too much, you get the AI's standardised ideas, you anchor on them, and everyone's ideas start to look alike.
+
+148
+00:13:44.668 --> 00:13:46.684
+<v Ava>Same word as Block B: anchoring.
+
+149
+00:13:47.984 --> 00:13:50.416
+<v Leo>Why hadn't anyone found this before?
+
+150
+00:13:50.756 --> 00:13:55.812
+<v Ava>Because studies compared AI with no AI. Two points can only show a straight line.
+
+151
+00:13:56.012 --> 00:14:01.473
+<v Ava>To see a curve, you need at least three levels. That's Huang's methodological contribution.
+
+152
+00:14:01.673 --> 00:14:12.554
+<v Ava>Study one: a hundred and thirty-nine business professionals got a classic challenge: help a student called Mike make as much money as possible in three hours with ten dollars.
+
+153
+00:14:12.554 --> 00:14:19.145
+<v Ava>Everyone had ChatGPT, but they were told to use it at most once, four to six times, or nine or more times.
+
+154
+00:14:20.445 --> 00:14:21.597
+<v Leo>And the results?
+
+155
+00:14:21.937 --> 00:14:30.899
+<v Ava>Blind judges rated the moderate group's ideas as most creative: four point oh, against three point five for low and three point four for high.
+
+156
+00:14:30.899 --> 00:14:32.540
+<v Ava>A medium-sized difference.
+
+157
+00:14:32.740 --> 00:14:38.197
+<v Ava>Business value, rated by people with entrepreneurship experience, showed the same pattern:
+
+158
+00:14:38.197 --> 00:14:42.745
+<v Ava>five point seven for moderate, against about four point six for the others.
+
+159
+00:14:42.945 --> 00:14:49.239
+<v Ava>When an AI rated the ideas, moderate was again highest, but that difference wasn't significant overall.
+
+160
+00:14:50.539 --> 00:14:52.395
+<v Leo>So what explains the curve?
+
+161
+00:14:52.735 --> 00:14:58.758
+<v Ava>Knowledge diversity: how varied the brainstormed ideas were. It followed the same inverted U:
+
+162
+00:14:58.758 --> 00:15:03.487
+<v Ava>five point one for moderate, against four point three and four point six.
+
+163
+00:15:03.687 --> 00:15:10.401
+<v Ava>The alternative was problem restructuring, reframing the task beyond its limits. That didn't differ at all.
+
+164
+00:15:10.401 --> 00:15:13.351
+<v Ava>So AI didn't help people think outside the box.
+
+165
+00:15:13.551 --> 00:15:21.082
+<v Ava>And the mediation analysis fits: going from low to moderate, more AI raised creativity by raising diversity.
+
+166
+00:15:21.082 --> 00:15:26.521
+<v Ava>Going from moderate to high, more AI lowered creativity by lowering diversity.
+
+167
+00:15:26.861 --> 00:15:29.357
+<v Leo>The middle dose gives the widest menu.
+
+168
+00:15:30.657 --> 00:15:31.895
+<v Leo>Does it hold up?
+
+169
+00:15:32.235 --> 00:15:37.892
+<v Ava>Study two replicated it with three hundred and nineteen working adults, preregistered,
+
+170
+00:15:37.892 --> 00:15:43.221
+<v Ava>with crowds of judges. Same inverted U, same mechanism, slightly smaller effects.
+
+171
+00:15:43.421 --> 00:15:50.331
+<v Ava>Study three went into the field. A hundred and eighty-eight creative professionals reported how much they use AI,
+
+172
+00:15:50.331 --> 00:15:56.936
+<v Ava>and their supervisors rated their creativity a week later. Creativity rose, peaked around five out of seven,
+
+173
+00:15:56.936 --> 00:16:04.947
+<v Ava>then bent down. Because nobody was told how much to use AI, it answers the worry that people just did what the researcher expected.
+
+174
+00:16:05.147 --> 00:16:11.958
+<v Ava>But it's correlational, the curve only appeared with control variables, and few people used AI very heavily,
+
+175
+00:16:11.958 --> 00:16:18.075
+<v Ava>so the decline is partly a prediction. And the different creativity ratings agreed only modestly.
+
+176
+00:16:19.375 --> 00:16:20.889
+<v Leo>Verdict on Block C?
+
+177
+00:16:21.229 --> 00:16:26.200
+<v Ava>Moderate AI collaboration produced the most creative ideas, in three studies.
+
+178
+00:16:26.400 --> 00:16:30.539
+<v Ava>It works through the diversity of ideas, not through reframing the problem.
+
+179
+00:16:30.739 --> 00:16:36.182
+<v Ava>And the caveats: the effects are modest, the mechanism was measured rather than manipulated,
+
+180
+00:16:36.182 --> 00:16:38.312
+<v Ava>and the samples were mostly Western.
+
+181
+00:16:38.652 --> 00:16:40.508
+<v Leo>Not too little, not too much.
+
+182
+00:16:41.808 --> 00:16:48.998
+<v Leo>Practice question C point two. Why can't AI versus no AI show that too much harms creativity,
+
+183
+00:16:48.998 --> 00:16:51.472
+<v Leo>and how did Huang get around it?
+
+184
+00:16:51.812 --> 00:16:57.558
+<v Ava>Two conditions give you two points, so only a straight line. A curve needs at least three levels,
+
+185
+00:16:57.558 --> 00:16:58.980
+<v Ava>or a continuous measure.
+
+186
+00:16:59.180 --> 00:17:05.239
+<v Ava>The experiments manipulated three levels. Strength: random assignment gives causal evidence,
+
+187
+00:17:05.239 --> 00:17:13.275
+<v Ava>with blind ratings and a preregistered replication. Weakness: telling people how much to use AI may create demand effects,
+
+188
+00:17:13.275 --> 00:17:15.777
+<v Ava>and the task was short and artificial.
+
+189
+00:17:15.977 --> 00:17:22.156
+<v Ava>The field study measured use continuously. Strength: real professionals choosing their own use,
+
+190
+00:17:22.156 --> 00:17:28.204
+<v Ava>rated by supervisors later. Weakness: it's correlational, the curve needed control variables,
+
+191
+00:17:28.204 --> 00:17:30.740
+<v Ava>and the decline is partly extrapolated.
+
+192
+00:17:32.040 --> 00:17:38.077
+<v Leo>And C point three. The creativity raters agreed only modestly. Is that a problem?
+
+193
+00:17:38.417 --> 00:17:46.007
+<v Ava>Partly. They may be measuring different things: entrepreneurs weigh profit, trained judges balance novelty and usefulness,
+
+194
+00:17:46.007 --> 00:17:50.300
+<v Ava>crowds may react to the writing, and LLMs seem to weigh novelty more.
+
+195
+00:17:50.500 --> 00:17:56.879
+<v Ava>But it's also a strength: the same pattern showed up across different measures, which makes the finding more robust.
+
+196
+00:17:57.079 --> 00:18:05.127
+<v Ava>And link it to Block A: an LLM rater is a measurement tool that needs evaluation against experts and ideally real outcomes,
+
+197
+00:18:05.127 --> 00:18:14.615
+<v Ava>and it can be biased, opaque and stochastic. Zhi and colleagues did exactly that, checking their LLM grader against a human before relying on it.
+
+198
+00:18:15.915 --> 00:18:17.195
+<v Leo>Bring it together.
+
+199
+00:18:17.535 --> 00:18:21.204
+<v Ava>Block A: an LLM produces the typical, plausible answer.
+
+200
+00:18:21.404 --> 00:18:28.081
+<v Ava>Block B: so when you use it matters. Under pressure it scaffolds, but with time, think first and use AI last.
+
+201
+00:18:28.281 --> 00:18:34.937
+<v Ava>Block C: and how much matters. A moderate dose widens your ideas, too much makes them look like everyone else's.
+
+202
+00:18:35.137 --> 00:18:40.167
+<v Ava>So the thread is: an LLM helps most when you bring your own thinking, at the right time,
+
+203
+00:18:40.167 --> 00:18:41.196
+<v Ava>in the right dose.
+
+204
+00:18:41.536 --> 00:18:48.898
+<v Leo>And it links to Theme 7: anchoring on the AI's first answer is a cousin of fixation. To be original,
+
+205
+00:18:48.898 --> 00:18:51.989
+<v Leo>you first have to stop the obvious answer.
+
+206
+00:18:52.329 --> 00:18:58.399
+<v Ava>Plausible, not correct. First thoughts yours, second opinion AI. And not too little, not too much.
+
+207
+00:18:58.399 --> 00:19:00.628
+<v Ava>Good luck with your studying, Sezen.

@@ -142,7 +142,7 @@ details.idans summary{cursor:pointer;font-weight:700;color:var(--dgold)}.model2 
 <marker id="ahR" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
 <marker id="ahG" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f8a57"/></marker></defs></svg>
 <div class="app"><aside class="side"><div class="brand">Theme 8<br> <span>Large language models in psychology</span></div>
-<nav class="nav"><button class="nb on" data-p="vz">🎨 Visual lecture notes</button></nav>
+<nav class="nav"><button class="nb on" data-p="vz">🎨 Visual lecture notes</button><button class="nb" data-p="vd">🎬 Videos</button></nav>
 <div class="prep">Prepared for Sezen</div></aside>
 <main>
 <section class="panel on" id="p-vz"><style>
@@ -852,6 +852,16 @@ go(start,true);
 })();
 </script>
 </section>
+<section class="panel" id="p-vd"><style>
+#p-vd .vdwrap{max-width:900px}
+#p-vd .vdcard{background:#fff;border:1px solid var(--line);border-left:4px solid #c9a96e;border-radius:16px;padding:14px 16px;margin:16px 0}
+#p-vd .vdh{font-weight:700;color:var(--navy);font-size:1.05rem}
+#p-vd .vds{font-size:.88rem;color:var(--muted,#6b7280);margin:4px 0 10px}
+#p-vd video{width:100%;display:block;border-radius:12px;background:#000;aspect-ratio:16/9}
+#p-vd .vdchs{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+#p-vd .vdc{font:inherit;font-size:.82rem;border:1px solid var(--line);background:#faf7f0;color:var(--navy);border-radius:999px;padding:4px 10px;cursor:pointer}
+</style><div class="vdwrap"><div class="eyebrow">Cognitive Psychology · Theme 8 · Video lessons</div><h1>🎬 Videos</h1><p class="mini">All video lessons for this theme in one place, in the order of the lectures. Each one says which part of the notes it goes with.</p><div class="vdcard"><div class="vdh">🎬 Deep dive: Large Language Models in Psychology</div><div class="vds">≈ 19 min · two-host walkthrough of Blocks A, B and C. Each block runs <b>Logic</b> → <b>Evidence</b> (studies for and against) → <b>Verdict</b> → <b>Practice</b> questions (Theme 8 has no Canvas questions, so these are the new exam-style questions from your notes). Turn on CC for captions; jump to a block below.</div><video id="vd8" controls preload="metadata" playsinline poster="videos/theme8_deep_dive.jpg"><source src="videos/theme8_deep_dive.mp4" type="video/mp4"><track kind="captions" src="videos/theme8_deep_dive.vtt" srclang="en" label="English">Your browser cannot play this video.</video><div class="vdchs"><button class="vdc" data-t="0.0"><b>Intro</b> 0:00</button><button class="vdc" data-t="46.8"><b>Block A</b> 0:46</button><button class="vdc" data-t="454.8"><b>Block B</b> 7:34</button><button class="vdc" data-t="783.7"><b>Block C</b> 13:03</button><button class="vdc" data-t="1095.3"><b>Wrap-up</b> 18:15</button></div></div></div><script>document.querySelectorAll("#p-vd .vdc").forEach(function(b){b.addEventListener("click",function(){var v=document.getElementById("vd8");v.currentTime=parseFloat(b.dataset.t);v.play();});});</script></section>
 </main></div>
 <script>document.querySelectorAll(".nb").forEach(function(b){b.onclick=function(){document.querySelectorAll(".panel").forEach(function(x){x.classList.toggle("on",x.id==="p-"+b.dataset.p)});document.querySelectorAll(".nb").forEach(function(x){x.classList.toggle("on",x===b)})}});</script>
+<script>if(location.hash==="#videos"){var vdb=document.querySelector('.nb[data-p="vd"]');if(vdb)vdb.click();}</script>
 </body></html>
