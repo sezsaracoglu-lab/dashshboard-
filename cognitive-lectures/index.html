@@ -36,6 +36,7 @@ h1{font-size:2.3rem;margin:4px 0 4px}
 .slidebox img{width:100%;display:block;border-radius:8px}
 .slidebox .ref{font-size:.78rem;color:var(--muted);margin-top:8px;display:flex;justify-content:space-between}
 .extra{margin-top:12px}
+.spnav{display:flex;gap:6px;justify-content:center;align-items:center;margin-top:10px;flex-wrap:wrap}.spnav .btn{padding:4px 12px}.spd{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:.8rem}.spd.on{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:700}
 .panel h2{font-size:1.9rem;line-height:1.1;margin-bottom:6px}
 .essence{background:var(--pgold);border-left:5px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:1.02rem;margin:10px 0 14px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
@@ -85,259 +86,20 @@ table.t td{border-top:1px solid var(--line);padding:7px 9px;vertical-align:top}
 <body>
 <div class="app">
 <aside class="side">
-  <div class="brand">Lecture Lab<small>Cognitive Psychology · 5 lectures</small></div>
+  <div class="brand">Lecture Lab<small>Cognitive Psychology · 5 lectures · 10 exam questions</small></div>
   <div class="lecs" id="lecs"></div>
   <div class="modes" id="modes"></div>
-  <div class="prog"><span id="progtxt">0 / 0 screens nailed</span><div class="bar"><i id="progbar"></i></div><div style="margin-top:8px">Pages refer to your Pass the Year reader.</div></div>
+  <div class="prog"><span id="progtxt"></span><div class="bar"><i id="progbar"></i></div><div style="margin-top:8px">Pages refer to your Pass the Year reader.</div></div>
 </aside>
 <main id="main"></main>
 </div>
 
-<script>
-// ---------------- DATA ----------------
-const LECTURES = [
- {id:'l1', name:'1 · Attention', sub:'Reader pp. 285–297 · Steven Verheyen', ready:true},
- {id:'l2', name:'2 · Malleability of memory', sub:'Reader p. 298 →', ready:false},
- {id:'l3', name:'3 · Cognition & emotion', sub:'Reader p. 324 →', ready:false},
- {id:'l4', name:'4 · Language & thought', sub:'Reader p. 343 →', ready:false},
- {id:'l5', name:'5 · Dual process theory', sub:'Reader p. 370 →', ready:false},
-];
-
-const L1 = {
- title:'Attention',
- question:'Our processing capacity is limited. So what happens when we want to do more than fits?',
- storyline:'Where attention sits in the mind (Atkinson & Shiffrin) → the kinds of attention, and what we miss without it (change blindness) → switching between tasks and its four costs (Monsell), plus smartphones → what we still remember when attention is divided (Middlebrooks).',
- screens:[
- {t:'The exam, and what the lecturer wants', img:'l1-01-structure', page:'p. 285', slide:'Slide 1',
-  essence:'Multiple choice, at least 40 questions, 4 options each. About 3/4 on the tutorial themes, 1/4 on these five lectures. The lecturer wants you to know the main findings, read figures and tables, compare theories and apply them to new situations.',
-  chips:{
-   'The logic':'<p>The lectures are not a summary of the themes: they add their own studies and, above all, graphs. Questions often show a figure and ask what it shows, or describe an everyday situation and ask which concept fits.</p>',
-   'Memory trick':'<p><b>F-F-C-A</b>: <b>F</b>indings, <b>F</b>igures, <b>C</b>ompare, <b>A</b>pply. For every slide ask yourself: what was found, how would it look in a graph, what is it different from, and where would I see it in real life?</p>',
-   'How they ask it':'<p>Three question types the lecturer showed himself: “Which phenomenon is this?” (an everyday scene), “Which component of the model?” and “Which trials do these bars show?” (a graph). All three are practised in this lab.</p>'}},
- {t:'The information processing model', img:'l1-02-ipm', page:'p. 286', slide:'Slide 2',
-  essence:'Atkinson & Shiffrin (1968/2024) model the mind like a computer: input → processing → storage. Information moves through stages: sensory memory → (attention) → short-term memory → (encoding) → long-term memory, and back via retrieval. Forgetting can happen at every stage.',
-  chips:{
-   'The logic':'<p>The central idea: humans are <b>active information processors</b>. Each stage holds information for a limited time; then it is either forgotten or passed on. Forgetting at every stage reflects our <b>cognitive limitations</b>. The model is old and partly outdated, but it shows how psychologists have long thought about processing.</p><p>Outside this course: how the senses get the stimulus into sensory memory (that is Brain and Perception). This course starts at <b>attention</b>.</p>',
-   'Memory trick':'<p><b>The nightclub.</b> The street is <b>sensory memory</b> (everyone passes by, briefly). The <b>bouncer</b> is attention: only a few get in. The dance floor is <b>short-term memory</b> (you stay a while). Becoming a <b>member</b> is encoding into <b>long-term memory</b>; being called back onto the floor is <b>retrieval</b>. People leave at every door: <b>forgetting at every stage</b>.</p>',
-   'How they ask it':'<p>“Remembering a round of drinks until you reach the bar: which component?” → <b>short-term memory</b>. The order has passed the attention filter, you keep repeating it, but it is not stored for good.</p>',
-   'The trap':'<p class="no">✗ Forgetting only happens in short-term memory.</p><p class="yes">✓ In this model forgetting can happen at <b>every</b> stage, including sensory and long-term memory.</p>'}},
- {t:'Attention as a filter', img:'l1-03-filter', page:'p. 287', slide:'Slide 3',
-  essence:'In the model, attention is the filter between sensory memory and short-term memory: it decides which stimuli are processed further. Two insights: attention has a limited capacity, and it is a mental resource you need to process important information.',
-  chips:{
-   'The logic':'<p><b>Limited capacity:</b> at any moment you can attend to only a small amount. <b>Mental resource:</b> you need attention to fully process something important, especially when there is noise that threatens to drown it out. Some stimuli <b>capture</b> attention automatically (a loud bang); for others you must <b>actively search</b> (a turtle among a pile of watermelons).</p>',
-   'Memory trick':'<p>The bouncer again: a <b>small door</b> (limited capacity) and a <b>tired bouncer</b> (a resource that can run out). A loud bang barges through the door by itself; the turtle among the watermelons only gets in if the bouncer goes looking.</p>',
-   'How they ask it':'<p>“Where in the Atkinson & Shiffrin model does attention operate?” → between <b>sensory</b> and <b>short-term</b> memory.</p>'}},
- {t:'Selective vs divided attention', img:'l1-04-selective-divided', page:'pp. 287–288', slide:'Slide 4',
-  essence:'Selective attention: focus on one source and deliberately block out others (reading on a bench next to a loud phone caller). Divided attention: multitasking, attending to several tasks at the same time (phoning while driving).',
-  chips:{
-   'The logic':'<p>Both follow from limited capacity. Selective attention <b>chooses</b> what gets through the filter; divided attention tries to <b>share</b> the limited capacity over several things at once, so each gets less.</p>',
-   'Memory trick':'<p><b>Selective = Shut out.</b> <b>Divided = Do two at once.</b> On the slide: the man in the <b>car</b> divides (driving + calling); the woman on the <b>bench</b> selects (her book, not the loud caller).</p>',
-   'How they ask it':'<p>An everyday scene: “A student studies in a busy café and manages to ignore the conversation at the next table.” → <b>selective</b> attention.</p>'}},
- {t:'Change blindness', img:null, page:'pp. 288–289', slide:'No slide image (video on the slide)',
-  essence:'Without attention we miss even large changes. In the door study by Simons & Levin (1998), the person asking for directions was swapped behind a passing door, and about half of the passers-by did not notice they were now talking to someone else.',
-  chips:{
-   'The logic':'<p>Change blindness shows <b>how much</b> attention matters: what we do not attend to hardly reaches awareness, even if it is big. It is the cost of having a filter.</p>',
-   'Memory trick':'<p><b>“A door, a different man, and half didn’t notice.”</b> Picture the door sliding past like a curtain in a magic trick.</p>',
-   'How they ask it':'<p>“A participant fails to notice that the experimenter was replaced during a brief interruption. Which phenomenon?” → <b>change blindness</b> (Simons & Levin, 1998; about half did not notice).</p>'},
-  demo:'cb'},
- {t:'Sustained attention (vigilance)', img:'l1-05-sustained', page:'pp. 289–290', slide:'Slide 5',
-  essence:'Sustained attention, or vigilance, is selective attention that you keep up over a long time: staying focused through a whole lecture, or an air traffic controller watching a radar screen for hours.',
-  chips:{
-   'The logic':'<p>It is not a separate kind of filter: it is <b>selective attention + time</b>. The challenge is keeping the filter set on the same thing while time passes.</p>',
-   'Memory trick':'<p><b>Sustained = Selective that Stays.</b> Four forms in one line: <b>Selective Shuts out · Divided Does two · Sustained Stays · Task switching Toggles.</b></p><table class="t"><tr><th>Form</th><th>What it is</th><th>Example</th></tr><tr><td>Selective</td><td>Follow one source, block others</td><td>Reading next to a loud caller</td></tr><tr><td>Divided</td><td>Several tasks at the same time</td><td>Phoning while driving</td></tr><tr><td>Sustained</td><td>Keep selection going for long</td><td>Monitoring a radar screen</td></tr><tr><td>Task switching</td><td>Go back and forth, alternately</td><td>Essay, check email, essay</td></tr></table>',
-   'How they ask it':'<p>“A lifeguard watches the pool for four hours.” → <b>sustained</b> attention (vigilance).</p>'}},
- {t:'Task switching is not divided attention', img:'l1-06-switching', page:'p. 290', slide:'Slide 6',
-  essence:'In task switching you do tasks alternately, not at the same time. It is studied with the alternating runs paradigm: the task switches predictably every N trials. You see a digit; its colour tells you to judge odd/even or low/high. A cue comes 50, 650 or 1250 ms before the digit: that is the preparation time.',
-  chips:{
-   'The logic':'<p>The question is: <b>how well can we switch back and forth?</b> Because the sequence is predictable (e.g. AABBAABB), you can compare a <b>switch trial</b> (the first trial of a new task) with <b>repetition trials</b> (the next trials of the same task), and see what preparation time does.</p>',
-   'Memory trick':'<p><b>Divided = juggling</b> (balls in the air at the same time). <b>Task switching = changing hats</b> (one hat at a time, but each swap costs a moment). Try it yourself in the demo below.</p>',
-   'The trap':'<p class="no">✗ Writing an essay and checking email in between is divided attention.</p><p class="yes">✓ That is <b>task switching</b>: you go back and forth, not at the same time.</p>'},
-  demo:'ts'},
- {t:'The four costs of task switching (Monsell, 2003)', img:'l1-07-switchcost', img2:'l1-08-mixingcost', page:'pp. 291–292', slide:'Slides 7–8',
-  essence:'Read the graph: the first point of each line is the switch trial, the next points are repetition trials; each line is one preparation time. Four phenomena: (1) switch cost, (2) preparation effect, (3) residual cost, (4) mixing cost. Conclusion: switching is cognitively demanding.',
-  chips:{
-   'The logic':'<ul><li><b>1. Switch cost:</b> a switch trial is slower than a repetition trial. At 50 ms: about 910 vs 650 ms, over 250 ms.</li><li><b>2. Preparation effect:</b> with time to prepare, the switch cost shrinks: at 650 and 1250 ms the jump is only about 125 ms. From 650 to 1250 ms it does not improve further.</li><li><b>3. Residual cost:</b> preparation never removes the switch cost completely: even at 650 and 1250 ms the first point stays higher; the line never becomes flat.</li><li><b>4. Mixing cost:</b> even repetition trials in a mixed block (about 520–650 ms) stay slower than trials in a block with only one task (about 400 ms, the red “single” line).</li></ul>',
-   'Memory trick':'<p><b>“Some People Rarely Multitask”</b> = <b>S</b>witch, <b>P</b>reparation, <b>R</b>esidual, <b>M</b>ixing, in the order they appear.</p><p>On the graph: <b>S</b> = the first point jumps up · <b>P</b> = the jump is smaller on the purple and pink lines · <b>R</b> = but it never disappears · <b>M</b> = all lines float above the red single-task line.</p>',
-   'How they ask it':'<p><b>Switch cost</b> = switch trial − repetition trial (both in the mixed block). <b>Mixing cost</b> = repetition trial in the mixed block − trial in a single-task block. Exam questions love this difference.</p>',
-   'The trap':'<p class="no">✗ With enough preparation time, switching becomes free.</p><p class="yes">✓ Preparation <b>reduces</b> the switch cost, but a <b>residual cost</b> remains, and the <b>mixing cost</b> is there even when you do not switch.</p>'}},
- {t:'Task switching and smartphones', img:'l1-09-smartphones', page:'pp. 292–293', slide:'Slide 9',
-  essence:'Because switching is demanding, phones disrupt learning (Chen & Yan, 2016, review). Without a phone, students took more detailed notes and scored better on a multiple-choice test (Kuznekoff & Titsworth, 2013). Merely receiving and ignoring a notification hurts attention (Stothart et al., 2015). Even a phone lying nearby costs capacity: the mere presence effect (Ward et al., 2017).',
-  chips:{
-   'The logic':'<p>The step-up: using the phone costs attention (task switching); <b>ignoring</b> a notification costs attention; and even <b>resisting the temptation</b> to check a phone that is just lying there costs capacity. That last one is called the <b>mere presence effect</b>, or smartphone-induced brain drain.</p>',
-   'Memory trick':'<p><b>The three N’s:</b> <b>N</b>otes (Kuznekoff & Titsworth: better notes without a phone) · <b>N</b>otification (Stothart: ignoring one still costs) · <b>N</b>earby (Ward: a phone just lying there costs). And <b>Chen & Yan</b> is the <b>C</b>ollection: the review.</p>',
-   'How they ask it':'<p>“A student keeps her phone face-down on the desk and never touches it, yet performs worse than a student whose phone is in another room.” → <b>mere presence effect</b> (Ward et al., 2017).</p>'}},
- {t:'Value-directed remembering (Middlebrooks et al., 2017)', img:'l1-10-vdr', page:'pp. 293–294', slide:'Slide 10',
-  essence:'People learned lists of 20 words, each worth 1–10 points, under full attention, with music, or while doing a digit-detection task (divided attention). Divided attention lowered how many words they remembered, but in every condition high-value words were remembered best, and the conditions did not differ in how selectively they remembered the most valuable words.',
-  chips:{
-   'The logic':'<p><b>Design:</b> 20 words per list, values 1–10 (two words per value), 3 seconds each; <b>between-subjects</b>: full attention, music (familiar or unfamiliar: passive distraction), or divided attention (listen to digits and signal three odd digits in a row).</p><p><b>Graph:</b> x-axis = item value, y-axis = recall probability. The divided-attention line is the <b>lowest</b>, but <b>all lines rise</b> with value, about equally steeply.</p><p><b>Conclusion:</b> divided attention lowers <b>how much</b> you remember, but you can still <b>prioritise what matters</b>.</p>',
-   'Memory trick':'<p><b>“A smaller suitcase, but you still pack the jewels.”</b> Divided attention shrinks the suitcase (fewer words), but you still choose the most valuable items first (the lines still rise).</p>',
-   'How they ask it':'<p>A graph question: “Which line is divided attention, and what does the slope tell you?” → the <b>lowest</b> line; a slope as steep as the others means <b>selectivity is preserved</b>.</p>',
-   'Background':'<p>Spelke, Hirst & Neisser (1976) trained students for weeks to read while writing dictated words; they got almost as good as reading alone, but the skill was very task-specific. This was in earlier years’ lectures, <b>not on the 2026–2027 slides</b>.</p>'}},
- {t:'Example exam question (from the lecture)', img:'l1-11-examq', page:'pp. 295–296', slide:'Slide 11',
-  essence:'A single task is compared with an alternating runs paradigm (100 ms preparation). Black, white and grey bars show mean correct reaction times. Which trials? Black (≈ 680 ms) = single task; white (≈ 1000 ms) = repetition trial in the mixed block; grey (≈ 1170 ms) = switch trial.',
-  chips:{
-   'The logic':'<ol style="padding-left:18px"><li>A <b>single-task</b> block has no switch cost and no mixing cost → fastest (black).</li><li>A <b>repetition trial</b> in a mixed block carries a <b>mixing cost</b> → slower (white). White − black = mixing cost.</li><li>A <b>switch trial</b> adds the <b>switch cost</b> on top → slowest (grey). Grey − white = switch cost, large because 100 ms of preparation is very short.</li></ol>',
-   'Memory trick':'<p><b>Stairs going up:</b> single → repeat → switch. Each step up is one cost: first <b>mixing</b>, then <b>switch</b>.</p>',
-   'How they ask it':'<p>The other two example types from the lecture: “Writing an essay with your inbox open: which phenomenon?” → task switching (and, if you only know mail is coming in, Stothart / mere presence). “Remembering a round of drinks: which component?” → short-term memory.</p>'}},
- ],
- breath:[
-  'The mind processes information in stages (Atkinson & Shiffrin): <b>sensory memory → attention → short-term memory → encoding → long-term memory</b>, back via retrieval, with forgetting everywhere.',
-  'Attention is the <b>filter</b>: limited capacity, a mental resource. <b>Selective</b> shuts out, <b>divided</b> does two at once, <b>sustained</b> stays on, <b>task switching</b> toggles.',
-  'Without attention we miss big changes: <b>change blindness</b>, the door study (Simons & Levin, 1998): about half did not notice.',
-  'Switching costs time: <b>Some People Rarely Multitask</b>: switch cost, preparation effect, residual cost, mixing cost (Monsell, 2003). Switching is cognitively demanding.',
-  'Phones: <b>Notes, Notification, Nearby</b> (Kuznekoff & Titsworth; Stothart; Ward: the mere presence effect).',
-  'Divided attention shrinks memory but keeps priorities: <b>a smaller suitcase, still packed with the jewels</b> (Middlebrooks et al., 2017).',
- ],
- quiz:[
-  {s:'A waiter hears a table’s order of five drinks and keeps repeating it in his head until he reaches the bar, after which he forgets it. In the Atkinson & Shiffrin model, where is the order held while he walks?', o:['Sensory memory','Short-term memory','Long-term memory','The attention filter'], a:1, w:'The order has passed the attention filter and is kept active by repetition, but it is not stored permanently: that is short-term memory (the lecture’s own “round of drinks” example).'},
-  {s:'According to the information processing model, at which stage(s) can forgetting occur?', o:['Only in short-term memory','Only in sensory memory','Only before information reaches long-term memory','At every stage'], a:3, w:'Forgetting can happen at every stage, which reflects our cognitive limitations.'},
-  {s:'A proofreader manages to keep checking a contract while two colleagues argue loudly next to her desk. Which form of attention is she mainly using?', o:['Divided attention','Selective attention','Task switching','Change blindness'], a:1, w:'She follows one source and deliberately blocks out the others: selective attention.'},
-  {s:'A security guard has to watch the same camera screens for a whole night shift. Which form of attention does this task mainly demand?', o:['Sustained attention','Divided attention','Task switching','Value-directed remembering'], a:0, w:'Keeping selective attention going over a long period is sustained attention (vigilance), like the radar operator on the slide.'},
-  {s:'A student works on a report for ten minutes, then answers messages for two minutes, then returns to the report, and so on. How is this best described?', o:['Divided attention, because she does two tasks','Task switching, because she does the tasks alternately','Sustained attention, because she keeps working for a long time','Selective attention, because she ignores the messages'], a:1, w:'The tasks are done alternately, not at the same time: task switching. The lecture stresses that task switching is not divided attention.'},
-  {s:'In a mixed block, the first trial after a task change takes 880 ms and the next trials of the same task take about 620 ms. What does the difference of about 260 ms reflect?', o:['The mixing cost','The residual cost','The switch cost','The preparation effect'], a:2, w:'Switch trial minus repetition trial, both in the mixed block, is the switch cost.'},
-  {s:'Repetition trials in a mixed block take about 600 ms, while the same task in a pure single-task block takes about 420 ms. What does this difference show?', o:['The switch cost','The mixing cost','The preparation effect','Change blindness'], a:1, w:'Repetition trial in a mixed block minus a trial in a single-task block is the mixing cost: just keeping two tasks ready costs time.'},
-  {s:'When participants get 1250 ms instead of 50 ms to prepare, the switch trial is much faster, but still slower than the repetition trials. What is the remaining difference called?', o:['Mixing cost','Residual cost','Switch benefit','Mere presence effect'], a:1, w:'Preparation reduces the switch cost (preparation effect) but never removes it: what remains is the residual cost.'},
-  {s:'In a study, students whose phone lies switched on but untouched on their desk perform worse on a concentration task than students who left their phone in another room. Which explanation fits best?', o:['Task switching between phone and task','The mere presence effect','Change blindness','Value-directed remembering'], a:1, w:'Even resisting the temptation to check a phone that is just nearby costs capacity: the mere presence effect (Ward et al., 2017).'},
-  {s:'In Middlebrooks et al. (2017), what happened to recall when attention was divided by a digit-detection task?', o:['Recall was unaffected in every respect','Fewer words were recalled, and high-value words were no longer favoured','Fewer words were recalled, but high-value words were still remembered best','More words were recalled, because the task increased arousal'], a:2, w:'Divided attention lowered overall recall, but the lines still rose with value and selectivity did not differ between conditions.'},
-  {s:'During a short conversation, the person someone is talking to is replaced by another person while a large object blocks the view. About half of the participants do not notice. This is an example of:', o:['Divided attention','Change blindness','The residual cost','Sustained attention'], a:1, w:'Failing to notice a large change that is not attended to is change blindness (Simons & Levin, 1998).'},
-  {s:'A bar chart shows mean reaction times of 520, 760 and 940 ms for three kinds of trials in a task-switching study with very short preparation time. Which order of trial types matches these bars?', o:['Switch trial, repetition trial, single task','Single task, repetition trial in the mixed block, switch trial','Repetition trial, single task, switch trial','Single task, switch trial, repetition trial'], a:1, w:'Single task is fastest (no costs), a repetition trial adds the mixing cost, a switch trial adds the switch cost on top: the stairs going up.'},
- ],
- cards:[
-  ['Information processing model','Atkinson & Shiffrin: sensory memory → attention → short-term memory → encoding → long-term memory (+ retrieval); forgetting at every stage.'],
-  ['Attention (in the model)','A filter between sensory and short-term memory; limited capacity; a mental resource.'],
-  ['Selective attention','Focus on one source, deliberately block others.'],
-  ['Divided attention','Several tasks or sources at the same time (multitasking).'],
-  ['Sustained attention','Selective attention kept up over a long time (vigilance).'],
-  ['Change blindness','Missing large changes you do not attend to; door study, about half missed it (Simons & Levin, 1998).'],
-  ['Task switching','Doing tasks alternately, not at the same time.'],
-  ['Alternating runs paradigm','The task switches predictably every N trials; a cue 50, 650 or 1250 ms before the digit = preparation time.'],
-  ['Switch cost','Switch trial slower than repetition trial (within the mixed block).'],
-  ['Preparation effect','More preparation time → smaller switch cost.'],
-  ['Residual cost','The part of the switch cost that remains despite preparation.'],
-  ['Mixing cost','Repetition trials in a mixed block slower than a single-task block.'],
-  ['Mere presence effect','A phone just lying nearby costs capacity (Ward et al., 2017).'],
-  ['Stothart et al. (2015)','Receiving and ignoring a notification already hurts attention.'],
-  ['Kuznekoff & Titsworth (2013)','No phone during a video lecture → more detailed notes, better MC score.'],
-  ['Value-directed remembering','Under divided attention you remember less, but still prioritise high-value items (Middlebrooks et al., 2017).'],
- ]
-};
-
-// ---------------- STATE ----------------
-const store = {get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}, set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-let mode='slides', idx=0, done=store.get('ll_done_l1',{}), cardIdx=0;
-const L=L1;
-const MODES=[['slides','📖 Slide by slide'],['practice','✅ Practice questions'],['cards','🃏 Flashcards'],['breath','⚡ Lecture in one breath']];
-
-function renderSide(){
-  document.getElementById('lecs').innerHTML=LECTURES.map(l=>`<button class="lec ${l.id==='l1'?'on':''}" ${l.ready?'':'disabled'}>${l.name}<span>${l.ready?l.sub:'coming next'}</span></button>`).join('');
-  document.getElementById('modes').innerHTML=MODES.map(([k,v])=>`<button class="mode ${mode===k?'on':''}" data-m="${k}">${v}</button>`).join('');
-  document.querySelectorAll('.mode').forEach(b=>b.onclick=()=>{mode=b.dataset.m;render();window.scrollTo(0,0)});
-  const n=Object.values(done).filter(Boolean).length;
-  document.getElementById('progtxt').textContent=`${n} / ${L.screens.length} screens nailed`;
-  document.getElementById('progbar').style.width=(100*n/L.screens.length)+'%';
-}
-
-function head(){return `<div class="eyebrow">Lecture 1 · ${L.title}</div><h1>${L.title}</h1><p class="lede"><b>The lecture’s question:</b> ${L.question}</p>`}
-
-function renderSlides(){
-  const s=L.screens[idx];
-  const chipKeys=Object.keys(s.chips);
-  const slide = s.img ? `<img src="slides/${s.img}.jpg" alt="Lecture slide: ${s.t}">` + (s.img2?`<img src="slides/${s.img2}.jpg" alt="Lecture slide" style="margin-top:10px">`:'') : `<div style="padding:30px;text-align:center;color:var(--muted)">This slide showed the door-study video. Watch it via the QR code on reader p. 289, or try the flicker test below.</div>`;
-  let demo='';
-  if(s.demo==='ts') demo=tsDemoHTML();
-  if(s.demo==='cb') demo=cbDemoHTML();
-  return head()+`<p class="lede" style="margin-top:6px"><b>Storyline:</b> ${L.storyline}</p>
-  <div class="screen">
-   <div><div class="slidebox">${slide}<div class="ref"><span>${s.slide}</span><span>Reader ${s.page}</span></div></div>${demo}</div>
-   <div class="panel"><div class="eyebrow">Screen ${idx+1} of ${L.screens.length}</div><h2>${s.t}</h2>
-    <div class="essence"><b>The essence:</b> ${s.essence}</div>
-    <div class="chips">${chipKeys.map((k,i)=>`<button class="chip" data-c="${i}">${k}</button>`).join('')}</div>
-    ${chipKeys.map((k,i)=>`<div class="chipbody ${k==='The trap'?'trap':''}" id="cb${i}">${s.chips[k]}</div>`).join('')}
-    <div class="nav"><button class="btn ghost" id="prev">← Back</button><button class="btn" id="next">Next →</button><button class="got ${done[idx]?'on':''}" id="got">${done[idx]?'✓ Nailed':'I’ve got this'}</button></div>
-   </div></div>
-   <div class="dots">${L.screens.map((x,i)=>`<button class="dot ${i===idx?'cur':''} ${done[i]?'done':''}" data-i="${i}" title="${x.t}">${i+1}</button>`).join('')}</div>`;
-}
-function bindSlides(){
-  document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const b=document.getElementById('cb'+c.dataset.c);const on=!b.classList.contains('on');b.classList.toggle('on',on);c.classList.toggle('on',on)});
-  document.getElementById('prev').onclick=()=>{if(idx>0){idx--;render()}};
-  document.getElementById('next').onclick=()=>{if(idx<L.screens.length-1){idx++;render()}else{mode='practice';render()}};
-  document.getElementById('got').onclick=()=>{done[idx]=!done[idx];store.set('ll_done_l1',done);render()};
-  document.querySelectorAll('.dot').forEach(d=>d.onclick=()=>{idx=+d.dataset.i;render()});
-  if(L.screens[idx].demo==='ts') bindTs();
-  if(L.screens[idx].demo==='cb') bindCb();
-}
-
-// ---- task switching demo ----
-function tsDemoHTML(){return `<div class="demo"><h4>Try it: measure your own switch cost</h4><p style="font-size:.9rem">Gold digit → is it <b>odd or even</b>? Blue digit → is it <b>low (1–4) or high (6–9)</b>? The colour switches every 2 trials. 24 trials; be fast and accurate.</p>
-<div id="tsbox" style="text-align:center;margin:12px 0"><div id="tscue" style="font-size:.85rem;color:var(--muted);height:20px"></div><div id="tsdig" style="font:700 64px 'DM Sans';height:80px"></div>
-<div id="tsbtns" style="display:none;gap:8px;justify-content:center;flex-wrap:wrap"><button class="btn ghost" data-k="L">Odd / Low</button><button class="btn ghost" data-k="R">Even / High</button></div>
-<button class="btn" id="tsstart">Start</button><div id="tsres" style="margin-top:10px;font-size:.92rem"></div></div></div>`}
-function bindTs(){
-  const st=document.getElementById('tsstart'); if(!st) return;
-  let trials=[],t=0,t0=0,data=[];
-  st.onclick=()=>{st.style.display='none';document.getElementById('tsbtns').style.display='flex';document.getElementById('tsres').textContent='';
-    trials=[];for(let i=0;i<24;i++){const task=Math.floor(i/2)%2;let d;do{d=1+Math.floor(Math.random()*9)}while(d===5);trials.push({task,d,sw:i>0&&i%2===0})}
-    t=0;data=[];show()};
-  function show(){if(t>=trials.length){finish();return}const tr=trials[t];document.getElementById('tscue').textContent=tr.task===0?'odd or even?':'low or high?';
-    const dig=document.getElementById('tsdig');dig.textContent='';setTimeout(()=>{dig.textContent=tr.d;dig.style.color=tr.task===0?'#a8854a':'#34466b';t0=performance.now()},300)}
-  document.querySelectorAll('#tsbtns button').forEach(b=>b.onclick=()=>{if(!t0)return;const tr=trials[t];const rt=performance.now()-t0;t0=0;
-    const correct=tr.task===0?((tr.d%2===1)===(b.dataset.k==='L')):((tr.d<5)===(b.dataset.k==='L'));data.push({rt,sw:tr.sw,correct,first:t<2});t++;show()});
-  function finish(){document.getElementById('tsbtns').style.display='none';st.style.display='inline-block';st.textContent='Try again';
-    const ok=data.filter(x=>x.correct&&!x.first);const m=a=>a.length?Math.round(a.reduce((s,x)=>s+x.rt,0)/a.length):0;
-    const sw=m(ok.filter(x=>x.sw)),rep=m(ok.filter(x=>!x.sw));
-    document.getElementById('tsres').innerHTML=`Switch trials: <b>${sw} ms</b> · Repetition trials: <b>${rep} ms</b><br><b>Your switch cost ≈ ${sw-rep} ms</b> ${sw>rep?'(just like Monsell: switching is cognitively demanding)':'(try again; with more trials the switch cost usually shows up)'} · accuracy ${Math.round(100*data.filter(x=>x.correct).length/data.length)}%`}
-}
-// ---- change blindness demo ----
-function scene(changed){return `<svg viewBox="0 0 400 240" width="100%" style="max-width:420px;border-radius:10px;background:#f3ead8">
-<rect x="0" y="170" width="400" height="70" fill="#d9c7a3"/><rect x="40" y="40" width="120" height="90" fill="#cfe0f2" stroke="#34466b" stroke-width="4"/><line x1="100" y1="40" x2="100" y2="130" stroke="#34466b" stroke-width="3"/>
-<rect x="210" y="110" width="150" height="14" fill="#8a6a3a"/><rect x="220" y="124" width="10" height="50" fill="#8a6a3a"/><rect x="340" y="124" width="10" height="50" fill="#8a6a3a"/>
-<rect x="232" y="78" width="30" height="32" rx="4" fill="#fff" stroke="#34466b" stroke-width="3"/><path d="M262 86 q14 8 0 18" fill="none" stroke="#34466b" stroke-width="3"/>
-<rect x="280" y="60" width="18" height="50" fill="${changed?'#b0473a':'#2f7a52'}"/><circle cx="289" cy="56" r="8" fill="${changed?'#b0473a':'#2f7a52'}"/>
-<circle cx="330" cy="98" r="11" fill="#e8b84a"/>${changed?'':'<rect x="60" y="150" width="40" height="22" fill="#a8854a"/>'}
-<circle cx="180" cy="190" r="16" fill="#34466b"/></svg>`}
-function cbDemoHTML(){return `<div class="demo"><h4>Try it: the flicker test</h4><p style="font-size:.9rem">The picture flickers between two versions with a blank in between, like the door passing. Press <b>“I see it!”</b> as soon as you spot what changes.</p>
-<div style="text-align:center"><div id="cbstage">${scene(false)}</div><button class="btn" id="cbstart">Start flicker</button> <button class="btn ghost" id="cbsee" style="display:none">I see it!</button><div id="cbres" style="margin-top:8px;font-size:.92rem"></div></div></div>`}
-function bindCb(){
-  let timer=null,ph=0,t0=0;const stage=document.getElementById('cbstage');
-  document.getElementById('cbstart').onclick=()=>{document.getElementById('cbstart').style.display='none';document.getElementById('cbsee').style.display='inline-block';document.getElementById('cbres').textContent='';t0=performance.now();ph=0;
-    timer=setInterval(()=>{ph=(ph+1)%4;stage.innerHTML=ph%2===1?'<div style="height:240px;max-width:420px;margin:auto;background:#e9e3d6;border-radius:10px"></div>':scene(ph===2)},300)};
-  document.getElementById('cbsee').onclick=()=>{clearInterval(timer);const s=((performance.now()-t0)/1000).toFixed(1);stage.innerHTML=scene(false)+scene(true);
-    document.getElementById('cbsee').style.display='none';document.getElementById('cbstart').style.display='inline-block';document.getElementById('cbstart').textContent='Again';
-    document.getElementById('cbres').innerHTML=`You took <b>${s} s</b>. Two things changed: the <b>bottle turns red</b> and the <b>box on the floor disappears</b>. Without the blank flash you would spot them instantly; the flash hides the motion signal, so you need focused attention, exactly like the door in Simons & Levin.`};
-}
-
-function renderPractice(){
-  return head()+`<h2 style="margin-top:14px">Practice questions</h2><p class="lede">New questions in the style of the exam (4 options, 1 correct). Answer first; the explanation appears after you choose. <span class="score" id="qs"></span></p>`+
-  L.quiz.map((q,i)=>`<div class="q" data-q="${i}"><div class="stem">${i+1}. ${q.s}</div>${q.o.map((o,j)=>`<button class="opt" data-j="${j}">${'abcd'[j]}) ${o}</button>`).join('')}<div class="why" id="w${i}"></div></div>`).join('')+
-  `<button class="btn ghost" id="qreset">Reset answers</button>`;
-}
-function bindPractice(){
-  let right=0,ans=0;
-  document.querySelectorAll('.q').forEach(qd=>{const q=L.quiz[+qd.dataset.q];let answered=false;
-    qd.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{if(answered)return;answered=true;ans++;const j=+b.dataset.j;
-      qd.querySelectorAll('.opt')[q.a].classList.add('right');if(j!==q.a)b.classList.add('wrong');else right++;
-      const w=document.getElementById('w'+qd.dataset.q);w.innerHTML=(j===q.a?'<b>Correct.</b> ':'<b>Not quite.</b> ')+q.w;w.classList.add('on');
-      document.getElementById('qs').textContent=`Score: ${right} / ${ans}`})});
-  document.getElementById('qreset').onclick=()=>render();
-}
-function renderCards(){const c=L.cards[cardIdx];return head()+`<h2 style="margin-top:14px">Flashcards</h2><p class="lede">Tap the card to flip it. ${cardIdx+1} / ${L.cards.length}</p>
- <div class="fc" id="fc"><div class="fcin"><div class="face front">${c[0]}</div><div class="face back">${c[1]}</div></div></div>
- <div class="nav"><button class="btn ghost" id="cprev">← Previous</button><button class="btn" id="cnext">Next →</button><button class="btn ghost" id="cshuf">Shuffle</button></div>`}
-function bindCards(){document.getElementById('fc').onclick=e=>e.currentTarget.classList.toggle('flip');
- document.getElementById('cprev').onclick=()=>{cardIdx=(cardIdx-1+L.cards.length)%L.cards.length;render()};
- document.getElementById('cnext').onclick=()=>{cardIdx=(cardIdx+1)%L.cards.length;render()};
- document.getElementById('cshuf').onclick=()=>{L.cards.sort(()=>Math.random()-.5);cardIdx=0;render()}}
-function renderBreath(){return head()+`<h2 style="margin-top:14px">The lecture in one breath</h2><div class="breath">${L.breath.map(p=>`<p>◆ ${p}</p>`).join('')}<p class="hook" style="margin-top:14px">Bouncer, stairs, three N’s, and a smaller suitcase with the jewels.</p></div>`}
-
-function render(){
-  const m=document.getElementById('main');
-  if(mode==='slides'){m.innerHTML=renderSlides();bindSlides()}
-  if(mode==='practice'){m.innerHTML=renderPractice();bindPractice()}
-  if(mode==='cards'){m.innerHTML=renderCards();bindCards()}
-  if(mode==='breath'){m.innerHTML=renderBreath()}
-  renderSide();
-}
-render();
-</script>
+<script>const LECS={};</script>
+<script src="l1.js"></script>
+<script src="l2.js"></script>
+<script src="l3.js"></script>
+<script src="l4.js"></script>
+<script src="l5.js"></script>
+<script src="engine.js"></script>
 </body>
 </html>
