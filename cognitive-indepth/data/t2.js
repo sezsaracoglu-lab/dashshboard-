@@ -248,16 +248,16 @@ IDQ[2] = {
       visual: { type: "grid", title: "The AWMA: material × demand",
         cols: ["Storage only", "Processing + storage"],
         rows: [ { head: "Verbal", cells: ["Loop: Digit, Word, Nonword Recall", "Verbal CE: Listening, Counting, Backwards Digit"] },
-                { head: "Visuospatial", cells: ["Sketchpad: Dot Matrix, Mazes, Block Recall", "VS CE: Odd-One-Out, Mister X, Spatial Recall"] } ] },
+                { head: "Visuospatial", cells: ["Sketchpad: Dot Matrix, Mazes, Block Recall", "VS CE: Odd-One-Out, Mister X, Spatial Span"] } ] },
       answer: [
         "The AWMA isolates components by varying two task features: the <b>type of material</b> (verbal vs visuospatial) and the <b>processing demand</b> (storage only in simple span tasks vs processing plus storage in complex span tasks).",
         "Simple verbal span tasks (Digit, Word, Nonword Recall: hear and repeat in order) tap the <b>phonological loop</b>; nonwords minimise help from long-term memory. Simple visuospatial span tasks (Dot Matrix, Mazes Memory, Block Recall) tap the <b>visuospatial sketchpad</b>.",
-        "Complex span tasks add a concurrent processing step, which needs the <b>central executive</b>: Listening Recall, Counting Recall and Backwards Digit Recall for the verbal CE; Odd-One-Out, Mister X and Spatial Recall (judge or rotate a figure while remembering locations) for the visuospatial CE. Because that processing is itself visuospatial, children cannot slip back into verbal coding. Three subtests per component give reliable composite scores.",
+        "Complex span tasks add a concurrent processing step, which needs the <b>central executive</b>: Listening Recall, Counting Recall and Backwards Digit Recall for the verbal CE; Odd-One-Out, Mister X and Spatial Span (judge or rotate a figure while remembering locations) for the visuospatial CE. Because that processing is itself visuospatial, children cannot slip back into verbal coding. Three subtests per component give reliable composite scores.",
         "Still, the tasks are not <b>process-pure</b>: children can verbalise patterns, the two visuospatial composites overlap strongly (r = .70), the CE is measured only indirectly, and the AWMA does not split visual from spatial as Klauer and Zhao (B3) did."
       ],
       takeaway: "Hold only = a slave system; do and hold = the executive.",
       trap: { wrong: "List the twelve subtests.", right: "Explain the two-dimension logic and mention task impurity and overlap." },
-      note: "Your notes call the last visuospatial CE subtest Spatial Span; the reader calls it Spatial Recall (the AWMA name). Check the article."
+      note: null
     },
     {
       id: "C2",
