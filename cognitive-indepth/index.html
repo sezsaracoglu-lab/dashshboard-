@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In-Depth Atlas · Cognitive Psychology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: an atlas. Left rail = themes, right = one question per screen: question → what it asks → picture → answer → one line to keep */
+:root{
+  --bg:#f5f6f2; --paper:#ffffff; --ink:#1f2a44; --muted:#5f6675; --line:#e2e4dc;
+  --gold:#b98a2e; --goldp:#f7efdc; --good:#2f7a52; --goodp:#e4f2e9; --bad:#b0473a; --badp:#f8e7e3; --neu:#6b7280; --neup:#eef0f2; --blue:#2f5d8a; --bluep:#e6eef7;
+  --serif:'Literata',Georgia,'Times New Roman',serif; --sans:'Figtree','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.app{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}
+.rail{position:sticky;top:0;height:100vh;overflow:auto;background:var(--paper);border-right:1px solid var(--line);padding:22px 14px;display:flex;flex-direction:column;gap:10px}
+.brand{font-family:var(--serif);font-size:1.5rem;font-weight:700;line-height:1.1}
+.brand small{display:block;font-family:var(--sans);font-size:.82rem;color:var(--gold);font-weight:600;margin-top:4px}
+.th{border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:8px 12px;text-align:left;font-weight:600;font-size:.92rem}
+.th span{display:block;font-weight:400;font-size:.78rem;color:var(--muted)}
+.th.on{background:var(--ink);color:#fff;border-color:var(--ink)} .th.on span{color:#d8dbe6}
+.railfoot{margin-top:auto;font-size:.8rem;color:var(--muted)}
+.bar{height:7px;background:var(--goldp);border-radius:99px;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;background:var(--gold);width:0}
+main{padding:26px 34px 70px;max-width:1080px}
+.eyebrow{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+h1{font-family:var(--serif);font-size:2.2rem;line-height:1.12;text-wrap:balance}
+h2{font-family:var(--serif);font-size:1.7rem;line-height:1.15;text-wrap:balance}
+.intro{color:var(--muted);max-width:52em;margin-top:6px}
+.reads{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.reads span{font-size:.8rem;background:var(--neup);border-radius:99px;padding:3px 10px;color:var(--muted)}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 6px}
+.pill{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:4px 10px;font-size:.82rem;font-weight:600}
+.pill.cur{border-color:var(--ink);background:var(--ink);color:#fff}
+.pill.done{border-color:var(--good);color:var(--good)}
+.pill.cur.done{color:#fff}
+.q{margin-top:16px;display:flex;flex-direction:column;gap:16px}
+.qhead .blk{font-size:.82rem;color:var(--muted)}
+.canvas{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:0 14px 14px 0;padding:14px 18px;font-style:italic}
+.canvas b.l{display:block;font-style:normal;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.asks{background:var(--bluep);border-radius:14px;padding:12px 16px}
+.asks b.l{color:var(--blue)}
+.vis{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px}
+.vtitle{font-family:var(--serif);font-weight:700;font-size:1.15rem;margin-bottom:12px}
+.answer{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px 22px;display:flex;flex-direction:column;gap:10px;max-width:50em}
+.answer p{font-size:1.02rem}
+.answer p:first-child{font-size:1.08rem}
+.answer b{color:var(--ink)}
+.keep{background:var(--goldp);border-radius:14px;padding:12px 16px;font-family:var(--serif);font-size:1.12rem}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--paper);border-radius:99px;padding:6px 14px;font-size:.88rem;font-weight:600}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cbody{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:.96rem}
+.cbody[hidden]{display:none}
+.tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.tri div{border-radius:12px;padding:10px 12px;background:var(--neup)}
+.tri b{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.no{color:var(--bad)} .yes{color:var(--good)}
+.nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.btn{border:1px solid var(--ink);background:var(--ink);color:#fff;border-radius:10px;padding:9px 16px;font-weight:600}
+.btn.ghost{background:var(--paper);color:var(--ink)}
+.got{margin-left:auto;border:1px solid var(--gold);background:var(--paper);color:var(--gold);border-radius:10px;padding:9px 14px;font-weight:700}
+.got.on{background:var(--good);border-color:var(--good);color:#fff}
+/* visuals */
+.vs{display:grid;gap:12px}
+.vcol{border-radius:14px;padding:12px 14px;border:1px solid var(--line);border-top:5px solid var(--neu);background:var(--neup)}
+.vcol.good{border-top-color:var(--good);background:var(--goodp)} .vcol.bad{border-top-color:var(--bad);background:var(--badp)} .vcol.accent{border-top-color:var(--gold);background:var(--goldp)}
+.vcol h4{font-size:1.05rem}
+.vcol .sub{font-size:.85rem;color:var(--muted)}
+.vcol ul{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:5px}
+.vcol li{font-size:.92rem;padding-left:18px;position:relative}
+.vcol li::before{content:"";position:absolute;left:2px;top:.6em;width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.45}
+.verdict{margin-top:12px;text-align:center;font-weight:700;background:var(--ink);color:#fff;border-radius:12px;padding:8px 12px}
+.flow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+.step{flex:1 1 140px;min-width:0;background:var(--bluep);border-radius:12px;padding:10px 12px;position:relative}
+.step .n{font-size:.72rem;font-weight:700;color:var(--blue);letter-spacing:.08em}
+.step h4{font-size:.98rem;line-height:1.25;margin-top:2px}
+.step p{font-size:.86rem;color:var(--muted);margin-top:3px}
+.arr{flex:0 0 26px;display:grid;place-items:center;color:var(--gold);font-size:1.4rem;font-weight:700}
+.bars{display:flex;flex-direction:column;gap:14px}
+.bgrp h5{font-size:.88rem;margin-bottom:6px}
+.brow{display:grid;grid-template-columns:minmax(90px,170px) minmax(0,1fr);gap:10px;align-items:center;margin:4px 0}
+.brow .bl{font-size:.85rem;color:var(--muted);text-align:right}
+.btrack{background:var(--neup);border-radius:8px;height:26px;position:relative}
+.bfill{height:100%;border-radius:8px;background:var(--neu);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-weight:700;font-size:.82rem;min-width:max-content;transition:width .6s}
+.bfill.good{background:var(--good)} .bfill.bad{background:var(--bad)} .bfill.accent{background:var(--gold)}
+.bnote{font-size:.8rem;color:var(--muted);margin-top:8px}
+.gridwrap{overflow-x:auto}
+table.g{border-collapse:collapse;width:100%;font-size:.92rem}
+table.g th{background:var(--ink);color:#fff;text-align:left;padding:8px 10px;font-weight:600}
+table.g td{border-top:1px solid var(--line);padding:8px 10px;vertical-align:top}
+table.g td:first-child{font-weight:700;background:var(--neup)}
+td.cy{background:var(--goodp);color:var(--good);font-weight:700} td.cn{background:var(--badp);color:var(--bad);font-weight:700}
+.map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:center}
+.mcenter{grid-column:2;grid-row:2;background:var(--ink);color:#fff;border-radius:50%;aspect-ratio:1;max-width:180px;width:100%;margin:auto;display:grid;place-items:center;text-align:center;padding:18px;font-family:var(--serif);font-weight:700;font-size:1rem;line-height:1.25}
+.mb{background:var(--goldp);border-radius:14px;padding:10px 12px;border:1px solid #ead9b0}
+.mb h4{font-size:.95rem;line-height:1.25}.mb p{font-size:.85rem;color:var(--muted)}
+.scale{padding:46px 10px 46px}
+.strack{height:10px;border-radius:99px;background:linear-gradient(90deg,var(--bluep),var(--goldp));position:relative}
+.spt{position:absolute;top:50%;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;background:var(--ink);border:3px solid var(--paper)}
+.slab{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:.84rem;font-weight:700;text-align:center}
+.slab small{display:block;font-weight:400;color:var(--muted)}
+.ends{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);margin-top:30px}
+@media (max-width:860px){
+  .app{grid-template-columns:minmax(0,1fr)}
+  .rail{position:static;height:auto;flex-direction:row;flex-wrap:wrap;padding:12px 16px}
+  .brand{width:100%}.railfoot{display:none}
+  .th{flex:1 1 30%;font-size:.82rem;padding:6px 8px}
+  main{padding:18px 16px 60px}
+  h1{font-size:1.7rem} h2{font-size:1.35rem}
+  .tri{grid-template-columns:minmax(0,1fr)}
+  .map{grid-template-columns:minmax(0,1fr)}
+  .mcenter{grid-column:auto;grid-row:auto;aspect-ratio:auto;border-radius:14px;max-width:none}
+  .arr{flex-basis:100%;transform:rotate(90deg);height:22px}
+  .flow{flex-direction:column}
+  .brow{grid-template-columns:minmax(0,1fr)}.brow .bl{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="rail">
+  <div class="brand">In-Depth Atlas<small>Cognitive Psychology · Canvas in-depth questions</small></div>
+  <div id="themes" style="display:contents"></div>
+  <div class="railfoot"><span id="ptxt"></span><div class="bar"><i id="pbar"></i></div><div style="margin-top:8px">Every answer is built from your study notes and readings.</div></div>
+</aside>
+<main id="main"></main>
+</div>
+<script>window.IDQ={};</script>
+<script src="data/t1.js"></script><script src="data/t2.js"></script><script src="data/t3.js"></script><script src="data/t4.js"></script>
+<script src="data/t5.js"></script><script src="data/t6.js"></script><script src="data/t7.js"></script><script src="data/t8.js"></script>
+<script>
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let done=store.get('ida_done',{});
+let T=1,I=0;
+const h=location.hash.match(/^#t([1-8])(?:-(\d+))?/);if(h){T=+h[1];I=h[2]?+h[2]-1:0}
+const esc=s=>String(s==null?'':s);
+function themes(){document.getElementById('themes').innerHTML=Object.values(IDQ).sort((a,b)=>a.n-b.n).map(t=>{const d=t.questions.filter(q=>done[t.n+':'+q.id]).length;
+ return `<button class="th ${t.n===T?'on':''}" data-t="${t.n}">Theme ${t.n} · ${esc(t.title)}<span>${d}/${t.questions.length} understood</span></button>`}).join('');
+ document.querySelectorAll('.th').forEach(b=>b.onclick=()=>{T=+b.dataset.t;I=0;render();scrollTo(0,0)});
+ const all=Object.values(IDQ).reduce((s,t)=>s+t.questions.length,0),dn=Object.values(done).filter(Boolean).length;
+ document.getElementById('ptxt').textContent=`${dn} / ${all} questions understood`;document.getElementById('pbar').style.width=(100*dn/all)+'%'}
+// ---- visuals ----
+function V(v){if(!v)return'';const t=`<div class="vtitle">${esc(v.title)}</div>`;
+ if(v.type==='versus'){const n=(v.cols||[]).length;return t+`<div class="vs" style="grid-template-columns:repeat(auto-fit,minmax(${n>2?180:220}px,1fr))">${v.cols.map(c=>`<div class="vcol ${c.tone||'neutral'}"><h4>${esc(c.head)}</h4>${c.sub?`<div class="sub">${esc(c.sub)}</div>`:''}<ul>${(c.points||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`).join('')}</div>`+(v.verdict?`<div class="verdict">${esc(v.verdict)}</div>`:'')}
+ if(v.type==='flow'){return t+`<div class="flow">${v.steps.map((s,i)=>(i?'<div class="arr" aria-hidden="true">→</div>':'')+`<div class="step"><div class="n">STEP ${i+1}</div><h4>${esc(s.h)}</h4>${s.t?`<p>${esc(s.t)}</p>`:''}</div>`).join('')}</div>`+(v.verdict?`<div class="verdict">${esc(v.verdict)}</div>`:'')}
+ if(v.type==='bars'){const max=v.max||Math.max(...v.groups.flatMap(g=>g.bars.map(b=>b.value)))*1.1;
+  return t+`<div class="bars">${v.groups.map(g=>`<div class="bgrp">${g.label?`<h5>${esc(g.label)}</h5>`:''}${g.bars.map(b=>`<div class="brow"><div class="bl">${esc(b.label)}</div><div class="btrack"><div class="bfill ${b.tone||'neutral'}" style="width:${Math.max(4,100*b.value/max)}%">${v.unit==='r'?'r = '+b.value:b.value+esc(v.unit||'')}</div></div></div>`).join('')}</div>`).join('')}</div>`+(v.note?`<div class="bnote">${esc(v.note)}</div>`:'')}
+ if(v.type==='grid'){const cell=c=>{const s=String(c).trim().toLowerCase();return s.startsWith('yes')?`<td class="cy">${esc(c)}</td>`:s.startsWith('no')?`<td class="cn">${esc(c)}</td>`:`<td>${esc(c)}</td>`};
+  return t+`<div class="gridwrap"><table class="g"><tr><th></th>${v.cols.map(c=>`<th>${esc(c)}</th>`).join('')}</tr>${v.rows.map(r=>`<tr><td>${esc(r.head)}</td>${r.cells.map(cell).join('')}</tr>`).join('')}</table></div>`}
+ if(v.type==='map'){const pos=[[1,1],[3,1],[1,3],[3,3],[2,1],[2,3],[1,2],[3,2]];const br=v.branches.slice(0,8);
+  return t+`<div class="map"><div class="mcenter">${esc(v.center)}</div>${br.map((b,i)=>`<div class="mb" style="grid-column:${pos[i][0]};grid-row:${pos[i][1]}"><h4>${esc(b.h)}</h4>${b.t?`<p>${esc(b.t)}</p>`:''}</div>`).join('')}</div>`}
+ if(v.type==='scale'){return t+`<div class="scale"><div class="strack">${v.points.map((p,i)=>`<div class="spt" style="left:${p.pos}%"><div class="slab" style="${i%2?'top:24px':'bottom:24px'}">${esc(p.label)}${p.note?`<small>${esc(p.note)}</small>`:''}</div></div>`).join('')}</div><div class="ends"><span>← ${esc(v.left)}</span><span>${esc(v.right)} →</span></div></div>`}
+ return ''}
+function render(){const th=IDQ[T];const qs=th.questions;I=Math.max(0,Math.min(I,qs.length-1));const q=qs[I];const key=T+':'+q.id;
+ history.replaceState(null,'','#t'+T+'-'+(I+1));
+ const chips=[['Triage',`<div class="tri"><div><b>Symptom</b>${esc(q.triage.symptom)}</div><div><b>Diagnosis</b>${esc(q.triage.diagnosis)}</div><div><b>Treatment</b>${esc(q.triage.treatment)}</div></div>`]];
+ if(q.trap)chips.push(['The trap',`<p class="no"><b>✗</b> ${esc(q.trap.wrong)}</p><p class="yes" style="margin-top:6px"><b>✓</b> ${esc(q.trap.right)}</p>`]);
+ if(q.note)chips.push(['Source note',`<p>${esc(q.note)}</p>`]);
+ document.getElementById('main').innerHTML=`<div class="eyebrow">Theme ${th.n}</div><h1>${esc(th.title)}</h1><p class="intro">${esc(th.intro)}</p>
+ <div class="reads">${(th.readings||[]).map(r=>`<span>${esc(r)}</span>`).join('')}</div>
+ <div class="pills">${qs.map((x,i)=>`<button class="pill ${i===I?'cur':''} ${done[T+':'+x.id]?'done':''}" data-i="${i}" title="${esc(x.title)}">${esc(x.id)}</button>`).join('')}</div>
+ <article class="q">
+  <div class="qhead"><div class="blk">${esc(q.block)} · question ${I+1} of ${qs.length}</div><h2>${esc(q.id)} · ${esc(q.title)}</h2></div>
+  <div class="canvas"><b class="l">The Canvas question</b>${esc(q.canvas)}</div>
+  <div class="asks"><b class="l eyebrow" style="color:var(--blue)">What it is really asking</b><div>${esc(q.asks)}</div></div>
+  <div class="vis">${V(q.visual)}</div>
+  <div class="answer"><div class="eyebrow">The answer</div>${q.answer.map(p=>`<p>${p}</p>`).join('')}</div>
+  <div class="keep">${esc(q.takeaway)}</div>
+  <div class="chips">${chips.map((c,i)=>`<button class="chip" data-c="${i}">${c[0]}</button>`).join('')}</div>
+  ${chips.map((c,i)=>`<div class="cbody" id="cb${i}" hidden>${c[1]}</div>`).join('')}
+  <div class="nav"><button class="btn ghost" id="prev">← Previous</button><button class="btn" id="next">Next →</button><button class="got ${done[key]?'on':''}" id="got">${done[key]?'✓ Understood':'I understand this'}</button></div>
+ </article>`;
+ document.querySelectorAll('.pill').forEach(p=>p.onclick=()=>{I=+p.dataset.i;render()});
+ document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{const b=document.getElementById('cb'+c.dataset.c);b.hidden=!b.hidden;c.classList.toggle('on',!b.hidden)});
+ document.getElementById('prev').onclick=()=>{if(I>0)I--;else if(T>1){T--;I=IDQ[T].questions.length-1}render();scrollTo(0,0)};
+ document.getElementById('next').onclick=()=>{if(I<qs.length-1)I++;else if(T<8){T++;I=0}render();scrollTo(0,0)};
+ document.getElementById('got').onclick=()=>{done[key]=!done[key];store.set('ida_done',done);render()};
+ themes()}
+window.addEventListener('hashchange',()=>{const m=location.hash.match(/^#t([1-8])(?:-(\d+))?/);if(m&&(+m[1]!==T||(m[2]&&+m[2]-1!==I))){T=+m[1];I=m[2]?+m[2]-1:0;render()}});
+render();
+</script>
+</body>
+</html>
