@@ -125,20 +125,20 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;border-top:1p
 <script>
 // ---- edit these links ----
 const LINKS = {
-  linkedin: "",          // e.g. https://www.linkedin.com/in/your-name/
-  youtubeChannel: ""     // e.g. https://www.youtube.com/@yourchannel
+  linkedin: "https://www.linkedin.com/in/sezensaracoglu/",
+  youtubeChannel: "https://www.youtube.com/channel/UCuodXXLCLvv-jOeXJpF7V8Q"
 };
 const ARTICLES = [
   // { title: "Article title", blurb: "One line about it", url: "https://www.linkedin.com/pulse/..." , tag: "Leadership" }
 ];
 const VIDEOS = [
-  ["T1A","The Intuition Gap: inattentional blindness"],["T1B","Finding the Bottleneck: selective attention"],
-  ["T2A","The Atkinson-Shiffrin Specs: short-term memory"],["T2B","Architecting the Mind’s Workspace: working memory"],["T2C","Isolating the Variance: the sketchpad and maths"],
-  ["T4A","Beyond the Classical Mind: how we categorize"],["T4A","Algorithms of the Mind: prototypes vs exemplars"],
-  ["T5A","The Architecture of Mentalese: analog vs propositional"],["T5D","Blinding the Mind’s Eye: the bizarreness effect"],
-  ["T6AB","Bounded Rationality and cognitive illusions"],["T6C","The Rationality Wars: biases vs heuristics"],
-  ["T7","Deep dive: problem solving and creativity"],["T7A","Navigating the Problem Space: heuristics and analogy"],["T7C","The Dual-Task Dissection: creativity and inhibition"],
-  ["T8","Deep dive: large language models in psychology"],["T8A","From Stochastic Parrot to Psychometric Instrument"],["T8B","Insight Engine: when to use an LLM"]];
+  ["T1A","How Selective Attention Tricks Your Mind: inattentional blindness"],["T1B","The Cocktail Party Problem: how selective attention works"],
+  ["T2A","The Atkinson-Shiffrin Model: short-term memory"],["T2B","Architecting the Mind’s Workspace: working memory"],["T2C","Visuospatial Sketchpad and maths: what the science says"],
+  ["T4A","How Your Brain Categorizes Everything: prototype vs exemplar"],["T4A","Why Is a Penguin a “Bad” Bird? How categories are built"],["T4B","One Word Leads to Another: how your mind connects ideas"],["T4C","What a Four-Legged Duck Reveals About Your Memory"],
+  ["T5D","Blinding the Mind’s Eye: do bizarre images boost memory?"],
+  ["T6AB","Bounded Rationality and Cognitive Illusions"],["T6C","The Architecture of Cognitive Illusion: heuristics, framing and stress"],
+  ["T7A","You Know the Answer… So Why Can’t You Solve It?"],["T7C","Can Your Brain’s Brakes Make You More Creative?"],
+  ["T8A","Using Large Language Models in Psychology"],["T8B","Does AI Help or Hurt Critical Thinking?"]];
 // ---------------------------
 document.getElementById('vlist').innerHTML = VIDEOS.map(([c,t])=>`<div class="vrow"><b>${c}</b><span>${t}</span></div>`).join('');
 const posts = document.getElementById('posts');
