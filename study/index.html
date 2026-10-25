@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sezen’s Psychology Study Hub · Year 2</title>
+<meta name="description" content="Psychology Year 2 course notes, study guides, statistics exercises and exam preparation.">
+<style>
+:root{color-scheme:light;--cream:#faf6ee;--header:#eee7db;--border:#e4daca;--ink:#24211d;--muted:#716b62;--orange:#a3542b}*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font-family:Arial,sans-serif;font-size:16px;line-height:1.6}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}a{color:var(--orange)}.hub{max-width:1040px;margin:48px auto;background:var(--cream);border:1px solid var(--border);border-radius:12px;overflow:hidden}.header{padding:22px 32px;background:var(--header);border-bottom:1px solid var(--border)}.brand{font-size:17px;margin:0}.courses{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.courses button{padding:9px 14px;border:1px solid transparent;border-radius:7px;background:transparent;color:var(--ink)}.courses button[aria-pressed="true"]{background:#fff;border-color:var(--border)}main{padding:32px}h1{font-size:28px;line-height:1.3;font-weight:600;margin:0 0 16px}h2{font-size:22px;font-weight:500;margin:0 0 16px}.hint{color:var(--muted);margin:0 0 24px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.tile{padding:26px;background:#fff;border:1px solid var(--border);border-radius:13px}.tile h2{margin-bottom:20px}.open{background:var(--orange);color:#fff;border:0;border-radius:8px;padding:11px 18px}.open:hover{background:#884221}.back{border:0;background:transparent;color:var(--orange);padding:0;margin:0 0 22px}.resources{list-style:none;padding:0;margin:0;background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden}.resources li+li{border-top:1px solid var(--border)}.resources a{display:flex;justify-content:space-between;gap:16px;padding:18px 22px;text-decoration:none;overflow-wrap:anywhere}.resources a:hover{background:#f6efe5}.resources a span:last-child{flex-shrink:0}.footer{padding:16px 32px;border-top:1px solid var(--border);font-size:14px;color:var(--muted)}.footer a{text-decoration:none}button:focus-visible,a:focus-visible{outline:3px solid #a3542b;outline-offset:4px}[hidden]{display:none!important}@media(max-width:640px){.hub{margin:16px;border-radius:10px}.header,main{padding:22px}.grid{grid-template-columns:1fr}.tile{padding:22px}h1{font-size:25px}.courses{gap:4px}.courses button{padding:9px 10px}.footer{padding:16px 22px}}@media(prefers-reduced-motion:no-preference){button,a{transition:background .15s ease}}
+</style>
+</head>
+<body>
+<div class="hub">
+<header class="header"><p class="brand">Sezen’s Psychology Study Hub · Year 2</p><nav class="courses" aria-label="Courses"></nav></header>
+<main id="main"><section id="overview"><h1 id="course-title">Loading your study links…</h1><p class="hint">Psychology · Year 2</p><div class="grid" id="tiles"></div></section><section id="detail" hidden><button type="button" class="back" id="back">← All themes</button><h1 id="detail-title"></h1><p class="hint" id="detail-course"></p><ul class="resources" id="resources"></ul></section><noscript>Please enable JavaScript to browse the course cards. All original links are also available in the repository README.</noscript></main>
+<footer class="footer"><a href="https://sezsaracoglu-lab.github.io/NID_NL/" target="_blank" rel="noopener noreferrer">NID ↗</a></footer>
+</div>
+<script>
+// Edit README.md in psychology_year_2 to update this dashboard.
+const README_URL='https://raw.githubusercontent.com/sezsaracoglu-lab/psychology_year_2/main/README.md';
+const SOURCE_URL='https://github.com/sezsaracoglu-lab/psychology_year_2/blob/main/README.md';
+const base='https://sezsaracoglu-lab.github.io/';
+const data={};
+const overview=document.getElementById('overview'),detail=document.getElementById('detail'),tiles=document.getElementById('tiles');
+let active='';
+function parseReadme(markdown){
+  const courses=[],extras=[];
+  let course=null,group=null,inCode=false;
+  for(const raw of markdown.split(/\r?\n/)){
+    const line=raw.trim();
+    if(/^```|^~~~/.test(line)){inCode=!inCode;continue}
+    if(inCode)continue;
+    const heading=line.match(/^##\s+(.+?)(?:\s+#+)?$/);
+    if(heading){
+      const title=heading[1].trim();
+      if(/^courses$/i.test(title)){course=null;group=null;continue}
+      course={title,hint:'Choose a theme or collection',groups:[]};courses.push(course);group=null;continue;
+    }
+    const section=line.match(/^\*\*(.+?)\*\*\s*$/)||line.match(/^###\s+(.+?)(?:\s+#+)?$/);
+    if(section&&course){group={title:section[1].trim(),links:[]};course.groups.push(group);continue}
+    const linkPattern=/(?<!!)\[([^\]]+)\]\(\s*(https?:\/\/[^\s)]+)\s*\)/g;
+    for(const match of line.matchAll(linkPattern)){
+      const label=match[1].trim(),url=match[2];
+      if(!label)continue;
+      if(course){if(!group){group={title:'Study materials',links:[]};course.groups.push(group)}group.links.push([label,url])}
+      else extras.push([label,url]);
+    }
+  }
+  for(const course of courses)course.groups=course.groups.filter(g=>g.links.length);
+  return {courses:courses.filter(c=>c.groups.length),extras};
+}
+function showCourse(key,focus=false){
+  active=key;
+  document.querySelectorAll('[data-course]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.course===key)));
+  document.getElementById('course-title').textContent=data[key].title;
+  overview.querySelector('.hint').textContent=data[key].hint;
+  tiles.replaceChildren();
+  data[key].groups.forEach((group,index)=>{
+    const tile=document.createElement('article');tile.className='tile';
+    const title=document.createElement('h2');title.textContent=group.title;
+    const button=document.createElement('button');button.type='button';button.className='open';
+    button.textContent=/^theme\b/i.test(group.title)?'Open theme →':'Open collection →';
+    button.setAttribute('aria-label','Open '+group.title);button.addEventListener('click',()=>showGroup(index));
+    tile.append(title,button);tiles.append(tile);
+  });
+  detail.hidden=true;overview.hidden=false;
+  if(focus)document.querySelector('[data-course="'+key+'"]').focus();
+}
+function showGroup(index){
+  const group=data[active].groups[index];
+  document.getElementById('detail-title').textContent=group.title;
+  document.getElementById('detail-course').textContent=data[active].title;
+  document.getElementById('back').textContent='← All collections';
+  const list=document.getElementById('resources');list.replaceChildren();
+  group.links.forEach(([label,url])=>{
+    const li=document.createElement('li'),a=document.createElement('a'),text=document.createElement('span'),arrow=document.createElement('span');
+    a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',label+' (opens in a new tab)');
+    text.textContent=label;arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');a.append(text,arrow);li.append(a);list.append(li);
+  });
+  overview.hidden=true;detail.hidden=false;document.getElementById('back').focus();
+}
+function renderReadme(parsed){
+  if(!parsed.courses.length)throw new Error('No course links found');
+  const nav=document.querySelector('.courses');nav.replaceChildren();
+  parsed.courses.forEach((course,index)=>{
+    const key='course'+index;data[key]=course;
+    const button=document.createElement('button');button.type='button';button.dataset.course=key;button.textContent=course.title;
+    button.setAttribute('aria-pressed','false');button.addEventListener('click',()=>showCourse(key));nav.append(button);
+  });
+  const footer=document.querySelector('.footer');footer.replaceChildren();
+  for(const [label,url] of parsed.extras){const a=document.createElement('a');a.href=url;a.textContent=label+' ↗';a.target='_blank';a.rel='noopener noreferrer';footer.append(a,document.createTextNode('   '))}
+  const edit=document.createElement('a');edit.href=SOURCE_URL;edit.textContent='Edit study links in README ↗';edit.target='_blank';edit.rel='noopener noreferrer';footer.append(edit);
+  showCourse('course0');
+}
+document.getElementById('back').addEventListener('click',()=>showCourse(active,true));
+async function loadReadme(){
+  try{
+    const response=await fetch(README_URL+'?t='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(15000)});
+    if(!response.ok)throw new Error('README unavailable');
+    renderReadme(parseReadme(await response.text()));
+  }catch(error){
+    document.getElementById('course-title').textContent='Study links could not load';
+    overview.querySelector('.hint').textContent='Refresh to try again. The source README must be public and contain course headings and links.';
+    const a=document.createElement('a');a.href=SOURCE_URL;a.textContent='Open the original README →';tiles.replaceChildren(a);
+  }
+}
+loadReadme();
+
+</script>
+</body>
+</html>
