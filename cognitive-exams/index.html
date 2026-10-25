@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Practice Exams · Cognitive Psychology</title>
+<meta name="description" content="Practice exam sets for Cognitive Psychology with instant explanations, a score and a list of topics to study again.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--paper:#fff;--ink:#1d2433;--muted:#5d6472;--line:#e4e0d6;--sage:#4f7a5a;--sagep:#e8f1ea;--clay:#a8553d;--clayp:#f8e9e3;--navy:#2b3a5c;--navyp:#e7ebf3;--gold:#b8923a;--goldp:#fbf3df;
+--serif:'Fraunces',Georgia,serif;--sans:'Instrument Sans','Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 max(16px,4vw)}
+header.top{border-bottom:1px solid var(--line);background:rgba(247,245,240,.94);position:sticky;top:0;z-index:5;backdrop-filter:blur(6px)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;height:58px}
+.mark{font-family:var(--serif);font-weight:600;text-decoration:none;font-size:1.1rem}
+.menu{display:flex;gap:16px;font-size:.9rem}.menu a{text-decoration:none;color:var(--muted)}
+.head{padding:36px 0 18px}
+.eyebrow{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.08;margin:8px 0 10px}
+.head p{color:var(--muted);max-width:40em}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 22px}
+.tab{font:inherit;font-size:.92rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;color:var(--ink)}
+.tab[aria-selected=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.tab.soon{color:var(--muted);border-style:dashed;cursor:default}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.15;margin-bottom:6px}
+.intro p{color:var(--muted)}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.pill{font-size:.85rem;padding:5px 12px;border-radius:999px;background:var(--navyp);color:var(--navy);font-weight:600}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{font:inherit;font-weight:600;font-size:.95rem;padding:10px 18px;border-radius:999px;border:1.5px solid var(--ink);background:var(--paper);cursor:pointer;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn.solid{background:var(--ink);color:#fff}
+.btn:disabled{opacity:.35;cursor:default}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0 4px}
+.bar i{display:block;height:100%;background:var(--sage);border-radius:99px;transition:width .3s}
+.qhead{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:.88rem;color:var(--muted);margin-top:4px}
+.qtext{font-size:1.12rem;margin:16px 0 14px;line-height:1.55}
+.qimg{display:block;max-width:min(100%,520px);margin:6px auto 16px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:8px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{font:inherit;text-align:left;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:start;padding:12px 14px;border-radius:14px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;color:var(--ink);line-height:1.45}
+.opt:hover:not(:disabled){border-color:var(--navy)}
+.opt b{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--navyp);color:var(--navy);font-size:.9rem}
+.opt:disabled{cursor:default}
+.opt.right{border-color:var(--sage);background:var(--sagep)}.opt.right b{background:var(--sage);color:#fff}
+.opt.wrong{border-color:var(--clay);background:var(--clayp)}.opt.wrong b{background:var(--clay);color:#fff}
+.fb{margin-top:16px;border-radius:14px;padding:16px 18px;border-left:6px solid var(--sage);background:var(--sagep)}
+.fb.bad{border-left-color:var(--clay);background:var(--clayp)}
+.fb h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin-bottom:6px}
+.fb p{margin-top:6px}
+.fb .spot{font-size:.93rem;color:var(--navy)}
+.fb .tp{font-size:.88rem;margin-top:10px;color:var(--muted)}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}
+.dots{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.dot{width:30px;height:30px;border-radius:8px;border:1.5px solid var(--line);background:var(--paper);font:600 .75rem var(--sans);color:var(--muted);cursor:pointer}
+.dot.ok{background:var(--sage);border-color:var(--sage);color:#fff}.dot.no{background:var(--clay);border-color:var(--clay);color:#fff}
+.dot.cur{outline:2.5px solid var(--gold);outline-offset:1px}
+.res h2{font-family:var(--serif);font-weight:500;font-size:1.7rem}
+.score{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin:14px 0 6px}
+.ring{width:130px;height:130px;flex:none}
+.score .big{font-family:var(--serif);font-size:2.6rem;line-height:1}
+.score p{color:var(--muted)}
+.tt{width:100%;border-collapse:collapse;margin-top:10px;font-size:.92rem}
+.tt th{text-align:left;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:6px 4px;border-bottom:1px solid var(--line)}
+.tt td{padding:8px 4px;border-bottom:1px solid var(--line);vertical-align:middle}
+.mini{height:8px;background:var(--line);border-radius:99px;overflow:hidden;width:100%;min-width:60px}
+.mini i{display:block;height:100%}
+.study{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.st{border:1px solid var(--line);border-left:6px solid var(--clay);border-radius:12px;padding:12px 14px;background:var(--paper)}
+.st h4{font-size:1rem}
+.st .w{font-size:.85rem;color:var(--muted)}
+.st .l{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.st .l a{font-size:.85rem;font-weight:600;color:var(--navy);background:var(--navyp);padding:4px 10px;border-radius:999px;text-decoration:none}
+.qlinks{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.qlinks button{font:600 .75rem var(--sans);border:1px solid var(--clay);color:var(--clay);background:#fff;border-radius:6px;padding:2px 7px;cursor:pointer}
+.note{font-size:.85rem;color:var(--muted);margin-top:14px}
+footer{color:var(--muted);font-size:.85rem;padding:30px 0 40px}
+@media (max-width:560px){.card{padding:16px}.qtext{font-size:1.04rem}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="mark" href="../">Sezen Saracoglu</a>
+<nav class="menu"><a href="../study/">Study hub</a><a href="../cognitive-indepth/">In-depth</a><a href="../cognitive-lectures/">Lectures</a></nav></div></header>
+<main class="wrap">
+  <div class="head"><div class="eyebrow">Cognitive Psychology</div><h1>Practice exams</h1>
+  <p>Answer a question and you see straight away whether you were right, how to recognise the question, and why. At the end you get your score and the topics to study again, with links to your notes.</p></div>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <section id="view"></section>
+</main>
+<footer class="wrap">Your answers are saved in this browser, so you can stop and continue later.</footer>
+
+<script src="sets/topics.js"></script>
+<script src="sets/set1.js"></script>
+<script src="sets/set2.js"></script>
+<script>
+const L = "abcd";
+const $ = (s) => document.querySelector(s);
+let cur = null;   // {exam, order:[qIdx...], i, retry}
+// deterministic option shuffle for reconstructed sets
+function rng(seed){let x=seed%2147483647;if(x<=0)x+=2147483646;return()=>(x=x*16807%2147483647)/2147483647}
+EXAMS.forEach(e=>{ if(!e.shuffle) return; e.questions.forEach((q,qi)=>{ const r=rng(1000+qi*7+e.id.length); const idx=[0,1,2,3];
+  for(let k=3;k>0;k--){const j=Math.floor(r()*(k+1));[idx[k],idx[j]]=[idx[j],idx[k]];}
+  q.o=idx.map(i=>q.o[i]); q.a=idx.indexOf(q.a); }); });
+
+const key = (id) => "cogexam_" + id;
+function load(id){ try { return JSON.parse(localStorage.getItem(key(id))) || {ans:{}}; } catch(e){ return {ans:{}}; } }
+function save(id, st){ try { localStorage.setItem(key(id), JSON.stringify(st)); } catch(e){} }
+
+function tabs(active){
+  $("#tabs").innerHTML = EXAMS.map(e=>`<button class="tab" role="tab" aria-selected="${e.id===active}" data-id="${e.id}">${e.title}</button>`).join("")
+    + `<span class="tab soon" aria-disabled="true">More sets coming</span>`;
+  document.querySelectorAll(".tab[data-id]").forEach(b=>b.onclick=()=>{location.hash=b.dataset.id});
+}
+function exam(id){ return EXAMS.find(e=>e.id===id) || EXAMS[0]; }
+
+function intro(e){
+  const st = load(e.id); const n=e.questions.length; const done=Object.keys(st.ans).length;
+  const right=Object.entries(st.ans).filter(([i,c])=>e.questions[i].a===c).length;
+  $("#view").innerHTML = `<div class="card intro"><h2>${e.title}</h2><p>${e.blurb}</p>
+    <div class="stats"><span class="pill">${n} questions</span><span class="pill">${done} answered</span>${done?`<span class="pill">${right} correct</span>`:""}</div>
+    <div class="bar"><i style="width:${done/n*100}%"></i></div>
+    <div class="btns"><button class="btn solid" id="go">${done&&done<n?"Continue":done===n?"See my results":"Start"}</button>
+    ${done?`<button class="btn" id="reset">Start again</button>`:""}</div></div>`;
+  $("#go").onclick=()=>{ if(done===n) results(e); else quiz(e, null); };
+  if(done) $("#reset").onclick=()=>{ save(e.id,{ans:{}}); intro(e); };
+}
+
+function quiz(e, only){
+  const st = load(e.id);
+  const order = only || e.questions.map((_,i)=>i);
+  const ans = only ? {} : st.ans;
+  let i = only ? 0 : Math.max(0, order.findIndex(k=>ans[k]===undefined));
+  cur = {e, order, ans, retry: !!only};
+  render(i);
+}
+
+function render(i){
+  const {e, order, ans, retry} = cur; cur.i=i;
+  const k = order[i], q = e.questions[k], chosen = ans[k];
+  const answered = chosen !== undefined, okCount = order.filter(x=>ans[x]!==undefined && ans[x]===e.questions[x].a).length;
+  const nDone = order.filter(x=>ans[x]!==undefined).length, T = TOPICS[q.t];
+  $("#view").innerHTML = `<div class="card">
+    <div class="qhead"><span>${retry?"Retry · ":""}Question ${i+1} of ${order.length}${retry?` (original ${k+1})`:""}</span><span>${okCount} correct · ${nDone} answered</span></div>
+    <div class="bar"><i style="width:${nDone/order.length*100}%"></i></div>
+    <div class="qtext">${q.q}</div>
+    ${q.img?`<img class="qimg" src="${q.img}" alt="Figure for question ${k+1}">`:""}
+    <div class="opts">${q.o.map((o,j)=>{ let c=""; if(answered){ if(j===q.a) c="right"; else if(j===chosen) c="wrong"; }
+      return `<button class="opt ${c}" data-j="${j}" ${answered?"disabled":""}><b>${L[j]}</b><span>${o}</span></button>`; }).join("")}</div>
+    ${answered?`<div class="fb ${chosen===q.a?"":"bad"}"><h3>${chosen===q.a?"Correct!":`Not quite. The answer is ${L[q.a]}.`}</h3>
+      ${q.spot?`<p class="spot"><b>How to recognise it:</b> ${q.spot}</p>`:""}<p>${q.why}</p>
+      <p class="tp">Topic: <b>${T.name}</b> · ${T.where} · ${T.links.map(([t,u])=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`).join(" · ")}</p></div>`:""}
+    <div class="nav"><button class="btn" id="prev" ${i===0?"disabled":""}>← Previous</button>
+      <span style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="fin">Finish and see results</button>
+      <button class="btn solid" id="next">${i===order.length-1?"Results":"Next →"}</button></span></div>
+    <div class="dots">${order.map((x,j)=>{ const a=ans[x]; const c=a===undefined?"":(a===e.questions[x].a?"ok":"no");
+      return `<button class="dot ${c} ${j===i?"cur":""}" data-j="${j}" aria-label="Question ${j+1}">${j+1}</button>`; }).join("")}</div></div>`;
+  document.querySelectorAll(".opt:not(:disabled)").forEach(b=>b.onclick=()=>{ ans[k]=+b.dataset.j; if(!retry) save(e.id,{ans}); render(i); });
+  $("#prev").onclick=()=>render(i-1);
+  $("#next").onclick=()=> i===order.length-1 ? results(e) : render(i+1);
+  $("#fin").onclick=()=>results(e);
+  document.querySelectorAll(".dot").forEach(d=>d.onclick=()=>render(+d.dataset.j));
+  window.scrollTo({top: document.querySelector("#tabs").offsetTop - 70, behavior: "instant" in window ? "instant" : "auto"});
+}
+
+function results(e){
+  const retry = cur && cur.e===e && cur.retry;
+  const order = retry ? cur.order : e.questions.map((_,i)=>i);
+  const ans = retry ? cur.ans : load(e.id).ans;
+  const done = order.filter(k=>ans[k]!==undefined), right = done.filter(k=>ans[k]===e.questions[k].a);
+  const pct = done.length ? Math.round(right.length/done.length*100) : 0;
+  const per = {};
+  done.forEach(k=>{ const t=e.questions[k].t; per[t]=per[t]||{n:0,ok:0,miss:[]}; per[t].n++; if(ans[k]===e.questions[k].a) per[t].ok++; else per[t].miss.push(k); });
+  const weak = Object.entries(per).filter(([t,v])=>v.miss.length).sort((a,b)=>b[1].miss.length-a[1].miss.length || a[1].ok/a[1].n-b[1].ok/b[1].n);
+  const msg = pct>=80?"Excellent: you are exam-ready on these topics.":pct>=65?"Good: a pass with room to spare. Polish the topics below.":pct>=55?"Close to a pass. Focus on the topics below first.":"Not there yet, and that is fine: this list tells you exactly where to start.";
+  const C = 2*Math.PI*52, col = pct>=65?"#4f7a5a":pct>=55?"#b8923a":"#a8553d";
+  const wrongAll = done.filter(k=>ans[k]!==e.questions[k].a);
+  $("#view").innerHTML = `<div class="card res"><div class="eyebrow">${retry?"Retry results":"Your results"}</div><h2>${e.title}</h2>
+    <div class="score"><svg class="ring" viewBox="0 0 130 130"><circle cx="65" cy="65" r="52" fill="none" stroke="#e4e0d6" stroke-width="14"/>
+      <circle cx="65" cy="65" r="52" fill="none" stroke="${col}" stroke-width="14" stroke-linecap="round" stroke-dasharray="${C*pct/100} ${C}" transform="rotate(-90 65 65)"/>
+      <text x="65" y="74" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="30" fill="#1d2433">${pct}%</text></svg>
+      <div><div class="big">${right.length} / ${done.length}</div><p>correct${done.length<order.length?` (${order.length-done.length} not answered yet)`:""}</p><p style="margin-top:6px;color:var(--ink)">${msg}</p></div></div>
+    ${weak.length?`<h3 style="font-family:var(--serif);font-weight:600;margin-top:18px">Study these topics again</h3>
+    <div class="study">${weak.map(([t,v])=>{ const T=TOPICS[t]; return `<div class="st"><h4>${T.name}</h4><div class="w">${T.where} · ${v.miss.length} wrong of ${v.n}</div>
+      <div class="qlinks">${v.miss.map(k=>`<button data-k="${k}">Q${k+1}</button>`).join("")}</div>
+      <div class="l">${T.links.map(([n,u])=>`<a href="${u}" target="_blank" rel="noopener">${n} ↗</a>`).join("")}</div></div>`;}).join("")}</div>`
+    :`<p style="margin-top:16px">No wrong answers. Nothing to restudy here.</p>`}
+    <h3 style="font-family:var(--serif);font-weight:600;margin-top:22px">Score per topic</h3>
+    <table class="tt"><tr><th>Topic</th><th>Correct</th><th style="width:30%"></th></tr>
+    ${Object.entries(per).sort((a,b)=>a[1].ok/a[1].n-b[1].ok/b[1].n).map(([t,v])=>{ const p=v.ok/v.n*100; return `<tr><td>${TOPICS[t].name}</td><td>${v.ok}/${v.n}</td><td><div class="mini"><i style="width:${p}%;background:${p>=65?"#4f7a5a":p>=50?"#b8923a":"#a8553d"}"></i></div></td></tr>`;}).join("")}</table>
+    <div class="btns">${wrongAll.length?`<button class="btn solid" id="retry">Retry my ${wrongAll.length} wrong answers</button>`:""}
+      <button class="btn" id="review">Review all questions</button><button class="btn" id="again">Start the whole set again</button></div>
+    ${e.id==="set2"?`<p class="note">Set 2 is reconstructed from students' memories of the 2025 exam, so the real wording may differ.</p>`:""}</div>`;
+  document.querySelectorAll(".qlinks button").forEach(b=>b.onclick=()=>{ const k=+b.dataset.k; cur={e,order,ans,retry}; render(order.indexOf(k)); });
+  if(wrongAll.length) $("#retry").onclick=()=>quiz(e, wrongAll);
+  $("#review").onclick=()=>{ cur={e,order,ans,retry}; render(0); };
+  $("#again").onclick=()=>{ save(e.id,{ans:{}}); quiz(e,null); };
+}
+
+function route(){ const id=(location.hash||"").slice(1); const e=exam(id); tabs(e.id); cur=null; intro(e); }
+window.addEventListener("hashchange", route); route();
+</script>
+</body>
+</html>
