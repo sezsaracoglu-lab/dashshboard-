@@ -40,7 +40,7 @@ h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5.5vw,2.9rem);l
 .bar i{display:block;height:100%;background:var(--sage);border-radius:99px;transition:width .3s}
 .qhead{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:.88rem;color:var(--muted);margin-top:4px}
 .qtext{font-size:1.12rem;margin:16px 0 14px;line-height:1.55}
-.qimg{display:block;max-width:min(100%,520px);margin:6px auto 16px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:8px}
+.qimg{display:block;max-width:min(100%,720px);margin:6px auto 16px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:8px}
 .opts{display:flex;flex-direction:column;gap:10px}
 .opt{font:inherit;text-align:left;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:start;padding:12px 14px;border-radius:14px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;color:var(--ink);line-height:1.45}
 .opt:hover:not(:disabled){border-color:var(--navy)}
@@ -96,6 +96,7 @@ footer{color:var(--muted);font-size:.85rem;padding:30px 0 40px}
 <script src="sets/topics.js"></script>
 <script src="sets/set1.js"></script>
 <script src="sets/set2.js"></script>
+<script src="sets/set3.js"></script>
 <script>
 const L = "abcd";
 const $ = (s) => document.querySelector(s);
@@ -152,7 +153,7 @@ function render(i){
       return `<button class="opt ${c}" data-j="${j}" ${answered?"disabled":""}><b>${L[j]}</b><span>${o}</span></button>`; }).join("")}</div>
     ${answered?`<div class="fb ${chosen===q.a?"":"bad"}"><h3>${chosen===q.a?"Correct!":`Not quite. The answer is ${L[q.a]}.`}</h3>
       ${q.spot?`<p class="spot"><b>How to recognise it:</b> ${q.spot}</p>`:""}<p>${q.why}</p>
-      <p class="tp">Topic: <b>${T.name}</b> · ${T.where} · ${T.links.map(([t,u])=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`).join(" · ")}</p></div>`:""}
+      <p class="tp">${q.s?`Skill: <b>${SKILLS[q.s]}</b> · `:""}Topic: <b>${T.name}</b> · ${T.where} · ${T.links.map(([t,u])=>`<a href="${u}" target="_blank" rel="noopener">${t}</a>`).join(" · ")}</p></div>`:""}
     <div class="nav"><button class="btn" id="prev" ${i===0?"disabled":""}>← Previous</button>
       <span style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="fin">Finish and see results</button>
       <button class="btn solid" id="next">${i===order.length-1?"Results":"Next →"}</button></span></div>
@@ -191,6 +192,10 @@ function results(e){
     <h3 style="font-family:var(--serif);font-weight:600;margin-top:22px">Score per topic</h3>
     <table class="tt"><tr><th>Topic</th><th>Correct</th><th style="width:30%"></th></tr>
     ${Object.entries(per).sort((a,b)=>a[1].ok/a[1].n-b[1].ok/b[1].n).map(([t,v])=>{ const p=v.ok/v.n*100; return `<tr><td>${TOPICS[t].name}</td><td>${v.ok}/${v.n}</td><td><div class="mini"><i style="width:${p}%;background:${p>=65?"#4f7a5a":p>=50?"#b8923a":"#a8553d"}"></i></div></td></tr>`;}).join("")}</table>
+    ${(()=>{ const sk={}; done.forEach(k=>{ const q=e.questions[k]; if(!q.s) return; sk[q.s]=sk[q.s]||{n:0,ok:0}; sk[q.s].n++; if(ans[k]===q.a) sk[q.s].ok++; });
+      const ks=Object.keys(SKILLS).filter(x=>sk[x]); if(!ks.length) return "";
+      return `<h3 style="font-family:var(--serif);font-weight:600;margin-top:22px">Score per exam skill</h3><table class="tt"><tr><th>Skill</th><th>Correct</th><th style="width:30%"></th></tr>`+
+        ks.map(x=>{ const v=sk[x], p=v.ok/v.n*100; return `<tr><td>${SKILLS[x]}</td><td>${v.ok}/${v.n}</td><td><div class="mini"><i style="width:${p}%;background:${p>=65?"#4f7a5a":p>=50?"#b8923a":"#a8553d"}"></i></div></td></tr>`; }).join("")+`</table>`; })()}
     <div class="btns">${wrongAll.length?`<button class="btn solid" id="retry">Retry my ${wrongAll.length} wrong answers</button>`:""}
       <button class="btn" id="review">Review all questions</button><button class="btn" id="again">Start the whole set again</button></div>
     ${e.id==="set2"?`<p class="note">Set 2 is reconstructed from students' memories of the 2025 exam, so the real wording may differ.</p>`:""}</div>`;
