@@ -41,6 +41,11 @@ h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5.5vw,2.9rem);l
 .qhead{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:.88rem;color:var(--muted);margin-top:4px}
 .qtext{font-size:1.12rem;margin:16px 0 14px;line-height:1.55}
 .qimg{display:block;max-width:min(100%,720px);margin:6px auto 16px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:8px}
+.qt{border-collapse:collapse;margin:8px auto 14px;font-size:.92rem;background:#fff;min-width:60%}
+.qt th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left;font-weight:600}
+.qt td{padding:8px 12px;border-bottom:1px solid var(--line)}
+.qchart{display:block;width:100%;max-width:720px;margin:6px auto 14px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.tablewrap{overflow-x:auto}
 .opts{display:flex;flex-direction:column;gap:10px}
 .opt{font:inherit;text-align:left;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:start;padding:12px 14px;border-radius:14px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;color:var(--ink);line-height:1.45}
 .opt:hover:not(:disabled){border-color:var(--navy)}
@@ -97,16 +102,39 @@ footer{color:var(--muted);font-size:.85rem;padding:30px 0 40px}
 <script src="sets/set1.js"></script>
 <script src="sets/set2.js"></script>
 <script src="sets/set3.js"></script>
+<script src="sets/set4.js"></script>
+<script src="sets/set5.js"></script>
+<script src="sets/set6.js"></script>
 <script>
 const L = "abcd";
 const $ = (s) => document.querySelector(s);
 let cur = null;   // {exam, order:[qIdx...], i, retry}
 // deterministic option shuffle for reconstructed sets
-function rng(seed){let x=seed%2147483647;if(x<=0)x+=2147483646;return()=>(x=x*16807%2147483647)/2147483647}
-EXAMS.forEach(e=>{ if(!e.shuffle) return; e.questions.forEach((q,qi)=>{ const r=rng(1000+qi*7+e.id.length); const idx=[0,1,2,3];
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+EXAMS.forEach(e=>{ if(!e.shuffle) return; e.questions.forEach((q,qi)=>{ const r=rng(1000+qi*7+[...e.id].reduce((a,c)=>a*31+c.charCodeAt(0),7)%9973); const idx=[0,1,2,3];
   for(let k=3;k>0;k--){const j=Math.floor(r()*(k+1));[idx[k],idx[j]]=[idx[j],idx[k]];}
   q.o=idx.map(i=>q.o[i]); q.a=idx.indexOf(q.a); }); });
 
+
+// ---- simple chart renderer: {type:"bar"|"line", title, x:[...], y:"axis label", series:[{name, v:[...]}], note, min, max}
+function chartSVG(c){
+  const W=720,H=380,L=70,R=20,T=c.title?44:20,Bm=c.series.length>1?84:62, cols=["#2b3a5c","#b8923a","#a8553d","#4f7a5a","#8a8f99"];
+  const all=c.series.flatMap(s=>s.v); let mn=c.min!==undefined?c.min:Math.min(0,...all), mx=c.max!==undefined?c.max:Math.max(...all)*1.12;
+  const y=v=>T+(H-T-Bm)*(1-(v-mn)/(mx-mn)), n=c.x.length, pw=(W-L-R)/n;
+  let o=`<svg class="qchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${c.title||"chart"}">`;
+  if(c.title) o+=`<text x="${W/2}" y="26" text-anchor="middle" font-size="15" font-weight="600" fill="#1d2433">${c.title}</text>`;
+  for(let k=0;k<=4;k++){const v=mn+(mx-mn)*k/4, yy=y(v); o+=`<line x1="${L}" x2="${W-R}" y1="${yy}" y2="${yy}" stroke="#eee8da"/><text x="${L-8}" y="${yy+4}" text-anchor="end" font-size="11" fill="#5d6472">${+v.toFixed(2)}</text>`;}
+  o+=`<line x1="${L}" x2="${L}" y1="${T}" y2="${H-Bm}" stroke="#1d2433"/><line x1="${L}" x2="${W-R}" y1="${y(Math.max(mn,0))}" y2="${y(Math.max(mn,0))}" stroke="#1d2433"/>`;
+  if(c.y) o+=`<text transform="translate(16 ${(T+H-Bm)/2}) rotate(-90)" text-anchor="middle" font-size="12" fill="#1d2433">${c.y}</text>`;
+  c.x.forEach((lab,i)=>{o+=`<text x="${L+pw*(i+.5)}" y="${H-Bm+18}" text-anchor="middle" font-size="12" fill="#1d2433">${lab}</text>`;});
+  if(c.type==="line"){ c.series.forEach((s,si)=>{const pts=s.v.map((v,i)=>`${L+pw*(i+.5)},${y(v)}`).join(" ");
+      o+=`<polyline points="${pts}" fill="none" stroke="${cols[si]}" stroke-width="3"/>`+s.v.map((v,i)=>`<circle cx="${L+pw*(i+.5)}" cy="${y(v)}" r="4.5" fill="${cols[si]}"/>`).join(""); }); }
+  else { const bw=Math.min(46,pw*0.8/c.series.length); c.series.forEach((s,si)=>s.v.forEach((v,i)=>{ const x=L+pw*(i+.5)-bw*c.series.length/2+si*bw, y0=y(Math.max(mn,0));
+      o+=`<rect x="${x+2}" y="${Math.min(y(v),y0)}" width="${bw-4}" height="${Math.abs(y0-y(v))}" fill="${cols[si]}" rx="3"/>`; if(c.labels!==false) o+=`<text x="${x+bw/2}" y="${y(v)-5}" text-anchor="middle" font-size="11" fill="${cols[si]}" font-weight="600">${v}</text>`; })); }
+  if(c.series.length>1){ let lx=L; c.series.forEach((s,si)=>{o+=`<rect x="${lx}" y="${H-38}" width="12" height="12" fill="${cols[si]}" rx="2"/><text x="${lx+18}" y="${H-28}" font-size="12" fill="#1d2433">${s.name}</text>`; lx+=30+s.name.length*7;}); }
+  if(c.note) o+=`<text x="${W/2}" y="${H-8}" text-anchor="middle" font-size="11" font-style="italic" fill="#5d6472">${c.note}</text>`;
+  return o+`</svg>`;
+}
 const key = (id) => "cogexam_" + id;
 function load(id){ try { return JSON.parse(localStorage.getItem(key(id))) || {ans:{}}; } catch(e){ return {ans:{}}; } }
 function save(id, st){ try { localStorage.setItem(key(id), JSON.stringify(st)); } catch(e){} }
@@ -147,8 +175,8 @@ function render(i){
   $("#view").innerHTML = `<div class="card">
     <div class="qhead"><span>${retry?"Retry · ":""}Question ${i+1} of ${order.length}${retry?` (original ${k+1})`:""}</span><span>${okCount} correct · ${nDone} answered</span></div>
     <div class="bar"><i style="width:${nDone/order.length*100}%"></i></div>
-    <div class="qtext">${q.q}</div>
-    ${q.img?`<img class="qimg" src="${q.img}" alt="Figure for question ${k+1}">`:""}
+    <div class="qtext tablewrap">${q.q}</div>
+    ${q.img?`<img class="qimg" src="${q.img}" alt="Figure for question ${k+1}">`:""}${q.chart?chartSVG(q.chart):""}
     <div class="opts">${q.o.map((o,j)=>{ let c=""; if(answered){ if(j===q.a) c="right"; else if(j===chosen) c="wrong"; }
       return `<button class="opt ${c}" data-j="${j}" ${answered?"disabled":""}><b>${L[j]}</b><span>${o}</span></button>`; }).join("")}</div>
     ${answered?`<div class="fb ${chosen===q.a?"":"bad"}"><h3>${chosen===q.a?"Correct!":`Not quite. The answer is ${L[q.a]}.`}</h3>
