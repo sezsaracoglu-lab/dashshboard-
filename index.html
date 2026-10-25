@@ -51,7 +51,11 @@ h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4vw,2.5rem);l
 .vrow{display:grid;grid-template-columns:70px minmax(0,1fr);gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.92rem}
 .vrow b{font-weight:600;color:var(--sage);font-variant-numeric:tabular-nums}
 .writing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.post{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;text-decoration:none;display:flex;flex-direction:column;gap:8px;transition:border-color .2s}
+.post{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:border-color .2s}
+.post .pim{position:relative;overflow:hidden;aspect-ratio:16/10;background:linear-gradient(135deg,var(--navyp),var(--sagep));display:grid;place-items:center;font-family:var(--serif);color:var(--navy)}
+.post .pim img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.post .pt{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.post .pd{font-size:.8rem;color:var(--muted);margin-top:auto}
 .post:hover{border-color:var(--clay)}
 .post .k{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);font-weight:600}
 .post h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;line-height:1.25}
@@ -100,7 +104,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;border-top:1p
 </section>
 
 <section class="block" id="writing">
-  <div class="shead"><div><div class="eyebrow">LinkedIn</div><h2>Writing</h2><p>Articles on people, leadership, learning and psychology.</p></div><a class="btn" id="libtn" href="#" target="_blank" rel="noopener" hidden>Follow on LinkedIn ↗</a></div>
+  <div class="shead"><div><div class="eyebrow">LinkedIn</div><h2>Writing</h2><p>Articles on leadership edges, team and board dynamics, and where people and technology meet. First published on LinkedIn.</p></div><div class="cta"><a class="btn solid" href="writing/">All 11 articles →</a><a class="btn" id="libtn" href="#" target="_blank" rel="noopener" hidden>Follow on LinkedIn ↗</a></div></div>
   <div class="writing" id="posts"></div>
 </section>
 
@@ -129,7 +133,17 @@ const LINKS = {
   youtubeChannel: "https://www.youtube.com/channel/UCuodXXLCLvv-jOeXJpF7V8Q"
 };
 const ARTICLES = [
-  // { title: "Article title", blurb: "One line about it", url: "https://www.linkedin.com/pulse/..." , tag: "Leadership" }
+  {"title": "The line inside every leader", "blurb": "Skill is almost never the obstacle. Arnold Mindell's idea of the edge, and why it sharpens every talent conversation.", "url": "writing/the-line-inside-every-leader.html", "tag": "Leadership development", "date": "September 2026", "img": "writing/img/post0_0.jpg"},
+  {"title": "The Founding Myth: do we still remember why we are here?", "blurb": "Teams rarely lose momentum because of strategy. They lose it because they forget why they came together.", "url": "writing/the-founding-myth.html", "tag": "Team systems", "date": "August 2026", "img": "writing/img/post1_0.jpg"},
+  {"title": "Where the role outgrows the self-image", "blurb": "One quiet sentence from a senior executive, and what it says about the edge at the top of an organisation.", "url": "writing/where-the-role-outgrows-the-self-image.html", "tag": "Leadership development", "date": "August 2026", "img": "writing/img/post2_0.jpg"},
+  {"title": "The voice no chart assigns", "blurb": "Why decisions agreed in the room are quietly abandoned once everyone leaves it.", "url": "writing/the-voice-no-chart-assigns.html", "tag": "Team systems", "date": "June 2026", "img": "writing/img/post3_0.jpg"},
+  {"title": "The double edge: when one person grows, the whole team is moved", "blurb": "When one person outgrows the team's unspoken “we”, everyone else arrives at an edge they did not choose.", "url": "writing/the-double-edge.html", "tag": "Team systems", "date": "May 2026", "img": "writing/img/post4_0.jpg"},
+  {"title": "The room always knows more than it says", "blurb": "Leadership rooms are read by who speaks loudest, not by what is quietly being held back.", "url": "writing/the-room-always-knows-more.html", "tag": "Leadership", "date": "February 2026", "img": "writing/img/post5_0.jpg"},
+  {"title": "Agency begins where observation ends", "blurb": "Capable, committed teams can still leave decisions suspended. Agency is what moves them.", "url": "writing/agency-begins-where-observation-ends.html", "tag": "Leadership", "date": "February 2026", "img": "writing/img/post6_0.jpg"},
+  {"title": "Holding the centre in a divided room", "blurb": "Choosing a side too early ends the conversation. Holding the tension turns it into data.", "url": "writing/holding-the-centre-in-a-divided-room.html", "tag": "Board governance", "date": "February 2026", "img": "writing/img/post7_0.jpg"},
+  {"title": "Five signs of a healthy team", "blurb": "A healthy team is not about how often people agree. It is about what happens when they don't.", "url": "writing/five-signs-of-a-healthy-team.html", "tag": "Team culture", "date": "June 2025", "img": "writing/img/post8_0.jpg"},
+  {"title": "AI replacing humans sounds great until the human impact hits", "blurb": "What Klarna's reversal on AI-driven staffing teaches anyone building where technology meets people.", "url": "writing/ai-replacing-humans.html", "tag": "People and technology", "date": "June 2025", "img": "writing/img/post9_0.jpg"},
+  {"title": "Where do your People and Tech strategies meet?", "blurb": "Moderna brought HR and Tech under one leadership team. Culture and code may be one system.", "url": "writing/where-people-and-tech-meet.html", "tag": "People and technology", "date": "May 2025", "img": ""}
 ];
 const VIDEOS = [
   ["T1A","How Selective Attention Tricks Your Mind: inattentional blindness"],["T1B","The Cocktail Party Problem: how selective attention works"],
@@ -142,8 +156,7 @@ const VIDEOS = [
 // ---------------------------
 document.getElementById('vlist').innerHTML = VIDEOS.map(([c,t])=>`<div class="vrow"><b>${c}</b><span>${t}</span></div>`).join('');
 const posts = document.getElementById('posts');
-posts.innerHTML = ARTICLES.length ? ARTICLES.map(a=>`<a class="post" href="${a.url}" target="_blank" rel="noopener"><span class="k">${a.tag||'Article'}</span><h3>${a.title}</h3><p>${a.blurb||''}</p></a>`).join('')
-  : `<div class="empty">Articles are on their way to this page. ${LINKS.linkedin?`Meanwhile, read them on <a href="${LINKS.linkedin}" target="_blank" rel="noopener">LinkedIn</a>.`:''}</div>`;
+posts.innerHTML = ARTICLES.slice(0,6).map(a=>`<a class="post" href="${a.url}"><div class="pim">${a.img?`<img src="${a.img}" alt="" loading="lazy">`:'People ⟷ Technology'}</div><div class="pt"><span class="k">${a.tag||'Article'}</span><h3>${a.title}</h3><p>${a.blurb||''}</p><span class="pd">${a.date||''}</span></div></a>`).join('');
 if (LINKS.linkedin){const b=document.getElementById('libtn');b.href=LINKS.linkedin;b.hidden=false;
   document.getElementById('contactbtns').insertAdjacentHTML('afterbegin',`<a class="btn solid" href="${LINKS.linkedin}" target="_blank" rel="noopener">LinkedIn ↗</a>`)}
 if (LINKS.youtubeChannel){document.getElementById('ytbtn').insertAdjacentHTML('afterend',` <a class="btn" href="${LINKS.youtubeChannel}" target="_blank" rel="noopener">Channel ↗</a>`)}
