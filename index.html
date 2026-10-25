@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sezen Saracoglu · People, Psychology, Coaching</title>
-<meta name="description" content="Sezen Saracoglu: senior HR and talent leader, psychology student at Erasmus University Rotterdam and systems coach in training. Videos, writing and study work.">
+<title>Sezen Saracoglu · People, Technology, Psychology</title>
+<meta name="description" content="Sezen Saracoglu: international HR leader, PCC coach and psychology student, passionate about where people, technology and psychology meet. Work, writing, videos and study tools.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -29,7 +29,30 @@ nav.menu a:hover{color:var(--ink)}
 .hero{padding-block:72px 48px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:48px;align-items:end}
 .eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:600}
 h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.04;letter-spacing:-.01em;margin-top:10px;text-wrap:balance}
-h1 em{font-style:italic;color:var(--sage)}
+h1 em{font-style:italic}
+h1 em.t{color:var(--clay)}h1 em.p{color:var(--sage)}h1 em{color:var(--navy)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:22px}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px}
+.stat b{display:block;font-family:var(--serif);font-weight:500;font-size:2.2rem;line-height:1;color:var(--navy)}
+.stat span{display:block;font-size:.88rem;color:var(--muted);margin-top:8px;line-height:1.4}
+.focus{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.fc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.fc.tech{background:var(--clayp);border-color:#ecd3c6}.fc.psy{background:var(--sagep);border-color:#d3e0d6}
+.fc .k{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);font-weight:600}
+.fc.psy .k{color:var(--sage)}
+.fc h3{font-family:var(--serif);font-weight:600;font-size:1.18rem;line-height:1.25}
+.fc p{font-size:.93rem;color:var(--muted)}
+.journey{margin-top:26px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}
+.journey h3{font-family:var(--serif);font-weight:600;font-size:1.2rem;margin-bottom:14px}
+.journey ol{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;counter-reset:j;position:relative}
+.journey li{counter-increment:j;display:flex;flex-direction:column;gap:4px;padding-top:30px;position:relative}
+.journey li::before{content:counter(j);position:absolute;top:0;left:0;width:24px;height:24px;border-radius:50%;background:var(--navyp);color:var(--navy);font-size:.8rem;font-weight:600;display:grid;place-items:center}
+.journey li:last-child::before{background:var(--navy);color:#fff}
+.journey li b{font-size:.92rem;line-height:1.25}.journey li span{font-size:.82rem;color:var(--muted);line-height:1.4}
+.journey .edu{margin-top:18px;padding-top:14px;border-top:1px dashed var(--line);font-size:.88rem;color:var(--muted)}
+.journey .edu b{color:var(--ink)}
+@media (max-width:820px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.journey ol{grid-template-columns:minmax(0,1fr);gap:14px}.journey li{padding:0 0 0 36px}}
+
 .lede{font-size:1.15rem;color:var(--muted);margin-top:18px;max-width:34em}
 .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
 .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:.95rem;border-radius:999px;padding:10px 18px;border:1.5px solid var(--ink)}
@@ -76,21 +99,51 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;border-top:1p
 <body>
 <header class="top"><div class="wrap">
   <a class="mark" href="#top">Sezen Saracoglu</a>
-  <nav class="menu"><a href="#videos">Videos</a><a href="#writing">Writing</a><a href="#study">Study hub</a><a href="#contact">Contact</a></nav>
+  <nav class="menu"><a href="#work">Work</a><a href="#videos">Videos</a><a href="#writing">Writing</a><a href="#study">Study hub</a><a href="#contact">Contact</a></nav>
 </div></header>
 
 <main class="wrap" id="top">
 <section class="hero">
   <div>
-    <div class="eyebrow">People · Psychology · Coaching</div>
-    <h1>Helping people and organisations <em>grow</em>, with psychology as the lens.</h1>
-    <p class="lede">I am a senior HR and talent leader working internationally across Europe and Japan, a psychology student at Erasmus University Rotterdam, and a systems coach in training (ORSC). Here I share what I learn: videos, writing and the study tools I build.</p>
-    <div class="cta"><a class="btn solid" href="#videos">Watch the videos</a><a class="btn" href="#writing">Read my writing</a></div>
+    <div class="eyebrow">Leading Human Systems · Psychology &amp; Leadership Insights</div>
+    <h1>Where <em>people</em>, <em class="t">technology</em> and <em class="p">psychology</em> meet.</h1>
+    <p class="lede">I am Sezen: an international HR leader with more than 20 years of experience across Europe and Japan, a PCC-certified coach, and a psychology student at Erasmus University Rotterdam. What drives me is one question: how do people and organisations grow when technology changes everything around them?</p>
+    <div class="cta"><a class="btn solid" href="#work">What I do</a><a class="btn" href="#writing">Read my writing</a><a class="btn" href="#videos">Watch the videos</a></div>
   </div>
   <div class="threads">
-    <div class="thread"><h3><span class="dot" style="background:var(--navy)"></span>People and talent</h3><p>International human capital development, talent and leadership programmes, diversity and inclusion, and recruitment for transformation.</p></div>
-    <div class="thread"><h3><span class="dot" style="background:var(--sage)"></span>Psychology</h3><p>International Bachelor in Psychology at Erasmus University Rotterdam: how people think, remember, decide and learn.</p></div>
-    <div class="thread"><h3><span class="dot" style="background:var(--clay)"></span>Coaching</h3><p>Organisation and Relationship Systems Coaching (ORSC): working with teams and relationships as systems.</p></div>
+    <div class="thread"><h3><span class="dot" style="background:var(--navy)"></span>People</h3><p>My life’s work. Two decades of helping leaders, talent and teams grow, as an HR leader, executive coach and systems coach.</p></div>
+    <div class="thread"><h3><span class="dot" style="background:var(--clay)"></span>Technology</h3><p>My passion. I love what AI and digital tools make possible, and I build with them myself: this website, my study tools and my video series included.</p></div>
+    <div class="thread"><h3><span class="dot" style="background:var(--sage)"></span>Psychology</h3><p>My lens. Understanding how people think, decide, remember and change, studied formally and applied every day.</p></div>
+  </div>
+</section>
+
+<section class="block" id="work">
+  <div class="shead"><div><div class="eyebrow">Work</div><h2>Building organisations where talent can thrive</h2><p>I partner with senior leaders to connect people, strategy and technology: from who leads, to how talent grows, to how a workforce gets ready for AI.</p></div></div>
+  <div class="stats">
+    <div class="stat"><b>20+</b><span>years in HR, leadership development and coaching</span></div>
+    <div class="stat"><b>9</b><span>countries advised across Europe and Japan</span></div>
+    <div class="stat"><b>10,000</b><span>employees once in my end-to-end HR care</span></div>
+    <div class="stat"><b>4,500+</b><span>hours facilitating leaders and teams</span></div>
+  </div>
+  <div class="focus">
+    <div class="fc tech"><span class="k">Technology and AI</span><h3>Leading people through technology change</h3><p>I designed a leadership programme with MIT for an executive team, on technology, AI, data and transformation leadership, which grew into a group-wide transformation. On the side, I prototyped an AI-enabled internal talent marketplace myself, because I wanted to see what was possible.</p></div>
+    <div class="fc"><span class="k">Leadership and succession</span><h3>The right leaders for what comes next</h3><p>I build leadership capability and succession for senior populations: 360-degree feedback, C-level assessment and succession frameworks, and skills-based selection for more than 100 roles in a transformation.</p></div>
+    <div class="fc"><span class="k">Talent and mobility</span><h3>Future-ready talent</h3><p>I designed an international skills and mobility programme that beat its mobility target and scored well above the market benchmark on learning agility. Talent grows when people can move.</p></div>
+    <div class="fc"><span class="k">Inclusion</span><h3>Diverse leadership, measured</h3><p>I mobilised a DEI maturity framework across nine businesses with country leaders and 25+ ambassadors. An external audit confirmed the step from level 2 to level 4.</p></div>
+    <div class="fc"><span class="k">Coaching</span><h3>Individuals, teams and systems</h3><p>Professional Certified Coach (PCC, ICF), trained at Erickson Coaching International, and qualifying in Organisation and Relationship Systems Coaching (ORSC) to work with teams as living systems.</p></div>
+    <div class="fc psy"><span class="k">Psychology</span><h3>Why I went back to study</h3><p>After 20 years of working with people, I wanted the science underneath. My psychology degree feeds straight back into my work, and I share what I learn openly through videos, writing and study tools.</p></div>
+  </div>
+  <div class="journey">
+    <h3>My path</h3>
+    <ol>
+      <li><b>Banking</b><span>Retail and private banking: customers, risk and decisions</span></li>
+      <li><b>HR business partner</b><span>Recruitment, talent and core HR</span></li>
+      <li><b>Learning and coaching</b><span>Trainer and executive coach: leadership and team programmes</span></li>
+      <li><b>Leadership consulting</b><span>Advising boards on leadership, succession and organisation</span></li>
+      <li><b>International retail</b><span>Senior HR lead for six global consumer brands in three markets</span></li>
+      <li><b>International financial services</b><span>Human capital development, transformation and inclusion across Europe and Japan</span></li>
+    </ol>
+    <p class="edu"><b>Education:</b> BSc Psychology, Erasmus University Rotterdam (in progress) · MSc Innovation and Entrepreneurship, Istanbul Technical University · BA Business Administration · PCC, International Coaching Federation · Diploma in The Art and Science of Coaching, Erickson Coaching International. <b>Languages:</b> English, Turkish, Dutch (developing).</p>
   </div>
 </section>
 
