@@ -31,9 +31,9 @@ IDQ[3] = {
         verdict: "The task is generative, but retrieval can take either route."
       },
       answer: [
-        "The answer is <b>both</b>. In the Galton-Crovitz technique (Crovitz & Schiffman, 1974) people get a word such as 'river' or 'frustrated', retrieve a personal memory linked to it, describe it briefly and date it. Many memories and dates together give the retention function.",
+        "The answer is <b>both</b>. In the Galton-Crovitz technique (Crovitz & Schiffman, 1974) people get a word such as 'river' or 'frustrated', retrieve a personal memory linked to it, describe it briefly and date it.",
         "Conway and Pleydell-Pearce (2000) describe two routes. <b>Generative retrieval</b> is a deliberate search guided by the working self: cue, then lifetime period, then general event, then event-specific knowledge, checking each candidate against the goal. <b>Direct retrieval</b> happens when the cue activates event-specific knowledge at once, so a memory comes to mind spontaneously.",
-        "Because people are told to find a memory, the task is set up as a search, so much of it is generative ('When did I feel frustrated? Maybe at university...'). But a cue can also call up a memory straight away. <b>Uzer, Lee and Brown (2012)</b> showed this with emotion words and thinking aloud: some memories came directly, others generatively, and direct retrieval was about three times faster with much less talking.",
+        "Because people are told to find a memory, the task is set up as a search, so much of it is generative ('When did I feel frustrated? Maybe at university...'). This search takes noticeable time, and researchers use that reaction time as evidence that a search is going on. But a cue, especially a highly personal one, can also call up a memory straight away. <b>Uzer, Lee and Brown (2012)</b> showed this with emotion words and thinking aloud: some memories came directly, others generatively, and direct retrieval was about three times faster with much less talking.",
         "Even a memory that pops up directly needs generative elaboration to be dated and described. And because the working self steers the search, the technique samples memories relevant to current goals, not a random sample of life."
       ],
       takeaway: "A generative task does not guarantee a generative process: cue words trigger both routes.",
@@ -90,7 +90,7 @@ IDQ[3] = {
         title: "The predicted route",
         steps: [
           { h: "Child's sex", t: "daughter or son" },
-          { h: "Parent's style", t: "elaborative vs pragmatic talk" },
+          { h: "Mother's style", t: "elaborative vs repetitive talk" },
           { h: "Elaboration ratio", t: "Jack et al. (2009)" },
           { h: "Earliest memory", t: "earlier with more elaboration" }
         ],
@@ -98,13 +98,13 @@ IDQ[3] = {
       },
       answer: [
         "I would expect <b>boys</b> to be more prominent in the <b>repetition group</b> (low elaboration relative to repetition).",
-        "Research on narrative style (Fivush, 1991; Reese & Fivush, 1993) shows that with daughters, parents tend to use an <b>elaborative style</b>: long, detailed conversations that add new information and ask open questions. With sons, they more often use a <b>pragmatic style</b>: short and with less detail. Children of elaborative parents give better accounts of past events, and Davis (1999) found female superiority in autobiographical recall.",
+        "Research on narrative style (Fivush, 1991; Reese & Fivush, 1993) shows that with daughters, parents tend to use an <b>elaborative style</b>: long, detailed conversations that add new information and ask open questions. With sons, they more often use a <b>repetitive</b> or pragmatic style: short, with the same simple questions repeated and little detail added. Children of elaborative parents give better accounts of past events, and Davis (1999) found female superiority in autobiographical recall. This partly explains why women, on average, report earlier and more detailed childhood memories than men.",
         "Jack et al. (2009) found that the higher the ratio of elaborations to repetitions in mothers' talk at age 2 to 4, the earlier the adolescents' first memories 10 years later. If mothers elaborate more with daughters, girls should be overrepresented in the elaboration group and boys in the repetition group.",
-        "Two caveats matter. This is an inference, because the readings do not report the sex split in Jack et al. And the cause is the <b>style of talk</b>, not the child's sex: a boy whose mother elaborates a lot should also have early memories."
+        "Two caveats matter. This is a prediction, because the sex split in Jack et al. is not reported. And the cause is the <b>style of talk</b>, not the child's sex: a boy whose mother elaborates a lot should also have early memories."
       ],
       takeaway: "How parents talk with a child, not the child's sex itself, shapes how early their memories reach back.",
       trap: { wrong: "Being a boy causes later first memories.", right: "Sex only predicts the parent's talk style; the style is the causal factor." },
-      note: "The prediction is own reasoning: the readings do not report the sex split in Jack et al. (2009)."
+      note: "The reader gives the same prediction, but neither the reader nor the readings report the actual sex split in Jack et al. (2009)."
     },
 
     {
@@ -123,15 +123,15 @@ IDQ[3] = {
         title: "One factor, two opposite effects",
         cols: ["Childhood amnesia", "Reminiscence bump"],
         rows: [
+          { head: "Self (clearest overlap)", cells: ["no cognitive self yet", "identity being formed"] },
           { head: "Brain", cells: ["immature hippocampus/PFC", "peak functioning"] },
-          { head: "Self", cells: ["no cognitive self yet", "identity being formed"] },
           { head: "Language / narrative", cells: ["language, memory talk developing", "life story, retelling"] },
           { head: "Culture", cells: ["offset differs (Wang, 2006)", "cultural life script"] }
         ]
       },
       answer: [
-        "Four factors appear in both explanations, but they work in <b>opposite directions</b>: missing in infancy, so few memories; at their peak in early adulthood, so many memories.",
-        "<b>Brain.</b> In childhood amnesia the hippocampus and prefrontal cortex are still immature (Nadel & Zola-Morgan, 1984); for the bump, the peak-functioning account says the brain encodes best in adolescence and early adulthood (Janssen & Murre, 2008). <b>Self.</b> Childhood amnesia ends when a cognitive self develops that organises experiences as happening to 'me' (Howe & Courage, 1997); the bump reflects identity formation, as events in these years define who we become (Erikson; Habermas & Bluck, 2000; Conway, 2005).",
+        "Four factors appear in both explanations, but they work in <b>opposite directions</b>: missing in infancy, so few memories; at their peak in early adulthood, so many memories. The clearest overlap is the <b>self</b>: both explanations hinge on whether a coherent self exists to anchor memories to.",
+        "<b>Self.</b> Childhood amnesia ends when a cognitive self develops that organises experiences as happening to 'me' (Howe & Courage, 1997); the bump reflects identity formation, as events in these years define who we become (Erikson; Habermas & Bluck, 2000; Conway, 2005). <b>Brain.</b> In childhood amnesia the hippocampus and prefrontal cortex are still immature (Nadel & Zola-Morgan, 1984); for the bump, the peak-functioning account says the brain encodes best in adolescence and early adulthood (Janssen & Murre, 2008).",
         "<b>Language and narrative.</b> Childhood amnesia is linked to language development and memory talk with parents (Nelson, 1993; Reese & Fivush, 1993); the bump is linked to retelling events as part of the life story and to the novelty of 'firsts'. <b>Culture.</b> The offset of childhood amnesia varies with culture (Wang, 2006), and the bump reflects the life script: expected events such as graduation and marriage cluster in early adulthood.",
         "So the same ingredients explain why early life is missing and why young adulthood is over-represented."
       ],
@@ -209,11 +209,11 @@ IDQ[3] = {
       block: "Block B · Amnesia",
       title: "Spotting anterograde amnesia in the clip",
       canvas: "Watch the video clip. Which symptoms qualify this man as suffering from anterograde amnesia?",
-      asks: "Use the definition of anterograde amnesia as a checklist: show that he cannot form new lasting episodic memories after a brain injury, and that other abilities are spared.",
+      asks: "Use the definition of anterograde amnesia as a checklist: point to what in the clip shows he cannot form new lasting memories after a brain injury, and what shows that other abilities are spared.",
       triage: {
         symptom: "A video plus 'which symptoms qualify...?'",
         diagnosis: "The definition of anterograde amnesia used as a checklist.",
-        treatment: "Tick what is lost (new episodes after the injury) and what is spared (working memory, semantic memory, skills, intelligence)."
+        treatment: "Name the brain cause, tick what is lost (new episodes: diary, greeting his wife) and what is spared (short-term memory, music, emotion)."
       },
       visual: {
         type: "grid",
@@ -222,19 +222,18 @@ IDQ[3] = {
         rows: [
           { head: "Forms new episodic memories", cells: ["no"] },
           { head: "Short-term memory, conversation", cells: ["yes"] },
-          { head: "Language, knowledge, intelligence", cells: ["yes"] },
-          { head: "Older pre-injury memories", cells: ["yes"] },
-          { head: "Learning skills (implicit)", cells: ["yes"] }
+          { head: "Playing and conducting music", cells: ["yes"] },
+          { head: "Emotional bond with his wife", cells: ["yes"] }
         ]
       },
       answer: [
-        "He qualifies because he shows a severe, <b>selective loss of new explicit memory</b> after brain damage, while short-term memory, intelligence and implicit learning are spared. Anterograde amnesia is a problem with new information after damage, typically to the hippocampus and medial temporal structures (Baddeley et al.).",
-        "The lost side: he <b>forgets new events and people within minutes</b>, repeats questions and stories because he does not remember asking them, cannot say what happened earlier that day and may be disoriented about date or place. The problem began after a clear brain event (e.g., surgery, encephalitis, oxygen loss, Korsakoff's syndrome), so memory fails from that point forward.",
-        "The spared side: his <b>short-term memory</b> is intact, so he can hold a normal conversation. His knowledge, language and intelligence are intact, and he can often talk about life before the injury, especially older memories (Ribot's law). Skills can still be learned, like HM improving at mirror drawing without remembering practising.",
-        "It is this contrast, new episodes lost but everything needed to use memory in the moment still present, that marks anterograde amnesia rather than general confusion or dementia."
+        "He qualifies because he <b>cannot store new information in long-term memory</b> after brain damage, often to the hippocampus (for example from herpes encephalitis), while other abilities are spared. The classic amnesic syndrome is severely impaired episodic memory with intact working memory, semantic memory, implicit memory and intelligence (Baddeley et al.).",
+        "The lost side is striking in the clip. He feels as though he has <b>just regained consciousness every few seconds</b>. He keeps a diary full of crossed-out entries saying 'finally awake now', with no memory of writing the earlier ones. And he greets his wife with the same joyful surprise every time, even if she only stepped out briefly.",
+        "The spared side matters just as much. His <b>short-term memory</b> lets him follow a conversation in the moment. His <b>implicit memory</b> is intact: procedural memory, because he can still play and conduct music, and emotional memory, because he clearly still loves his wife.",
+        "It is this contrast, new episodes lost but skills, feelings and memory in the moment still present, that marks anterograde amnesia rather than general confusion or dementia."
       ],
-      takeaway: "The 'record' button is broken, but the live microphone and the old tapes still work.",
-      trap: { wrong: "Listing only 'he forgets things'.", right: "The diagnosis also needs the spared abilities and the brain cause." },
+      takeaway: "The 'record' button is broken, but the live microphone and his musical hands still work.",
+      trap: { wrong: "Listing only 'he forgets things'.", right: "The diagnosis also needs the spared abilities (music, emotion, short-term memory) and the brain cause." },
       note: null
     },
 
@@ -304,27 +303,27 @@ IDQ[3] = {
       block: "Block B · Amnesia",
       title: "Remembering and knowing: where before?",
       canvas: "In developmental amnesia, ‘remembering’ and ‘knowing’ are discussed. We encountered both notions in the readings for Problem 3A. In which context?",
-      asks: "Show you understand the remember/know distinction and how it was used with Jon, then name where Problem 3A used the same judgements: in the study of childhood amnesia.",
+      asks: "Show you understand the remember/know distinction and how it was used with Jon, then name where Problem 3A used the same idea: Tulving's episodic versus semantic memory, and remember/know judgements in the study of childhood amnesia.",
       triage: {
         symptom: "Two terms plus 'where in Problem 3A?'",
-        diagnosis: "Remember/know: Jon (3B) and childhood amnesia (3A).",
-        treatment: "Define both, say how Jon used them, then name Multhaup et al. (2005) in 3A."
+        diagnosis: "Remember/know = episodic versus semantic (Tulving); used for Jon (3B) and childhood amnesia (3A).",
+        treatment: "Define both via Tulving, say how Jon used them, then name Multhaup et al. (2005) in 3A."
       },
       visual: {
         type: "grid",
         title: "Remember/know in two readings",
         cols: ["Remember (re-live)", "Know (familiar)"],
         rows: [
+          { head: "Tulving (3A)", cells: ["episodic, autonoetic", "semantic, noetic"] },
           { head: "Jon (3B)", cells: ["lacks recollection signature", "preserved"] },
           { head: "Earliest childhood (3A)", cells: ["mostly absent", "mostly 'known'"] },
           { head: "After ~4.7 years (3A)", cells: ["rises with age", "present"] }
         ]
       },
       answer: [
-        "In Problem 3A, remembering and knowing appeared in the context of <b>childhood amnesia</b>. <b>Remembering</b> is re-experiencing an episode, mentally travelling back in time; <b>knowing</b> is recognising that something happened without re-living it.",
-        "In developmental amnesia, Jon (hippocampal damage at birth) had poor recall but near-normal recognition. He used 'remember' and 'know' about as often as controls, but his 'remember' responses lacked the brain signature of recollection (Düzel et al., 2001). This fits the idea that recollection depends on the hippocampus and familiarity on the perirhinal cortex (Aggleton & Brown, 1999).",
-        "In 3A, <b>Multhaup, Johnson and Tetrick (2005)</b> asked adults to judge early childhood memories as truly remembered or only known, for example from family stories or photos. Memories from the earliest years were mostly 'known'; the share of 'remembered' memories rose with age, with childhood amnesia waning at about 4.7 years.",
-        "Problem 3A also linked the two notions to autobiographical memory versus autobiographical fact: a memory is re-experienced, a fact is simply known, and repeated episodes can turn from one into the other. Both readings use remember/know to separate re-living from knowing about the past."
+        "In Problem 3A, the two notions matched <b>Tulving's distinction</b> between episodic and semantic memory, and they were used to study <b>childhood amnesia</b>. <b>Remembering</b> is episodic and autonoetic: re-experiencing an event, mentally travelling back in time. <b>Knowing</b> is semantic and noetic: knowing that something happened, without re-living it.",
+        "In 3A, <b>Multhaup, Johnson and Tetrick (2005)</b> asked adults to judge early childhood memories as truly remembered or only known, for example from family stories or photos. Memories from the earliest years were mostly 'known'; the share of 'remembered' memories rose with age, with childhood amnesia waning at about 4.7 years. The same split separates an autobiographical memory (re-lived) from an autobiographical fact (known).",
+        "In developmental amnesia, Jon (hippocampal damage at birth) still built up semantic knowledge, but his episodic memory was severely impaired. He used 'remember' and 'know' about as often as controls, but his 'remember' responses lacked the brain signature of recollection (Düzel et al., 2001). This fits the idea that recollection depends on the hippocampus and familiarity on the perirhinal cortex (Aggleton & Brown, 1999)."
       ],
       takeaway: "Re-living needs a system that is not yet working in early childhood and no longer fully working in Jon.",
       trap: { wrong: "Familiarity depends on the hippocampus.", right: "Recollection depends on the hippocampus; familiarity on the perirhinal cortex." },
@@ -336,30 +335,31 @@ IDQ[3] = {
       block: "Block B · Amnesia",
       title: "How testing hides what patients recall",
       canvas: "People with memory problems undergo a variety of tests during neuropsychological screening. How might this lead to an underestimate of the recall abilities of anterograde amnesiacs?",
-      asks: "Link testing practice to consolidation and interference: the tests given between learning and recall interfere, and amnesic patients are especially vulnerable to interference early in consolidation.",
+      asks: "Explain why a long row of tests creates interference, and why amnesic patients cannot protect themselves against it: they cannot bind each test to its own context, and their new memories are most fragile early in consolidation.",
       triage: {
         symptom: "A practical setting plus 'how could this underestimate...?'",
-        diagnosis: "Consolidation and early interference (Dewar et al.).",
-        treatment: "Tests between learning and recall act as interference, patients are most vulnerable early, so recall is underestimated."
+        diagnosis: "Interference: proactive build-up without context binding (B3) plus disrupted early consolidation (Dewar et al.).",
+        treatment: "Tests back to back create interference, patients lack context binding and are most vulnerable early, so recall is underestimated."
       },
       visual: {
         type: "flow",
         title: "The battery causes the forgetting",
         steps: [
-          { h: "Learn a story", t: "new, fragile trace" },
-          { h: "More tests follow", t: "interference in the delay" },
-          { h: "Consolidation disrupted", t: "amnesics most vulnerable early" },
+          { h: "Tests back to back", t: "interference builds up" },
+          { h: "No context binding", t: "tests blur together (B3)" },
+          { h: "Fragile new trace", t: "disrupted early in consolidation" },
           { h: "Low recall score", t: "underestimates true ability" }
         ],
         verdict: "After quiet rest, patients recalled almost like controls (Dewar et al., 2010)."
       },
       answer: [
-        "Screening can underestimate recall because the tests themselves create <b>interference</b> during <b>consolidation</b>. A patient learns a story or word list, then does several other tests (digit span, naming, fluency, figure copying) before recalling it.",
-        "New memories are fragile and need consolidation, which depends on the hippocampus and is most vulnerable early (Müller & Pilzecker, 1900). Della Sala's group showed that amnesic patients are especially sensitive to interference in this window. In <b>Dewar, Cowan and Della Sala (2010)</b>, four densely amnesic patients and six controls recalled a story after one hour. After an hour resting in a quiet, dark room, the patients performed almost as well as controls; after an hour of the kind of tasks used in patient assessment, they remembered virtually nothing. Dewar et al. (2009) found early interference most harmful for patients with mild cognitive impairment.",
-        "So the battery wipes out the recently learned material, and the low score reflects the testing situation as much as true capacity. Fatigue, lower motivation and proactive interference from similar tests can add to this. Clinicians should therefore build in <b>interference-free rest</b> after learning."
+        "Screening can underestimate recall because a battery of tests run back to back creates <b>interference</b>, and amnesic patients are much less able to protect themselves against it.",
+        "First, <b>proactive interference</b>: material from earlier tests carries into later ones. Healthy people can keep the tests apart by binding each one to its own context, the same ability tested in B3. Amnesic patients lack that binding, so similar tests blur together and their scores keep falling over the session.",
+        "Second, <b>consolidation</b>. New memories are fragile, depend on the hippocampus and are most vulnerable early (Müller & Pilzecker, 1900). In <b>Dewar, Cowan and Della Sala (2010)</b>, four densely amnesic patients and six controls recalled a story after one hour. After an hour resting in a quiet, dark room, the patients performed almost as well as controls; after an hour of the kind of tasks used in patient assessment, they remembered virtually nothing.",
+        "So the low score reflects the testing situation as much as true capacity. A short <b>interference-free rest</b> after learning could already help these patients."
       ],
       takeaway: "The measurement changes what is measured: the test battery causes forgetting in the patients it assesses.",
-      trap: { wrong: "Patients just get tired during long testing.", right: "The key mechanism is interference during early consolidation (Dewar et al., 2010)." },
+      trap: { wrong: "Patients just get tired during long testing.", right: "The key is interference: build-up across tests they cannot keep apart, and disruption of early consolidation." },
       note: null
     },
 
@@ -383,11 +383,11 @@ IDQ[3] = {
           { label: "Exp 1 (n = 42)", bars: [ { label: "Observe", value: 0.58, tone: "good" }, { label: "Camera", value: 0.45, tone: "neutral" }, { label: "Snapchat", value: 0.36, tone: "bad" } ] },
           { label: "Exp 2 (n = 51)", bars: [ { label: "Observe", value: 0.56, tone: "good" }, { label: "Camera", value: 0.49, tone: "neutral" }, { label: "Delete", value: 0.48, tone: "bad" } ] }
         ],
-        note: "Means approximate; chance = .25."
+        note: "Means read from Figure 1 (the paper reports no exact means); chance = .25."
       },
       answer: [
-        "Each experiment had one <b>IV</b>, photo-taking condition with three levels: Observe, Camera (photo saved) and Snapchat (photo sent, not saved) in Experiment 1; Observe, Camera and Delete in Experiment 2. It was manipulated <b>within participants</b>, with a Latin square counterbalancing paintings and order. The <b>DV</b> was proportion correct on a 30-item multiple-choice test of visual details (chance .25), after a 10-minute Tetris filler, scored blind.",
-        "Observe was highest in both experiments (about .58 and .56); Snapchat was lowest in Experiment 1 (about .36), and Camera and Delete were about equal in Experiment 2 (.49 and .48). Both overall tests were significant: Experiment 1 F(2, 82) = 15.35, ηp² = .27; Experiment 2 F(2, 100) = 4.26, p = .017, ηp² = .08. Key effects: Camera vs Observe d = 0.70 and Snapchat vs Observe d = 1.21 (Exp 1); Camera vs Observe d = 0.58 and Delete vs Observe d = 0.61 (Exp 2).",
+        "Each experiment had one <b>IV</b>, condition, with three levels that combine whether a photo is taken and whether it is kept: Observe, Camera (photo saved) and Snapchat (photo sent, not saved) in Experiment 1; Observe, Camera and Delete in Experiment 2. It was manipulated <b>within participants</b>, with a Latin square counterbalancing paintings and order. The <b>DV</b> was proportion correct on a 30-item multiple-choice test of visual details (chance .25), after a 10-minute Tetris filler, scored blind.",
+        "Observe was highest in both experiments (about .58 and .56, read from Figure 1). In Experiment 1 Snapchat was lowest (about .36), significantly below even Camera (about .45): t(41) = 2.23, p = .031, d = .48. In Experiment 2 Camera and Delete were about equal (.49 and .48; p = .80). Both overall tests were significant: F(2, 82) = 15.35, p < .001, ηp² = .27 and F(2, 100) = 4.26, p = .017, ηp² = .08. Versus Observe: Camera d = 0.70 and Snapchat d = 1.21 (Exp 1); Camera d = 0.58 and Delete d = 0.61 (Exp 2).",
         "<b>Causation</b> is plausible: conditions covary with memory, the manipulation came first, and the design controls individual differences, painting difficulty and order. Which part of the procedure causes it is not settled, and Exp 1 had a viewing-time confound that Exp 2 fixed. <b>Generalisation</b> to daily life is only partly convincing: it replicates Henkel (2014), but used small student samples, lab paintings, instructed photos and a short delay."
       ],
       takeaway: "The study shows photo-taking impairs memory under controlled conditions, not yet why or how widely.",
@@ -421,12 +421,12 @@ IDQ[3] = {
       answer: [
         "<b>Transactive memory</b> (Wegner, 1987) is a shared memory system in which we store information in other people or in objects and remember <b>who or what knows what</b>. A good example has two parts: the information is held elsewhere, and you know where.",
         "Between people: in a family, one parent tracks school dates and the other dentist appointments, and each knows to ask the other. In a work team, you don't learn the payroll rules because Anna knows them, and IT questions go to Tom. On holiday one friend remembers the restaurant's name, the other the way back to the hotel, and siblings each hold parts of family history and reconstruct a story together.",
-        "Between people and devices: you no longer know phone numbers, but you know your contacts app has them. Appointments live in a calendar app, so you stop rehearsing them. For facts you remember where to find them, a search engine, rather than the fact itself (<b>Sparrow, Liu & Wegner, 2011</b>). Navigation apps hold the route, so you learn less of the city.",
+        "Between people and devices: you no longer know phone numbers, but you know your contacts app has them. Appointments live in a calendar app, so you stop rehearsing them. For facts you remember where to find them, a search engine, rather than the fact itself: the 'Google effect' (<b>Sparrow, Liu & Wegner, 2011</b>). Navigation apps hold the route, so you learn less of the city.",
         "The benefit is freed-up capacity (Storm & Stone, 2015); the cost is that the information is hard to recall when the partner or device is unavailable."
       ],
       takeaway: "Your brain keeps the index; the partner or phone keeps the book.",
       trap: { wrong: "Any example of simply forgetting something.", right: "It is only transactive memory if you rely on a partner or device that you know holds it." },
-      note: "Most examples are own examples, as the question asks; Sparrow et al. (2011) and Storm & Stone (2015) are from the readings."
+      note: "The reader gives the same kinds of examples (partners splitting tasks, team experts, phone contacts and calendar, the Google effect); the specific scenarios are own examples, as the question asks."
     },
 
     {
@@ -453,7 +453,7 @@ IDQ[3] = {
       answer: [
         "If offloading were correct, the third bar in each experiment (Snapchat, Delete) would rise back to about the <b>Observe level</b>, leaving Camera as the only low bar.",
         "The <b>offloading hypothesis</b> (Henkel, 2014) says people remember photographed objects less because they count on the camera to remember for them. So it predicts impairment only when people expect to use the photo later. Observe should be highest. Camera, where the photo is saved, should be lower, because people offload onto it. In the <b>Snapchat and Delete</b> conditions the photo cannot be used later, so there is nothing to offload to: memory should be about as good as Observe, and clearly better than Camera.",
-        "The real figure showed the opposite. The Snapchat bar was even lower than Camera (about .36 vs .45), and Delete equalled Camera (about .48 vs .49). This pattern contradicts the offloading account and supports <b>attentional disengagement</b>: taking the photo itself disrupts encoding, whether or not it can be used later."
+        "The real figure showed the opposite. The Snapchat bar was significantly lower than Camera (about .36 vs .45, p = .031), and Delete equalled Camera (about .48 vs .49, p = .80). This pattern contradicts the offloading account and supports <b>attentional disengagement</b>: taking the photo itself disrupts encoding, whether or not it can be used later."
       ],
       takeaway: "The decisive bar is the condition where offloading is impossible, and it stayed low.",
       trap: { wrong: "Under offloading, Camera would be as good as Observe.", right: "Camera is the one condition where offloading predicts lower memory." },
@@ -479,13 +479,14 @@ IDQ[3] = {
           { head: "Within-subjects, Latin square", cells: ["yes", "yes"] },
           { head: "Viewing time equal", cells: ["no", "yes"] },
           { head: "'No access' certain", cells: ["no", "yes"] },
+          { head: "Same app in photo conditions", cells: ["no", "yes"] },
           { head: "Power analysis", cells: ["no", "yes"] },
           { head: "Effect size (ηp²)", cells: [".27", ".08"] }
         ]
       },
       answer: [
-        "<b>Experiment 2</b> has the stronger design. Both are within-subjects with a Latin square, but Experiment 2 removes the two weaknesses the authors found in Experiment 1.",
-        "First, <b>viewing time</b>. In Experiment 1 the photo had to be taken within the 15 s, so photo conditions had less looking time, and Snapchat probably took longer than Camera. In Experiment 2 the 15 s started only after the photo was taken and deleted, so exposure was equal or longer, and the impairment still appeared. Second, <b>believability</b>: participants may not have believed Snapchat photos were gone, but in Delete they deleted the photo themselves. Experiment 2 also used a power analysis (n ≥ 49 for 90% power), with n = 51 and random assignment to orders.",
+        "<b>Experiment 2</b> has the stronger design. Both are within-subjects with a Latin square, but Experiment 2 varies only whether the photo is kept, while the act of photographing stays the same.",
+        "In Experiment 1, accessibility was confounded with <b>app type</b>: Snapchat and Camera differ in interface, and Snapchat probably took longer. Because the photo had to be taken within the 15 s, photo conditions also had less <b>viewing time</b>. In Experiment 2 both photo conditions used the Camera app, and the 15 s started only after the photo was taken, so exposure was equal or longer; the impairment still appeared. <b>Believability</b> also improved: participants may have doubted Snapchat photos were gone, but in Delete they deleted the photo themselves. A power analysis set n ≥ 49 for 90% power (n = 51).",
         "Experiment 1 had the larger effect (ηp² = .27 vs .08), but a large effect in a design with confounds is less convincing than a smaller one in a cleaner design. A remaining limitation is that only 31 of 51 participants completed the survey, which does not affect the main result."
       ],
       takeaway: "The strongest design leaves the fewest alternative explanations, not the biggest effect.",
@@ -520,7 +521,7 @@ IDQ[3] = {
       ],
       takeaway: "The Delete finding rules out viewing time, but not the task itself.",
       trap: { wrong: "Delete participants looked at the painting for less time.", right: "Viewing time was equal or longer, so time cannot explain the impairment." },
-      note: "The task-switching evaluation and the proposed test are own reasoning; the authors only note that any secondary task might cause disengagement."
+      note: "The reader also judges task switching a good fit (switch costs disrupt deep processing). The proposed test is own reasoning; the authors only note that any secondary task might cause disengagement."
     },
 
     {

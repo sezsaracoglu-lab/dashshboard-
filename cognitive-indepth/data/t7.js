@@ -17,8 +17,8 @@ IDQ[7] = {
       answer: [
         "<b>Means-end analysis</b> means you (1) divide the problem into sub-problems and (2) reduce the <b>difference</b> between the current state and the goal state for each one (Matlin). Robinson-Riegler adds that each <b>sub-goal</b> you reach moves you closer to the goal.",
         "On the Tower of Hanoi, you first define the states: all 4 disks start on rod A, and the goal is all 4 on rod C in the same order. The biggest difference is that the largest disk is not on C, so the sub-goal becomes ‘move the largest disk to C’. That move is blocked by the three smaller disks, which creates a new sub-goal: ‘move the 3-disk tower to B’.",
-        "You then apply the same analysis to every sub-goal: to move 3 disks to B, first move 2 disks to C, and so on. Once the largest disk is on C, the next goal is moving the 3-disk tower from B onto C. Means-ends sometimes needs moves that seem to go away from the goal, such as putting disks on B, and people resist such detours (Matlin). Greeno (1974) showed people pause when they start a new sub-problem.",
-        "So the procedure is: define the states, find the biggest difference, set a sub-goal, repeat. The fewest possible moves for 4 disks is <b>2⁴ − 1 = 15</b>."
+        "You then apply the same analysis to every sub-goal: to move 3 disks to B, first move 2 disks to C, and so on. Once the largest disk is on C, the next goal is moving the 3-disk tower from B onto C. Means-ends sometimes needs moves that seem to go away from the goal, such as taking a disk off the goal rod again, and people prefer to avoid such detours (Greeno, 1974). Greeno also showed that people pause when they start a new sub-problem.",
+        "So: define the states, find the biggest difference, set a sub-goal, repeat. The minimum for 4 disks is <b>2⁴ − 1 = 15</b> moves."
       ],
       takeaway: "Means-end analysis on Hanoi: to move the big disk, first move the small ones out of the way, again and again.",
       trap: { wrong: "Means-end analysis never moves you away from the goal.", right: "Reaching a sub-goal, like freeing the largest disk, can need a temporary step that increases the distance to the final goal." },
@@ -62,8 +62,8 @@ IDQ[7] = {
         "To argue it, name the features of the metaphor (states, moves, goal, distance, dead ends) and show that means-ends uses all of them (difference reduction plus sub-goals), while hill climbing uses only distance reduction. One limit: the maze fits <b>well-structured</b> problems; in ill-structured or insight problems the maze itself is unclear and must be restructured (Sternberg)."
       ],
       takeaway: "The maze metaphor was built around means-ends analysis: difference reduction plus sub-goals.",
-      trap: { wrong: "Hill climbing is the best fit because you walk towards the exit.", right: "Hill climbing ignores sub-goals and detours, so it gets stuck in the dead ends the metaphor describes. It can still be accepted if argued well." },
-      note: "The remark that a tutor may also accept hill climbing is exam guidance from the study page, not from the readings."
+      trap: { wrong: "Hill climbing is the best fit because you walk towards the exit.", right: "Hill climbing ignores sub-goals and detours, so it gets stuck in the dead ends the metaphor describes." },
+      note: "The study page adds that a tutor may also accept a well-argued hill-climbing answer; that is exam guidance only. The readings and the reader both give means-ends analysis as the answer."
     },
     {
       id: "AB4",
@@ -99,14 +99,14 @@ IDQ[7] = {
                 { head: "Hill climbing", sub: "quickest feeling of progress", tone: "bad", points: ["re-read easiest summary", "highlight a bit more", "skip the hard theme", "gap: hard theme is on the exam"] } ],
         verdict: "Means-ends for a big goal; hill climbing for small daily choices." },
       answer: [
-        "The <b>goal state</b> is passing the exam (multiple choice, based on tutorials and lectures); the initial state is what you know now.",
-        "With <b>means-end analysis</b>, you find the biggest gaps between what you know and what the exam requires and turn them into sub-goals: one per problem and its learning objectives, preparing the tutorial questions, practising MCQs, and revising weak themes. For each sub-goal you reduce the difference by studying, testing yourself and checking. Sometimes you step back and re-read an earlier theme you misunderstood, because it helps later.",
-        "With <b>hill climbing</b>, you always choose what gives the most immediate feeling of progress: re-reading the easiest summary, highlighting, doing the next item on the list, skipping the hard topic. It feels efficient, but it can leave <b>gaps</b> (the hard theme is exactly what the exam asks) and gives short-term rather than long-term solutions (Matlin).",
-        "Conclusion: means-end analysis is the better plan for a large, multi-part goal like a course; hill climbing is fine for small, day-to-day choices."
+        "The <b>goal state</b> is passing the exam (multiple choice, based on tutorials and lectures); the initial state is what you know now. Plan backwards from the exam date.",
+        "With <b>means-end analysis</b>, you find the biggest gaps between what you know and what the exam requires and turn them into sub-goals: one per problem and its learning objectives, preparing the tutorial questions, practising MCQs, and revising weak themes. For each sub-goal you reduce the difference by studying, testing yourself and checking. Sometimes you deliberately step back: you work out why an answer was wrong or revisit an earlier theme, because it helps later.",
+        "With <b>hill climbing</b>, you always choose what gives the most immediate feeling of progress: re-reading the easiest summary, highlighting, doing the next item on the list, skipping the hard topic. It feels efficient, but it can leave <b>gaps</b>: you know the questions you practised but get stuck on new ones, and it gives short-term rather than long-term solutions (Matlin).",
+        "Conclusion: means-end analysis takes more planning, but it is the better plan for a large, multi-part goal like a course; hill climbing is fine for small, day-to-day choices."
       ],
       takeaway: "Means-ends is a study plan with milestones; hill climbing is doing whatever feels productive tonight.",
       trap: { wrong: "Hill climbing is fine because every study session makes some progress.", right: "It picks the quickest gain, so it skips hard themes and leaves gaps for the exam." },
-      note: "The study scenario is an application built from own reasoning; only the definitions and the short-term vs long-term point come from Matlin."
+      note: "Application question: the study scenario is own reasoning (the reader's model answer gives the same pattern); only the definitions and the short-term vs long-term point come from Matlin."
     },
     {
       id: "AB6",
@@ -141,11 +141,11 @@ IDQ[7] = {
       visual: { type: "bars", title: "Spontaneous solving (%), both studies", unit: "%", max: 100,
         groups: [ { label: "Gick & Holyoak: visual aid", bars: [ { label: "analogy alone", value: 40, tone: "neutral" }, { label: "plus diagram", value: 22, tone: "bad" } ] },
                   { label: "Catrambone: phase 2", bars: [ { label: "verbal recall", value: 19, tone: "neutral" }, { label: "sketch", value: 27, tone: "bad" }, { label: "enactment", value: 52, tone: "good" } ] },
-                  { label: "Gick & Holyoak: 2 analogues", bars: [ { label: "plus another analogue", value: 52, tone: "good" } ] } ],
-        note: "Catrambone phase 3, told to use the story: 91 / 85 / 86% solved." },
+                  { label: "Gick & Holyoak: 2 analogues", bars: [ { label: "analogy alone", value: 21, tone: "neutral" }, { label: "plus another analogue", value: 52, tone: "good" } ] } ],
+        note: "Gick & Holyoak general principle: 29% alone vs 32% with it. Catrambone phase 3, told to use the story: 91 / 85 / 86% solved." },
       answer: [
         "<b>Sketch ↔ diagram.</b> In Gick & Holyoak (1983), adding a diagram of converging arrows did not help spontaneous transfer (22% vs 40% for the analogy alone). In Catrambone et al., people who sketched while recalling the General story solved the radiation problem spontaneously only 27% of the time, hardly better than verbal recall (19%) and far below enactment (52%). Both show that a <b>visual depiction</b> of the source does not make people notice the analogy.",
-        "<b>Third phase ↔ another analogue.</b> In Catrambone's third phase people were told to use the story, and almost everyone solved it (91 / 85 / 86%), whatever the encoding condition. In Gick & Holyoak, transfer rose to 52% only when people got two analogous stories and had to relate them. In both, transfer works once people are made to <b>connect</b> source and target.",
+        "<b>Third phase ↔ another analogue.</b> In Catrambone's third phase people were told to use the story, and almost everyone solved it (91 / 85 / 86%), whatever the encoding condition. In Gick & Holyoak, transfer rose from 21% to 52% only when people got two analogous stories and had to relate them (a stated general principle hardly helped: 29% vs 32%). In both, transfer works once people are made to <b>connect</b> source and target.",
         "So the bottleneck is <b>noticing / retrieving</b> the analogy, not mapping or applying it. Structural similarity alone is a poor memory cue when surface features differ (Robinson-Riegler: ‘basically a failure of memory’). Enactment and schema induction help because they encode the structure."
       ],
       takeaway: "People can use the key once told it is in their pocket; the hard part is remembering they have it.",
@@ -185,7 +185,7 @@ IDQ[7] = {
       answer: [
         "This is an <b>ill-structured insight problem</b> (Sternberg): there is no clear path to the solution, and you must see the problem in a new way.",
         "It is hard for three reasons. People build a <b>self-imposed constraint</b> into their representation (‘I must walk to the string while holding the other’) and get stuck at Step 2 of the problem-solving cycle. <b>Functional fixedness</b> makes them see the pliers as a gripping tool, not as a weight for a pendulum. And a mental set from everyday experience keeps them in the familiar frame.",
-        "People can reach the solution by restructuring the representation: instead of moving yourself to the string, bring the string to you. Asking what else each object could be breaks functional fixedness (pliers → weight). The body helps too: people who did arm-swinging ‘exercise breaks’ were more likely to find the swinging solution (<b>embodied cognition</b>; Matlin). Incubation and hints can break the fixation, and an analogy with a pendulum or swing could cue the answer.",
+        "People can reach the solution by restructuring the representation: instead of moving yourself to the string, bring the string to you. Asking what else each object could be breaks functional fixedness (pliers → weight). The body helps too: people who did arm-swinging ‘exercise breaks’ were more likely to find the swinging solution (Thomas & Lleras, 2009; <b>embodied cognition</b>). Incubation and hints, such as a string that happens to start moving, can break the fixation, and an analogy with a pendulum or swing could cue the answer.",
         "The solution then often arrives as a sudden <b>insight</b>."
       ],
       takeaway: "Stop trying to reach the string; make the string come to you.",
@@ -205,12 +205,12 @@ IDQ[7] = {
         verdict: "Shared surface only: all cause deaths. Measures must match structure." },
       answer: [
         "The argument is an <b>analogy</b>: ‘COVID is like car accidents and pools, so treat it the same’. It rests on a <b>surface feature</b>, since all three cause deaths. But analogies should be judged on <b>structural features</b>, the underlying relations (Gentner; Robinson-Riegler). Sternberg calls seeing an analogy because of similar content <b>transparency</b>, which leads to negative transfer.",
-        "The structures differ in ways that matter. Car accidents and drownings are not contagious, while one COVID case infects others, so cases grow exponentially and each infection prevented also prevents future ones. A sudden wave of patients can overwhelm hospitals and raise deaths from other causes too, which car accidents do not do. And COVID was a new virus without vaccines, while the others are stable, known risks.",
+        "The structures differ in ways that matter. Car accidents and drownings are not contagious, while one COVID case infects others, so cases grow exponentially and each infection prevented also prevents future ones. A sudden wave of patients can overwhelm hospitals and raise deaths from other causes too, which car accidents do not do. Swimming or driving is mainly a risk to yourself, while an infection puts others in danger. And COVID was a new virus without vaccines, while the others are stable, known risks; a lockdown was meant to buy time, not to last forever.",
         "We also do act on those other risks, with seat belts, speed limits, driving licences, lifeguards and fences, each matched to that risk's structure. So the conclusion does not follow: the problems differ in exactly the relations that decide which solution works."
       ],
       takeaway: "Same headline (‘people die’), different story underneath.",
       trap: { wrong: "The analogy fails because COVID killed more people.", right: "The key flaw is structural: contagion makes cases multiply, so the right measures differ." },
-      note: "The structural differences (contagion, hospital overload, new vs known risk) and the cases-over-time picture are own reasoning applying the readings' surface vs structure concepts; the graph on the study page was illustrative."
+      note: "The structural differences (contagion, hospital overload, risk to others, new vs known risk, temporary measure) apply the readings' surface vs structure concepts; they are own reasoning, matching the reader's model answer, not content from the readings."
     },
     {
       id: "C4",
@@ -224,7 +224,7 @@ IDQ[7] = {
         verdict: "Pros: justification, representing, transfer. Cons: grading, time, lost novices." },
       answer: [
         "One defensible position is to <b>partly agree</b>. Well-structured problems build the domain knowledge and schemas needed later, but real problems are mostly ill-structured, so students also need practice with problems that have no single answer.",
-        "The proposal: add ill-structured tasks such as open cases and projects (for example, designing a recruitment process that reduces bias), problem-based tutorials like this course's, and assessment of <b>justification</b>, where students must choose a representation and defend their solution.",
+        "The proposal: add open cases in which students first work out what the problem is (for example, designing a recruitment process that reduces bias), let them compare problems with the same structure but different content (as in Gick & Holyoak), and assess <b>justification</b>, where students must choose a representation and defend their solution.",
         "The advantages are that this trains the skills ill-structured problems require, domain knowledge and justification skills (Shin, Jonassen & McGee, 2003); it practises representing problems, their main difficulty; it gives practice with insight, intuition and analysis (Pretz, 2008); and it improves transfer and motivation. The disadvantages are that grading is harder and less reliable, it takes more time, novices may feel lost (Pretz: first-years tie themselves in knots with analysis), and there is a risk of <b>negative transfer</b> if foundations are missing.",
         "So the balanced solution is to start with well-structured problems, then move gradually to ill-structured ones with clear rubrics."
       ],
@@ -241,11 +241,11 @@ IDQ[7] = {
       triage: { symptom: "‘which hypotheses … how would the figure look under the alternative?’", diagnosis: "Competing predictions about a dual-task manipulation", treatment: "Name each hypothesis and its prediction for each condition, then redraw the figure for the alternative." },
       visual: { type: "bars", title: "Fluidity in Exp 1 (actual Figure 2A)", unit: "ideas", max: 12,
         groups: [ { label: "Actual result", bars: [ { label: "single task", value: 10.69, tone: "neutral" }, { label: "congruent", value: 10.43, tone: "neutral" }, { label: "incongruent", value: 7.04, tone: "bad" } ] } ],
-        note: "Under the disinhibition view, the incongruent bar would be the tallest." },
+        note: "Under the disinhibition view, the incongruent bar would be as tall or taller." },
       answer: [
         "<b>Hypothesis 1</b> is the disinhibition or automatic-creativity view (Eysenck; Martindale; <b>Radel et al., 2015</b>). Creative ideas come from loose, automatic associations, so inhibitory control hinders creativity. Prediction: loading inhibition with the incongruent Stroop should increase creativity.",
         "<b>Hypothesis 2</b> is the <b>dual-process model</b> (Cassotti et al., 2016a). Creativity needs inhibitory control to suppress dominant, fixated System 1 ideas so that System 2 can expand. Prediction: the incongruent Stroop should decrease creativity, while the congruent Stroop should not differ from the single task.",
-        "The result supported Hypothesis 2: fluidity was 7.04 in the incongruent condition vs 10.69 and 10.43. Under the alternative, Figure 2A would show the <b>incongruent bar as the highest</b>, above the single-task and congruent bars, which would be about equal. For Experiment 2 (Figure 2B), the alternative ‘WM load helps’ view (Lin & Lien, 2013b) predicts a higher bar for the high-demanding WM condition."
+        "The result supported Hypothesis 2: fluidity was 7.04 in the incongruent condition vs 10.69 and 10.43. Under the alternative, Figure 2A would show the <b>incongruent bar as high as or higher than</b> the single-task and congruent bars, which would be about equal. Figure 2B would stay roughly the same, because the working-memory task does not load inhibition. Only the separate ‘WM load helps’ view (Lin & Lien, 2013b) would predict a higher bar for the high-demanding WM condition."
       ],
       takeaway: "Same experiment, opposite predictions: does taking the brakes away help or hurt creativity?",
       trap: { wrong: "The critical comparison is single task vs any dual task.", right: "The critical test is the incongruent Stroop (inhibition load); the congruent condition is the control." },
@@ -286,7 +286,7 @@ IDQ[7] = {
       answer: [
         "Experiment 1 showed that the incongruent Stroop reduced creativity, but it could not tell whether this was due to <b>inhibitory control</b> specifically or to a general <b>executive / dual-task cost</b>. Experiment 2 replaced the Stroop with a working-memory load (dot memory task, high vs low demand). If only inhibition matters, WM load should not reduce creativity; if general executive resources matter, it should.",
         "There was no effect of WM load on fluidity (11.08 vs 10.45) or expansivity (5.24 vs 5), so the authors conclude that inhibitory control is specifically involved. In favour, a pilot study (n = 21) showed the high-demand task was harder (82% vs 93% accuracy).",
-        "Still, the goal is only <b>partly</b> achieved. The WM task may have been too easy, since it only requires storing dot positions; the authors suggest a harder backward-recall version. The claim rests on a <b>null result</b>, which cannot prove an effect is absent with ~25 per group. And the two tasks differ in more than ‘inhibition vs WM’ and were tested in different samples.",
+        "Still, the goal is only <b>partly</b> achieved. The WM task may have been too easy, since it only requires storing dot positions; the authors suggest a harder backward-recall version. The claim rests on a <b>null result</b>, which cannot prove an effect is absent with ~25 per group. And the two tasks differ in more than ‘inhibition vs WM’: the Stroop is verbal, like saying ideas aloud, while the dot task is visuospatial. Only one WM task was used, in a different sample.",
         "So Experiment 2 makes the inhibition-specific explanation more plausible, but does not fully rule out a general executive account."
       ],
       takeaway: "A control experiment that finds nothing only convinces if the control task really had teeth.",

@@ -10,24 +10,25 @@ IDQ[4] = {
     block: "Bron A · Murphy",
     title: "Where did meaning matter before?",
     canvas: "Deze bron gaat over semantiek: de betekenis van woorden en zinnen. We kwamen semantiek al eerder tegen. Weet je nog waar en hoe semantiek een invloed uitoefende? (English: This source is about semantics: the meaning of words and sentences. We met semantics earlier. Do you remember where and how semantics had an influence?)",
-    asks: "Look back at Problems 1 to 3 and name places where the meaning of information changed what happened: what we noticed, stored or remembered. For each one, say how meaning had that effect.",
-    triage: { symptom: "'Where did meaning matter before?': a link-back question to Problems 1 to 3.", diagnosis: "Top-down influence of meaning in attention, short-term/working memory and autobiographical memory/amnesia.", treatment: "Name at least two earlier problems, say HOW meaning acted in each, then link to thresholds and activation." },
-    visual: { type: "map", title: "Meaning in earlier problems", center: "Meaning acts top-down",
-      branches: [
-        { h: "Attention", t: "own name breaks through the filter" },
-        { h: "Treisman", t: "dictionary units with lowered thresholds" },
-        { h: "STM / working memory", t: "release from PI when category changes" },
-        { h: "Autobiographical / amnesia", t: "semantic facts spared, episodic lost" }
+    asks: "Look back at earlier themes, especially short-term memory (Theme 2), and name a place where the meaning of words changed how well we remembered them. Explain how meaning had that effect.",
+    triage: { symptom: "'Where did meaning matter before?': a link-back question to earlier themes.", diagnosis: "Theme 2: release from proactive interference (Wickens et al., 1976); also attention and amnesia from earlier problems.", treatment: "Name the Wickens study, give its design and numbers, say what it shows about meaning, then link to semantic networks." },
+    visual: { type: "grid", title: "Release from PI (Wickens et al., 1976)",
+      cols: ["Overlap with fruit", "Trial 4 recall"],
+      rows: [
+        { head: "Fruit (control)", cells: ["complete", "low, stayed stuck"] },
+        { head: "Vegetables", cells: ["large", "relatively low"] },
+        { head: "Flowers / meat", cells: ["one shared feature", "better"] },
+        { head: "Occupations", cells: ["none", "best, almost 70%"] }
       ] },
     answer: [
-      "Semantics has already appeared in at least three places, and each time <b>meaning acts top-down</b>: what something means shapes what we attend to, store and retrieve.",
-      "In <b>attention</b>, the meaning of an unattended message can break through the filter, for example your own name (cocktail-party effect) or a story that switches ears. Treisman explained this with dictionary units whose thresholds are lowered for meaningful or expected words.",
-      "In <b>short-term and working memory</b>, meaning influences coding and forgetting, for example release from proactive interference when the semantic category changes. In <b>autobiographical memory and amnesia</b>, semantic knowledge about ourselves is distinguished from episodic memories of events, and semantic memory can be preserved when episodic memory is impaired.",
-      "So meaning keeps sneaking into processes that look mechanical. Treisman's thresholds also foreshadow this week's threshold-based activation in semantic network models (Collins & Loftus, 1975)."
+      "Semantics already appeared in <b>short-term memory</b> (Theme 2): chunking is not the only thing that decides how much fits into STM, because the meaning of the words plays a role too. The clearest example is <b>release from proactive interference</b> (Wickens et al., 1976).",
+      "Participants did three Brown/Peterson trials, each a list of three words from one category (for example occupations) followed by 18 seconds of counting backwards. Across the three trials, recall dropped from about 90% to about 30% correct, because earlier words interfered with new ones. On trial 4 everyone got three fruits, and the less the earlier category resembled fruit in meaning, the better they did: occupations gave almost 70% correct.",
+      "So words already stored hinder new words that are <b>similar in meaning</b>, and the bigger the overlap, the stronger the interference. Meaning also acted in attention (your own name breaking through the filter) and in amnesia, where semantic knowledge can be spared while episodic memory is lost.",
+      "The same idea returns this week in <b>semantic networks</b>: concepts that are close in meaning influence each other."
     ],
-    takeaway: "Meaning has been the hidden hand in every earlier problem: it decides what we notice, keep and recall.",
-    trap: { wrong: "Semantics simply means semantic memory.", right: "Semantics is meaning itself; semantic memory is only one store of it. Meaning also acted in attention and STM." },
-    note: "The examples come from earlier problems (1 to 3), not from this theme's readings. Check the STM example (release from proactive interference) against your own Problem 2 notes."
+    takeaway: "Similar meanings get in each other's way in STM; a new meaning gives memory a fresh start.",
+    trap: { wrong: "Semantics simply means semantic memory.", right: "Semantics is meaning itself; semantic memory is only one store of it. Meaning already acted in STM (Wickens et al., 1976)." },
+    note: "The reader's model answer uses only Wickens et al. (1976) from Theme 2. The attention and amnesia examples come from your own notes on earlier problems."
   },
 
   {
@@ -84,7 +85,7 @@ IDQ[4] = {
     title: "Where else did we see a hierarchy?",
     canvas: "De tekst van Murphy stelt dat veel categorieën hiërarchisch zijn georganiseerd. We zijn eerder zo'n hiërarchische organisatie van informatie tegengekomen. Weet je nog waar? (English: Murphy's text states that many categories are hierarchically organised. We came across such a hierarchical organisation of information earlier. Do you remember where?)",
     asks: "Name an earlier model where information was stored from general to specific, and show how its levels line up with Murphy's category levels.",
-    triage: { symptom: "'Where have we seen general to specific levels before?'", diagnosis: "Murphy's superordinate, basic, subordinate levels; Conway's autobiographical knowledge base (Problem 3a).", treatment: "Name the earlier model, map its levels onto Murphy's, and note the preferred middle level in both." },
+    triage: { symptom: "'Where have we seen general to specific levels before?'", diagnosis: "Murphy's superordinate, basic, subordinate levels; Conway's (2005) autobiographical knowledge base (Theme 3).", treatment: "Name the earlier model, map its levels onto Murphy's, note the accessible middle level, then add the two hierarchies inside Theme 4." },
     visual: { type: "grid", title: "Two hierarchies, level by level",
       cols: ["Murphy (categories)", "Conway (life memory)"],
       rows: [
@@ -93,13 +94,13 @@ IDQ[4] = {
         { head: "Specific", cells: ["subordinate: robin", "event-specific knowledge"] }
       ] },
     answer: [
-      "We met a hierarchical organisation in <b>autobiographical memory</b> (Problem 3a). Conway's autobiographical knowledge base is organised from general to specific.",
-      "<b>Lifetime periods</b> ('when I lived in Rotterdam') contain <b>general events</b> ('evenings at the library'), which contain event-specific knowledge (sensory details of one evening). This parallels Murphy's category hierarchy: superordinate matches lifetime period, basic matches general event, and subordinate matches event-specific knowledge.",
-      "In both hierarchies a <b>middle level is the preferred entry point</b>: general events in Conway's model and the basic level in Murphy's. Within this week's readings, hierarchies also appear in network models of semantic memory and in the specific-to-general loss in semantic dementia (duck, swan, bird, animal; Warrington, 1975; Hodges et al., 1995)."
+      "We met a hierarchy in <b>autobiographical memory</b> (Theme 3): Conway's (2005) model of the knowledge structures in autobiographical memory. At the top sits the life story, divided into themes such as work and relationships; below it, the autobiographical knowledge base runs from general to specific (Conway & Pleydell-Pearce, 2000).",
+      "<b>Lifetime periods</b> ('my student years in Rotterdam') contain <b>general events</b> ('the weekly drinks with classmates'), which contain event-specific knowledge (the sensory details of one moment). This parallels Murphy's levels: superordinate matches lifetime period, basic matches general event, and subordinate matches event-specific knowledge.",
+      "In both, the <b>middle level is especially accessible</b>: people often start free recall with general events (Barsalou, 1988), and the basic level is the preferred level for naming. Within Theme 4 itself, hierarchy appears twice: category hierarchies such as brown bear, bear, mammal, animal, and <b>Warrington's (1975)</b> view that semantic memory is hierarchical, shown by the specific-to-general loss in semantic dementia (duck, swan, bird, animal)."
     ],
     takeaway: "Life story and categories are both Russian dolls, general to specific, with a favourite middle doll.",
     trap: { wrong: "Naming Conway's model is enough.", right: "You must map its levels onto Murphy's and point out the preferred middle level in both." },
-    note: "Conway's model comes from Problem 3a, not this theme's readings. Collins & Quillian's hierarchical network is background; hierarchical chunking in STM is another possible answer depending on your notes."
+    note: "Conway's model comes from Theme 3, not this theme's readings. The level-by-level mapping onto Murphy's levels is own reasoning; the reader names the model and the two Theme 4 hierarchies."
   },
 
   {
@@ -126,7 +127,7 @@ IDQ[4] = {
       "Definitions suit formal concepts such as 'triangle', whereas most natural categories cannot be defined but do have prototypes, abstracted from experience; a prototype can even be a never-seen average (Posner et al., 1967)."
     ],
     takeaway: "Definition = checklist with a 100% pass mark; prototype = bullseye with a blurry edge.",
-    trap: { wrong: "A prototype is one real, best member of the category.", right: "It is a summary and can be an abstract average that was never seen (Posner et al., 1967)." },
+    trap: { wrong: "A prototype is simply one real member you have seen.", right: "In the theory it is a summary of weighted features (the most typical member is also called the category prototype), and it can be an average that was never seen (Posner et al., 1967)." },
     note: null
   },
 
@@ -140,14 +141,14 @@ IDQ[4] = {
     visual: { type: "versus", title: "Same core idea, different location",
       cols: [
         { head: "Classical view", sub: "the label on the box", tone: "neutral", points: ["core = visible defining features", "features ARE the category", "any category (triangle, bachelor)"] },
-        { head: "Essentialism", sub: "the DNA inside", tone: "accent", points: ["core = hidden, often unknown essence", "essence CAUSES the features", "surface can mislead: Keil's raccoon", "mainly natural kinds"] }
+        { head: "Essentialism", sub: "the DNA inside", tone: "accent", points: ["core = hidden, often unknown essence", "essence CAUSES the features", "surface can mislead: Keil's raccoon", "mainly natural kinds", "a belief; most categories have none"] }
       ],
       verdict: "Both: a core all and only members have, all-or-none membership." },
     answer: [
-      "Psychological essentialism can be seen as a <b>psychological descendant of the classical view</b>. Both hold that a category has a core that all and only its members possess, and both imply <b>all-or-none membership</b> with no in-between.",
-      "The difference lies in where that core is located. The classical view places it in observable defining features used to classify items, whereas essentialism places it in a <b>hidden essence</b>, often unknown to the person, that is believed to cause the observable features.",
-      "As a result, surface features can vary or mislead without changing membership: <b>Keil's (1989) raccoon</b> made to look like a skunk is still judged a raccoon. Essentialism applies mainly to natural kinds, not to artifacts (a coffeepot turned into a bird feeder is now a bird feeder).",
-      "So essentialism explains why people believe categories are well defined (the outrage over Pluto) even though they cannot give definitions, while everyday identification relies on typical, graded features."
+      "Psychological essentialism can be seen as a <b>psychological descendant of the classical view</b>. Both hold that a category has a core that all and only its members possess, both imply <b>all-or-none membership</b> with no middle ground, and both resist changes in category membership.",
+      "The difference lies in what decides membership. In the classical view it is the necessary and sufficient features of the object itself; in essentialism it is a <b>hidden essence</b>, often unknown to the person, that is believed to cause the visible features.",
+      "So surface features can mislead without changing membership: in <b>Keil (1989)</b>, a raccoon painted black and white and given a stink sac looks like a skunk, yet adults and children over four still call it a raccoon. This does not happen with artefacts: a converted coffeepot is a bird feeder.",
+      "They also differ in status. The classical view is a theory of how concepts are built, while essentialism is a <b>belief people hold</b>: most categories have no essence in reality. That belief explains why people think categories are well defined (the outrage over Pluto) even though they cannot give definitions."
     ],
     takeaway: "Both say there is one thing that makes a dog a dog; the classical view thinks you can see it, essentialism thinks it is hidden inside.",
     trap: { wrong: "Essentialism is just the classical view again.", right: "The essence is hidden and causal, not a list of visible features, and it applies mainly to natural kinds." },
@@ -160,23 +161,23 @@ IDQ[4] = {
     title: "Typicality effect in a semantic network",
     canvas: "Categorieverificatietaken worden gebruikt om na te gaan hoe we categorielidmaatschap bepalen. In deze taak verifiëren deelnemers zo snel mogelijk eenvoudige stellingen zoals “Een zwaluw (swallow) is een vogel” of “Een kraanvogel (crane) is een vogel”. Hieronder vind je een voorbeeld van een klein semantisch netwerk. Gebruik het om het typicaliteitseffect uit te leggen. (English: Category verification tasks are used to examine how we determine category membership. Participants verify simple statements as fast as possible, such as 'A swallow is a bird' or 'A crane is a bird'. Below is an example of a small semantic network. Use it to explain the typicality effect.)",
     asks: "People say 'true' faster to 'a swallow is a bird' than to 'a crane is a bird'. Use the network (nodes, links, spreading activation) to explain step by step why.",
-    triage: { symptom: "A network picture plus a speed difference: 'explain with the model'.", diagnosis: "Spreading activation (Collins & Loftus, 1975): link length = strength; summation; threshold.", treatment: "Walk through the mechanism step by step for swallow vs crane, then contrast with a strict hierarchy." },
+    triage: { symptom: "A network picture plus a speed difference: 'explain with the model'.", diagnosis: "Spreading activation (Collins & Loftus, 1975): distance in the network, summation, threshold.", treatment: "Walk through the mechanism step by step, read off where swallow and crane sit relative to BIRD, then name the typicality effect." },
     visual: { type: "flow", title: "Why 'a swallow is a bird' is faster",
       steps: [
-        { h: "Read sentence", t: "SWALLOW and BIRD nodes activate" },
-        { h: "Activation spreads", t: "weakens with distance" },
-        { h: "Short link + shared features", t: "flies, small, sings: paths sum" },
-        { h: "Threshold reached sooner", t: "fast 'true'; crane's long link is slower" }
+        { h: "Read 'swallow'", t: "SWALLOW node activates" },
+        { h: "Activation spreads", t: "fades with time, distance, crowding" },
+        { h: "Summed at BIRD", t: "past threshold: answer 'yes'" },
+        { h: "Swallow vs crane", t: "next to BIRD vs at the edge" }
       ],
-      verdict: "Variable link strengths produce the typicality effect." },
+      verdict: "Shorter distance to BIRD, faster 'yes': the typicality effect." },
     answer: [
-      "In a <b>spreading-activation network</b> (Collins & Loftus, 1975), verifying 'A swallow is a bird' activates the SWALLOW and BIRD nodes. Activation spreads along their links, weakens with distance, and the statement is verified once enough activation accumulates past a <b>threshold</b>.",
-      "Typical members like the swallow are connected to BIRD by <b>short, strong links</b> and share many feature nodes with it (flies, small, sings), so activation arrives quickly and along several routes that sum. Atypical members like the crane have longer, weaker links and fewer shared typical features (long legs, wading), so the threshold is reached later.",
-      "The result is faster verification for typical members: the <b>typicality effect</b>. Robinson-Riegler puts it as a short distance between category prototypes and the category label. A strictly hierarchical network with equal links could not explain this, because swallow and crane would both be one link from BIRD."
+      "In a category verification task, <b>reaction time</b> is the informative measure, because the statements are easy and people make almost no errors. In a semantic network, concepts are nodes, and related concepts lie figuratively close together.",
+      "According to the <b>spreading-activation model</b> (Collins & Loftus, 1975), reading 'swallow' activates the SWALLOW node. The activation spreads along the links and weakens with time, with distance and with the number of concepts activated at once. The activation arriving at BIRD is summed, and when it passes a <b>threshold</b> you answer 'yes'.",
+      "In the network, SWALLOW sits directly next to BIRD, so activation arrives fast and strong. CRANE sits at the edge, mainly near other birds such as stork and heron, so its route to BIRD is long and activation arrives later and weaker. That is the <b>typicality effect</b>: 'a swallow is a bird' is verified faster than 'a crane is a bird'. In Robinson-Riegler's words, the distance between category prototypes and category labels is relatively short."
     ],
-    takeaway: "Swallow lives next door to BIRD, crane lives across town, so the swallow sentence clicks faster.",
-    trap: { wrong: "Describing the network picture without the process.", right: "Name the mechanism (spread, decay, summation, threshold) and say which link is shorter and why (feature overlap)." },
-    note: "Collins & Quillian's strict hierarchy is background. The network in the Canvas handout is not shown here; apply the same reasoning to its link lengths."
+    takeaway: "Swallow lives next door to BIRD, crane lives at the edge of town, so the swallow sentence clicks faster.",
+    trap: { wrong: "Describing the network picture without the process.", right: "Name the mechanism (spread, weakening, summation, threshold) and say which bird sits closer to BIRD in the network." },
+    note: null
   },
 
   {
@@ -185,22 +186,22 @@ IDQ[4] = {
     title: "A typicality effect for features?",
     canvas: "Eigenschapverificatietaken worden gebruikt om na te gaan hoe eigenschappen van categorieën worden opgeslagen en opgehaald. In deze taak verifiëren deelnemers eenvoudige stellingen zoals “Een kanarie is geel” of “Een kanarie zingt”. Bekijk het semantische netwerk hieronder. Op basis hiervan, denk je dat er zoiets bestaat als een typicaliteitseffect voor eigenschappen? (English: Feature verification tasks examine how properties of categories are stored and retrieved: 'A canary is yellow', 'A canary sings'. Look at the semantic network below. Based on it, do you think there is something like a typicality effect for properties?)",
     asks: "Are some properties of a concept checked faster than others, just as some members of a category are? Predict this from the network and explain the mechanism.",
-    triage: { symptom: "'Is there a typicality effect for features?': a prediction from the network.", diagnosis: "Feature verification; links to features differ in strength (pointy ears vs skin).", treatment: "Say yes, give the mechanism (link strength / proximity), cite the cat example, then apply to yellow vs sings and contrast with a hierarchy." },
+    triage: { symptom: "'Is there a typicality effect for features?': a prediction from the network.", diagnosis: "Feature verification; features differ in how close they lie to the concept (pointy ears vs skin).", treatment: "Say yes, give the mechanism (proximity), cite the cat example, then apply it to yellow (direct link) vs sings (longer route)." },
     visual: { type: "scale", title: "Distance of a feature from its concept", left: "Close: verified fast", right: "Far: verified slowly",
       points: [
-        { label: "cat: pointy ears", pos: 15 },
-        { label: "canary: yellow, sings", pos: 25, note: "compare link lengths" },
-        { label: "canary: breathes", pos: 75 },
+        { label: "cat: pointy ears", pos: 12 },
+        { label: "canary: yellow", pos: 22, note: "direct, strong link" },
+        { label: "canary: sings", pos: 62, note: "via BIRD and SINGING" },
         { label: "cat: has skin", pos: 88 }
       ] },
     answer: [
-      "Yes. In a spreading-activation network, <b>features are nodes too</b>, linked to concepts with varying strengths, so their verification times should differ just as exemplars do.",
-      "Features that are <b>characteristic and strongly associated</b> with a concept (for a canary, being yellow or singing) sit close to the CANARY node and are verified quickly. General or less associated features such as 'has skin' are distant and verified slowly. Robinson-Riegler reports exactly this: 'A cat has pointy ears' is verified faster than 'A cat has skin', which shows the proximity of features to the concept.",
-      "Which of 'yellow' and 'sings' is faster depends on their <b>relative link strengths</b> in the network shown: the shorter link predicts the faster response. A strict hierarchical model would predict no difference between them, because both are stored at the canary level; only 'has skin', stored at ANIMAL, would be slow."
+      "Yes. In a feature verification task the <b>same mechanism</b> works as in category verification: features are nodes too, and the closer a feature lies to the concept, the faster it is verified. Robinson-Riegler's example is that 'A cat has pointy ears' is verified faster than 'A cat has skin', which shows that pointy ears lie closer to the concept 'cat'.",
+      "In the network, <b>'yellow' is linked directly and strongly</b> to CANARY, so activation arrives quickly and 'a canary is yellow' is verified fast. 'Sings' belongs to a separate cluster (sing, singing, song) that is connected to CANARY mainly via BIRD and SINGING, so activation has to travel a <b>longer route</b> and 'a canary sings' is verified more slowly.",
+      "So features, just like exemplars, differ in how central they are to a concept: a kind of <b>typicality effect for features</b>."
     ],
-    takeaway: "Features have favourites too: 'pointy ears' is the robin of cat features.",
-    trap: { wrong: "Answering only 'yes'.", right: "Give the mechanism (link strength / proximity) and show that hierarchical and spreading-activation networks predict different things." },
-    note: "The network in the Canvas handout is not shown here; compare the link lengths of 'yellow' and 'sings' in it yourself."
+    takeaway: "Features have favourites too: 'yellow' is the swallow of canary features, 'sings' is the crane.",
+    trap: { wrong: "Answering only 'yes'.", right: "Give the mechanism (distance along the links) and apply it to the network: yellow is a direct link, sings is a longer route." },
+    note: null
   },
 
   {
@@ -260,21 +261,22 @@ IDQ[4] = {
     title: "Spotting semantic dementia in the video",
     canvas: "Semantische dementie is een progressieve ziekte, gekenmerkt door een geleidelijk en selectief verlies van conceptuele kennis, wat resulteert in een beperkte woordenschat tijdens het spreken, moeilijkheden met het begrijpen van wat er gezegd wordt, en problemen met het identificeren van objecten en personen in verschillende modaliteiten. Het algemene intellectuele vermogen, het dagelijkse geheugen en de visueel-perceptuele vaardigheden blijven relatief gespaard. De taal blijft vloeiend en goed gestructureerd. Hoe is deze beschrijving van toepassing op de vrouw in deze video? (English: Semantic dementia is a progressive disease with a gradual, selective loss of conceptual knowledge: limited vocabulary in speech, difficulty understanding what is said, and problems identifying objects and people across modalities. General intellect, everyday memory and visuo-perceptual skills stay relatively spared; language stays fluent and well structured. How does this description apply to the woman in the video?)",
     asks: "Go through the clinical description piece by piece and find evidence in the video for each part: what she has lost and what still works.",
-    triage: { symptom: "'Apply a clinical description to a case.'", diagnosis: "The SD profile: lost (concepts, vocabulary, comprehension, identification) vs spared (intellect, everyday memory, perception, fluency).", treatment: "Tick off each element with evidence from the video, then stress the contrast lost vs spared." },
-    visual: { type: "versus", title: "What to look and listen for",
+    triage: { symptom: "'Apply a clinical description to a case.'", diagnosis: "The SD profile: lost (concepts, vocabulary, comprehension, identification) vs spared (everyday memory, perception, fluency); the mirror image of amnesia.", treatment: "Tick off each element with what she shows, then stress the contrast lost vs spared and name the double dissociation." },
+    visual: { type: "versus", title: "What she shows",
       cols: [
-        { head: "Lost", sub: "meaning", tone: "bad", points: ["vague words: 'thing', 'stuff'", "'What is a ...?'", "fails to recognise objects, sounds, people"] },
-        { head: "Spared", sub: "everything else", tone: "good", points: ["fluent speech, normal grammar", "recalls today, appointments", "can see, copy, match objects"] }
+        { head: "Lost", sub: "meaning", tone: "bad", points: ["names will not come (anomia)", "general words: bird instead of duck", "typical names stretched to other items", "meaning gone, even seeing the object"] },
+        { head: "Spared", sub: "everything else", tone: "good", points: ["talks about her own life", "fluent sentences, few content words"] }
       ],
-      verdict: "Fluent words, missing meaning: a selective dissociation." },
+      verdict: "Meaning lost, life events kept: the mirror image of amnesia." },
     answer: [
-      "(Complete with your own observations.) The woman shows the core picture of semantic dementia: her speech is <b>fluent and grammatically well formed</b>, yet empty of specific content: she uses general terms such as [example] and struggles to name [example].",
-      "She also seems not to understand some common words, for example [example], which reflects a <b>loss of conceptual knowledge</b> rather than a pure word-finding problem.",
-      "By contrast, [example of intact day-to-day memory / reasoning / perception] shows that her general intellect, everyday memory and perception are <b>relatively spared</b>. This dissociation (meaning lost, other cognition intact) is what makes the disorder selective, and it matches Bozeat et al.'s patients, who could copy complex figures but could not name or draw objects from their names."
+      "The description fits her well. Semantic dementia is a <b>highly selective loss of conceptual knowledge</b>, caused by localised temporal-lobe atrophy, while the rest of cognition stays relatively spared, and you can see both sides in the woman.",
+      "On the lost side, she <b>cannot retrieve the names</b> of things (anomia, the most striking early symptom) and sometimes no longer knows what a word or object means, even when she sees the object. She uses general words instead of specific ones (bird instead of duck) and <b>overextends</b> the names of familiar, typical items to less familiar items from the same category.",
+      "On the spared side, she can still talk about events from her own life, so <b>day-to-day (episodic) memory</b> works, and she speaks in proper, fluent sentences, only with few content words.",
+      "This is the <b>mirror image of amnesia</b>: in amnesia episodic memory declines and concepts stay intact, in semantic dementia it is the other way round, a double dissociation. It matches Bozeat et al.'s patients, who could copy complex figures but could not name or draw objects from their names."
     ],
     takeaway: "Semantic dementia is smooth talk and good everyday memory, but ordinary words and objects have lost their meaning.",
     trap: { wrong: "She is just generally forgetful.", right: "SD is a loss of meaning, not of everyday memory; the spared abilities are the point of the contrast." },
-    note: "The video could not be opened, so the model answer is a template: fill in the [example] slots with your own observations from the video."
+    note: "The video could not be opened. The signs above come from the Pass the Year model answer, which describes what to recognise in her but not specific moments; check each one against the video and add a concrete moment if you can."
   },
 
   {
@@ -292,12 +294,12 @@ IDQ[4] = {
     answer: [
       "Our <b>bird lists overlapped strongly</b> (wings, feathers, beak, lays eggs, flies), and these features apply to almost all birds. Our furniture lists varied more and consisted of features that apply only to some items (legs, made of wood, used to sit on): a lamp or a rug has no legs.",
       "This mirrors Bozeat et al.'s finding that living things have <b>more shared features</b> than artefacts (0.59 vs 0.29 per item). Bird features are mostly perceptual parts, while furniture features are mostly functional.",
-      "Because shared features are the most robust in semantic dementia and the most likely to intrude, patients' animal drawings became <b>prototypical</b> (a duck with four legs), while artefact drawings mainly lost distinctive details and became box-like.",
-      "One caveat: furniture is a superordinate category, which shares few features by nature, while 'bird' often acts as a basic level, so the comparison partly reflects category level."
+      "Because widely shared features intrude most easily, patients made more intrusions for living things (a duck with four legs), while artefact drawings mainly became simpler and <b>box-like</b>.",
+      "Two caveats. Feature listing mainly measures <b>verbalisable knowledge</b>: nameable facts are over-reported and self-evident ones ('a bird has a front and a back') are left out, and in patients with anomia you cannot tell whether the concept or only the word is gone, which is why Bozeat et al. had patients draw. Also, furniture is a superordinate category, while 'bird' often acts as a basic level."
     ],
     takeaway: "Bird lists are clones, furniture lists are a garage sale: exactly Bozeat's shared-feature difference.",
-    trap: { wrong: "Listing the features is the answer.", right: "Draw the conclusion (shared vs distinctive), link it to intrusions and box-like drawings, and note that furniture is superordinate." },
-    note: "The bird and furniture lists are illustrative examples of what a group typically writes; your own group's lists may differ."
+    trap: { wrong: "Listing the features is the answer.", right: "Draw the conclusion (shared vs distinctive), link it to intrusions and box-like drawings, and say why Bozeat et al. used drawing instead of feature listing." },
+    note: "The bird and furniture lists are illustrative examples of what a group typically writes; your own group's lists may differ. The category-level caveat is own reasoning."
   },
 
   {
@@ -313,13 +315,13 @@ IDQ[4] = {
         { head: "Classical", cells: ["no", "no", "poor"] },
         { head: "Prototype", cells: ["yes", "yes", "best"] },
         { head: "Exemplar", cells: ["partly", "no", "partial"] },
-        { head: "Knowledge", cells: ["no prediction", "no prediction", "not informative"] }
+        { head: "Hierarchy (Warrington)", cells: ["specific first only", "no", "not enough"] }
       ] },
     answer: [
-      "The results fit a <b>feature-based, prototype (family-resemblance) view</b> best, implemented as a distributed feature network.",
-      "Patients <b>lost distinctive features first</b> and kept features shared across a domain; their animal drawings became 'prototypical' and gained intruding shared features, such as four legs on a duck. This is what we expect if concepts are sets of weighted, overlapping features: the shared, high-weight features that make up the prototype are the most robust, so as distinctive information fades the representation collapses toward the prototype.",
-      "The <b>classical view</b> cannot explain gradual, graded loss or intrusions. The <b>exemplar view</b> accounts for within-category substitutions but not for domain-level features that no specific exemplar possesses (no duck has four legs), and the knowledge view makes no prediction about which visual features are lost.",
-      "Bozeat et al. themselves interpret the data as a unitary but highly distributed conceptual network, in which domain differences arise from how features are distributed (Rogers et al., 2002a)."
+      "The results fit a <b>feature-based approach</b> best, in which concepts consist of features running from highly distinctive to widely shared. This comes closest to the prototype view with weighted features and the family resemblance behind it.",
+      "Patients <b>lost distinctive features first</b> (the horn of a rhinoceros) and kept widely shared ones longest. Shared features also intruded, so drawings became more 'prototypical' for the domain, such as a duck with four legs: as distinctive information fades, the concept collapses toward its prototype.",
+      "Other views fit worse. The <b>classical view</b> cannot explain graded loss or intrusions, and the exemplar view cannot explain domain features that no exemplar has (no duck has four legs). A purely <b>hierarchical model</b> (Warrington, 1975) explains the specific-to-general decline (duck, swan, bird, animal), but not typicality, vague membership, or why some categories (vehicles) are more coherent than others (household items).",
+      "Bozeat et al. conclude that semantic dementia is the breakdown of <b>one central, amodal semantic system</b>. The domain effect disappears once distinctiveness is taken into account: living things simply have more shared features (Rogers et al., 2002a)."
     ],
     takeaway: "Erosion reveals the skeleton: as details fade, what remains of a concept is its prototype.",
     trap: { wrong: "Picking a theory without testing it against the findings.", right: "Check each theory against specific results, and mention the distributed-network view the authors actually favour." },
@@ -355,23 +357,23 @@ IDQ[4] = {
     title: "Why letter fluency is an executive test",
     canvas: "De patiënten worden onderworpen aan een uitgebreide testbatterij, waarin ze onder meer een verbal fluency test met de letters F, A, en S afleggen. In deze test dienen deelnemers binnen 1 minuut zoveel mogelijk woorden te bedenken die beginnen met de doelletter. Leg uit waarom deze test wordt omschreven als een test voor executief functioneren. (Hint: probleem 2B) (English: The patients take an extensive test battery, including a verbal fluency test with the letters F, A and S: produce as many words as possible starting with the target letter within one minute. Explain why this test is described as a test of executive functioning. (Hint: problem 2B))",
     asks: "Producing F-words looks like a vocabulary test. Explain why it actually needs your brain's 'manager' (the central executive), and which control processes it uses.",
-    triage: { symptom: "'Why does a word test measure executive control?': link back to Problem 2B.", diagnosis: "Central executive; inhibition, updating, shifting; the lexicon is organised by meaning.", treatment: "Explain why letter retrieval cannot run on automatic spreading activation, list the executive steps, then add Bozeat's anomia caveat." },
+    triage: { symptom: "'Why does a word test measure executive control?': link back to Problem 2B.", diagnosis: "Problem 2B: Stuss (task setting, monitoring, energisation) and Miyake et al., 2000 (inhibition, shifting, updating); the lexicon is organised by meaning.", treatment: "Say it tests how you search, not what you know; map the task onto Stuss's and Miyake's processes; then add Bozeat's anomia caveat." },
     visual: { type: "flow", title: "Finding F-words in a meaning-sorted store",
       steps: [
-        { h: "Hold the rule", t: "F-words, no names, one minute" },
-        { h: "Plan sub-cues", t: "fa-, fe-, fl-, fr-" },
-        { h: "Monitor and inhibit", t: "no repeats, no wrong letters" },
-        { h: "Shift", t: "new sub-cluster when one runs dry" }
+        { h: "Task setting", t: "hold the rule, plan fa-, fe-, fi-" },
+        { h: "Inhibition", t: "hold back 'water' after 'fish'" },
+        { h: "Monitoring and updating", t: "right letter? said already?" },
+        { h: "Shifting and energisation", t: "new strategy, keep going a minute" }
       ],
-      verdict: "Inhibition, updating, shifting: the central executive at work." },
+      verdict: "Planning, checking and sustaining the search: executive control." },
     answer: [
-      "Letter fluency is an executive task because the <b>lexicon is organised by meaning</b> rather than by initial letter, so words starting with F cannot be retrieved through automatic spreading activation.",
-      "Instead, the person must use <b>controlled, strategic retrieval</b> under the central executive: keep the rule active in working memory, generate search strategies (e.g. 'fl-', 'fr-'), monitor and update which words have already been produced, inhibit rule-breaking or repeated responses, and shift to a new subcategory when one is exhausted. This covers the executive functions of <b>inhibition, updating and shifting</b>, and such tasks are sensitive to frontal-lobe function.",
-      "However, the task also depends on an intact vocabulary. In Bozeat et al.'s patients, poor letter fluency was attributed to <b>anomia</b> rather than executive dysfunction, showing that fluency scores must be interpreted alongside semantic ability: no test is process-pure."
+      "Letter fluency is an executive task because it is not about <b>what</b> you know but about <b>how</b> you plan, monitor and sustain the search through memory. The lexicon is organised by meaning, not by first letter, so F-words do not come up automatically.",
+      "In <b>Stuss's</b> terms the task needs task setting (choose a strategy such as 'fa-, fe-, fi-' and hold on to the rule), monitoring (check the letter and repeats, switch strategy when words dry up) and energisation (keep searching for the full minute). In <b>Miyake et al.'s (2000)</b> terms it needs inhibition (words related in meaning push forward, after 'fish' comes 'water', and must be held back), shifting between strategies, and updating which words you already said. All three rest on the shared ability to keep the task goal active: 'words with this letter'.",
+      "However, the task also depends on an intact vocabulary. In Bozeat et al.'s patients, poor letter fluency was attributed to <b>anomia</b> rather than executive dysfunction, so no test is process-pure."
     ],
-    takeaway: "Your word store is sorted by topic, so finding words by first letter needs a search plan run by the central executive.",
-    trap: { wrong: "It just measures how many words you know.", right: "It measures control processes (inhibition, updating, shifting); and in SD, low scores reflect anomia, not executive failure." },
-    note: "The executive-function framework (central executive, inhibition, updating, shifting) comes from Problem 2B, not from this theme's readings."
+    takeaway: "Your word store is sorted by meaning, so finding words by first letter needs a search plan that the executive sets, checks and keeps going.",
+    trap: { wrong: "It just measures how many words you know.", right: "It measures control processes (task setting, monitoring, inhibition, shifting, updating); and in SD, low scores reflect anomia, not executive failure." },
+    note: "Both executive frameworks (Stuss; Miyake et al., 2000) come from Problem 2B, not from this theme's readings. The anomia caveat comes from your notes on Bozeat et al."
   }
 
   ]

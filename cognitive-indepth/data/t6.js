@@ -1,22 +1,22 @@
 IDQ[6] = {
   n: 6,
   title: "Judgement and decision making",
-  readings: ["Matlin, Ch. 12 (Decision making)", "Sternberg et al. (heuristics and biases)", "Robinson-Riegler, Ch. 11 (Decision making)", "Eysenck & Keane (judgment and decision making)"],
+  readings: ["Matlin & Farmer, Cognition, Ch. 12", "Sternberg, Sternberg & Mio, Cognitive Psychology, Ch. 12", "Robinson-Riegler & Robinson-Riegler, Cognitive Psychology, Ch. 11", "Eysenck & Keane, Cognitive Psychology: A Student's Handbook, Ch. 13"],
   intro: "Block ABC is about judgment: how heuristics such as availability, representativeness and anchoring make our estimates of frequency and probability go wrong in predictable ways. Block DE is about decision making: prospect theory explains why the same choice gets different answers depending on the reference point, the context and the wording. The thread through both: people use shortcuts, and the shortcuts break the rules of probability and rational choice.",
   questions: [
     {
       id: "ABC1",
       block: "Block ABC · Heuristics and biases",
       title: "Why both spouses claim most chores",
-      canvas: "Two spouses each estimate which proportion of the household chores they do. The sum exceeds 100%. Why?",
+      canvas: "Two spouses each express in a percentage which proportion of the household chores they take care of. The sum exceeds 100%. Why is this the case?",
       asks: "Each partner says they do most of the housework, which is impossible. Explain which thinking shortcut makes each person overestimate their own share.",
       triage: { symptom: "People estimate how often or how much something happens.", diagnosis: "A frequency judgment, so the availability heuristic.", treatment: "Name availability, ask which examples come to mind more easily and why, then give the Ross and Sicoly (1979) numbers." },
       visual: { type: "bars", title: "Claimed share of the chores (Ross & Sicoly, 1979)", unit: "%", max: 160,
         groups: [ { label: "Each partner claims", bars: [ { label: "partner 1", value: 80, tone: "accent" }, { label: "partner 2", value: 80, tone: "accent" } ] },
                   { label: "Total", bars: [ { label: "claimed sum", value: 160, tone: "bad" }, { label: "real maximum", value: 100, tone: "good" } ] } ],
-        note: "Each partner said they did more of about 16 of 20 chores, so 80% each." },
+        note: "Each partner claimed about 16 of the 20 chores, so 80% each." },
       answer: [
-        "This is the <b>availability heuristic</b>: we estimate how often something happens by how easily examples come to mind. Ross and Sicoly (1979) asked married partners separately who did more of each of 20 chores, and each partner said they did more of about 16 of the 20. That would mean 80% each, and 80% + 80% is far more than 100%.",
+        "This is the <b>availability heuristic</b>: we estimate how often something happens by how easily examples come to mind. Ross and Sicoly (1979) asked married partners separately which of 20 chores they took care of, and each partner said they did about 16 of the 20 themselves. That would mean 80% each, and 80% + 80% is far more than 100%.",
         "Your own contributions are simply <b>more available</b> in memory. You were present and actively involved when you did a chore, so it was encoded more richly. You are often not there when your partner does theirs, and you think more about your own effort. So when you search memory for ‘who does the dishes?’, your own instances come back first and feel more frequent.",
         "Self-serving motives can add to this, but Sternberg et al. stress that availability also causes errors when no self-image is at stake (the -ing vs -n- words). The same pattern appeared in college basketball teams and joint lab tasks. Conclusion: each person is judging their memory, not the household."
       ],
@@ -28,7 +28,7 @@ IDQ[6] = {
       id: "ABC2",
       block: "Block ABC · Heuristics and biases",
       title: "Why one birth order looks likelier",
-      canvas: "People judge ♀♂♀♂♂♀ a more likely birth order in a family of six than ♂♀♂♂♂♂. Why?",
+      canvas: "People judge ♀♂♀♂♂♀ a more likely birth order in a family of six than ♂♀♂♂♂♂. Why is that?",
       asks: "Show with a quick calculation that both exact birth orders are equally likely, and explain why one still feels more likely.",
       triage: { symptom: "One specific sequence ‘looks’ more likely than another.", diagnosis: "Judgment by similarity, so the representativeness heuristic.", treatment: "Compute the real probability of each sequence, show they are equal, then name the two features that make one look representative." },
       visual: { type: "versus", title: "Two birth orders, same probability",
@@ -36,29 +36,29 @@ IDQ[6] = {
                 { head: "B G B B B B", sub: "feels unlikely", tone: "neutral", points: ["5 boys, unlike population", "run of four looks non-random", "probability (1/2)^6 = 1/64"] } ],
         verdict: "Looking random is not the same as being more probable." },
       answer: [
-        "Both orders are <b>equally likely</b>. Each birth is independent with a 1/2 chance of a girl or a boy, so any exact sequence of six has probability (1/2)⁶ = <b>1/64</b>. In Kahneman and Tversky's (1972) study, people told that 72 families had G B G B B G estimated fewer than 72 for B G B B B B, although the best estimate is also 72.",
+        "Both orders are <b>equally likely</b>. Each birth is independent with a 1/2 chance of a girl or a boy, so any exact sequence of six has probability (1/2)⁶ = <b>1/64</b>. In Kahneman and Tversky's (1972) study, people told that 72 families had one mixed order estimated fewer than 72 families for a lopsided order, although the best estimate is also 72.",
         "People use the <b>representativeness heuristic</b>: they judge probability by (1) how similar an outcome is to its population and (2) how well it reflects the process that produced it (Sternberg et al.). G B G B B G has three girls and three boys, matching the roughly 50:50 population, and it alternates irregularly, so it looks random. B G B B B B has five boys and a run of four, so it looks neither representative nor random.",
-        "The error is confusing a <b>class of outcomes</b> (‘three girls and three boys’, which really is more common) with one <b>specific sequence</b>. It also reflects the belief that small samples resemble the population (Tversky & Kahneman, 1971) and our underestimation of runs in random data."
+        "The error is confusing a <b>class of outcomes</b> with one <b>specific sequence</b>. There are 20 orders with three of each but only 6 with five boys and one girl, so the class ‘three and three’ really is more likely, but this one order is not. It also reflects the <b>law of small numbers</b>: we expect a short sequence to show the properties of the whole random process (Tversky & Kahneman, 1971)."
       ],
       takeaway: "Every exact sequence of six births is 1/64; only the category ‘3 and 3’ is more common.",
-      trap: { wrong: "Three girls and three boys is more likely, so that order is more likely.", right: "That is true for the class of outcomes, but each specific order within any class is exactly 1/64." },
+      trap: { wrong: "Three girls and three boys is more likely, so that order is more likely.", right: "That is true for the class (20 orders vs 6), but each specific order is exactly 1/64." },
       note: null
     },
     {
       id: "ABC3",
       block: "Block ABC · Heuristics and biases",
       title: "Confirmation bias via two heuristics",
-      canvas: "Confirmation bias can be explained in terms of both the availability heuristic and the anchoring-and-adjustment heuristic. How?",
+      canvas: "The confirmation bias is the tendency to search for, interpret, favor, and recall information in a way that confirms or supports one's prior beliefs or values. It can be explained both in terms of the availability heuristic and the anchoring-and-adjustment heuristic. How?",
       asks: "Define confirmation bias, then show two separate routes to it: one through what comes to mind (availability) and one through how little we move from our starting belief (anchoring).",
       triage: { symptom: "‘Explain bias X with heuristic Y and heuristic Z.’", diagnosis: "A linking question: bias plus two mechanisms.", treatment: "Define the bias, then walk through each heuristic's mechanism step by step and link it back to the bias." },
       visual: { type: "versus", title: "Two routes to confirmation bias",
-        cols: [ { head: "Availability", sub: "what comes to mind", tone: "accent", points: ["confirming cases noticed and rehearsed", "belief is the memory cue", "counterexamples not sought (illusory correlation)"] },
+        cols: [ { head: "Availability", sub: "what comes to mind", tone: "accent", points: ["confirming cases noticed and rehearsed", "belief is the memory cue", "counterexamples not sought"] },
                 { head: "Anchoring", sub: "how far we move", tone: "neutral", points: ["prior belief is the anchor", "adjustment from anchor too small", "anchor narrows the memory search"] } ],
         verdict: "Availability decides what evidence you see; anchoring decides how much it moves you." },
       answer: [
         "<b>Confirmation bias</b> is the tendency to search for, interpret, favour and recall information that confirms what we already believe. Both heuristics push us in that direction, but in different ways.",
-        "Via <b>availability</b>: we judge how often something is true by how easily examples come to mind. Confirming cases fitted our expectation, so we noticed, encoded and rehearsed them, and when we search memory our belief is the cue, so they come back first. Disconfirming cases were often missed or dismissed. Matlin shows this in <b>illusory correlations</b>: people attend to the one cell that confirms the stereotype and ignore the other three, and resist searching for counterexamples.",
-        "Via <b>anchoring and adjustment</b>: our prior belief acts as the anchor. New evidence should move us, but adjustments from an anchor are typically insufficient, so contradicting evidence shifts the belief only slightly. The anchor also restricts the memory search to information close to it. Matlin groups confirmation bias with anchoring as examples of endorsing current hypotheses instead of questioning them (top-down processing)."
+        "Via <b>availability</b>: we judge how often something is true by how easily examples come to mind. Confirming cases fitted our expectation, so we noticed, encoded and rehearsed them, and when we search memory our belief is the cue, so they come back first. Because they come to mind so easily, we think there are many of them. This is what happens in <b>illusory correlations</b> (Chapman & Chapman): people attend to the one confirming cell of the 2 × 2 table and do not search for counterexamples.",
+        "Via <b>anchoring and adjustment</b>: our prior belief acts as the anchor. New evidence should move us, but adjustments from an anchor are typically insufficient, so contradicting evidence shifts the belief only slightly. The anchor also restricts the memory search to information close to it. In Lord, Ross and Lepper (1979), supporters and opponents of the death penalty read the same two studies and ended up further apart than before."
       ],
       takeaway: "Your belief is both the search cue (availability) and the starting point you barely leave (anchoring).",
       trap: { wrong: "Explaining only availability, or only defining both heuristics.", right: "You must link each heuristic's mechanism to the bias; one route alone loses half the marks." },
@@ -68,37 +68,38 @@ IDQ[6] = {
       id: "ABC4",
       block: "Block ABC · Heuristics and biases",
       title: "Why everyone thinks they'd see the gorilla",
-      canvas: "Nearly 90% of people believe they would spot the gorilla in the inattentional-blindness video. Explain this using this problem’s literature.",
+      canvas: "In problem 1, we saw that when questioned about the inattentional blindness video with a gorilla making an appearance during a game of basketball, nearly 90% of people believe they would spot the gorilla. Explain this survey result using this problem’s literature.",
       asks: "Most people are sure they would notice the gorilla, but many viewers actually miss it. Explain this gap between belief and reality with the biases from this theme.",
       triage: { symptom: "People are too sure about their own ability.", diagnosis: "Overconfidence, fed by availability and hindsight.", treatment: "Name overconfidence, give its causes from the readings, explain the availability mechanism, and contrast belief with actual performance." },
-      visual: { type: "map", title: "Why people expect to notice", center: "Overconfidence: belief higher than performance",
-        branches: [ { h: "Availability", t: "misses are never stored in memory" }, { h: "No counterexamples", t: "people don't search for misses" }, { h: "Hindsight", t: "knowing the gorilla is there makes it obvious" }, { h: "Vivid description", t: "the question makes the gorilla salient" } ] },
+      visual: { type: "bars", title: "Belief vs reality for the gorilla", unit: "%", max: 100,
+        groups: [ { label: "Would notice it", bars: [ { label: "believe they would", value: 90, tone: "accent" }, { label: "actually noticed", value: 50, tone: "bad" } ] } ],
+        note: "Almost 90% expect to see it (survey); exactly half missed it (Simons & Chabris, 1999)." },
       answer: [
-        "In the studies about half of viewers miss the gorilla (Problem 1), yet nearly 90% think they would see it. This is <b>overconfidence</b>: confidence higher than performance justifies (Matlin). People overestimate their skills and judgment in many areas, for example being 100% confident but only 80% right (Fischhoff et al., 1977).",
-        "The main mechanism is <b>availability</b>. To judge ‘would I notice something unusual?’, people search memory. Times they did notice unexpected things are available, but times they missed something are, by definition, not in memory, because they never noticed them. So the evidence is one-sided and missing seems rare. Matlin's other causes also fit: people don't realise their knowledge rests on shaky assumptions, they don't seek counterexamples, and they ignore alternatives.",
+        "In Simons and Chabris (1999) exactly half of the viewers missed the gorilla (Problem 1), yet nearly 90% think they would see it. This is <b>overconfidence</b>: confidence higher than performance justifies (Matlin). People overestimate their skills and judgment in many areas: those who were 100% sure were right only 80% of the time (Fischhoff, Slovic & Lichtenstein, 1977). Here it concerns their own perception, while from Theme 1 you know that you mainly see what your attention is directed at.",
+        "The main mechanism is <b>availability</b>. To judge ‘would I notice something unusual?’, people search memory. Times they did notice unexpected things are available, but times they missed something are, by definition, not in memory, because they never noticed them. So the evidence is one-sided and missing seems rare. People also don't realise their judgment rests on a shaky assumption: that you always see what is conspicuous.",
         "<b>Hindsight</b> adds to it. People asked the question already know there is a gorilla, so it seems impossible to miss: the known outcome becomes the anchor and the adjustment is too small. The vivid description also makes the gorilla salient in a way it is not while you are counting passes."
       ],
       takeaway: "You can't remember what you never noticed, so your memory tells you that you always notice.",
       trap: { wrong: "Just saying ‘people are overconfident’.", right: "You need the mechanism: availability (misses leave no memory trace) plus hindsight from already knowing about the gorilla." },
-      note: "The ‘about half miss it’ figure comes from Problem 1 (attention theme); the source asks you to check the exact figures in your notes."
+      note: null
     },
     {
       id: "ABC5",
       block: "Block ABC · Heuristics and biases",
       title: "The skeptic and the lucky candle",
-      canvas: "People burn a candle for a positive outcome and justify it by recalling times it worked. How would a skeptic counter this using the research on heuristics?",
+      canvas: "Many people burn a candle when they hope for a positive outcome. When asked to justify this practice, they will often point to instances where they burned a candle for something and that something occurred. How would a skeptic counter this argument using the research on heuristics?",
       asks: "Someone believes candles work because they remember the times it worked. Explain what is wrong with that evidence and what a skeptic would ask for instead.",
       triage: { symptom: "‘I remember times X went together with Y.’", diagnosis: "Illusory correlation through availability, plus confirmation bias.", treatment: "Draw the 2 × 2 table, show the believer only uses one cell, and explain why the other cells are missing." },
       visual: { type: "grid", title: "The candle 2 × 2 table",
         cols: ["Good outcome", "No good outcome"],
-        rows: [ { head: "Candle lit", cells: ["remembered", "forgotten"] }, { head: "No candle", cells: ["never linked", "never linked"] } ] },
+        rows: [ { head: "Candle lit", cells: ["cell 1: remembered", "cell 2: forgotten"] }, { head: "No candle", cells: ["cell 3: ignored", "cell 4: ignored"] } ] },
       answer: [
-        "The skeptic would point to an <b>illusory correlation</b>: a perceived link between two variables (candles and good outcomes) without statistical evidence. To know whether candles work you need all four cells of a <b>2 × 2 table</b>: candle + good outcome, candle + no good outcome, no candle + good outcome, no candle + no good outcome. The believer only cites the first cell.",
-        "Why only that cell? The <b>availability heuristic</b>: hits are memorable and get retold, so they come to mind easily, while misses are forgotten or explained away (‘I didn't pray hard enough’), and good outcomes without a candle are never connected to candles at all. It is also <b>confirmation bias</b>: people look for confirming evidence and don't try to disconfirm the belief (Matlin). Hindsight can add to it, because after a good outcome it feels as if it was bound to happen.",
-        "The skeptic's counter: ‘How often did you light a candle and nothing happened, and how often did good things happen without one?’ If good outcomes are just as common without the candle, there is no relationship. As in Matlin's welfare example, the number of hits means nothing without the other cells."
+        "The skeptic would point to an <b>illusory correlation</b>: a perceived link between two variables (candles and good outcomes) without statistical evidence. To know whether candles work you need all four cells of a <b>2 × 2 table</b> (candle or not, good outcome or not), but the believer only cites the first: candle and it went well. There is only a relationship if good outcomes are more common after a candle (cell 1 out of cells 1 + 2) than without one (cell 3 out of cells 3 + 4).",
+        "Why only that cell? The <b>availability heuristic</b>: hits are memorable and get retold, so they come to mind easily, while misses are forgotten or explained away (‘I didn't pray hard enough’), and good outcomes without a candle are never connected to candles at all. It is also <b>confirmation bias</b>: believers search for and remember confirming cases and don't try to disconfirm the belief.",
+        "The skeptic can add two points. Many outcomes people light a candle for, such as passing an exam, already have a high <b>base rate</b>, so a good outcome proves nothing. And a few personal anecdotes are a small, selective sample (law of small numbers). So the skeptic asks: ‘How often did you light a candle and nothing happened, and how often did it go well without one?’"
       ],
       takeaway: "A correlation needs a comparison: what happens without the candle?",
-      trap: { wrong: "Answering only ‘it's coincidence’.", right: "Name illusory correlation, draw the four cells, and explain availability as the reason only one cell is remembered." },
+      trap: { wrong: "Answering only ‘it's coincidence’.", right: "Name illusory correlation, draw the four cells, compare cell 1 with cell 3, and explain availability as the reason only one cell is remembered." },
       note: null
     },
     {
@@ -114,7 +115,7 @@ IDQ[6] = {
       answer: [
         "The <b>conjunction rule</b> says two events together can never be more probable than either one alone: P(A & B) ≤ P(A) and P(A & B) ≤ P(B). The two fallacies differ in how many of these inequalities people break.",
         "The <b>conjunction fallacy</b> is judging the conjunction more probable than one of its parts. Linda is judged more likely to be a ‘feminist bank teller’ than a ‘bank teller’ (Tversky & Kahneman, 1983), although every feminist bank teller is a bank teller. Similarly, ‘over 55 and had a heart attack’ (30%) was rated above ‘had a heart attack’ (18%).",
-        "The <b>double conjunction fallacy</b> is stronger: the conjunction is judged more probable than <b>each</b> part separately. Crupi et al. (2018) found that 49% of medical experts judged a man with chronic anaemia more likely to have alcoholism and thalassemia trait than to have alcoholism, or to have thalassemia trait.",
+        "The <b>double conjunction fallacy</b> is stronger: the conjunction is judged more probable than <b>each</b> part separately. Crupi et al. (2018) found that 49% of medical experts judged a man with chronic anaemia more likely to have both alcoholism and thalassemia than to have alcoholism, and also more likely than to have thalassemia.",
         "The standard explanation is representativeness: the added detail makes the description more typical. Tentori et al. (2013) argue instead that people pick the hypothesis best supported by the evidence, and the double fallacy fits this, because the clinical evidence strongly supported the combined diagnosis."
       ],
       takeaway: "The single fallacy breaks the conjunction rule once; the double fallacy breaks it twice.",
@@ -125,7 +126,7 @@ IDQ[6] = {
       id: "ABC7",
       block: "Block ABC · Heuristics and biases",
       title: "Probability matching loses points",
-      canvas: "In Tversky and Edwards’ experiment, red lit on 70% of trials and green on 30%. Participants said ‘red’ on 70% and ‘green’ on 30% of trials. Why is this suboptimal, and how is it representativeness?",
+      canvas: "In an experiment by Tversky and Edwards, participants had to predict whether a red or a green lamp would light up. The experiment was set up in such a way that on 70% of trials the red lamp would light up and that on 30% of trials the green lamp would light up. Although the manipulation wasn’t disclosed to participants, they readily picked up on this and started responding “red” on 70% of the trials and “green” on 30% of the trials. This is a case where the use of the representativeness heuristic leads to suboptimal responding in that this response pattern doesn’t guarantee the highest possible number of correct responses or ‘hits’. Explain.",
       asks: "Calculate how often people are right when they copy the 70/30 pattern versus always saying red, and explain why people still copy the pattern.",
       triage: { symptom: "‘Which strategy gives the most hits?’", diagnosis: "Compare the expected accuracy of probability matching vs maximising.", treatment: "Compute P(hit) for each strategy, compare, then explain matching with representativeness." },
       visual: { type: "bars", title: "Expected hits per 100 trials", unit: "", max: 100,
@@ -144,7 +145,7 @@ IDQ[6] = {
       id: "ABC8",
       block: "Block ABC · Heuristics and biases",
       title: "The ‘man-who’ argument",
-      canvas: "Explain how ‘man-who’ arguments (‘I know a man who smoked his whole life and lived to 106’) are the representativeness heuristic gone wrong.",
+      canvas: "Explain how “man-who arguments” (e.g., \"I know a man who smoked his entire life and lived to be 106.\") are examples of the representativeness heuristic gone wrong.",
       asks: "Explain why one personal story is treated as stronger evidence than statistics, and which heuristic causes this.",
       triage: { symptom: "One vivid case is set against statistics.", diagnosis: "Small-sample representativeness (the ‘man-who’ argument).", treatment: "Name representativeness, point out the ignored sample size and base rates, and explain probability vs certainty." },
       visual: { type: "versus", title: "Anecdote vs statistics",
@@ -164,7 +165,7 @@ IDQ[6] = {
       id: "ABC9",
       block: "Block ABC · Heuristics and biases",
       title: "Positive test, rare disease",
-      canvas: "A rare disease affects 1%. Test sensitivity 95%, specificity 90%. What is the probability that a patient who tests positive has the disease? Does it match your intuition?",
+      canvas: "Imagine you are working in a health clinic that uses a test to diagnose a rare disease. Only 1% of the population has the disease (= base rate or prevalence of the disease). The test is known to have a high sensitivity (true positive rate) and high specificity (true negative rate). The probability that the test correctly identifies someone with the disease is 95%. The probability that the test correctly identifies someone without the disease is 90%. Calculate the probability that a patient actually has the disease given that they have tested positive. Does the result correspond to your intuition? Why (not)?",
       asks: "Work out how many positive tests are true positives, and explain why your gut says the answer is much higher.",
       triage: { symptom: "A base rate, a hit rate and a false-alarm rate, asking P(disease | positive).", diagnosis: "A Bayes or base-rate problem.", treatment: "Turn the percentages into natural frequencies for 10,000 people, fill in a tree, divide true positives by all positives, then explain base-rate neglect." },
       visual: { type: "flow", title: "Natural frequencies for 10,000 people",
@@ -173,7 +174,7 @@ IDQ[6] = {
       answer: [
         "Imagine <b>10,000 people</b> (natural frequencies; Gigerenzer & Hoffrage, 1995). With a 1% base rate, 100 have the disease and 9,900 do not. Sensitivity 95% means 95 of the 100 sick people test positive. Specificity 90% means 90% of the 9,900 healthy people test negative, so 10%, or 990, test positive.",
         "All positives = 95 + 990 = 1,085. So P(disease | positive) = 95 / 1,085 ≈ .088, about <b>9%</b>. With Bayes' theorem: (.01 × .95) / [(.01 × .95) + (.99 × .10)] = .0095 / .1085 ≈ .088.",
-        "This does not match intuition: most people guess around 90 to 95%. That is <b>base-rate neglect</b>: we focus on the test's accuracy and ignore that the disease is rare, so the many healthy people produce far more false positives (990) than the few sick people produce true positives (95). The same happens in the mammogram problem (Krynski & Tenenbaum, 2007). <b>Natural frequencies</b> make the answer much easier to see (16% vs 46% correct; Gigerenzer & Hoffrage, 1995)."
+        "This does not match intuition: most people guess around 90 to 95%. That is <b>base-rate neglect</b>: we focus on the test's accuracy and ignore that the disease is rare, so the many healthy people produce far more false positives (990) than the few sick people produce true positives (95). The same happens in the mammogram problem (Krynski & Tenenbaum, 2007). <b>Natural frequencies</b> make the answer much easier to see: 46% correct with frequencies against 16% with probabilities (Gigerenzer & Hoffrage, 1995)."
       ],
       takeaway: "Only about 9% of positives are sick, because 990 false positives swamp 95 true ones.",
       trap: { wrong: "The answer is 95%, the sensitivity of the test.", right: "Sensitivity is P(positive | disease); the question asks P(disease | positive), which needs the base rate." },
@@ -183,7 +184,7 @@ IDQ[6] = {
       id: "ABC10",
       block: "Block ABC · Heuristics and biases",
       title: "HARKing as hindsight bias",
-      canvas: "How can you explain HARKing (Hypothesizing After Results are Known) using this problem’s literature?",
+      canvas: "HARKing stands for Hypothesizing After Results are Known. It is a questionable research practice in which researchers conduct a study with a specific hypothesis in mind, but AFTER they obtain the results, they come up with an alternative hypothesis that fits the results better and present the study as if it was designed to test this new hypothesis all along. How can you explain this questionable behavior using this problem’s literature?",
       asks: "Researchers sometimes write their hypothesis after seeing the results and present it as if it came first. Explain with this theme's biases why this can feel honest to them.",
       triage: { symptom: "After knowing an outcome, people think they predicted it.", diagnosis: "Hindsight bias, plus confirmation bias, illusory correlation and overconfidence.", treatment: "Define hindsight bias, give its mechanism (anchoring, memory reconstruction), then map the other biases onto the researcher's behaviour." },
       visual: { type: "flow", title: "How HARKing happens",
@@ -192,7 +193,7 @@ IDQ[6] = {
       answer: [
         "The key concept is <b>hindsight bias</b>: once we know an outcome, we believe it was predictable and that we ‘knew it all along’ (Matlin; Sternberg et al.). People cannot predict experimental results above chance in advance, but after hearing them they find them obvious. So after seeing their data, researchers find the new hypothesis obvious and may sincerely feel they could have predicted it.",
         "The mechanism is <b>anchoring</b>: the known result acts as an anchor of 100% certainty, and people do not adjust their sense of predictability down enough (Matlin). Memory is also <b>reconstructed</b> to fit the outcome (Carli, 1999), so researchers may misremember what they originally expected.",
-        "Other biases add to it. Through <b>confirmation bias</b>, researchers search data and literature for support and pick the hypothesis that fits. Through illusory correlation, a chance pattern is seen as a real relationship, and overconfidence in one's own theory adds more (Trout, 2002). Sternberg et al. note hindsight bias hinders learning, and in science HARKing turns chance findings into apparently confirmed predictions."
+        "Other biases add to it. Through <b>confirmation bias</b>, researchers search data and literature for support and pick the hypothesis that fits. Through the law of small numbers, a chance pattern is seen as a real one, and <b>overconfidence</b> makes the story made up afterwards feel convincing (Trout, 2002). HARKing is not only a bias: publication pressure plays a part too. <b>Preregistration</b> works as debiasing, because the hypothesis is fixed before the data are known."
       ],
       takeaway: "HARKing is hindsight bias with a publication deadline.",
       trap: { wrong: "HARKing is simply dishonest.", right: "The question wants a cognitive explanation: hindsight bias makes the post-hoc hypothesis feel genuinely predicted." },
@@ -221,7 +222,7 @@ IDQ[6] = {
       id: "DE2",
       block: "Block DE · Decision making",
       title: "Why it's called prospect theory",
-      canvas: "Explain the name ‘prospect theory’.",
+      canvas: "Explain the name “prospect theory”. (i.e., Why is this theory called this way?)",
       asks: "Say what a ‘prospect’ is in decision research and why a theory of choosing between them carries that name.",
       triage: { symptom: "‘Why is it called…?’", diagnosis: "Unpack the key term.", treatment: "Define a prospect, say what the theory does with prospects, and link the name to its core idea of gains and losses from a reference point." },
       visual: { type: "flow", title: "What a prospect is and what the theory does",
@@ -229,17 +230,17 @@ IDQ[6] = {
         verdict: "A theory of how people view what they might gain or lose." },
       answer: [
         "In decision research a <b>prospect</b> is a risky option: a gamble with possible outcomes and their probabilities, such as ‘1/3 chance that 600 people will be saved, 2/3 chance that nobody will be saved’, or ‘80% chance to win $4’. Kahneman and Tversky (1979) developed a theory of how people evaluate such prospects and choose between them under risk, hence ‘prospect theory’.",
-        "The name also fits the theory's core idea. People evaluate the prospect of a <b>change</b>, what they stand to gain or lose from where they are now (the <b>reference point</b>), rather than final states of wealth as expected utility theory assumes (Robinson-Riegler). It is a <b>descriptive</b> theory: it describes how people actually value prospects and why their choices violate expected utility."
+        "The name also fits the theory's core idea. People evaluate the prospect of a <b>change</b>, what they stand to gain or lose from where they are now (the <b>reference point</b>), rather than final states of wealth as expected utility theory assumes (Robinson-Riegler). It is a <b>descriptive</b> theory: it describes how people actually value prospects and why their choices violate expected utility. A critical note: Kahneman later said the name was chosen mainly because it was recognisable and distinctive, not because the word itself explains much."
       ],
       takeaway: "Prospect theory is a theory of how people evaluate risky options as gains or losses from where they stand.",
       trap: { wrong: "It is a normative theory about how people should choose.", right: "It is descriptive: it explains how people actually choose, including where they break expected utility." },
-      note: "The readings do not explain the name; the meaning of ‘prospect’ here is the standard one from Kahneman and Tversky's 1979 paper, Prospect theory: An analysis of decision under risk."
+      note: null
     },
     {
       id: "DE3",
       block: "Block DE · Decision making",
       title: "The shape of the value function",
-      canvas: "Prospect theory proposes a function that expresses subjective value as a function of actual value. Explain its main characteristics.",
+      canvas: "Prospect theory proposes a function that expresses subjective value as a function of actual value. Explain the main characteristics of this function.",
       asks: "Describe the prospect-theory curve: where it starts, how it bends for gains and for losses, and why the loss side is steeper.",
       triage: { symptom: "A graph of subjective value against actual value.", diagnosis: "The prospect-theory value function.", treatment: "Describe the origin, the shape on the gain side, the shape on the loss side, the steepness, and the consequence for framing." },
       visual: { type: "map", title: "Main features of the value function", center: "S-shaped curve around a reference point",
@@ -257,18 +258,18 @@ IDQ[6] = {
       id: "DE4",
       block: "Block DE · Decision making",
       title: "Reading risk attitudes off the curve",
-      canvas: "Explain how this function shows why people are risk averse for gains and risk prone for losses.",
+      canvas: "Explain how this function can be used to see why people are risk averse for gains and risk prone for losses.",
       asks: "Use the bend of the value curve to show why people take the sure option when gaining but gamble when losing, even when both options have the same expected value.",
       triage: { symptom: "‘Use the curve to explain risk attitudes.’", diagnosis: "Compare v(sure) with p × v(gamble) on a concave vs a convex curve.", treatment: "Pick one equal-expected-value example (the Asian disease problem), read the values off the curve on each side, then add loss aversion." },
       visual: { type: "versus", title: "Same expected value, different feeling",
         cols: [ { head: "Gain side", sub: "concave", tone: "good", points: ["v(600) less than 3 × v(200)", "sure 200 saved beats the gamble", "risk averse: 72% chose A"] },
-                { head: "Loss side", sub: "convex", tone: "bad", points: ["600 deaths not three times as bad", "sure loss of 400 feels worse", "risk prone: 78% chose D"] } ],
+                { head: "Loss side", sub: "convex", tone: "bad", points: ["600 deaths under 1.5 × as bad as 400", "sure loss of 400 feels worse", "risk prone: 78% chose D"] } ],
         verdict: "Concave means play safe; convex means gamble." },
       answer: [
         "Take the Asian disease problem: the sure and risky options have the <b>same expected value</b> (200 saved = 1/3 × 600 saved). The curve's shape decides which one feels better.",
         "On the <b>gain side</b> the curve is concave, so it flattens: v(600) is less than 3 × v(200), because saving 600 does not feel three times as good as saving 200. The sure gain v(200) is therefore worth more than the gamble, 1/3 × v(600). People take the sure thing and are <b>risk averse</b> (72% chose Program A).",
-        "On the <b>loss side</b> the curve is convex and also flattens: 600 deaths do not feel three times as bad as 200, so −v(600) × 2/3 is less negative than −v(400). The sure loss of 400 feels worse than a 2/3 chance of losing 600, and people gamble: <b>risk prone</b> (78% chose Program D).",
-        "Loss aversion strengthens this, because people are especially motivated to avoid a sure loss. Porcelli and Delgado (2009) showed acute stress makes both tendencies stronger: risky choices were .42 for gains vs .61 for losses without stress, and .33 vs .66 under stress."
+        "On the <b>loss side</b> the curve is convex and also flattens: 600 deaths do not feel 1.5 times as bad as 400 deaths, so 2/3 × v(−600) is less negative than v(−400). The sure loss of 400 feels worse than a 2/3 chance of losing 600, and people gamble: <b>risk prone</b> (78% chose Program D).",
+        "Porcelli and Delgado (2009) showed acute stress makes both tendencies stronger: risky choices were .42 for gains vs .61 for losses without stress, and .33 vs .66 under stress."
       ],
       takeaway: "The bend of the curve is the risk attitude: concave for gains means play safe, convex for losses means gamble.",
       trap: { wrong: "Only quoting 72% and 78% as the explanation.", right: "The question asks you to use the curve: compare v(sure) with p × v(gamble) on each side." },
@@ -278,7 +279,7 @@ IDQ[6] = {
       id: "DE5",
       block: "Block DE · Decision making",
       title: "Context framing vs wording framing",
-      canvas: "Use (i) background context and (ii) wording/framing to explain the difference between demonstrations 12.7 and 12.8 in Matlin.",
+      canvas: "Both the background context of the choice (i), and the way in which a question is worded or framed (ii) influence decisions. Use factors (i) and (ii) to explain the difference between demo 12.7 and demo 12.8 in the chapter by Matlin.",
       asks: "Both demos give different answers to problems with identical maths. Show that 12.7 changes the situation (what was lost) and 12.8 changes only the words.",
       triage: { symptom: "Two demos with identical maths but different choices.", diagnosis: "Framing: identify which factor changes in each demo.", treatment: "For each demo say what is identical, what differs, the result, and the mechanism." },
       visual: { type: "grid", title: "Demo 12.7 vs demo 12.8",
@@ -286,7 +287,7 @@ IDQ[6] = {
         rows: [ { head: "Factor", cells: ["background context", "wording"] }, { head: "Identical", cells: ["€20 lost, €20 ticket", "outcomes and probabilities"] }, { head: "Differs", cells: ["lost ticket vs lost note", "lives saved vs lives lost"] }, { head: "Result", cells: ["46% vs 88% buy", "72% sure vs 78% risky"] }, { head: "Mechanism", cells: ["mental accounting", "reference point shifts"] } ] },
       answer: [
         "Matlin's <b>framing effect</b> shows that decisions depend on (1) the <b>background context</b> of the choice and (2) the <b>wording</b> of the question. Demo 12.7 shows the first, demo 12.8 the second.",
-        "In demo 12.7 you lose €20 either way and must decide whether to pay €20 for a concert ticket, so the problems are financially identical. Only the background differs: you lost the ticket or a €20 note. We keep <b>mental accounts</b> by topic, so a lost ticket is charged to the ‘concert account’ and a new one makes the concert cost €40 (only 46% would buy). The lost note comes from general cash, so it seems irrelevant (88% would buy; Kahneman & Tversky, 1984).",
+        "In demo 12.7 you lose €20 either way and must decide whether to pay €20 for a concert ticket, so the problems are financially identical. Only the background differs: you lost the ticket or a €20 note. We keep <b>mental accounts</b> by topic, so a lost ticket is charged to the ‘concert account’ and a new one makes the concert cost €40 (only 46% would buy). The lost note comes from general cash, so it seems irrelevant (88% would buy; Tversky & Kahneman, 1981).",
         "In demo 12.8 the context (600 people, two programmes) and outcomes are identical; only the words change from lives saved to lives lost. With gain wording 72% chose the sure option A, and with loss wording 78% chose the risky option D (Tversky & Kahneman, 1981). The words move the reference point, so the same outcome is coded as a gain or a loss. In short, 12.7 changes what happened, 12.8 changes how it is said."
       ],
       takeaway: "12.7 changes the situation around the choice; 12.8 changes only the description.",
@@ -297,7 +298,7 @@ IDQ[6] = {
       id: "DE6",
       block: "Block DE · Decision making",
       title: "Demo 12.8 breaks invariance",
-      canvas: "Explain how demonstration 12.8 is an example of a violation of invariance (an assumption of expected utility theory).",
+      canvas: "Explain how demonstration 12.8 is an example of a violation of invariance (one of expected utility theory’s assumptions).",
       asks: "Define invariance, show that the two versions of the problem describe exactly the same options, and show that people's choices still flip.",
       triage: { symptom: "‘Violation of an assumption.’", diagnosis: "State the principle, then show the data contradict it.", treatment: "Define invariance, show A ≡ C and B ≡ D, show the majority preference reverses, and link to expected utility as normative." },
       visual: { type: "versus", title: "Same options, opposite choices",

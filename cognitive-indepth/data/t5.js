@@ -1,7 +1,7 @@
 IDQ[5] = {
   n: 5,
   title: "Mental imagery",
-  readings: ["Resources A, B & C: Sternberg et al. (Table 7.1) and the imagery debate", "Besken & Mulligan (2021), the bizarreness effect"],
+  readings: ["Resources A, B & C: Sternberg, Sternberg & Mio, Cognitive Psychology, Ch. 7 (incl. Table 7.1)", "Resources A, B & C: Matlin, Cognitive Psychology, Ch. 7 (mental rotation, imagery)", "Resource D: Besken & Mulligan (2021), Journal of Experimental Psychology: Learning, Memory, and Cognition"],
   intro: "This theme asks one big question: in what format does the mind store knowledge, as pictures, as words, or as abstract meaning? Questions AB1 to AB8 test the theories (dual code, propositional, analog, functional equivalence) against the classic experiments. Questions D1 to D5 use Besken and Mulligan (2021) to test whether the bizarreness effect in memory really runs on images.",
   questions: [
     {
@@ -19,7 +19,7 @@ IDQ[5] = {
       answer: [
         "Table 7.1 shows each relationship (action, attribute, spatial position, class membership) in three ways: in <b>words</b>, as a <b>proposition</b> and as an <b>image</b>. The words column plus the image column illustrate dual-code theory; the middle proposition column illustrates propositional theory.",
         "<b>Dual-code theory</b> (Paivio) says we have two separate codes: a verbal (symbolic) code and an imaginal (analog) code, each storing information in its own format. Images are a real code, supported by evidence such as concrete words and Brooks' selective interference.",
-        "<b>Propositional theory</b> (Pylyshyn; Anderson & Bower) says a relationship is stored only once, as abstract meaning, for example Bite (mouse, cat). Both pictures and sentences are stored as propositions and re-created at retrieval (Clark & Chase, 1972), so images are <b>epiphenomena</b>, by-products.",
+        "<b>Propositional theory</b> (Pylyshyn; Anderson & Bower) says a relationship is stored only once, as abstract meaning, for example Bite (mouse, cat). Both pictures and sentences are stored as propositions and re-created at retrieval (Clark & Chase, 1972), so images are <b>epiphenomena</b>, by-products. Support: in Reed (1974) people rarely found hidden parts in an imagined figure (only 14% correct).",
         "So the key difference is two modality-specific codes versus one amodal code. Note that the predicate calculus is only shorthand, not the literal form in the mind, and people may use both kinds of representation (Talasli, 1990)."
       ],
       takeaway: "Dual coding stores the same fact twice, as a picture and a word; propositional theory stores it once, as meaning.",
@@ -45,8 +45,8 @@ IDQ[5] = {
       answer: [
         "The organising principle is <b>resemblance</b>: does the representation look like what it stands for? This splits the terms into an analog branch and a symbolic branch.",
         "<b>Analog</b> and <b>depictive</b> are synonyms: the representation resembles its object and keeps its physical and spatial relations, like an analog clock. The typical example is a <b>mental image</b>. A <b>symbol</b> is the opposite: it is chosen arbitrarily and does not resemble what it stands for, like '9' or a digital clock.",
-        "Inside the symbolic branch, the <b>verbal</b> code is language-specific and its units are words. A <b>proposition</b> is also symbolic but amodal: the abstract meaning behind a relationship, such as Bite (mouse, cat), which is neither a word nor an image. Words (and images) can express propositions.",
-        "This links to the theories: dual-code theory uses the mental image and the word branches, propositional theory says everything is ultimately stored as propositions, and the imagery debate is analog versus propositional."
+        "Inside the symbolic branch, the <b>verbal</b> code is language-specific and its units are words. A <b>proposition</b> is a third, <b>descriptive</b> kind: the abstract, amodal meaning behind a relationship, such as Bite (mouse, cat), which is neither a word nor an image. Words (and images) can express propositions.",
+        "This links to the theories: dual-code theory uses the mental image and the word branches, propositional theory says only propositions are stored and the other two are reconstructed from them, and the imagery debate runs along the depictive versus descriptive axis."
       ],
       takeaway: "Picture = looks like it; word = stands for it; proposition = what it means.",
       trap: { wrong: "Analog and depictive are two separate branches.", right: "They are synonyms, so they belong in one box." },
@@ -64,7 +64,7 @@ IDQ[5] = {
       answer: [
         "Onomatopoeia are atypical because their form <b>resembles</b> what they represent: the word sounds like the sound it names. Normal words do not do this.",
         "Typical words are <b>symbolic codes</b>: a symbol is chosen arbitrarily to stand for something it does not perceptually resemble (Sternberg et al.). Nothing about the sound of 'dog' resembles a dog. Words like buzz, cuckoo, splash and meow break this rule, and resemblance is the defining property of an <b>analog code</b>.",
-        "So onomatopoeia are a <b>hybrid</b>: they are verbal units of a language with an analog element, which blurs the clean dual-code split between symbolic words and analog images. They are still partly conventional (an English dog says 'woof', a Dutch dog 'waf'), so the resemblance is approximate, not a copy."
+        "So onomatopoeia are a <b>hybrid</b>: they are verbal units of a language with an analog element, which blurs the clean dual-code split between symbolic words and analog images. They are still partly conventional (dogs say 'woof' in English, 'wan-wan' in Japanese), so the resemblance is approximate, not a copy."
       ],
       takeaway: "Onomatopoeia are words that partly work like analog codes.",
       trap: { wrong: "Onomatopoeia are fully analog.", right: "They differ between languages, so they are still partly conventional symbols." },
@@ -86,7 +86,7 @@ IDQ[5] = {
         "The finding supports an <b>analog</b> (picture-like) representation and functional equivalence. Both pictures show an eagle, so the correct answer is 'yes' both times; the only difference is the <b>shape</b>. The sentence implies a flying eagle with spread wings, and the slower picture showed an eagle with folded wings (perched).",
         "The <b>propositional</b> prediction: the sentence is stored as abstract meaning, for example SEE(ranger, eagle), LOCATION(eagle, sky). Wing shape is not part of that meaning, so both pictures should be verified equally fast.",
         "The <b>analog</b> prediction: readers build a picture-like simulation of the scene, including the eagle's implied shape. A picture that mismatches this simulation conflicts with it, so verification is slower.",
-        "The mismatching picture was indeed slower, so readers built a simulation. This fits analog imagery, functional equivalence and also dual coding, but it is hard to explain with a purely propositional code."
+        "The mismatching picture was indeed slower, so readers built a simulation. The word 'eagle' is the same for both pictures, so neither the verbal code nor a proposition predicts a difference. The result fits analog imagery and functional equivalence: people compare an imagined shape the way they compare a seen shape (Shepard & Chipman, 1970)."
       ],
       takeaway: "Understanding a sentence seems to create a picture-like simulation with details that were never stated.",
       trap: { wrong: "It supports propositions because the task was verbal.", right: "Propositions do not code shape, so they predict no difference; the difference points to an analog simulation." },
@@ -102,7 +102,7 @@ IDQ[5] = {
       visual: { type: "map", title: "Why propositions fit the computer", center: "Propositions = the mind's machine code",
         branches: [ { h: "Discrete symbols", t: "syntax like program code" }, { h: "One data format", t: "stores pictures and sentences alike" }, { h: "No mind's eye", t: "meaning stored without modality" }, { h: "Images fit less", t: "rotating, scanning suit analog devices" } ] },
       answer: [
-        "The <b>propositional</b> representation fits best. The 20th-century <b>computer metaphor</b> sees the mind as an information processor that manipulates discrete symbols according to formal rules (compare Newell & Simon's simulations).",
+        "The <b>propositional</b> representation fits best. The 20th-century <b>computer metaphor</b> sees the mind as an information processor that manipulates discrete symbols according to formal rules. A computer stores everything, even a photo, as abstract code and only builds an image when it is displayed.",
         "Propositions are abstract, amodal, language-like symbol structures (<b>'mentalese'</b>) with a clear syntax, [relation](subject, object), exactly like statements in a program. Pylyshyn, the main propositionalist, explicitly argued for this computational view. One format can store both pictures and sentences, just as a computer stores any data as code, and images are only by-products of the computation (epiphenomena).",
         "<b>Analog images</b>, which are rotated and scanned through intermediate states, fit an analog device better than a digital computer. That mismatch is partly why the imagery debate was so heated."
       ],
@@ -143,13 +143,13 @@ IDQ[5] = {
         steps: [ { h: "0°", t: "fastest: no rotation needed" }, { h: "90°", t: "slower: rotate a quarter turn" }, { h: "180°", t: "slowest: rotate half a turn" }, { h: "Deviations?", t: "5 trials, no practice, strategies" } ],
         verdict: "More turn, more time: RT rises roughly linearly." },
       answer: [
-        "Earlier studies (<b>Shepard & Metzler, 1971</b>; replicated with letters, e.g. Cooper & Shepard) found that reaction time rises roughly <b>linearly</b> with the angle between the two figures, so 0° is fastest and 180° slowest. If your data show this, they are in line with earlier research and support the analog view: you rotate the image through intermediate positions.",
-        "Your data might deviate because of the design. There were only <b>5 trials per condition</b>, so one slow trial distorts a mean. There was no practice, so early trials are slow; only three angles make linearity hard to judge; and letters can be solved with feature strategies ('where is the tail?') instead of rotation. Mixing 'same' and 'mirror' trials, fatigue, distraction or pressing the wrong key add noise.",
-        "To judge fairly, look at correct 'same' trials, use medians, and compare with your group's pooled data. A small, noisy experiment can still show the rotation effect, but these limits explain any deviation."
+        "Earlier studies (<b>Shepard & Metzler, 1971</b>, later replicated with letters) found that reaction time rises roughly <b>linearly</b> with the angle between the two figures, so 0° is fastest and 180° slowest. If your data show this, they are in line with earlier research and support the analog view: you rotate the image through intermediate positions.",
+        "Your data might deviate because of the design. There were only <b>5 trials per condition</b>, so one slow or distracted trial distorts a mean. There was no practice, so early trials are slow. The linear pattern holds for <b>'same' pairs</b>, so mixing in mirrored trials blurs it. And you are <b>one participant</b>, while Shepard and Metzler averaged over 1,600 pairs.",
+        "So compare mainly your correct 'same' trials with the literature. A small, noisy experiment can still show the rotation effect, and these limits explain any deviation."
       ],
       takeaway: "More turn, more time: a linear rise in RT supports an analog image being rotated.",
       trap: { wrong: "Just describe your own numbers.", right: "You must compare them to the expected pattern and explain why linear RTs support the analog code." },
-      note: "Your own results come from your personal experiment, not from the readings."
+      note: "Your own numbers come from your personal experiment; the expected pattern (0° fastest, 180° slowest) is confirmed by the reader."
     },
     {
       id: "AB8",
@@ -165,9 +165,9 @@ IDQ[5] = {
           { head: "Constructed image", sub: "analog reply", tone: "neutral", points: ["image built from knowledge", "not a photocopy"] } ],
         verdict: "Knowledge, not appearance, set the travel time." },
       answer: [
-        "No, this is not evidence for a purely <b>visual</b> representation. In Kosslyn et al. (1978), longer physical distances on the studied map gave longer scan times, which was taken as evidence for a picture-like image.",
-        "Here the maps were <b>visually identical</b>; only the number (20 vs 80 miles) differed. If people simply scanned a visual copy of the map, scan times should have been equal. They were not, so conceptual knowledge of the distance shaped the scan. That fits the propositional critique, Pylyshyn's <b>tacit knowledge</b> (people simulate what they know travel should take), and worries about task demands.",
-        "An analog theorist can reply that images are <b>constructed</b> from all available knowledge, so the image may encode the represented distance spatially. Either way, the image is not a photocopy of what was seen. The balanced conclusion: knowledge, not just visual appearance, determines mental travel time, which weakens a purely visual reading of scanning studies."
+        "No, not as such. In the island map study (Kosslyn, Ball & Reiser, 1978), longer physical distances on the studied map gave longer scan times, which was taken as evidence for a picture-like image.",
+        "Here the maps were <b>visually identical</b>; only the number (20 vs 80 miles) differed. If people simply scanned a visual copy of the map, scan times should have been equal. They were not, so conceptual knowledge of the distance shaped the scan. That fits the propositional critique, Pylyshyn's <b>tacit knowledge</b> (people simulate what they know travel should take), the same worry as <b>experimenter expectancy</b> in the original map study.",
+        "An analog theorist can reply that images are <b>constructed</b> from all available knowledge, so the image may encode the represented distance spatially. Either way, the image is not a photocopy of what was seen. The balanced conclusion: scanning time does not depend only on the perceived map, so this is no evidence for visual representation, but no definitive evidence against it either."
       ],
       takeaway: "Same picture, different number, different travel time: knowledge drives the trip.",
       trap: { wrong: "Yes, it is visual, because scanning time increased.", right: "The maps were identical, so the extra time must come from knowledge, not from the picture." },
@@ -212,7 +212,7 @@ IDQ[5] = {
       answer: [
         "The distractors selectively loaded visual and visuospatial working memory, yet the bizarreness effect was unchanged. So the <b>imaginal (analog) code</b> contributes little to this effect.",
         "What remains are non-imaginal representations: the <b>verbal code</b> of dual-code theory, or abstract <b>propositional</b>/semantic representations of meaning. The authors suggest that bizarre sentences get more verbal or semantic processing, to understand the odd relations among the nouns. In imagery-debate terms this fits the propositional side: the meaning, for example FLOAT(banker, newspaper, puddle), not a picture, makes the sentence memorable.",
-        "This does not show that images do not exist: DVN does eliminate the <b>concreteness effect</b>, which is an imagery effect. Different memory effects rely on different representations, and selective interference (Brooks, 1968; Segal & Fusella) is the tool to find out which."
+        "This does not refute the analog code: the same distractors do reduce the <b>concreteness effect</b>. So imagery exists as a separate code, which fits <b>dual-code theory</b>, but it does not carry this effect, and the name 'bizarre imagery effect' is misleading. As with ambiguous figures (Reed; Chambers & Reisberg), which code people use depends on the task."
       ],
       takeaway: "Block the pictures, keep the meaning: the effect survives, so it lives in the meaning.",
       trap: { wrong: "So imagery does not exist at all.", right: "The concreteness effect is disrupted by DVN, so images matter for other effects, just not this one." },
@@ -230,7 +230,7 @@ IDQ[5] = {
       answer: [
         "They presume the <b>visuo-spatial sketchpad</b> is involved. Baddeley & Hitch's model has a central executive, a phonological loop and a visuo-spatial sketchpad (later also an episodic buffer).",
         "DVN loads the visual part of the sketchpad (<b>visual cache</b>), spatial tapping loads its spatial part (<b>inner scribe</b>), and the visual span task (Exp 3-4) loads visual storage. None of them should affect the <b>phonological loop</b> or verbal processing, which is why the sentences can still be read and understood.",
-        "So the logic is: if the bizarreness effect were imagery-based, loading the sketchpad should reduce it. Footnote 1 says the tasks come from this model; the authors add that newer work doubts a separate visual store (Morey, 2018), but their test only needs tasks that selectively impair visuospatial processing."
+        "The logic is <b>selective interference</b>: a second task only disrupts the first if both use the same limited subsystem, so if the effect were imagery-based, loading the sketchpad should reduce it. Critical note: the phonological loop was never manipulated (for example with articulatory suppression), so a verbal basis is only inferred by ruling out the sketchpad, not shown directly."
       ],
       takeaway: "Jam the sketchpad, leave the loop: the design tests the picture route only.",
       trap: { wrong: "The phonological loop.", right: "The loop was deliberately spared so the sentences could still be processed." },
@@ -267,17 +267,18 @@ IDQ[5] = {
       triage: { symptom: "'Inspect Table 1 ... intended effects? Do you agree?'", diagnosis: "Evaluate a manipulation check and a conclusion", treatment: "Read the numbers, judge the manipulation, weigh the authors' counter-arguments, then give a reasoned verdict." },
       visual: { type: "bars", title: "Bizarre-sentence vividness, Table 1", unit: "", max: 5,
         groups: [
+          { label: "Exp 1", bars: [ { label: "controls (mean)", value: 2.95, tone: "neutral" }, { label: "DVN", value: 3.01, tone: "bad" } ] },
           { label: "Exp 2", bars: [ { label: "control", value: 2.82, tone: "neutral" }, { label: "tapping", value: 3.36, tone: "bad" } ] },
           { label: "Exp 3", bars: [ { label: "control", value: 2.92, tone: "neutral" }, { label: "span task", value: 3.10, tone: "bad" } ] } ],
-        note: "Ratings did not drop under distraction (common sentences: Exp 2 4.06 vs 4.17, Exp 3 4.03 vs 3.96)." },
+        note: "Exp 1 control = mean of the two controls (2.99 and 2.91). Ratings did not drop under distraction (common sentences: Exp 1 3.80 vs 3.84, Exp 2 4.06 vs 4.17, Exp 3 4.03 vs 3.96)." },
       answer: [
-        "Judged by the ratings, the distractors did <b>not clearly work</b>. Vividness was not lower under distraction: Exp 1 DVN 3.01/3.84 vs controls 2.99/3.58 and 2.91/4.01; Exp 2 tapping 3.36/4.17 vs control 2.82/4.06 (even higher); Exp 3 span 3.10/3.96 vs 2.92/4.03. This is a problem, because the conclusion 'imagery plays little role' assumes imagery was disrupted.",
-        "The authors defend themselves: the tasks are <b>validated</b> selective disruptors (DVN eliminates the concreteness effect); vividness <b>RTs were slower</b> under distraction (e.g. 1,106 vs 839 ms); in a between-subjects design people cannot compare their image with an undistracted one, so ratings may not shift; and in Exp 3-4 the distractor did lower overall recall, but not the bizarreness effect.",
-        "One defensible verdict is to <b>partly agree</b>. The convergent nulls across four tasks plus Bayes factors (BF01 ≈ 11-14) make a large imagery role unlikely, but imagery may have been only partly disrupted. A within-subject manipulation check, an objective imagery measure, or a stronger visual task would make the conclusion firmer."
+        "The distractors worked <b>only partly</b>. Absolute vividness (bizarre/common) was not lower under distraction: Exp 1 DVN 3.01/3.84 vs controls 2.95/3.80 (the mean of the two controls, 2.99/3.58 and 2.91/4.01); Exp 2 tapping 3.36/4.17 vs 2.82/4.06; Exp 3 span 3.10/3.96 vs 2.92/4.03. People could still form images and bizarre stayed below common, so imagery was made harder, not prevented.",
+        "<b>For</b> the conclusion: the tasks demonstrably load imagery (they reduce the concreteness effect, and rating <b>RTs were slower</b> under distraction, e.g. 1,106 vs 839 ms), yet the bizarreness effect was untouched, and Bayes factors (11.49 and 13.86) strongly favour the null. Between subjects, people also cannot compare their image with an undistracted one.",
+        "<b>Against</b> it: participants clearly still formed images, and a small amount of imagery may be enough for the effect. So agree <b>with reservations</b>: 'limited role' is defensible, 'no role' is not."
       ],
-      takeaway: "Unchanged vividness ratings weaken, but do not overturn, the conclusion that imagery plays a limited role.",
+      takeaway: "Imagery was slowed, not stopped: 'limited role' is defensible, 'no role' is not.",
       trap: { wrong: "Simply agree or disagree.", right: "You must quote Table 1 and weigh the authors' counter-arguments before giving a verdict." },
-      note: "The verdict ('partly agree') is reasoned evaluation, one defensible answer, not a fixed fact from the article."
+      note: "The verdict is reasoned evaluation (it matches the reader's 'with reservations'), not a fixed fact from the article."
     }
   ]
 };

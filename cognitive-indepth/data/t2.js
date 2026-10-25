@@ -1,7 +1,7 @@
 IDQ[2] = {
   n: 2,
   title: "Working memory",
-  readings: ["Matlin & Farmer, Ch. 4 (short-term and working memory)", "Eysenck & Keane, Ch. 6 (working memory)", "McGonnell et al. (2024), working memory and children's arithmetic"],
+  readings: ["Matlin & Farmer (2017), Ch. 4 (short-term and working memory)", "Eysenck & Keane (2015), Ch. 6 (working memory)","McGonnell et al. (2024), working memory and children's arithmetic"],
   intro: "These questions move from the old idea of a short-term store (capacity, chunking, forgetting, the serial-position curve) to Baddeley and Hitch's working-memory model with its separate components. The last block applies the model to children: how the components are measured with the AWMA and how they relate to math.",
   questions: [
     {
@@ -12,13 +12,13 @@ IDQ[2] = {
       asks: "Why is this string of nine letters too much for short-term memory, and what trick turns it into something easy to hold?",
       triage: { symptom: "A letter string plus 'why hard, how to fix?'", diagnosis: "STM capacity (7 ± 2, or about 4), chunking (Miller) and phonological similarity", treatment: "Count the items against capacity, explain why they are hard, regroup them into known chunks, then add rehearsal." },
       visual: { type: "versus", title: "9 letters or 3 chunks?",
-        cols: [ { head: "C I A I B M A E G", sub: "as presented", tone: "bad", points: ["9 unrelated letters, at or above 7 ± 2", "no meaning", "C, E, G sound alike"] },
+        cols: [ { head: "C I A I B M A E G", sub: "as presented", tone: "bad", points: ["9 unrelated letters, at or above 7 ± 2", "no meaning, no LTM support", "B, C, E, G sound alike"] },
                 { head: "CIA · IBM · AEG", sub: "chunked", tone: "good", points: ["3 familiar acronyms", "well within capacity", "rehearse with a rhythm"] } ],
         verdict: "Chunking only works if the acronyms are already in LTM." },
       answer: [
         "The string is hard because it consists of <b>nine unrelated letters</b>, which is at or above the limit of short-term memory: about seven plus or minus two items (Miller, 1956), or about four when chunking is not possible (Cowan, 2005).",
-        "Presented letter by letter, the items have no meaning, so there are no chunks. Several letters also sound alike (C, E, G), which adds <b>phonological similarity</b> and makes them easier to confuse.",
-        "The fix is <b>chunking</b>: regroup the letters into CIA, IBM and AEG, three familiar acronyms already stored in <b>long-term memory</b>. Now only three chunks need to be held, and they can be rehearsed in the phonological loop, for example with a rhythm. Chunking works only if the person recognises the acronyms."
+        "Presented letter by letter, the items have no meaning and nothing in long-term memory to lean on, so there are no chunks. Several letters also sound alike (B, C, E and G all end in the same 'ee' sound), and because the store uses a sound code, this <b>phonological similarity</b> makes them easy to confuse (Conrad & Hull, 1964).",
+        "The fix is <b>chunking</b>: regroup the letters into CIA, IBM and AEG, three familiar acronyms already stored in <b>long-term memory</b>. Nine units become three, which are also quicker to rehearse in the phonological loop, and the order inside each chunk is fixed. Chunking works only if you recognise the acronyms: XQV, ZPF, HNK would gain you nothing."
       ],
       takeaway: "Nine random letters overflow STM; three known acronyms fit easily.",
       trap: { wrong: "It is hard simply because it is more than seven items.", right: "You must also explain chunking and that it relies on knowledge in long-term memory." },
@@ -35,14 +35,14 @@ IDQ[2] = {
         cols: ["Recalled at once", "After the walk"],
         rows: [ { head: "First items", cells: ["yes", "yes"] }, { head: "Middle items", cells: ["no", "no"] }, { head: "Last items", cells: ["yes", "no"] } ] },
       answer: [
-        "Yes. A <b>serial-position effect</b> is expected: the chance of remembering an item depends on where it was on the list (Rundus, 1971), and the middle items are the most likely to be forgotten.",
-        "The first items should be remembered best (<b>primacy</b>): they were read and rehearsed most often and did not compete with earlier items, so they are likely to be in long-term memory. The last items benefit from <b>recency</b> when you recall immediately, because they are still in short-term memory.",
-        "However, the walk to the store is a <b>delay filled with other activity</b>, and short-term memory content is lost without rehearsal (Brown/Peterson findings). This should remove much of the recency advantage, while primacy stays.",
-        "So the forgotten half would mostly be the middle and later items, unless items were grouped by meaning (all dairy together) or were especially distinctive."
+        "Yes. A <b>serial-position effect</b> is expected: the chance of remembering an item depends on where it was on the list, and the middle items are the most likely to be forgotten.",
+        "The first items should be remembered well (<b>primacy</b>): they compete with nothing and get the most rehearsal, and Rundus (1971) found that the number of rehearsals predicts recall of early items. The last items would normally benefit from <b>recency</b>, because at immediate recall they are still in short-term memory.",
+        "But here there is no immediate recall: you walk to the store first. Glanzer and Cunitz (1966) showed that a <b>filled delay</b> of about 30 seconds wipes out the recency effect while primacy survives. So you should predict a weak or absent recency effect: you remember mainly the start of the list and forget both the middle and the end.",
+        "The pattern can be flattened if the list happens to be grouped by category (fewer chunks), and an item that stands out (the <b>Von Restorff effect</b>) is remembered whatever its position."
       ],
       takeaway: "Start remembered, middle lost, and the end only survives if you recall quickly.",
       trap: { wrong: "Just say 'yes, a U-shape'.", right: "The delay before shopping matters: it wipes out much of the recency effect." },
-      note: "Applying the delay to the shopping trip and the semantic-grouping point are reasoning from the readings, not a study of shopping lists."
+      note: null
     },
     {
       id: "A3",
@@ -57,8 +57,8 @@ IDQ[2] = {
         verdict: "STM is big enough, but leaky without rehearsal." },
       answer: [
         "The two findings measure <b>different things</b> under different conditions. Miller's 7 ± 2 describes <b>capacity</b> in an immediate span task where people can rehearse. The Brown/Peterson and Peterson technique measures how long information survives when rehearsal is prevented.",
-        "Counting backward by threes <b>blocks rehearsal</b> and also occupies working memory, so information in short-term memory is quickly lost. Matlin also notes that recall was good on the first few trials and only became poor after several trials, because letters from earlier trials produced <b>proactive interference</b>.",
-        "So the rapid forgetting reflects interference and lack of rehearsal, not a capacity of only one or two items. Short-term memory can hold several items, but only briefly and only when protected from interference."
+        "Counting backward by threes <b>blocks rehearsal</b> and keeps attention busy, so the items get no chance to be refreshed. On top of that, the loss is largely <b>proactive interference</b>: Keppel and Underwood (1962) found almost no forgetting on the first trial, even after 18 seconds; forgetting built up only as letters from earlier trials piled up. Switching the category of the items (release from PI, Wickens et al., 1976) brings performance back up, which simple decay cannot explain.",
+        "So the rapid forgetting reflects blocked rehearsal and interference, not a capacity of only one or two items. Short-term memory can hold several items, but only briefly and only when protected from interference."
       ],
       takeaway: "Miller measured how much; Brown/Peterson measured how long without rehearsal.",
       trap: { wrong: "Brown/Peterson shows Miller was wrong.", right: "They measure different things, and the forgetting appears only after several trials (PI)." },
@@ -76,8 +76,8 @@ IDQ[2] = {
         verdict: "Recency has another source: last items still in STM." },
       answer: [
         "In the Atkinson–Shiffrin (1968) multi-store model, information passes from sensory memory into a limited <b>short-term store</b>, where <b>rehearsal</b> keeps it active and transfers it to the <b>long-term store</b>. The more an item is rehearsed, the more likely it is to be transferred.",
-        "When a list is presented, the first item can be rehearsed on its own and then together with the next few items, so the earliest items receive the most rehearsals overall. Later items must share the limited rehearsal capacity with many others, and Matlin adds that early items do not compete with any earlier items.",
-        "As a result, the first items are more likely to be stored in long-term memory and recalled from there: the <b>primacy effect</b>. The recency effect has a different source: the last items are still in short-term memory at the moment of recall."
+        "When a list is presented, the first item can be rehearsed on its own and then together with the next few items, so the earliest items receive the most rehearsals overall. Later items must share the limited rehearsal capacity with many others, and early items do not compete with any earlier items. Rundus (1971) confirmed this: the number of rehearsals drops across list positions and predicts recall of the early items.",
+        "As a result, the first items are more likely to be stored in long-term memory and recalled from there: the <b>primacy effect</b>. The recency effect has a different source: the last items are still in short-term memory at the moment of recall, which is why a filled delay removes recency but leaves primacy intact (Glanzer & Cunitz, 1966)."
       ],
       takeaway: "Primacy = most rehearsal = most transfer to LTM.",
       trap: { wrong: "Primacy happens because the first items are still in STM.", right: "That is recency. Primacy comes from extra rehearsal moving items into LTM." },
@@ -95,8 +95,9 @@ IDQ[2] = {
         rows: [ { head: "First items", cells: ["no", "yes", "good"] }, { head: "Middle items", cells: ["yes", "yes", "worst"] }, { head: "Last items", cells: ["yes", "no", "good"] } ] },
       answer: [
         "Interference offers an alternative account of the serial-position curve. <b>Proactive interference</b> means earlier items disrupt memory for later ones; <b>retroactive interference</b> means later items disrupt memory for earlier ones.",
-        "The first items have nothing before them, so they suffer no proactive interference, only retroactive interference, and are recalled relatively well: the primacy effect. The last items have nothing after them, so they suffer no retroactive interference, only proactive interference: the recency effect.",
-        "The <b>middle items</b> suffer both, proactive interference from the items before and retroactive interference from the items after, so they are recalled worst. That gives the U-shape. Because interference grows with similarity (Wickens et al., 1976), lists of similar items should show especially poor middle recall."
+        "The first items have nothing before them, so they suffer no proactive interference, only retroactive interference, and are recalled relatively well: the primacy effect. The last items have nothing after them, so they suffer no retroactive interference, only proactive interference, which weighs less at immediate recall: the recency effect.",
+        "The <b>middle items</b> suffer both, proactive interference from the items before and retroactive interference from the items after, so they are recalled worst. Counting the sources gives 1, 2, 1: the U-shape. Because interference grows with similarity (Wickens et al., 1976), lists of similar items should show especially poor middle recall.",
+        "Note that this account needs only <b>one memory system</b>, so the U-shape on its own does not prove separate short-term and long-term stores. For that you need the dissociations from A4, such as a filled delay removing recency but not primacy."
       ],
       takeaway: "The middle is squeezed from both sides.",
       trap: { wrong: "Proactive means later items disrupt earlier ones.", right: "That is retroactive. Proactive works forward: earlier items disrupt later ones." },
@@ -115,11 +116,12 @@ IDQ[2] = {
       answer: [
         "Dual-task studies rest on two assumptions: tasks that use the <b>same component</b> interfere with each other, while tasks that use <b>different components</b> can be done together as well as separately. In Robbins et al. (1996), Figure 6.4, weaker and stronger chess players chose moves while tapping (control), doing articulatory suppression, clockwise key pressing or random number generation.",
         "(i) <b>Which components?</b> Move quality dropped clearly with the visuo-spatial and central-executive tasks but not with articulatory suppression, so chess relies on the sketchpad and the central executive, not the loop.",
-        "(ii) <b>Independence:</b> because the phonological task left chess intact while the other two impaired it, the loop works independently of the systems chess uses. This selective, not general, interference shows the components are separable, and the control condition rules out a general cost of doing two things. Stronger and weaker players showed the same pattern, so both use working memory the same way."
+        "(ii) <b>Independence:</b> because the phonological task left chess intact while the other two impaired it, the loop works independently of the systems chess uses. This selective, not general, interference shows the components are separable, and the control condition rules out a general cost of doing two things. Stronger and weaker players showed the same pattern, so expertise changes how well, not which, components are used.",
+        "One caution: no interference on its own is weak evidence. The strongest proof of separate components is a <b>crossover</b> (double dissociation), as in B3."
       ],
       takeaway: "Interference shows who shares a desk; no interference shows separate desks.",
       trap: { wrong: "Explain only which components chess uses.", right: "The question asks for both functions, and the control condition should be mentioned." },
-      note: null
+      note: "Your notes and the reader's summary link Figure 6.4 to the Robbins et al. (1996) chess study, but the reader's worked answer links it to Baddeley and Hitch (1974): reasoning while holding 0 to 8 digits. Check the figure in Eysenck & Keane. Neither source gives exact move-quality values."
     },
     {
       id: "B2",
@@ -132,7 +134,7 @@ IDQ[2] = {
         steps: [ { h: "Word seen", t: "visual input" }, { h: "Articulatory control", t: "recoded into sound" }, { h: "Rehearsal", t: "long words take longer to say" }, { h: "Smaller span", t: "for long words" } ],
         verdict: "Block the inner voice (suppression) and the effect vanishes." },
       answer: [
-        "The <b>word-length effect</b> is the finding that immediate serial recall is better for short than for long words. In the phonological loop, items stay active through articulatory rehearsal; long words take longer to rehearse, so fewer can be refreshed before they decay.",
+        "The <b>word-length effect</b> is the finding that immediate serial recall is better for short than for long words. What matters is <b>spoken duration</b>, not the number of letters: a purely visual code could never be sensitive to how long a word sounds. In the loop, items fade within about 2 seconds unless rehearsed, and long words take longer to rehearse.",
         "Visually presented words do not enter the phonological store directly, but they can be recoded by the <b>articulatory control process</b>, which turns them into sound and rehearses them. The key evidence is that the effect for visual words disappears under <b>articulatory suppression</b> (repeating '1 to 8'), which blocks this process. A patient unable to rehearse verbally also showed no word-length effect (Jacquemot et al., 2011).",
         "So the effect depends on verbal rehearsal through the loop, even for visual words. One caveat: Jalbert et al. (2011) attribute part of the effect to orthographic neighbourhood size, because short words have more neighbours."
       ],
@@ -152,12 +154,12 @@ IDQ[2] = {
         rows: [ { head: "Movement (spatial)", cells: ["large", "small"] }, { head: "Colour (visual)", cells: ["little or none", "large"] } ] },
       answer: [
         "Klauer and Zhao (2004) crossed two main tasks with two interference tasks. If the sketchpad has separate parts, <b>spatial interference</b> (movement) should hurt the dot-location task more, and <b>visual interference</b> (colour) should hurt the Chinese-character task more.",
-        "Both predictions were supported (Figure 6.6): movement interference disrupted dots much more than ideographs, while colour interference disrupted ideographs more and dots little. This crossover is a <b>double dissociation</b>, which rules out the explanation that one task is simply harder.",
-        "The results therefore support separate components: a <b>visual cache</b> for form and colour and an <b>inner scribe</b> for location and movement (Logie, 1995)."
+        "Both predictions were supported (Figure 6.6): movement interference disrupted dots much more than ideographs, while colour interference disrupted ideographs more and had a negligible effect on dots. This crossover is a <b>double dissociation</b>: if the movement task were simply harder, it would have hurt both main tasks more, so difficulty cannot explain it.",
+        "The task choice helps too: Chinese characters are visually complex but hard to name for Western participants (pure 'what'), and dots are pure 'where'. The results therefore support separate components: a <b>visual cache</b> for form and colour and an <b>inner scribe</b> for location and movement (Logie, 1995)."
       ],
       takeaway: "Each distractor hit its own target: two separate systems.",
       trap: { wrong: "Describe the design and stop there.", right: "State the predicted pattern, show it was found and call it a double dissociation." },
-      note: null
+      note: "Neither your notes nor the reader give the exact interference values from Figure 6.6, so the visual shows the pattern only."
     },
     {
       id: "B4",
@@ -173,7 +175,7 @@ IDQ[2] = {
       answer: [
         "The discrepancy is explained by <b>attentional demands</b>. Klauer and Zhao used fairly simple interference tasks that mainly loaded their own domain, giving specific interference. Vergauwe et al. (2009) used more demanding versions, which also draw on the <b>central executive</b>'s general attention that both visual and spatial processing need.",
         "The result was <b>general interference</b>: each task impaired both main tasks. As Eysenck and Keane conclude, interference is general and attention-based when tasks are demanding, but specific when they are relatively undemanding.",
-        "So Vergauwe et al. do <b>not invalidate</b> separate visual and spatial components, because specific interference still appears when general attention is not overloaded. They do show that the apparent separateness depends on how much general attention is required, and that visual and spatial processing share executive resources."
+        "So Vergauwe et al. do <b>not invalidate</b> separate visual and spatial components. Klauer and Zhao's conclusion rests on an <b>interaction</b> (the crossover); adding a large general effect on top does not cancel that interaction, it only hides it. Vergauwe et al. do show that the sketchpad is not sealed off from general attention: visual and spatial processing share executive resources."
       ],
       takeaway: "Not overturned, but qualified: separation shows only when attention is not overloaded.",
       trap: { wrong: "The sketchpad must be one single system.", right: "Demanding tasks add general (CE) interference on top of specific interference; the parts can still be separate." },
@@ -191,7 +193,8 @@ IDQ[2] = {
       answer: [
         "Stuss and Alexander (2007) identified three executive processes and Stuss (2011) added a fourth; studying well needs all four, and different patients may lose different ones.",
         "<b>Task setting</b> is planning and setting up stimulus–response relationships: deciding what to study, making a schedule and working out what an exam question requires. <b>Monitoring</b> is checking your own performance: verifying answers, noticing errors and checking comprehension; poor monitoring gives variable performance and more errors.",
-        "<b>Energisation</b> is sustained attention: staying focused through a long study session or exam; poor energisation slows anything that needs speed. <b>Metacognition/integration</b> is coordinating information and telling apart what you know from what you believe: judging whether you truly understand the material, avoiding the illusion of knowing, and integrating different readings."
+        "<b>Energisation</b> is sustained attention: staying focused through a long study session or exam; poor energisation slows anything that needs speed. <b>Metacognition/integration</b> is coordinating information and telling apart what you know from what you believe: judging whether you truly understand the material and integrating different readings into one story. When it fails you are left with loose facts and misjudge how well you know something.",
+        "Task setting, monitoring and energisation are jobs of the <b>central executive</b>; metacognition/integration also leans on the <b>episodic buffer</b>, which binds information into one picture (see B6). Poor monitoring is why rereading feels like knowing: testing yourself is the check that cannot lie."
       ],
       takeaway: "Plan, check, keep going, and know what you really know.",
       trap: { wrong: "Defining the four processes is enough.", right: "Each needs a concrete study example, and metacognition/integration must not be left out." },
@@ -209,7 +212,7 @@ IDQ[2] = {
       answer: [
         "An appropriate response requires <b>integrating</b> several kinds of information at once. The phonological loop holds the words and tone of voice; the visuo-spatial sketchpad holds the friend's facial expression, gestures and who else is present; and <b>long-term memory</b> supplies what you know about this friend, earlier similar episodes and social norms.",
         "The <b>episodic buffer</b> binds these into one integrated, multidimensional representation of the episode, in a limited number of chunks (about four). It is the interface between working memory, perception and long-term memory.",
-        "The <b>central executive</b> then uses this integrated picture to interpret the remark (joke or insult?), inhibit an impulsive retort, weigh possible responses and choose a fitting one. Afterwards, the integrated episode can be stored in long-term memory."
+        "Only in this integrated episode can you interpret the remark (teasing or a real jab?). The buffer is also a workspace for <b>simulating replies</b> ('if I bite back, then...'), while the <b>central executive</b> evaluates them, picks one and inhibits the impulsive retort. Inhibition costs capacity, so when you are tired or busy you react more thoughtlessly."
       ],
       takeaway: "The buffer is the stage where words, faces and memories meet.",
       trap: { wrong: "Describe only the central executive deciding what to say.", right: "The buffer's job is binding loop, sketchpad and LTM information; LTM is a key source." },
@@ -223,17 +226,17 @@ IDQ[2] = {
       asks: "Explain why high working-memory capacity could make people notice unexpected objects more in some studies and less in others.",
       triage: { symptom: "Contradicting findings from Problem 1 plus 'how to explain?'", diagnosis: "WMC = storage plus executive attentional control; general vs specific load", treatment: "Give a mechanism for each direction, name the moderators (task demands, relevance, measure), then reconcile." },
       visual: { type: "versus", title: "High WM capacity: two effects",
-        cols: [ { head: "More noticing", sub: "spare capacity", tone: "good", points: ["leftover resources process the object", "most likely when main task is easy"] },
-                { head: "Less noticing", sub: "better attentional control", tone: "bad", points: ["focus tightly, inhibit irrelevant objects", "most likely when task is demanding"] } ],
-        verdict: "Which wins depends on task demands, relevance and the WMC measure." },
+        cols: [ { head: "More noticing", sub: "spare capacity (Lavie)", tone: "good", points: ["leftover resources process the object", "most likely when main task is easy"] },
+                { head: "Less noticing", sub: "tunnel vision (Engle)", tone: "bad", points: ["hold the goal, filter out irrelevant objects", "most likely when task is demanding"] } ],
+        verdict: "Task load, attentional set and weak measures decide the sign." },
       answer: [
-        "Working-memory capacity reflects not only storage but also <b>executive attentional control</b> (Eysenck & Keane), and this can push in two directions.",
-        "On the one hand, high-capacity people may have <b>spare resources</b> left over from the main task (counting passes), which they can use to process an unexpected object, so they notice it more, especially when the main task is easy. On the other hand, high capacity means better attentional control and <b>inhibition</b> (Miyake's inhibition function): these people focus more efficiently and suppress irrelevant stimuli, so they notice unexpected objects less, especially when the task is demanding.",
-        "Which effect wins depends on <b>task demands</b>, whether the unexpected object shares features with attended items, and the capacity measure (simple span vs complex span tasks that tap the CE). Differences in paradigms and small samples add to the inconsistency."
+        "Working-memory capacity (WMC) is not just 'more memory' but mainly <b>attentional control</b>, and control can cut both ways.",
+        "On Lavie's load theory, high-WMC people do the main task (counting passes) with less effort, so <b>spare capacity</b> spills over to the unexpected object: more noticing. On Engle's executive-attention view, high-WMC people hold the goal more firmly and filter out irrelevant stimuli, including the gorilla: <b>better tunnel vision</b>, less noticing. Task load decides which wins: easy task, spare capacity; hard task, tighter focus.",
+        "<b>Attentional set</b> matters too: Most et al. (2001) showed that an object matching the attended features (white, when counting white players) is noticed far more often. High-WMC people keep their set better, so they see objects inside it more and objects outside it less. Finally, measurement is weak: inattentional blindness can be measured only once per person, which gives an unreliable yes/no score, and WMC tasks differ. So small, context-dependent correlations in both directions are exactly what you would expect."
       ],
       takeaway: "More capacity can mean more to spare or better blinkers.",
-      trap: { wrong: "Pick the side with the better studies.", right: "Explain both directions; WMC is storage plus executive control." },
-      note: "Partly own reasoning applied to Problem 1: check the specific studies against your Problem 1 notes."
+      trap: { wrong: "Pick the side with the better studies.", right: "Explain both directions; WMC is mainly attentional control, which can widen or narrow what you notice." },
+      note: "The reader does not name the Problem 1 studies that found each direction; check those in your Problem 1 notes."
     },
     {
       id: "C1",
@@ -245,16 +248,16 @@ IDQ[2] = {
       visual: { type: "grid", title: "The AWMA: material × demand",
         cols: ["Storage only", "Processing + storage"],
         rows: [ { head: "Verbal", cells: ["Loop: Digit, Word, Nonword Recall", "Verbal CE: Listening, Counting, Backwards Digit"] },
-                { head: "Visuospatial", cells: ["Sketchpad: Dot Matrix, Mazes, Block Recall", "VS CE: Odd-One-Out, Mister X, Spatial Span"] } ] },
+                { head: "Visuospatial", cells: ["Sketchpad: Dot Matrix, Mazes, Block Recall", "VS CE: Odd-One-Out, Mister X, Spatial Recall"] } ] },
       answer: [
         "The AWMA isolates components by varying two task features: the <b>type of material</b> (verbal vs visuospatial) and the <b>processing demand</b> (storage only in simple span tasks vs processing plus storage in complex span tasks).",
         "Simple verbal span tasks (Digit, Word, Nonword Recall: hear and repeat in order) tap the <b>phonological loop</b>; nonwords minimise help from long-term memory. Simple visuospatial span tasks (Dot Matrix, Mazes Memory, Block Recall) tap the <b>visuospatial sketchpad</b>.",
-        "Complex span tasks add a concurrent processing step, which needs the <b>central executive</b>: Listening Recall, Counting Recall and Backwards Digit Recall for the verbal CE; Odd-One-Out, Mister X and Spatial Span (judge while remembering locations) for the visuospatial CE. Three subtests per component increase reliability.",
-        "Still, the tasks are not process-pure, and the two visuospatial composites overlap strongly (r = .70)."
+        "Complex span tasks add a concurrent processing step, which needs the <b>central executive</b>: Listening Recall, Counting Recall and Backwards Digit Recall for the verbal CE; Odd-One-Out, Mister X and Spatial Recall (judge or rotate a figure while remembering locations) for the visuospatial CE. Because that processing is itself visuospatial, children cannot slip back into verbal coding. Three subtests per component give reliable composite scores.",
+        "Still, the tasks are not <b>process-pure</b>: children can verbalise patterns, the two visuospatial composites overlap strongly (r = .70), the CE is measured only indirectly, and the AWMA does not split visual from spatial as Klauer and Zhao (B3) did."
       ],
       takeaway: "Hold only = a slave system; do and hold = the executive.",
       trap: { wrong: "List the twelve subtests.", right: "Explain the two-dimension logic and mention task impurity and overlap." },
-      note: null
+      note: "Your notes call the last visuospatial CE subtest Spatial Span; the reader calls it Spatial Recall (the AWMA name). Check the article."
     },
     {
       id: "C2",
@@ -270,7 +273,7 @@ IDQ[2] = {
       answer: [
         "Both findings are compatible because they answer <b>different questions</b>. The correlations (r = .42 to .53) show that each WM component, on its own, is associated with calculation.",
         "But the predictors are <b>strongly intercorrelated</b>: verbal and visuospatial CE correlate .76, the sketchpad and VS CE .70, and the loop and verbal CE overlap with phonological processing (.62 and .59). In <b>hierarchical regression</b>, a predictor is credited only with variance it explains over and above the predictors already entered and the others in the same step.",
-        "Much of the math-related variance of the loop and verbal CE had already been captured by phonological processing in step 2, and the VS CE shared its variance with the sketchpad. The sketchpad was the only component that still explained <b>unique variance</b> (10.2%, β = .25). So all components relate to math, but only the sketchpad adds information not already in the other variables."
+        "Much of the math-related variance of the loop and verbal CE had already been captured by phonological processing in step 2, and the VS CE shared its variance with the sketchpad. The sketchpad was the only component that still explained <b>unique variance</b> (10.2%, β = .25), plausibly because calculation has a specifically spatial side: column layout, place value and the mental number line. So all components relate to math, but only the sketchpad adds information not already in the other variables. Unique variance is a property of the model: it does not mean the other components are unimportant."
       ],
       takeaway: "Correlation counts total overlap; regression counts only what nobody else brought.",
       trap: { wrong: "The correlations must have been wrong.", right: "They are correct; the overlap between predictors is why only one stays unique in regression." },
@@ -288,7 +291,8 @@ IDQ[2] = {
       answer: [
         "The WM demands of math probably change because the <b>content and teaching</b> of math change and because skills become <b>automatised</b>.",
         "Early math is learned largely through language: counting, number words, verbal instructions and feedback, and verbal repetition of facts, which loads the <b>phonological loop</b> (Alloway & Passolunghi, 2011: the loop predicted math at age 7). Later, calculation uses visuospatial layouts such as columns, place value, carrying and number lines, which load the <b>sketchpad</b> (sketchpad predicted math at age 8; David, 2012: stronger sketchpad link in younger children).",
-        "As math becomes more complex (multi-step procedures, word problems), the <b>central executive</b> matters more for coordinating steps, updating intermediate results and choosing strategies. Meanwhile, practice makes basic facts automatic and retrievable from long-term memory, reducing WM load. McGonnell et al. could not test this directly because there were too few children per grade."
+        "As math becomes more complex (multi-step procedures, word problems), the <b>central executive</b> matters more for holding intermediate results and choosing strategies. Meanwhile, practice shifts children from counting to <b>retrieving facts</b> from long-term memory, which costs almost no WM. The child changes too: spontaneous verbal rehearsal appears around age six or seven, and executive functions keep maturing.",
+        "The literature is mixed, and cross-sectional age comparisons are weak evidence; McGonnell et al. could not test this directly because there were too few children per grade."
       ],
       takeaway: "Say it, then see it, then manage it.",
       trap: { wrong: "Older children simply have more working memory.", right: "Link each component to the math content of that age, and include automatisation." },
@@ -303,12 +307,12 @@ IDQ[2] = {
       triage: { symptom: "'Why caution, and what instead?': an applied recommendation", diagnosis: "Correlation is not causation; transfer; explicit connections; assessment-based intervention", treatment: "Give the reasons for caution, then concrete recommendations backed by the paper." },
       visual: { type: "versus", title: "Manipulatives are not magic",
         cols: [ { head: "Why caution", sub: "limits of the evidence", tone: "bad", points: ["correlational, cross-sectional: no cause", "exposure is not transfer", "WM training alone fails (Cunningham & Sood, 2018)"] },
-                { head: "What to do", sub: "teacher's plan", tone: "good", points: ["assess visuospatial and verbal skills", "explicit links: blocks, words, numerals", "combine WM and math practice (Fuchs et al., 2022)"] } ],
+                { head: "What to do", sub: "teacher's plan", tone: "good", points: ["assess visuospatial and verbal skills", "explicit links: blocks, words, numerals", "reduce load: write steps, automate facts"] } ],
         verdict: "Use manipulatives, but connect them to the sum on purpose." },
       answer: [
-        "Teachers should be cautious because the study is <b>correlational and cross-sectional</b>, so it cannot show that the sketchpad causes math skill or that visuospatial activities improve it. Simple exposure to diagrams, number lines or base-ten blocks also does not guarantee <b>transfer</b>: children with weak visuospatial skills, exactly the ones who struggle, may not connect them to paper-and-pencil calculation. And training working memory alone has not been shown to improve math (Cunningham & Sood, 2018).",
-        "Instead, a teacher should first <b>assess</b> both visuospatial and verbal skills to find the source of a child's difficulty (Robinson et al., 2002). Then make deliberate, <b>explicit connections</b> between visual representations, number words and written numerals and procedures, adapted to each child.",
-        "Finally, use interventions that combine WM demands with real math practice (Fuchs et al., 2022), knowing they do not help every student (Schulze et al., 2020), and help children strengthen weak areas and use compensatory strategies."
+        "Teachers should be cautious because the study is <b>correlational and cross-sectional</b>: it shows where children get stuck, not that visuospatial activities improve math. Training working memory alone has not been shown to improve math (Cunningham & Sood, 2018).",
+        "Visual material can even <b>add load</b> to the bottleneck: a child with a weak sketchpad, exactly the one who struggles, has the least capacity to process busy blocks and pictures. Exposure also does not guarantee <b>transfer</b>: the child may learn to move blocks without connecting them to paper-and-pencil calculation.",
+        "Instead, a teacher should first <b>assess</b> visuospatial and verbal skills to find the source of a child's difficulty (Robinson et al., 2002). Then make <b>explicit connections</b> between blocks, number words and written numerals, and fade the concrete material towards the abstract. Reduce load: write intermediate steps down, keep material plain, automate basic facts, and let children say the steps aloud while they work. Interventions combining WM with real math practice can help (Fuchs et al., 2022), though not every student (Schulze et al., 2020)."
       ],
       takeaway: "Blocks, words and symbols, connected on purpose.",
       trap: { wrong: "So teachers should not use manipulatives.", right: "Use them, but with explicit links and after assessing the child; and remember the study is correlational." },

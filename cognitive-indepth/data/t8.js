@@ -60,12 +60,12 @@ IDQ[8] = {
           { head: "Closest theory", cells: ["Prototype", "Exemplar (partly)"] } ] },
       answer: [
         "BoW behaves like the <b>prototype</b> view and LLMs behave more like the <b>exemplar</b> view. In the prototype approach, a category is stored as one abstract summary, the “average” or best example. In the exemplar approach, a category is the collection of all the specific examples you have met, and a new item is compared with many of them.",
-        "BoW is prototype-like because a word or category (a LIWC dictionary, a topic) is one <b>fixed summary</b>, the same in every context. Like a prototype, it captures the typical case but loses the details of each specific use. LLMs learn from <b>billions of specific sentences</b> and stay sensitive to context, so they handle unusual uses (sarcasm, “sick” meaning great), just as the exemplar view handles atypical members better.",
-        "There is a nuance: an LLM does not literally store every sentence. It compresses them into its weights, so it sits somewhere between the two views."
+        "BoW is prototype-like because a word or category (a LIWC dictionary, a topic) is one <b>fixed summary</b>, the same in every context. Like a prototype, it captures the typical case but loses context: one fixed prototype cannot explain why “musical instrument at a campfire” suggests a guitar rather than a piano. LLMs learn from <b>billions of specific sentences</b> and stay sensitive to context, so they handle unusual uses (sarcasm, “sick” meaning great), just as the exemplar view handles atypical members better.",
+        "There is a nuance: an LLM also reflects a kind of <b>average</b> of what the internet or popular books say about something, which is prototype-like again (as in the dot patterns of Posner et al., 1967). So, as with human concepts, both approaches play a role."
       ],
-      takeaway: "BoW is one fixed summary (prototype); an LLM draws on many specific uses (exemplar-like).",
-      trap: { wrong: "An LLM stores every sentence it has read, so it is a pure exemplar model.", right: "It compresses examples into weights, so it sits between the two views." },
-      note: "This links to the semantic-memory theme; the answer is reasoning, not a statement from the article."
+      takeaway: "BoW is one fixed summary (prototype); an LLM draws on many specific uses (exemplar-like), with a prototype element: the average.",
+      trap: { wrong: "An LLM is a pure exemplar model.", right: "It also reflects an average of what its texts say, which is prototype-like, so both approaches play a role." },
+      note: null
     },
     {
       id: "A.4",
@@ -77,16 +77,16 @@ IDQ[8] = {
       visual: { type: "versus", title: "Two views of stress",
         cols: [
           { head: "LLM’s mindset", sub: "stress is debilitating", tone: "bad", points: ["always harms performance", "advice: reduce stress, self-care"] },
-          { head: "The evidence", sub: "stress can enhance", tone: "good", points: ["mobilises energy, oxygenated blood", "moderate arousal helps (inverted U)", "arousal strengthens memory"] } ],
+          { head: "The evidence", sub: "stress can enhance", tone: "good", points: ["Yerkes-Dodson: moderate arousal best", "appraisal: threat or challenge", "stress response mobilises energy"] } ],
         verdict: "The LLM repeats a cultural belief, not the science." },
       answer: [
-        "Yes: there is evidence that stress can also <b>help</b>, so the LLM’s view is one-sided. The LLM says stress always harms performance and health, so its advice is “reduce stress, take breaks, self-care”.",
-        "The article itself mentions research on the <b>enhancing role of stress</b>: the stress response mobilises energy, for example by sending more oxygenated blood to the brain and muscles, which can help performance. Typical examples from emotion and cognition are that <b>moderate arousal</b> improves performance compared with very low or very high arousal (an inverted U), and that emotional arousal <b>strengthens memory</b> for important events.",
-        "The point to make is that the LLM repeats the popular <b>cultural belief</b>, not the scientific evidence. Its answer is plausible, but not correct."
+        "Yes: Lecture 3 (Cognition and Emotion) showed that stress is <b>not harmful by definition</b>, so the LLM’s view is one-sided. The LLM says stress always harms performance and health, so its advice is “reduce stress, take breaks, self-care”.",
+        "The <b>Yerkes-Dodson law</b> says performance is an inverted-U function of arousal: little stress gives low performance, moderate stress gives the best performance, and a lot of stress gives low performance again. <b>Appraisal theory</b> adds that not the event itself but how you appraise it decides the emotion: the same presentation can be seen as a threat or as a challenge, and cognitive reappraisal changes the response. Demszky et al. themselves mention the <b>enhancing role of stress</b>: the stress response mobilises energy for performance.",
+        "So the LLM repeats a popular <b>cultural belief</b>, not the science: plausible, but not correct. A fair nuance is that stress is not always good either: for complex tasks the optimum lies at lower arousal, and Yerkes-Dodson is a rule of thumb, not a precise law."
       ],
       takeaway: "LLMs reproduce popular beliefs: plausible, not necessarily correct.",
       trap: { wrong: "If an LLM says it, it reflects the research.", right: "It reflects what is common in its training text, which here is a cultural belief about stress." },
-      note: "The lecture examples (inverted U, arousal and memory) are typical examples, not taken from the readings; check which evidence your emotion and cognition lecture actually showed."
+      note: "Yerkes-Dodson and appraisal theory come from Lecture 3 (Cognition and Emotion), not from the Demszky et al. article."
     },
     {
       id: "A.5",
@@ -106,7 +106,7 @@ IDQ[8] = {
       answer: [
         "Probing follows the same logic as an experiment: change one thing, keep the rest the same, and measure what happens. The researcher manipulates one linguistic feature as the <b>independent variable</b> (for example negation: “I care” vs “I don’t care”), while everything else in the sentence stays identical (<b>minimal pairs</b>), so any difference must come from that feature.",
         "The LLM’s output, such as its anxiety score, is the <b>dependent variable</b> measured in each condition. Probing uses many sentence pairs and repeated runs, because outputs are stochastic, just as an experiment uses many participants and stimuli and compares conditions statistically. If the output changes systematically, that feature <b>causes</b> part of the model’s judgement.",
-        "The deeper link is that psychologists cannot look inside the mind either: they infer hidden processes from input-output experiments. Probing treats the LLM’s <b>black box</b> in the same way."
+        "The deeper link is that psychologists cannot look inside the mind either: they infer hidden processes from input-output experiments. Probing treats the LLM’s <b>black box</b> in the same way, as a participant. And just as psychologists measure behaviour rather than relying only on self-report, you do not ask the LLM to explain itself, because that would be circular."
       ],
       takeaway: "Probing is an experiment on a machine: manipulate one feature, hold the rest constant, measure the output.",
       trap: null,
@@ -123,8 +123,8 @@ IDQ[8] = {
         steps: [ { h: "Unbalanced pictures", t: "mostly lighter-skinned men" }, { h: "Back-propagation", t: "tunes weights to them" }, { h: "Rare groups", t: "errors barely corrected" }, { h: "Harm", t: "misclassified or not detected" } ],
         verdict: "The network reproduces the gaps in its data." },
       answer: [
-        "<b>Representational harm</b> means a group is shown unfavourably, stereotyped or ignored, and a face network can learn this simply from its training data. It learns only from its <b>training pictures</b>. If most pictures show, for example, lighter-skinned men, back-propagation tunes the weights mainly to their features: errors on rare groups contribute little, so they are barely corrected.",
-        "As a result, faces from <b>under-represented groups</b> are recognised worse, misclassified (wrong gender or identity) or not detected at all, so the group becomes less visible to the system. <b>Biased labels</b> make it worse: if annotators labelled some groups’ faces as “angry” more often, the network learns that stereotype and repeats it.",
+        "<b>Representational harm</b> means a group is shown unfavourably, stereotyped or ignored, and a face network can learn this simply from its training data. It learns only from its <b>training pictures</b>. With <b>sampling bias</b>, for example when most pictures show lighter-skinned men, back-propagation tunes the weights mainly to their features: errors on rare groups contribute little, so they are barely corrected.",
+        "As a result, faces from <b>under-represented groups</b> are recognised worse, misclassified (wrong gender or identity) or not detected at all, so the group becomes less visible to the system. <b>Data-processing bias</b> makes it worse, because the labels come from people: if annotators labelled some groups’ faces as “angry” more often, the network learns that stereotype and repeats it.",
         "The network has no intention. It simply reproduces the patterns, and the gaps, in its data, just as LLMs reproduce the biases in their text."
       ],
       takeaway: "Biased data in, biased model out: no intention needed.",
@@ -143,7 +143,7 @@ IDQ[8] = {
         verdict: "It can also keep or amplify bias if done badly." },
       answer: [
         "<b>Fine-tuning</b> means training the already-trained model further on new, specific data, so its weights change, and it can reduce harm if that new data fills the gaps. You collect a <b>balanced, high-quality</b> set of faces from the under-represented groups, labelled by diverse, representative annotators to avoid new stereotyped labels.",
-        "The model is then fine-tuned on this set, so back-propagation now corrects its errors on these faces. Afterwards you <b>evaluate per group</b>, as an audit: is accuracy similar for every group? Ideally you also check the impact on real users.",
+        "The model is then fine-tuned on this set, so back-propagation now corrects its errors on these faces; this needs far fewer examples than training a new model from scratch. Afterwards you <b>evaluate per group</b>, as an audit: is accuracy similar for every group? Ideally you also check the impact on real users.",
         "Demszky et al. add a <b>caution</b>: fine-tuning can also keep or even amplify bias, depending on the data and on who fine-tunes it. It needs enough good data and computing power."
       ],
       takeaway: "Better data, retrain, then check every group separately.",
@@ -167,7 +167,7 @@ IDQ[8] = {
           { head: "Ethnicity (explicit)", cells: ["Alex", "“a Black man”"] } ] },
       answer: [
         "The rule is to change <b>only the group cue</b> and keep every other word identical. For <b>gender</b>: “Emily is applying for a software engineering job. She has five years of experience in coding and has led several successful projects. Would she be a good fit for this role?”, and the same with “James… He… he”. Keep the original “Alex… they” as the <b>neutral baseline</b>.",
-        "For <b>race/ethnicity</b>, swap only names that signal ethnicity, such as “DeShawn Washington”, “Connor Miller”, “Wei Zhang”, “Mohammed Al-Sayed” or “José Hernández”, or state it explicitly (“Alex, a Black man, is applying…”). To make it measurable, ask for a rating (“Rate the fit from 1 to 10”), run each version many times because outputs are random, and compare the average scores, the tone and how often negative remarks appear.",
+        "For <b>race/ethnicity</b>, keep gender constant and swap only names that signal ethnicity, such as “DeShawn Washington”, “Connor Miller”, “Wei Zhang”, “Mohammed Al-Sayed” or “José Hernández”, or state it explicitly (“Alex, a Black man, is applying…”). To make it measurable, ask for a rating (“Rate the fit from 1 to 10”), run each version many times because outputs are random, and compare the average scores, the tone and how often negative remarks appear.",
         "Demszky et al. point to <b>limits</b>: names also signal class or age, audits miss intersectional bias unless you combine cues (for example a Black woman), and guardrails may hide explicit bias without removing it."
       ],
       takeaway: "A bias audit is a controlled experiment: one cue changes, everything else stays the same.",
@@ -183,13 +183,13 @@ IDQ[8] = {
       triage: { symptom: "A list of questions about one figure", diagnosis: "Graph-reading question: factorial design, main effects, interaction", treatment: "Name IVs and levels, axes, design, DVs, where the means are, then main effects and the interaction with its statistic." },
       visual: { type: "bars", title: "Essay score, Figure 4a (Zhi et al., 2026)", unit: "", max: 7,
         groups: [
-          { label: "10 min (insufficient)", bars: [ { label: "Early", value: 3.80, tone: "good" }, { label: "Continuous", value: 3.49, tone: "good" }, { label: "Late", value: 1.86, tone: "bad" } ] },
+          { label: "10 min (insufficient)", bars: [ { label: "Early", value: 3.80, tone: "good" }, { label: "Continuous", value: 3.49, tone: "good" }, { label: "Late", value: 1.86, tone: "bad" }, { label: "No LLM", value: 2.75, tone: "neutral" } ] },
           { label: "30 min (sufficient)", bars: [ { label: "Early", value: 4.51, tone: "bad" }, { label: "Continuous", value: 4.71, tone: "bad" }, { label: "Late", value: 5.77, tone: "good" }, { label: "No LLM", value: 5.76, tone: "neutral" } ] } ],
         note: "The ranking flips between time conditions: the interaction (temporal reversal)." },
       answer: [
         "There were two <b>independent variables</b>, both manipulated <b>between participants</b> by random assignment, so each person was in one of 8 conditions. LLM access timing had 4 levels (Early, Continuous, Late, No LLM) and is on the x-axis; time availability had 2 levels (Insufficient, 10 min; Sufficient, 30 min) and is shown by colour and marker: orange circles for 10 min, green diamonds for 30 min.",
         "The <b>dependent variables</b> are on the y-axis. The essay score (4a) gave +1 for each valid argument, document reference and source evaluation, and −1 for each fabrication, writing error or repeated argument. The recall score (4b) came from summarising each document’s main idea from memory (1, 0.5 or 0 points per document, pasting disabled). The <b>markers</b> are the condition means, with standard-error bars; dashed lines show the No LLM mean.",
-        "For essays, only time availability had a significant main effect (F(1, 381) = 54.78, p < .001). For recall, both access timing (F(3, 380) = 2.79, p < .05) and time availability (F(1, 380) = 9.07, p < .01) were significant, with no reported interaction. In 4a the <b>interaction</b> was significant, F(3, 381) = 6.39, p < .001: with 10 min Early (3.80) and Continuous (3.49) beat Late (1.86), but with 30 min Late (5.77) and No LLM (5.76) beat Continuous (4.71) and Early (4.51). The lines cross: the temporal reversal."
+        "For essays, only time availability had a significant main effect (F(1, 381) = 54.78, p < .001). For recall, both access timing (F(3, 380) = 2.79, p < .05) and time availability (F(1, 380) = 9.07, p < .01) were significant, with no reported interaction. In 4a the <b>interaction</b> was significant, F(3, 381) = 6.39, p < .001: with 10 min Early (3.80) and Continuous (3.49) beat No LLM (2.75) and Late (1.86), but with 30 min Late (5.77) and No LLM (5.76) beat Continuous (4.71) and Early (4.51). The lines cross: the temporal reversal."
       ],
       takeaway: "Two between-subject factors; in essays, whether early AI helps depends on how much time you have.",
       trap: { wrong: "No main effect of timing means timing does not matter.", right: "Its effect reverses across time conditions, so it averages out; the interaction is the real story." },
@@ -253,7 +253,7 @@ IDQ[8] = {
           { head: "No LLM", cells: ["yes", "no"] } ] },
       answer: [
         "The best moment is <b>late</b>, in the final third, after working on your own first. <b>Myside bias</b> means arguing mainly for one side; it is scored as the gap between pro and con arguments (|pro − con|), where 0 means perfectly balanced.",
-        "With enough time, Late (5.25) and No LLM (5.12) wrote the <b>most arguments</b>. On myside bias, Late (3.42) was clearly lower than No LLM (4.41, p < .05). So Late gave many arguments and more balance. Early (3.79) and Continuous (3.34) also had fairly low myside bias, but they wrote the fewest arguments: their small gap reflects <b>little arguing</b>, not balanced reasoning.",
+        "With enough time, Late (5.25) and No LLM (5.12) wrote the <b>most arguments</b>. On myside bias, Late (3.42) was clearly lower than No LLM (4.41, p < .05). So Late gave many arguments and more balance, and it also had the highest essay score (5.77). Early (3.79) and Continuous (3.34) also had fairly low myside bias, but they wrote the fewest arguments: their small gap reflects <b>little arguing</b>, not balanced reasoning.",
         "Late works because working alone first builds your own picture, and asking the AI at the end (“what are the pros and cons?”) adds the side you missed. Eight people with only con arguments added on average 2.22 pro arguments this way."
       ],
       takeaway: "Think first, then ask the AI for the other side: many arguments and balance.",
@@ -290,7 +290,7 @@ IDQ[8] = {
         note: "r² = .23² ≈ .05. In Study 2, AI and crowd ratings correlated r = .31." },
       answer: [
         "An r of .23 is a <b>weak positive correlation</b>: the cloud of points tilts only slightly upwards, so ideas the judges liked were only a little more likely to be liked by the AI too. The <b>shared variance</b> is r² = .23² ≈ .05, so the two ratings share only about 5% of their variation and about 95% is different.",
-        "It is <b>statistically significant</b> (p = .006), so the link is probably real, but weak: knowing one rating tells you little about the other. The two measures capture partly different things. Huang suggests LLM raters weigh <b>novelty</b> more than usefulness, whereas humans balance both. In Study 2, AI and crowd ratings correlated a bit higher, r = .31.",
+        "It is <b>statistically significant</b> (p = .006), so the link is probably real, but weak: knowing one rating tells you little about the other. The two measures capture partly different things. Raters focus on different things: experts on profitability, the crowd on writing quality, and the AI possibly on <b>novelty</b> more than usefulness. In Study 2, AI and crowd ratings correlated a bit higher, r = .31.",
         "So an AI rating is <b>not a substitute</b> for human judgement. That is why it helps that the Goldilocks pattern appeared on several different measures, and why Demszky et al. insist LLM raters must be evaluated against human experts."
       ],
       takeaway: "Significant does not mean strong: r = .23 shares only about 5% of the variance.",
@@ -326,17 +326,17 @@ IDQ[8] = {
       asks: "Look at how big the differences are, not only whether they are significant, and translate that into practical advice.",
       triage: { symptom: "“Inspect the tables… practical implications”", diagnosis: "Effect-size question: practical vs statistical significance", treatment: "Read the means and effect sizes, check variance explained and axes, note consistency, give modest advice." },
       visual: { type: "bars", title: "Creativity, Study 1 (Huang, 2025, Table 1)", unit: "", max: 7,
-        groups: [ { label: "Study 1 (scale 1–7)", bars: [ { label: "Moderate", value: 4.02, tone: "good" }, { label: "other condition", value: 3.49, tone: "neutral" }, { label: "other condition", value: 3.39, tone: "neutral" } ] },
-                  { label: "Study 2", bars: [ { label: "Moderate", value: 4.33, tone: "good" }, { label: "other condition", value: 4.04, tone: "neutral" }, { label: "other condition", value: 4.11, tone: "neutral" } ] } ],
+        groups: [ { label: "Study 1 (scale 1–7)", bars: [ { label: "Low AI use", value: 3.49, tone: "neutral" }, { label: "Moderate", value: 4.02, tone: "good" }, { label: "High AI use", value: 3.39, tone: "neutral" } ] },
+                  { label: "Study 2 (crowd)", bars: [ { label: "Low AI use", value: 4.04, tone: "neutral" }, { label: "Moderate", value: 4.33, tone: "good" }, { label: "High AI use", value: 4.11, tone: "neutral" } ] } ],
         note: "Drawn from 0: the gaps are about half a point (Study 1) and 0.2 to 0.3 points (Study 2)." },
       answer: [
-        "The gain from moderate AI use is <b>modest but reliable</b>. In Study 1, creativity was 4.02 for the moderate group vs 3.49 and 3.39 on a 1 to 7 scale, about half a point (d ≈ .4 to .5); business value was 5.67 vs 4.60 and 4.69 on a 1 to 10 scale, about one point. In Study 2 it was 4.33 vs 4.04 and 4.11, only about 0.2 to 0.3 points (d ≈ .3 to .4).",
+        "The gain from moderate AI use is <b>modest but reliable</b>. In Study 1, creativity was 4.02 for moderate use vs 3.49 (low) and 3.39 (high) on a 1 to 7 scale, about half a point (d ≈ .4 to .5); business value was 5.67 vs 4.60 (low) and 4.69 (high) on a 1 to 10 scale, about one point. In Study 2 it was 4.33 vs 4.04 (low) and 4.11 (high), only about 0.2 to 0.3 points (d ≈ .3 to .4).",
         "The <b>variance explained</b> is η² ≈ .05 to .06, so the amount of AI use explains only about 5 to 6% of the differences in creativity; most comes from the person and the idea. <b>Watch the axes</b>: graphs that start at 3.5 instead of 1 make the bars look more different than they are. Still, the moderate group came out best across studies and on most measures, and in the field study.",
-        "Organisations should encourage <b>balanced, mindful</b> AI use rather than maximising it, and expect moderate improvement, not a revolution. Note that “moderate” here means about 4 to 6 interactions in a 15-minute task, which does not translate directly into a rule for every job."
+        "Organisations should encourage <b>balanced</b> AI use rather than just giving access or maximising it, and expect moderate improvement, not a revolution. Moderate use also raised people’s sense of competence and shared ownership of the ideas. Note that “moderate” here means about 4 to 6 interactions in a 15-minute task, so for other tasks or skill levels the optimum may lie elsewhere."
       ],
       takeaway: "Consistent but small: about 5–6% of creativity differences come from the amount of AI use.",
       trap: { wrong: "The bars look very different, so the effect is huge.", right: "The y-axes start at 3.5; on the full scale the gaps are half a point or less." },
-      note: "The source does not label which non-moderate condition (low or high AI use) each of the other two means belongs to."
+      note: null
     },
     {
       id: "C.4",
@@ -351,13 +351,13 @@ IDQ[8] = {
           { head: "Common solution", sub: "imagined task", tone: "good", points: ["typical answer is the goal", "more AI: more and faster", "still verify correctness"] } ],
         verdict: "More AI interaction is warranted." },
       answer: [
-        "For a common, recognisable solution, <b>more AI interaction</b> is warranted, possibly a lot. Heavy AI use hurt creativity because the AI gives <b>standardised, typical</b> ideas and people anchor on them, so ideas become alike.",
-        "If you want the common answer, that is no longer a problem but the goal: an LLM is built to produce the <b>most plausible, typical</b> answer (Block A). The pattern then looks more like <b>productivity</b>, where more AI help means more and faster output (“more is better”), rather than an inverted U.",
+        "For a common, recognisable solution, <b>more AI interaction</b> is warranted, possibly a lot. Heavy AI use hurt creativity because the AI gives <b>standardised, typical</b> ideas and people anchor on them, so knowledge diversity drops and ideas become alike.",
+        "If you want the common answer, that is no longer a problem but the goal: an LLM reflects a kind of <b>average</b> of what the internet says (Demszky et al.), so it produces the typical answer, and the reason to limit its use disappears. The pattern then looks more like <b>productivity</b>, where more AI help means more and faster output (“more is better”), rather than an inverted U.",
         "You should still keep a <b>human check</b>, because typical is not always correct (plausible, not correct), so verify the result."
       ],
       takeaway: "What makes AI bad for originality makes it good for the typical answer.",
       trap: { wrong: "The inverted U applies to every task.", right: "It comes from AI’s typical answers hurting originality; for a typical-answer task that cost disappears." },
-      note: "This is reasoning beyond the paper: Huang did not test this kind of task."
+      note: "Huang did not test this kind of task; the answer follows from the mechanism (the reader gives the same reasoning)."
     }
   ]
 };
