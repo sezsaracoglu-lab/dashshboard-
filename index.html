@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -102,6 +102,13 @@ h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4vw,2.5rem);l
 footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
 @media (max-width:820px){.hero,.video,.contact{grid-template-columns:minmax(0,1fr)}.hero{padding-block:44px 32px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+
+/* Scroll reveal (Apple-style): blocks fade and glide up as they enter the screen */
+.js .rv{opacity:0;transform:translateY(48px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s);will-change:opacity,transform}
+.js .rv.zoom{transform:translateY(30px) scale(.94)}
+.js .rv.in{opacity:1;transform:none}
+.js .hero .rv{transform:translateY(28px)}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .rv.zoom{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -223,6 +230,31 @@ if (LINKS.linkedin){const b=document.getElementById('libtn');b.href=LINKS.linked
   document.getElementById('contactbtns').insertAdjacentHTML('afterbegin',`<a class="btn solid" href="${LINKS.linkedin}" target="_blank" rel="noopener">LinkedIn ↗</a>`)}
 if (LINKS.youtubeChannel){document.getElementById('ytbtn').insertAdjacentHTML('afterend',` <a class="btn" href="${LINKS.youtubeChannel}" target="_blank" rel="noopener">Channel ↗</a>`)}
 document.getElementById('yr').textContent = new Date().getFullYear();
+
+// ---- scroll reveal ----
+(function(){
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const groups=[
+    ['.hero > div:first-child > *',.12],['.threads > *',.14],
+    ['section.block .shead',0],['.stats .stat',.1],['.focus .fc',.1],['.journey',0],['.journey li',.08],
+    ['.frame',0],['.vrow',.03],['#posts .post',.1],['.study .tile',.1],['.contact > *',.15]];
+  const all=[];
+  groups.forEach(([sel,step])=>{const els=[...document.querySelectorAll(sel)];
+    // stagger items that sit in the same row
+    els.forEach((el,i)=>{el.classList.add('rv');if(step)el.style.setProperty('--d',Math.min(i,6)*step+'s');all.push(el)})});
+  document.querySelectorAll('section.block h2').forEach(h=>h.closest('.shead')&&h.closest('.shead').classList.add('zoom'));
+  document.querySelector('.frame')&&document.querySelector('.frame').classList.add('zoom');
+  // count the numbers up when they appear
+  const count=el=>{const b=el.querySelector('b');if(!b||reduce)return;const txt=b.textContent,n=parseFloat(txt.replace(/,/g,'')),suf=txt.replace(/[\d,.]/g,'');
+    if(isNaN(n))return;const t0=performance.now(),dur=1400;
+    const tick=t=>{const k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3);b.textContent=Math.round(n*e).toLocaleString('en-US')+suf;if(k<1)requestAnimationFrame(tick)};
+    requestAnimationFrame(tick)};
+  if(!('IntersectionObserver' in window)||reduce){all.forEach(e=>e.classList.add('in'));return}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.classList.contains('stat'))count(e.target);io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -8% 0px'});
+  all.forEach(e=>io.observe(e));
+  // reset stagger after the first reveal so hover stays snappy
+  all.forEach(e=>e.addEventListener('transitionend',()=>e.style.setProperty('--d','0s'),{once:true}));
+})();
 </script>
 </body>
 </html>
