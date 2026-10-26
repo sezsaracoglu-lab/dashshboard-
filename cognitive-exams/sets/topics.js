@@ -35,6 +35,7 @@ const TOPICS = {
 const SKILLS = { def: "Key concepts and definitions", find: "Main findings", fig: "Reading figures and tables", comp: "Comparing theories", app: "Applying to new situations" };
 window.EXAMS = window.EXAMS || [];
 const GROUPS = [
+  { id: "hy", name: "★ High-yield", sub: "Most likely exam questions" },
   { id: "t1", name: "Theme 1", sub: "Attention" }, { id: "t2", name: "Theme 2", sub: "Working memory" },
   { id: "t3", name: "Theme 3", sub: "Autobiographical memory" }, { id: "t4", name: "Theme 4", sub: "Concepts and categories" },
   { id: "t5", name: "Theme 5", sub: "Mental imagery" }, { id: "t6", name: "Theme 6", sub: "Judgement and decisions" },

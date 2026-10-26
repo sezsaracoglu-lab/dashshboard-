@@ -1,0 +1,732 @@
+{
+ "theme": [
+  {
+   "s": "app",
+   "t": "att",
+   "q": "A Dutch-English bilingual shadows an English story played to her left ear. Without telling her, the researcher plays a Dutch translation of the same story to her right ear, and she notices that both ears tell the same story. For which model of attention is this finding the biggest problem?",
+   "o": [
+    "Treisman's attenuation model",
+    "Broadbent's filter model",
+    "Neisser's synthesis of early and late selection",
+    "Deutsch and Deutsch's late-filter model"
+   ],
+   "a": 1,
+   "spot": "Noticing a translation = the MEANING of the ignored ear was analysed.",
+   "why": "A translation sounds completely different, so the only thing the two ears share is <b>meaning</b>. In <b>Broadbent's</b> model the ignored ear is blocked at the sensory level, before meaning, so this should be impossible. Treisman (weakened but still analysed) and <b>late selection</b> (everything analysed for meaning first) can both explain it.",
+   "src": "[PAST-1][IDQ B3][CORE] Treisman (1964) bilinguals; Sternberg p.151",
+   "hy": "2 Evidence Broadbent cannot explain"
+  },
+  {
+   "s": "def",
+   "t": "att",
+   "q": "At a busy reception, Pieter wants to follow his manager, whose deep voice comes from his left. According to Broadbent, which information can his attentional filter use to keep the manager's message and drop the others?",
+   "o": [
+    "Whether the words of each message make sense",
+    "The emotional tone of what each person is saying",
+    "The pitch and direction of the manager's voice",
+    "Whether a message mentions something important to him"
+   ],
+   "a": 2,
+   "spot": "Broadbent: what can the filter know BEFORE meaning is analysed?",
+   "why": "Broadbent's filter works <b>early</b>, right after the sensory register. At that point only <b>physical features</b> are available, such as pitch, loudness, accent and location. Sense, personal importance and emotional content all require meaning, which in Broadbent's model is only analysed for the one channel that has already passed the filter.",
+   "src": "[PAST-1][PAST-2][CORE] Broadbent (1958); Sternberg p.150",
+   "hy": "1 Broadbent early filter"
+  },
+  {
+   "s": "comp",
+   "t": "att",
+   "q": "Which statement about Broadbent's model and Treisman's model is NOT correct?",
+   "o": [
+    "In Treisman's model, an ignored message can still reach awareness if it means something to the listener.",
+    "In Treisman's model, the ignored message is analysed for meaning before it is weakened.",
+    "In both models, the message to attend to is picked out by physical features such as pitch and loudness.",
+    "In Broadbent's model, the ignored message never reaches the stage where meaning is assigned."
+   ],
+   "a": 1,
+   "spot": "NOT correct: find the one that gets the ORDER in Treisman wrong.",
+   "why": "In Treisman's model the low-level check (loudness, pitch) comes <b>first</b>: non-matching input is <b>attenuated</b>, and only <b>after</b> that is meaning analysed. So meaning is analysed after the weakening, not before. The other three statements are correct: both models select on physical features, Broadbent blocks the ignored message before meaning, and in Treisman a meaningful signal such as your name can still break into awareness.",
+   "src": "[PAST-0][PAST-1][CORE] Sternberg pp.150-152, Figure 4.9",
+   "hy": "3 Treisman attenuation"
+  },
+  {
+   "s": "app",
+   "t": "blind",
+   "q": "In a referee training video, trainees count the fouls committed by the team in red shirts and ignore the team in blue. Halfway through, a club mascot walks across the pitch. In one version the mascot costume is red, in another it is blue. In which version are the trainees most likely to notice the mascot?",
+   "o": [
+    "The blue version, because the mascot then stands out against the team they are attending to",
+    "Neither, because only the time the mascot is on screen affects how often it is noticed",
+    "The blue version, because ignored colours are filtered less strictly than attended ones",
+    "The red version, because the mascot then shares a feature with what they are attending to"
+   ],
+   "a": 3,
+   "spot": "What are they tuned to? Unexpected things that MATCH it get noticed.",
+   "why": "People notice unexpected objects more often when they <b>share features with the attended items</b>: their <b>attentional set</b>. That is also why people who count passes by the team in black notice the black gorilla more often than people who count passes by the team in white (Simons & Chabris, 1999; Most et al., 2001). A blue mascot matches the ignored team, so it is filtered out with them. Standing out against the attended team does not help.",
+   "src": "[PAST-1][IDQ A1][CORE] Simons; Most et al. (2001)",
+   "hy": "4 Attentional set / similarity"
+  },
+  {
+   "s": "def",
+   "t": "blind",
+   "q": "Consider these two situations. I. A driver who is adjusting her navigation app does not see a deer step onto the road ahead, although she is facing it. II. Comparing two photos of the same living room, a person does not see that a lamp is missing in the second one. Which statement is correct?",
+   "o": [
+    "I and II are both examples of change blindness.",
+    "I is change blindness, and II is inattentional blindness.",
+    "I and II are both examples of inattentional blindness.",
+    "I is inattentional blindness, and II is change blindness."
+   ],
+   "a": 3,
+   "spot": "Something NEW appears (I) or something DIFFERS between two versions (II)?",
+   "why": "In I an unexpected object appears while attention is on another task: <b>inattentional blindness</b>. In II nothing new appears; the scene differs between two versions and the person misses the difference: <b>change blindness</b>. Change blindness needs a comparison with a stored earlier state, so memory is involved as well as attention.",
+   "src": "[PAST-2][IDQ A4] Simons; pty_t1 1.5.8",
+   "hy": "5 Change vs inattentional blindness"
+  },
+  {
+   "s": "find",
+   "t": "blind",
+   "q": "Chabris et al. (2011) let participants jog behind an experimenter who ran past a staged fight, to simulate the case of a Boston police officer who said he had not seen a beating. What did the results suggest about the officer's claim?",
+   "o": [
+    "It was plausible only for the night-time conditions of the real case",
+    "It was unlikely, because nearly all joggers noticed the fight in daylight",
+    "It was plausible, because many joggers missed the fight even in daylight",
+    "It was unlikely, because joggers missed the fight only when it was silent"
+   ],
+   "a": 2,
+   "spot": "What happened in DAYLIGHT, and what does that do to the 'he must be lying' argument?",
+   "why": "At night 65% missed the fight, and even in <b>broad daylight 44%</b> ran right past it. So failing to see a violent event while chasing someone is common, which makes the officer's story <b>plausible</b>. This study shows that inattentional blindness is not a lab curiosity but happens in the <b>real world</b>.",
+   "src": "[LO][CORE] Chabris et al. (2011) in Simons",
+   "hy": "16 Real-world IB"
+  },
+  {
+   "s": "find",
+   "t": "att",
+   "q": "Judge these statements about Cherry's (1953) shadowing studies.<br>I. Participants noticed when the ignored message switched from English to German.<br>II. Participants noticed when the ignored voice changed from a man to a woman.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 1,
+   "spot": "Physical change or change in meaning?",
+   "why": "Cherry's participants noticed <b>physical, sensory changes</b> in the ignored ear, such as a male voice becoming female or speech becoming a tone. They did not notice <b>semantic changes</b>, even a switch from English to German or speech played backwards. That pattern is what Broadbent's early filter was built to explain.",
+   "src": "[LO][CORE] Cherry (1953); Sternberg p.149",
+   "hy": "10 Cherry shadowing"
+  },
+  {
+   "s": "find",
+   "t": "att",
+   "q": "Treisman (1960) had people shadow a coherent story in one ear. Partway through, the rest of that story moved to the ignored ear, while the shadowed ear continued with a different message. What happened, and what did it show?",
+   "o": [
+    "Participants noticed only that the voice had changed, so only physical features were processed",
+    "Participants stopped shadowing altogether, so meaning is analysed only after a long delay",
+    "Participants said the first few words from the ignored ear, so its content was being processed",
+    "Participants kept shadowing the new message without error, so the ignored ear was fully blocked"
+   ],
+   "a": 2,
+   "spot": "Did they follow the STORY? Then meaning leaked through.",
+   "why": "Participants briefly picked up the <b>first few words</b> of the story in the ignored ear. To follow the story they must have processed the <b>content</b> of the unattended message. That is why Treisman replaced Broadbent's block with a filter that only <b>attenuates</b> the ignored input.",
+   "src": "[PAST-1][CORE] Treisman (1960); Sternberg p.151",
+   "hy": "2 Evidence Broadbent cannot explain"
+  },
+  {
+   "s": "comp",
+   "t": "att",
+   "q": "About one third of people notice their own name in the ignored ear during shadowing. Which pair names one model that CAN and one model that CANNOT explain this?",
+   "o": [
+    "Broadbent's model can; Treisman's model cannot",
+    "Deutsch and Deutsch's model can; Treisman's model cannot",
+    "Broadbent's model can; Deutsch and Deutsch's model cannot",
+    "Treisman's model can; Broadbent's model cannot"
+   ],
+   "a": 3,
+   "spot": "Hearing your name requires its MEANING. Which model blocks all meaning early?",
+   "why": "To notice your name, its <b>meaning</b> must be recognised. Only <b>Broadbent</b> blocks the ignored ear completely before meaning, so his model cannot explain it. <b>Treisman</b> can: the name arrives weakened, but it is so important to you that the weak signal is enough. Deutsch and Deutsch can too, since everything is analysed for meaning before selection.",
+   "src": "[IDQ B3][CORE] Moray (1959); Sternberg pp.151-152",
+   "hy": "11 Own name: which theories explain it"
+  },
+  {
+   "s": "def",
+   "t": "att",
+   "q": "In a café, Noor registers that someone at the next table is speaking loudly in a high voice, without understanding a word. Only when she turns her attention to that table does she understand what the story is about. In Neisser's (1967) terms, these two steps are",
+   "o": [
+    "a preattentive process, followed by an attentive, controlled process",
+    "two preattentive processes that work in parallel",
+    "two attentive, controlled processes that work serially",
+    "an attentive, controlled process, followed by a preattentive process"
+   ],
+   "a": 0,
+   "spot": "Physical features only, or meaning and relations?",
+   "why": "<b>Preattentive processes</b> are automatic, fast and parallel, and register only <b>physical</b> features such as loudness and pitch. <b>Attentive, controlled processes</b> come later, are serial, cost attention and working memory, and combine fragments into a meaningful whole. Noor first hears only loudness and pitch, then understands the story once she attends.",
+   "src": "[CORE] Neisser (1967); Sternberg p.152",
+   "hy": "12 Neisser's synthesis"
+  },
+  {
+   "s": "fig",
+   "t": "blind",
+   "q": "The figure shows how many participants missed an unexpected object in two studies described by Simons. Which conclusion is best supported?",
+   "chart": {
+    "type": "bar",
+    "title": "Observers who missed the unexpected object",
+    "x": [
+     "Gorilla (counting passes, team in white)",
+     "Red cross (tracking black shapes)"
+    ],
+    "y": "% missed",
+    "series": [
+     {
+      "name": "Missed",
+      "v": [
+       50,
+       30
+      ]
+     }
+    ],
+    "note": "Gorilla: Simons & Chabris (1999), visible 9 s. Red cross: Most et al. (2001), the only coloured item, visible 5 s.",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Unexpected objects are missed only when they share a colour with the ignored items",
+    "A gorilla is missed more often because it is on screen for a shorter time than the cross",
+    "Even an object that is the only one of its kind in the display is missed by many people",
+    "Unexpected objects are missed mainly when the display is grainy and partly transparent"
+   ],
+   "a": 2,
+   "spot": "Look at the red cross: what is special about it, and how many still missed it?",
+   "why": "The red cross was the <b>only coloured item</b> and was visible for five seconds, yet about <b>30%</b> missed it. So even <b>unique</b> items can go unnoticed when attention is on the task. The gorilla was on screen for nine seconds, longer than the cross, and the gorilla video was fully visible, not transparent.",
+   "src": "[CORE] Simons & Chabris (1999); Most et al. (2001), in Simons",
+   "hy": "17 Unique items still missed"
+  },
+  {
+   "s": "fig",
+   "t": "blind",
+   "q": "Some argue that people do see the unexpected object but forget it before they are asked about it. The figure shows an illustrative result for one unexpected object, reported either with a button press the moment it is seen or with a question right after the trial. Which result would have supported the forgetting explanation instead?",
+   "chart": {
+    "type": "bar",
+    "title": "Noticing the unexpected object (illustrative)",
+    "x": [
+     "Button press during the trial",
+     "Question right after the trial"
+    ],
+    "y": "% who noticed",
+    "series": [
+     {
+      "name": "Noticed",
+      "v": [
+       48,
+       50
+      ]
+     }
+    ],
+    "note": "Illustrative values showing the reported pattern: online reports do not rescue noticing.",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Higher noticing for objects that resemble the items people are ignoring",
+    "Far more noticing with the button press than with the question afterwards",
+    "Equally low noticing with the button press and with the question afterwards",
+    "Far more noticing with the question afterwards than with the button press"
+   ],
+   "a": 1,
+   "spot": "Forgetting needs TIME. Which method removes the delay?",
+   "why": "A button press during the trial leaves <b>no delay</b> in which anything could be forgotten. If people really saw the object and then forgot it (<b>inattentional amnesia</b>), they should report it far more often online than afterwards. The figure shows the opposite: just as many misses online, so the problem is <b>awareness</b>, not memory. 'Equally low with both methods' is what the figure actually shows, which argues against forgetting.",
+   "src": "[IDQ A1] Wolfe (1999) inattentional amnesia; pty_t1 1.8.1",
+   "hy": "14 Inattentional amnesia"
+  },
+  {
+   "s": "fig",
+   "t": "blind",
+   "q": "In a ball-passing video with an unexpected gorilla, one group counts all passes by one team. A second group keeps two separate counts: bounce passes and aerial passes. The figure shows an illustrative result. Which conclusion fits the figure best?",
+   "chart": {
+    "type": "bar",
+    "title": "Noticing the gorilla (illustrative)",
+    "x": [
+     "One count",
+     "Two separate counts"
+    ],
+    "y": "% who noticed",
+    "series": [
+     {
+      "name": "Noticed",
+      "v": [
+       55,
+       35
+      ]
+     }
+    ],
+    "note": "Illustrative values; Simons reports only the direction of the effect.",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Participants with two counts have a smaller working memory span than the others",
+    "The gorilla matches the counted team better when two kinds of passes are counted",
+    "The harder the main task, the less attention is left over for unexpected events",
+    "Two counts make the eyes move more, so the gorilla falls outside the visual field"
+   ],
+   "a": 2,
+   "spot": "The only thing that changed is how DEMANDING the main task is.",
+   "why": "Keeping two counts is more effortful, and fewer people notice the gorilla. Simons concludes that the <b>greater the demands on attention</b>, the less likely people are to notice something outside its focus. The groups were assigned at random, so a difference in working memory span is not the explanation, and the gorilla's similarity to the team is the same in both conditions.",
+   "src": "[LO][CORE] Simons & Chabris (1999), in Simons",
+   "hy": "13 Load on the primary task"
+  },
+  {
+   "s": "fig",
+   "t": "blind",
+   "q": "For about 20 years, Neisser's selective-looking results were dismissed because the overlapping videos looked ghostly and partly transparent. Simons and Chabris (1999) tested both a transparent version and a fully visible version filmed with one camera. The figure shows the pattern they found (illustrative values). If the critics had been right, what would the figure have looked like?",
+   "chart": {
+    "type": "bar",
+    "title": "Observers who missed the unexpected event",
+    "x": [
+     "Transparent, overlapping teams",
+     "Fully visible, one camera (gorilla)"
+    ],
+    "y": "% missed",
+    "series": [
+     {
+      "name": "Missed",
+      "v": [
+       55,
+       50
+      ]
+     }
+    ],
+    "note": "Transparent value illustrative ('many people missed'); fully visible value from Simons ('fully half').",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Both bars near 100%, because counting passes takes all attention",
+    "The fully visible bar near zero, far below the transparent bar",
+    "Both bars at about 50%, because the type of video does not matter",
+    "The fully visible bar higher than the transparent bar"
+   ],
+   "a": 1,
+   "spot": "Critics said: 'with a vivid, opaque display, people WOULD notice'. Translate that into misses.",
+   "why": "The critics claimed people missed the event only because the display was <b>ghostly</b>. Then a fully visible video should give almost <b>no misses</b>. Instead, about <b>half</b> missed the gorilla in the fully visible version, so the critics were wrong: the cause is attention, not the odd look of the display.",
+   "src": "[PAST-1][CORE] Neisser (1979); Simons & Chabris (1999), in Simons",
+   "hy": "7 Neisser selective looking / critics"
+  },
+  {
+   "s": "comp",
+   "t": "blind",
+   "q": "Baggage screeners are told to look for weapons, weapons appear on many trials, and screeners still miss some of them when they are busy. How does this differ from inattentional blindness as Simons describes it?",
+   "o": [
+    "The missed object is part of the task, so the miss must be caused by forgetting",
+    "The missed object is expected and part of the task, so surprise cannot explain the miss",
+    "The missed object is unexpected, but it appears in the centre of the screen",
+    "The missed object is the same, but the screener has to remember it for longer"
+   ],
+   "a": 1,
+   "spot": "What makes IB 'inattentional BLINDNESS'? Check: expected or unexpected?",
+   "why": "Inattentional blindness is about <b>unexpected</b> objects that are not part of the task and usually appear once. Here the target is <b>instructed, expected and repeated</b>, so it belongs to the attentional set and surprise cannot explain the miss. That makes it even stronger evidence for a <b>capacity limit</b>: a busy main task uses up the attention needed for awareness. Nothing in it points to forgetting.",
+   "src": "[IDQ A5] pty_t1; Simons definition",
+   "hy": "20 Expected targets still missed"
+  },
+  {
+   "s": "comp",
+   "t": "att",
+   "q": "Judge these statements.<br>I. Broadbent's model and Deutsch and Deutsch's model both assume a bottleneck through which only one source of information can pass.<br>II. The two models differ only in where in the processing sequence they place that bottleneck.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 2,
+   "spot": "Early vs late filter: same idea, different place?",
+   "why": "Sternberg notes that proponents of both <b>early</b> and <b>late</b> filtering propose an attentional <b>bottleneck</b> through which a single source can pass. Broadbent places it right after the sensory register, before meaning; Deutsch and Deutsch place it after meaning is analysed. The only difference is the <b>position</b> of the bottleneck.",
+   "src": "[IDQ B4][CORE] Sternberg p.152",
+   "hy": "9 Deutsch & Deutsch / bottleneck position"
+  },
+  {
+   "s": "comp",
+   "t": "blind",
+   "q": "Which pair of procedures has the same basic logic?",
+   "o": [
+    "Dichotic listening and searching for a black L among distractors that differ in colour and orientation",
+    "Watching two overlapping videos and comparing two photos of a scene to find what changed",
+    "Dichotic listening and watching two overlapping, partly transparent videos while following one",
+    "Shadowing one ear and searching for a target that differs from distractors in a single feature"
+   ],
+   "a": 2,
+   "spot": "Two streams at once, follow one, ignore the other.",
+   "why": "In <b>dichotic listening</b> two messages arrive at the same time and you follow one. Neisser and Becklen (1975) built the <b>visual analogue</b>: two overlapping videos, monitor one, and the ignored one's events are missed. Visual search is about finding one target among distractors, and comparing photos is a <b>change blindness</b> task.",
+   "src": "[PAST-1][CORE] Neisser & Becklen (1975), in Simons",
+   "hy": "7 Neisser selective looking"
+  },
+  {
+   "s": "find",
+   "t": "blind",
+   "q": "Judge these statements about inattentional deafness.<br>I. Listeners following conversations over headphones often fail to notice a person who walks through the scene repeatedly saying 'I am a gorilla'.<br>II. A demanding visual task can make people miss an unexpected sound.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 2,
+   "spot": "Two findings from Simons: one purely auditory, one visual task with a sound.",
+   "why": "Statement I is the study by <b>Dalton and Fraenkel (2012)</b>: inattentional deafness for a voice saying 'I am a gorilla'. Statement II is <b>Macdonald and Lavie (2011)</b>: high visual perceptual load induces inattentional deafness. The second finding shows the limit is not tied to one sense but lies in <b>attention</b>.",
+   "src": "[PAST-1][IDQ B1][CORE] Simons",
+   "hy": "15 Inattentional deafness"
+  },
+  {
+   "s": "find",
+   "t": "blind",
+   "q": "Which finding most directly shows that the limit behind inattentional blindness is not purely visual?",
+   "o": [
+    "People miss a bright red cross even though it is the only coloured object",
+    "People miss an umbrella woman walking through two overlapping teams",
+    "People miss a staged fight while jogging behind someone in daylight",
+    "People miss unexpected visual objects while holding information in a memory task"
+   ],
+   "a": 3,
+   "spot": "Which task does NOT load the eyes?",
+   "why": "Fougnie and Marois (2007) found that people miss unexpected visual objects when their limited resources are spent on a <b>memory task</b>. Nothing visual is competing, yet the object is missed, so the limit must lie in the <b>capacity of attention</b>, a central resource. The other findings all involve a visual task, so they cannot separate a visual limit from an attentional one.",
+   "src": "[IDQ A3][CORE] Fougnie & Marois (2007), in Simons",
+   "hy": "13 Load / central limit"
+  },
+  {
+   "s": "find",
+   "t": "blind",
+   "q": "Simons and Jensen (2009) raised the speed of moving objects for each participant until tracking accuracy was 75%. Some people could track at more than twice the speed of others. How did tracking ability relate to noticing an unexpected event?",
+   "o": [
+    "Only people with a large working memory capacity noticed it",
+    "Better trackers noticed the unexpected event more often",
+    "Tracking ability was unrelated to the chance of noticing",
+    "Worse trackers noticed the unexpected event more often"
+   ],
+   "a": 2,
+   "spot": "Does being GOOD at the main task buy you spare attention?",
+   "why": "Tracking ability varied a lot, but it was <b>unrelated</b> to the odds of noticing. Simons concludes that as long as people <b>try</b> to do the tracking task, they are unlikely to notice unexpected events. Studies on working memory capacity give <b>mixed</b> results, so 'only people with a large working memory capacity noticed it' is not an established finding.",
+   "src": "[CORE] Simons & Jensen (2009), in Simons",
+   "hy": "18 Individual differences"
+  },
+  {
+   "s": "app",
+   "t": "blind",
+   "q": "A taxi driver says: 'I'd always notice a child running into the street, even while I'm on the phone. In twenty years it has never happened that I missed something.' Which explanation does Simons give for why this kind of confidence is so common?",
+   "o": [
+    "We are aware of what we noticed but not of what we missed, so experience seems to confirm we notice",
+    "Experienced drivers have a larger working memory capacity, so their spare attention protects them",
+    "Unexpected and important events capture attention automatically, so in daily life we really do notice",
+    "Drivers forget the events they missed, so they underestimate how much they actually saw"
+   ],
+   "a": 0,
+   "spot": "Why does 'it never happened to me' feel like evidence?",
+   "why": "Simons says our <b>experiences mislead us</b>: we are fully aware of what we noticed, but we are, by definition, unaware of what we missed. If we treat our experience as representative, we conclude that we always notice. That is why nearly <b>90%</b> believe they would see the gorilla. The idea that important events automatically capture attention is exactly the <b>mistaken intuition</b>.",
+   "src": "[PAST-2][LO][CORE] Simons; Levin & Angelone (2008)",
+   "hy": "8 Mistaken intuitions"
+  },
+  {
+   "s": "app",
+   "t": "blind",
+   "q": "A school crossing guard gives children one rule that follows from research on inattentional blindness. Which rule fits best?",
+   "o": [
+    "Wear bright clothes, then drivers will always notice you in time",
+    "Wave at drivers, because movement always captures their attention",
+    "Even if a driver looks straight at you, wait until the car has stopped",
+    "Cross quickly, because drivers notice slowly moving people less often"
+   ],
+   "a": 2,
+   "spot": "Simons' practical lesson in four words: looking is not ...",
+   "why": "Simons advises: do not assume a driver sees you, even if they appear to make <b>eye contact</b>, because <b>looking is not the same as seeing</b>. Bright or moving things are not guaranteed to be noticed: about 30% missed the only coloured item in Most et al. (2001), and the chest-thumping gorilla was missed by half.",
+   "src": "[LO][CORE] Simons, practical advice",
+   "hy": "21 Practical advice / looking is not seeing"
+  },
+  {
+   "s": "def",
+   "t": "att",
+   "q": "Which model holds that both the attended and the ignored message are analysed for their physical features and their meaning, and only then is one selected for short-term memory?",
+   "o": [
+    "Treisman's attenuation model",
+    "Deutsch and Deutsch's late-filter model",
+    "Neisser's preattentive processing",
+    "Broadbent's filter model"
+   ],
+   "a": 1,
+   "spot": "Filter AFTER meaning = late selection.",
+   "why": "<b>Deutsch and Deutsch</b> (1963; Norman, 1968) put the filter <b>after</b> perceptual processing: all messages are analysed for physical features and meaning, and only then filtered out. Treisman weakens the ignored message before meaning, Broadbent blocks it before meaning, and Neisser's preattentive processes register only physical features.",
+   "src": "[PAST-1][PAST-2 options][CORE] Sternberg p.152, Figure 4.10",
+   "hy": "9 Deutsch & Deutsch late filter"
+  },
+  {
+   "s": "app",
+   "t": "blind",
+   "q": "After reading about the gorilla study, a student says she would love to get rid of inattentional blindness so that she would notice everything around her. What would Simons reply?",
+   "o": [
+    "That would be worse, because filtering out the rest is what lets you focus on one thing",
+    "That is only possible for people with a large working memory capacity",
+    "That would not matter, because unexpected events are rare in modern life",
+    "That is possible, because training on the gorilla video removes the blindness"
+   ],
+   "a": 0,
+   "spot": "What is inattentional blindness the price of?",
+   "why": "Simons says there is no 'magical elixir' and that noticing everything would not be a good outcome anyway. Missing the unexpected is the flip side of <b>focused attention</b>, which lets us zero in on what matters and filter out distractions. In modern life the risk is actually <b>higher</b>, because we move faster and face more distraction, so the advice is to avoid distractions, not to remove the filter.",
+   "src": "[IDQ A2][LO][CORE] Simons",
+   "hy": "21 Why IB is not a flaw"
+  },
+  {
+   "s": "def",
+   "t": "att",
+   "q": "Moray (1959) found that people who ignore almost all meaning in an unattended message still often recognise their own name in it. How did he explain this?",
+   "o": [
+    "Personally important messages are strong enough to break through the filter",
+    "The filter weakens every ignored message, and the name needs very little strength",
+    "All messages are fully analysed for meaning before one of them is selected",
+    "A name is a physical change in the message, like a switch to a female voice"
+   ],
+   "a": 0,
+   "spot": "Moray = a repair of Broadbent: the filter stays, but some messages ...",
+   "why": "Moray kept Broadbent's filter that blocks most information at the sensory level, but added that <b>personally important</b> messages are so powerful that they <b>burst through</b> it. Weakening every ignored message is <b>Treisman's</b> attenuation account, and analysing everything for meaning first is <b>Deutsch and Deutsch's</b> late selection. A name is meaningful, not a physical change.",
+   "src": "[IDQ B3][CORE] Moray (1959); Sternberg p.151",
+   "hy": "11 Own name / Moray"
+  }
+ ],
+ "m1": [
+  {
+   "s": "def",
+   "t": "att",
+   "q": "Which image best describes how the filter works in Treisman's model?",
+   "o": [
+    "A spotlight that moves from one message to the next in turn",
+    "A tap that shuts off the ignored messages completely",
+    "A volume knob that turns the ignored messages down but not off",
+    "A gate that opens only after every message has been understood"
+   ],
+   "a": 2,
+   "spot": "Treisman: attenuate = weaken.",
+   "why": "Treisman's filter <b>attenuates</b>: it passes on a weakened version of non-target messages instead of blocking them. A weak but meaningful signal, such as your name, can still reach awareness. A tap that shuts off is <b>Broadbent</b>; a gate after full understanding is <b>Deutsch and Deutsch</b>.",
+   "src": "[PAST-0][IDQ B3][CORE] Sternberg pp.151-152",
+   "hy": "3 Treisman attenuation"
+  },
+  {
+   "s": "def",
+   "t": "blind",
+   "q": "A web designer compares two versions of a homepage that flash one after the other, with a short blank screen in between. Although she looks at both versions many times, she does not see that the 'Buy' button has moved. This is",
+   "o": [
+    "inattentional blindness",
+    "inattentional deafness",
+    "selective listening",
+    "change blindness"
+   ],
+   "a": 3,
+   "spot": "Two versions of the same scene, one difference.",
+   "why": "Missing a difference between <b>two versions</b> of the same scene is <b>change blindness</b>. To see it she must store the old version and compare it with the new one. <b>Inattentional blindness</b> is missing an unexpected object that appears while attention is on something else, such as the gorilla.",
+   "src": "[PAST-2][IDQ A4] pty_t1 1.5.8",
+   "hy": "5 Change vs inattentional blindness"
+  },
+  {
+   "s": "fig",
+   "t": "att",
+   "q": "A class repeats a shadowing study. The figure shows the percentage of participants who noticed four kinds of change in the ignored ear (illustrative values in line with Sternberg). Which bar can Broadbent's original filter model NOT explain?",
+   "chart": {
+    "type": "bar",
+    "title": "Changes noticed in the ignored ear (illustrative)",
+    "x": [
+     "Male to female voice",
+     "Speech to tone",
+     "English to German",
+     "Own name"
+    ],
+    "y": "% who noticed",
+    "series": [
+     {
+      "name": "Noticed",
+      "v": [
+       90,
+       92,
+       6,
+       33
+      ]
+     }
+    ],
+    "note": "Illustrative values; the own-name value follows the 'about one third' in Sternberg and Simons.",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Own name spoken",
+    "Speech changes to a tone",
+    "Language changes from English to German",
+    "Voice changes from male to female"
+   ],
+   "a": 0,
+   "spot": "Broadbent passes physical features and blocks meaning. Which bar needs meaning AND is high?",
+   "why": "Broadbent predicts that <b>physical</b> changes (voice, tone) are noticed and changes in <b>meaning</b> (language) are not, which matches three bars. But about <b>one third</b> notice their <b>own name</b>, which requires recognising meaning in the blocked ear. This is the finding that led Moray and Treisman to revise the model.",
+   "src": "[PAST-1][IDQ B3][CORE] Cherry (1953); Moray (1959); Sternberg pp.149-151",
+   "hy": "1 Broadbent / 2 evidence against"
+  },
+  {
+   "s": "find",
+   "t": "blind",
+   "q": "In Neisser and Becklen's (1975) studies, participants monitored one of two overlapping videos, such as a hand-clapping game, and the other video showed people passing a ball. What did they typically report about the ignored video?",
+   "o": [
+    "They noticed its events only when the players in both videos wore the same colours",
+    "They noticed every unexpected event in it, because it was on the retina",
+    "They knew something was happening there but missed meaningful events in it",
+    "They could not see the ignored video at all, as if it were invisible"
+   ],
+   "a": 2,
+   "spot": "Both videos hit the retina. Did that mean they were seen?",
+   "why": "Both events produced signals on the <b>retina</b>, yet participants often missed unexpected events in the ignored video, such as the clapping players stopping to <b>shake hands</b>. They could tell that other 'stuff' was happening, but not its meaning. Like dichotic listening, awareness follows <b>attention</b>, not the senses.",
+   "src": "[PAST-1][CORE] Neisser & Becklen (1975), in Simons",
+   "hy": "7 Neisser selective looking"
+  }
+ ],
+ "m2": [
+  {
+   "s": "app",
+   "t": "att",
+   "q": "Sanne shadows a fairy tale in her left ear. Mid-sentence, the fairy tale continues in her right ear, and a weather report starts in her left ear. For a moment, Sanne says the next words of the fairy tale instead of the weather report. What does this show?",
+   "o": [
+    "Her working memory span is smaller than average",
+    "Words in the ignored ear are processed only when they are loud enough",
+    "The ignored ear was analysed for meaning to some extent",
+    "Selection was based only on the location of the sound"
+   ],
+   "a": 2,
+   "spot": "She follows the STORY, not the ear. What must have been processed?",
+   "why": "Sanne could only follow the fairy tale into the other ear if the <b>meaning</b> of that ear was being processed. If selection were based only on location (a purely <b>physical</b> filter, as in Broadbent), she would have kept repeating whatever came into her left ear. Treisman found this and concluded that ignored messages are <b>attenuated</b>, not blocked.",
+   "src": "[PAST-1][CORE] Treisman (1960); Gray & Wedderburn (1960); Sternberg p.151",
+   "hy": "2 Evidence Broadbent cannot explain"
+  },
+  {
+   "s": "comp",
+   "t": "blind",
+   "q": "Judge these statements.<br>I. In inattentional blindness studies, participants are not told that an unexpected object may appear.<br>II. In classic dichotic listening studies, participants know there is a second message and are asked to ignore it.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 2,
+   "spot": "Is the ignored thing a surprise, or a known channel?",
+   "why": "In <b>inattentional blindness</b> the object is <b>unexpected</b>: nobody mentions it and the question is whether people become aware of it at all. In <b>dichotic listening</b> the second message is a <b>known channel</b> the participant has been told to ignore, and the question is what gets through the filter. Both show that awareness depends on attention.",
+   "src": "[IDQ B1][CORE] Simons; Sternberg p.149",
+   "hy": "15 IB/deafness vs dichotic listening"
+  },
+  {
+   "s": "def",
+   "t": "blind",
+   "q": "A surgeon who is concentrating on stitching a wound does not see a pair of scissors lying in plain view on the patient's chest, although it lies in the middle of her field of view. This is",
+   "o": [
+    "change blindness",
+    "inattentional deafness",
+    "inattentional blindness",
+    "dichotic listening"
+   ],
+   "a": 2,
+   "spot": "Something fully visible and unexpected, missed because attention is elsewhere.",
+   "why": "Missing a <b>fully visible, unexpected</b> object because attention is <b>focused on something else</b> is <b>inattentional blindness</b>. Change blindness would need two versions of a scene that differ. Being in the middle of the visual field does not help: in the gorilla study half the observers missed a gorilla in the middle of the screen.",
+   "src": "[PAST-2][LO][CORE] Simons; Mack & Rock (1998)",
+   "hy": "6 IB definition"
+  },
+  {
+   "s": "fig",
+   "t": "blind",
+   "q": "Participants did a visual task with low or high perceptual load. During one trial an unexpected sound was played. The figure shows an illustrative result in line with Macdonald and Lavie (2011). Which conclusion fits best?",
+   "chart": {
+    "type": "bar",
+    "title": "Unexpected sound detected (illustrative)",
+    "x": [
+     "Low visual load",
+     "High visual load"
+    ],
+    "y": "% who detected the sound",
+    "series": [
+     {
+      "name": "Detected",
+      "v": [
+       80,
+       50
+      ]
+     }
+    ],
+    "note": "Illustrative values; Simons reports that high visual perceptual load induces inattentional deafness.",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "People with high load had a smaller working memory capacity",
+    "Visual load physically lowers how well the ears register sound",
+    "The sound was missed because it resembled the visual targets",
+    "The limit lies in attention, which is shared across the senses"
+   ],
+   "a": 3,
+   "spot": "A VISUAL task, a missed SOUND. Where must the shared limit be?",
+   "why": "High <b>visual</b> load made people miss an <b>auditory</b> event: inattentional deafness. The ears work just as well under high load, so the limit is not sensory. It lies in a <b>shared attentional capacity</b> that is used up by the visual task. Load was manipulated by the task, not by selecting people with a different working memory capacity.",
+   "src": "[IDQ B1][CORE] Macdonald & Lavie (2011), in Simons",
+   "hy": "15 Inattentional deafness / 13 central limit"
+  }
+ ],
+ "m3": [
+  {
+   "s": "comp",
+   "t": "att",
+   "q": "Judge these statements about Broadbent's model.<br>I. Unattended messages are filtered out at the sensory level and may never reach perception.<br>II. The model was supported by Cherry's finding that physical changes in the ignored ear can be noticed while changes in meaning are not.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 2,
+   "spot": "Broadbent: early, physical, blocked. Did Cherry's pattern fit that?",
+   "why": "Statement I is Broadbent's core idea: an <b>early filter</b> right after the sensory register, so ignored input never reaches perception. Statement II is also true: noticing a <b>tone</b> or a voice change needs no deep processing, while noticing a <b>language switch</b> does. Cherry's pattern fitted the early filter neatly, until findings such as the own-name effect challenged it.",
+   "src": "[PAST-1][PAST-2][CORE] Sternberg pp.150-151",
+   "hy": "1 Broadbent early filter"
+  },
+  {
+   "s": "comp",
+   "t": "att",
+   "q": "Which statement about Treisman's model and Deutsch and Deutsch's model is correct?",
+   "o": [
+    "In both, the meaning of an ignored message can be processed, but only Treisman weakens it first",
+    "Deutsch and Deutsch weaken the ignored message, whereas Treisman analyses it in full",
+    "In both, the ignored message is blocked before meaning, but only Treisman makes an exception for names",
+    "Treisman places the filter after meaning, whereas Deutsch and Deutsch place it before perception"
+   ],
+   "a": 0,
+   "spot": "Where does each model put meaning analysis relative to the filter?",
+   "why": "In <b>Treisman's</b> model the ignored message is first <b>attenuated</b> on physical grounds and then analysed for meaning in weakened form. In <b>Deutsch and Deutsch's</b> late-filter model every message is analysed in full, and selection happens only <b>after</b> meaning. So both let meaning through, in different ways. Blocking with an exception for names is <b>Moray</b>.",
+   "src": "[PAST-1][IDQ B3][CORE] Sternberg pp.151-152",
+   "hy": "3 Treisman / 9 Deutsch & Deutsch"
+  },
+  {
+   "s": "find",
+   "t": "blind",
+   "q": "Hyman et al. (2011) observed pedestrians walking across a college campus while a clown on a unicycle rode across their path. What did they find?",
+   "o": [
+    "People talking on a mobile phone were less likely to notice the clown than other pedestrians",
+    "People on a phone noticed the clown as often as others, but forgot it more quickly afterwards",
+    "Pedestrians who walked in a group were less likely to notice the clown than those alone",
+    "Almost all pedestrians noticed the clown, because a moving, colourful object captures attention"
+   ],
+   "a": 0,
+   "spot": "Phone conversation = an auditory task. Effect on seeing?",
+   "why": "Pedestrians <b>talking on a cell phone</b> were less likely to notice the <b>unicycling clown</b>. A conversation draws on the same limited attention, so an auditory distraction can cause a failure to <b>see</b>. If phoning can make you miss a clown, it can also make you miss a child running into the street.",
+   "src": "[LO][CORE] Hyman et al. (2011), in Simons",
+   "hy": "16 Real-world IB / phones"
+  },
+  {
+   "s": "app",
+   "t": "att",
+   "q": "At a crowded birthday party, Daan tries to follow his aunt while three other conversations go on around him. Which combination of cues, according to Sternberg, helps him select her voice?",
+   "o": [
+    "Her distinctive pitch and rhythm, her loudness and where her voice comes from",
+    "The meaning of her words, the topic of the conversation and how important it is to him",
+    "Where her voice comes from only, since location is the most important cue",
+    "Her loudness only, since the louder message always passes the filter"
+   ],
+   "a": 0,
+   "spot": "Three cues, all physical.",
+   "why": "Three factors help us select one speaker in a noisy room: <b>distinctive sensory characteristics</b> (pitch, pacing, rhythm), <b>sound intensity</b> and the <b>location</b> of the source. Location is not the most important cue: recent psychophysical studies found spatial cues matter less than how harmonious and rhythmic the target sounds. This is the <b>cocktail party problem</b> (Cherry, 1953).",
+   "src": "[IDQ B2][CORE] Sternberg pp.148-150",
+   "hy": "22 Cocktail party cues"
+  }
+ ]
+}

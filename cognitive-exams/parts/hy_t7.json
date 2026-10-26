@@ -1,0 +1,664 @@
+{
+ "theme": [
+  {
+   "s": "def",
+   "t": "ps",
+   "q": "Judge these statements. I. A heuristic explores only the alternatives that look most promising, so it can miss the correct solution. II. An algorithm is by definition slower than a heuristic.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Two claims about algorithms vs heuristics: check each against the definitions.",
+   "why": "I is <b>true</b>: a heuristic is a rule of thumb that ignores some options, which is why it is fast but can miss the answer (rejecting words that start with LY misses LYMPHOID). II is <b>false</b>: an <b>algorithm</b> guarantees a solution and is often slow, but not always. On a well-structured puzzle such as the Tower of Hanoi, an algorithm reaches the minimum number of moves.",
+   "src": "[PAST-1][LO A3][IDQ AB2] Matlin; pty_t7 7.3, 7.6.2",
+   "hy": "Algorithms vs heuristics"
+  },
+  {
+   "s": "app",
+   "t": "ps",
+   "q": "Sanne has forgotten the three-digit code of her bike lock. She starts at 000 and tries 001, 002, 003 and so on until the lock opens. Which problem-solving strategy is she using?",
+   "o": [
+    "an algorithm",
+    "the hill-climbing heuristic",
+    "the means-ends heuristic",
+    "the analogy approach"
+   ],
+   "a": 0,
+   "spot": "Trying every possible answer in order = which strategy?",
+   "why": "Trying every possible answer systematically is an <b>exhaustive search</b>, the textbook example of an <b>algorithm</b>: it is guaranteed to open the lock, but it can take up to 1000 tries. Hill climbing would need a sense of being 'closer' to the goal after each try, which a lock does not give. Means-ends would split the problem into subgoals.",
+   "src": "[PAST-1][LO A3] Matlin; pty_t7 7.3",
+   "hy": "Algorithms vs heuristics"
+  },
+  {
+   "s": "fig",
+   "t": "ps",
+   "q": "The figure shows two possible patterns of warmth ratings (1 = cold, 7 = hot) given every 15 seconds in the last minute before a problem was solved. According to the Gestalt view of insight, as supported by Metcalfe and Wiebe (1987), which statement is correct?",
+   "chart": {
+    "type": "line",
+    "title": "Warmth before the solution (illustrative pattern)",
+    "x": [
+     "60 s",
+     "45 s",
+     "30 s",
+     "15 s",
+     "solution"
+    ],
+    "y": "Warmth (1 to 7)",
+    "series": [
+     {
+      "name": "Line X",
+      "v": [
+       2.5,
+       3.5,
+       4.5,
+       5.5,
+       7
+      ]
+     },
+     {
+      "name": "Line Y",
+      "v": [
+       2,
+       2,
+       2,
+       2.3,
+       7
+      ]
+     }
+    ],
+    "note": "Illustrative pattern, not data from the study.",
+    "min": 1,
+    "max": 7
+   },
+   "o": [
+    "Line Y belongs to insight problems: warmth stays low until just before the solution",
+    "Line X belongs to insight problems: warmth rises step by step as the solver approaches the solution",
+    "Both lines belong to insight problems: they only differ in how hard the problem is",
+    "Line Y belongs to algebra problems: routine problems end with a sudden jump"
+   ],
+   "a": 0,
+   "spot": "Gradual line vs flat-then-jump line: which one is insight?",
+   "why": "For <b>routine</b> problems such as algebra, warmth rises <b>gradually</b> (line X), as expected from step-by-step reasoning. For <b>insight</b> problems, warmth stays cold and only shoots up at the very last moment (line Y). This sudden jump supports the Gestalt idea that insight is a special process, different from ordinary problem solving.",
+   "src": "[PAST-1][LO C5][IDQ C1] Metcalfe & Wiebe (1987); pty_t7 7.11",
+   "hy": "Metcalfe warmth ratings"
+  },
+  {
+   "s": "comp",
+   "t": "ps",
+   "q": "Which finding supports the Gestalt claim that insight is fundamentally different from routine, step-by-step problem solving?",
+   "o": [
+    "People cannot predict their success on insight problems, although they can on routine problems",
+    "Insights can also develop gradually and incrementally over a longer period of time",
+    "People pause when they start a new subproblem and have to plan a sequence of moves",
+    "People keep applying a formula that worked on earlier problems, even when a simpler one is available"
+   ],
+   "a": 0,
+   "spot": "Look for the finding that shows insight behaves differently from routine problems.",
+   "why": "Metcalfe found that people predict their own success well on <b>routine</b> problems but poorly on <b>insight</b> problems; successful solvers were even pessimistic. That difference fits the Gestalt view. The gradual insights described by <b>Smith (1995a)</b> point the other way, because they make insight look more like ordinary thinking. Pausing at subproblems (Greeno) and keeping a formula (Luchins) are about means-ends analysis and mental set.",
+   "src": "[PAST-1][LO C5] Metcalfe (1986); Smith (1995a); pty_t7 7.11",
+   "hy": "Metcalfe warmth ratings"
+  },
+  {
+   "s": "def",
+   "t": "ps",
+   "q": "Which statement about the means-ends heuristic is NOT correct?",
+   "o": [
+    "It never requires a move that temporarily increases the distance to the goal",
+    "It divides a problem into subproblems and reduces the difference for each one",
+    "It was the basic strategy of Newell and Simon's General Problem Solver",
+    "People tend to pause when they start working on a new subproblem"
+   ],
+   "a": 0,
+   "spot": "NOT correct: find the statement that contradicts what the readings say about detours.",
+   "why": "Means-ends analysis <b>divides</b> the problem into subproblems and reduces the difference between current state and goal for each. Sometimes the solution needs a <b>temporary step back</b>, such as bringing two beings back across the river in the elves-and-goblins problem, and people prefer to avoid such detours (<b>Greeno, 1974</b>). Greeno also found pauses at the start of a new subproblem, and the GPS used means-ends analysis as its basic strategy.",
+   "src": "[LO A3][IDQ AB1, AB3] Matlin; Greeno (1974); Newell & Simon (1972); pty_t7 7.6",
+   "hy": "Means-ends analysis"
+  },
+  {
+   "s": "app",
+   "t": "ps",
+   "q": "A beginning chess player always makes the move that captures the most valuable piece available right now. She often loses because she overlooks moves that give up a piece first but win the game later. Which strategy is she using?",
+   "o": [
+    "the hill-climbing heuristic",
+    "the means-ends heuristic",
+    "an exhaustive-search algorithm",
+    "the analogy approach"
+   ],
+   "a": 0,
+   "spot": "Always the step that looks best right now, missing the long-term route.",
+   "why": "In <b>hill climbing</b> you choose, at every decision point, the option that seems to lead most directly toward the goal. The cost is that you miss indirect routes that pay off in the <b>long run</b>, like a sacrifice in chess. Means-ends analysis would set subgoals and could accept a temporary step back; an exhaustive search would consider every possible move.",
+   "src": "[LO A3][IDQ AB4, AB5] Matlin; pty_t7 7.7",
+   "hy": "Hill-climbing heuristic"
+  },
+  {
+   "s": "comp",
+   "t": "ps",
+   "q": "Newell and Simon describe problem solving as a search through a problem space, much like finding the exit of a maze in which some routes first lead you away from the exit. Why does the means-ends heuristic fit this maze better than the hill-climbing heuristic?",
+   "o": [
+    "It sets subgoals and can accept a temporary step away from the goal",
+    "It tries every possible route, so it is guaranteed to reach the exit",
+    "It needs no representation of the start, the goal or the legal moves",
+    "It always chooses the corridor that points most directly to the exit"
+   ],
+   "a": 0,
+   "spot": "Compare the two heuristics on one feature: can they handle detours?",
+   "why": "<b>Means-ends analysis</b> compares the current state with the goal, breaks the route into <b>subgoals</b> and can take a step back when a subgoal requires it, which is what a maze needs. Always choosing the corridor that points most directly to the exit is <b>hill climbing</b>, which gets stuck in dead ends. Trying every route describes an algorithm, not a heuristic.",
+   "src": "[LO A3][IDQ AB3] Newell & Simon (1972); pty_t7 7.6.2, 7.7",
+   "hy": "Means-ends analysis"
+  },
+  {
+   "s": "find",
+   "t": "ps",
+   "q": "A computer program solves the Tower of Hanoi with four disks in exactly 15 moves every time it runs. Why can an algorithm be this efficient on this puzzle?",
+   "o": [
+    "The puzzle is well structured, so a fixed rule gives the right move at every step",
+    "Algorithms always reach a solution in fewer moves than heuristics do, on every kind of problem",
+    "The program restructures the problem through a sudden insight",
+    "The program uses hill climbing and never moves away from the goal"
+   ],
+   "a": 0,
+   "spot": "Why is an algorithm (normally slow) fast here? Think about the type of problem.",
+   "why": "Algorithms are usually slow because they search through every possibility. The Tower of Hanoi is <b>well structured</b>: start, goal and legal moves are fixed, and the solution follows a regular rule. So the algorithm does not need to search and reaches the minimum of <b>2ⁿ − 1</b> moves (15 for four disks). Algorithms are not always faster than heuristics; that is the tempting overgeneralisation.",
+   "src": "[LO A3][IDQ AB2] pty_t7 7.6.2, IDQ AB2",
+   "hy": "Means-ends analysis"
+  },
+  {
+   "s": "fig",
+   "t": "ps",
+   "q": "Participants studied a military story whose solution was to send small groups along many roads at once, and then tried the radiation problem. The figure shows the percentage who found the convergence solution, depending on how they had worked with the story. Which conclusion fits the figure?",
+   "chart": {
+    "type": "bar",
+    "title": "Convergence solutions on the radiation problem",
+    "x": [
+     "Solution given + hint",
+     "Solved story themselves",
+     "Memorised story"
+    ],
+    "y": "% solved",
+    "series": [
+     {
+      "name": "% solved",
+      "v": [
+       75,
+       41,
+       30
+      ]
+     }
+    ],
+    "note": "Percentages as reported in Sternberg et al.",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Transfer was best when the solution was handed over together with a hint to use it",
+    "Inventing the convergence solution for the military story yourself gives the strongest transfer",
+    "Memorising the story carefully is the best preparation for the target problem",
+    "How people worked with the story made little difference for transfer"
+   ],
+   "a": 0,
+   "spot": "Read the three bars: which way of studying the source gives the highest transfer?",
+   "why": "When the convergence solution was given and people were hinted to use it, about <b>75%</b> solved the radiation problem. Of those who had invented the solution themselves, only <b>41%</b> applied it, and after memorising the story for a recall test only <b>30%</b> did. So generating the solution yourself did not help, and studying with a memory mindset hurt. Transfer clearly depended on how the source was studied.",
+   "src": "[LO A4] Sternberg; pty_t7 7.5.1",
+   "hy": "Transfer of a source solution"
+  },
+  {
+   "s": "find",
+   "t": "ps",
+   "q": "Researchers such as Novick and Holyoak describe three processes in analogical problem solving. Which process is mainly responsible when people fail to use a helpful earlier problem?",
+   "o": [
+    "noticing that the two problems are related",
+    "mapping the elements of one problem onto the other",
+    "developing a general schema from the problems",
+    "restructuring the representation of the target"
+   ],
+   "a": 0,
+   "spot": "Three stages of analogy (noticing, mapping, schema): which one is the bottleneck?",
+   "why": "The three processes are <b>noticing</b>, <b>mapping</b> and <b>schema development</b>. Research shows that noticing is the main culprit: the current problem fails to bring the earlier problem to mind, which is basically a <b>failure of memory</b>. Once people are told the earlier story is relevant, almost all of them can map and apply it. Restructuring belongs to insight, not to the stages of analogy.",
+   "src": "[LO A4][IDQ AB7] Robinson-Riegler; Novick & Holyoak (1991); pty_t7 7.4.3",
+   "hy": "Noticing is the bottleneck"
+  },
+  {
+   "s": "app",
+   "t": "ps",
+   "q": "A new manager runs a webinar for 200 customers exactly like her weekly meeting with her own team of eight, because 'both are video calls'. The webinar goes badly. Which concept explains her mistake?",
+   "o": [
+    "transparency",
+    "schema induction",
+    "functional fixedness",
+    "incubation"
+   ],
+   "a": 0,
+   "spot": "She sees an analogy because the content looks alike, but the structure differs.",
+   "why": "<b>Transparency</b> means seeing an analogy that is not really there because of <b>surface similarity</b> in content ('both are video calls'). The structure differs a lot (200 strangers vs eight colleagues), so the old approach leads to <b>negative transfer</b>. Schema induction is forming a shared schema by comparing two truly analogous problems, and functional fixedness is about seeing only the usual use of an object.",
+   "src": "[LO A4][IDQ C3] Sternberg; pty_t7 7.5.1",
+   "hy": "Surface vs structure; transparency"
+  },
+  {
+   "s": "comp",
+   "t": "ps",
+   "q": "Judge these statements. I. In Lane and Schooler (2004), participants who thought aloud found more surface analogies than participants who worked silently. II. In Markman, Taylor and Gentner (2007), hearing the material rather than reading it made structurally similar items easier to recall.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 2,
+   "spot": "Two 'verbal' studies with seemingly opposite results: check each finding.",
+   "why": "Both are <b>true</b>, and they do not contradict each other. In Lane and Schooler, participants <b>speak</b> while retrieving, and words pull attention to easy-to-describe surface details (3.8 vs 1.9 surface analogies; 1.0 vs 2.3 structural). This is <b>verbal overshadowing</b>. In Markman et al., participants <b>listen</b> while encoding, which helps them follow the relations in the material.",
+   "src": "[LO A4][IDQ AB6] Robinson-Riegler Table 12.3; pty_t7 7.5.2",
+   "hy": "Lane & Schooler vs Markman"
+  },
+  {
+   "s": "fig",
+   "t": "cre",
+   "q": "Camarda et al. (2018) measured fluidity (number of ideas) on the egg task in two experiments. In Experiment 1 the second task was a Stroop task; in Experiment 2 it was a demanding dot-memory task. Which conclusion is supported by both experiments together?",
+   "chart": {
+    "type": "bar",
+    "title": "Fluidity on the egg task (mean number of ideas)",
+    "x": [
+     "Exp 1: single task",
+     "Exp 1: congruent Stroop",
+     "Exp 1: incongruent Stroop",
+     "Exp 2: single task",
+     "Exp 2: high-load dot task"
+    ],
+    "y": "Mean number of ideas",
+    "series": [
+     {
+      "name": "Fluidity",
+      "v": [
+       10.69,
+       10.43,
+       7.04,
+       10.45,
+       11.08
+      ]
+     }
+    ],
+    "note": "Means from Camarda et al. (2018).",
+    "min": 0,
+    "max": 12
+   },
+   "o": [
+    "Creative idea generation depends specifically on inhibitory control, not on executive load in general",
+    "Any second task lowers creativity, because it divides attention between the egg task and the second task",
+    "Working-memory load lowers creativity more strongly than inhibitory-control load",
+    "Taking away inhibitory control frees loose associations and raises creativity"
+   ],
+   "a": 0,
+   "spot": "Compare which second task lowered the bars and which did not.",
+   "why": "Only the <b>incongruent Stroop</b> lowered fluidity (7.04 vs 10.69 single task). The congruent Stroop (10.43) and the high-load <b>dot-memory</b> task (11.08 vs 10.45) did not. So it is not doing two things at once, and not working-memory load, but the specific load on <b>inhibitory control</b> that hurts creativity. The last option is the disinhibition view, which these data contradict.",
+   "src": "[LO D2, D4][IDQ D1, D3] Camarda et al. (2018) Fig. 2A/2B",
+   "hy": "Camarda Exp 1 + Exp 2"
+  },
+  {
+   "s": "fig",
+   "t": "cre",
+   "q": "The figure shows expansivity (ideas outside the fixation categories) in Experiment 1 of Camarda et al. (2018). What would the figure have looked like if the disinhibition view of creativity had been correct?",
+   "chart": {
+    "type": "bar",
+    "title": "Expansivity in Experiment 1",
+    "x": [
+     "Single task",
+     "Congruent Stroop",
+     "Incongruent Stroop"
+    ],
+    "y": "Mean ideas outside fixation",
+    "series": [
+     {
+      "name": "Expansivity",
+      "v": [
+       3.12,
+       2.82,
+       1.73
+      ]
+     }
+    ],
+    "note": "Means from Camarda et al. (2018).",
+    "min": 0,
+    "max": 4
+   },
+   "o": [
+    "The incongruent-Stroop bar would be as high as or higher than the other two bars",
+    "The incongruent-Stroop bar would be lower than the single-task and congruent-Stroop bars, as it is now",
+    "The congruent-Stroop bar would be the lowest of the three bars",
+    "All three bars would be lower than in the current figure"
+   ],
+   "a": 0,
+   "spot": "'What would the figure look like if theory X were correct': first state theory X's prediction.",
+   "why": "The <b>disinhibition view</b> (for example Radel et al., 2015) says that weak inhibitory control frees loose, remote associations. Using up inhibition with the <b>incongruent Stroop</b> should then make people <b>more</b> original, so that bar should be at least as high as the others. The actual figure shows the opposite (1.73 vs 3.12 and 2.82), which supports the <b>dual-process model</b>.",
+   "src": "[LO D4, D5][IDQ D1] Camarda et al. (2018) Exp 1",
+   "hy": "Dual-process vs disinhibition"
+  },
+  {
+   "s": "comp",
+   "t": "cre",
+   "q": "Camarda et al. scored the egg task for fluidity and for expansivity. Why is expansivity the more direct test of their dual-process hypothesis?",
+   "o": [
+    "The hypothesis is about escaping obvious ideas, which is what expansivity counts",
+    "Expansivity counts how many different categories of ideas a participant uses in five minutes",
+    "Expansivity is the only measure that does not depend on how many ideas someone produces in total",
+    "Expansivity was the only measure on which the dual-task conditions differed significantly"
+   ],
+   "a": 0,
+   "spot": "Match the claim of the theory (overcoming fixation) to the measure that captures it.",
+   "why": "The dual-process model says <b>inhibition</b> is needed to suppress dominant, fixated ideas (slowing the fall, protecting the egg, cushioning the shock). <b>Expansivity</b> counts exactly the ideas outside those fixation categories, so it measures escaping fixation. Counting different categories is <b>flexibility</b>. Fluidity also differed significantly in Experiment 1, while the expansivity effect was only marginal overall.",
+   "src": "[LO D3][IDQ D2] Camarda et al. (2018) Method",
+   "hy": "Creativity measures"
+  },
+  {
+   "s": "def",
+   "t": "cre",
+   "q": "Which statement about the dual-process model of creativity is NOT correct?",
+   "o": [
+    "Original ideas arise mainly when inhibitory control is weak, so that loose associations can flow",
+    "Intuitive System 1 delivers the most accessible, common ideas, which leads to fixation",
+    "Inhibitory control suppresses dominant ideas so that System 2 can explore new concepts",
+    "The model was proposed in response to earlier studies that gave conflicting findings on inhibition and creativity"
+   ],
+   "a": 0,
+   "spot": "NOT correct: one option describes the rival view.",
+   "why": "In the <b>dual-process model</b>, System 1 offers the obvious ideas that cause <b>fixation</b>; inhibitory control suppresses them, and System 2 then performs <b>conceptual expansion</b>. It was proposed to reconcile mixed findings. The idea that weak inhibition helps creativity belongs to the <b>disinhibition</b> view, which the model rejects.",
+   "src": "[LO D5][IDQ D4] Camarda et al. (2018) Introduction; pty_t7 7.15",
+   "hy": "Dual-process vs disinhibition"
+  },
+  {
+   "s": "find",
+   "t": "cre",
+   "q": "In Experiment 1 of Camarda et al. (2018), participants who named the ink colour of congruent colour words (such as RED in red) while doing the egg task produced as many ideas as participants who did the egg task alone. Why is this result important?",
+   "o": [
+    "It shows that doing a second task as such does not lower creativity",
+    "It shows that the Stroop task does not require any attention at all",
+    "It shows that inhibitory control is not involved in creativity",
+    "It shows that working memory is the main source of creativity"
+   ],
+   "a": 0,
+   "spot": "What does a control condition rule out?",
+   "why": "The <b>congruent</b> Stroop is also a second task with the same responses, but it requires <b>no inhibition</b>. Because it did not lower fluidity (10.43 vs 10.69), the drop in the incongruent condition (7.04) cannot be due to dual-tasking in general. That leaves the <b>inhibition</b> demand as the cause. Working memory was tested in Experiment 2 and had no effect.",
+   "src": "[LO D4][IDQ D4] Camarda et al. (2018) Exp 1",
+   "hy": "Camarda Exp 1"
+  },
+  {
+   "s": "app",
+   "t": "cre",
+   "q": "A workshop leader says: 'Creative people simply have weaker brakes. Brainstorm when your self-control is worn out and the original ideas will flow.' Which finding from Camarda et al. (2018) contradicts this claim?",
+   "o": [
+    "Loading inhibitory control with an incongruent Stroop task lowered the number and originality of ideas",
+    "Loading working memory with a demanding dot-memory task lowered both the number and originality of ideas",
+    "Patients with ADHD or bipolar disorder gave more original associations than healthy controls",
+    "Professional industrial designers showed weaker inhibitory control than a control group"
+   ],
+   "a": 0,
+   "spot": "The claim is the disinhibition view; find the result that goes against it.",
+   "why": "The workshop leader states the <b>disinhibition</b> view. Camarda et al. found the opposite: when inhibition was used up by the <b>incongruent Stroop</b>, fluidity and expansivity went down. The working-memory task had no effect, the ADHD/bipolar findings were earlier evidence for disinhibition, and industrial designers actually showed <b>better</b> inhibitory control.",
+   "src": "[LO D2, D4][IDQ D1] Camarda et al. (2018)",
+   "hy": "Dual-process vs disinhibition"
+  },
+  {
+   "s": "find",
+   "t": "ps",
+   "q": "Judge these statements. I. According to Smith (1995a), insight always comes as a sudden 'aha' experience and never develops gradually. II. Sleep has been shown to increase the likelihood of insight in tasks that require discovering an underlying rule.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 1,
+   "spot": "Check each claim about insight against the readings.",
+   "why": "I is <b>false</b>: Smith (1995a) argued that insights need <b>not</b> be sudden; they can also develop gradually and incrementally. II is <b>true</b>: <b>sleep</b> increased the chance of insight in mathematical problem solving and in tasks that require understanding underlying rules (Stickgold & Walker, 2004; Wagner et al., 2004).",
+   "src": "[LO C5] Sternberg; pty_t7 7.11.1",
+   "hy": "Gradual insight and sleep"
+  },
+  {
+   "s": "app",
+   "t": "ps",
+   "q": "During a storm, Daan needs something to keep the back door from slamming shut. He searches the whole house for a doorstop and never thinks of using the heavy cast-iron pan he is holding. Which obstacle to problem solving is this?",
+   "o": [
+    "functional fixedness",
+    "transparency",
+    "incubation",
+    "the hill-climbing heuristic"
+   ],
+   "a": 0,
+   "spot": "He only sees an object in its usual use.",
+   "why": "<b>Functional fixedness</b> is the inability to see that an object with a familiar use can also serve another function: the pan is 'for cooking', not 'a weight'. It is a type of mental set. Transparency is seeing a false analogy between problems, and incubation is setting a problem aside.",
+   "src": "[LO C4][IDQ C2] Sternberg; pty_t7 7.12.2",
+   "hy": "Mental set and functional fixedness"
+  },
+  {
+   "s": "find",
+   "t": "ps",
+   "q": "In Luchins' (1942) water-jar study, some participants first solved six problems with the formula B − A − 2C. A control group started directly with the later problems, which could also be solved with a simpler formula. What did the control group show?",
+   "o": [
+    "Only 1% to 5% of them failed to use the simpler solution",
+    "64% to 83% of them kept using the long formula",
+    "They were slower because they had no formula to start from",
+    "They used the long formula and the short formula equally often"
+   ],
+   "a": 0,
+   "spot": "Experimental group vs control group: which numbers belong to whom?",
+   "why": "Of the participants who had practised the long formula, <b>64% to 83%</b> kept using it on the later problems: a <b>mental set</b>. In the <b>control group</b>, without that practice, only <b>1% to 5%</b> failed to see the simpler solution. The comparison shows that the earlier practice, not the problems themselves, caused the fixation.",
+   "src": "[LO C4] Sternberg; Luchins (1942); pty_t7 7.12.1",
+   "hy": "Mental set and functional fixedness"
+  },
+  {
+   "s": "def",
+   "t": "ps",
+   "q": "Judge these statements. I. Incubation is thought to help mainly because it reduces negative transfer from an approach that does not work. II. According to Sio and Ormerod's (2009) meta-analysis, filling the incubation period with a cognitively demanding task makes it more effective.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Two claims about incubation: what it does, and what helps or hurts it.",
+   "why": "I is <b>true</b>: the main obstacle is often <b>negative transfer</b>, and setting the problem aside helps you let go of it. II is <b>false</b>: Sio and Ormerod found that a <b>demanding</b> task during the break actually <b>harms</b> the incubation effect. Incubation also helps more with longer preparation and with <b>divergent-thinking</b> tasks.",
+   "src": "[LO C4] Sternberg; Sio & Ormerod (2009); pty_t7 7.14",
+   "hy": "Incubation"
+  },
+  {
+   "s": "app",
+   "t": "ps",
+   "q": "Participants solve mental rotation problems more accurately when they are allowed to move their hands, and people who swing their arms during a break more often find the swinging solution to the two-string problem. Which perspective do these findings illustrate?",
+   "o": [
+    "embodied cognition",
+    "situated cognition",
+    "schema induction",
+    "verbal overshadowing"
+   ],
+   "a": 0,
+   "spot": "Cues from your own body vs cues from the environment.",
+   "why": "<b>Embodied cognition</b> is about cues from your own body shaping how you represent and solve a problem: hand movements (Chu & Kita, 2011) and arm swinging (Thomas & Lleras, 2009). <b>Situated cognition</b> is about cues from the environment. Schema induction and verbal overshadowing concern analogies.",
+   "src": "[LO A2][IDQ C2] Matlin; pty_t7 7.2",
+   "hy": "Embodied / situated cognition"
+  },
+  {
+   "s": "comp",
+   "t": "ps",
+   "q": "Pretz (2008) asked first-year and upper-year students to solve practical problems after analytic instructions, intuitive instructions or no instructions. Which pattern did she find?",
+   "o": [
+    "Upper-year students did best analytically and worst intuitively; for first-years the instruction made little difference",
+    "First-year students did best analytically and worst intuitively; for upper-years the instruction made little difference",
+    "Both groups did best with intuitive instructions, because practical problems are solved by gut feeling",
+    "Both groups did best with analytic instructions, and the difference was largest for first-year students"
+   ],
+   "a": 0,
+   "spot": "Same instructions, two experience levels: for whom did the instruction matter?",
+   "why": "For <b>first-year</b> students the three conditions were close together (intuition was even slightly better). For <b>upper-year</b> students, <b>analytic</b> instructions gave the best score and intuitive instructions the worst. The idea: with more experience and more organised knowledge, deliberate analysis makes better use of that knowledge. The second option swaps the two groups.",
+   "src": "[LO C2, C3] Robinson-Riegler Fig. 12.6; Pretz (2008); pty_t7 7.9",
+   "hy": "Pretz analytic vs intuitive"
+  },
+  {
+   "s": "def",
+   "t": "ps",
+   "q": "Köhler's chimpanzee Sultan first jumped in vain for bananas hanging out of reach, and then suddenly stacked the boxes in his cage to reach them. What did this show, according to Köhler and the other Gestalt psychologists?",
+   "o": [
+    "Insight is a special process that differs from normal, linear information processing",
+    "Problems are solved by gradually strengthening the correct responses through repeated trial and error",
+    "Problems are solved by dividing them into subgoals and reducing differences",
+    "Problems are solved by retrieving a structurally similar problem from memory"
+   ],
+   "a": 0,
+   "spot": "Gestalt + sudden solution = which view of insight?",
+   "why": "For the <b>Gestalt</b> psychologists, Sultan's sudden solution showed <b>insight</b>: seeing the situation as a whole in a new way. They saw this as a <b>special process</b>, different from ordinary step-by-step (reproductive) thinking. Subgoals describe means-ends analysis, and retrieving a similar problem describes the analogy approach.",
+   "src": "[LO C5] Sternberg; Köhler (1927); pty_t7 7.10.1",
+   "hy": "Gestalt view of insight"
+  }
+ ],
+ "m1": [
+  {
+   "s": "find",
+   "t": "ps",
+   "q": "In Metcalfe's research, participants estimated beforehand how likely they were to solve each problem. On insight problems, how did the people who eventually solved the problem tend to rate their chances?",
+   "o": [
+    "They were often pessimistic",
+    "They were often optimistic",
+    "Their ratings were accurate",
+    "They refused to give a rating"
+   ],
+   "a": 0,
+   "spot": "Prediction of success on insight problems: accurate or not, and in which direction?",
+   "why": "On routine problems, people predict their own success well. On <b>insight</b> problems they do not: <b>successful</b> solvers were often <b>pessimistic</b>, while unsuccessful solvers were often optimistic. This fits the idea that the insight solution arrives suddenly, without a felt approach.",
+   "src": "[PAST-1][LO C5][IDQ C1] Metcalfe (1986); Metcalfe & Wiebe (1987); pty_t7 7.11",
+   "hy": "Metcalfe warmth ratings"
+  },
+  {
+   "s": "comp",
+   "t": "cre",
+   "q": "Why did Camarda et al. (2018) run Experiment 2, with a working-memory task instead of the Stroop task?",
+   "o": [
+    "To test whether the cost in Experiment 1 came from inhibition specifically or from executive load in general",
+    "To test whether the egg task could also be scored for flexibility as well as for fluidity",
+    "To test whether working memory is needed to remember the instructions of the egg task",
+    "To replicate the effect of Experiment 1 in a larger sample of students, using exactly the same Stroop conditions"
+   ],
+   "a": 0,
+   "spot": "A second experiment usually rules out an alternative explanation of the first.",
+   "why": "Experiment 1 showed that the incongruent Stroop lowered creativity, but it could have been a general <b>executive</b> cost. Experiment 2 loaded <b>working memory</b> (dot-memory task) instead. Because it had no effect (11.08 vs 10.45 ideas), the authors concluded that <b>inhibitory control</b> specifically matters. The sample (79) was a new one, not a larger replication.",
+   "src": "[LO D2][IDQ D3] Camarda et al. (2018) Exp 2",
+   "hy": "Camarda Exp 2"
+  },
+  {
+   "s": "app",
+   "t": "ps",
+   "q": "Noor must hand in a thesis in four months. She notes the largest differences between where she is and where she must be (no data, no analysis, no written chapters), turns each into a subgoal and works to close each gap. Once, she rewrites her research question, which first takes her further from a finished text. Which strategy is this?",
+   "o": [
+    "the means-ends heuristic",
+    "the hill-climbing heuristic",
+    "the analogy approach",
+    "an exhaustive search"
+   ],
+   "a": 0,
+   "spot": "Subgoals plus reducing differences, with an occasional step back.",
+   "why": "Dividing the goal into <b>subproblems</b> and reducing the <b>difference</b> between the current state and the goal for each one is the <b>means-ends heuristic</b>. Accepting a temporary step back (rewriting the question) also fits it. Hill climbing would only take the step that looks best right now and would avoid such a step back.",
+   "src": "[LO A3][IDQ AB1, AB5] Matlin; pty_t7 7.6",
+   "hy": "Means-ends analysis"
+  }
+ ],
+ "m2": [
+  {
+   "s": "comp",
+   "t": "ps",
+   "q": "To solve the anagram IPMHYLOD, a student ignores all letter combinations that rarely start an English word, such as LY. Which statement is correct?",
+   "o": [
+    "She uses a heuristic, which is fast but here makes her miss the solution",
+    "She uses an algorithm, which is slow but guarantees that she finds the solution",
+    "She uses a heuristic, which guarantees a solution because it skips unlikely options",
+    "She uses an algorithm, which is fast because it ignores the unlikely options"
+   ],
+   "a": 0,
+   "spot": "Rule of thumb that skips options: name it, and say what it costs.",
+   "why": "Skipping unlikely letter combinations is a <b>heuristic</b>: a rule of thumb that is usually right and saves time. But it gives <b>no guarantee</b>: the answer is LYMPHOID, which starts with the rejected LY. An <b>algorithm</b> such as an exhaustive search would try every order and always find it, at the cost of time.",
+   "src": "[PAST-1][LO A3] Matlin; pty_t7 7.3",
+   "hy": "Algorithms vs heuristics"
+  },
+  {
+   "s": "def",
+   "t": "cre",
+   "q": "In Camarda et al. (2018), what did the flexibility score on the egg task measure?",
+   "o": [
+    "the number of different categories of solutions a participant gave",
+    "the number of solutions that fell outside the fixation categories",
+    "the total number of solutions in five minutes",
+    "the rated quality of the single best solution"
+   ],
+   "a": 0,
+   "spot": "Three scores: fluidity, flexibility, expansivity. Which one is about categories?",
+   "why": "<b>Fluidity</b> is the total number of solutions; <b>flexibility</b> is the number of different solution <b>categories</b>; <b>expansivity</b> is the number of solutions outside the fixation categories (slowing the fall, protecting the egg, cushioning the shock). Because fluidity and flexibility correlated .82, flexibility was left out of the analyses.",
+   "src": "[LO D3][IDQ D2] Camarda et al. (2018) Method",
+   "hy": "Creativity measures"
+  },
+  {
+   "s": "find",
+   "t": "ps",
+   "q": "Gick and Holyoak (1980) found that 10% of people who received only the radiation problem found the convergence solution, against 30% of people who had first read the military story as part of a reading task. What does this difference show?",
+   "o": [
+    "About one in five people spontaneously noticed and used the analogy",
+    "Most people spontaneously used the analogy once they had read the story",
+    "Reading any story improves creative thinking on a later problem",
+    "People can map the analogy but cannot apply the solution"
+   ],
+   "a": 0,
+   "spot": "Subtract the baseline: how many extra people used the story on their own?",
+   "why": "The 10% baseline shows how many solve the problem without help. The extra <b>20%</b> after reading the story are people who <b>spontaneously noticed</b> and used the analogy. That is still a minority: most people did not notice the link, because the stories share structure but not <b>surface features</b>.",
+   "src": "[LO A4][IDQ AB7] Robinson-Riegler; Gick & Holyoak (1980); pty_t7 7.4.2",
+   "hy": "Gick & Holyoak"
+  }
+ ],
+ "m3": [
+  {
+   "s": "app",
+   "t": "ps",
+   "q": "A graduate wants to earn a high salary. She accepts the best-paid job offered to her straight away, although a further degree would probably have led to a much higher salary within a few years. Which strategy does this illustrate?",
+   "o": [
+    "the hill-climbing heuristic",
+    "the means-ends heuristic",
+    "schema induction",
+    "an exhaustive-search algorithm"
+   ],
+   "a": 0,
+   "spot": "The step that looks best now wins over a better long-term route.",
+   "why": "In <b>hill climbing</b> you always take the option that seems to bring you most directly toward the goal. Its weakness is that it favours <b>short-term</b> goals and misses indirect routes with greater <b>long-term</b> benefit. Means-ends analysis could include the temporary step back of studying further.",
+   "src": "[LO A3][IDQ AB4] Matlin; pty_t7 7.7",
+   "hy": "Hill-climbing heuristic"
+  },
+  {
+   "s": "def",
+   "t": "cre",
+   "q": "According to the dual-process model of creativity, what must happen before people can produce an original idea?",
+   "o": [
+    "The dominant, obvious ideas from System 1 must first be inhibited",
+    "Inhibitory control must first be switched off to free loose associations",
+    "Working memory must first be emptied of all task-irrelevant information",
+    "System 2 must first generate as many common ideas as possible"
+   ],
+   "a": 0,
+   "spot": "Dual-process creativity: what comes first, and which system is involved?",
+   "why": "The <b>dual-process model</b> says intuitive <b>System 1</b> offers the obvious ideas that cause <b>fixation</b>. You first have to <b>inhibit</b> those, and then System 2 can explore new concepts (conceptual expansion). Switching off inhibition is the disinhibition view, which Camarda et al. contradicted.",
+   "src": "[LO D5][IDQ D4] Camarda et al. (2018); pty_t7 7.15",
+   "hy": "Dual-process vs disinhibition"
+  },
+  {
+   "s": "app",
+   "t": "ps",
+   "q": "Riddle: 'A man pushes his car to a hotel and immediately tells the owner that he is bankrupt. Why?' The answer is that he is playing the board game Monopoly. What kind of problem is this, and what does solving it require?",
+   "o": [
+    "An ill-structured insight problem: you must restructure your representation of 'car' and 'hotel'",
+    "A well-structured problem: you must find the shortest path through a clearly defined problem space toward the goal",
+    "A well-structured problem: you must apply a formula that solved earlier problems",
+    "An ill-structured problem: you must use hill climbing toward the most likely answer"
+   ],
+   "a": 0,
+   "spot": "No clear path, and the answer comes from seeing the words in a new way.",
+   "why": "This is an <b>ill-structured insight problem</b>, like the riddle of the woman who 'married' twenty men. There is no clear path, and the solution requires <b>restructuring</b>: 'car' and 'hotel' are game pieces, not real objects. Well-structured problems have a defined problem space, and applying an old formula is reproductive thinking (or a mental set).",
+   "src": "[LO C1, C5][IDQ C2] Sternberg; pty_t7 7.10",
+   "hy": "Insight and ill-structured problems"
+  }
+ ]
+}

@@ -1,0 +1,756 @@
+{
+ "theme": [
+  {
+   "s": "app",
+   "t": "wm",
+   "q": "Consider these two situations.<br>I. A translator works through a document line by line, putting one line into French and the next into Spanish, and so on.<br>II. A Dutch tourist in London has to stop herself from looking left first before crossing the street.<br>Which executive functions do these situations mainly call on?",
+   "o": [
+    "I calls on shifting, II calls on inhibition",
+    "I calls on updating, II calls on inhibition",
+    "I calls on shifting, II calls on updating",
+    "I calls on inhibition, II calls on shifting"
+   ],
+   "a": 0,
+   "spot": "Switching back and forth between two tasks, or stopping a habit?",
+   "why": "Alternating between two tasks (French, Spanish, French...) is <b>shifting</b>. Holding back a strong, automatic response (looking left, as at home) is <b>inhibition</b>, the function behind the Stroop task. <b>Updating</b> would be replacing old contents of working memory with the newest item, which neither situation is about.",
+   "src": "[PAST-1][PAST-2][LO B4][IDQ B5] Miyake et al. (2000); E&K pp. 220-221",
+   "hy": "1 Executive functions"
+  },
+  {
+   "s": "app",
+   "t": "wm",
+   "q": "Taxi drivers judged which of two routes through their city was shorter. They did this while either repeating ‘the the the’ out loud or pressing the keys of a keypad in a fixed clockwise order. Only the keypad task slowed their judgements. This pattern indicates that",
+   "o": [
+    "the phonological loop is involved in judging routes, but the visuo-spatial sketchpad isn’t",
+    "the visuo-spatial sketchpad is involved in judging routes, but the phonological loop isn’t",
+    "the central executive is involved in judging routes, but the visuo-spatial sketchpad isn’t",
+    "the episodic buffer is involved in judging routes, but the phonological loop isn’t"
+   ],
+   "a": 1,
+   "spot": "Which component does each second task load, and which one hurt?",
+   "why": "Repeating ‘the the the’ is <b>articulatory suppression</b>: it occupies the phonological loop, and it did not hurt, so the loop is not needed. Pressing keys in a fixed spatial pattern loads the <b>visuo-spatial sketchpad</b> (the same task Robbins et al. used), and it did hurt. Two tasks only clash when they use the <b>same component</b>.",
+   "src": "[PAST-1][PAST-2][LO B5][IDQ B1] dual-task logic; Robbins et al. (1996), E&K p. 216",
+   "hy": "2 Dual-task logic"
+  },
+  {
+   "s": "comp",
+   "t": "wm",
+   "q": "Two memory tasks (1 and 2) are each combined with two interference tasks (A and B). Which pattern of results gives the strongest evidence that tasks 1 and 2 rely on separate working memory components?",
+   "o": [
+    "Both tasks get worse when they are done at the same time than when each is done alone",
+    "Both tasks are disrupted to a similar degree by random number generation",
+    "A disrupts task 1 but not task 2; B disrupts task 2 but not task 1",
+    "A disrupts task 1, and it disrupts task 2 even more strongly than task 1"
+   ],
+   "a": 2,
+   "spot": "Look for the crossover: each interference task hurts only ‘its own’ task.",
+   "why": "A <b>crossover</b> (double dissociation) shows that each task has its own resource: A only hurts task 1, B only hurts task 2. If one interference task were simply harder, it would hurt both tasks, as in the last option. Equal disruption by random number generation points to the shared <b>central executive</b>, not to separate components.",
+   "src": "[LO B5][IDQ B3] Klauer & Zhao (2004); E&K pp. 215-219",
+   "hy": "10 Double dissociation"
+  },
+  {
+   "s": "fig",
+   "t": "wm",
+   "q": "In the maxispan procedure, participants rehearse aloud only the first letters of a list (shown in blue) and keep the remaining black letters in mind without rehearsing them. The figure shows recall of the black letters as a function of how many blue letters had to be rehearsed. What would the figure look like if the phonological loop could comfortably hold six items?",
+   "chart": {
+    "type": "bar",
+    "title": "Maxispan: recall of the non-rehearsed (black) letters",
+    "x": [
+     "3 blue letters",
+     "4 blue letters",
+     "5 blue letters"
+    ],
+    "y": "Proportion correct",
+    "series": [
+     {
+      "name": "Maxispan",
+      "v": [
+       0.68,
+       0.67,
+       0.54
+      ]
+     }
+    ],
+    "note": "Approximate values read from the figure in the official practice exam (Barrouillet et al., Experiment 1).",
+    "min": 0,
+    "max": 1
+   },
+   "o": [
+    "The bar for 5 blue letters would be about as high as the bars for 3 and 4",
+    "All three bars would be lower than they are now",
+    "The bar for 3 blue letters would be the lowest of the three",
+    "The bar for 4 blue letters would drop to about the level of the bar for 5 blue letters"
+   ],
+   "a": 0,
+   "spot": "‘What would it look like if...’: find where the drop is now, and ask whether it would still happen.",
+   "why": "Recall of the black letters now drops only at <b>5</b> rehearsed letters: the loop overflows and rehearsal starts to cost the other letters. If the loop could hold <b>six</b>, five letters would still fit, so the 5 bar would stay level with 3 and 4. The drop at 5 is why the official practice exam concludes that the loop holds about <b>four</b> items.",
+   "src": "[PAST-1][PAST-2] Barrouillet et al. maxispan, Experiment 1 (practice exam figure); pty_t2 2.14.2",
+   "hy": "3 Maxispan"
+  },
+  {
+   "s": "fig",
+   "t": "wm",
+   "q": "Participants kept either dot locations (spatial task) or Chinese characters (visual task) in mind while doing a movement discrimination or a colour discrimination task. The figure shows how much each secondary task disrupted each main task. Which statement is NOT supported by the figure?",
+   "chart": {
+    "type": "bar",
+    "title": "Interference with each main task",
+    "x": [
+     "Dot locations (spatial task)",
+     "Chinese characters (visual task)"
+    ],
+    "y": "Interference score (%)",
+    "series": [
+     {
+      "name": "Movement discrimination",
+      "v": [
+       6.3,
+       4.2
+      ]
+     },
+     {
+      "name": "Colour discrimination",
+      "v": [
+       -1.2,
+       9.4
+      ]
+     }
+    ],
+    "note": "Approximate values from Eysenck & Keane Figure 6.6 (Klauer & Zhao, 2004).",
+    "min": -2,
+    "max": 10
+   },
+   "o": [
+    "Colour discrimination hardly disrupted memory for the locations of the dots",
+    "Movement discrimination disrupted the spatial task more than the visual task",
+    "Movement discrimination disrupted the visual task more than colour discrimination did",
+    "Colour discrimination disrupted the visual task much more than it disrupted the spatial task"
+   ],
+   "a": 2,
+   "spot": "‘NOT supported’: check each sentence against the bars, one pair at a time.",
+   "why": "For the Chinese characters (visual task), colour discrimination caused about 9.4% interference and movement discrimination only about 4.2%, so the third statement is false. The other three match the figure: colour barely touched the dots (about -1.2%), movement hurt dots (6.3%) more than characters (4.2%), and colour hurt characters more than dots. This <b>crossover</b> is Klauer and Zhao's evidence for a separate <b>visual</b> and <b>spatial</b> component.",
+   "src": "[LO B5][IDQ B3] Klauer & Zhao (2004), E&K Figure 6.6 (approximate values)",
+   "hy": "8 Sketchpad: visual vs spatial"
+  },
+  {
+   "s": "def",
+   "t": "wm",
+   "q": "Which of these statements about the working memory model is NOT correct?",
+   "o": [
+    "The visual cache stores information about visual form and colour",
+    "The central executive is a modality-free system with limited capacity",
+    "The episodic buffer can hold about four chunks of integrated information",
+    "The phonological store actively rehearses words to keep them available"
+   ],
+   "a": 3,
+   "spot": "Store or process? The store is the ‘inner ear’, the rehearsal is the ‘inner voice’.",
+   "why": "The <b>phonological store</b> is <b>passive</b>: it holds speech sounds that fade within about two seconds. Rehearsal is done by the separate <b>articulatory control process</b> (the inner voice). The other statements are correct descriptions of the visual cache, the central executive and the episodic buffer (Baddeley, 2012).",
+   "src": "[PAST-1][LO B2][LO B3] E&K pp. 215-218; Baddeley (1990, 2012)",
+   "hy": "4 WM model components"
+  },
+  {
+   "s": "app",
+   "t": "stm",
+   "q": "A quizmaster reads out 15 song titles. Group A writes down as many titles as they can straight away. Group B first spends 30 seconds solving sums out loud and then writes down the titles. Compared with group A, group B will recall",
+   "o": [
+    "fewer of the first titles, but about as many of the last titles",
+    "fewer titles from every position, to the same degree",
+    "fewer of the last titles, but about as many of the first titles",
+    "more of the titles from the middle of the list"
+   ],
+   "a": 2,
+   "spot": "A filled delay before recall: which items were only in short-term memory?",
+   "why": "The last titles are still in <b>short-term memory</b> at the end of the list. Thirty seconds of sums push them out, so the <b>recency effect</b> disappears. The first titles were rehearsed more and reached <b>long-term memory</b>, so the <b>primacy effect</b> survives the delay.",
+   "src": "[PAST-1][LO A2][LO A5][IDQ A2] serial-position effect; M&F pp. 113-114",
+   "hy": "5 Serial-position curve"
+  },
+  {
+   "s": "def",
+   "t": "stm",
+   "q": "According to Atkinson and Shiffrin (1968), how does information get into long-term memory?",
+   "o": [
+    "Directly from sensory memory, whenever attention is low",
+    "Through the episodic buffer, which binds features into chunks",
+    "Through the central executive, which holds it briefly before passing it on",
+    "Through rehearsal of the information while it is in short-term memory"
+   ],
+   "a": 3,
+   "spot": "Atkinson-Shiffrin = boxes in a row; what moves information from box 2 to box 3?",
+   "why": "In the Atkinson-Shiffrin model, information passes <b>step by step</b> from sensory memory to short-term memory, and <b>rehearsal</b> (a control process people actively use) transfers it to long-term memory. That is also how the model explains the <b>primacy effect</b>: early items get the most rehearsal. The episodic buffer and central executive belong to Baddeley's later working memory model.",
+   "src": "[PAST-1][LO A5][IDQ A4] M&F p. 117; Atkinson & Shiffrin (1968)",
+   "hy": "7 Atkinson-Shiffrin"
+  },
+  {
+   "s": "app",
+   "t": "stm",
+   "q": "A student has to keep the string N L B B C U S A E U in mind for a few seconds. She finds this hard until she notices that it reads NL, BBC, USA, EU. After that it is easy. Which explanation fits best?",
+   "o": [
+    "She turned ten letters into four chunks, which fits easily in short-term memory",
+    "She released herself from proactive interference by switching to a new category",
+    "She moved the letters from the phonological loop into the visual cache",
+    "She enlarged her short-term memory capacity from about seven to about ten letters"
+   ],
+   "a": 0,
+   "spot": "Same letters, fewer units: what is the unit of short-term memory?",
+   "why": "Short-term memory capacity is counted in <b>chunks</b>, not letters (Miller, 1956). Familiar abbreviations from long-term memory pack ten letters into <b>four chunks</b>, well within the limit. The capacity itself does not grow; each slot simply holds more. Release from proactive interference is about a change of meaning category across trials, which does not happen here.",
+   "src": "[PAST-1][LO A1][LO A4][IDQ A1] Miller (1956); M&F pp. 111-112",
+   "hy": "6 Chunking"
+  },
+  {
+   "s": "def",
+   "t": "stm",
+   "q": "In Peterson and Peterson's (1959) study, participants saw three letters such as CHJ and recalled them after a delay. What did they do during the delay, and why?",
+   "o": [
+    "They repeated ‘the the the’, to block the phonological store",
+    "They counted backwards by threes, to prevent them from rehearsing the letters",
+    "They tapped a spatial pattern, to keep the sketchpad busy",
+    "They read new letters aloud, in order to create retroactive interference on purpose"
+   ],
+   "a": 1,
+   "spot": "What kept the letters from being repeated silently?",
+   "why": "Participants <b>counted backwards by threes</b> from a three-digit number. This distracting task prevents <b>rehearsal</b>, so the study shows how fast unrehearsed information is lost: after only about 5 seconds, roughly half the letters were forgotten (after many earlier trials). Articulatory suppression and spatial tapping are later dual-task methods from the working memory literature.",
+   "src": "[LO A2][LO A3][IDQ A3] Brown/Peterson and Peterson technique; M&F p. 113",
+   "hy": "9 Interference and Brown-Peterson"
+  },
+  {
+   "s": "app",
+   "t": "stm",
+   "q": "Two groups do four Brown/Peterson trials, each with three words and 18 seconds of counting backwards. Group 1 sees vegetables on trials 1 to 3, group 2 sees musical instruments. On trial 4 both groups see three fruits. What do you expect on trial 4?",
+   "o": [
+    "Both groups recall about equally poorly, because interference builds up over any three trials",
+    "Group 1 recalls more, because vegetables prime the related fruit words",
+    "Group 2 recalls more, because instruments are less similar in meaning to fruits",
+    "Group 2 recalls less, because a change of category confuses participants"
+   ],
+   "a": 2,
+   "spot": "How similar in meaning is the old category to the new one?",
+   "why": "Proactive interference depends on <b>semantic similarity</b>: earlier words block new words that are similar in meaning. Vegetables, like fruits, are edible plants, so interference stays high. Instruments share nothing with fruits, so group 2 shows <b>release from proactive interference</b> (as the occupations group did in Wickens et al., 1976).",
+   "src": "[LO A3][IDQ A5] Wickens et al. (1976); M&F pp. 115-117",
+   "hy": "9 Interference and release from PI"
+  },
+  {
+   "s": "find",
+   "t": "stm",
+   "q": "Judge these statements about the Brown/Peterson task.<br>I. Letters from earlier trials make the letters on a later trial harder to recall.<br>II. The counting task during the delay can itself interfere with memory for the letters.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 2,
+   "spot": "Two directions of interference: from old to new, and from new to old.",
+   "why": "Statement I describes <b>proactive interference</b>: earlier trials hurt later ones, which is why recall falls after the first few trials. Statement II describes <b>retroactive interference</b>: the new material processed during the delay (the counting) disturbs what was learned just before. Both play a part in the fast forgetting the task shows.",
+   "src": "[LO A2][IDQ A3][IDQ A5] M&F pp. 113-116",
+   "hy": "9 Proactive vs retroactive interference"
+  },
+  {
+   "s": "def",
+   "t": "wm",
+   "q": "In Logie's (1995) account of the visuo-spatial sketchpad, which job belongs to the inner scribe?",
+   "o": [
+    "Storing the visual form and colour of objects",
+    "Rehearsing speech-based information silently",
+    "Binding information from different senses into chunks",
+    "Processing spatial and movement information"
+   ],
+   "a": 3,
+   "spot": "Cache = what it looks like. Scribe = where it is and how it moves.",
+   "why": "The <b>inner scribe</b> handles <b>spatial and movement</b> information; it also rehearses the contents of the visual cache and passes information to the central executive. The <b>visual cache</b> stores form and colour. Silent rehearsal of speech is the phonological loop, and binding into chunks is the episodic buffer.",
+   "src": "[PAST-1][PAST-2][LO B3] Logie (1995); E&K p. 218",
+   "hy": "4 WM components / 8 Sketchpad"
+  },
+  {
+   "s": "comp",
+   "t": "wm",
+   "q": "Vergauwe et al. (2009) repeated Klauer and Zhao's visual and spatial interference design with more demanding interference tasks. Judge these statements.<br>I. Their results show that the visual and spatial parts of the sketchpad are a single system.<br>II. Interference that is specific to the visual or spatial component appears mainly when the interference tasks need little attention.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 1,
+   "spot": "Did the demanding tasks remove the split, or hide it behind something general?",
+   "why": "With demanding tasks, each type of interference hurt both main tasks about equally, because both now drew on the <b>central executive's</b> general attention. That hides the split rather than removing it, so statement I is false. Specific interference shows up with <b>undemanding</b> tasks, so statement II is true: the separation of the components <b>depends on attention</b>.",
+   "src": "[LO B5][IDQ B4] Vergauwe et al. (2009); E&K p. 219",
+   "hy": "8 Sketchpad: Vergauwe"
+  },
+  {
+   "s": "fig",
+   "t": "wm",
+   "q": "Weaker and stronger chess players chose moves while doing one of four secondary tasks. The figure shows the quality of the moves. What would the figure look like if choosing chess moves relied mainly on the phonological loop?",
+   "chart": {
+    "type": "bar",
+    "title": "Quality of chess-move selection",
+    "x": [
+     "Control (tapping)",
+     "Articulatory suppression",
+     "Keypad (sketchpad)",
+     "Random numbers (executive)"
+    ],
+    "y": "Move quality",
+    "series": [
+     {
+      "name": "Weaker players",
+      "v": [
+       16,
+       17.5,
+       13.5,
+       13
+      ]
+     },
+     {
+      "name": "Stronger players",
+      "v": [
+       30,
+       29,
+       19,
+       19
+      ]
+     }
+    ],
+    "note": "Approximate values from Eysenck & Keane Figure 6.4 (Robbins et al., 1996).",
+    "min": 10,
+    "max": 30
+   },
+   "o": [
+    "Move quality would also drop under articulatory suppression",
+    "Move quality would drop under the tapping control task",
+    "Only the weaker players would be affected by the keypad task",
+    "Move quality would rise under random number generation"
+   ],
+   "a": 0,
+   "spot": "Which secondary task loads the loop, and what does it do now?",
+   "why": "Articulatory suppression (saying ‘see-saw’) occupies the <b>phonological loop</b>. In the real data it left move quality almost unchanged, while the keypad task (<b>sketchpad</b>) and random number generation (<b>central executive</b>) lowered it. If the loop were needed, the suppression bars would drop too. Tapping is the control task that loads no specific component.",
+   "src": "[PAST-1][PAST-2][IDQ B1] Robbins et al. (1996), E&K Figure 6.4 (approximate values)",
+   "hy": "2 Dual-task logic (chess)"
+  },
+  {
+   "s": "comp",
+   "t": "wm",
+   "q": "Which finding is evidence for the phonological store, rather than for the articulatory rehearsal process?",
+   "o": [
+    "Memory span is larger for short words than for long words",
+    "Articulatory suppression removes the word-length effect for written words",
+    "Similar-sounding words are harder to recall in the correct order",
+    "A patient who cannot rehearse verbally shows no word-length effect"
+   ],
+   "a": 2,
+   "spot": "Similarity effect or word-length effect: which one points to storage of sounds?",
+   "why": "The <b>phonological similarity effect</b> (FEE, HE, KNEE are recalled worse in order than BAY, HOE, IT) shows that the store keeps a <b>sound-based</b> code, so similar sounds blur. The other three options are all about the <b>word-length effect</b>, which reflects the time needed for <b>rehearsal</b> by the inner voice.",
+   "src": "[LO B3][IDQ B2] Larsen et al. (2000); Baddeley et al. (1975); Jacquemot et al. (2011); E&K pp. 217-218",
+   "hy": "13 Phonological loop: store vs rehearsal"
+  },
+  {
+   "s": "find",
+   "t": "wm",
+   "q": "Patient PV had a digit span of only two items, yet ran a shop and raised a family. What did Baddeley et al. (1998) find when she tried to learn new material?",
+   "o": [
+    "She learned pairs of Italian words normally, but learned no Russian words over ten trials",
+    "She could not learn pairs of Italian words, but learned Russian words with practice",
+    "She learned both kinds of pairs normally, which shows the loop has no everyday function at all",
+    "She learned neither kind of pair, because her long-term memory was also damaged"
+   ],
+   "a": 0,
+   "spot": "What is the loop for in daily life?",
+   "why": "PV, a native Italian speaker, learned pairs of familiar <b>Italian</b> words normally but learned <b>no Russian</b> words (with Italian translations) over ten trials. So damage to the <b>phonological loop</b> gives a selective deficit, and the loop matters most for learning <b>new vocabulary</b>. Papagno et al. (1991) found the same in healthy people under articulatory suppression.",
+   "src": "[LO B3][CORE] Baddeley et al. (1988, 1998); E&K p. 218",
+   "hy": "18 Patient PV"
+  },
+  {
+   "s": "find",
+   "t": "wm",
+   "q": "How does Baddeley (2012) now describe the relation between the episodic buffer and the central executive?",
+   "o": [
+    "The executive must actively bind all features before they can enter the buffer",
+    "Integrated information can be held in the buffer without direct executive involvement",
+    "The buffer takes over the executive's work when a task becomes demanding",
+    "The buffer stores the executive's plans, because the executive itself cannot store anything"
+   ],
+   "a": 1,
+   "spot": "Allen et al. (2012): did counting backwards stop the binding?",
+   "why": "Baddeley (2000) first assumed the executive controls access to the buffer. Later findings changed this: counting backwards hurt memory for colour-shape combinations no more than for single features (Allen et al., 2012), so binding happens <b>automatically elsewhere</b>. The buffer is now <b>an essentially passive structure</b> on which these bindings are displayed. The last option is tempting because the executive indeed stores nothing, but the buffer does not hold its plans.",
+   "src": "[PAST-1][LO B1][IDQ B6] Baddeley (2012); Allen et al. (2012); E&K pp. 225-226",
+   "hy": "14 Episodic buffer"
+  },
+  {
+   "s": "fig",
+   "t": "math",
+   "q": "McGonnell et al. (2024) entered age (step 1), then phonological processing and attention problems (step 2), then the four working memory components (step 3). Only the visuospatial sketchpad added unique variance to calculation. The table shows how each component correlated with phonological processing.<br><table class=\"qt\"><tr><th>Working memory component</th><th>r with phonological processing</th></tr><tr><td>Phonological loop</td><td>.62</td></tr><tr><td>Verbal central executive</td><td>.59</td></tr><tr><td>Visuospatial central executive</td><td>.42</td></tr><tr><td>Visuospatial sketchpad</td><td>.30</td></tr></table>Which conclusion fits the table best?",
+   "o": [
+    "The sketchpad had the highest correlation with calculation of all four components",
+    "The loop and verbal executive were unrelated to calculation in this sample",
+    "The sketchpad shared least with a step-2 predictor, so more of its link was new",
+    "Phonological processing was measured with the AWMA, which favours verbal components"
+   ],
+   "a": 2,
+   "spot": "A predictor only adds unique variance for the part that was not explained by earlier steps.",
+   "why": "The verbal components share a lot with <b>phonological processing</b> (.62 and .59), which was already in the model from step 2. Their link with calculation was therefore largely <b>explained already</b>. The sketchpad shared least (.30), so its link with calculation was more <b>unique</b>. In fact the sketchpad had the lowest correlation with calculation (.42; the loop had .53), and all four components did correlate with it.",
+   "src": "[LO C3][IDQ C2] McGonnell et al. (2024) Table 2 and Table 3",
+   "hy": "11 McGonnell: correlation vs unique variance"
+  },
+  {
+   "s": "def",
+   "t": "math",
+   "q": "The AWMA, used by McGonnell et al. (2024), crosses type of material (verbal or visuospatial) with type of demand (only holding, or holding plus processing). Which pair of subtests differs ONLY in the type of demand?",
+   "o": [
+    "Digit recall and dot matrix",
+    "Word recall and block recall",
+    "Digit recall and backwards digits",
+    "Listening recall and spatial span"
+   ],
+   "a": 2,
+   "spot": "Same material, but one adds a job on top of remembering.",
+   "why": "<b>Digit recall</b> (just repeat the digits) and <b>backwards digit recall</b> (repeat them in reverse) both use verbal material, but the second adds <b>processing</b>, so it measures the verbal central executive rather than the phonological loop. The other three pairs keep the demand the same but differ in material (verbal vs visuospatial); listening recall and spatial span, for example, are both executive tasks.",
+   "src": "[LO C1][LO C2][IDQ C1] McGonnell et al. (2024), AWMA",
+   "hy": "12 AWMA material x demand"
+  },
+  {
+   "s": "find",
+   "t": "math",
+   "q": "Judge these statements about the regression results of McGonnell et al. (2024).<br>I. As the authors predicted, both visuospatial working memory components added unique variance to calculation.<br>II. Attention problems were no longer a significant predictor once the visuospatial sketchpad was added.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 1,
+   "spot": "Prediction vs outcome: which visuospatial component made it?",
+   "why": "The authors predicted that <b>both</b> visuospatial components would add unique variance, but only the <b>sketchpad</b> did (10.2%), not the visuospatial central executive, so I is false. With the sketchpad in step 3, <b>attention problems</b> dropped out (p = .23), so II is true. Phonological processing stayed significant.",
+   "src": "[LO C3][IDQ C2] McGonnell et al. (2024), results and discussion",
+   "hy": "11 McGonnell results"
+  },
+  {
+   "s": "app",
+   "t": "math",
+   "q": "A school psychologist assesses a nine-year-old who struggles with written sums. Following McGonnell et al. (2024), what should the assessment include?",
+   "o": [
+    "Only a parent rating of attention, since attention is the core deficit in math difficulty",
+    "Tests of visuospatial skills and working memory, alongside the child's math skills",
+    "Only verbal tests, since most math instruction is given in words",
+    "Only an IQ test, since IQ was the first predictor in their regression"
+   ],
+   "a": 1,
+   "spot": "What do the authors recommend for assessments of math difficulty?",
+   "why": "The authors conclude that <b>visuospatial skills</b> and <b>working memory</b> should be part of assessments for math difficulty, because strengths and weaknesses there help explain the problem and plan remediation. Attention lost its significance once the sketchpad was in the model, so it is not the core deficit. IQ was deliberately <b>not</b> entered as a predictor; age was step 1.",
+   "src": "[LO C4][IDQ C4] McGonnell et al. (2024), section 5.5",
+   "hy": "16 Assessment implications"
+  },
+  {
+   "s": "find",
+   "t": "math",
+   "q": "Combining their results with earlier work, McGonnell et al. (2024) suggest that working memory components matter at different ages. In which order do they become especially important for math?",
+   "o": [
+    "Visuospatial sketchpad first, then phonological loop, then central executive",
+    "Central executive first, then phonological loop, then visuospatial sketchpad",
+    "Phonological loop first, then central executive, then visuospatial sketchpad",
+    "Phonological loop first, then visuospatial sketchpad, then central executive"
+   ],
+   "a": 3,
+   "spot": "Early teaching is spoken; complex math comes last.",
+   "why": "At age seven the <b>phonological loop</b> predicted math best, at eight the <b>sketchpad</b> (Alloway & Passolunghi, 2011). McGonnell et al. add that the <b>central executive</b> becomes important later, as math becomes more complex. This fits how teaching develops: early instruction and feedback are mostly verbal.",
+   "src": "[LO C3][IDQ C3] McGonnell et al. (2024) discussion; Alloway & Passolunghi (2011)",
+   "hy": "15 Age and WM components"
+  },
+  {
+   "s": "comp",
+   "t": "wm",
+   "q": "According to the unitary-store view, short-term memory is simply the part of long-term memory that is active at the moment. Which finding is hardest for this view to explain?",
+   "o": [
+    "Familiar abbreviations such as BBC make a letter string easier to hold",
+    "Patients with wider medial temporal lobe damage were impaired on short-term memory for faces",
+    "Learning word pairs held only briefly was not linked to hippocampal activation",
+    "Words from a familiar category are easier to recall than unrelated letters"
+   ],
+   "a": 2,
+   "spot": "Unitary view predicts: STM uses the same brain areas as LTM.",
+   "why": "If STM were only activated LTM, the <b>hippocampus</b> (central for LTM) should also support STM. Bergmann et al. (2012) found <b>no hippocampal activation</b> for word pairs held in STM but later lost from LTM. Race et al.'s face results <b>support</b> the unitary view in part, and the effects of familiar knowledge fit it well, because long-term knowledge does shape what STM holds.",
+   "src": "[LO B1][CORE] Bergmann et al. (2012); Race et al. (2013); E&K p. 214",
+   "hy": "19 Unitary vs multi-store"
+  },
+  {
+   "s": "fig",
+   "t": "stm",
+   "q": "The figure shows two free-recall curves for the same 15-word list. Which change in procedure most likely produced curve B?",
+   "chart": {
+    "type": "line",
+    "title": "Free recall by serial position (illustrative)",
+    "x": [
+     "1",
+     "3",
+     "5",
+     "7",
+     "9",
+     "11",
+     "13",
+     "15"
+    ],
+    "y": "Proportion recalled",
+    "series": [
+     {
+      "name": "Curve A",
+      "v": [
+       0.75,
+       0.55,
+       0.4,
+       0.35,
+       0.35,
+       0.4,
+       0.65,
+       0.85
+      ]
+     },
+     {
+      "name": "Curve B",
+      "v": [
+       0.74,
+       0.54,
+       0.39,
+       0.35,
+       0.34,
+       0.34,
+       0.35,
+       0.36
+      ]
+     }
+    ],
+    "note": "Illustrative data showing the typical pattern (after Rundus, 1971).",
+    "min": 0,
+    "max": 1
+   },
+   "o": [
+    "The words were presented at a faster rate",
+    "Recall was delayed by 30 seconds of counting backwards",
+    "All words in the list came from one and the same semantic category",
+    "Recall started immediately after the last word"
+   ],
+   "a": 1,
+   "spot": "Which end of the curve changed, and what removes that end?",
+   "why": "Curve B has the same <b>primacy</b> effect as curve A but no <b>recency</b> effect. The last words are only in short-term memory, and a <b>distracting task</b> before recall pushes them out. A faster presentation rate would lower the start of the curve (less rehearsal, less primacy), and immediate recall is what produced the recency in curve A.",
+   "src": "[PAST-1][LO A2][LO A5][IDQ A5] serial-position effect; M&F pp. 113-114",
+   "hy": "5 Serial-position curve"
+  }
+ ],
+ "m1": [
+  {
+   "s": "def",
+   "t": "wm",
+   "q": "Participants hear a long list of words from several categories (animals, colours, countries) and must always be able to report the most recent word from each category. Which executive function does this task mainly measure?",
+   "o": [
+    "Inhibition",
+    "Shifting",
+    "Updating",
+    "Task setting"
+   ],
+   "a": 2,
+   "spot": "Keep replacing old contents with the newest item.",
+   "why": "<b>Updating</b> is monitoring working memory and quickly adding new items and deleting old ones, as in keeping track of the latest member of each category (Miyake et al., 2000). Inhibition is overriding a dominant response, shifting is switching between tasks. Task setting is one of Stuss and Alexander's processes: planning, setting up a stimulus-response relationship.",
+   "src": "[PAST-1][PAST-2][LO B4] Miyake et al. (2000); E&K p. 221",
+   "hy": "1 Executive functions"
+  },
+  {
+   "s": "fig",
+   "t": "wm",
+   "q": "In the maxispan procedure, participants rehearsed 3, 4 or 5 letters aloud and kept the other letters in mind without rehearsal. The figure shows recall of the non-rehearsed letters. Which conclusion can be drawn?",
+   "chart": {
+    "type": "bar",
+    "title": "Recall of non-rehearsed letters in maxispan",
+    "x": [
+     "3 rehearsed",
+     "4 rehearsed",
+     "5 rehearsed"
+    ],
+    "y": "Proportion correct",
+    "series": [
+     {
+      "name": "Maxispan",
+      "v": [
+       0.68,
+       0.67,
+       0.54
+      ]
+     }
+    ],
+    "note": "Approximate values read from the figure in the official practice exam (Barrouillet et al., Experiment 1).",
+    "min": 0,
+    "max": 1
+   },
+   "o": [
+    "Rehearsing letters aloud never affects memory for the other letters",
+    "The episodic buffer can hold about five rehearsed letters",
+    "Rehearsing five letters overloads the loop, which suggests it holds about four",
+    "The more letters are rehearsed aloud, the better the other letters are recalled"
+   ],
+   "a": 2,
+   "spot": "Where does the bar drop?",
+   "why": "Recall of the non-rehearsed letters stays about the same with 3 or 4 rehearsed letters and drops with <b>5</b>. So up to four letters fit in the <b>phonological loop</b>; with five, rehearsal overflows and takes resources from the other letters. The study is about the loop, not the episodic buffer.",
+   "src": "[PAST-1][PAST-2] Barrouillet et al. maxispan, Experiment 1 (practice exam figure)",
+   "hy": "3 Maxispan"
+  },
+  {
+   "s": "def",
+   "t": "stm",
+   "q": "Which of these statements about the Atkinson-Shiffrin model is NOT correct?",
+   "o": [
+    "Information passes through separate stores one step at a time",
+    "People actively control the flow of information, for example by rehearsing it",
+    "Short-term memory both stores information and carries out complex processing",
+    "The model compares the mind with the operations of a computer"
+   ],
+   "a": 2,
+   "spot": "Storage-only box, or storage plus processing? Which model added processing?",
+   "why": "In the Atkinson-Shiffrin model, short-term memory is a <b>storage</b> box on the way to long-term memory. The idea that it also does complex <b>processing</b> came with Baddeley and Hitch's <b>working memory</b>, and it is one of that model's advantages. The other three statements describe Atkinson and Shiffrin's information-processing approach correctly.",
+   "src": "[PAST-1][LO A5] M&F p. 117; E&K p. 226",
+   "hy": "7 Atkinson-Shiffrin"
+  },
+  {
+   "s": "comp",
+   "t": "math",
+   "q": "McGonnell et al. (2024) found that the visuospatial sketchpad predicts children's calculation skills. Which study design would be needed to find out whether the sketchpad helps children acquire these skills?",
+   "o": [
+    "Testing the same children's sketchpad and calculation repeatedly over several school years",
+    "Adding IQ as an extra predictor in the first step of the regression",
+    "Testing a larger sample of children of one age group at a single moment",
+    "Replacing the parent ratings of attention with a computer task of attention"
+   ],
+   "a": 0,
+   "spot": "What kind of design did the authors say they lacked?",
+   "why": "The study measured everything at <b>one moment</b>, so it shows a <b>relationship</b>, not what develops first or causes what. The authors call for a <b>longitudinal</b> design, following the same children over time. The other changes would improve the study, but they still give a single snapshot.",
+   "src": "[LO C4][IDQ C4] McGonnell et al. (2024), sections 5.5 and 5.6",
+   "hy": "16 Correlational, not longitudinal"
+  }
+ ],
+ "m2": [
+  {
+   "s": "app",
+   "t": "wm",
+   "q": "Participants listened to spoken shopping lists and recalled them in order. While listening they either pressed keys in a fixed spatial pattern or kept saying ‘hiya’ out loud. Only saying ‘hiya’ harmed recall. What does this show?",
+   "o": [
+    "The lists were held in the visuo-spatial sketchpad",
+    "The lists were held in the phonological loop",
+    "The lists were held in the central executive",
+    "The lists were held in the visual cache"
+   ],
+   "a": 1,
+   "spot": "Which second task hurt, and which component does it load?",
+   "why": "Saying ‘hiya’ over and over is <b>articulatory suppression</b>, which occupies the <b>phonological loop</b>. It hurt recall, so the lists were held there. Pressing keys in a spatial pattern loads the <b>sketchpad</b>, and it did not hurt. The central executive does not store information at all.",
+   "src": "[PAST-1][PAST-2][LO B5] dual-task logic; E&K pp. 215-217",
+   "hy": "2 Dual-task logic"
+  },
+  {
+   "s": "app",
+   "t": "stm",
+   "q": "In the morning your partner reads out a list of 12 groceries. Twenty minutes later, at the shop, which items are you most likely to have forgotten?",
+   "o": [
+    "Only the items at the end of the list",
+    "Only the items at the beginning of the list",
+    "The items in the middle and at the end of the list",
+    "Only the items in the middle of the list, not those at the ends"
+   ],
+   "a": 2,
+   "spot": "After a long delay, which part of the U-curve is gone?",
+   "why": "Twenty minutes of other activity empties <b>short-term memory</b>, so the <b>recency</b> advantage for the last items is lost. The first items received more rehearsal and reached <b>long-term memory</b> (primacy), so they survive. The middle items were never well remembered, so they are forgotten as well.",
+   "src": "[PAST-1][LO A2][IDQ A2] serial-position effect; M&F p. 114",
+   "hy": "5 Serial-position curve"
+  },
+  {
+   "s": "def",
+   "t": "wm",
+   "q": "Which statement about the central executive is correct?",
+   "o": [
+    "It briefly stores the intermediate results of mental arithmetic, such as 80 in 27 × 4",
+    "It depends only on the dorsolateral prefrontal cortex",
+    "Researchers agree that it consists of exactly three functions",
+    "Executive problems can also occur in patients with little or no frontal damage"
+   ],
+   "a": 3,
+   "spot": "Boss who stores nothing; where in the brain, and how many functions?",
+   "why": "Executive processes are linked mainly to <b>prefrontal cortex</b>, but patients with diffuse trauma or multiple sclerosis can have poor executive functioning with <b>little or no frontal damage</b> (Stuss, 2011). The executive <b>stores nothing</b>: intermediate results are held by the other components. The number and nature of executive processes is still <b>disputed</b>.",
+   "src": "[PAST-1][LO B2][CORE] E&K pp. 220-224; Stuss (2011)",
+   "hy": "21 Central executive"
+  },
+  {
+   "s": "find",
+   "t": "math",
+   "q": "McGonnell et al. (2024) predicted that both visuospatial components would predict calculation, but only the visuospatial sketchpad did. Which explanation did they offer?",
+   "o": [
+    "The visuospatial central executive was not measured by the AWMA",
+    "Children with ADHD had a weaker visuospatial central executive",
+    "The two visuospatial components cannot be reliably separated from each other",
+    "The sketchpad subtests were easier, so they gave more reliable scores"
+   ],
+   "a": 2,
+   "spot": "Two components that overlap so much that they compete for the same variance.",
+   "why": "Miyake et al. (2001) showed that the <b>visuospatial sketchpad</b> and the <b>visuospatial central executive</b> cannot be reliably separated, because both relate equally to executive functioning. So math may be linked to <b>visuospatial memory in broad terms</b>. The visuospatial executive was measured by the AWMA (for example odd-one-out and Mister X).",
+   "src": "[LO C3][CORE] McGonnell et al. (2024), discussion",
+   "hy": "17 Why sketchpad, not visuospatial CE"
+  }
+ ],
+ "m3": [
+  {
+   "s": "fig",
+   "t": "wm",
+   "q": "Participants held either a list of letters or a set of positions in mind, while doing either articulatory suppression or spatial tapping. The table shows the percentage of errors (illustrative data).<br><table class=\"qt\"><tr><th></th><th>Articulatory suppression</th><th>Spatial tapping</th></tr><tr><td>Letters</td><td>32%</td><td>11%</td></tr><tr><td>Positions</td><td>12%</td><td>30%</td></tr></table>What can be concluded?",
+   "o": [
+    "Positions are held in the phonological loop, letters in the sketchpad",
+    "Both tasks depend mainly on the central executive",
+    "Letters are held in the phonological loop, positions in the sketchpad",
+    "Spatial tapping is simply more difficult than articulatory suppression"
+   ],
+   "a": 2,
+   "spot": "Which interference hurts which memory task: is there a crossover?",
+   "why": "Articulatory suppression hurts the <b>letters</b> most, so they are in the <b>phonological loop</b>. Spatial tapping hurts the <b>positions</b> most, so they are in the <b>sketchpad</b>. This crossover rules out the idea that one secondary task is just harder: then it would hurt both memory tasks.",
+   "src": "[PAST-1][PAST-2][LO B5] dual-task logic and double dissociation; E&K pp. 215-219",
+   "hy": "2 Dual-task logic / 10 Double dissociation"
+  },
+  {
+   "s": "comp",
+   "t": "wm",
+   "q": "Miyake and Friedman (2012) split each executive function into a part that all three share and a part that is unique to it. Judge these statements.<br>I. The shared part is the ability to actively maintain task goals and use them to bias lower-level processing.<br>II. After the shared part was taken out, no unique variance was left for shifting.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Unity and diversity: which function has nothing of its own?",
+   "why": "Statement I is the definition of the common executive factor (Miyake & Friedman, 2012). Statement II names the wrong function: it was <b>inhibition</b> that had no unique variance left (Friedman et al., 2008); <b>shifting</b> and <b>updating</b> kept a unique part. So the executive shows <b>unity</b> (a shared core) and <b>diversity</b> (specific skills).",
+   "src": "[LO B4][CORE] Miyake & Friedman (2012); Friedman et al. (2008); E&K p. 221",
+   "hy": "20 Unity and diversity"
+  },
+  {
+   "s": "app",
+   "t": "stm",
+   "q": "On four Brown/Peterson trials a participant is asked to remember three animal names each time, and recall gets worse from trial to trial. On trial 5 she gets three digits instead, and recall is almost back to the level of trial 1. What is this?",
+   "o": [
+    "Release from proactive interference",
+    "Retroactive interference",
+    "The recency effect",
+    "Chunking of the digits into larger units"
+   ],
+   "a": 0,
+   "spot": "Performance drops over trials, then jumps back after a switch of category.",
+   "why": "Earlier animal names interfere with new ones: <b>proactive interference</b>. Switching to a different category (digits) removes most of that interference, so recall recovers: <b>release from proactive interference</b>. Retroactive interference is new material spoiling old memories; the recency effect is about list position; chunking is grouping items into units.",
+   "src": "[PAST-1 (option)][LO A3][IDQ A3] M&F pp. 115-116",
+   "hy": "9 Release from PI"
+  },
+  {
+   "s": "def",
+   "t": "wm",
+   "q": "Which of these statements about the phonological loop is NOT correct?",
+   "o": [
+    "Spoken words must pass through the articulatory control process before they enter the phonological store",
+    "Written words must be converted into a speech-based code before they enter the phonological store",
+    "Articulatory suppression occupies the articulatory control process",
+    "Sounds in the phonological store fade within about two seconds unless they are rehearsed"
+   ],
+   "a": 0,
+   "spot": "Heard words or read words: which ones need the inner voice to get in?",
+   "why": "<b>Spoken</b> words enter the <b>phonological store</b> directly. It is <b>written</b> words that must first be ‘said’ by the articulatory control process to get in (Baddeley, 1990). That is why articulatory suppression removes the word-length effect for written words. The other statements are correct.",
+   "src": "[PAST-1][LO B3][IDQ B2] Baddeley (1990), E&K Figure 6.5",
+   "hy": "13 Phonological loop"
+  }
+ ]
+}

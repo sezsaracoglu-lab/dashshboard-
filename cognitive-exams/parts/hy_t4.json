@@ -1,0 +1,708 @@
+{
+ "theme": [
+  {
+   "s": "app",
+   "t": "cat",
+   "q": "For the category ‘parent’, having given birth to a child is",
+   "o": [
+    "necessary and sufficient",
+    "necessary but not sufficient",
+    "sufficient but not necessary",
+    "neither necessary nor sufficient"
+   ],
+   "a": 2,
+   "spot": "Two checks: must every member have it? Does having it guarantee membership?",
+   "why": "Anyone who has given birth is a parent, so the feature is <b>sufficient</b>. But fathers and adoptive parents are parents without giving birth, so it is <b>not necessary</b>. The tempting ‘necessary but not sufficient’ is the reverse pattern (like four sides for a square).",
+   "src": "[PAST-1][PAST-2][LO] classical view; Murphy 4.3",
+   "hy": "1 Necessary vs sufficient"
+  },
+  {
+   "s": "comp",
+   "t": "cat",
+   "q": "Judge these statements.<br>I. According to the classical view, the boundary between members and non-members of a category is sharp.<br>II. McCloskey and Glucksberg (1978) found that people disagree with one another about borderline items, but that each person gives the same answer when asked again.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Check each statement separately against the reading.",
+   "why": "I is <b>true</b>: with a definition, an item either has all defining features or it does not, so there is no grey zone. II is <b>false</b>: asked twice, two weeks apart, people changed their own minds about borderline items up to <b>22 percent</b> of the time. They disagree with themselves, not only with others.",
+   "src": "[LO] Murphy 4.3.1; Hampton (1979), McCloskey & Glucksberg (1978)",
+   "hy": "14 Fuzzy boundaries"
+  },
+  {
+   "s": "app",
+   "t": "cat",
+   "q": "Shown the same glass, a sommelier says ‘a Pinot Noir’ while her friend says ‘wine’. Which statement is correct?",
+   "o": [
+    "The friend uses the basic level; for the expert, a more specific level has become preferred",
+    "The sommelier uses the basic level, because the basic level is fixed by real differences in the world",
+    "The friend uses the superordinate level, because laypeople avoid basic-level names for drinks",
+    "Both use the basic level, because the basic level is the same for every person"
+   ],
+   "a": 0,
+   "spot": "Same object, two people, two levels: who knows more?",
+   "why": "For most people the everyday middle level (‘wine’) is the <b>basic level</b>. Experts know many distinguishing features, so a more specific level becomes the most differentiated and useful one for them (birdwatchers see sparrows, carpenters claw hammers). The basic level is <b>not fixed</b> by the world: it depends on the knower.",
+   "src": "[PAST-1][PAST-2][LO] basic level and expertise; Murphy 4.4 (Tanaka & Taylor, 1991)",
+   "hy": "2 Hierarchy levels / basic level"
+  },
+  {
+   "s": "fig",
+   "t": "cat",
+   "q": "Rosch et al. (1976) showed participants pictures of objects and asked for the first name that came to mind. The figure shows how many names were given at each level. Which conclusion does the figure support?",
+   "chart": {
+    "type": "bar",
+    "title": "First names given to pictures (Rosch et al., 1976)",
+    "x": [
+     "Superordinate",
+     "Basic",
+     "Subordinate"
+    ],
+    "y": "Number of names",
+    "series": [
+     {
+      "name": "Names",
+      "v": [
+       1,
+       1595,
+       14
+      ]
+     }
+    ],
+    "note": "Counts as reported by Murphy.",
+    "min": 0,
+    "max": 1700
+   },
+   "o": [
+    "The basic level is the default level for naming objects",
+    "The subordinate level is preferred because it is most informative",
+    "The basic level is the same in every culture",
+    "Superordinate names are avoided because children learn them first"
+   ],
+   "a": 0,
+   "spot": "Read the bars: which level dominates?",
+   "why": "1,595 names were <b>basic level</b>, only 14 subordinate and 1 superordinate: the basic level is the default. The figure cannot show that this is universal; Berlin (1992) found that the basic level <b>shifts across cultures</b>. And superordinate categories are learned late, not first.",
+   "src": "[PAST-1][PAST-2][LO] Rosch et al. (1976); Murphy 4.4",
+   "hy": "2 Hierarchy levels / basic level"
+  },
+  {
+   "s": "def",
+   "t": "cat",
+   "q": "According to Rosch and Mervis (1975), a sparrow is a more typical bird than an ostrich because a sparrow",
+   "o": [
+    "has many features that are common among birds and few that are common in other categories",
+    "is seen far more often than an ostrich, and frequency of encounter is the main cause of typicality",
+    "has all necessary and sufficient features of a bird, whereas an ostrich lacks one",
+    "belongs to the basic level, whereas an ostrich belongs to the subordinate level"
+   ],
+   "a": 0,
+   "spot": "Typicality = how much an item looks like the family.",
+   "why": "This is <b>family resemblance</b>: typical items share many features with other members and few with other categories. Frequency has some effect but is not the main cause (a rug is seen as often as a table yet is less typical furniture). The classical view cannot explain typicality at all, since every member would be equally good.",
+   "src": "[PAST-1][LO A4] Rosch & Mervis (1975); Murphy 4.3.4",
+   "hy": "3 Typicality = family resemblance"
+  },
+  {
+   "s": "find",
+   "t": "cat",
+   "q": "Rosch and Mervis (1975) taught participants new categories made of items with arbitrary features. Why does this design make their typicality results more convincing?",
+   "o": [
+    "Participants had never seen the items, so everyday frequency cannot explain which items became typical",
+    "Arbitrary features can be made necessary and sufficient, so the classical view could be tested directly against them",
+    "New categories have no prototype, so prototype theory was ruled out",
+    "New categories are always basic-level categories, so the level was held constant"
+   ],
+   "a": 0,
+   "spot": "Why build a brand-new category instead of using birds?",
+   "why": "With new items nobody has an <b>everyday history</b>, so frequency of encounter cannot explain the result. Items with features common in their category were still learned faster and rated more typical, and items sharing features with another category were learned more slowly: both parts of <b>family resemblance</b> hold.",
+   "src": "[LO A4] Rosch & Mervis (1975); Murphy 4.3.4",
+   "hy": "3 Typicality = family resemblance"
+  },
+  {
+   "s": "app",
+   "t": "cat",
+   "q": "Mila has met dozens of fluffy cats and one hairless Sphynx cat, which she remembers vividly. The first time she sees a hairless dog, she immediately calls it ‘a cat’. Which approach explains this best?",
+   "o": [
+    "The prototype approach",
+    "The exemplar approach",
+    "The classical view",
+    "The knowledge approach"
+   ],
+   "a": 1,
+   "spot": "Classification driven by a few specific remembered examples.",
+   "why": "Mila's category ‘cat’ includes the <b>specific examples</b> she remembers. New things are compared with them, so whatever closely resembles the stored Sphynx is called a cat. A prototype is an <b>average</b> built across all members; averaged over dozens of fluffy cats it is fluffy, so it does not predict calling a hairless animal a cat. Close similarity to one well-remembered example deciding the category is the exemplar signature (Allen & Brooks, 1991).",
+   "src": "[PAST-1][LO] exemplar approach; Murphy 4.5.2 (Allen & Brooks, 1991)",
+   "hy": "4 Exemplar approach"
+  },
+  {
+   "s": "comp",
+   "t": "cat",
+   "q": "Which finding is a problem for exemplar theory but NOT for prototype theory?",
+   "o": [
+    "People know that small birds tend to sing and large birds tend to squawk, and use this to classify",
+    "A ‘musical instrument at a campfire’ is more often a guitar than a piano",
+    "People ‘recognise’ a never-shown dot pattern from which all studied patterns were derived",
+    "Typical members of a category are categorised faster than atypical ones"
+   ],
+   "a": 2,
+   "spot": "Which result needs a summary the person never encountered?",
+   "why": "Posner et al. (1967): the <b>prototype</b> pattern was never shown, so it could never have been stored as an exemplar, yet it was ‘recognised’. Only an <b>abstracted average</b> explains that. Correlated features and context effects are problems for prototype theory, and typicality is explained by both theories.",
+   "src": "[LO A3] Posner, Goldsmith & Welton (1967); Murphy 4.5",
+   "hy": "9 Posner unseen prototype"
+  },
+  {
+   "s": "app",
+   "t": "cat",
+   "q": "Two groups learn about a made-up deep-sea fish. Group A learns: lives in total darkness, has huge eyes, gives off light. Group B learns: lives in total darkness, has tiny eyes, has bright red stripes. Group A learns the concept faster and remembers ‘huge eyes’ best. Which approach explains this best?",
+   "o": [
+    "The prototype approach",
+    "The exemplar approach",
+    "The knowledge approach",
+    "The classical view"
+   ],
+   "a": 2,
+   "spot": "Features that make sense together are easier to learn.",
+   "why": "The <b>knowledge approach</b> says we link new concepts to what we already know: big eyes and light make sense in darkness, so the concept is coherent. Murphy and Allopenna (1994) found exactly this with the ‘donker’ and ‘blegdav’. Prototype and exemplar theory put <b>no constraint</b> on which features a concept contains, so they do not predict it.",
+   "src": "[LO A3] Murphy & Allopenna (1994); Murphy 4.10",
+   "hy": "18 Knowledge approach"
+  },
+  {
+   "s": "app",
+   "t": "cat",
+   "q": "Children hear that a goat had an operation so that it now looks and bleats exactly like a sheep, and that a broom was rebuilt so that it now works as a rake. Most say the animal is still a goat, but the broom is now a rake. What does this show?",
+   "o": [
+    "People believe natural kinds have a hidden essence, while artefacts are defined by their function",
+    "Children classify by appearance, while adults classify by function",
+    "The basic level of animals is lower than the basic level of tools",
+    "Animals are classified by comparison with a prototype, and tools by comparison with remembered exemplars"
+   ],
+   "a": 0,
+   "spot": "Looks changed, membership did not: a hidden core.",
+   "why": "This is <b>psychological essentialism</b>, as in Keil's (1989) raccoon-skunk study: a natural kind keeps an invisible essence whatever it looks like. For an <b>artefact</b> such as a coffeepot turned birdfeeder, people accept the change, because artefacts seem to have no essence. Adults and children over four answered alike.",
+   "src": "[IDQ A6] Keil (1989); Murphy 4.10.1",
+   "hy": "19 Essentialism"
+  },
+  {
+   "s": "def",
+   "t": "cat",
+   "q": "Which of the following is an ad hoc category?",
+   "o": [
+    "Birds of prey",
+    "Kitchen utensils",
+    "Ways to keep a toddler busy on a long flight",
+    "A golden cage (said of a well-paid job you cannot leave)"
+   ],
+   "a": 2,
+   "spot": "Made up on the spot to serve a goal.",
+   "why": "An <b>ad hoc category</b> (Barsalou, 1983) forms for a specific goal; its members (stickers, snacks, a tablet) share nothing except that goal. Birds of prey are a natural kind, kitchen utensils are artefacts, and ‘a golden cage’ is a <b>metaphorical</b> concept, the loosest type of all.",
+   "src": "[PAST-2] Robinson-Riegler; Barsalou (1983); Goldstone & Kersten (2003)",
+   "hy": "7 Category types"
+  },
+  {
+   "s": "fig",
+   "t": "net",
+   "q": "The table lists the links in part of a semantic network. Participants see the prime FIRE and then decide as fast as possible whether a target is a word. In which order will the targets be recognised, from fastest to slowest?<table class=\"qt\"><tr><th>Link</th></tr><tr><td>FIRE – SMOKE</td></tr><tr><td>FIRE – RED</td></tr><tr><td>RED – ROSE</td></tr><tr><td>CHAIR – TABLE</td></tr></table>",
+   "o": [
+    "SMOKE, ROSE, CHAIR",
+    "ROSE, SMOKE, CHAIR",
+    "CHAIR, ROSE, SMOKE",
+    "SMOKE, CHAIR, ROSE"
+   ],
+   "a": 0,
+   "spot": "Count the links between the prime and each target.",
+   "why": "Activation <b>spreads</b> from FIRE along its links and weakens with <b>distance</b>. SMOKE is one link away and gets the biggest head start; ROSE is two links away (via RED) and gets a smaller one; CHAIR is not connected at all, so it gets no priming.",
+   "src": "[PAST-1][LO B3] Collins & Loftus (1975); Robinson-Riegler Fig. 5.11",
+   "hy": "5 Semantic network / spreading activation"
+  },
+  {
+   "s": "fig",
+   "t": "net",
+   "q": "The figure shows illustrative mean reaction times for correct ‘true’ answers in a category verification task. What would the figure look like if the classical view of categories were correct?",
+   "chart": {
+    "type": "bar",
+    "title": "Category verification: ‘A ... is a bird’",
+    "x": [
+     "Robin",
+     "Chicken",
+     "Penguin"
+    ],
+    "y": "Mean RT (ms)",
+    "series": [
+     {
+      "name": "RT",
+      "v": [
+       600,
+       680,
+       720
+      ]
+     }
+    ],
+    "note": "Illustrative values.",
+    "min": 0,
+    "max": 800
+   },
+   "o": [
+    "The bars would rise even more steeply from robin to penguin",
+    "All three bars would be about equally high",
+    "The penguin bar would be lowest, because penguins are distinctive",
+    "The chicken bar would be highest, because it lies on the borderline"
+   ],
+   "a": 1,
+   "spot": "Classical view: every member is an equally good member.",
+   "why": "In the classical view an item either has all defining features or not, so all birds are <b>equally good</b> birds and there is no reason for speed differences. The real pattern, faster for typical items, is the <b>typicality effect</b>, which the classical view cannot explain.",
+   "src": "[LO A4, B3] typicality in verification; Murphy 4.6; Robinson-Riegler",
+   "hy": "13 Verification tasks / typicality"
+  },
+  {
+   "s": "def",
+   "t": "net",
+   "q": "Judge these statements about the spreading activation model of Collins and Loftus (1975).<br>I. The activation reaching a node is summed, and the concept is identified when the sum exceeds a threshold.<br>II. The more concepts are activated at the same time, the more activation each of them receives.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Each statement is one assumption of the model; one is reversed.",
+   "why": "I is <b>true</b>: activation is <b>summed</b> at a node and the concept fires past a <b>threshold</b>. II is <b>false</b>: activation is shared, so the more concepts are active at once, the <b>less</b> each one receives. Activation also fades with time and distance.",
+   "src": "[LO B1, B3] Collins & Loftus (1975); Robinson-Riegler",
+   "hy": "5 Semantic network / spreading activation"
+  },
+  {
+   "s": "comp",
+   "t": "net",
+   "q": "In a feature verification task, people confirm ‘a cat has whiskers’ faster than ‘a cat has lungs’. How does the semantic network approach explain this?",
+   "o": [
+    "‘Lungs’ is a distinctive feature of cats, and distinctive features are stored furthest away",
+    "‘Whiskers’ is more strongly linked to the node ‘cat’, so activation reaches it sooner",
+    "‘Lungs’ is checked against all stored cat exemplars, which takes more time",
+    "‘Whiskers’ is a necessary feature of cats and ‘lungs’ is not"
+   ],
+   "a": 1,
+   "spot": "Speed of verification = distance in the network.",
+   "why": "In the network a feature that is <b>closely associated</b> with a concept sits close to it (a short, strong link), so activation gets there fast. Lungs are true of cats but weakly associated with them, just like ‘a cat has skin’ in Robinson-Riegler. Lungs are not distinctive (all mammals have them) and are just as necessary as whiskers.",
+   "src": "[IDQ B2][LO B1] feature verification; Robinson-Riegler",
+   "hy": "13 Verification tasks / typicality"
+  },
+  {
+   "s": "def",
+   "t": "sd",
+   "q": "Which profile describes semantic dementia, the mirror image of amnesia?",
+   "o": [
+    "Loss of conceptual knowledge, while day-to-day episodic memory is relatively spared",
+    "Loss of the ability to form new episodic memories, while vocabulary and concepts remain intact",
+    "Loss of drawing and copying skill, while naming remains intact",
+    "Equal loss of all memory systems from the start of the disease"
+   ],
+   "a": 0,
+   "spot": "Which knowledge goes, and which stays?",
+   "why": "Semantic dementia comes with temporal-lobe atrophy and a <b>selective</b> loss of concepts and word meaning, while day-to-day memory, fluent speech and reasoning are relatively spared. Amnesia shows the reverse (episodes lost, concepts intact): together a <b>double dissociation</b> between semantic and episodic memory.",
+   "src": "[LO C1] Bozeat et al. (2003) intro; Murphy 4.7, 4.11",
+   "hy": "12 SD profile"
+  },
+  {
+   "s": "find",
+   "t": "sd",
+   "q": "In Study 1 of Bozeat et al. (2003), the patients' drawing scores correlated strongly with their naming and word-to-picture matching scores (r between .96 and .99), while copying the Rey figure and Raven's matrices stayed relatively preserved. Which explanation of the poor drawings does this rule out?",
+   "o": [
+    "A loss of conceptual knowledge",
+    "A loss of drawing or visuo-constructional skill",
+    "Damage to a single central semantic system",
+    "A selective, progressive impairment of semantic memory"
+   ],
+   "a": 1,
+   "spot": "What do drawing and naming share, and what does copying test?",
+   "why": "Naming needs no drawing at all, so the only thing drawing and naming share is <b>meaning</b>. And patients could still copy a complex figure, so their hand and eye work. Together this rules out a loss of <b>drawing skill</b> and supports impoverished concepts from damage to one <b>central semantic system</b>.",
+   "src": "[LO C2][IDQ C4] Bozeat et al. (2003) Study 1",
+   "hy": "10 Drawing correlates with naming, not copying"
+  },
+  {
+   "s": "fig",
+   "t": "sd",
+   "q": "Bozeat et al. (2003) classified each visual feature as shared or distinctive, using the drawings of healthy controls. The figure shows the mean proportion of shared features per item for two domains. What does this predict for the drawings of semantic dementia patients?",
+   "chart": {
+    "type": "bar",
+    "title": "Shared features per item (Bozeat et al., 2003)",
+    "x": [
+     "Animals and birds",
+     "Artefacts"
+    ],
+    "y": "Mean proportion of shared features",
+    "series": [
+     {
+      "name": "Shared",
+      "v": [
+       0.59,
+       0.29
+      ]
+     }
+    ],
+    "note": "Values from Bozeat et al. (2003), citing Rogers et al.",
+    "min": 0,
+    "max": 1
+   },
+   "o": [
+    "More omissions for artefacts than for animals",
+    "More intrusions for animals than for artefacts",
+    "Artefact drawings will gain wrong features, such as extra legs",
+    "No difference between the domains for any type of error"
+   ],
+   "a": 1,
+   "spot": "Shared features are the ones that can slip into the wrong drawing.",
+   "why": "Shared features (eyes, four legs) are the ones that <b>intrude</b> into drawings of items that lack them. Animals have more of them, so animals get more intrusions. That is what was found: omissions did not differ by domain, and once <b>distinctiveness</b> was taken into account, domain no longer predicted intrusions.",
+   "src": "[LO C2][PAST-1 related] Bozeat et al. (2003) distinctiveness analysis",
+   "hy": "16 Living vs artefact via distinctiveness"
+  },
+  {
+   "s": "comp",
+   "t": "sd",
+   "q": "A patient with semantic dementia is asked to draw a peacock from its name. Based on Bozeat et al. (2003), which error is LEAST likely?",
+   "o": [
+    "Leaving out the fan of tail feathers",
+    "Adding four legs",
+    "Leaving out the eyes",
+    "Drawing an ordinary, generic bird"
+   ],
+   "a": 2,
+   "spot": "Shared features survive; distinctive ones go.",
+   "why": "Eyes are <b>shared by the whole domain</b> (almost all animals have them), and shared features are the most robust, so omitting them is least likely. The tail fan is <b>distinctive</b> and goes first, which leaves a generic bird. Four legs is a typical intrusion of a shared animal feature.",
+   "src": "[PAST-1][LO C2] Bozeat et al. (2003) Study 2",
+   "hy": "6 Distinctive lost first, shared intrude"
+  },
+  {
+   "s": "fig",
+   "t": "sd",
+   "q": "The figure shows approximate mean errors per item for the three patients of Study 2 of Bozeat et al. (2003). What would the figure look like if the patients' errors came from poor visual or constructional skill rather than from lost conceptual knowledge?",
+   "chart": {
+    "type": "bar",
+    "title": "Mean errors per item (approx., Bozeat et al., 2003, Fig. 3)",
+    "x": [
+     "Immediate copy",
+     "Delayed copy",
+     "Drawing from name"
+    ],
+    "y": "Mean errors per item",
+    "series": [
+     {
+      "name": "DS (mild)",
+      "v": [
+       1.0,
+       2.1,
+       4.0
+      ]
+     },
+     {
+      "name": "DC (moderate)",
+      "v": [
+       0.9,
+       4.7,
+       6.2
+      ]
+     },
+     {
+      "name": "IF (severe)",
+      "v": [
+       1.7,
+       6.8,
+       9.7
+      ]
+     }
+    ],
+    "note": "Approximate values read from Figure 3.",
+    "min": 0,
+    "max": 12
+   },
+   "o": [
+    "Errors would be high in all three conditions, including immediate copying",
+    "Errors would rise from immediate copying to drawing from name, as shown",
+    "Errors would appear only in delayed copying",
+    "Errors would appear only for living things"
+   ],
+   "a": 0,
+   "spot": "Immediate copying needs eye and hand, hardly any meaning.",
+   "why": "<b>Immediate copying</b> relies mainly on visual and constructional skill. If that skill were the problem, patients would fail there too, and the three conditions would look alike. Instead errors are lowest in immediate copying and grow as the task needs more <b>conceptual knowledge</b>, especially for the severe patient IF.",
+   "src": "[LO C2] Bozeat et al. (2003) Study 2, Figure 3",
+   "hy": "11 Study 2 conditions and pattern"
+  },
+  {
+   "s": "find",
+   "t": "sd",
+   "q": "In Study 2 of Bozeat et al. (2003), the patients also drew meaningless geometric shapes from memory after a delay, and all performed within the control range. What does this result rule out?",
+   "o": [
+    "That delayed copying of objects is hard for patients only because of poor episodic memory",
+    "That the patients have a semantic impairment",
+    "That distinctive features are lost before shared features",
+    "That drawing from name depends on conceptual knowledge"
+   ],
+   "a": 0,
+   "spot": "A control task: same memory demand, no meaning.",
+   "why": "Delayed copying needs both episodic memory and concepts. Meaningless shapes need the same short-term <b>episodic memory</b> but no meaning. Normal performance there shows that the object errors arise only when <b>meaning</b> is needed, so they are semantic, not a memory-span problem.",
+   "src": "[LO C2] Bozeat et al. (2003) Study 2",
+   "hy": "11 Study 2 conditions and pattern"
+  },
+  {
+   "s": "comp",
+   "t": "sd",
+   "q": "Over 18 months, a patient with semantic dementia names the same picture ‘duck’, then ‘swan’, then ‘bird’, then ‘animal’. Judge these statements.<br>I. This pattern fits Warrington's (1975) view that semantic memory is organised hierarchically.<br>II. This pattern rules out the view that concepts are distributed patterns of shared and distinctive features.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Does a fit with one theory exclude the other?",
+   "why": "I is <b>true</b>: specific levels degrade before general ones, as a <b>hierarchy</b> predicts. II is <b>false</b>: Rogers et al. (2002) damaged a network built only from semantic features and got the same specific-to-general pattern <b>without</b> a stored hierarchy, because shared features are the most robust.",
+   "src": "[LO C2] Hodges et al. (1995); Warrington (1975); Rogers et al. (2002) via Bozeat",
+   "hy": "17 Hierarchy vs distributed features"
+  },
+  {
+   "s": "find",
+   "t": "cat",
+   "q": "Hampton (1979) asked people whether various items belonged to categories such as ‘kitchen utensils’ and ‘vegetables’. What did he find?",
+   "o": [
+    "Members and non-members formed a continuum, with many items only just in or just out",
+    "Typical members were judged to be in the category and atypical members were judged to be out",
+    "People agreed completely about which items were members",
+    "Sinks and sponges were both clear members of ‘kitchen utensils’"
+   ],
+   "a": 0,
+   "spot": "Sharp boundary or a gradual slope?",
+   "why": "There was <b>no clean break</b>: sinks were only just kitchen utensils, sponges only just not; seaweed only just a vegetable, tomatoes only just not, with much disagreement. Atypical members are still members, so the second option confuses typicality with membership. This fuzziness is a key problem for the <b>classical view</b>.",
+   "src": "[LO A2-A3] Hampton (1979); Murphy 4.3.1",
+   "hy": "14 Fuzzy boundaries"
+  },
+  {
+   "s": "find",
+   "t": "cat",
+   "q": "Which finding shows that the basic level depends on the knower and not only on the structure of the world?",
+   "o": [
+    "Less industrialised societies name natural objects with words like ‘elm’ and ‘trout’",
+    "Of more than 1,600 names given to pictures of objects, 1,595 were at the basic level",
+    "Children use basic-level names before superordinate names",
+    "Subordinate categories closely resemble their neighbouring categories"
+   ],
+   "a": 0,
+   "spot": "Look for a difference between groups of people.",
+   "why": "Berlin (1992): North Americans say ‘tree’, ‘fish’, ‘bird’, but people who know more about nature use the level of ‘elm’, ‘trout’, ‘finch’. The same world gives a different basic level, so <b>knowledge</b> matters. The other options are true facts about the basic level but say nothing about <b>differences between knowers</b>.",
+   "src": "[LO A1] Berlin (1992); Murphy 4.4",
+   "hy": "15 Basic level depends on knower"
+  },
+  {
+   "s": "def",
+   "t": "cat",
+   "q": "What distinguishes the essentialist approach to categorisation from the classical, prototype and exemplar approaches?",
+   "o": [
+    "It is top-down: we categorise by our theory of what something is at its core",
+    "It is bottom-up: we categorise by counting visible features",
+    "It stores one average member for each category",
+    "It requires features that are necessary and sufficient"
+   ],
+   "a": 0,
+   "spot": "Similarity of features vs a belief about the core.",
+   "why": "The classical, prototype and exemplar approaches are <b>bottom-up</b>: an object is a bird because of its features. The essentialist approach (Medin & Ortony, 1989) is <b>top-down</b>: we use a theory about a hidden core, which need not be visible, so categorisation goes beyond perceptual similarity (as in Rips's bird-like creature that came to look like an insect).",
+   "src": "[LO B2] Robinson-Riegler, essentialist approach",
+   "hy": "20 Essentialist approach top-down"
+  }
+ ],
+ "m1": [
+  {
+   "s": "def",
+   "t": "cat",
+   "q": "For the category ‘grandmother’, being a woman is",
+   "o": [
+    "necessary and sufficient",
+    "necessary but not sufficient",
+    "sufficient but not necessary",
+    "neither necessary nor sufficient"
+   ],
+   "a": 1,
+   "spot": "Must every grandmother have it? Does it guarantee being one?",
+   "why": "Every grandmother is a woman, so the feature is <b>necessary</b>. But many women are not grandmothers, so it is <b>not sufficient</b>. A definition needs features that are each necessary and together sufficient, such as ‘woman’ plus ‘parent of a parent’.",
+   "src": "[PAST-1][PAST-2] classical view; Murphy 4.3",
+   "hy": "1 Necessary vs sufficient"
+  },
+  {
+   "s": "app",
+   "t": "cat",
+   "q": "A toddler calls a poodle, a Labrador and a chihuahua ‘doggy’, but has no word yet for ‘animal’ or ‘poodle’. Which statement fits this?",
+   "o": [
+    "Children learn basic-level categories first; superordinates are especially hard",
+    "Children learn subordinate categories first, because they are the most specific",
+    "Children start from the superordinate level and work downwards",
+    "The toddler uses an ad hoc category built for a goal"
+   ],
+   "a": 0,
+   "spot": "Which level comes first in development?",
+   "why": "‘Dog’ is the <b>basic level</b>, and basic-level names are the first labels children use (Brown, 1958), the same names adults prefer (Anglin, 1977). Superordinate categories such as ‘animal’ turn out to be particularly <b>difficult</b> for children, and subordinates come later.",
+   "src": "[PAST-1][PAST-2][LO A1] Murphy 4.4",
+   "hy": "2 Hierarchy levels / basic level"
+  },
+  {
+   "s": "fig",
+   "t": "net",
+   "q": "Which description fits the structure in the table?<table class=\"qt\"><tr><th>Link</th></tr><tr><td>WEDDING – RING</td></tr><tr><td>WEDDING – CAKE</td></tr><tr><td>RING – GOLD</td></tr><tr><td>CAKE – SUGAR</td></tr></table>",
+   "o": [
+    "A hierarchy of categories in which ‘ring’ is a subordinate of ‘wedding’",
+    "A prototype structure in which ‘wedding’ is the most typical member",
+    "A semantic network in which ‘wedding’ is likely to prime ‘ring’",
+    "An ad hoc category of things needed to organise a wedding"
+   ],
+   "a": 2,
+   "spot": "Concepts joined by associations, no levels or members.",
+   "why": "Nodes joined by links of different kinds (RING is not a type of wedding) form a <b>semantic network</b>. Activating WEDDING <b>spreads activation</b> to directly linked RING, which is then recognised faster: semantic priming.",
+   "src": "[PAST-1][LO B3] Collins & Loftus (1975); Robinson-Riegler",
+   "hy": "5 Semantic network / spreading activation"
+  },
+  {
+   "s": "def",
+   "t": "sd",
+   "q": "In Study 2 of Bozeat et al. (2003), patients drew items in three conditions. Which matching is correct?",
+   "o": [
+    "Immediate copying: mainly visual and constructional skill; delayed copying: episodic memory plus concepts; drawing from name: mostly concepts",
+    "Immediate copying: mostly concepts; delayed copying: visual skill only; drawing from name: episodic memory",
+    "Immediate copying: episodic memory; delayed copying: mostly concepts; drawing from name: visual skill",
+    "All three conditions rely equally on conceptual knowledge"
+   ],
+   "a": 0,
+   "spot": "Order the conditions by how much meaning they need.",
+   "why": "With the picture in view, <b>immediate copying</b> needs eye and hand. In <b>delayed copying</b> the picture is gone (count to 15), so memory and concepts help fill gaps. <b>Drawing from name</b> gives no picture at all, so it relies most on conceptual knowledge. Errors rose in exactly that order.",
+   "src": "[LO C2] Bozeat et al. (2003) Study 2",
+   "hy": "11 Study 2 conditions and pattern"
+  }
+ ],
+ "m2": [
+  {
+   "s": "def",
+   "t": "cat",
+   "q": "Which of the following is NOT a consequence of typicality?",
+   "o": [
+    "Typical items are categorised faster",
+    "Typical items are learned earlier",
+    "Typical items are mentioned first in lists",
+    "Typical items have more necessary features"
+   ],
+   "a": 3,
+   "spot": "Three are findings; one mixes in the classical view.",
+   "why": "Typical items are categorised faster, learned earlier, and named first (‘apples and lemons’). ‘More necessary features’ makes no sense: by definition <b>every</b> member has all necessary features. Typicality comes from <b>family resemblance</b>, not from definitions.",
+   "src": "[PAST-1][LO A4] Murphy 4.3.2",
+   "hy": "3 Typicality = family resemblance"
+  },
+  {
+   "s": "comp",
+   "t": "cat",
+   "q": "Which observation is a problem for prototype theory?",
+   "o": [
+    "Atypical members are categorised more slowly than typical members",
+    "People know that small birds tend to sing and large birds tend to squawk",
+    "Category boundaries are fuzzy, with borderline items",
+    "People ‘recognise’ a never-shown average dot pattern"
+   ],
+   "a": 1,
+   "spot": "What can a single average NOT store?",
+   "why": "An average stores <b>how often</b> features occur, not <b>which features go together</b>, so knowledge of <b>correlated features</b> (Mervis & Rosch, 1981) is a problem. Stored exemplars keep it. Typicality and fuzzy boundaries are what prototype theory explains best, and the dot patterns support it.",
+   "src": "[LO A3][IDQ B3] Mervis & Rosch (1981); Murphy 4.5.1",
+   "hy": "8 Prototype problems"
+  },
+  {
+   "s": "def",
+   "t": "net",
+   "q": "In a semantic network, why is ‘a robin is a bird’ verified faster than ‘an ostrich is a bird’?",
+   "o": [
+    "Robin is linked more closely to bird, so activation reaches the node sooner",
+    "Robin is checked against a stored definition of bird, ostrich against remembered exemplars",
+    "Ostrich is a subordinate category, robin a basic one",
+    "Ostrich is not stored in semantic memory"
+   ],
+   "a": 0,
+   "spot": "Speed = link length.",
+   "why": "In a semantic network, closely related concepts are joined by <b>short, strong links</b>. Robin is tightly connected to bird, so activation from one reaches the other quickly and the statement crosses the <b>threshold</b> faster. Robin and ostrich are at the same level of the hierarchy, so level cannot explain it.",
+   "src": "[LO B3][IDQ B1] Robinson-Riegler",
+   "hy": "13 Verification tasks / typicality"
+  },
+  {
+   "s": "find",
+   "t": "sd",
+   "q": "In Study 1 of Bozeat et al. (2003), how did the patients' drawings of artefacts differ from their drawings of living things?",
+   "o": [
+    "Artefacts lost distinctive detail and became simpler and box-like, but rarely gained wrong features",
+    "Artefacts gained many wrong features, such as legs on a kettle",
+    "Artefacts were drawn as well as by the controls",
+    "Artefacts kept their distinctive features while living things lost them"
+   ],
+   "a": 0,
+   "spot": "Intrusions or simplification?",
+   "why": "Both domains lost <b>distinctive</b> features. Living things also gained wrong, domain-typical features (a duck with four legs), but artefacts <b>rarely got intrusions</b>; they simply became simpler and box-like. Artefacts have fewer shared features that could intrude.",
+   "src": "[LO C2] Bozeat et al. (2003) Study 1",
+   "hy": "6 Distinctive lost first, shared intrude"
+  }
+ ],
+ "m3": [
+  {
+   "s": "app",
+   "t": "cat",
+   "q": "A quiz decides whether an animal is a bird by asking ‘Can it fly?’. Why does this fail as a classical definition?",
+   "o": [
+    "Flying is necessary but not sufficient, since bats fly",
+    "Flying is sufficient but not necessary, since penguins do not fly",
+    "Flying is neither necessary (penguins) nor sufficient (bats)",
+    "Flying is necessary and sufficient, but too slow to check"
+   ],
+   "a": 2,
+   "spot": "Test both directions with a counterexample.",
+   "why": "Penguins are birds that cannot fly, so flying is <b>not necessary</b>. Bats and bees fly but are not birds, so it is <b>not sufficient</b> either. A classical definition needs features that are each necessary and together sufficient, and for most everyday concepts none can be found.",
+   "src": "[PAST-1][PAST-2] classical view; Murphy 4.3",
+   "hy": "1 Necessary vs sufficient"
+  },
+  {
+   "s": "def",
+   "t": "cat",
+   "q": "‘Granny Smith’, ‘fruit’ and ‘apple’ are, respectively,",
+   "o": [
+    "basic-level, superordinate-level and subordinate-level categories",
+    "subordinate-level, superordinate-level and basic-level categories",
+    "subordinate-level, basic-level and superordinate-level categories",
+    "superordinate-level, subordinate-level and basic-level categories"
+   ],
+   "a": 1,
+   "spot": "Most specific, broadest, everyday middle.",
+   "why": "<b>Granny Smith</b> is a specific type (subordinate), <b>fruit</b> is the broad class (superordinate), and <b>apple</b> is the everyday middle level people name first (basic). Watch the order: the list is not given from specific to general.",
+   "src": "[PAST-1][PAST-2] Murphy 4.4",
+   "hy": "2 Hierarchy levels / basic level"
+  },
+  {
+   "s": "app",
+   "t": "cat",
+   "q": "Asked in December to name ‘a song’, many people say ‘Jingle Bells’; asked in July, few do. Which approach explains this most easily?",
+   "o": [
+    "The classical view",
+    "The prototype approach",
+    "The exemplar approach",
+    "The basic-level account"
+   ],
+   "a": 2,
+   "spot": "The context makes certain stored examples easy to retrieve.",
+   "why": "In the <b>exemplar approach</b> a category is a set of stored examples, and the current context makes some of them extra <b>retrievable</b>. A single fixed <b>prototype</b> should not change with the season, which is why context effects are a problem for prototype theory.",
+   "src": "[PAST-1][LO A3] exemplar approach and context; Murphy 4.5.2",
+   "hy": "4 Exemplar approach"
+  },
+  {
+   "s": "fig",
+   "t": "sd",
+   "q": "In Study 2 of Bozeat et al. (2003), errors rose from immediate copying to delayed copying to drawing from name, and the severe patient IF made the most errors. The rise across tasks was much larger for IF than for the mild patient DS. In statistical terms, this pattern shows",
+   "o": [
+    "only a main effect of task",
+    "a main effect of task and a main effect of patient, but no interaction",
+    "main effects of task and patient, and an interaction between them",
+    "an interaction, but no main effects"
+   ],
+   "a": 2,
+   "spot": "Two effects plus ‘the gap grows’ = interaction.",
+   "why": "Errors differ by task (<b>main effect of task</b>) and by patient (<b>main effect of patient</b>). Because the task differences become larger as impairment becomes more severe, the effect of task depends on the patient: an <b>interaction</b>. Bozeat et al. reported all three.",
+   "src": "[LO C2] Bozeat et al. (2003) Study 2, Figure 3",
+   "hy": "11 Study 2 conditions and pattern"
+  }
+ ]
+}

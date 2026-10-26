@@ -1,0 +1,1136 @@
+{
+ "theme": [
+  {
+   "s": "app",
+   "t": "ts",
+   "q": "Consider these two behaviours:<br>I. A radio DJ chats with a studio guest on air while mixing the next song into the current one.<br>II. A teacher grades essays for ten minutes, then answers parents' e-mails for a few minutes, then returns to grading, and so on.<br>Which statement is correct?",
+   "o": [
+    "I is an example of task switching, and II is an example of divided attention.",
+    "I is an example of divided attention, and II is an example of task switching.",
+    "I and II are both examples of divided attention.",
+    "I is an example of selective attention, and II is an example of sustained attention."
+   ],
+   "a": 1,
+   "spot": "Two tasks at the same moment, or one after the other in turns?",
+   "why": "The DJ does two things <b>at the same time</b> (talking and mixing): <b>divided attention</b>. The teacher does the tasks <b>alternately</b>, never at the same moment: <b>task switching</b>. The lecture stresses that going back and forth is not divided attention, which is why the reversed option is the tempting trap.",
+   "src": "[PAST-1][PAST-2][CORE] l1 slides 4-6",
+   "hy": "Forms of attention in everyday scenarios"
+  },
+  {
+   "s": "fig",
+   "t": "ts",
+   "q": "The figure shows mean correct reaction times in an alternating runs experiment, as a function of the preparation interval, for switch trials and repetition trials in a mixed block, and for trials in a single-task block. Which statement about the figure is NOT correct?",
+   "chart": {
+    "type": "line",
+    "title": "Alternating runs: RT by preparation interval",
+    "x": [
+     "50 ms",
+     "650 ms",
+     "1250 ms"
+    ],
+    "y": "Mean correct RT (ms)",
+    "series": [
+     {
+      "name": "Switch trials",
+      "v": [
+       910,
+       775,
+       770
+      ]
+     },
+     {
+      "name": "Repetition trials (mixed block)",
+      "v": [
+       650,
+       650,
+       645
+      ]
+     },
+     {
+      "name": "Single-task block",
+      "v": [
+       400,
+       400,
+       400
+      ]
+     }
+    ],
+    "note": "Illustrative values following the pattern on the lecture slide (Monsell, 2003).",
+    "min": 300,
+    "max": 1000
+   },
+   "o": [
+    "The switch cost is largest at the shortest preparation interval.",
+    "Switch trials remain slower than repetition trials at every preparation interval.",
+    "The gap between repetition trials and single-task trials reflects the mixing cost.",
+    "Lengthening preparation from 650 to 1250 ms removes the remaining switch cost."
+   ],
+   "a": 3,
+   "spot": "NOT correct: look at the right-hand side of the switch line. Does it reach the repetition line?",
+   "why": "At 1250 ms the switch line is still clearly above the repetition line: that leftover gap is the <b>residual cost</b>, and going from 650 to 1250 ms hardly helps any more. So preparation <b>reduces</b> the switch cost (preparation effect) but never removes it. The other statements are correct: the biggest gap is at 50 ms, and repetition trials float above the single-task line (<b>mixing cost</b>).",
+   "src": "[PAST-1][CORE] Monsell (2003), l1 slides 7-8",
+   "hy": "Task-switching costs"
+  },
+  {
+   "s": "def",
+   "t": "ts",
+   "q": "Which description fits the <i>residual cost</i> best?",
+   "o": [
+    "The slowing of repetition trials in a mixed block compared with a block with only one task",
+    "The part of the switch cost that is still present when there is ample time to prepare",
+    "The reduction in the switch cost when the preparation interval becomes longer",
+    "The extra time needed on the first trial of a new task when there is almost no time to prepare"
+   ],
+   "a": 1,
+   "spot": "Residual = what is left over.",
+   "why": "The <b>residual cost</b> is the part of the switch cost that preparation cannot remove: even with a long interval, switch trials stay slower. The first option is the <b>mixing cost</b>, the third is the <b>preparation effect</b>, and the fourth is simply the switch cost at a short interval.",
+   "src": "[PAST-1][CORE] Monsell (2003), l1 slides 7-8",
+   "hy": "Task-switching costs"
+  },
+  {
+   "s": "find",
+   "t": "ts",
+   "q": "Which finding is attributed to Stothart et al. (2015)?",
+   "o": [
+    "A smartphone lying untouched nearby reduces available cognitive capacity",
+    "Students without a phone took more detailed notes and scored higher on a test",
+    "A review of many studies concluded that phone use disrupts learning",
+    "Merely receiving a notification, without responding to it, impairs attention"
+   ],
+   "a": 3,
+   "spot": "Match each study to its N: Notes, Notification, Nearby, plus the review.",
+   "why": "<b>Stothart et al. (2015)</b>: just receiving and ignoring a <b>notification</b> already hurts attention. A phone lying nearby is <b>Ward et al. (2017)</b>, the mere presence effect. Better notes without a phone is <b>Kuznekoff & Titsworth (2013)</b>, and the review is <b>Chen & Yan (2016)</b>.",
+   "src": "[CORE] l1 slide 9",
+   "hy": "Smartphones and attention"
+  },
+  {
+   "s": "comp",
+   "t": "ts",
+   "q": "Judge these statements.<br>I. Sustained attention can be described as selective attention that is kept up over a long period of time.<br>II. Task switching is a form of divided attention, because two tasks are involved.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Compare the forms: what is added (time) and what differs (at the same time vs alternately)?",
+   "why": "Statement I is true: the lecture describes <b>sustained attention</b> (vigilance) as selective attention plus time. Statement II is false: in <b>task switching</b> the tasks are done <b>alternately</b>, whereas <b>divided attention</b> means doing them at the same time. Having two tasks is not enough to call it divided.",
+   "src": "[PAST-1][PAST-2][CORE] l1 slides 5-6",
+   "hy": "Forms of attention in everyday scenarios"
+  },
+  {
+   "s": "app",
+   "t": "mal",
+   "q": "Two groups study the same word list in the same room. Afterwards, one group sleeps for eight hours and the other stays awake all night. Next morning both groups are tested in the same room with the same test. The sleep group recalls more words. Which memory stage is manipulated?",
+   "o": [
+    "Encoding",
+    "Storage",
+    "Retrieval",
+    "Recoding"
+   ],
+   "a": 1,
+   "spot": "When did the groups differ: during learning, between learning and test, or at the test?",
+   "why": "Learning and testing were identical; the groups only differed in what happened <b>in between</b>. Sleep helps <b>consolidation</b>, which belongs to the <b>storage</b> stage. Encoding would require a difference during learning, retrieval a difference at the test. Recoding is part of encoding.",
+   "src": "[PAST-1][PAST-2][CORE][LEX] l2 slides 8-12",
+   "hy": "Memory stages"
+  },
+  {
+   "s": "fig",
+   "t": "mal",
+   "q": "The figure shows Godden and Baddeley's (1975) results: divers learned words underwater or on land and recalled them underwater or on land. What would the figure look like if the learning context had no effect on retrieval?",
+   "chart": {
+    "type": "bar",
+    "title": "Godden & Baddeley (1975)",
+    "x": [
+     "Learned underwater",
+     "Learned on land"
+    ],
+    "y": "% words recalled",
+    "series": [
+     {
+      "name": "Recalled underwater",
+      "v": [
+       32,
+       24
+      ]
+     },
+     {
+      "name": "Recalled on land",
+      "v": [
+       23,
+       38
+      ]
+     }
+    ],
+    "note": "Values from the lecture slide.",
+    "min": 0,
+    "max": 40
+   },
+   "o": [
+    "Recall would be higher on land than underwater, whatever the learning context",
+    "The bars would keep the same crossing pattern as in the actual results, but with lower recall overall",
+    "Words learned underwater would be recalled better in every test context",
+    "Within each learning context, recall would be about equal whether tested underwater or on land"
+   ],
+   "a": 3,
+   "spot": "No context effect = changing the test place changes nothing.",
+   "why": "Context-dependent memory shows as a <b>crossing</b>: same place 32% and 38%, different place 23% and 24%. If context did not matter, the test place would make no difference, so within each learning condition the two bars would be <b>equal</b>. A general land advantage would be a main effect of test place, not a context-match effect.",
+   "src": "[CORE] Godden & Baddeley (1975), l2 slides 22-23",
+   "hy": "Retrieval biases: leading questions and context"
+  },
+  {
+   "s": "def",
+   "t": "mal",
+   "q": "Which of these statements about semantic memory is NOT correct?",
+   "o": [
+    "It answers the question of what something is.",
+    "It is relatively resistant to forgetting.",
+    "It is one of the two forms of declarative memory, next to episodic memory.",
+    "It involves reliving an experience tied to a time and place."
+   ],
+   "a": 3,
+   "spot": "Which feature belongs to the other branch of declarative memory?",
+   "why": "Reliving an experience tied to <b>when and where</b> is the hallmark of <b>episodic</b> memory. <b>Semantic</b> memory answers 'what', has no reliving, is resistant to forgetting, and sits next to episodic memory under <b>declarative</b> memory.",
+   "src": "[PAST-1][CORE] l2 slides 5-7",
+   "hy": "LTM hierarchy"
+  },
+  {
+   "s": "find",
+   "t": "mal",
+   "q": "Rewards for accuracy do not make the misinformation effect disappear, and participants can still retrieve the original detail when they are specifically asked about it. Which explanation of the effect is left standing?",
+   "o": [
+    "Social pressure to give the answer the researcher seems to want",
+    "Replacement of the original memory trace by the suggested detail",
+    "Gradual decay of the original trace during the retention interval",
+    "Coexistence of both versions, with confusion about their source"
+   ],
+   "a": 3,
+   "spot": "Each finding crosses out one explanation. What remains?",
+   "why": "Rewards not helping rules out <b>social pressure</b>; an original that can still be retrieved rules out <b>replacement</b>. What remains is <b>coexistence</b>: both versions are stored, the suggestion feels more recent and familiar, and people fail at <b>source monitoring</b> (seen vs told). Decay alone cannot explain why people report the suggested detail.",
+   "src": "[CORE] l2 slide 21",
+   "hy": "Why misinformation works"
+  },
+  {
+   "s": "comp",
+   "t": "mal",
+   "q": "Both Loftus (1975) and Loftus (1977) asked a question after participants had seen an event. What is the key difference between the two studies?",
+   "o": [
+    "In 1975 the question mentioned something that was really there, which strengthened the memory; in 1977 it contained a wrong detail, which distorted it",
+    "In 1975 the question was asked at retrieval; in 1977 it was asked during encoding",
+    "In 1975 the question distorted a detail of the original memory, whereas in 1977 the question created an entirely new object that had never been there at all",
+    "In 1975 the effect was due to social pressure; in 1977 it was due to decay"
+   ],
+   "a": 0,
+   "spot": "Was the post-event information consistent or inconsistent with what was seen?",
+   "why": "Loftus (1975) mentioned a stop sign that was really there: <b>consistent</b> information that <b>strengthened</b> the memory (53% vs 35% remembered it). Loftus (1977) called a green car 'blue': <b>inconsistent</b> information that <b>distorted</b> the remembered colour towards blue. Both are storage biases; creating whole new objects is the later misinformation work.",
+   "src": "[CORE] l2 slides 15-17",
+   "hy": "Strengthen, distort, create"
+  },
+  {
+   "s": "def",
+   "t": "emo",
+   "q": "Which description fits a <i>mood</i> best?",
+   "o": [
+    "A fairly long-lasting, low-intensity state without a clear-cut cause",
+    "A short, intense reaction evoked by a specific event or its interpretation",
+    "The umbrella term for all positive and negative feeling states",
+    "An evaluation of what an event means for one's goals"
+   ],
+   "a": 0,
+   "spot": "Duration, intensity, cause: which profile matches?",
+   "why": "A <b>mood</b> lasts long, is relatively weak and has no clear cause (irritable all afternoon without knowing why). A short, intense, event-driven reaction is an <b>emotion</b>. <b>Affect</b> is the umbrella term covering both. An evaluation of an event is an <b>appraisal</b>.",
+   "src": "[PAST-2][CORE] l3 slide 3",
+   "hy": "Emotion vs mood vs affect"
+  },
+  {
+   "s": "app",
+   "t": "emo",
+   "q": "A hungry shopper walks past a bakery window and sees a pastry he badly wants. According to the motivational dimensional model, what happens to his attention?",
+   "o": [
+    "Positive affect, low motivational intensity: attentional broadening",
+    "Positive affect, high motivational intensity: attentional narrowing",
+    "Negative affect, high motivational intensity: attentional narrowing",
+    "Positive affect, high motivational intensity: attentional broadening"
+   ],
+   "a": 1,
+   "spot": "Answer three things in order: valence, intensity, direction.",
+   "why": "Wanting the pastry is <b>pleasant</b> (positive valence) with a strong urge to <b>approach</b> (high motivational intensity). High intensity <b>narrows</b> attention, whatever the valence. Positive affect only broadens attention when motivational intensity is <b>low</b>, as when relaxing to music.",
+   "src": "[PAST-2][CORE][LEX] l3 slides 10-11",
+   "hy": "Motivational dimensional model"
+  },
+  {
+   "s": "fig",
+   "t": "emo",
+   "q": "The figure shows the pattern of Diamond et al. (2007): mice learned a simple or a difficult discrimination under low, medium or high shock intensity. The y-axis shows the number of trials needed to reach the learning criterion. Which conclusion is correct?",
+   "chart": {
+    "type": "line",
+    "title": "Diamond et al. (2007) pattern",
+    "x": [
+     "Low shock",
+     "Medium shock",
+     "High shock"
+    ],
+    "y": "Trials to criterion",
+    "series": [
+     {
+      "name": "Difficult discrimination",
+      "v": [
+       180,
+       120,
+       170
+      ]
+     },
+     {
+      "name": "Simple discrimination",
+      "v": [
+       100,
+       70,
+       50
+      ]
+     }
+    ],
+    "note": "Illustrative values following the shape on the lecture slide.",
+    "min": 0,
+    "max": 200
+   },
+   "o": [
+    "The difficult discrimination was learned fastest at the highest shock intensity",
+    "The difficult discrimination was learned fastest at medium intensity, the simple one at high intensity",
+    "Both discriminations were learned fastest at medium shock intensity, in line with a single inverted U for every task",
+    "The simple discrimination was learned slowest at the highest shock intensity"
+   ],
+   "a": 1,
+   "spot": "Trials to criterion: lower means faster learning.",
+   "why": "Because the y-axis counts <b>trials needed</b>, the <b>lowest</b> point is the best learning. The difficult line is lowest at <b>medium</b> intensity (an inverted U in performance), while the simple line keeps going down, so more arousal keeps helping. This is <b>Yerkes-Dodson</b>: the harder the task, the lower the optimal arousal. Reading 'higher = better' leads to the first or last option.",
+   "src": "[CORE] Yerkes-Dodson; Diamond et al. (2007), l3 slides 20-22",
+   "hy": "Yerkes-Dodson"
+  },
+  {
+   "s": "find",
+   "t": "emo",
+   "q": "Kenealy (1997) had participants learn a map route in a happy or sad mood and tested them in a happy or sad mood. What happened when participants received the outline of the map as a cue at the test?",
+   "o": [
+    "The mood-state-dependent effect became stronger",
+    "Only participants who were sad at both learning and test benefited",
+    "Mood-congruent memory replaced mood-state-dependent memory",
+    "The mood-state-dependent effect disappeared"
+   ],
+   "a": 3,
+   "spot": "Strong cue at test: is mood still needed as a retrieval cue?",
+   "why": "With <b>free recall</b>, a matching mood at learning and test helped (the lines cross). With <b>cued recall</b> (map outline given) the effect <b>disappeared</b>: a strong external cue makes mood unnecessary as a retrieval cue. Mood-congruent memory is about mood matching <b>content</b>, which was not what changed here.",
+   "src": "[CORE] Kenealy (1997), l3 slides 17-19",
+   "hy": "Mood-congruent vs mood-state-dependent memory"
+  },
+  {
+   "s": "comp",
+   "t": "emo",
+   "q": "Which of these statements about the categorical and dimensional approaches to emotion is NOT correct?",
+   "o": [
+    "The categorical approach assumes a small set of basic emotions that are innate, shared with other species and linked to specific facial expressions.",
+    "The dimensional approach places each emotion in a space defined by valence and arousal.",
+    "The Self-Assessment Manikin lets people rate valence and arousal with pictures instead of words.",
+    "In the dimensional approach, complex emotions are learned combinations of basic emotions that vary between cultures."
+   ],
+   "a": 3,
+   "spot": "Which statement mixes up the two approaches?",
+   "why": "Learned combinations of <b>basic emotions</b> that vary between cultures are part of the <b>categorical</b> approach, not the dimensional one. The <b>dimensional</b> approach uses two orthogonal axes, <b>valence</b> and <b>arousal</b>, which the SAM (Lang, 1980) measures with pictures.",
+   "src": "[CORE] l3 slides 4-5",
+   "hy": "Valence and arousal"
+  },
+  {
+   "s": "def",
+   "t": "lang",
+   "q": "In the lecture, the Sapir-Whorf hypothesis has two parts: linguistic determinism and linguistic relativity. Which description fits <i>linguistic relativity</i>?",
+   "o": [
+    "Language determines certain non-linguistic cognitive processes",
+    "Speakers of different languages therefore think differently",
+    "Thought determines which words a language develops",
+    "All languages carve up reality in the same natural way"
+   ],
+   "a": 1,
+   "spot": "Determinism = the mechanism; relativity = the consequence.",
+   "why": "<b>Determinism</b> is the claim that language <b>determines</b> non-linguistic cognition. <b>Relativity</b> is the consequence: speakers of <b>different languages think differently</b>. The third option reverses the direction, and the fourth contradicts the lecture's point that there is no natural way to carve up reality.",
+   "src": "[PAST-2][CORE] l4 slide 2",
+   "hy": "Sapir-Whorf: determinism, relativity, strong vs weak"
+  },
+  {
+   "s": "fig",
+   "t": "lang",
+   "q": "The figure shows the design of Winawer et al. (2007) for Russian speakers: reaction times on cross-category and within-category blue trials without interference, with verbal interference and with spatial interference. What would the figure look like if the Russian advantage reflected a permanent change in colour perception rather than the use of colour words during the task?",
+   "chart": {
+    "type": "bar",
+    "title": "Winawer et al. (2007): Russian speakers (actual pattern)",
+    "x": [
+     "No interference",
+     "Verbal interference",
+     "Spatial interference"
+    ],
+    "y": "Mean RT (ms)",
+    "series": [
+     {
+      "name": "Cross-category",
+      "v": [
+       1000,
+       1150,
+       1100
+      ]
+     },
+     {
+      "name": "Within-category",
+      "v": [
+       1080,
+       1150,
+       1180
+      ]
+     }
+    ],
+    "note": "Illustrative values showing the reported pattern: advantage without and with spatial interference, none with verbal interference.",
+    "min": 800,
+    "max": 1250
+   },
+   "o": [
+    "Cross-category trials would be faster in all three conditions, including verbal interference",
+    "Cross-category trials would be faster only under verbal interference",
+    "Cross-category and within-category trials would be equally fast in every condition, for Russian and English speakers alike",
+    "Cross-category trials would be faster only under spatial interference"
+   ],
+   "a": 0,
+   "spot": "If perception itself had changed, could blocking language take the advantage away?",
+   "why": "If Russian had permanently restructured perception, blocking the verbal system would not matter: the cross-category advantage would show in <b>all</b> conditions. In reality it <b>disappeared under verbal interference</b> but not under spatial interference, so the colour words work <b>online</b> during the task: weak, not strong, determinism.",
+   "src": "[PAST-2][CORE] Winawer et al. (2007), l4 slides 7-11",
+   "hy": "Russian blues"
+  },
+  {
+   "s": "find",
+   "t": "lang",
+   "q": "Boroditsky et al. (2002) showed English and Indonesian speakers pictures of an actor about to kick, kicking, or having kicked a ball, and later asked which version they had seen. What was found?",
+   "o": [
+    "Both groups performed at chance, because tense is not visible in a picture",
+    "Indonesian speakers were more accurate, because they paid more attention to the actor in each picture",
+    "Both groups chose the correct version about 80% of the time",
+    "English speakers were right about 41% of the time, Indonesian speakers about 31% (near chance)"
+   ],
+   "a": 3,
+   "spot": "Only tense distinguished the test pictures. Who encodes 'when'?",
+   "why": "English obliges speakers to mark <b>tense</b>, so they encoded the stage of the action more distinctly (about <b>41%</b>). Indonesian speakers were around <b>31%</b>, close to chance (33%). Paying attention to the actor would not help, because the actor was the same in all test pictures.",
+   "src": "[PAST-2][CORE] Boroditsky et al. (2002), l4 slides 20-24",
+   "hy": "Tense"
+  },
+  {
+   "s": "comp",
+   "t": "lang",
+   "q": "Judge these statements.<br>I. That the Dani easily learned English colour categories is evidence against the strong version of linguistic determinism.<br>II. That the Russian blue advantage disappears under verbal interference shows that language permanently restructures colour perception.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Strong = language makes thinking impossible without the word; weak = it makes some things easier.",
+   "why": "Statement I is true: with only two colour words, the Dani could still learn colour categories (Heider, 1972), so the <b>strong</b> version was abandoned. Statement II is false: because the advantage <b>vanishes</b> when language is blocked, language works <b>online</b> and does not permanently restructure perception, which fits the <b>weak</b> version.",
+   "src": "[PAST-2][CORE] l4 slides 3-11",
+   "hy": "Sapir-Whorf: determinism, relativity, strong vs weak"
+  },
+  {
+   "s": "app",
+   "t": "lang",
+   "q": "Mandarin speakers and English speakers, all tested in English, first see two objects arranged either one above the other or one behind the other, and then judge sentences such as 'May comes earlier than June'. Based on Boroditsky (2001), what is expected?",
+   "o": [
+    "Mandarin speakers answer faster after the horizontal arrangement",
+    "Both groups answer faster after the vertical arrangement",
+    "No difference, because all participants are tested in English",
+    "Mandarin speakers answer faster after the vertical arrangement"
+   ],
+   "a": 3,
+   "spot": "Which spatial direction does each language habitually use for time?",
+   "why": "Mandarin also talks about time <b>vertically</b> (earlier = up, later = down), so a <b>vertical</b> prime makes the time judgement more fluent for Mandarin speakers; English speakers are faster after <b>horizontal</b> primes. This happened even though everyone was tested in English, so the habit comes from the native language.",
+   "src": "[CORE] Boroditsky (2001), l4 slides 12-14",
+   "hy": "Time metaphors"
+  },
+  {
+   "s": "def",
+   "t": "dual",
+   "q": "In base-rate problems used in dual-process research, when is a problem called <i>incongruent</i>?",
+   "o": [
+    "When the base rate and the description point to different answers",
+    "When the base rate is very extreme, such as 995 versus 5 people in the sample",
+    "When the description fits neither group in the sample",
+    "When the problem has no logically correct answer"
+   ],
+   "a": 0,
+   "spot": "Congruent = intuition and logic agree; incongruent = they clash.",
+   "why": "A problem is <b>incongruent</b> (a conflict problem) when the <b>base rate</b> (e.g. 995 democrats) and the stereotypical <b>description</b> (sounds republican) point in different directions. Extreme base rates occur in both versions; what changes is whether they agree with the description.",
+   "src": "[PAST-2][CORE] l5 slide 8",
+   "hy": "Congruent vs incongruent; conflict effect; belief bias"
+  },
+  {
+   "s": "comp",
+   "t": "dual",
+   "q": "Judge these statements.<br>I. In the serial model, a conflict between intuition and logic can only be detected if System 2 is engaged.<br>II. In the parallel model, conflict detection is fast and effortless because it comes from System 1.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Who detects conflict in each model?",
+   "why": "Statement I is true: in the <b>serial</b> model System 1 gives a default answer and only an engaged System 2 can notice a problem. Statement II is false: in the <b>parallel</b> model detection comes from System 2 and is slow and effortful. Fast, effortless detection by System 1's logical intuitions is the <b>hybrid</b> model.",
+   "src": "[PAST-1][PAST-2][CORE] l5 slide 7",
+   "hy": "Conflict detection and the serial/parallel/hybrid tests"
+  },
+  {
+   "s": "fig",
+   "t": "dual",
+   "q": "The figure shows response times of low-scoring (biased) reasoners on congruent and incongruent base-rate problems (De Neys & Glumicic, 2008). Which model is contradicted by this pattern?",
+   "chart": {
+    "type": "bar",
+    "title": "Low scorers (De Neys & Glumicic, 2008)",
+    "x": [
+     "Congruent",
+     "Incongruent"
+    ],
+    "y": "Response time (s)",
+    "series": [
+     {
+      "name": "Biased reasoners",
+      "v": [
+       12,
+       15
+      ]
+     }
+    ],
+    "note": "Approximate values from the lecture slide.",
+    "min": 0,
+    "max": 18
+   },
+   "o": [
+    "The serial model, because it predicts that biased reasoners do not notice the conflict",
+    "The hybrid model, because it predicts no difference in response times",
+    "The parallel model, because it predicts faster responses on incongruent problems",
+    "None of the models, because response times say nothing about whether a reasoner detects a conflict"
+   ],
+   "a": 0,
+   "spot": "A bias blind spot predicts equal times. Are the times equal?",
+   "why": "The <b>serial</b> model assumes a <b>bias blind spot</b>: biased reasoners only look at the description, so they should take about equally long on both versions. Instead they were slower on <b>incongruent</b> problems (about 15 vs 12 s), so they sensed the conflict. That contradicts the serial model and fits the parallel and hybrid models.",
+   "src": "[PAST-2][CORE] De Neys & Glumicic (2008), l5 slides 8-11",
+   "hy": "Conflict detection and the serial/parallel/hybrid tests"
+  },
+  {
+   "s": "find",
+   "t": "dual",
+   "q": "Bago and De Neys (2017) had participants solve base-rate problems while holding a pattern of crosses in a 3 x 3 grid in memory, and then rate their confidence. What did they find?",
+   "o": [
+    "Under load, confidence was the same for congruent and incongruent problems",
+    "Confidence was still lower on incongruent than congruent problems, with and without load",
+    "Under load, participants no longer gave any correct answers at all on the incongruent problems",
+    "Without load, confidence was higher on incongruent than congruent problems"
+   ],
+   "a": 1,
+   "spot": "Tie up System 2: does the alarm still ring?",
+   "why": "Confidence stayed <b>lower on incongruent problems</b> (about 85% vs 97%) <b>even under load</b>. Since the load knocked out System 2, conflict detection must be fast and automatic: System 1 contains <b>logical intuitions</b>. That fits the <b>hybrid</b> model and not the parallel model, which predicts detection to vanish under load.",
+   "src": "[PAST-2][CORE][LEX] Bago & De Neys (2017), l5 slide 12",
+   "hy": "Conflict detection and the serial/parallel/hybrid tests"
+  },
+  {
+   "s": "app",
+   "t": "dual",
+   "q": "'All fish can swim. Sharks can swim. Therefore, sharks are fish.' How should this syllogism be classified in belief-bias research?",
+   "o": [
+    "Valid and believable: no conflict",
+    "Invalid and believable: conflict",
+    "Valid and unbelievable: conflict",
+    "Invalid and unbelievable: no conflict"
+   ],
+   "a": 1,
+   "spot": "Valid = the conclusion must follow from the premises, whether it is true or not.",
+   "why": "Sharks can swim like fish, but nothing in the premises says that everything that swims is a fish, so the conclusion does <b>not follow</b>: <b>invalid</b>. Yet the conclusion is true and <b>believable</b>. Logic and belief disagree, so this is a <b>conflict</b> problem, the type accepted about 71% of the time (Evans, 2003).",
+   "src": "[PAST-2][CORE] Evans (2003), l5 slides 3-5",
+   "hy": "Congruent vs incongruent; conflict effect; belief bias"
+  }
+ ],
+ "m1": [
+  {
+   "s": "app",
+   "t": "ts",
+   "q": "In which situation is vigilance (sustained attention) the main demand?",
+   "o": [
+    "A night-shift operator watches dam monitors for hours, waiting for a rare warning",
+    "A student reads her textbook on a train while ignoring a loud conversation two rows behind",
+    "A cook stirs a sauce while answering a phone call from a supplier",
+    "A designer works on a poster, checks her messages, and then returns to the poster"
+   ],
+   "a": 0,
+   "spot": "Long period + rare events = vigilance.",
+   "why": "<b>Vigilance</b> means keeping attention on one source for a long time while waiting for <b>infrequent</b> events, like the dam operator. The train reader is <b>selective</b> attention (shutting out noise), the cook is <b>divided</b> attention (two things at once), and the designer is <b>task switching</b> (alternating).",
+   "src": "[PAST-2][CORE] l1 slide 5",
+   "hy": "Forms of attention in everyday scenarios"
+  },
+  {
+   "s": "comp",
+   "t": "ts",
+   "q": "In a task-switching study with a short preparation interval, mean reaction times were: single-task block 450 ms, repetition trials in the mixed block 610 ms, switch trials in the mixed block 830 ms. A student concludes: 'The switch cost is 830 - 450 = 380 ms.' What is wrong with this conclusion?",
+   "o": [
+    "Nothing: the switch cost is always computed against the single-task block",
+    "The switch cost should be 610 - 450 = 160 ms, because switching starts in the mixed block",
+    "The 380 ms is the residual cost, because with such a short preparation interval the switch cost cannot be measured",
+    "The 380 ms combines two costs: the switch cost is 830 - 610 = 220 ms and 610 - 450 = 160 ms is the mixing cost"
+   ],
+   "a": 3,
+   "spot": "Switch cost: compare within the mixed block. Mixing cost: mixed block vs single block.",
+   "why": "The <b>switch cost</b> compares switch trials with repetition trials <b>within the mixed block</b>: 830 - 610 = 220 ms. The difference between repetition trials and the single-task block, 610 - 450 = 160 ms, is the <b>mixing cost</b>. The student added both steps of the stairs together. A residual cost can only be judged at a long preparation interval.",
+   "src": "[PAST-1][PAST-2][CORE][LEX] l1 slide 11",
+   "hy": "Task-switching costs"
+  },
+  {
+   "s": "app",
+   "t": "mal",
+   "q": "A witness saw a grey van drive away from a burglary. The next day an officer asks her: 'How fast was the dark blue van going when it left?' A week later she has to pick the van's colour from a colour wheel. What is most likely?",
+   "o": [
+    "She picks the original grey, because post-event information only affects confidence",
+    "She can no longer pick any colour, because the original trace has decayed",
+    "She picks a lighter grey, because the question strengthened her memory",
+    "She picks a colour shifted from grey towards blue"
+   ],
+   "a": 3,
+   "spot": "Inconsistent information after the event pulls the memory towards the suggestion.",
+   "why": "This mirrors Loftus (1977): <b>inconsistent post-event information</b> bends a detail towards the suggestion, so the remembered colour shifts towards <b>blue</b>. Strengthening only happens when the information is <b>consistent</b> with what was seen. The effect is about distortion, not just confidence.",
+   "src": "[PAST-1][CORE] Loftus (1977), l2 slide 17",
+   "hy": "Misinformation effect"
+  },
+  {
+   "s": "def",
+   "t": "mal",
+   "q": "Classify these three memories.<br>I. Knowing that the euro replaced the guilder.<br>II. Remembering where you were standing when you read your exam result.<br>III. Typing your PIN code without thinking about the digits.",
+   "o": [
+    "I semantic, II episodic, III procedural",
+    "I episodic, II semantic, III procedural",
+    "I semantic, II procedural, III episodic",
+    "I procedural, II episodic, III semantic"
+   ],
+   "a": 0,
+   "spot": "What (fact), when and where (episode), or how (skill)?",
+   "why": "A fact without time or place is <b>semantic</b>. A personal event tied to a place and moment is <b>episodic</b>. A practised skill that runs automatically is <b>procedural</b>. Semantic and episodic are declarative; procedural is a separate branch of long-term memory.",
+   "src": "[PAST-1][CORE][LEX] l2 slides 5-7",
+   "hy": "LTM hierarchy"
+  },
+  {
+   "s": "app",
+   "t": "emo",
+   "q": "In which situation does the motivational dimensional model predict attentional broadening?",
+   "o": [
+    "Being chased across a field by a swarm of bees",
+    "Staring at a dessert you are about to order",
+    "Lying in a hammock listening to calm music",
+    "Hearing that your train might be cancelled before an interview"
+   ],
+   "a": 2,
+   "spot": "Broadening needs two things: pleasant and no urge to act.",
+   "why": "Only the hammock combines <b>positive</b> affect with <b>low</b> motivational intensity, which <b>broadens</b> attention. The bees and the train are negative and high in intensity, and the dessert is positive but high in intensity (wanting): all three <b>narrow</b> attention.",
+   "src": "[PAST-2][CORE] l3 slide 10",
+   "hy": "Motivational dimensional model"
+  },
+  {
+   "s": "def",
+   "t": "emo",
+   "q": "Which word is low in arousal and high in valence?",
+   "o": [
+    "Rage",
+    "Excitement",
+    "Serenity",
+    "Boredom"
+   ],
+   "a": 2,
+   "spot": "Two questions: would my heart race? Is it pleasant?",
+   "why": "<b>Serenity</b> is pleasant (high valence) and calm (low arousal). Excitement is pleasant but highly arousing; rage is unpleasant and highly arousing; boredom is calm but unpleasant. The <b>valence</b> axis runs from unpleasant to pleasant, the <b>arousal</b> axis from calm to excited.",
+   "src": "[CORE][LEX] l3 slides 4-9",
+   "hy": "Valence and arousal"
+  },
+  {
+   "s": "comp",
+   "t": "lang",
+   "q": "In Winawer et al. (2007), Russian speakers' advantage on cross-category blue trials was tested under verbal and under spatial interference. Why was the spatial interference condition needed?",
+   "o": [
+    "To show that Russian speakers have a better spatial working memory than English speakers have",
+    "To rule out that any extra task removes the effect, rather than blocking language specifically",
+    "To make the colour squares harder to see for both groups",
+    "To test whether English speakers use colour words during the task"
+   ],
+   "a": 1,
+   "spot": "A control condition: what alternative explanation does it exclude?",
+   "why": "If both kinds of interference removed the advantage, it could simply be that <b>any</b> busy mind loses it. Because the advantage disappeared under <b>verbal</b> but not <b>spatial</b> interference, the effect depends on <b>language</b> specifically. The spatial task is the <b>control</b>.",
+   "src": "[PAST-2][CORE] Winawer et al. (2007), l4 slides 7-10",
+   "hy": "Russian blues"
+  },
+  {
+   "s": "app",
+   "t": "lang",
+   "q": "In Boroditsky et al. (2002), participants rated the similarity of two pictures of actions. Which pair did English speakers rate as more similar than Indonesian speakers did?",
+   "o": [
+    "Different actors at the same stage of the action",
+    "The same actor at different stages of the action",
+    "Two pictures with the same background colour",
+    "Two pictures taken from the same camera angle"
+   ],
+   "a": 0,
+   "spot": "English grammar puts a clock on every verb.",
+   "why": "English speakers weigh <b>tense</b> (when), so two pictures at the <b>same stage</b> feel alike even with different actors (about 6.3 vs 5.6). Indonesian speakers do the reverse: <b>same actor</b>, different stage is rated more similar. Background and camera angle were not manipulated.",
+   "src": "[PAST-2][CORE] Boroditsky et al. (2002), l4 slides 20-23",
+   "hy": "Tense"
+  },
+  {
+   "s": "app",
+   "t": "dual",
+   "q": "Which activity relies mainly on System 2?",
+   "o": [
+    "Reading a billboard as you walk past it",
+    "Recognising that a friend's face looks angry",
+    "Multiplying 17 by 24 in your head",
+    "Completing the phrase 'bread and ...'"
+   ],
+   "a": 2,
+   "spot": "Fast and automatic, or slow and effortful?",
+   "why": "Mental multiplication of two-digit numbers is slow, <b>effortful</b> and conscious: <b>System 2</b> (like 22 x 76 on the slide). Reading a simple text, recognising an emotion and completing a familiar phrase run automatically through <b>associations</b>: <b>System 1</b>.",
+   "src": "[PAST-1][CORE] Kahneman (2011), l5 slide 6",
+   "hy": "System 1 vs System 2"
+  },
+  {
+   "s": "comp",
+   "t": "dual",
+   "q": "The parallel and hybrid models make different predictions about what happens to conflict detection when System 2 is burdened with a demanding memory task. Which pair of predictions is correct?",
+   "o": [
+    "Parallel: detection remains; hybrid: detection disappears",
+    "Parallel: detection disappears; hybrid: detection remains",
+    "Both: detection disappears",
+    "Both: detection remains"
+   ],
+   "a": 1,
+   "spot": "In which model does detection need System 2?",
+   "why": "In the <b>parallel</b> model conflict is detected by <b>System 2</b>, so burdening System 2 should <b>remove</b> detection. In the <b>hybrid</b> model detection comes from <b>logical intuitions in System 1</b>, so it should <b>survive</b> the load. Bago & De Neys (2017) found that it survived.",
+   "src": "[PAST-2][CORE] l5 slides 7 and 12",
+   "hy": "Conflict detection and the serial/parallel/hybrid tests"
+  }
+ ],
+ "m2": [
+  {
+   "s": "app",
+   "t": "ts",
+   "q": "In an alternating runs task the sequence is AABBAABB. A participant's mean reaction time is 880 ms on the first trial of each run and 610 ms on the second trial of each run. In a separate block with only task A, the mean is 470 ms. How large is the mixing cost? Give a whole number of ms.",
+   "o": [
+    "140 ms",
+    "270 ms",
+    "410 ms",
+    "610 ms"
+   ],
+   "a": 0,
+   "spot": "Mixing cost = repetition trial (mixed block) minus single-task trial.",
+   "why": "In AABB runs the <b>second</b> trial of a run is the <b>repetition</b> trial: 610 ms. The <b>mixing cost</b> is 610 - 470 = <b>140 ms</b>. The 270 ms (880 - 610) is the switch cost, and 410 ms (880 - 470) wrongly lumps both costs together.",
+   "src": "[PAST-1][PAST-2][CORE] l1 slides 6-8",
+   "hy": "Task-switching costs"
+  },
+  {
+   "s": "def",
+   "t": "ts",
+   "q": "Which of these statements about the alternating runs paradigm is NOT correct?",
+   "o": [
+    "The task changes in a predictable way after a fixed number of trials, for example AABB.",
+    "The first trial after a change of task is the switch trial.",
+    "A cue before the stimulus gives participants time to prepare for the task.",
+    "Its repetition trials come from a separate block that contains only one task."
+   ],
+   "a": 3,
+   "spot": "Where do repetition trials come from: the same mixed sequence or a pure block?",
+   "why": "In alternating runs (e.g. AABB), the <b>repetition trials</b> are the second trials of each run, <b>inside the same mixed block</b>. Trials from a separate block with one task are <b>single-task trials</b>, used for the mixing cost. The other three statements describe the paradigm correctly.",
+   "src": "[PAST-1][CORE] l1 slide 6",
+   "hy": "Task-switching costs"
+  },
+  {
+   "s": "app",
+   "t": "mal",
+   "q": "After a cycling accident, one group of witnesses is asked how fast the cyclist was riding when she <i>brushed</i> the pedestrian; another group is asked how fast she was riding when she <i>slammed into</i> the pedestrian. The second group gives higher speeds. Which study does this resemble, and at which stage does the bias arise?",
+   "o": [
+    "Clifford and Scott (1978); encoding",
+    "Loftus (1977); storage",
+    "Loftus and Palmer (1974); retrieval",
+    "Godden and Baddeley (1975); retrieval"
+   ],
+   "a": 2,
+   "spot": "One verb in the question at the moment of remembering.",
+   "why": "Changing only the <b>verb</b> in the question is the <b>Loftus & Palmer (1974)</b> design (contacted 30.5 mph vs smashed 40.8 mph). The lecture files it under <b>retrieval</b> biases, because the wording acts when the memory is being brought back. Godden & Baddeley is also retrieval, but about the physical context, not the question.",
+   "src": "[PAST-1][CORE] l2 slides 22-23",
+   "hy": "Retrieval biases: leading questions and context"
+  },
+  {
+   "s": "fig",
+   "t": "mal",
+   "q": "The figure shows the pattern of Loftus et al. (1978): after seeing a stop or yield sign, participants received a consistent, neutral or inconsistent question, and were tested after different delays. Line C is the inconsistent condition. Which kind of interference does the low and falling line C illustrate?",
+   "chart": {
+    "type": "line",
+    "title": "Loftus et al. (1978)",
+    "x": [
+     "20 min",
+     "1 day",
+     "2 days",
+     "1 week"
+    ],
+    "y": "% correct sign chosen",
+    "series": [
+     {
+      "name": "A",
+      "v": [
+       85,
+       84,
+       82,
+       80
+      ]
+     },
+     {
+      "name": "B",
+      "v": [
+       80,
+       75,
+       72,
+       65
+      ]
+     },
+     {
+      "name": "C",
+      "v": [
+       55,
+       50,
+       45,
+       35
+      ]
+     }
+    ],
+    "note": "Illustrative pattern based on the lecture slide (consistent on top, neutral in the middle, inconsistent at the bottom).",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Proactive interference",
+    "Retroactive interference",
+    "Release from proactive interference",
+    "Interference from weapon focus"
+   ],
+   "a": 1,
+   "spot": "Does the new information disturb the old memory, or the other way round?",
+   "why": "The misleading question comes <b>after</b> the event and disrupts the memory of it: later information reaching back to an earlier trace is <b>retroactive</b> interference. Proactive interference would be old information disturbing new learning. Weapon focus is an encoding problem during the event itself.",
+   "src": "[PAST-1][CORE] Loftus et al. (1978), l2 slides 18-20",
+   "hy": "Misinformation effect"
+  },
+  {
+   "s": "comp",
+   "t": "emo",
+   "q": "Judge these statements.<br>I. In Bradley et al. (1992), the most arousing pictures were the very pleasant and the very unpleasant ones.<br>II. Activity of the frowning muscle (corrugator) is the best index of arousal regardless of valence.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Frown = valence, sweat = arousal.",
+   "why": "Statement I is true: the 240 pictures form a <b>boomerang</b>, with the extremes of valence being the most arousing. Statement II is false: <b>corrugator</b> activity tracks <b>valence</b> (it drops as pictures get more pleasant); <b>skin conductance</b> tracks arousal.",
+   "src": "[CORE] Bradley et al. (1992), l3 slides 6-8",
+   "hy": "Valence and arousal"
+  },
+  {
+   "s": "app",
+   "t": "emo",
+   "q": "Before a job interview, Sam notices his racing heart and tells himself that it means his body is getting ready to perform well. Which emotion regulation strategy is this?",
+   "o": [
+    "Situation selection",
+    "Attentional deployment",
+    "Cognitive change",
+    "Response modulation"
+   ],
+   "a": 2,
+   "spot": "Is he changing the situation, where he looks, what it means, or his outward reaction?",
+   "why": "Sam reinterprets <b>what the situation means</b> (threat becomes challenge): <b>reappraisal</b>, part of <b>cognitive change</b>. Situation selection would be avoiding the interview, attentional deployment looking away from what scares him, and response modulation hiding his nervousness (suppression).",
+   "src": "[CORE] l3 slide 24",
+   "hy": "Emotional Stroop and emotion regulation"
+  },
+  {
+   "s": "def",
+   "t": "lang",
+   "q": "Which claim belongs to the <i>weak</i> version of linguistic determinism?",
+   "o": [
+    "Concepts that have no word in a language cannot be thought by the speakers of that language",
+    "Linguistic categories influence how easily certain cognitive operations are performed",
+    "Linguistic categories create cognitive categories",
+    "Speakers of all languages perceive colours in exactly the same way"
+   ],
+   "a": 1,
+   "spot": "Strong = a wall. Weak = a slope.",
+   "why": "The <b>weak</b> version says language influences the <b>ease</b>, bias or fluency of thinking (Slobin; Hunt & Agnoli), not what can be thought. The first and third options are the <b>strong</b> version, abandoned after the Dani findings. The last option denies any influence at all.",
+   "src": "[PAST-2][CORE] l4 slides 3-5",
+   "hy": "Sapir-Whorf: determinism, relativity, strong vs weak"
+  },
+  {
+   "s": "fig",
+   "t": "lang",
+   "q": "The figure shows mean reaction times on time questions after horizontal and vertical spatial primes (Boroditsky, 2001). Which conclusion fits the figure?",
+   "chart": {
+    "type": "bar",
+    "title": "Boroditsky (2001)",
+    "x": [
+     "English speakers",
+     "Mandarin speakers"
+    ],
+    "y": "Mean RT (ms)",
+    "series": [
+     {
+      "name": "Horizontal prime",
+      "v": [
+       2180,
+       2500
+      ]
+     },
+     {
+      "name": "Vertical prime",
+      "v": [
+       2400,
+       2350
+      ]
+     }
+    ],
+    "note": "Approximate values from the lecture slide.",
+    "min": 2000,
+    "max": 2600
+   },
+   "o": [
+    "Mandarin speakers reason about time less efficiently than English speakers",
+    "Both groups benefit most from horizontal primes",
+    "Each group answers faster after the prime that matches its language's habitual time metaphor",
+    "The primes had no effect, because the questions used the words earlier and later"
+   ],
+   "a": 2,
+   "spot": "Compare the two bars within each language, not across languages.",
+   "why": "English speakers are faster after <b>horizontal</b> primes (about 2180 vs 2400 ms), Mandarin speakers after <b>vertical</b> primes (about 2350 vs 2500 ms). Each group is helped by its own <b>habitual metaphor</b>. Comparing overall speed between groups says nothing about this; and using 'earlier/later' was a strength of the design, not a reason for no effect.",
+   "src": "[CORE] Boroditsky (2001), l4 slides 12-14",
+   "hy": "Time metaphors"
+  },
+  {
+   "s": "find",
+   "t": "dual",
+   "q": "Which finding shows that reasoners who give the biased answer on base-rate problems still detect the conflict?",
+   "o": [
+    "They report afterwards that they deliberately ignored the base rates",
+    "They answer incongruent problems faster than congruent problems",
+    "They feel less certain after conflict problems than after no-conflict problems",
+    "They score higher on the Cognitive Reflection Test than unbiased reasoners"
+   ],
+   "a": 2,
+   "spot": "Time, sweat, doubt.",
+   "why": "De Neys et al. (2011) found <b>lower confidence</b> after conflict problems (about 70% vs 79%), even in biased reasoners: they sense <b>doubt</b>. Other signs are longer response times and higher skin conductance. Being <b>faster</b> on incongruent problems is the opposite of what was found.",
+   "src": "[PAST-2][CORE] De Neys et al. (2010, 2011), l5 slides 9-11",
+   "hy": "Conflict detection and the serial/parallel/hybrid tests"
+  },
+  {
+   "s": "app",
+   "t": "dual",
+   "q": "Asked the bat-and-ball question, Lena first feels that the answer is 10 cents, then senses that something is off, and works out that the ball costs 5 cents. According to the hybrid model, what happened inside System 1?",
+   "o": [
+    "The heuristic intuition was much stronger than the logical intuition",
+    "The logical intuition was much stronger than the heuristic intuition",
+    "The heuristic and logical intuitions were about equally strong, which prompted System 2",
+    "System 1 was switched off, so only System 2 produced an answer"
+   ],
+   "a": 2,
+   "spot": "A tug of war inside System 1: who wins, or is it a tie?",
+   "why": "Lena felt both answers and then deliberated: the <b>heuristic</b> and <b>logical</b> intuitions were about <b>equally strong</b>, so the conflict called in <b>System 2</b> (case C, correction). A much stronger heuristic would give a quick biased answer (A); a much stronger logical intuition would give 5 cents at once (B).",
+   "src": "[CORE] l5 slide 13",
+   "hy": "Hybrid model A/B/C and the CRT"
+  }
+ ],
+ "m3": [
+  {
+   "s": "fig",
+   "t": "ts",
+   "q": "In Middlebrooks et al. (2017), recall probability was plotted against the point value of each word (1 to 10) for full attention and divided attention. What would the divided-attention line look like if divided attention destroyed people's ability to prioritise valuable words?",
+   "o": [
+    "Lower than the full-attention line, but rising with value just as steeply",
+    "Lower than the full-attention line and roughly flat across all values",
+    "Identical to the full-attention line at every value",
+    "Higher than the full-attention line for the most valuable words only"
+   ],
+   "a": 1,
+   "spot": "Height = how much you remember. Slope = how selectively you remember.",
+   "why": "Prioritising shows up as a line that <b>rises</b> with value. If divided attention destroyed it, the line would be <b>flat</b> (and lower). The actual result was the first option: divided attention <b>lowered</b> recall but the line rose as <b>steeply</b>, so selectivity was preserved.",
+   "src": "[CORE] Middlebrooks et al. (2017), l1 slide 10",
+   "hy": "Value-directed remembering"
+  },
+  {
+   "s": "app",
+   "t": "ts",
+   "q": "Three groups of students read a difficult text. Group A leaves their phones in another room. Group B keeps their phones switched off and face down on the desk. Group C keeps their phones on the desk, receives notifications and is told to ignore them. Based on the studies in the lecture, which order of performance, from best to worst, is expected?",
+   "o": [
+    "A, then B, then C",
+    "B, then A, then C",
+    "C, then B, then A",
+    "A and B equal, then C"
+   ],
+   "a": 0,
+   "spot": "Each step adds one more drain on attention: nearby, then notifications.",
+   "why": "Even a phone that is just <b>nearby</b> costs capacity (<b>mere presence effect</b>, Ward et al., 2017), so B does worse than A. Receiving and ignoring <b>notifications</b> adds a further cost (Stothart et al., 2015), so C does worst. 'A and B equal' would only hold if a silent phone cost nothing.",
+   "src": "[CORE] l1 slide 9",
+   "hy": "Smartphones and attention"
+  },
+  {
+   "s": "find",
+   "t": "mal",
+   "q": "Which study is paired with its correct finding?",
+   "o": [
+    "Braun et al. (2002): about 68% remembered meeting Bugs Bunny at Disneyland",
+    "Loftus (1979): hardly any bystanders reported a tape recorder that never existed",
+    "Loftus and Pickrell (1995): about 25% came to remember being lost in a mall as a child",
+    "Piaget: a real kidnapping attempt that he later completely forgot"
+   ],
+   "a": 2,
+   "spot": "Check each number and each direction.",
+   "why": "<b>Loftus & Pickrell (1995)</b>: about <b>25%</b> 'remembered' the made-up mall event. In Braun et al. (2002) it was <b>16%</b> (68% was the rate for true events in the mall study). In Loftus (1979) more than half reported the non-existent tape recorder. Piaget had a vivid memory of a kidnapping attempt that <b>never happened</b>.",
+   "src": "[CORE] l2 slides 18-27",
+   "hy": "Implanted false memories"
+  },
+  {
+   "s": "comp",
+   "t": "mal",
+   "q": "Clifford and Scott (1978) showed participants a violent or a non-violent film; Hastorf and Cantril (1954) showed Princeton and Dartmouth students the same football match. What do the two studies have in common, and how do they differ?",
+   "o": [
+    "Both show a storage bias; the first concerns decay, the second consolidation",
+    "Both show a retrieval bias; the first concerns cues, the second leading questions",
+    "Both show an encoding bias; the first comes from what is observed, the second from the observer's expectations",
+    "Both show an encoding bias; the first comes from the observer's expectations, the second from what is observed"
+   ],
+   "a": 2,
+   "spot": "Where does the bias come from: the event on the screen or the person watching?",
+   "why": "Both studies are filed under <b>encoding</b> biases. In Clifford & Scott the <b>event itself</b> (violence) disrupted recall of the whole film: a characteristic of the <b>observed</b>. In Hastorf & Cantril the same match was seen differently depending on who watched: the <b>observer's</b> expectations (confirmation bias). The last option swaps the two.",
+   "src": "[CORE] l2 slides 13-14",
+   "hy": "Encoding biases: observed vs observer"
+  },
+  {
+   "s": "app",
+   "t": "emo",
+   "q": "A student studies a list of statistics formulas while feeling sad after bad news. At the exam she is sad again, and in free recall she remembers more formulas than classmates who studied sad but were cheerful at the exam. Which phenomenon is this?",
+   "o": [
+    "Mood-congruent memory",
+    "Mood-state-dependent memory",
+    "The emotional Stroop effect",
+    "Myopic misery"
+   ],
+   "a": 1,
+   "spot": "Does the mood match the content, or the mood at learning?",
+   "why": "The formulas have no emotional content, so this is not mood-congruent memory. What matters is that her mood at <b>retrieval</b> matches her mood at <b>learning</b>: <b>mood-state-dependent</b> memory, with mood acting like the divers' water. It shows up in <b>free</b> recall, as in Kenealy (1997).",
+   "src": "[CORE] l3 slides 16-19",
+   "hy": "Mood-congruent vs mood-state-dependent memory"
+  },
+  {
+   "s": "comp",
+   "t": "emo",
+   "q": "Why are people slower to name the ink colour of words such as <i>murder</i> than of words such as <i>table</i>?",
+   "o": [
+    "Because the meaning of the word conflicts with the colour of the ink",
+    "Because the emotional content captures attention and hampers inhibitory control",
+    "Because emotional words are longer and harder to read",
+    "Because negative mood broadens attention to all features of the word"
+   ],
+   "a": 1,
+   "spot": "Is there any colour conflict in the emotional Stroop?",
+   "why": "In the <b>emotional Stroop</b> the word never conflicts with the ink colour; the slowing comes from the <b>emotional content</b> grabbing attention, which impairs <b>inhibitory control</b>. A meaning-colour conflict is the classic Stroop (RED in green ink). Broadening does not explain the slowing.",
+   "src": "[CORE] Ben-Haim et al. (2016), l3 slides 12-15",
+   "hy": "Emotional Stroop and emotion regulation"
+  },
+  {
+   "s": "comp",
+   "t": "lang",
+   "q": "Boroditsky et al. (2003) asked Spanish and German speakers to describe objects such as a key and a bridge in English. A researcher wants to repeat the study but lets the Spanish speakers describe the objects in Spanish. Why would this weaken the conclusion?",
+   "o": [
+    "Spanish speakers would then describe the objects more slowly",
+    "Spanish adjectives must agree with the grammatical gender of the noun, so differences could reflect grammar rather than thought",
+    "Spanish has no grammatical gender for objects, so no differences would be expected",
+    "Describing in Spanish would turn the task into a test of colour perception"
+   ],
+   "a": 1,
+   "spot": "Why was English chosen in the first place?",
+   "why": "English does not assign <b>gender</b> to objects, so gendered descriptions in English must come from the speakers' <b>native language</b>. In Spanish, the grammar itself forces feminine or masculine word forms, so any difference could just be <b>grammatical agreement</b>, not a difference in how people think about the object.",
+   "src": "[CORE][LEX] Boroditsky et al. (2003), l4 slides 15-19",
+   "hy": "Grammatical gender"
+  },
+  {
+   "s": "find",
+   "t": "lang",
+   "q": "Toivo and Scheepers (2019) measured pupil size while bilinguals read high- and low-arousal words in their first and second language. What did they find?",
+   "o": [
+    "The pupil dilated more for high-arousal words in both languages to the same degree",
+    "The pupil difference between high- and low-arousal words was large in the first language and largely disappeared in the second",
+    "The pupil difference appeared only in the second language",
+    "Pupil size did not differ between high- and low-arousal words in either language"
+   ],
+   "a": 1,
+   "spot": "L2 = emotions with the volume turned down.",
+   "why": "In the <b>first language</b>, high-arousal words dilated the pupil more than low-arousal words; in the <b>second language</b> this difference <b>largely disappeared</b>. Because pupils cannot be controlled on purpose, this is biological evidence that L2 words feel less intense.",
+   "src": "[CORE] l4 slides 26-27",
+   "hy": "L2 emotion"
+  },
+  {
+   "s": "fig",
+   "t": "dual",
+   "q": "The figure shows the percentage of conclusions accepted in a belief-bias task (Evans, 2003). Which statement about the figure is NOT correct?",
+   "chart": {
+    "type": "bar",
+    "title": "Belief bias (Evans, 2003)",
+    "x": [
+     "Valid, believable",
+     "Valid, unbelievable",
+     "Invalid, believable",
+     "Invalid, unbelievable"
+    ],
+    "y": "% accepted",
+    "series": [
+     {
+      "name": "Accepted",
+      "v": [
+       89,
+       56,
+       71,
+       10
+      ]
+     }
+    ],
+    "note": "Approximate values from the lecture slide.",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Valid and believable conclusions were accepted most often.",
+    "Invalid but believable conclusions were accepted more often than valid but unbelievable ones.",
+    "If only logic mattered, the two valid bars would be about equally high.",
+    "Believability made no difference for invalid conclusions."
+   ],
+   "a": 3,
+   "spot": "Compare the two invalid bars.",
+   "why": "For invalid arguments, believable conclusions were accepted about <b>71%</b> of the time and unbelievable ones about <b>10%</b>: a huge effect of <b>believability</b>, so the last statement is wrong. The others are correct: valid-believable is highest (about 89%), 71% beats 56%, and if <b>validity</b> alone counted the two valid bars would match.",
+   "src": "[PAST-2][CORE] Evans (2003), l5 slides 3-5",
+   "hy": "Congruent vs incongruent; conflict effect; belief bias"
+  },
+  {
+   "s": "def",
+   "t": "dual",
+   "q": "What does the Cognitive Reflection Test (Frederick, 2005), with items such as the bat-and-ball problem, measure?",
+   "o": [
+    "The capacity of working memory",
+    "Basic arithmetic skill",
+    "The tendency to override an intuitively compelling answer",
+    "The speed with which System 1 produces an answer"
+   ],
+   "a": 2,
+   "spot": "Most people can do the maths. What do they fail to do?",
+   "why": "The <b>CRT</b> measures the tendency to <b>override</b> a fluent but wrong intuitive answer (10 cents) and reflect further (5 cents). About 80% answer the bat-and-ball item wrongly, even though the arithmetic is easy, so it is not a test of maths skill or of how fast <b>System 1</b> works.",
+   "src": "[CORE] Frederick (2005), l5 slide 2",
+   "hy": "Hybrid model A/B/C and the CRT"
+  }
+ ]
+}

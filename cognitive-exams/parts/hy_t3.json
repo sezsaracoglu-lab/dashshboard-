@@ -1,0 +1,724 @@
+{
+ "theme": [
+  {
+   "s": "fig",
+   "t": "photo",
+   "q": "The figure shows Experiment 1 of Soares and Storm (2018): mean proportion of detail questions answered correctly for paintings that participants only looked at (Observe), photographed with a camera app that saved the photo (Camera), or photographed with Snapchat, which does not keep the photo (Snapchat). Which conclusion fits the figure best?",
+   "chart": {
+    "type": "bar",
+    "title": "Soares & Storm (2018), Experiment 1",
+    "x": [
+     "Observe",
+     "Camera",
+     "Snapchat"
+    ],
+    "y": "Mean proportion correct",
+    "series": [
+     {
+      "name": "Experiment 1",
+      "v": [
+       0.58,
+       0.45,
+       0.36
+      ]
+     }
+    ],
+    "note": "Approximate values read from Figure 1. Chance = .25.",
+    "min": 0,
+    "max": 0.7
+   },
+   "o": [
+    "Memory was impaired only when the photo was saved, so the camera acted as a memory partner.",
+    "Taking a photo hurt memory even when participants knew the photo would not be kept.",
+    "Photographing helped memory, because it drew attention to the details of each painting.",
+    "The conditions did not really differ, because all three scores were close to chance level."
+   ],
+   "a": 1,
+   "spot": "Look at the bar for the photo that was NOT kept and compare it with Observe.",
+   "why": "Both photo bars are lower than Observe, and the Snapchat bar is even the lowest. So a photo that participants knew would disappear still <b>impaired memory</b>, which offloading cannot explain. The tempting option that only a saved photo impairs memory describes what <b>offloading</b> predicted, not what was found. Chance was .25, and all bars are clearly above it.",
+   "src": "[PAST-1][PAST-2][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11; Figure 1 (values approximate)",
+   "hy": "1. Offloading vs disengagement: observed bars"
+  },
+  {
+   "s": "fig",
+   "t": "photo",
+   "q": "The figure shows Experiment 2 of Soares and Storm (2018): Observe, Camera (photo saved) and Delete (photo taken and deleted at once). If the offloading hypothesis of the photo-taking-impairment effect were correct, what would have to look different?",
+   "chart": {
+    "type": "bar",
+    "title": "Soares & Storm (2018), Experiment 2",
+    "x": [
+     "Observe",
+     "Camera",
+     "Delete"
+    ],
+    "y": "Mean proportion correct",
+    "series": [
+     {
+      "name": "Experiment 2",
+      "v": [
+       0.56,
+       0.49,
+       0.48
+      ]
+     }
+    ],
+    "note": "Approximate values read from Figure 1. Chance = .25.",
+    "min": 0,
+    "max": 0.7
+   },
+   "o": [
+    "The Camera bar would be about as high as the Observe bar.",
+    "Nothing; the figure already matches the offloading hypothesis.",
+    "The Delete bar would be clearly lower than the Camera bar.",
+    "The Delete bar would be about as high as the Observe bar."
+   ],
+   "a": 3,
+   "spot": "Offloading = the camera remembers for you. Which photo can no longer remember anything?",
+   "why": "Offloading says you remember less because you count on the <b>camera</b> to store the information. A deleted photo cannot do that, so memory in the <b>Delete</b> condition should return to the Observe level, with only Camera lower. In the real data, Delete is as low as Camera, which fits <b>attentional disengagement</b> instead. The Camera bar being lower is predicted by both accounts, so it does not need to change.",
+   "src": "[PAST-1][PAST-2][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11; Figure 1 (values approximate)",
+   "hy": "1. Offloading vs disengagement: predicted bars"
+  },
+  {
+   "s": "comp",
+   "t": "photo",
+   "q": "Which statement about the experiments of Soares and Storm (2018) is NOT correct?",
+   "o": [
+    "In Experiment 2, deleting the photo restored memory to the level of the Observe condition.",
+    "Memory was tested with multiple-choice questions about visual details, so chance level was .25.",
+    "Most participants surveyed in Experiment 2 believed that taking photos helps memory.",
+    "Both experiments used a within-subjects design, so every participant took part in all conditions."
+   ],
+   "a": 0,
+   "spot": "NOT correct: find the one result that goes against what the article reports.",
+   "why": "Deleted photos were remembered as <b>badly</b> as saved ones (Camera and Delete did not differ, p = .80), and both were worse than Observe. The other statements are true: the design was <b>within-subjects</b>, the four-option detail questions put chance at .25, and 52% of those surveyed thought photos help memory while only 19% said they impair it.",
+   "src": "[PAST-1][PAST-2][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11",
+   "hy": "10. Soares & Storm design and results"
+  },
+  {
+   "s": "comp",
+   "t": "photo",
+   "q": "Compared with Experiment 1, why was Experiment 2 of Soares and Storm (2018) a stronger test of the offloading hypothesis?",
+   "o": [
+    "Memory was tested straight away, so there was no delay in which forgetting could occur.",
+    "Viewing time started after the photo, and participants deleted the photo themselves.",
+    "A between-subjects design was used, so participants could not compare the conditions.",
+    "Participants chose for themselves which paintings to photograph, as in daily life."
+   ],
+   "a": 1,
+   "spot": "What were the two weak points of the Snapchat condition, and how were they fixed?",
+   "why": "In Experiment 1, using Snapchat probably took <b>extra time</b> from the 15 seconds of viewing, and participants may not have believed the photos were really gone. Experiment 2 fixed both: the 15 seconds of viewing began <b>after</b> the photo, and participants <b>deleted</b> each photo themselves. Participants did not choose what to photograph, the design stayed within-subjects, and the Tetris delay was kept.",
+   "src": "[PAST-1][PAST-2][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11; IDQ C1",
+   "hy": "10. Soares & Storm design"
+  },
+  {
+   "s": "app",
+   "t": "photo",
+   "q": "Noor never learns her friends' birthdays, because her phone reminds her. She also never learns the wifi password, because she knows her brother always has it. Which concept describes both habits?",
+   "o": [
+    "Transactive memory",
+    "Attentional disengagement",
+    "Source amnesia",
+    "Generative retrieval"
+   ],
+   "a": 0,
+   "spot": "Knowing WHO or WHAT holds the information instead of holding it yourself.",
+   "why": "In a <b>transactive memory</b> system you store a directory of who (or what) knows something rather than the information itself (Wegner, 1987). It works between people (the brother) and between people and devices (the phone), which is the idea behind <b>offloading</b>. Attentional disengagement is about losing focus while photographing, and source amnesia is forgetting where a fact came from.",
+   "src": "[PAST-2][LO C1][IDQ C2] Wegner (1987); pty_t3 3.11.4",
+   "hy": "4. Transactive memory / offloading"
+  },
+  {
+   "s": "def",
+   "t": "photo",
+   "q": "According to the attentional-disengagement hypothesis, why do people remember photographed objects less well?",
+   "o": [
+    "The photo later competes with the memory of the object and causes retroactive interference.",
+    "People expect the camera to store the object, so they put less effort into remembering it.",
+    "Handling the camera pulls attention away from the object, so it is encoded less deeply.",
+    "Seeing the object through a screen makes it less distinctive than objects seen directly."
+   ],
+   "a": 2,
+   "spot": "Disengagement = attention leaves the moment.",
+   "why": "Attentional disengagement says the <b>act</b> of photographing draws attention away from the experience, so it is processed less deeply. This should happen whether or not the photo is kept. The second option is the rival <b>offloading</b> hypothesis, which depends on expecting the photo to be available later.",
+   "src": "[PAST-1][LO C3] Soares & Storm (2018); pty_t3 3.11",
+   "hy": "1. Two explanations defined"
+  },
+  {
+   "s": "find",
+   "t": "photo",
+   "q": "In Experiment 2 of Soares and Storm (2018), memory was impaired even though participants had 15 seconds of free viewing after taking the photo. How did the authors explain this lingering effect?",
+   "o": [
+    "Deleting a photo took so long that the remaining viewing time was shorter than in the Observe condition.",
+    "The paintings in the photo conditions were simpler, so they offered fewer details to remember.",
+    "The photo gave a feeling of 'I already have this', so less effort went into encoding afterwards.",
+    "Participants did not believe the photos were really deleted, so they still relied on the phone."
+   ],
+   "a": 2,
+   "spot": "The camera is already down, yet memory is still worse. What does the photo do to your effort?",
+   "why": "The authors suggest a <b>metacognitive illusion</b>: photographing gives a sense of encoding fluency, so people put less effort into encoding in the seconds that follow (they also mention possible <b>implicit offloading</b>). Disbelief about deletion was a worry for Snapchat in Experiment 1, not for self-deletion. Viewing time was equal or longer in the photo conditions, and paintings were counterbalanced across conditions.",
+   "src": "[LO C3][IDQ C1] Soares & Storm (2018) General Discussion; pty_t3 3.11.3",
+   "hy": "12. Lingering effect"
+  },
+  {
+   "s": "app",
+   "t": "sms",
+   "q": "I. On the radio you hear the song from your first school dance, and that evening instantly comes back to you.<br>II. A coach asks you for a moment you showed leadership. You think of your work years, then of team projects, and finally of one meeting in 2022.<br>Which forms of retrieval are these?",
+   "o": [
+    "Generative retrieval and direct retrieval, respectively",
+    "Both are direct retrieval",
+    "Direct retrieval and generative retrieval, respectively",
+    "Both are generative retrieval"
+   ],
+   "a": 2,
+   "spot": "Did the memory pop up by itself, or was it searched for step by step?",
+   "why": "In I, a cue activates one specific memory at once, without a search: <b>direct retrieval</b>. In II, you search on purpose, from lifetime period to general event to one specific event, guided by the goal of the question: <b>generative retrieval</b> through the working self.",
+   "src": "[PAST-1][PAST-2][LO A2][IDQ A1] Conway & Pleydell-Pearce (2000); pty_t3 3.4",
+   "hy": "2. Generative vs direct retrieval"
+  },
+  {
+   "s": "find",
+   "t": "sms",
+   "q": "Which statement about memories retrieved directly, compared with memories retrieved generatively, is NOT correct?",
+   "o": [
+    "They are more relevant to personal identity.",
+    "They are more specific.",
+    "They go with relatively more activity in the left hippocampus.",
+    "They come to mind about three times as fast."
+   ],
+   "a": 0,
+   "spot": "Direct retrieval bypasses the working self. What does that mean for links to identity?",
+   "why": "Direct retrieval <b>bypasses the working self</b>, so its memories are more specific but <b>less</b> relevant to personal identity than generated ones. The other statements are research findings: direct retrieval was about three times faster (Uzer et al., 2012) and showed more <b>left hippocampus</b> activity, while generative retrieval showed more prefrontal activity.",
+   "src": "[PAST-1][LO A2][IDQ A1] Eysenck & Keane; pty_t3 3.4.1",
+   "hy": "2. Generative vs direct retrieval: evidence"
+  },
+  {
+   "s": "def",
+   "t": "sms",
+   "q": "What is the role of the working self in Conway's self-memory system?",
+   "o": [
+    "It briefly holds a retrieved memory in mind while the person describes it to someone else.",
+    "It is the top level of the knowledge base, which divides a whole life into broad lifetime periods.",
+    "It holds current goals and self-images, and it steers which memories are encoded and retrieved.",
+    "It stores event-specific knowledge, such as the images and feelings that belong to one event."
+   ],
+   "a": 2,
+   "spot": "Working SELF: who you are now and what you want.",
+   "why": "The <b>working self</b> is who you are now, who you want to become and your current goals; it controls encoding and retrieval, which is why memories mostly record progress on goals. Event-specific knowledge and <b>lifetime periods</b> are levels of the autobiographical knowledge base, the other component of the model.",
+   "src": "[LO A4][IDQ A6] Conway & Pleydell-Pearce (2000); pty_t3 3.4",
+   "hy": "15. Self-memory system"
+  },
+  {
+   "s": "fig",
+   "t": "sms",
+   "q": "Woike et al. (1999) asked agentic people (who value achievement and power) and communal people (who value closeness) to write about a personal experience.<br><table class=\"qt\"><tr><th></th><th>Positive experience</th><th>Negative experience</th></tr><tr><td>Agentic people: % agentic memories</td><td>65%</td><td>47%</td></tr><tr><td>Communal people: % communal memories</td><td>90%</td><td>90%</td></tr></table>Which conclusion does the table support?",
+   "o": [
+    "Communal people have a better autobiographical memory than agentic people do.",
+    "The memories people retrieve follow their own motives, as the working self predicts.",
+    "Memories are filed by lifetime period rather than by theme or by personal goal.",
+    "Negative experiences are generally remembered less specifically than positive experiences."
+   ],
+   "a": 1,
+   "spot": "Do the memories match the type of person?",
+   "why": "Communal people recalled communal memories 90% of the time, and agentic people often recalled agentic ones (65% after a positive and 47% after a negative experience), so personality and goals shape <b>which</b> memories come to mind. That is the role Conway gives to the <b>working self</b>. The table counts the type of memory, not how good or how specific memory is, so the options about better memory and about less specific negative memories go beyond the data.",
+   "src": "[IDQ A6][LO A4] Woike et al. (1999); pty_t3 3.4.1",
+   "hy": "15. Working self evidence"
+  },
+  {
+   "s": "comp",
+   "t": "sms",
+   "q": "Judge these statements about Conway's (2005) view of autobiographical memory.<br>I. Coherence means that a memory fits a person's current goals and self-image.<br>II. When coherence and correspondence conflict, correspondence usually wins.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Coherence = fits me now; correspondence = fits the facts. Which one usually wins?",
+   "why": "Statement I is the definition of <b>coherence</b>. Statement II is the wrong way round: memories are expected to fit the facts (<b>correspondence</b>), but coherence usually wins, so memories drift towards what suits the current self (for example, remembering past selves as worse than they were; Newman & Lindsay, 2009).",
+   "src": "[IDQ A5][LO A4] Conway (2005); pty_t3 3.4",
+   "hy": "16. Coherence vs correspondence"
+  },
+  {
+   "s": "fig",
+   "t": "auto",
+   "q": "The figure shows the number of memories that 70-year-olds retrieved to cue words, by their age at the time of the event. Which statement about the three marked parts (A, B and C) is correct?",
+   "chart": {
+    "type": "line",
+    "title": "Autobiographical retention function",
+    "x": [
+     "0-5 (A)",
+     "5-10",
+     "10-15 (B)",
+     "15-20 (B)",
+     "20-25 (B)",
+     "25-30 (B)",
+     "30-35",
+     "35-40",
+     "40-45",
+     "45-50",
+     "50-55 (C)",
+     "55-60 (C)",
+     "60-65 (C)",
+     "65-70 (C)"
+    ],
+    "y": "Number of memories",
+    "series": [
+     {
+      "name": "70-year-olds",
+      "v": [
+       1,
+       4,
+       9,
+       12,
+       12,
+       10,
+       6,
+       5,
+       4,
+       4,
+       5,
+       7,
+       10,
+       16
+      ]
+     }
+    ],
+    "note": "Illustrative shape after Rubin, Wetzler & Nebes (1986). x-axis = age at the event.",
+    "min": 0,
+    "max": 18
+   },
+   "o": [
+    "A reflects source amnesia, B the cultural life script, and C retrograde amnesia for recent years.",
+    "A reflects childhood amnesia, B the reminiscence bump, and C the recency of a short-term store.",
+    "A reflects ordinary forgetting, B the reminiscence bump, and C the life script of old age.",
+    "A reflects childhood amnesia, B the reminiscence bump, and C ordinary forgetting over time."
+   ],
+   "a": 3,
+   "spot": "Read part C from right to left: from now back into the past.",
+   "why": "Part A is <b>childhood amnesia</b> (almost no memories before about age 3), part B the <b>reminiscence bump</b> (about age 10 to 30), and part C a <b>standard forgetting curve</b>: the more recent the event, the more is left. The trap is to link C to the recency effect of a short-term store: these are decades of long-term memory, not seconds.",
+   "src": "[LO A3, A5][IDQ A2] Rubin, Wetzler & Nebes (1986); pty_t3 3.3",
+   "hy": "11. Retention function"
+  },
+  {
+   "s": "comp",
+   "t": "auto",
+   "q": "Which statement about the reminiscence bump is NOT correct?",
+   "o": [
+    "It appeared even for ordinary memories that were not rated as novel or important.",
+    "It is stronger for positive memories than for negative memories.",
+    "It also appears for public knowledge, such as news events from when people were 10 to 30.",
+    "It is found only for expected events that are part of the cultural life script."
+   ],
+   "a": 3,
+   "spot": "One option makes the life-script account the whole story.",
+   "why": "Unexpected events that are not in any <b>life script</b> also show a strong bump, which fits the <b>identity</b> account better. The other statements are findings: a bump for public knowledge (Rubin, Rahhal & Poon, 1998), a stronger bump for positive memories, and a bump for ordinary memories (Janssen & Murre, 2008), which supports <b>peak functioning</b>.",
+   "src": "[LO A3][IDQ A4] Robinson-Riegler; Eysenck & Keane; pty_t3 3.3.5",
+   "hy": "14. Reminiscence bump accounts"
+  },
+  {
+   "s": "find",
+   "t": "ca",
+   "q": "Jack et al. (2009) recorded how mothers talked about past events with their children aged 2 to 4. Ten years later, the adolescents were asked for their earliest memory. What did the researchers find?",
+   "o": [
+    "The more mothers elaborated rather than repeated, the earlier the adolescents' first memory.",
+    "The mothers' style of talk predicted the content of the first memory, but not its age.",
+    "Girls had earlier first memories than boys, whatever style of talk their mothers used.",
+    "Adolescents whose mothers repeated the same questions most often had the earliest first memories."
+   ],
+   "a": 0,
+   "spot": "Elaborative talk adds detail and new questions; does more of it push memories earlier?",
+   "why": "There was a strong <b>negative correlation</b> between the ratio of elaborations to repetitions and the age of the earliest memory: more <b>elaborative</b> talk, earlier first memories. Because parents elaborate more with daughters, this style of talk, not sex as such, helps explain <b>female superiority</b> in autobiographical recall.",
+   "src": "[PAST-1][IDQ A3][LO A1] Jack et al. (2009); rev th3 Part A",
+   "hy": "7. Female superiority / elaborative style"
+  },
+  {
+   "s": "app",
+   "t": "ca",
+   "q": "Ten-month-old Mila has learned to crawl and to pull a cord that switches on a music toy, and she keeps these skills. As an adult she will not remember a single moment from that year. Which description fits this pattern best?",
+   "o": [
+    "Semantic memory works early, and procedural memory for skills develops later.",
+    "Episodic memory works early, and procedural memory for skills develops later.",
+    "Episodic memory works early, but its traces are later erased by a form of retrograde amnesia.",
+    "Procedural memory works early, and episodic memory for specific events develops later."
+   ],
+   "a": 3,
+   "spot": "What does the baby keep (skills) and what does the adult lack (events)?",
+   "why": "Infants learn and keep skills and habits, which is <b>procedural</b> memory. Memory for specific personal events, <b>episodic</b> memory, develops later, which is why adults have childhood amnesia for these years. Retrograde amnesia is memory loss after brain damage, not normal development.",
+   "src": "[PAST-1][LO A1] set1 key; Robinson-Riegler",
+   "hy": "8. Infant memory dissociation"
+  },
+  {
+   "s": "find",
+   "t": "ca",
+   "q": "Judge these statements about Wang's (2006) study of earliest memories in US and Taiwanese adults.<br>I. US adults reported earlier first memories than Taiwanese adults.<br>II. The earliest memories of Taiwanese adults focused more on the self and on autonomy.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Independent self versus interdependent self.",
+   "why": "Statement I is true: US memories were earlier. Statement II reverses the finding: <b>US</b> memories reflected autonomy and the self more, while Taiwanese memories were later and more <b>social</b>. An independent self goes with earlier, self-focused memories; an interdependent self with later, socially focused ones.",
+   "src": "[PAST-2][LO A1] Wang (2006); rev th3 Part A",
+   "hy": "9. Culture and earliest memories"
+  },
+  {
+   "s": "def",
+   "t": "ca",
+   "q": "According to the social-cognitive account (Nelson & Fivush, 2004), how does childhood amnesia end?",
+   "o": [
+    "At one fixed age for everybody, as soon as the hippocampus and prefrontal cortex are fully mature.",
+    "When early emotional experiences are no longer repressed and become available again.",
+    "As soon as the child can speak in full sentences, because only then can events be stored.",
+    "Gradually and at different ages, as brain, language, memory talk and self develop together."
+   ],
+   "a": 3,
+   "spot": "'Social-cognitive' combines several factors. One factor or many?",
+   "why": "The <b>social-cognitive account</b> combines brain maturation, language, memory talk with parents, a sense of self and culture. Because these develop at different speeds, the offset of childhood amnesia is <b>gradual</b> and differs between people; Multhaup et al. (2005) found a gradual shift from 'know' to 'remember'. A single fixed age or a single cause such as language does not fit this.",
+   "src": "[LO A1][IDQ A4] Nelson & Fivush (2004); rev th3 Part A",
+   "hy": "13. Childhood amnesia explanations"
+  },
+  {
+   "s": "def",
+   "t": "auto",
+   "q": "A researcher gives participants single words such as <i>beach</i> and <i>angry</i>. For each word, they recall a personal memory, describe it briefly and date it. What is this method, and what does it allow her to map?",
+   "o": [
+    "The diary technique, which checks the accuracy of each memory against a written record",
+    "The Autobiographical Memory Interview, which measures retrograde amnesia for each period of life",
+    "The Galton-Crovitz cue-word technique, which maps how memories are spread over the life span",
+    "Targeted event recall, which tests how far back memory for one checkable event reaches"
+   ],
+   "a": 2,
+   "spot": "Single word cues plus dating the memory.",
+   "why": "Word cues followed by recalling and <b>dating</b> a memory is the <b>Galton-Crovitz cue-word technique</b>. Because every memory gets a date, the results show the autobiographical <b>retention function</b>. The diary technique records events first and tests them later; targeted event recall asks about one specific, often checkable, event.",
+   "src": "[LO A5] pty_t3 3.2.1",
+   "hy": "20. Research methods"
+  },
+  {
+   "s": "app",
+   "t": "amn",
+   "q": "After a brain infection, Tom still knows his children, his job and how his wedding went. However, he cannot say what he had for lunch, and he does not remember that his doctor visited him an hour ago. Which type of amnesia is this?",
+   "o": [
+    "Anterograde amnesia",
+    "Source amnesia",
+    "Retrograde amnesia",
+    "Developmental amnesia"
+   ],
+   "a": 0,
+   "spot": "Is it the past before the damage, or new events after it, that is lost?",
+   "why": "Tom keeps memories from <b>before</b> the infection but cannot store <b>new</b> events: <b>anterograde amnesia</b>, like H.M., who did not recognise people who had just left the room. Retrograde amnesia would be the reverse: losing memories from before the damage.",
+   "src": "[PAST-2][LO B4][IDQ B1] Baddeley et al.; pty_t3 3.7",
+   "hy": "3. Anterograde vs retrograde"
+  },
+  {
+   "s": "app",
+   "t": "amn",
+   "q": "A neuropsychologist reads a story to a patient with anterograde amnesia. For the next hour she gives him several other memory and attention tests, and then asks him to recall the story. He recalls almost nothing. What is the best interpretation?",
+   "o": [
+    "His score is a fair estimate, because the hour gave him plenty of time to consolidate the story.",
+    "The tests in between disturbed fragile new traces, so his recall is probably underestimated.",
+    "His recall is overestimated, because the other tests acted as extra rehearsal of the story.",
+    "The story was never encoded, because amnesia prevents any learning of new material."
+   ],
+   "a": 1,
+   "spot": "What happens to new memory traces when other tasks come right after learning?",
+   "why": "New traces are fragile and need <b>consolidation</b>, which is most vulnerable early on. Amnesic patients recalled a story almost as well as controls after an hour in a quiet, dark room, but remembered almost nothing after an hour of assessment tasks (Dewar, Cowan & Della Sala, 2010). So a long <b>test battery</b> causes interference and makes recall look worse than it is.",
+   "src": "[PAST-1][IDQ B5] Dewar et al. (2009, 2010); pty_t3 3.9",
+   "hy": "5. Test battery underestimates recall"
+  },
+  {
+   "s": "app",
+   "t": "amn",
+   "q": "Ten minutes after the researcher told him, a patient with amnesia correctly answers that a certain singer's favourite food is pizza. He insists, though, that he has known this for years. What does this show?",
+   "o": [
+    "Source amnesia",
+    "Developmental amnesia",
+    "Overgeneral memory",
+    "Retrograde amnesia"
+   ],
+   "a": 0,
+   "spot": "He has the fact but not WHERE it came from.",
+   "why": "The patient keeps the item (the fact) but loses <b>where and when</b> he learned it: <b>source amnesia</b> (Schacter, Harbluk & McLachlan, 1984). This fits the idea that amnesia breaks the link between information and its context. It is a failure of <b>source memory</b>, not loss of old memories (retrograde).",
+   "src": "[PAST-1][LO B3] Schacter et al. (1984); pty_t3 3.7.1-3.7.2",
+   "hy": "6. Source amnesia"
+  },
+  {
+   "s": "fig",
+   "t": "amn",
+   "q": "Warrington and Weiskrantz (1970) gave amnesic patients and controls a list of words. Memory was then tested with free recall, recognition, and a game in which participants guessed words shown in a degraded form. Which conclusion fits the pattern in the figure?",
+   "chart": {
+    "type": "bar",
+    "title": "Warrington & Weiskrantz (1970)",
+    "x": [
+     "Free recall",
+     "Recognition",
+     "Degraded-word guessing"
+    ],
+    "y": "Performance (%)",
+    "series": [
+     {
+      "name": "Amnesic patients",
+      "v": [
+       15,
+       55,
+       45
+      ]
+     },
+     {
+      "name": "Controls",
+      "v": [
+       45,
+       85,
+       45
+      ]
+     }
+    ],
+    "note": "Illustrative values; only the about 45% for both groups on degraded-word guessing is from the reading.",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Amnesia impairs implicit memory more than it impairs explicit memory.",
+    "Amnesia impairs recall, while all forms of recognition remain intact.",
+    "Amnesia impairs all memory tests, but the guessing game was simply too easy for anyone.",
+    "Amnesia impairs explicit memory, while implicit memory can remain intact."
+   ],
+   "a": 3,
+   "spot": "Compare the gap between groups on the first two tests with the gap on the guessing game.",
+   "why": "Patients were much worse on the <b>explicit</b> tests (recall and recognition), yet about as good as controls on the <b>implicit</b> guessing game (both about 45%). One variable (amnesia) affects one kind of test but not the other: a <b>dissociation</b>, suggesting partly separate memory systems.",
+   "src": "[LO B1, B2][IDQ B2] Warrington & Weiskrantz (1970); pty_t3 3.7.3",
+   "hy": "17. Explicit vs implicit dissociation"
+  },
+  {
+   "s": "find",
+   "t": "amn",
+   "q": "Huppert and Piercy (1978) showed pictures on two days; some were shown twice on day 1. Later, amnesic patients more often said that these pictures came from day 2, whereas controls correctly said day 1. What explains the patients' error?",
+   "o": [
+    "Patients forgot the day 1 pictures faster, so they could only recognise the pictures from day 2.",
+    "Repetition made the pictures familiar, and patients mistook that familiarity for recency.",
+    "Pictures from day 2 interfered with pictures from day 1, a form of proactive interference.",
+    "Patients rehearsed the day 1 pictures overnight, which shifted these memories to the second day."
+   ],
+   "a": 1,
+   "spot": "Two cues to 'which day': how familiar it feels, and where it is tied in time.",
+   "why": "Seeing a picture twice made it feel very <b>familiar</b>. Controls could link it to its <b>context</b> (day 1), but patients lacked that link and took strong familiarity as a sign that the picture was recent. This shows that <b>binding items to context</b> is a core deficit in amnesia, while familiarity survives.",
+   "src": "[IDQ B3] Huppert & Piercy (1978); pty_t3 3.7.1",
+   "hy": "18. Context binding"
+  },
+  {
+   "s": "comp",
+   "t": "amn",
+   "q": "Jon has developmental amnesia (Vargha-Khadem et al., 1997). Which of these is NOT a reason why Jon is a problem for Baddeley's modal model of amnesia?",
+   "o": [
+    "His recognition is normal, although his recall is well below average.",
+    "His working memory is impaired, although his long-term memory is intact.",
+    "His crystallised intelligence, such as vocabulary, is not impaired.",
+    "His semantic memory developed well, although his episodic memory is poor."
+   ],
+   "a": 1,
+   "spot": "Which option does not describe Jon at all?",
+   "why": "The modal model assumes that semantic memory is the residue of many episodes and that recall and recognition rely on the same store. Jon contradicts both: good <b>semantic memory</b> and intelligence despite poor episodic memory, and normal <b>recognition</b> despite poor <b>recall</b>. Impaired working memory is not Jon's profile; his problem is in episodic long-term memory.",
+   "src": "[LO B4][IDQ B4] Baddeley et al.; pty_t3 3.8",
+   "hy": "19. Jon vs the modal model"
+  }
+ ],
+ "m1": [
+  {
+   "s": "comp",
+   "t": "photo",
+   "q": "Judge these statements about explanations of the photo-taking-impairment effect.<br>I. The offloading hypothesis predicts that a photo you cannot keep impairs memory as much as a photo you can keep.<br>II. The attentional-disengagement hypothesis predicts an impairment whether or not the photo is kept.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 1,
+   "spot": "Offloading needs a camera that will remember for you.",
+   "why": "Statement I is false: if the camera cannot keep the photo, there is nothing to <b>offload</b> to, so memory should be (nearly) normal. Statement II is true: <b>disengagement</b> comes from the act of photographing itself, so it predicts an impairment in any case. Soares and Storm found the impairment with Snapchat and Delete photos too.",
+   "src": "[PAST-1][PAST-2][LO C3] Soares & Storm (2018)",
+   "hy": "1. Offloading vs disengagement predictions"
+  },
+  {
+   "s": "app",
+   "t": "sms",
+   "q": "In a job interview, Lisa is asked about a time she solved a conflict. She first thinks of her years at the bank, then of the weekly team meetings there, and finally of one meeting in March 2021. Which process is this?",
+   "o": [
+    "Targeted event recall",
+    "Generative retrieval",
+    "Overgeneral memory",
+    "Direct retrieval"
+   ],
+   "a": 1,
+   "spot": "Searched step by step, from broad to specific.",
+   "why": "Lisa builds the memory step by step, from a <b>lifetime period</b> (the bank) to a general event (team meetings) to one specific event, guided by her goal. That is <b>generative retrieval</b> through the working self. In direct retrieval a cue would bring the specific memory to mind at once.",
+   "src": "[PAST-1][PAST-2][LO A2] Conway & Pleydell-Pearce (2000)",
+   "hy": "2. Generative vs direct retrieval"
+  },
+  {
+   "s": "app",
+   "t": "amn",
+   "q": "After a car accident, Ellen easily learns the names of her new colleagues and remembers what happened at work this week. However, she cannot remember anything from the two years before the accident. Which type of amnesia is this?",
+   "o": [
+    "Retrograde amnesia",
+    "Source amnesia",
+    "Anterograde amnesia",
+    "Developmental amnesia"
+   ],
+   "a": 0,
+   "spot": "Before or after the damage?",
+   "why": "Ellen can form <b>new</b> memories but has lost memories from <b>before</b> the accident: <b>retrograde amnesia</b>. Such loss is often worst for the period just before the damage. Anterograde amnesia would be the reverse: trouble learning new information after the damage.",
+   "src": "[PAST-2][LO B4] pty_t3 3.7",
+   "hy": "3. Anterograde vs retrograde"
+  },
+  {
+   "s": "app",
+   "t": "ca",
+   "q": "After a trip to the zoo, Parent A asks her child open questions and adds details: 'What did the elephant do with its trunk? Remember how it sprayed water?' Parent B asks the same short question again and again: 'Did you see the elephant?' What does research predict?",
+   "o": [
+    "Parent A's child will build richer memories and have earlier first memories as an adolescent.",
+    "Both children will remember the same, because memory talk only affects what is said.",
+    "Neither style matters, because childhood amnesia depends only on brain maturation.",
+    "Parent B's child will remember more, because repeating a question is the best way to store an event."
+   ],
+   "a": 0,
+   "spot": "Elaborative versus repetitive memory talk.",
+   "why": "Parent A uses an <b>elaborative</b> style; parent B a <b>repetitive</b> one. Children of elaborative parents give richer accounts of the past, and more elaboration at age 2 to 4 predicted earlier first memories ten years later (Jack et al., 2009). Parents elaborate more with daughters, which helps explain <b>female superiority</b> in autobiographical recall.",
+   "src": "[PAST-1][IDQ A3][LO A1] Jack et al. (2009); Reese & Fivush (1993)",
+   "hy": "7. Female superiority / elaborative style"
+  }
+ ],
+ "m2": [
+  {
+   "s": "def",
+   "t": "photo",
+   "q": "What is the photo-taking-impairment effect (Henkel, 2014)?",
+   "o": [
+    "People forget where and when a photo was taken while they still remember what is shown in it.",
+    "Objects that people photographed are later remembered worse than objects they only looked at.",
+    "Looking back at photos later makes people remember details that never happened.",
+    "Photos people take are later remembered better than photos taken by somebody else."
+   ],
+   "a": 1,
+   "spot": "Photographed versus only observed: which is remembered worse?",
+   "why": "Henkel (2014) found on a museum tour that <b>photographed</b> objects were remembered worse than objects that were only <b>observed</b>, when tested without the photos. Soares and Storm (2018) replicated this in the lab. Forgetting where and when a photo was taken describes source amnesia, not this effect.",
+   "src": "[LO C2] Henkel (2014); pty_t3 3.11",
+   "hy": "24. Henkel effect definition"
+  },
+  {
+   "s": "def",
+   "t": "sms",
+   "q": "Compared with direct retrieval, generative retrieval is",
+   "o": [
+    "linked to more activity in the left hippocampus.",
+    "faster and set off by one specific cue in the person's environment.",
+    "more specific and less tied to the person's identity.",
+    "more effortful and steered by the goals of the working self."
+   ],
+   "a": 3,
+   "spot": "Generative = you construct the memory yourself.",
+   "why": "<b>Generative retrieval</b> is a deliberate, effortful search that combines the <b>working self</b> with the knowledge base, so it is goal-driven. The other options describe <b>direct retrieval</b>: fast, cue-triggered, more specific, less identity-related and linked to the left hippocampus.",
+   "src": "[PAST-1][PAST-2][LO A2] Conway & Pleydell-Pearce (2000); pty_t3 3.4",
+   "hy": "2. Generative vs direct retrieval"
+  },
+  {
+   "s": "comp",
+   "t": "amn",
+   "q": "Judge these statements about the two main forms of amnesia.<br>I. The severity of a patient's anterograde amnesia strongly predicts the severity of his retrograde amnesia.<br>II. Retrograde amnesia is often strongest for the period just before the brain damage.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 1,
+   "spot": "Can the two forms come apart? Think of KI.",
+   "why": "Statement I is false: the two severities are <b>not</b> strongly related (Shimamura & Squire, 1991), and KI had dense anterograde amnesia without retrograde amnesia, so the causes probably differ. Statement II is true: <b>retrograde amnesia</b> is usually worst just before the damage, and older memories are better kept.",
+   "src": "[PAST-2][LO B4][IDQ B1] Baddeley et al.; pty_t3 3.7, 3.10",
+   "hy": "3. Anterograde vs retrograde"
+  },
+  {
+   "s": "comp",
+   "t": "auto",
+   "q": "The last part of the autobiographical retention function, covering the most recent decades, is called a standard forgetting curve. Why?",
+   "o": [
+    "It shows that a cultural life script makes recent events easier to retrieve.",
+    "It shows the recency effect of a short-term store, just like the end of the serial position curve.",
+    "It shows retrograde amnesia, which older people develop for their recent years.",
+    "It shows ordinary forgetting: the more recent an event, the more memories of it remain."
+   ],
+   "a": 3,
+   "spot": "Nothing special happens in those years; what is left is plain time since the event.",
+   "why": "Read from the present backwards, the number of memories first drops steeply and then more slowly: the same shape as the classic <b>forgetting curve</b>. It is plain <b>long-term forgetting</b> over decades (decay, interference). The serial-position recency effect concerns items studied seconds ago, so linking it to a short-term store is a trap.",
+   "src": "[LO A3][IDQ A2] Rubin et al. (1986); pty_t3 3.3.3-3.3.4",
+   "hy": "11. Retention function"
+  }
+ ],
+ "m3": [
+  {
+   "s": "find",
+   "t": "photo",
+   "q": "Why did Soares and Storm (2018) add a Snapchat condition to the usual Observe and Camera conditions in Experiment 1?",
+   "o": [
+    "To create a photo condition in which the camera could not serve as a memory partner.",
+    "To test whether photos shared with friends are remembered better than private photos.",
+    "To give participants more viewing time than in the Camera condition.",
+    "To check whether a familiar app makes photographing less distracting than a camera."
+   ],
+   "a": 0,
+   "spot": "Snapchat does not keep the photo. Which hypothesis does that test?",
+   "why": "Snapchat does not save photos, so the camera could not act as a <b>transactive memory</b> partner. If <b>offloading</b> caused the impairment, it should vanish in that condition. It did not: Snapchat photos were remembered even worse, which counts against offloading.",
+   "src": "[PAST-2][LO C3][IDQ C1] Soares & Storm (2018)",
+   "hy": "10. Soares & Storm design logic"
+  },
+  {
+   "s": "comp",
+   "t": "sms",
+   "q": "Which statement about overgeneral autobiographical memory is NOT correct?",
+   "o": [
+    "Threat instructions increased overgeneral memories only in people with an avoidant coping style.",
+    "Experiments have shown that overgeneral memory is a cause of depression.",
+    "The affect-regulation hypothesis sees vague memories as a way of avoiding painful detail.",
+    "People with depression more often give general memories, such as 'arguing with people', instead of one specific event."
+   ],
+   "a": 1,
+   "spot": "Correlation, prediction or experiment?",
+   "why": "Most evidence is <b>correlational</b>; longitudinal studies show that overgeneral memory <b>predicts</b> later symptoms (Stange et al., 2013), but that is still not proof of <b>cause</b>. The other statements are findings from the reading, including the threat-instruction study (Debeer et al., 2011).",
+   "src": "[LO A3][CORE] Eysenck & Keane; pty_t3 3.6",
+   "hy": "22. Overgeneral memory and depression"
+  },
+  {
+   "s": "find",
+   "t": "amn",
+   "q": "On tests with photos of people who were famous for only a short time, amnesic patients recognised faces from long ago better than faces from recent years. What is this pattern called?",
+   "o": [
+    "The recency effect",
+    "Childhood amnesia",
+    "Ribot's law",
+    "The reminiscence bump"
+   ],
+   "a": 2,
+   "spot": "Older memories are more resistant to damage.",
+   "why": "<b>Ribot's law</b> says older memories are more durable than recent ones, so retrograde amnesia hits recent years hardest. The reminiscence bump is the peak of memories from about age 10 to 30 in healthy people. A known problem of <b>famous-faces tests</b> is that prior knowledge differs between people and the tests quickly go out of date.",
+   "src": "[LO B4] Baddeley et al.; pty_t3 3.10",
+   "hy": "23. Measuring retrograde amnesia"
+  },
+  {
+   "s": "comp",
+   "t": "ca",
+   "q": "Which factor is used to explain both childhood amnesia and the reminiscence bump, but in opposite directions?",
+   "o": [
+    "The development of a sense of self and identity",
+    "Consolidation of new memories during sleep",
+    "Transactive memory shared with parents",
+    "Source memory for where information was learned"
+   ],
+   "a": 0,
+   "spot": "Before about age 3 it is missing; between 10 and 30 it is being formed.",
+   "why": "Childhood amnesia ends when a cognitive <b>self</b> develops that can tag events as happening to 'me' (Howe & Courage, 1997). The bump reflects <b>identity formation</b>: events in these years shape who we become. Brain development, language and culture also appear on both lists, but the self is the clearest overlap.",
+   "src": "[IDQ A4][LO A1, A3] Howe & Courage (1997); Conway (2005); rev th3",
+   "hy": "25. Shared factors"
+  }
+ ]
+}

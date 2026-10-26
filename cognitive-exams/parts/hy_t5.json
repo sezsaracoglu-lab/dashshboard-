@@ -1,0 +1,767 @@
+{
+ "theme": [
+  {
+   "s": "app",
+   "t": "rot",
+   "q": "Judge the following statements. I. Participants who imagine a mouse standing next to a horse take longer to check whether the mouse has a pointed nose than participants who imagine the mouse next to a beetle. II. Participants who imagine a mouse next to a horse-sized beetle check the mouse's nose faster than participants who imagine it next to a beetle-sized horse.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Ask which animal is small on the 'mental screen', not which is small in real life.",
+   "why": "Statement I is true: next to a horse the mouse is imagined <b>small</b>, so its details are hard to 'see' and take longer to check. Statement II is false: next to a horse-sized beetle the mouse is again the small one, so it is checked <b>more slowly</b>, not faster. What counts is the <b>relative size in the image</b>, the core of Kosslyn's image-scaling work and the <b>functional-equivalence</b> idea.",
+   "src": "[PAST-2][LO][IDQ] Kosslyn 1975; Sternberg 294-295; pty_t5 5.10",
+   "hy": "1 Image scaling"
+  },
+  {
+   "s": "find",
+   "t": "rot",
+   "q": "Kosslyn (1976) asked Year 3 pupils, Year 6 pupils and adults questions such as 'Does a cat have claws?' and 'Does a cat have a head?', with or without the instruction to use a mental image. Which group answered faster about the physically larger feature even when NOT told to use imagery?",
+   "o": [
+    "Year 6 pupils",
+    "Adults",
+    "Year 6 pupils and adults",
+    "Year 3 pupils"
+   ],
+   "a": 3,
+   "spot": "Which group behaved the same in both conditions?",
+   "why": "The <b>Year 3 pupils</b> answered faster about larger features in both conditions; many said they used imagery anyway. Year 6 pupils and adults, without the imagery instruction, were faster for <b>distinctive</b> features (claws), which points to <b>propositional</b> knowledge that develops later than pictorial knowledge.",
+   "src": "[PAST-1][LO] Kosslyn 1976; Sternberg 295-296; pty_t5 5.10",
+   "hy": "2 Imagery vs propositional route"
+  },
+  {
+   "s": "fig",
+   "t": "rot",
+   "q": "A lab repeats a mental-rotation study with pairs of letters. The chart shows the mean time to decide that two letters are the same, at each rotation angle. Which conclusion fits this pattern best?",
+   "chart": {
+    "type": "line",
+    "title": "Decision time by rotation angle (hypothetical result)",
+    "x": [
+     "0°",
+     "60°",
+     "120°",
+     "180°"
+    ],
+    "y": "Decision time (s, hypothetical)",
+    "series": [
+     {
+      "name": "Same pairs",
+      "v": [
+       1.5,
+       1.5,
+       1.5,
+       1.5
+      ]
+     }
+    ],
+    "note": "Illustrative values, only to show the shape of the result.",
+    "min": 0,
+    "max": 3
+   },
+   "o": [
+    "It is the classic pattern that supports an analogue code",
+    "It shows that mental images are functionally equivalent to percepts",
+    "It fits a propositional code better than an analogue code",
+    "It shows that rotation in depth is slower than rotation in the plane"
+   ],
+   "a": 2,
+   "spot": "Look at the slope: does time grow with the angle or not?",
+   "why": "The line is <b>flat</b>: deciding takes equally long at 0 and 180 degrees. A <b>propositional</b> description of a letter does not change with its orientation, so this account predicts no angle effect. The <b>analogue</b> view predicts the classic Shepard and Metzler pattern, a <b>linear rise</b> with angle, because rotating an image takes time just like rotating a real object.",
+   "src": "[PAST-1][LO][IDQ] Shepard & Metzler 1971; Matlin 213-214; pty_t5 5.6",
+   "hy": "3 Mental rotation predictions"
+  },
+  {
+   "s": "def",
+   "t": "img",
+   "q": "Which of the following is an analogue representation of the number seven?",
+   "o": [
+    "The spoken word 'zeven' in Dutch",
+    "The written word 'seven' in a children's book",
+    "Seven dots printed on a playing card",
+    "The numeral 7"
+   ],
+   "a": 2,
+   "spot": "Analogue = it resembles what it stands for.",
+   "why": "Seven dots <b>resemble</b> the quantity: more dots means more, just as an analogue clock's hands resemble time passing. The word 'seven', the numeral 7 and the Dutch 'zeven' are <b>arbitrary symbols</b> that we simply agreed on, so they are <b>symbolic</b> codes.",
+   "src": "[PAST-1][LO][IDQ] Paivio dual code; Sternberg 277; pty_t5 5.3",
+   "hy": "4 Analogue vs symbolic"
+  },
+  {
+   "s": "comp",
+   "t": "img",
+   "q": "Judge the following statements. I. Most signs in a sign language look like what they mean, so a person who does not know the language can usually work out their meaning. II. Deaf people who are fluent in American Sign Language are particularly good at mentally rotating an arrangement of objects by 180 degrees.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 1,
+   "spot": "Is a sign mostly a picture or mostly an agreed symbol?",
+   "why": "Statement I is false: most signs are <b>arbitrary</b>, like spoken words, so sign language is mainly a <b>symbolic</b> code with only some iconic signs; you must learn it. Statement II is true: ASL signers constantly rotate a signer's movements by 180 degrees to match their own perspective, which makes them skilled at <b>mental rotation</b> of a scene.",
+   "src": "[PAST-2][CORE] set2 sign language; Matlin 214 (Emmorey et al., 1998); pty_t5 5.6",
+   "hy": "5 Sign languages"
+  },
+  {
+   "s": "comp",
+   "t": "img",
+   "q": "Which statement about people with aphantasia is NOT correct?",
+   "o": [
+    "After a traumatic event they tend to have more vivid visual intrusive memories than typical imagers",
+    "They report that they cannot voluntarily call up visual images of familiar objects, places or faces",
+    "On a visual working memory task their accuracy is roughly similar to that of typical imagers",
+    "On a visual working memory task they feel less confident about their answers than typical imagers"
+   ],
+   "a": 0,
+   "spot": "No inner pictures: what changes, the score, the feeling, or the flashbacks?",
+   "why": "Aphantasia means <b>no voluntary visual imagery</b>. On visual working memory tasks aphantasics reach similar <b>accuracy</b>, probably with non-visual strategies, but report <b>less confidence</b>. Because intrusive memories after trauma are usually vivid images, aphantasics tend to have <b>fewer</b> of them, not more.",
+   "src": "[PAST-2] set2 aphantasia items (exam explanations)",
+   "hy": "6 Aphantasia"
+  },
+  {
+   "s": "app",
+   "t": "img",
+   "q": "Lotte says: 'When I think of my bike, I really see it in front of me, so my memory must store it as a picture.' How would a supporter of propositional theory (Pylyshyn) respond?",
+   "o": [
+    "Your experience is real, but it is a by-product of an abstract description of the bike's meaning",
+    "You are right; the bike is stored in an analogue code that keeps its shape, colours and proportions intact",
+    "The bike is stored twice, once as a picture and once as words, and you are using the picture",
+    "The bike is stored as a sentence in Dutch, which your brain turns into a picture"
+   ],
+   "a": 0,
+   "spot": "Propositional theory: one abstract code, images are epiphenomena.",
+   "why": "For Pylyshyn the felt picture is an <b>epiphenomenon</b>: it is reconstructed from an abstract, language-like code (<b>mentalese</b>) that is neither image nor any natural language. Storing it as a picture is the analogue view; storing it twice, as a picture and words, is Paivio's <b>dual-code</b> theory.",
+   "src": "[LO][IDQ][CORE] Pylyshyn; Sternberg 278-279; pty_t5 5.4",
+   "hy": "7 Dual code vs propositional"
+  },
+  {
+   "s": "find",
+   "t": "biz",
+   "q": "Besken and Mulligan (2021) used dynamic visual noise, spatial tapping and a visual span task as distractors while participants studied bizarre and common sentences. What happened to the bizarreness effect?",
+   "o": [
+    "In none of the four experiments was it reduced by the distractor",
+    "It vanished under dynamic visual noise but survived spatial tapping",
+    "It shrank only when participants were explicitly told to form images",
+    "It shrank only under the visual span task, which needs active maintenance"
+   ],
+   "a": 0,
+   "spot": "Look for the one overall result of the article.",
+   "why": "None of the distractors reduced the <b>bizarreness effect</b>, even though each one is known to disrupt <b>visuospatial</b> processing. In Experiments 3 and 4 the visual span task lowered recall overall, but equally for bizarre and common sentences, so the <b>interaction</b> was never significant.",
+   "src": "[LO][IDQ][CORE] Besken & Mulligan 2021 general discussion; pty_t5 5.11.8",
+   "hy": "8 Besken & Mulligan main result"
+  },
+  {
+   "s": "fig",
+   "t": "biz",
+   "q": "The chart shows sentence access (proportion of sentences of which at least one noun was recalled) in Experiment 3 of Besken and Mulligan (2021). The distraction group kept a chequerboard pattern in mind while reading each sentence. What do these data show?",
+   "chart": {
+    "type": "bar",
+    "title": "Experiment 3: sentence access",
+    "x": [
+     "Visual distraction",
+     "Control"
+    ],
+    "y": "Proportion of sentences accessed",
+    "series": [
+     {
+      "name": "Bizarre",
+      "v": [
+       0.33,
+       0.45
+      ]
+     },
+     {
+      "name": "Common",
+      "v": [
+       0.2,
+       0.28
+      ]
+     }
+    ],
+    "note": "Besken & Mulligan (2021), Table 4 (unconditionalised scores).",
+    "min": 0,
+    "max": 0.6
+   },
+   "o": [
+    "Distraction had no effect on recall at all",
+    "Distraction removed the bizarreness effect, exactly as the imagery hypothesis predicts",
+    "Distraction lowered recall only for the bizarre sentences",
+    "Distraction lowered recall overall; the bizarre advantage stayed about the same"
+   ],
+   "a": 3,
+   "spot": "Compare the level of the bars, then compare the gap within each group.",
+   "why": "Both groups recall less under distraction (a <b>main effect</b> of group: .33 and .20 versus .45 and .28). But the bizarre-common gap is similar (.13 versus .17), so there is no <b>interaction</b>. The imagery hypothesis needed the gap to shrink under distraction; it did not.",
+   "src": "[LO][CORE] Besken & Mulligan 2021 Table 4",
+   "hy": "8 Besken & Mulligan main result"
+  },
+  {
+   "s": "comp",
+   "t": "biz",
+   "q": "Which explanation of the bizarreness effect fits the results of Besken and Mulligan (2021) best?",
+   "o": [
+    "Bizarre images need more mental transformations, which builds a stronger visual trace",
+    "Bizarre images look more visually distinctive and therefore stand out at retrieval",
+    "Bizarre sentences produce more vivid images, so they attract more attention",
+    "Bizarre sentences demand a deeper analysis of the words and how they relate"
+   ],
+   "a": 3,
+   "spot": "If loading visual imagery changes nothing, the cause must lie outside imagery.",
+   "why": "Because visuospatial distraction left the effect intact, the authors locate it in <b>verbal/semantic</b> processing: to understand 'the dog rode the bicycle' you must work out the parts and their relation. The <b>elaboration</b> and <b>distinctiveness</b> explanations are both imagery-based, so they should have been hit by the distractors. Bizarre sentences are in fact rated <b>less</b> vivid.",
+   "src": "[LO][IDQ][CORE] Besken & Mulligan 2021 general discussion; pty_t5 5.11",
+   "hy": "9 Origin of the effect"
+  },
+  {
+   "s": "comp",
+   "t": "rot",
+   "q": "Participants memorise a fantasy map and later mentally travel from one landmark to another, pressing a key when they arrive. Which result would most WEAKEN the claim that they are scanning an analogue image?",
+   "o": [
+    "Scan time rises linearly with the distance between the landmarks",
+    "Scan time rises with distance even when the landmarks are dots that people only imagine on a screen",
+    "Scan time rises with distance only when the testers know which result is expected",
+    "Scan time rises with distance in a three-dimensional arrangement of toys"
+   ],
+   "a": 2,
+   "spot": "Which result offers a non-image explanation of the distance effect?",
+   "why": "If the distance effect appeared only when testers knew the hypothesis, <b>experimenter expectancy</b>, not the image, could explain it. Jolicoeur and Kosslyn (1985) tested exactly this and still found the <b>linear</b> pattern with naive assistants. The other three options are replications (Kosslyn et al., 1978; Borst & Kosslyn, 2008; Pinker, 1980) that support the analogue view.",
+   "src": "[LO][CORE] Kosslyn, Ball & Reiser 1978; Jolicoeur & Kosslyn 1985; Sternberg 296-297; pty_t5 5.7.1",
+   "hy": "11 Image scanning"
+  },
+  {
+   "s": "app",
+   "t": "rot",
+   "q": "Two groups study exactly the same map of an island. On one map the distance between a lighthouse and a harbour is labelled '20 km', on the other '80 km'. When they mentally travel from lighthouse to harbour, the 80 km group takes longer. What does this finding show?",
+   "o": [
+    "Scan time depends only on the physical distance on the map, as the analogue view predicts",
+    "The finding rules out experimenter expectancy as an explanation of scanning results",
+    "Scan time is driven partly by what people know about the distance, so it does not prove the map is stored as an image",
+    "The 20 km group shows representational neglect for half of the map"
+   ],
+   "a": 2,
+   "spot": "Same picture, different number: what made the difference?",
+   "why": "Both groups saw the same picture, so a purely <b>analogue</b> image predicts equal scan times. The difference comes from a <b>number</b>, abstract knowledge, which fits the propositional critique that beliefs about distance drive scan time. An analogue supporter could reply that the 80 km group builds a larger image, so it is no definitive evidence against images either.",
+   "src": "[IDQ] Canvas AB8; pty_t5 5.14.8",
+   "hy": "11 Image scanning"
+  },
+  {
+   "s": "find",
+   "t": "img",
+   "q": "Brooks (1968) found that judging a briefly shown picture was slowest when people answered by pointing, and judging a spoken sentence was slowest when they answered by speaking. Which theory does this pattern support?",
+   "o": [
+    "Propositional theory",
+    "The bizarre-imagery account",
+    "Dual-code theory",
+    "Representational neglect"
+   ],
+   "a": 2,
+   "spot": "Interference only within the same system means two systems.",
+   "why": "Interference appeared only when task and response used the <b>same code</b>: visual with visual, verbal with verbal. That points to two separate codes, a pictorial (<b>analogue</b>) and a verbal (<b>symbolic</b>) one, which is Paivio's <b>dual-code theory</b>. Propositional theory assumes one abstract code, so it does not predict this selective pattern.",
+   "src": "[LO][CORE] Brooks 1968; Sternberg 277-278; pty_t5 5.3",
+   "hy": "12 Brooks"
+  },
+  {
+   "s": "app",
+   "t": "img",
+   "q": "Judge the following statements. I. A sound technician listening for a faint test tone will miss it more often while imagining a melody than while imagining a picture of a tree. II. A security guard watching for a small flash on a screen will miss it more often while imagining a picture of a tree than while imagining a melody.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 2,
+   "spot": "Interference happens within the same sense.",
+   "why": "Both are true. Segal and Fusella (1970) showed that an image makes it harder to detect a real stimulus in the <b>same modality</b>: imagining a tree hurt detecting a visual arrow, imagining an oboe sound did not. By the same logic an auditory image hurts hearing a faint tone. This overlap between imagery and perception supports the <b>analogue</b> view.",
+   "src": "[LO][CORE] Segal & Fusella 1970; Matlin 217; pty_t5 5.7.3",
+   "hy": "13 Imagery-perception interference"
+  },
+  {
+   "s": "comp",
+   "t": "img",
+   "q": "Which finding does NOT support the view that mental images are stored in an analogue code?",
+   "o": [
+    "Shape-similarity judgements of imagined US states resemble judgements made while looking at maps",
+    "People who hold an image of the duck/rabbit figure rarely discover its second interpretation",
+    "Patients with spatial neglect often also leave out the left half of a scene they only imagine",
+    "Judging which of two imagined clock times has the smaller angle is slower when the angles are similar"
+   ],
+   "a": 1,
+   "spot": "Sort each finding: does the image behave like a real picture or not?",
+   "why": "A real picture of the duck/rabbit can be flipped easily, but an <b>image</b> of it mostly cannot, which suggests the image was stored with a description (one interpretation), a <b>propositional</b> code (Chambers & Reisberg). Paivio's clocks and Shepard and Chipman's states show images judged like percepts, and <b>representational neglect</b> shows imagery uses a spatial map like perception.",
+   "src": "[LO][IDQ][CORE] Chambers & Reisberg; Matlin 218-219; pty_t5 5.8",
+   "hy": "14 Ambiguous figures"
+  },
+  {
+   "s": "fig",
+   "t": "biz",
+   "q": "The chart shows how long participants in Experiment 3 of Besken and Mulligan (2021) needed to give their vividness rating for each sentence. What does it suggest about the distractor task?",
+   "chart": {
+    "type": "bar",
+    "title": "Experiment 3: time to give the vividness rating",
+    "x": [
+     "Visual distraction",
+     "Control"
+    ],
+    "y": "Rating time (ms)",
+    "series": [
+     {
+      "name": "Bizarre",
+      "v": [
+       1278,
+       968
+      ]
+     },
+     {
+      "name": "Common",
+      "v": [
+       1102,
+       879
+      ]
+     }
+    ],
+    "note": "Besken & Mulligan (2021), Table 1.",
+    "min": 0,
+    "max": 1500
+   },
+   "o": [
+    "It sped up the ratings, so participants did not form images at all",
+    "It made forming the images harder, since ratings took longer under distraction",
+    "It completely prevented image formation, since no ratings could be given",
+    "It slowed the ratings only for common sentences, so it disrupted only everyday images"
+   ],
+   "a": 1,
+   "spot": "Compare the two groups, not the two sentence types.",
+   "why": "Under the visual span task ratings took clearly longer (about 1,100 to 1,280 ms versus 880 to 970 ms), so the distractor really did <b>load imagery</b>. Yet participants could still rate vividness, so images were slowed, not prevented. That the bizarreness effect survived this <b>imagery load</b> is what makes the result informative; the IDQ adds that 'limited role' is defensible, 'no role' is not.",
+   "src": "[IDQ D5][CORE] Besken & Mulligan 2021 Table 1",
+   "hy": "17 Vividness puzzle"
+  },
+  {
+   "s": "fig",
+   "t": "rot",
+   "q": "In a study modelled on Kosslyn (1976), two groups of participants answer feature questions such as 'Does a cat have a head?' (large, not distinctive) and 'Does a cat have claws?' (small, distinctive). The chart shows their mean response times. Which group is most likely Group B?",
+   "chart": {
+    "type": "bar",
+    "title": "Feature verification time (hypothetical)",
+    "x": [
+     "Head (large)",
+     "Claws (small, distinctive)"
+    ],
+    "y": "Response time (ms, hypothetical)",
+    "series": [
+     {
+      "name": "Group A",
+      "v": [
+       1300,
+       1500
+      ]
+     },
+     {
+      "name": "Group B",
+      "v": [
+       1350,
+       1150
+      ]
+     }
+    ],
+    "note": "Illustrative values, only to show the direction of each pattern.",
+    "min": 0,
+    "max": 1800
+   },
+   "o": [
+    "Year 3 pupils who were told to use a mental image",
+    "Year 3 pupils who were not told to use a mental image",
+    "Adults who were told to use a mental image",
+    "Adults who were not told to use a mental image"
+   ],
+   "a": 3,
+   "spot": "Which group is faster for the distinctive, not the large, feature?",
+   "why": "Group B is faster for <b>claws</b>, the small but distinctive feature. That is the <b>propositional</b> pattern: claws are strongly associated with 'cat'. Kosslyn found it in adults and Year 6 pupils <b>without</b> imagery instructions. Imagery gives Group A's pattern (larger part faster), and Year 3 pupils showed Group A's pattern in both conditions.",
+   "src": "[PAST-1][LO] Kosslyn 1976; Sternberg 295-296; pty_t5 5.10",
+   "hy": "2 Imagery vs propositional route"
+  },
+  {
+   "s": "fig",
+   "t": "biz",
+   "q": "In Experiment 4 of Besken and Mulligan (2021), participants rated how plausible each sentence was instead of how vivid their image was. The chart shows noun recall. Which statement is correct?",
+   "chart": {
+    "type": "bar",
+    "title": "Experiment 4: noun recall",
+    "x": [
+     "Visual distraction",
+     "Control"
+    ],
+    "y": "Proportion of nouns recalled",
+    "series": [
+     {
+      "name": "Bizarre",
+      "v": [
+       0.26,
+       0.36
+      ]
+     },
+     {
+      "name": "Common",
+      "v": [
+       0.18,
+       0.33
+      ]
+     }
+    ],
+    "note": "Besken & Mulligan (2021), Table 5 (unconditionalised scores).",
+    "min": 0,
+    "max": 0.5
+   },
+   "o": [
+    "Recall was higher under distraction, so the visual span task helped memory",
+    "Even without imagery instructions the distractor did not shrink the bizarre advantage; it was numerically larger under distraction",
+    "The distractor removed the bizarre advantage, so imagery instructions were never needed",
+    "The bizarre advantage was larger in the control group, which supports the imagery hypothesis"
+   ],
+   "a": 1,
+   "spot": "Work out the bizarre-minus-common gap in each group.",
+   "why": "The gap is .08 under distraction (.26 versus .18) and only .03 in the control group (.36 versus .33). So the distractor lowered recall overall but did <b>not reduce</b> the bizarreness effect. Without explicit imagery (a <b>plausibility</b> rating) the noun-recall effect was just short of significance, yet the conclusion still holds.",
+   "src": "[LO][CORE] Besken & Mulligan 2021 Table 5; pty_t5 5.11.6",
+   "hy": "8 Besken & Mulligan main result"
+  },
+  {
+   "s": "def",
+   "t": "img",
+   "q": "Representational neglect is best described as",
+   "o": [
+    "being unable to recognise faces, also in imagery",
+    "ignoring one half of a scene that is only imagined",
+    "being unable to call up any visual image at will",
+    "ignoring one half of the visual field while looking"
+   ],
+   "a": 1,
+   "spot": "The key word is 'representational': it is about the inner image.",
+   "why": "In <b>representational neglect</b> patients leave out one half (usually the left) of an <b>imagined</b> or remembered scene. It often co-occurs with spatial neglect, which concerns what is actually seen, but can occur on its own (Peru & Zapparoli, 1999). Problems with faces are prosopagnosia; no voluntary imagery at all is aphantasia.",
+   "src": "[LO][CORE] Sternberg 297-298; pty_t5 5.9",
+   "hy": "18 Representational neglect"
+  },
+  {
+   "s": "find",
+   "t": "img",
+   "q": "Which finding is used in the readings as evidence that imagery and perception share brain machinery?",
+   "o": [
+    "Imagery tasks activate only the language areas of the left hemisphere",
+    "The motor cortex is active during mental rotation whether or not people turned the object by hand",
+    "The primary visual cortex is active when people do tasks that require detailed visual imagery",
+    "People with prosopagnosia can imagine faces normally although they cannot recognise them"
+   ],
+   "a": 2,
+   "spot": "Same area for seeing and for imagining.",
+   "why": "Detailed imagery activates the <b>primary visual cortex</b>, the same region used in seeing. Prosopagnosics, who cannot recognise faces, also have trouble <b>imagining</b> faces, the opposite of the second option. Motor cortex activity appeared only after <b>hands-on</b> rotation (Kosslyn et al., 2001).",
+   "src": "[LO][CORE] Matlin 212-213; pty_t5 5.5",
+   "hy": "19 Neural overlap"
+  },
+  {
+   "s": "def",
+   "t": "biz",
+   "q": "A teacher reads a mixed list of sentences such as 'The cat played the piano' and 'The cat sat beside the piano'. Later the class writes down as many sentences as they can recall. The bizarreness effect predicts that",
+   "o": [
+    "sentences like 'The cat sat beside the piano' are recalled better",
+    "sentences like 'The cat played the piano' are recalled better",
+    "concrete words are recalled better than abstract words",
+    "sentences that feel most vivid are recalled better"
+   ],
+   "a": 1,
+   "spot": "Bizarre = the strange, unusual version of the sentence.",
+   "why": "The <b>bizarreness effect</b> is better memory for bizarre than for common material in a <b>mixed list</b> (McDaniel & Einstein, 1986). Bizarre sentences are actually rated <b>less</b> vivid, so vividness is not the cue. Better memory for concrete words is a different phenomenon, the <b>concreteness effect</b>.",
+   "src": "[LO][CORE] McDaniel & Einstein 1986; pty_t5 5.11",
+   "hy": "10 Bizarreness definition"
+  },
+  {
+   "s": "comp",
+   "t": "biz",
+   "q": "Judge the following statements. I. Visuospatial distractor tasks like those of Besken and Mulligan have been shown to reduce the concreteness effect. II. Besken and Mulligan conclude that visual imagery plays no role in memory at all.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Do the authors throw out imagery, or only one effect?",
+   "why": "Statement I is true: the same kind of distractors <b>do</b> reduce the memory advantage of concrete over abstract words. Statement II is false: the authors assume imagery is a real, separate code; they conclude only that the <b>bizarreness effect</b> for sentences does not rest on it. For bizarre <b>pictures</b> the story may differ.",
+   "src": "[IDQ D2][CORE] Besken & Mulligan 2021 general discussion; pty_t5 5.11.8",
+   "hy": "16 Concreteness contrast and scope"
+  },
+  {
+   "s": "def",
+   "t": "biz",
+   "q": "By choosing dynamic visual noise and spatial tapping as distractors, Besken and Mulligan assumed that, if imagery causes the bizarreness effect, it runs through which component of Baddeley's working memory model?",
+   "o": [
+    "The phonological loop",
+    "The visuospatial sketchpad",
+    "The central executive",
+    "The episodic buffer"
+   ],
+   "a": 1,
+   "spot": "A visual and a spatial distractor load one component.",
+   "why": "Dynamic visual noise loads the visual side and spatial tapping the spatial side of the <b>visuospatial sketchpad</b>. The logic is <b>selective interference</b>: a second task only disrupts the first if both use the same subsystem. The <b>phonological loop</b> was never loaded, so the verbal account follows by elimination.",
+   "src": "[IDQ D3][CORE] Besken & Mulligan 2021; pty_t5 5.11.2, 5.15.3",
+   "hy": "15 Selective interference"
+  },
+  {
+   "s": "find",
+   "t": "biz",
+   "q": "Why did Besken and Mulligan replace dynamic visual noise (Experiment 1) with spatial tapping (Experiment 2)?",
+   "o": [
+    "Spatial tapping also blocks the phonological loop, which made it a stricter test",
+    "With visual noise the sentences had to be heard, and the auditory control showed no bizarreness effect",
+    "Earlier studies had shown that dynamic visual noise does not reliably disrupt the formation of visual images",
+    "Participants could not rate vividness while watching the visual noise"
+   ],
+   "a": 1,
+   "spot": "You cannot shrink an effect that is absent in the comparison group.",
+   "why": "Participants had to watch the flickering <b>dynamic visual noise</b>, so sentences were presented through headphones. But the <b>auditory control</b> group showed no bizarreness effect, so there was nothing to reduce. Tapping is done without looking, so sentences could again be <b>read on screen</b>, the format that produced the effect.",
+   "src": "[IDQ D1][CORE] Besken & Mulligan 2021 Exp 1-2; pty_t5 5.15.1",
+   "hy": "20 Exp 1 to Exp 2"
+  },
+  {
+   "s": "app",
+   "t": "img",
+   "q": "Participants read 'The chef saw the egg in the frying pan' and then see a picture. They must say whether the pictured object was mentioned in the sentence. They answer faster to a picture of a fried egg than to a picture of a whole egg in its shell. Which kind of representation explains this best?",
+   "o": [
+    "A verbal (symbolic) representation",
+    "An analogue (depictive) representation",
+    "A propositional (descriptive) representation",
+    "An onomatopoeic representation"
+   ],
+   "a": 1,
+   "spot": "Which code carries the shape the sentence only implies?",
+   "why": "An egg 'in the frying pan' is pictured <b>broken and fried</b>; that shape is not in the words, but follows from an <b>analogue</b> image, so the matching picture is verified faster. The word 'egg' and a proposition such as saw(chef, egg) are the same for both pictures, so neither predicts a difference (as in Zwaan et al., 2002).",
+   "src": "[IDQ AB4] Zwaan et al. 2002; pty_t5 5.14.4",
+   "hy": "21 Zwaan implied shape"
+  }
+ ],
+ "m1": [
+  {
+   "s": "app",
+   "t": "rot",
+   "q": "Noor imagines a ladybird as big as a dog standing next to a dog as small as a ladybird. She is asked whether the ladybird has black spots. Compared with imagining a normal ladybird next to a normal dog, she will answer",
+   "o": [
+    "slower, because the scene is bizarre",
+    "slower, because real ladybirds are tiny",
+    "faster, because the ladybird is large in her image",
+    "equally fast, because her knowledge of ladybirds is the same"
+   ],
+   "a": 2,
+   "spot": "Size on the mental screen decides how easy details are.",
+   "why": "In this image the ladybird is the <b>large</b> animal, so its details are easy to inspect, just as in perception. What counts is the <b>size in the image</b>, not real-world size (Kosslyn, 1975). This fits the <b>functional-equivalence hypothesis</b>.",
+   "src": "[PAST-2][LO][IDQ AB6] Kosslyn 1975; pty_t5 5.10, 5.14.6",
+   "hy": "1 Image scaling"
+  },
+  {
+   "s": "comp",
+   "t": "rot",
+   "q": "Judge the following statements. I. If images of letters were stored only as propositions, the time to decide whether two rotated letters are the same should hardly depend on the rotation angle. II. Writing an angle as 'ninety degrees' is an example of an analogue code.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Who predicts the flat line, and does a word resemble an angle?",
+   "why": "Statement I is true: a <b>propositional</b> description does not change with orientation, so it predicts no angle effect; the linear rise found by Shepard and Metzler supports the <b>analogue</b> view. Statement II is false: 'ninety degrees' is made of arbitrary words, a <b>symbolic</b> code.",
+   "src": "[PAST-1][LO] Shepard & Metzler 1971; pty_t5 5.3, 5.6",
+   "hy": "3 Mental rotation predictions"
+  },
+  {
+   "s": "find",
+   "t": "biz",
+   "q": "Besken and Mulligan (2021) ran a Bayesian analysis across their experiments and found Bayes factors of 11.49 (sentence access) and 13.86 (noun recall). What do these values mean?",
+   "o": [
+    "Strong evidence that distraction does not make the bizarreness effect smaller",
+    "Too little evidence to draw any conclusion",
+    "Strong evidence that visuospatial distraction makes the bizarreness effect smaller",
+    "Strong evidence that there is no bizarreness effect at all"
+   ],
+   "a": 0,
+   "spot": "A Bayes factor here favours the null: no reduction.",
+   "why": "The Bayes factors give <b>strong evidence for the null hypothesis</b>: the effect under distraction is equal to or larger than in the control condition, not smaller, as the <b>imagery hypothesis</b> predicted. The bizarreness effect itself was clearly present, so the third option is wrong.",
+   "src": "[LO][CORE] Besken & Mulligan 2021 combined analyses; pty_t5 5.11.7",
+   "hy": "8 Besken & Mulligan main result"
+  },
+  {
+   "s": "def",
+   "t": "img",
+   "q": "In propositional theory, which pair of sentences has the SAME underlying representation?",
+   "o": [
+    "'A robin is a bird' and 'A bird is a robin'",
+    "'The car is red' and 'The car is fast'",
+    "'The lamp is above the desk' and 'The desk is below the lamp'",
+    "'The dog bit the man' and 'The man bit the dog'"
+   ],
+   "a": 2,
+   "spot": "Same meaning, different wording = same proposition.",
+   "why": "A <b>proposition</b> captures the bare <b>meaning</b> of a relation, regardless of wording, just as 'the table is above the cat' and 'the cat is under the table' express one relation. Swapping agent and object (dog/man) or the category relation (robin/bird) changes the meaning, so the proposition changes too.",
+   "src": "[LO][IDQ AB1][CORE] Sternberg 278-279 Table 7.1; pty_t5 5.4",
+   "hy": "7 Dual code vs propositional"
+  }
+ ],
+ "m2": [
+  {
+   "s": "find",
+   "t": "rot",
+   "q": "Without being told to use a mental image, an adult answers 'Does a cat have claws?' faster than 'Does a cat have a head?'. What explains this?",
+   "o": [
+    "Claws are strongly associated with cats in propositional knowledge",
+    "The head is too large to fit on the mental screen",
+    "Claws take up a larger part of the mental image of a cat than the head does",
+    "Adults always use imagery, and imagery favours small parts"
+   ],
+   "a": 0,
+   "spot": "No imagery instruction: think association, not size.",
+   "why": "Without imagery, adults rely on <b>verbal-propositional</b> knowledge, where <b>distinctive</b> features (claws for a cat) are strongly associated with the animal and are verified fast. With an imagery instruction the pattern flips: the physically <b>larger</b> head is 'seen' faster (Kosslyn, 1976).",
+   "src": "[PAST-1][LO] Kosslyn 1976; pty_t5 5.10",
+   "hy": "2 Imagery vs propositional route"
+  },
+  {
+   "s": "comp",
+   "t": "img",
+   "q": "Which statement about kinds of representation is NOT correct?",
+   "o": [
+    "An analogue clock represents time in a way that resembles the passing of time",
+    "The numeral 9 is a symbolic code, because nothing about its shape refers to nine-ness",
+    "Onomatopoeic words such as 'buzz' are atypical words because their sound resembles their meaning",
+    "Sign languages are purely analogue, because signs are made with the hands in space"
+   ],
+   "a": 3,
+   "spot": "Being visible and spatial does not make a sign resemble its meaning.",
+   "why": "Most signs are <b>arbitrary</b>, so sign languages are mainly <b>symbolic</b> with only some iconic signs. The other statements are correct: an <b>onomatopoeia</b> has an analogue feature, the numeral 9 is an agreed symbol, and clock hands are <b>analogous</b> to time passing.",
+   "src": "[PAST-2][IDQ AB3] set2 sign language; pty_t5 5.3, 5.14.3",
+   "hy": "4 Analogue vs symbolic"
+  },
+  {
+   "s": "fig",
+   "t": "biz",
+   "q": "The chart shows sentence access in Experiment 2 of Besken and Mulligan (2021), where half of the participants tapped four pegs in a fixed pattern without looking while reading each sentence. What do these results show?",
+   "chart": {
+    "type": "bar",
+    "title": "Experiment 2: sentence access",
+    "x": [
+     "Spatial tapping",
+     "Control"
+    ],
+    "y": "Proportion of sentences accessed",
+    "series": [
+     {
+      "name": "Bizarre",
+      "v": [
+       0.43,
+       0.48
+      ]
+     },
+     {
+      "name": "Common",
+      "v": [
+       0.26,
+       0.32
+      ]
+     }
+    ],
+    "note": "Besken & Mulligan (2021), Table 3.",
+    "min": 0,
+    "max": 0.6
+   },
+   "o": [
+    "Neither group showed a bizarreness effect",
+    "Tapping removed the bizarre advantage, which supports the imagery hypothesis",
+    "Bizarre sentences were recalled better in both groups, with a similar advantage, so tapping did not reduce the effect",
+    "Tapping strongly lowered recall overall, but only for common sentences"
+   ],
+   "a": 2,
+   "spot": "Compute the gap in each group and compare.",
+   "why": "The bizarre advantage is .17 with tapping (.43 versus .26) and .16 in the control group (.48 versus .32): almost identical. So <b>spatial tapping</b>, which disrupts visuospatial processing, did not shrink the <b>bizarreness effect</b>; the interaction was not significant.",
+   "src": "[LO][CORE] Besken & Mulligan 2021 Table 3",
+   "hy": "8 Besken & Mulligan main result"
+  },
+  {
+   "s": "comp",
+   "t": "rot",
+   "q": "Judge the following statements. I. Sex differences in mental rotation performance become smaller, or disappear, with training. II. Older adults are slower at mental rotation, and age slows other imagery skills, such as scanning images, just as consistently.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Is rotation special when it comes to age?",
+   "why": "Statement I is true: <b>training</b> reduces or removes the sex difference, so it is not fixed. Statement II is false: older people are slower at <b>mental rotation</b>, but age is <b>not consistently</b> related to other imagery skills such as scanning, so rotation seems specifically sensitive to ageing.",
+   "src": "[CORE] Matlin 214; Sternberg 294; pty_t5 5.6",
+   "hy": "22 Individual differences in rotation"
+  }
+ ],
+ "m3": [
+  {
+   "s": "find",
+   "t": "rot",
+   "q": "Right-handed and left-handed participants decide whether photos of single hands, shown upright or upside down, are left or right hands (Takeda et al., 2010). Which result was found?",
+   "o": [
+    "Both groups were faster for upright than upside-down hands",
+    "Left-handers recognised left hands faster than right hands",
+    "Only right-handers were affected by the orientation of the hand",
+    "Both groups were faster for upside-down than upright hands"
+   ],
+   "a": 0,
+   "spot": "A bigger rotation means a slower answer, for everyone.",
+   "why": "Right-handers recognised right hands faster, while left-handers were equally fast for both. But <b>both groups</b> were faster and more accurate for <b>upright</b> hands, consistent with the rotation principle: 0 degrees needs less <b>mental rotation</b> than 180 degrees.",
+   "src": "[CORE] Takeda et al. 2010; Matlin 214; pty_t5 5.6",
+   "hy": "22 Individual differences in rotation"
+  },
+  {
+   "s": "comp",
+   "t": "rot",
+   "q": "Which finding would be hardest to explain if all knowledge were stored as abstract propositions?",
+   "o": [
+    "Adults without imagery instructions verify the distinctive features of animals faster than the large features",
+    "A rabbit's details are checked more slowly when it is imagined next to an elephant than next to a fly",
+    "People rarely find a parallelogram hidden in a remembered Star of David",
+    "Scanning an identical map takes longer when the distance is labelled 80 rather than 20 miles"
+   ],
+   "a": 1,
+   "spot": "Which result depends on size in the image itself?",
+   "why": "A proposition about a rabbit is the same whatever it is imagined next to, so only an <b>analogue</b> image with limited resolution predicts the relative-size effect (Kosslyn, 1975). Distinctive-feature speed, Reed's hidden figures and the 20/80 mile label all fit a <b>propositional</b> account well.",
+   "src": "[PAST-2][LO][IDQ] Kosslyn 1975; Reed 1974; pty_t5 5.8, 5.10",
+   "hy": "1 Image scaling"
+  },
+  {
+   "s": "find",
+   "t": "biz",
+   "q": "In Besken and Mulligan (2021), bizarre sentences were consistently rated as less vivid than common ones. Which explanation fits best?",
+   "o": [
+    "Bizarre sentences are processed only verbally, so no image is formed at all",
+    "Bizarre sentences contained fewer nouns than common sentences",
+    "There is no stored example of the strange combination, so the image must be assembled from separate concepts",
+    "The distractor tasks disrupted the images of bizarre sentences only"
+   ],
+   "a": 2,
+   "spot": "Think of semantic memory: what is ready-made for a common scene?",
+   "why": "For 'the dog chased the bicycle' you have typical exemplars ready, so a rich image comes quickly. For 'the dog rode the bicycle' you must build the image from concepts that do not normally go together, so it has fewer details and feels <b>less vivid</b>, and takes longer. Participants did still rate vividness, so images were formed; the low rating also appeared in the <b>control</b> groups.",
+   "src": "[IDQ D4][CORE] Besken & Mulligan 2021 Table 1; pty_t5 5.15.4",
+   "hy": "17 Vividness puzzle"
+  },
+  {
+   "s": "def",
+   "t": "img",
+   "q": "In the last century, cognitive psychology often compared the mind to a computer that stores every photo as abstract code and only builds a picture when it is shown on screen. Which view of mental representation fits this metaphor best?",
+   "o": [
+    "Propositional theory",
+    "The functional-equivalence hypothesis",
+    "Dual-code theory",
+    "The analogue code"
+   ],
+   "a": 0,
+   "spot": "Abstract code inside, picture built only on output.",
+   "why": "A computer stores even a photo as <b>abstract symbols</b> and reconstructs the image for display. That matches <b>propositional theory</b>: knowledge is kept in an abstract, language-like code, and the experienced image is an <b>epiphenomenon</b> rebuilt at retrieval. Dual-code theory and functional equivalence give images a real picture-like format.",
+   "src": "[IDQ AB5][CORE] pty_t5 5.14.5",
+   "hy": "7 Dual code vs propositional"
+  }
+ ]
+}

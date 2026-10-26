@@ -1,0 +1,695 @@
+{
+ "theme": [
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "A yoghurt brand sells the same product in two shops. In shop 1 the label says “95% fat-free”, in shop 2 it says “contains 5% fat”. Shoppers buy it far more often in shop 1. Which principle of expected utility theory does this violate?",
+   "o": [
+    "Transitivity",
+    "Invariance",
+    "Cancellation",
+    "Dominance"
+   ],
+   "a": 1,
+   "spot": "Same product, same facts, only the description differs.",
+   "why": "<b>Invariance</b> says a choice should not depend on how the same option is <b>described</b>. “95% fat-free” and “5% fat” are the same yoghurt, so a different choice is a framing effect. Transitivity is about a consistent order of preferences (A over B over C), and cancellation about ignoring outcomes that two options share.",
+   "src": "[PAST-1][PAST-2][LO D1, D4][IDQ DE6] Robinson-Riegler p. 482; Matlin pp. 437-440",
+   "hy": "1 Invariance / framing"
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "According to the transitivity principle of expected utility theory, a person who prefers a bike to a scooter and a scooter to a car should",
+   "o": [
+    "prefer the bike to the car as well",
+    "choose the same option however it is described",
+    "ignore outcomes that the bike and the car share",
+    "value a loss of the car more than a gain of it"
+   ],
+   "a": 0,
+   "spot": "“Prefers X to Y and Y to Z, so…” asks what follows logically.",
+   "why": "<b>Transitivity</b>: if A is preferred to B and B to C, then A must be preferred to C. Otherwise your preferences go round in a circle. “Same choice however described” is <b>invariance</b>, “ignore shared outcomes” is <b>cancellation</b>, and the last option describes loss aversion from prospect theory.",
+   "src": "[PAST-2] set2 transitivity item; EU principles as defined in set1/set2",
+   "hy": "7 Transitivity"
+  },
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Judge these statements.<br>I. Someone who chooses tea over coffee, coffee over juice, and juice over tea violates transitivity.<br>II. Someone who reacts differently to “€5 off” and “pay €15 instead of €20” violates cancellation.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Check each scenario against the principle it names.",
+   "why": "Statement I is true: tea > coffee > juice > tea is a <b>circle</b>, which breaks <b>transitivity</b>. Statement II is false: the two price labels describe the same deal, so the principle that is broken is <b>invariance</b> (framing), not cancellation. Cancellation is about ignoring an outcome that two options have in common.",
+   "src": "[PAST-1][PAST-2] set1/set2 EU principle items",
+   "hy": "7 Transitivity + 1 Invariance"
+  },
+  {
+   "s": "fig",
+   "t": "dec",
+   "q": "Consider these two choices.<table class=\"qt\"><tr><th>Choice</th><th>Option</th><th>Outcomes</th></tr><tr><td>1</td><td>A</td><td>€1 million for sure</td></tr><tr><td>1</td><td>B</td><td>10%: €5 million; 89%: €1 million; 1%: nothing</td></tr><tr><td>2</td><td>C</td><td>11%: €1 million; 89%: nothing</td></tr><tr><td>2</td><td>D</td><td>10%: €5 million; 90%: nothing</td></tr></table>Most people choose A in choice 1 and D in choice 2. Which principle of expected utility theory does this pattern violate?",
+   "o": [
+    "Cancellation, because a chance shared by both options should not matter",
+    "Transitivity, because the four options together form a circle of preferences",
+    "Invariance, because choice 2 merely describes choice 1 in other words",
+    "Dominance, because option D is better than option C in every outcome"
+   ],
+   "a": 0,
+   "spot": "Find what the two choices have in common and what was removed.",
+   "why": "Choice 2 is choice 1 with the same <b>89% chance of €1 million</b> taken out of both options. By <b>cancellation (independence)</b>, an outcome shared by both options should not affect the choice, so A should go with C and B with D. People switch because A is <b>certain</b>: the <b>certainty effect</b> (Allais paradox). It is not invariance, because choice 2 is a different gamble, not a new wording of the same one.",
+   "src": "[PAST-2] set2 Allais item; Allais paradox as explained in set2",
+   "hy": "4 Certainty effect / Allais / cancellation"
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "What is meant by the certainty effect?",
+   "o": [
+    "People overweight an outcome that is certain compared with one that is only probable",
+    "People value a loss of a given size more strongly than a gain of exactly the same size",
+    "People change their choice when the same outcome is described in a different way",
+    "People judge an outcome likely when it resembles the process that produced it"
+   ],
+   "a": 0,
+   "spot": "A definition on the probability side of decision making.",
+   "why": "The <b>certainty effect</b> is about <b>probabilities</b>: a sure thing gets extra weight compared with something that is merely likely (it drives the Allais paradox). Losses weighing more is <b>loss aversion</b>; a different choice for a new description is <b>framing</b>; judging by resemblance is <b>representativeness</b>.",
+   "src": "[PAST-1][PAST-2] set1/set2 certainty effect items",
+   "hy": "4 Certainty effect"
+  },
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Prospect theory has a value side (how gains and losses feel) and a probability side (how chances are weighted). Where do loss aversion and the certainty effect belong?",
+   "o": [
+    "Loss aversion on the value side, the certainty effect on the probability side",
+    "Loss aversion on the probability side, the certainty effect on the value side",
+    "Both on the value side, because both concern how strongly outcomes are felt",
+    "Both on the probability side, because both concern how risky choices are made"
+   ],
+   "a": 0,
+   "spot": "Ask of each: is it about how much, or about how likely?",
+   "why": "<b>Loss aversion</b> is about <b>how much</b> an outcome hurts or pleases: the value curve is steeper for losses. The <b>certainty effect</b> is about <b>how likely</b>: a 100% chance is weighted more than its size alone justifies. So one belongs to the value function, the other to probability weighting.",
+   "src": "[PAST-1] set1 prospect theory item; [IDQ DE3] Robinson-Riegler p. 483",
+   "hy": "6 Value vs probability side"
+  },
+  {
+   "s": "fig",
+   "t": "dec",
+   "q": "The figure shows the utility (subjective worth) of total wealth according to expected utility theory. Which idea does the flattening of the curve express?",
+   "chart": {
+    "type": "line",
+    "title": "Utility of total wealth (illustrative)",
+    "x": [
+     "€0",
+     "€1,000",
+     "€2,000",
+     "€3,000",
+     "€4,000",
+     "€5,000"
+    ],
+    "y": "Utility",
+    "series": [
+     {
+      "name": "Utility",
+      "v": [
+       0,
+       32,
+       45,
+       55,
+       63,
+       71
+      ]
+     }
+    ],
+    "note": "Illustrative shape, not data.",
+    "min": 0,
+    "max": 80
+   },
+   "o": [
+    "Loss aversion",
+    "Diminishing marginal utility",
+    "The certainty effect",
+    "Reference dependence"
+   ],
+   "a": 1,
+   "spot": "Each extra step to the right adds less height.",
+   "why": "Going from €0 to €1,000 adds much more utility than going from €4,000 to €5,000: each extra euro is worth less the more you already have. That is <b>diminishing marginal utility</b>, a <b>concave</b> curve. Loss aversion and reference dependence belong to prospect theory and need a curve with a gain side and a loss side; the certainty effect concerns probabilities, which are not on this graph.",
+   "src": "[PAST-2] set2 diminishing marginal utility item; illustrative curve",
+   "hy": "8 Diminishing marginal utility"
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "Diminishing marginal utility means that",
+   "o": [
+    "each extra unit of money adds less satisfaction the more money you already have",
+    "a loss of money is felt more strongly than a gain of the same amount",
+    "a sure amount of money is weighted more than an equally large likely amount",
+    "money that is already spent should not influence a new decision"
+   ],
+   "a": 0,
+   "spot": "“Marginal” = the next extra unit.",
+   "why": "<b>Diminishing marginal utility</b>: the next €100 means less to someone who has a lot than to someone who has little, so the utility curve is <b>concave</b>. The second option is <b>loss aversion</b>, the third the <b>certainty effect</b>, the fourth the rule that <b>sunk costs</b> should be ignored.",
+   "src": "[PAST-2] set2 diminishing marginal utility item",
+   "hy": "8 Diminishing marginal utility"
+  },
+  {
+   "s": "fig",
+   "t": "dec",
+   "q": "The figure shows the value function of prospect theory. What would it look like if people showed diminishing sensitivity but no loss aversion?",
+   "chart": {
+    "type": "line",
+    "title": "Prospect theory value function (illustrative)",
+    "x": [
+     "-500",
+     "-400",
+     "-300",
+     "-200",
+     "-100",
+     "0",
+     "100",
+     "200",
+     "300",
+     "400",
+     "500"
+    ],
+    "y": "Subjective value",
+    "series": [
+     {
+      "name": "Value",
+      "v": [
+       -534,
+       -439,
+       -340,
+       -238,
+       -129,
+       0,
+       58,
+       106,
+       151,
+       195,
+       237
+      ]
+     }
+    ],
+    "note": "Illustrative shape after Robinson-Riegler Figure 11.4. Horizontal axis: loss or gain from the reference point (0)."
+   },
+   "o": [
+    "A straight line through the reference point, equally steep for gains and losses",
+    "An S-shape that is equally steep for losses and gains, bending on both sides",
+    "A curve that is concave for losses and convex for gains, steeper for losses",
+    "A curve that rises only for gains and stays flat at zero for all losses"
+   ],
+   "a": 1,
+   "spot": "Remove one feature, keep the other.",
+   "why": "The real curve has two features: it <b>flattens</b> further from the reference point (<b>diminishing sensitivity</b>) and the loss side is <b>steeper</b> (<b>loss aversion</b>). Remove only loss aversion and you keep the S-shape, but the loss half becomes a mirror image of the gain half. A straight line would remove diminishing sensitivity too.",
+   "src": "[PAST-2][IDQ DE3, DE4] Robinson-Riegler Figure 11.4; illustrative values",
+   "hy": "5 Loss aversion / value function"
+  },
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "In a survey, employees say a pay cut of €100 a month would upset them far more than a raise of €100 a month would please them. Which concept describes this?",
+   "o": [
+    "Diminishing marginal utility",
+    "The certainty effect",
+    "Loss aversion",
+    "Psychological accounting"
+   ],
+   "a": 2,
+   "spot": "Same amount, losing hurts more than gaining pleases.",
+   "why": "<b>Loss aversion</b>: in prospect theory the value function is <b>steeper for losses</b> than for gains, so losing €100 weighs more than winning €100. Diminishing marginal utility is about the next euro mattering less as you get richer, not about the gain/loss difference. No probabilities are involved, so it is not the certainty effect.",
+   "src": "[PAST-2][IDQ DE3] Robinson-Riegler p. 483",
+   "hy": "5 Loss aversion"
+  },
+  {
+   "s": "fig",
+   "t": "dec",
+   "q": "The figure shows the choices in Tversky and Kahneman's (1981) Asian disease problem. One group chose between programmes described in lives saved, another group between the same programmes described in deaths. Which conclusion fits the figure?",
+   "chart": {
+    "type": "bar",
+    "title": "Asian disease problem (Tversky & Kahneman, 1981)",
+    "x": [
+     "Gain frame (lives saved)",
+     "Loss frame (deaths)"
+    ],
+    "y": "% of participants",
+    "series": [
+     {
+      "name": "Sure programme",
+      "v": [
+       72,
+       22
+      ]
+     },
+     {
+      "name": "Risky programme",
+      "v": [
+       28,
+       78
+      ]
+     }
+    ],
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Most people chose the sure programme in both frames, but fewer did so in the loss frame",
+    "People were risk seeking for lives saved and risk averse for deaths, as prospect theory predicts",
+    "The wording alone reversed the majority, so the choices violate invariance",
+    "The risky programme saved more lives on average, so choosing it in the loss frame was rational"
+   ],
+   "a": 2,
+   "spot": "Same options in both frames: what flipped, and why does that matter?",
+   "why": "In the gain frame <b>72%</b> chose the sure programme; in the loss frame <b>78%</b> chose the risky one. Since A equals C and B equals D, only the wording differed, so the reversal violates <b>invariance</b>. The direction is the opposite of the second option: people are <b>risk averse for gains</b> and <b>risk seeking for losses</b>. The programmes had equal expected outcomes.",
+   "src": "[LO D4][IDQ DE5, DE6] Robinson-Riegler Table 11.10; Matlin p. 439",
+   "hy": "10 Gain/loss frames + 1 Invariance"
+  },
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "A wildfire threatens 300 homes. Residents must choose a plan. Plan 1: 200 homes will burn down. Plan 2: there is a one-third chance that no home burns down and a two-thirds chance that all 300 burn down. What does prospect theory predict?",
+   "o": [
+    "Most choose plan 2, because outcomes framed as losses make people seek risk",
+    "Most choose plan 1, because people avoid risk whenever lives or homes are at stake",
+    "Most choose plan 1, because a certain outcome is always weighted more heavily",
+    "Choices split evenly, because both plans lead to the same expected number of losses"
+   ],
+   "a": 0,
+   "spot": "Look at the wording: homes saved or homes lost?",
+   "why": "Both plans lose 200 homes on average, but they are described as <b>losses</b> (“will burn down”). In a <b>loss frame</b> people are <b>risk seeking</b>: the sure loss feels worse than a gamble that might avoid all loss, as in the Asian disease problem (78% chose the risky option). The certainty effect makes a sure <b>gain</b> attractive, but a sure loss is what people try to escape.",
+   "src": "[LO D4][IDQ DE4] Matlin p. 440; Robinson-Riegler p. 484",
+   "hy": "10 Gain/loss frames"
+  },
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Which statement about expected utility theory and prospect theory is NOT correct?",
+   "o": [
+    "Expected utility theory describes how a perfectly rational person should choose",
+    "Prospect theory evaluates outcomes as gains and losses relative to a reference point",
+    "Prospect theory describes how people ought to choose, so it is a normative model",
+    "Expected utility theory weighs the utility of each outcome by its probability"
+   ],
+   "a": 2,
+   "spot": "Normative = how we should choose; descriptive = how we do choose.",
+   "why": "<b>Prospect theory</b> is <b>descriptive</b>: it describes how people actually choose and why they break expected utility. <b>Expected utility theory</b> is the <b>normative</b> yardstick: utility times probability, for an ideal rational decision maker. The other three statements are correct.",
+   "src": "[LO D1, D3][IDQ DE2] Robinson-Riegler pp. 481-483",
+   "hy": "11 Normative vs descriptive"
+  },
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Scenario 1: you lose your €25 museum ticket at the entrance. Scenario 2: you lose a €25 note on your way to buy the ticket. People are much less willing to pay €25 again in scenario 1. According to Matlin, what produces this difference?",
+   "o": [
+    "The wording of the question, which presents one scenario as a gain and the other as a loss",
+    "The background context of the choice, which puts the lost money in a different mental account",
+    "The certainty effect, because the ticket was certain while the note was only probable",
+    "Anchoring, because the price of the first ticket serves as a starting point for the second"
+   ],
+   "a": 1,
+   "spot": "The money lost is identical; what differs is where it is booked.",
+   "why": "Matlin separates two framing factors: the <b>background context</b> and the <b>wording</b>. Here the wording is not about gains versus losses; the situation differs. A lost ticket is booked in the “museum account”, so a new ticket feels like paying €50 (<b>psychological accounting</b>). In the classic concert version 46% would buy again after losing the ticket and 88% after losing the cash.",
+   "src": "[LO D4][IDQ DE5] Matlin pp. 437-439 (Demonstration 12.7); Robinson-Riegler p. 486",
+   "hy": "13 Background context / accounting"
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "Judgement I: after seven reds in a row at roulette, a player bets on black because black is “due”. Judgement II: people estimate that murder causes more deaths than suicide, although the opposite is true. These judgements are",
+   "o": [
+    "both due to the availability heuristic",
+    "both due to the representativeness heuristic",
+    "due to the availability and the representativeness heuristic, respectively",
+    "due to the representativeness and the availability heuristic, respectively"
+   ],
+   "a": 3,
+   "spot": "First: what should a random sequence look like? Second: what comes to mind easily?",
+   "why": "I is the <b>gambler's fallacy</b>: a short run is expected to look like a random process, so black seems due. That is <b>representativeness</b>. II: murders get much publicity, so examples come to mind easily and seem frequent (Lichtenstein et al., 1978). That is <b>availability</b>.",
+   "src": "[PAST-1] set1 'respectively' shape; Eysenck & Keane p. 626; Matlin & Farmer",
+   "hy": "2 Representativeness + 3 Availability"
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "Tom is quiet, loves science fiction and spends his evenings building computers. Many people rate “Tom is an accountant who plays online games” as more likely than “Tom is an accountant”. What is this error, and where does it come from?",
+   "o": [
+    "The conjunction fallacy, caused by the representativeness heuristic",
+    "The conjunction fallacy, caused by the anchoring-and-adjustment heuristic",
+    "Base-rate neglect, caused by the availability heuristic",
+    "The gambler's fallacy, caused by the representativeness heuristic"
+   ],
+   "a": 0,
+   "spot": "A combination (A and B) judged likelier than one of its parts (A).",
+   "why": "Every accountant who plays online games is also an accountant, so the combination can never be more likely: the <b>conjunction fallacy</b>. The added detail fits the description, so the combination looks more typical: <b>representativeness</b>, as in the Linda problem. The gambler's fallacy is about random sequences.",
+   "src": "[PAST-1][LO J5][IDQ ABC6] Matlin & Farmer; Eysenck & Keane",
+   "hy": "2 Conjunction fallacy"
+  },
+  {
+   "s": "def",
+   "t": "heur",
+   "q": "What is the difference between the conjunction fallacy and the double conjunction fallacy?",
+   "o": [
+    "In the double version the combination is judged likelier than each of its two parts",
+    "In the double version two people commit the fallacy about the same description",
+    "In the double version the fallacy is made twice in a row, before and after feedback",
+    "In the double version base rates are ignored as well as the conjunction rule"
+   ],
+   "a": 0,
+   "spot": "Count how many of the parts the combination is said to beat.",
+   "why": "In the <b>conjunction fallacy</b> “A and B” is judged likelier than <b>one</b> part. In the <b>double conjunction fallacy</b> it is judged likelier than <b>both</b> A and B separately. Crupi et al. (2018): 49% of medical experts judged “alcoholism and thalassemia” more probable than either alone.",
+   "src": "[IDQ ABC6] Eysenck & Keane (Crupi et al., 2018)",
+   "hy": "16 Conjunction vs double conjunction"
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Participants estimated how many seven-letter words in a 2,000-word passage end in <i>-ing</i>, or have <i>n</i> as the second-to-last letter. Estimates for <i>-ing</i> words were more than twice as high. What does this show?",
+   "o": [
+    "Ease of generating examples drove the estimates, since -ing words are a subset of the other",
+    "Estimates followed resemblance to a typical English word, since -ing words look more like real words",
+    "Estimates were anchored on the first word that came to mind and were then adjusted too little",
+    "Estimates were correct, since -ing is the most frequent ending of seven-letter English words"
+   ],
+   "a": 0,
+   "spot": "Can the subset be bigger than the set? Then why was it judged bigger?",
+   "why": "Every <i>-ing</i> word has <i>n</i> as its second-to-last letter, so it is a <b>subset</b> and cannot be more frequent. Yet <i>-ing</i> words are much easier to generate, so they feel more frequent: the <b>availability</b> heuristic (Tversky & Kahneman, 1983). Sternberg notes it also produces a conjunction-type error.",
+   "src": "[CORE] Sternberg et al. pp. 493, 497",
+   "hy": "18 Availability via ease of generation"
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Judge these statements about the hindsight bias.<br>I. Matlin explains it with anchoring and adjustment: the known outcome serves as a 100% anchor and people adjust too little.<br>II. In Carli's (1999) study, readers recalled story details that fitted the ending they had read, although those details were not in the story.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 2,
+   "spot": "Two claims from the hindsight section: one explanation, one finding.",
+   "why": "Both are true. Knowing the outcome happened (100% certain) acts as an <b>anchor</b>, and people do not adjust their “I would have predicted it” downward enough. Carli showed the memory side: each group falsely “remembered” details that fitted the ending (rape or proposal), so the past is <b>reconstructed</b> to match what we know now.",
+   "src": "[PAST-1][LO J5][IDQ ABC10] Matlin pp. 444-446",
+   "hy": "9 Hindsight bias"
+  },
+  {
+   "s": "fig",
+   "t": "heur",
+   "q": "Of 1,000 athletes, 20 used a banned drug. A test is positive for 18 of these 20 athletes, and also for 49 of the 980 clean athletes.<table class=\"qt\"><tr><th></th><th>Test positive</th><th>Test negative</th></tr><tr><td>Used drug (20)</td><td>18</td><td>2</td></tr><tr><td>Clean (980)</td><td>49</td><td>931</td></tr></table>An athlete tests positive. What is the probability that this athlete used the drug (rounded to a whole percentage)?",
+   "o": [
+    "90%",
+    "27%",
+    "5%",
+    "2%"
+   ],
+   "a": 1,
+   "spot": "Only the positive column matters: true positives divided by all positives.",
+   "why": "There are 18 + 49 = <b>67</b> positive tests, of which 18 are true: 18 / 67 = <b>27%</b>. The tempting 90% is the test's hit rate (18 of 20), which ignores the <b>base rate</b>: clean athletes are so many that their false positives outnumber the true ones. Counting in <b>natural frequencies</b> like this makes the Bayesian answer easy (Gigerenzer & Hoffrage, 1995).",
+   "src": "[LO J2][IDQ ABC9] Eysenck & Keane pp. 623-624, 629",
+   "hy": "17 Natural frequencies / base rate"
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "In the taxicab problem, 85% of the city's cabs are Green and 15% Blue. A witness who is correct 80% of the time says the cab in an accident was Blue. Most people say the chance it was Blue is 80%, while Bayes' theorem gives about 41%. What does this finding show?",
+   "o": [
+    "People rely on the witness and neglect how rare Blue cabs are",
+    "People combine the base rate and the witness accuracy correctly",
+    "People distrust the witness and rely only on the base rate",
+    "People judge the cab Blue because Blue cabs are more available"
+   ],
+   "a": 0,
+   "spot": "The intuitive answer equals the witness accuracy.",
+   "why": "The answer of 80% uses only the witness and ignores the <b>base rate</b> (only 15% Blue). Because Green cabs are so common, a Green cab wrongly called Blue is likely, which brings the correct answer down to 41%. This is <b>base-rate neglect</b> (Kahneman & Tversky, 1972).",
+   "src": "[LO J2][IDQ ABC9] Eysenck & Keane pp. 623-624",
+   "hy": "12 Base-rate neglect"
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Which statement about overconfidence is NOT correct, according to the readings?",
+   "o": [
+    "People who were 100% sure of their answers were right only about 80% of the time",
+    "In a large study, 77% of students were overconfident about general-knowledge answers",
+    "Experts such as physicists and political leaders are well calibrated about their own judgements",
+    "The planning fallacy is overconfidence about how quickly a project will be finished"
+   ],
+   "a": 2,
+   "spot": "Look for the claim that someone is protected from the bias.",
+   "why": "Overconfidence is widespread: <b>political leaders</b> overestimate their chances of success, and physicists and economists are overconfident about their theories (Matlin). The other statements are from the readings: Fischhoff et al. (1977) found 80% accuracy at 100% certainty, Stanovich (1999) 77% overconfident students, and the <b>planning fallacy</b> is overconfidence about time.",
+   "src": "[PAST-2][IDQ ABC4] Matlin pp. 440-443; Sternberg et al.",
+   "hy": "14 Overconfidence"
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "A slot machine has paid out nothing in its last 40 rounds. A player keeps feeding it coins because “a win must be coming soon”. Each round is independent. Which error is this?",
+   "o": [
+    "The hot hand belief",
+    "The gambler's fallacy",
+    "The sunk-cost effect",
+    "Anchoring and adjustment"
+   ],
+   "a": 1,
+   "spot": "A streak is expected to end, as if the machine remembers.",
+   "why": "The <b>gambler's fallacy</b>: after a run of one outcome, the opposite seems “due”, because a short sequence is expected to look random (<b>representativeness</b>). The machine has no memory. The <b>hot hand</b> belief is the reverse: a streak is expected to <b>continue</b>. Sunk cost would be “I have put in so much, I can't stop now”, which is not the reason given.",
+   "src": "[PAST-1][PAST-2] set1/set2 representativeness items; Eysenck & Keane; Sternberg et al.",
+   "hy": "2 Gambler's fallacy"
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "In expected utility theory, the principle of invariance states that",
+   "o": [
+    "a choice should not depend on the way the same options are presented",
+    "a choice should not depend on outcomes that both options have in common",
+    "a choice should follow a consistent order, so A over B and B over C means A over C",
+    "a choice should favour an option that is at least as good in every outcome"
+   ],
+   "a": 0,
+   "spot": "Invariance: the preference stays the same across descriptions.",
+   "why": "<b>Invariance</b>: if you prefer A to B in one presentation, you should prefer A to B in any other presentation of the same options (Robinson-Riegler). The second option is <b>cancellation</b>, the third <b>transitivity</b>, the fourth <b>dominance</b>.",
+   "src": "[PAST-1][PAST-2][LO D1][IDQ DE6] Robinson-Riegler p. 482",
+   "hy": "1 Invariance"
+  },
+  {
+   "s": "find",
+   "t": "dec",
+   "q": "Lichtenstein and Slovic (1971, 1973) had people choose which of two gambles to play and set a selling price for each. People often chose one gamble but put a higher price on the other. What does this show?",
+   "o": [
+    "Choice followed the chance of winning and price followed the amount, a violation of invariance",
+    "Choice and price both followed the amount to be won, which supports expected utility theory",
+    "Only students reversed their preferences; casino card dealers chose and priced consistently",
+    "People priced the gambles higher when they were described as gains rather than as losses"
+   ],
+   "a": 0,
+   "spot": "Preferring one gamble but valuing the other higher.",
+   "why": "A rational person should price highest the gamble they prefer. Instead <b>choice</b> tracked the <b>probability</b> of winning and <b>price</b> tracked the <b>amount</b>: a <b>preference reversal</b>, which Robinson-Riegler presents as a violation of invariance. The same result appeared in a Las Vegas casino with card dealers among the players.",
+   "src": "[LO D1][CORE] Robinson-Riegler pp. 482-483",
+   "hy": "15 Preference reversals"
+  }
+ ],
+ "m1": [
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Judge these statements.<br>I. If patients choose an operation more often when it is described as “90% survive” than as “10% die”, invariance is violated.<br>II. Expected utility theory predicts this difference, because losses weigh more than gains.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Which theory predicts framing effects, and which forbids them?",
+   "why": "I is true: “90% survive” and “10% die” describe the same operation, so a different choice breaks <b>invariance</b>. II is false: <b>expected utility theory</b> forbids such a difference. The idea that losses weigh more is <b>loss aversion</b> from <b>prospect theory</b>, which is the theory that explains the effect.",
+   "src": "[PAST-1][PAST-2][LO D1, D4] Robinson-Riegler pp. 482-484 (framing in medical decisions)",
+   "hy": "1 Invariance"
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "People judge it more likely that next year a river will flood a town in Limburg after heavy rain than that a river will flood a town somewhere in the Netherlands. Which error is this?",
+   "o": [
+    "Hindsight bias",
+    "The conjunction fallacy",
+    "The gambler's fallacy",
+    "Anchoring and adjustment"
+   ],
+   "a": 1,
+   "spot": "A specific case (Limburg) judged more likely than the whole (the Netherlands).",
+   "why": "Limburg is part of the Netherlands, so a flood there can never be more likely than a flood anywhere in the country. Judging the vivid, specific case as more probable is the <b>conjunction fallacy</b>, like murders in Detroit versus Michigan. The specific story looks <b>representative</b> of floods, so it feels likelier.",
+   "src": "[PAST-1] set1 California item; Matlin & Farmer (Detroit vs Michigan)",
+   "hy": "2 Conjunction fallacy"
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "After weeks of seeing friends' holiday photos from Bali on social media, Mark estimates that Bali is the most popular holiday destination of Dutch people. In fact it is far from the top. Which heuristic best explains his estimate?",
+   "o": [
+    "Representativeness",
+    "Availability",
+    "Anchoring and adjustment",
+    "Recognition"
+   ],
+   "a": 1,
+   "spot": "Frequency judged by how easily examples come to mind.",
+   "why": "Mark judges <b>frequency</b> by how easily <b>examples</b> come to mind: recent, repeated photos make Bali very <b>available</b>. Availability errs when recency and familiarity, rather than true frequency, drive retrieval. The recognition heuristic would apply if he knew only one of two destinations.",
+   "src": "[PAST-1][PAST-2][LO J4] Matlin & Farmer (recency and familiarity)",
+   "hy": "3 Availability"
+  },
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "Most people prefer €3,000 for sure over an 80% chance of €4,000. Yet most prefer a 20% chance of €4,000 over a 25% chance of €3,000. Which phenomenon explains this pattern?",
+   "o": [
+    "Loss aversion",
+    "The certainty effect",
+    "Diminishing sensitivity",
+    "The reference point"
+   ],
+   "a": 1,
+   "spot": "Only the first pair contains a sure option, and only there do people play safe.",
+   "why": "Dividing both chances by four should not change the preference, yet it does. When one option is <b>certain</b>, it gets extra weight; once it is only probable (25%), the bigger prize wins. This is the <b>certainty effect</b>, the probability side of prospect theory. There are no losses here, so loss aversion does not apply.",
+   "src": "[PAST-1][PAST-2] certainty effect as in set1/set2",
+   "hy": "4 Certainty effect"
+  }
+ ],
+ "m2": [
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "A recruiter compares candidates two at a time. She prefers Anna to Ben, and Ben to Chris. When Anna and Chris are compared, she prefers Chris. Which principle of expected utility theory is violated?",
+   "o": [
+    "Invariance",
+    "Cancellation",
+    "Transitivity",
+    "Dominance"
+   ],
+   "a": 2,
+   "spot": "Follow the chain: does it close into a circle?",
+   "why": "Anna > Ben and Ben > Chris logically requires Anna > Chris. Preferring Chris makes the preferences <b>circular</b>, which violates <b>transitivity</b>. Invariance would need the same options described in two ways; cancellation concerns outcomes that two options share.",
+   "src": "[PAST-2] set2 transitivity item",
+   "hy": "7 Transitivity"
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "Which feature of the prospect theory value function reflects loss aversion?",
+   "o": [
+    "The curve is concave for gains and convex for losses",
+    "The curve is steeper on the loss side than on the gain side",
+    "The curve passes through a reference point instead of zero wealth",
+    "The curve flattens as gains and losses become larger"
+   ],
+   "a": 1,
+   "spot": "Loss aversion = losses loom larger.",
+   "why": "<b>Loss aversion</b> is the <b>steeper</b> loss side: losing €50 drops value more than gaining €50 raises it. Concave for gains and convex for losses, and flattening further out, describe <b>diminishing sensitivity</b>. The <b>reference point</b> says gains and losses are judged from what you have now.",
+   "src": "[PAST-2][IDQ DE3] Robinson-Riegler Figure 11.4, p. 483",
+   "hy": "5 Loss aversion"
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "Before an election, a commentator wrote that the challenger had little chance. After the challenger wins, he says he “saw it coming for months”, and in all honesty he believes this. Which bias is this?",
+   "o": [
+    "Hindsight bias",
+    "Confirmation bias",
+    "The planning fallacy",
+    "Base-rate neglect"
+   ],
+   "a": 0,
+   "spot": "Outcome known, then the past “prediction” is rewritten.",
+   "why": "<b>Hindsight bias</b>: once the outcome is known, people believe they knew it all along. The known result serves as an anchor and memory is <b>reconstructed</b> to fit it (Carli, 1999). Confirmation bias is searching for evidence that supports a current belief; the planning fallacy is underestimating how long a project takes.",
+   "src": "[PAST-1][LO J5] Matlin pp. 444-446",
+   "hy": "9 Hindsight bias"
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "Judge these statements.<br>I. Expecting tails after five heads in a row with a fair coin is the gambler's fallacy.<br>II. After a statistical correction of the original analysis, several datasets show a modest real hot hand in basketball.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 2,
+   "spot": "Two streak beliefs: one always wrong, one not so clearly wrong.",
+   "why": "I is true: a fair coin has no memory, so “tails is due” is the <b>gambler's fallacy</b>. II is also true: Gilovich et al. (1985) found no hot hand, but Miller and Sanjurjo (2018) corrected a <b>selection bias</b> in that analysis and found a real but modest hot hand. So the gambler's fallacy stays a fallacy, the hot hand is less clearly one.",
+   "src": "[PAST-2] hot hand item; Eysenck & Keane (Miller & Sanjurjo, 2018)",
+   "hy": "2 Gambler's fallacy / hot hand"
+  }
+ ],
+ "m3": [
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Most people prefer €500 for sure over a 50% chance of €1,000, although both have the same expected value. How does expected utility theory explain this?",
+   "o": [
+    "Losing the gamble would feel much worse than winning it would feel good to them",
+    "The second €500 adds less utility than the first, so the gamble is worth less",
+    "The way the two options are worded makes the sure option look like a gain",
+    "People overestimate the chance of winning nothing because losses are vivid"
+   ],
+   "a": 1,
+   "spot": "Expected value is equal, so the answer must lie in how utility grows with money.",
+   "why": "With <b>diminishing marginal utility</b> the utility curve is <b>concave</b>: €1,000 is worth less than twice the utility of €500. The gamble's expected <b>utility</b> is therefore lower than that of the sure €500, so a rational chooser is <b>risk averse</b>. The first option is loss aversion, but nothing can be lost here; the third is framing, which expected utility theory does not allow to matter.",
+   "src": "[PAST-2][IDQ DE4] set2 diminishing marginal utility item",
+   "hy": "8 Diminishing marginal utility"
+  },
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Judge these statements.<br>I. The cancellation principle says that an outcome which is the same in both options should not influence the choice.<br>II. The Allais paradox shows that people follow cancellation as soon as one of the options is certain.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "What does the certainty of one option do to cancellation?",
+   "why": "I is the correct definition of <b>cancellation (independence)</b>. II is false: in the <b>Allais paradox</b> people <b>break</b> cancellation exactly when a certain option is available. Removing a shared chance from both options flips their choice, because the sure thing gets extra weight (the <b>certainty effect</b>).",
+   "src": "[PAST-2] set2 Allais item",
+   "hy": "4 Allais / cancellation"
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "In a village there are 95 farmers for every 5 librarians. Sanne is described as shy, tidy and fond of books. Most people say she is probably a librarian. What do they neglect, and why?",
+   "o": [
+    "The sample size, because the description is based on only one person",
+    "The base rate, because they judge by how much Sanne resembles a librarian",
+    "The base rate, because examples of shy farmers do not come to mind easily",
+    "The sample size, because the first description they read anchors the estimate"
+   ],
+   "a": 1,
+   "spot": "Numbers in the stem that nobody uses: how common each job is.",
+   "why": "With 19 farmers for every librarian, Sanne is most likely a farmer even if the description fits librarians better. People judge by <b>resemblance</b> to the stereotype (<b>representativeness</b>) and neglect the <b>base rate</b>, as in the lawyer-engineer problem (Kahneman & Tversky, 1973). The third option names the right error but the wrong heuristic.",
+   "src": "[LO J2][IDQ ABC9] Eysenck & Keane p. 625",
+   "hy": "12 Base-rate neglect"
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "According to prospect theory, people tend to be",
+   "o": [
+    "risk averse when options are framed as gains and risk seeking when framed as losses",
+    "risk seeking when options are framed as gains and risk averse when framed as losses",
+    "risk averse in both frames, but more strongly when options are framed as losses",
+    "risk seeking in both frames, but more strongly when options are framed as gains"
+   ],
+   "a": 0,
+   "spot": "Sure gain: keep it. Sure loss: gamble to avoid it.",
+   "why": "With a <b>gain frame</b> people take the sure thing (<b>risk averse</b>); with a <b>loss frame</b> they gamble to avoid a sure loss (<b>risk seeking</b>). The value curve explains this: <b>concave</b> for gains, <b>convex</b> for losses. In the Asian disease problem 72% chose the sure option for lives saved and 78% the risky one for deaths.",
+   "src": "[LO D4][IDQ DE4] Matlin p. 440; Robinson-Riegler p. 483",
+   "hy": "10 Gain/loss frames"
+  }
+ ]
+}

@@ -1,0 +1,636 @@
+{
+ "theme": [
+  {
+   "s": "def",
+   "t": "ai",
+   "q": "A university lets an algorithm decide which applicants are invited for a scholarship interview. It was trained on ten years of past committee decisions and now invites far fewer applicants from vocational schools, although their grades are similar. In the language of AI harms, this is",
+   "o": [
+    "allocational harm",
+    "representational harm",
+    "myside bias",
+    "stochasticity of the output"
+   ],
+   "a": 0,
+   "spot": "Who gets an opportunity, not how a group is described.",
+   "why": "<b>Allocational harm</b>: an AI system hands out resources or opportunities (here: interviews) unequally across groups, because the data contain <b>historically biased decisions</b>. <b>Representational harm</b> would be about how a group is portrayed, for example described as less capable or left out of the picture.",
+   "src": "[PAST-2][IDQ][CORE] Demszky et al. 2023, Concern 2 (bias); pty_t8 8.5.2",
+   "hy": "1. AI harms: allocational vs representational"
+  },
+  {
+   "s": "comp",
+   "t": "ai",
+   "q": "Judge these statements about bias in LLMs (Demszky et al., 2023).<br>I. Representational harm can arise from sampling bias, for example when the data of privileged groups are over-represented in the training text.<br>II. Allocational harm means that an LLM describes a social group in a demeaning way.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 0,
+   "spot": "Portrayal versus distribution.",
+   "why": "Statement I is true: Demszky et al. name <b>sampling bias</b> (over-represented privileged groups) and <b>data-processing bias</b> as causes of representational harm. Statement II is false: a demeaning description is <b>representational</b> harm. <b>Allocational</b> harm is about the unequal distribution of resources (such as loans) or opportunities (such as therapy).",
+   "src": "[PAST-2][IDQ A.6][CORE] Demszky et al. 2023, Concern 2; pty_t8 8.5.2",
+   "hy": "1. AI harms + 3. sources of bias"
+  },
+  {
+   "s": "def",
+   "t": "ai",
+   "q": "Annotators who all belong to the majority culture label chat messages for a training set. They often mark messages written in a minority dialect as 'aggressive', although the writers meant them as friendly banter. A model trained on these labels later rates that dialect as hostile. Where did the bias enter?",
+   "o": [
+    "Data-processing bias in the annotations",
+    "Sampling bias in which texts were selected for training",
+    "Stochasticity of the model output",
+    "Prompt-tuning with too few examples"
+   ],
+   "a": 0,
+   "spot": "The texts were there; the labels were wrong.",
+   "why": "Demszky et al. give exactly this example of <b>data-processing bias</b>: annotators from majority groups misunderstand minority groups, and the model learns their mistakes. <b>Sampling bias</b> would mean the minority texts were missing or under-represented, which is not the problem here. The outcome is <b>representational harm</b>.",
+   "src": "[IDQ A.6][CORE] Demszky et al. 2023, Concern 2; pty_t8 8.5.2",
+   "hy": "3. Sources of bias"
+  },
+  {
+   "s": "find",
+   "t": "ai",
+   "q": "According to Demszky et al. (2023), what makes LLMs more powerful for psychology than earlier text-analysis methods such as LIWC?",
+   "o": [
+    "They approximate word meaning in context and learn from an unprecedented amount and variety of text",
+    "They count word categories much faster and rely on dictionaries that psychologists have checked by hand",
+    "They check whether statements are true and are trained mainly on peer-reviewed scientific articles",
+    "They give every word one stable meaning and need only a few hundred sentences of training text"
+   ],
+   "a": 0,
+   "spot": "Two reasons: better modelling and more data.",
+   "why": "Demszky et al. give two reasons. LLMs go beyond <b>bag-of-words</b> methods by approximating <b>meaning in context</b>, and they are trained on <b>hundreds of billions of utterances</b> from web pages, books, social media and forums. They do not check truth: they predict plausible language, which is why they can give fluent but wrong advice.",
+   "src": "[PAST-2][CORE] Demszky et al. 2023, Introduction; pty_t8 8.1",
+   "hy": "2. Why AI/LLMs became so powerful"
+  },
+  {
+   "s": "app",
+   "t": "ai",
+   "q": "A classmate says: 'Language AI got so good in the last decade simply because computers became faster.' Which reply fits the course best?",
+   "o": [
+    "Speed helped, but it also took far more training data and better models, such as transformers that read words in context",
+    "Speed played no real role; the progress came from programmers who wrote ever more detailed grammar rules for every language by hand",
+    "Speed played no real role; the progress came from building psychological theories of truth into the models",
+    "Speed helped, but the decisive change was that models now look up each word's one fixed meaning in a dictionary"
+   ],
+   "a": 0,
+   "spot": "One ingredient is never the whole story.",
+   "why": "The jump came from a <b>combination</b>: enormous amounts of <b>training data</b>, huge <b>computing resources</b> to fit models with millions of parameters (fitting ChatGPT is estimated to have cost 3 billion dollars) and <b>better algorithms</b>, such as the transformer that approximates meaning in context. Hand-written rules and fixed dictionary meanings describe the older approaches, and LLMs contain no theory of truth.",
+   "src": "[PAST-2][CORE] Demszky et al. 2023, Introduction, training, equitable access; pty_t8 8.1, 8.2, 8.6",
+   "hy": "2. Why AI/LLMs became so powerful"
+  },
+  {
+   "s": "app",
+   "t": "llm",
+   "q": "A small neural network must learn to sort photos into 'animate' and 'inanimate'. For a training photo of a dog it outputs 'inanimate'. What happens next during training?",
+   "o": [
+    "The error relative to the correct label is sent back to adjust the connection weights",
+    "A new hidden node for 'dog' is added to the network so that this specific example can be stored",
+    "The photo is removed from the training set because it confuses the output layer",
+    "The network is asked to explain in words why it judged the photo inanimate"
+   ],
+   "a": 0,
+   "spot": "Predict, compare, send the error back, repeat.",
+   "why": "This is <b>back-propagation</b>: the difference between the output and the correct label (the <b>prediction error</b>) is sent back through the network to adjust the <b>weights</b>, and this repeats over many photos. The knowledge lies in the pattern of weights, not in a separate node per concept. LLM pre-training works the same way, with hidden words as the labels.",
+   "src": "[IDQ A.2][CORE] Demszky et al. 2023, pre-training; pty_t8 8.2, 8.15.2",
+   "hy": "11. Pre-training / back-propagation"
+  },
+  {
+   "s": "comp",
+   "t": "llm",
+   "q": "How do bag-of-words methods and LLMs relate to the theories of concepts from Theme 4?",
+   "o": [
+    "Bag-of-words is like the prototype view (one fixed meaning per word); an LLM is like the exemplar view (many uses in context)",
+    "Bag-of-words is like the exemplar view (each text stored separately); an LLM is like the prototype view (one average meaning per word)",
+    "Both are like the classical view, because they define each word by necessary and sufficient features",
+    "Bag-of-words is like the theory view, and an LLM is like the classical view based on definitions"
+   ],
+   "a": 0,
+   "spot": "One summary versus many concrete examples in context.",
+   "why": "A <b>bag-of-words</b> method gives every word one static meaning, like a single summary <b>prototype</b>. An <b>LLM</b> is trained on hundreds of billions of concrete utterances and lets context decide the meaning, like retrieving <b>exemplars</b>. Note the nuance: an LLM also outputs a kind of average of what the internet says, so it has a prototype element too.",
+   "src": "[IDQ A.3][CORE] pty_t8 8.15.3; Theme 4 link",
+   "hy": "12. BoW vs meaning in context"
+  },
+  {
+   "s": "def",
+   "t": "llm",
+   "q": "A word-counting program scores the review 'The plot was sick and the ending killed me, I loved it' as strongly negative, because 'sick' and 'killed' are in its negative-emotion dictionary. Which weakness does this show?",
+   "o": [
+    "Each word gets one static meaning, whatever its context",
+    "The output varies randomly from one run to the next",
+    "The program copies the biases of the human annotators who built it",
+    "The program cannot explain how it reached its score"
+   ],
+   "a": 0,
+   "spot": "Same word, different company, same score.",
+   "why": "Bag-of-words programs such as <b>LIWC</b> count dictionary words and assume each word has a <b>static meaning</b>, so slang, sarcasm and metaphor are lost. LLMs approximate <b>meaning in context</b>. Random variation is a property of LLMs (<b>stochasticity</b>), and word counts are actually very transparent, so the black-box problem does not apply.",
+   "src": "[IDQ A.1][CORE] Demszky et al. 2023, Introduction; pty_t8 8.1, 8.15.1",
+   "hy": "12. BoW vs meaning in context"
+  },
+  {
+   "s": "app",
+   "t": "llm",
+   "q": "Two labs want a model that recognises 'hopelessness' in diary entries. Lab A pastes five labelled entries into the prompt of a commercial LLM. Lab B trains a pre-trained model further on 500 labelled entries, updating its parameters. Which statement is correct?",
+   "o": [
+    "Lab B is better placed to capture subtle features and correct inherited bias, because its parameters change",
+    "Lab A is better placed to correct inherited bias, because a good prompt overrides what the model learned in pre-training",
+    "Both approaches change the model's parameters, so the two labs differ only in how fast they work",
+    "Lab A is using fine-tuning and Lab B is using prompt-tuning, so Lab A needs more labelled data"
+   ],
+   "a": 0,
+   "spot": "Do the parameters change or not?",
+   "why": "Lab A uses <b>prompt-tuning</b> (in-context learning): a few examples, fast, but the <b>parameters stay unchanged</b>, so it captures subtle constructs less well and is less able to overcome bias. Lab B uses <b>fine-tuning</b>, which updates the parameters. Fine-tuning is costly and can still keep or even amplify bias, depending on who does it.",
+   "src": "[IDQ A.7][CORE] Demszky et al. 2023, fine-tuning and prompt-tuning; pty_t8 8.4",
+   "hy": "13. Fine-tuning vs prompt-tuning"
+  },
+  {
+   "s": "comp",
+   "t": "llm",
+   "q": "Asked to coach a nervous pupil about her university application, an LLM advised her to 'reduce stress' and 'take breaks', as if stress always hurts performance. Which finding from the lecture on cognition and emotion speaks against this view?",
+   "o": [
+    "Performance is an inverted-U function of arousal, so a moderate level of stress can help",
+    "Positive affect combined with low motivational intensity broadens the scope of visual attention",
+    "Valence and arousal are independent dimensions on which emotions can be placed",
+    "Emotional words slow down colour naming in the emotional Stroop task"
+   ],
+   "a": 0,
+   "spot": "Is stress always bad for performance?",
+   "why": "The <b>Yerkes-Dodson law</b> says performance peaks at a moderate level of arousal, so stress can be enhancing, which is also what Demszky et al. say stress research shows. The LLM gave the common cultural advice (a <b>stress-is-debilitating</b> mindset) because it predicts <b>plausible</b>, not correct, language. The other options are true lecture findings but say nothing about whether stress helps.",
+   "src": "[IDQ A.4][CORE] Demszky et al. 2023, study-advice example; pty_t8 8.3, 8.15.4; Lecture 3",
+   "hy": "14. Plausible, not correct"
+  },
+  {
+   "s": "def",
+   "t": "llm",
+   "q": "Trained coders, none of whom belong to the group concerned, rate social-media posts by members of a religious minority about their workplace as 'calm and neutral'. The writers themselves say the posts express hurt. Which problem of expert evaluation does this show?",
+   "o": [
+    "The intersubjectivity problem, made worse across group lines",
+    "The black-box problem of LLM output",
+    "Stochasticity in the coders' ratings",
+    "The ambiguity of a null result, a known weakness of impact evaluation"
+   ],
+   "a": 0,
+   "spot": "Can an outsider know what the writer meant?",
+   "why": "Expert evaluation suffers from the <b>intersubjectivity problem</b>: coders guess how someone construes a situation, and they can guess wrong. Demszky et al. note this gets worse in <b>cross-group</b> judgements, especially across power differences. An ambiguous null result is the weakness of <b>impact evaluation</b>, not of expert evaluation.",
+   "src": "[CORE] Demszky et al. 2023, Concern 1 (evaluation); pty_t8 8.5.1",
+   "hy": "21. Expert vs impact evaluation"
+  },
+  {
+   "s": "fig",
+   "t": "llmt",
+   "q": "The table shows results for participants with 30 minutes in Zhi et al. (2026). A lower myside bias score means less one-sided reasoning. Continuous and Late access had a significantly lower myside bias score than No LLM access.<br><table class=\"qt\"><tr><th>Access</th><th>Myside bias</th><th>Number of arguments</th></tr><tr><td>Early</td><td>3.79</td><td>4.56</td></tr><tr><td>Continuous</td><td>3.34</td><td>4.42</td></tr><tr><td>Late</td><td>3.42</td><td>5.25</td></tr><tr><td>No LLM</td><td>4.41</td><td>5.12</td></tr></table>Which conclusion fits best?",
+   "o": [
+    "Only Late access made essays less one-sided while keeping as many arguments as working alone",
+    "Continuous access gave the most balanced essays and also produced the most arguments",
+    "Early access made the essays less one-sided than any of the other access conditions",
+    "Working without an LLM gave the least one-sided essays, because those participants wrote the most arguments"
+   ],
+   "a": 0,
+   "spot": "Look at both columns at once.",
+   "why": "Late access lowered myside bias (3.42 vs 4.41) while the number of arguments stayed as high as working alone (5.25 vs 5.12): people used the chatbot at the end to add <b>counter-arguments</b> they had overlooked. Continuous access was also less one-sided, but with the <b>fewest arguments</b>. Working alone gave many arguments but the <b>highest</b> (worst) myside bias.",
+   "src": "[IDQ B.4][CORE] Zhi et al. 2026, Table 4; pty_t8 8.7.2, 8.16.4",
+   "hy": "7. Late access lowers myside bias"
+  },
+  {
+   "s": "fig",
+   "t": "llmt",
+   "q": "Suppose access timing and time availability had each influenced essay scores in Zhi et al. (2026), but without any interaction. With access timing on the x-axis and one line per time limit, what would the figure look like?",
+   "o": [
+    "Two roughly parallel lines: the 30-minute line higher everywhere and the same ranking of access conditions at both time limits",
+    "Two lines that cross: Early access best at 10 minutes, but Late and No access best at 30 minutes",
+    "Two lines lying on top of each other, with Early access scoring highest at both time limits",
+    "One line rising and the other falling, so that the effects of the two time limits cancel each other out when averaged over conditions"
+   ],
+   "a": 0,
+   "spot": "No interaction means parallel lines.",
+   "why": "Without an <b>interaction</b>, the effect of access timing is the same at both time limits, so the lines run <b>parallel</b>; a main effect of time only shifts one line up. The real data showed crossing lines: Early was best at 10 minutes (3.80) but scored below No access at 30 minutes (4.51 vs 5.76). That <b>temporal reversal</b> is the interaction.",
+   "src": "[IDQ B.1, B.2][CORE] Zhi et al. 2026, Fig. 4a (illustrative counterfactual); pty_t8 8.7.2, 8.16.1",
+   "hy": "5. Temporal reversal = interaction"
+  },
+  {
+   "s": "find",
+   "t": "llmt",
+   "q": "After the main task, Zhi et al. (2026) asked participants to rate their own critical thinking on a self-assessment scale. What did these self-ratings show?",
+   "o": [
+    "Only slight differences, linked to time availability but not to LLM access timing",
+    "Large differences that closely mirrored the temporal reversal found in the essay scores",
+    "Higher ratings after Early access, in line with this group's better recall",
+    "Lower ratings without LLM access, because that group felt the most rushed"
+   ],
+   "a": 0,
+   "spot": "Did people notice the effect of the chatbot on their own thinking?",
+   "why": "Self-ratings barely differed and only time availability made any difference, while essay scores and recall differed substantially. The authors conclude that <b>self-reports</b> miss how LLMs affect thinking, because people have limited awareness of their own time use and subtle cognitive changes, so <b>performance assessment</b> is needed. Early access actually went with <b>worse</b> recall.",
+   "src": "[IDQ B.5][CORE] Zhi et al. 2026, self-reported assessment; pty_t8 8.7.3",
+   "hy": "18. Self-report vs performance"
+  },
+  {
+   "s": "app",
+   "t": "llmt",
+   "q": "A university board fears that students will let chatbots write their take-home essays and is weighing its options. Which policy fits the findings of Zhi et al. (2026) best?",
+   "o": [
+    "Keep the essays and the generous time, but require an outline written without a chatbot before chatbot use is allowed",
+    "Replace the essays with 10-minute timed tasks in which a chatbot is available right from the start",
+    "Keep the essays and allow the chatbot throughout the whole task, since the students' self-ratings showed no harm from it",
+    "Ban chatbots altogether, because chatbot access lowered essay scores in every condition of the study"
+   ],
+   "a": 0,
+   "spot": "Plenty of time: own work first, chatbot later.",
+   "why": "With enough time, people who worked alone first scored best (Late 5.77, No access 5.76) and those with access from the start scored lower (Early 4.51) and remembered the sources worse. So keep the essay but <b>sequence</b> it: own thinking first, chatbot later. A ban ignores that under time pressure early access <b>helped</b> (3.80 vs 2.75), and self-ratings are not a valid guide.",
+   "src": "[IDQ B.5][CORE] Zhi et al. 2026, practical implications; pty_t8 8.8, 8.16.5",
+   "hy": "19. Applying Zhi to policy"
+  },
+  {
+   "s": "comp",
+   "t": "llmt",
+   "q": "Judge these statements about the essay scores in Zhi et al. (2026).<br>I. In every access-timing condition, participants with 30 minutes had a higher mean essay score than participants with 10 minutes.<br>II. Which access timing worked best depended on how much time participants had.",
+   "o": [
+    "Only statement I is true",
+    "Only statement II is true",
+    "Both statements are true",
+    "Neither statement is true"
+   ],
+   "a": 2,
+   "spot": "Check each row, then ask whether the ranking flips.",
+   "why": "Statement I is true: every condition scored higher with 30 minutes (Early 3.80 to 4.51, Continuous 3.49 to 4.71, Late 1.86 to 5.77, No access 2.75 to 5.76), a <b>main effect</b> of time. Statement II is true too: Early was best under time pressure, Late and No access with enough time. A ranking that flips across levels of the other factor is an <b>interaction</b>.",
+   "src": "[IDQ B.1][CORE] Zhi et al. 2026, Tables 3 and 4; pty_t8 8.7.2",
+   "hy": "5. Temporal reversal = interaction"
+  },
+  {
+   "s": "fig",
+   "t": "aic",
+   "q": "A researcher repeats Huang's (2025) design with a poetry-writing task. The figure shows mean creativity ratings (<b>illustrative</b> data). Do these results support the Goldilocks effect?",
+   "chart": {
+    "type": "bar",
+    "title": "Creativity by level of AI collaboration (illustrative)",
+    "x": [
+     "Low",
+     "Moderate",
+     "High"
+    ],
+    "y": "Mean creativity (1-7)",
+    "series": [
+     {
+      "name": "Creativity",
+      "v": [
+       3.2,
+       4.0,
+       4.7
+      ]
+     }
+    ],
+    "note": "Illustrative data",
+    "min": 1,
+    "max": 7
+   },
+   "o": [
+    "No, because high collaboration scores highest, so the pattern is linear rather than an inverted U",
+    "Yes, because moderate collaboration scores higher than low collaboration",
+    "Yes, because all three levels of AI collaboration produce fairly creative poems",
+    "No, because an inverted U would require low collaboration to score highest of the three conditions"
+   ],
+   "a": 0,
+   "spot": "Where is the peak?",
+   "why": "The <b>Goldilocks effect</b> is an <b>inverted U</b>: moderate collaboration must beat both low and high. Here creativity keeps rising up to high collaboration, which is the <b>linear</b> 'more AI, better' pattern Huang argued against. Beating low collaboration alone is not enough.",
+   "src": "[IDQ C.3][CORE] Huang 2025 hypothesis; pty_t8 8.9 (illustrative chart)",
+   "hy": "9. Goldilocks inverted U"
+  },
+  {
+   "s": "comp",
+   "t": "aic",
+   "q": "Theme 7 treats restructuring the problem as a key route to insight. How do Huang's (2025) findings relate to this?",
+   "o": [
+    "AI collaboration did not change problem restructuring; it affected creativity through the diversity of ideas",
+    "Moderate AI collaboration helped people restructure the problem, and that restructuring explained the creativity gain",
+    "High AI collaboration blocked problem restructuring, and that is why creativity dropped at high collaboration",
+    "Low AI collaboration produced the most restructuring, because people stayed with their own perspective"
+   ],
+   "a": 0,
+   "spot": "Which mediator was significant?",
+   "why": "In Studies 1 and 2, problem restructuring did <b>not</b> differ between conditions; <b>knowledge diversity</b> did, and it mediated the inverted U. So AI collaboration did not change how people reframe a problem ('thinking outside the box', the preparation-focused process) but how many different ideas they produced (the <b>production-focused</b> process).",
+   "src": "[IDQ C.4][CORE] Huang 2025, Studies 1-2 and Discussion; pty_t8 8.9.2, 8.12",
+   "hy": "10. Knowledge diversity as mediator"
+  },
+  {
+   "s": "app",
+   "t": "aic",
+   "q": "A call centre wants staff to draft standard, easily recognisable replies to frequent customer questions; originality is not wanted. Based on the mechanism behind Huang's (2025) Goldilocks effect, how much AI use makes sense?",
+   "o": [
+    "More AI use is defensible, because the standardised output that harms creativity is what this task needs",
+    "Moderate use is still best, since four to six prompts was shown to be the optimum for any kind of task or goal",
+    "As little AI use as possible, because the AI's ideas would anchor the staff to expected answers",
+    "No AI use at all, because AI lowers the knowledge diversity of the replies in every task"
+   ],
+   "a": 0,
+   "spot": "What harms creativity may help a different goal.",
+   "why": "Heavy AI use hurts creativity because AI gives <b>standardised</b> responses and <b>anchors</b> people to expected ideas. When a common, recognisable answer is the goal, that downside becomes the point, so more AI use is defensible (still checking the output). The four-to-six rule came from one 15-minute task and was never shown to hold for every task.",
+   "src": "[IDQ C.4] Huang 2025 mechanism; pty_t8 8.17.4",
+   "hy": "20. Applying Huang to a new task"
+  },
+  {
+   "s": "def",
+   "t": "aic",
+   "q": "In Huang's first two studies, participants were told to use ChatGPT once, four to six times, or at least nine times. A critic says participants may have guessed what the researcher expected and behaved accordingly. What is this concern called?",
+   "o": [
+    "Demand effects",
+    "Common-method bias",
+    "Myside bias",
+    "Anchoring"
+   ],
+   "a": 0,
+   "spot": "Participants reacting to the study itself.",
+   "why": "<b>Demand effects</b> (expectancy bias) arise when participants act on what they think the study is about. Huang ran Study 3, a field study without manipulation, partly to rule them out. <b>Common-method bias</b> is a different problem (both measures from the same source at the same time), which Study 3 reduced by having supervisors rate creativity a week later.",
+   "src": "[IDQ C.2][CORE] Huang 2025, Study 3; pty_t8 8.11, 8.17.2",
+   "hy": "16. Huang Study 3 / demand effects"
+  },
+  {
+   "s": "find",
+   "t": "aic",
+   "q": "In Huang (2025), human-rated and AI-rated creativity correlated positively, at about r = .23. What does this mean?",
+   "o": [
+    "The measures are related, but only modestly: a high score on one does not reliably mean a high score on the other",
+    "The measures are practically interchangeable, so AI ratings could replace the human raters",
+    "The measures are unrelated, because any correlation below .50 counts as no relation",
+    "The AI rated the proposals as 23 percent more creative on average than the human raters did, so AI ratings are inflated"
+   ],
+   "a": 0,
+   "spot": "r is about how closely scores go together.",
+   "why": "r = .23 is a weak positive correlation: a wide cloud of points with a slight upward trend. Huang calls the correlations between creativity measures <b>significant but modest</b>, so different raters may weigh different aspects (experts profit, the crowd writing quality, AI perhaps novelty). A correlation says nothing about <b>mean differences</b>.",
+   "src": "[IDQ C.1][CORE] Huang 2025, limitations; pty_t8 8.12.2, 8.17.1",
+   "hy": "17. Human vs AI ratings"
+  },
+  {
+   "s": "find",
+   "t": "llm",
+   "q": "The Texas Mindset Initiative records 1,000 high-school teachers talking with students, annotates the talk for constructs such as growth mindset and autonomy support, and links it to student performance over time. Which investment proposed by Demszky et al. (2023) does this illustrate?",
+   "o": [
+    "A keystone dataset",
+    "A psychologically defined benchmark",
+    "Equitable access to LLMs",
+    "Prompt-tuning with expert examples"
+   ],
+   "a": 0,
+   "spot": "Large, expert-annotated, linked to outcomes.",
+   "why": "A <b>keystone dataset</b> is a large natural-language database that meets high standards for expert and impact evaluation and is linked to important outcomes. <b>Benchmarks</b> are standard tasks on which models are compared, and <b>equitable access</b> is about affordable models and shared infrastructure.",
+   "src": "[CORE] Demszky et al. 2023, three investments; pty_t8 8.6",
+   "hy": "23. Three investments"
+  },
+  {
+   "s": "find",
+   "t": "llmt",
+   "q": "With 30 minutes for the task, which judgement did participants with Continuous LLM access make significantly worse than participants without LLM access in Zhi et al. (2026)?",
+   "o": [
+    "Judging how reliable each source document was",
+    "Judging the stance each document took",
+    "Judging the relevance of each document to the decision",
+    "Judging factual and counterfactual statements"
+   ],
+   "a": 0,
+   "spot": "Continuous help, less own checking.",
+   "why": "Under sufficient time, Continuous access gave worse judgements of source <b>reliability</b> (34.0%) than No LLM access (44.3%), possibly because constant chatbot help led to less of their own critical checking of <b>credibility</b>. Comprehension and the other evaluation measures depended mainly on time, with little effect of access timing.",
+   "src": "[CORE] Zhi et al. 2026, Section 4.4, Table 4; pty_t8 8.7.2",
+   "hy": "22. Source-reliability judgements"
+  },
+  {
+   "s": "fig",
+   "t": "llmt",
+   "q": "The figure shows recall of the main ideas of the documents in Zhi et al. (2026). Which statement is <b>NOT</b> supported?",
+   "chart": {
+    "type": "bar",
+    "title": "Recall score by LLM access timing",
+    "x": [
+     "Early",
+     "Continuous",
+     "Late",
+     "No LLM"
+    ],
+    "y": "Mean recall score",
+    "series": [
+     {
+      "name": "10 minutes",
+      "v": [
+       1.96,
+       1.85,
+       1.94,
+       2.11
+      ]
+     },
+     {
+      "name": "30 minutes",
+      "v": [
+       2.23,
+       2.03,
+       2.56,
+       2.99
+      ]
+     }
+    ],
+    "note": "Zhi, Kumar & Lee (2026), Tables 3 and 4",
+    "min": 0,
+    "max": 3.5
+   },
+   "o": [
+    "Under 10 minutes, Continuous access led to significantly worse recall than No LLM access",
+    "With 30 minutes, Continuous access led to significantly worse recall than No LLM access",
+    "Extra time raised recall more for those who started on their own than for those with access from the start",
+    "At 30 minutes, none of the chatbot conditions recalled the documents better than No LLM access"
+   ],
+   "a": 0,
+   "spot": "Check which time limit the significant difference belongs to.",
+   "why": "Under 10 minutes, recall did <b>not</b> differ significantly between conditions (1.85 to 2.11). The significant drop is at 30 minutes: Continuous 2.03 vs No access 2.99 (Early 2.23 only marginal). Late and No access gained most from extra time. Early AI help seems to hinder <b>internalisation</b> of the sources.",
+   "src": "[IDQ B.3][CORE] Zhi et al. 2026, Fig. 4b, Tables 3 and 4; pty_t8 8.7.2, 8.16.3",
+   "hy": "6. Early access harms recall"
+  },
+  {
+   "s": "fig",
+   "t": "ai",
+   "q": "A researcher sends an LLM the same request for career advice 50 times per version, changing only the name: 'Emma' or 'Daniel'. The table (<b>hypothetical</b> data) shows how often a leadership role was suggested.<br><table class=\"qt\"><tr><th>Name in prompt</th><th>Leadership role suggested</th></tr><tr><td>Emma</td><td>18%</td></tr><tr><td>Daniel</td><td>41%</td></tr></table>Which conclusion fits this method best?",
+   "o": [
+    "The output differs with the gender cue, but biases tied to traits she did not vary, or to combinations of traits, stay hidden",
+    "The LLM is unbiased, because a stochastic model always gives different answers to the same prompt",
+    "The difference only counts as bias if the LLM itself explains that it took the names into account",
+    "The design cannot show bias, because the two prompts should have differed in more than the name alone to be a fair test"
+   ],
+   "a": 0,
+   "spot": "Change one cue, compare outputs: what can and cannot it show?",
+   "why": "This is the <b>audit method</b>: keep the prompt identical, vary only the name or pronoun, generate many responses (LLMs are stochastic) and compare. A systematic gap points to bias. Its limit: you only see biases you vary <b>explicitly</b>, so unknown biases and <b>intersectionality</b> stay hidden. Asking the LLM to explain itself is circular.",
+   "src": "[IDQ A.8][CORE] Demszky et al. 2023, Concern 2; pty_t8 8.5.2, 8.15.8 (hypothetical table)",
+   "hy": "4. Audit method"
+  }
+ ],
+ "m1": [
+  {
+   "s": "def",
+   "t": "ai",
+   "q": "An online platform's advertising algorithm, trained on past click data, shows adverts for well-paid engineering jobs mostly to men. Which kind of AI harm is this, and why?",
+   "o": [
+    "Allocational, because an opportunity is distributed unequally between groups",
+    "Representational, because women are portrayed in a demeaning way",
+    "Representational, because the training data over-represent men",
+    "Allocational, because the algorithm's output varies from one run to the next"
+   ],
+   "a": 0,
+   "spot": "Who gets the chance?",
+   "why": "Job opportunities reach one group more than another, so this is <b>allocational harm</b>, rooted in historically biased patterns in the data. <b>Representational harm</b> is about how a group is depicted. Variation between runs is <b>stochasticity</b>, not a harm.",
+   "src": "[PAST-2][IDQ][CORE] Demszky et al. 2023, Concern 2; pty_t8 8.5.2",
+   "hy": "1. AI harms: allocational vs representational"
+  },
+  {
+   "s": "fig",
+   "t": "llmt",
+   "q": "The figure shows mean essay scores in Zhi et al. (2026) for participants who had only 10 minutes. Early and Continuous access scored significantly higher than Late access. Which conclusion is correct?",
+   "chart": {
+    "type": "bar",
+    "title": "Essay score with 10 minutes",
+    "x": [
+     "Early",
+     "Continuous",
+     "Late",
+     "No LLM"
+    ],
+    "y": "Mean essay score",
+    "series": [
+     {
+      "name": "10 minutes",
+      "v": [
+       3.8,
+       3.49,
+       1.86,
+       2.75
+      ]
+     }
+    ],
+    "note": "Zhi, Kumar & Lee (2026), Table 3",
+    "min": 0,
+    "max": 5
+   },
+   "o": [
+    "Under time pressure, help from the start paid off, while help only at the end did not",
+    "Under time pressure, any form of chatbot access raised scores above working alone",
+    "Under time pressure, Late access gave the best essays because participants first worked alone",
+    "Under time pressure, scores did not depend on when the chatbot was available"
+   ],
+   "a": 0,
+   "spot": "Find the highest and the lowest bar.",
+   "why": "With 10 minutes, Early (3.80) and Continuous (3.49) were highest and <b>Late</b> was lowest (1.86), even below No access (2.75): help that comes in the last third is too late to use. So not every form of access helped. With 30 minutes this ranking <b>reverses</b>, the temporal reversal.",
+   "src": "[IDQ B.2][CORE] Zhi et al. 2026, Table 3, Fig. 4a; pty_t8 8.7.2",
+   "hy": "5. Temporal reversal = interaction"
+  },
+  {
+   "s": "app",
+   "t": "aic",
+   "q": "A design agency lets three teams brainstorm a campaign with a chatbot. Team A may prompt it once, Team B a handful of times, Team C as often as it likes and does so constantly. According to Huang (2025), which creativity ranking is most likely?",
+   "o": [
+    "B above both A and C, with A and C about equal",
+    "C above B, and B above A, since more prompts give more ideas",
+    "A above B, and B above C",
+    "A and C equal, and both above B"
+   ],
+   "a": 0,
+   "spot": "Not too little, not too much.",
+   "why": "Huang found an <b>inverted U</b>: moderate collaboration (4.02 in Study 1) beat low (3.49) and high (3.39), and low and high did <b>not</b> differ. Too little AI limits the range of perspectives; too much brings <b>standardised</b> ideas and anchoring.",
+   "src": "[IDQ C.3][CORE] Huang 2025, Study 1; pty_t8 8.9.1",
+   "hy": "9. Goldilocks inverted U"
+  }
+ ],
+ "m2": [
+  {
+   "s": "comp",
+   "t": "ai",
+   "q": "Which of these is <b>NOT</b> a reason why language AI became so powerful in recent years?",
+   "o": [
+    "Models were given rules for checking whether statements are true",
+    "Models were trained on hundreds of billions of utterances from many sources",
+    "Transformer models approximate the meaning of words in their context",
+    "Huge computing budgets made it possible to fit models with millions of parameters"
+   ],
+   "a": 0,
+   "spot": "Which one describes something LLMs do not do?",
+   "why": "Progress came from <b>data</b> (hundreds of billions of utterances), <b>better models</b> (transformers that approximate meaning in context) and enormous <b>resources</b> to fit the parameters. LLMs do not check truth: they predict <b>plausible</b> language, which is why they can sound convincing and still be wrong.",
+   "src": "[PAST-2][CORE] Demszky et al. 2023, Introduction, training, equitable access; pty_t8 8.1-8.3, 8.6",
+   "hy": "2. Why AI/LLMs became so powerful"
+  },
+  {
+   "s": "comp",
+   "t": "llmt",
+   "q": "In Zhi et al. (2026), extra time (30 instead of 10 minutes) helped participants with Late or No access much more than participants with Early or Continuous access. Which explanation do the authors give?",
+   "o": [
+    "Early chatbot output anchored their thinking, so they added few arguments of their own and went back to the documents less",
+    "Early-access participants spent the extra time checking the chatbot's facts, which slowed down their writing",
+    "Late-access participants copied larger parts of the chatbot's answers into their essays than the others",
+    "Early-access participants felt more time pressure, because they had to share their limited time between the chatbot and the task"
+   ],
+   "a": 0,
+   "spot": "What did early help do to their own thinking?",
+   "why": "With extra time, Early and Continuous participants barely added <b>unique arguments</b> (+0.28 and +0.07) and consulted the documents less while writing, whereas Late and No access added many (+1.80 and +2.10). They had seen more valid arguments from the chatbot, but stayed <b>anchored</b> to it instead of thinking beyond it.",
+   "src": "[IDQ B.5][CORE] Zhi et al. 2026, Figs. 7-8; pty_t8 8.7.2",
+   "hy": "8. Anchoring as mechanism"
+  },
+  {
+   "s": "def",
+   "t": "aic",
+   "q": "Huang (2025) found that moderate AI collaboration raised the knowledge diversity of brainstormed ideas, and that this diversity in turn raised creativity. In this analysis, knowledge diversity is a",
+   "o": [
+    "mediator",
+    "moderator",
+    "manipulated independent variable",
+    "control variable"
+   ],
+   "a": 0,
+   "spot": "It explains how X affects Y.",
+   "why": "A <b>mediator</b> lies between cause and outcome and explains <b>how</b> the effect comes about (collaboration, then diversity, then creativity). A <b>moderator</b> changes the strength of an effect, such as skill level, which Huang names as an untested boundary condition. Knowledge diversity was measured, not manipulated, so the mediation is correlational.",
+   "src": "[IDQ C.4][CORE] Huang 2025, mediation, limitations; pty_t8 8.9.2, 8.12.2",
+   "hy": "10. Knowledge diversity as mediator"
+  }
+ ],
+ "m3": [
+  {
+   "s": "app",
+   "t": "ai",
+   "q": "A face-recognition system works well for light-skinned faces but often fails for dark-skinned faces, because most training photos showed light-skinned people. Which source of bias and which fix fit the course best?",
+   "o": [
+    "Sampling bias; fine-tune the model on well-annotated photos of under-represented groups",
+    "Data-processing bias; set the temperature to 0 so that the model's output becomes stable",
+    "Sampling bias; ask the model to explain which kinds of faces it finds difficult",
+    "Stochasticity; generate many outputs per photo and average them"
+   ],
+   "a": 0,
+   "spot": "Who was missing from the training data?",
+   "why": "Too few photos of one group is <b>sampling bias</b>, leading to <b>representational harm</b>. <b>Fine-tuning</b> on representative, well-annotated data updates the parameters so the model learns those faces, ideally with people from the target group involved. Asking a model to explain itself is circular, and temperature only controls output variability.",
+   "src": "[IDQ A.6, A.7][CORE] Demszky et al. 2023; pty_t8 8.15.6, 8.15.7",
+   "hy": "3. Sources of bias and fixes"
+  },
+  {
+   "s": "comp",
+   "t": "llm",
+   "q": "Probing an LLM resembles an experiment in psychology. Which mapping is correct?",
+   "o": [
+    "The manipulated linguistic feature is the independent variable; the model's output is the dependent variable",
+    "The model's output is the independent variable; the manipulated linguistic feature is the dependent variable",
+    "The model's own explanation of its answer is the dependent variable; the original prompt is the control condition",
+    "The temperature setting is the independent variable; the training data are the dependent variable"
+   ],
+   "a": 0,
+   "spot": "What do you change, what do you measure?",
+   "why": "In <b>probing</b> you pick a feature (such as negation), change the input along it ('I care' vs 'I don't care') and compare the output: the feature is the <b>independent variable</b>, the output the <b>dependent variable</b>. Like testing many participants, you generate many responses per prompt. Asking the LLM to explain itself is circular.",
+   "src": "[IDQ A.5][CORE] Demszky et al. 2023, Concern 3; pty_t8 8.5.3, 8.15.5",
+   "hy": "15. Probing as an experiment"
+  },
+  {
+   "s": "fig",
+   "t": "aic",
+   "q": "In Huang's Study 3, supervisor-rated creativity was predicted from creative professionals' self-reported AI collaboration. The linear term was positive and significant; the quadratic term was negative and significant. Which curve does this describe?",
+   "o": [
+    "Creativity rises with AI use up to a moderate level and then declines",
+    "Creativity rises steadily with AI use, without any turning point",
+    "Creativity falls at moderate AI use and rises again at high AI use",
+    "Creativity is unrelated to AI use once the control variables are added"
+   ],
+   "a": 0,
+   "spot": "Positive linear plus negative quadratic.",
+   "why": "A positive linear term with a <b>negative quadratic</b> term gives an <b>inverted U</b> (here not perfectly symmetric) with a turning point around moderate AI use. The pattern held with the control variables and was less consistent without them. Because Study 3 is <b>correlational</b>, it supports the Goldilocks pattern and weakens demand effects, but does not prove causation.",
+   "src": "[IDQ C.2][CORE] Huang 2025, Study 3; pty_t8 8.11",
+   "hy": "16. Huang Study 3"
+  }
+ ]
+}
