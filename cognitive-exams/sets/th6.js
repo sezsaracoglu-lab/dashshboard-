@@ -1,0 +1,1295 @@
+// Theme 6 · Judgement and decision making: practice sets written from the theme readings. Options are shuffled.
+EXAMS.push({
+ "id": "t6s1",
+ "group": "t6",
+ "shuffle": true,
+ "title": "Theme 6 · Set 1",
+ "blurb": "25 questions on Theme 6 (Judgement and decision making), covering all its readings and the five exam skills: key concepts, main findings, figures and tables, comparing theories and applying them. Your results show your score per topic and per skill.",
+ "questions": [
+  {
+   "s": "def",
+   "t": "heur",
+   "q": "According to Sternberg, people who use the representativeness heuristic judge the probability of an uncertain event mainly by",
+   "o": [
+    "whether they recognise the event at all, taking the recognised option as the more frequent one",
+    "an initial estimate of its probability that is then adjusted on the basis of new information",
+    "how easily relevant examples of the event can be retrieved from long-term memory at the moment of judging",
+    "how similar it is to the population it comes from and how well it reflects the process that produced it"
+   ],
+   "a": 3,
+   "spot": "“Judge probability by…” plus similarity and randomness → the definition of representativeness.",
+   "why": "<b>Representativeness</b> has two parts: an event seems likely when it <b>resembles its population</b> (three girls, three boys) and when it <b>looks like the process</b> that made it (an irregular, random-looking order). Ease of recall is <b>availability</b>, a starting value that is adjusted is anchoring, and recognising one option is the recognition heuristic."
+  },
+  {
+   "s": "fig",
+   "t": "heur",
+   "q": "High-school students had five seconds to estimate the answer to one of two multiplication problems. The figure shows the median estimates and the correct answer. Which conclusion fits these results best?",
+   "chart": {
+    "type": "bar",
+    "title": "Median estimates of the product (5 seconds)",
+    "x": [
+     "Starts with 8 (8×7×…×1)",
+     "Starts with 1 (1×2×…×8)",
+     "Correct answer"
+    ],
+    "y": "Estimate",
+    "series": [
+     {
+      "name": "Value",
+      "v": [
+       2250,
+       512,
+       40320
+      ]
+     }
+    ],
+    "note": "Tversky & Kahneman (1974), via Matlin & Farmer and Sternberg",
+    "min": 0
+   },
+   "o": [
+    "Only the group starting with 1 used an anchor; the group starting with 8 estimated the product fairly accurately",
+    "The group starting with 8 overestimated the product, because a large first number makes people adjust upwards too much",
+    "The order of the numbers changes the true product, so the difference between the medians reflects accurate calculation",
+    "Both groups adjusted too little from the first numbers, so both underestimated, the group starting with 1 the most"
+   ],
+   "a": 3,
+   "spot": "Two medians far below the true value, differing only by the starting number → an anchor plus too little adjustment.",
+   "why": "People multiply the first few numbers (the <b>anchor</b>) and then adjust upwards, but <b>too little</b>. Starting with 8 gives a higher anchor (median 2,250) than starting with 1 (median 512), yet both are far below the true <b>40,320</b>. The tempting option says the group starting with 8 was accurate, but 2,250 is still less than a tenth of the answer."
+  },
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "A factory may have to close, which threatens 900 jobs. Plan 1 keeps 300 jobs for certain. Plan 2 has a one-in-three chance of keeping all 900 jobs and a two-in-three chance of keeping none. A consultant wants the board to choose Plan 2. Which way of presenting the plans makes that most likely?",
+   "o": [
+    "Describe both plans in terms of the number of jobs that will be lost",
+    "Describe both plans in terms of the number of jobs that will be kept",
+    "Show the expected number of jobs kept, because Plan 2 then comes out higher",
+    "Describe the plans in terms of jobs kept, because gains make people seek risk"
+   ],
+   "a": 0,
+   "spot": "“Wants them to take the gamble” → which frame makes people risk seeking? The loss frame.",
+   "why": "Prospect theory says people are <b>risk averse for gains</b> and <b>risk seeking for losses</b>. Describing the plans as <b>jobs lost</b> (600 lost for certain vs a gamble) creates a loss frame, in which the gamble becomes more attractive. A “jobs kept” frame does the opposite, and the expected number of jobs kept is 300 for both plans, so expected values favour neither."
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Tentori and colleagues (2013) added the option “Linda is a bank teller and owns a pair of black shoes” to the Linda problem. Owning black shoes is more probable than being a feminist activist. What did they find, and what does it suggest?",
+   "o": [
+    "Both conjunctions were rated as equally likely, so the fallacy reflects a misunderstanding of the phrase “bank teller”",
+    "The black-shoes option was rated more likely than the feminist option, so the fallacy depends on how probable the added information seems to people",
+    "Black shoes was rated less likely than the feminist option, so the fallacy depends on how strongly the description supports the added detail",
+    "Both conjunctions were rejected once a neutral detail was added, so the fallacy disappears when the problem is worded clearly"
+   ],
+   "a": 2,
+   "spot": "Black shoes = more probable but not supported by Linda's description → which explanation wins?",
+   "why": "The standard account says the added detail feels <b>probable</b>, so it predicts that black shoes would win. In fact people preferred the feminist option, because Linda's description <b>supports</b> that hypothesis and says nothing about shoes. This backs Tentori's <b>hypothesis explanation</b>. The misunderstanding account is weak anyway: the fallacy stays when the wording is made clear (Sides et al., 2002)."
+  },
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Judge these statements about expected utility theory and prospect theory.<br>I. Both theories assume that the probabilities of the possible outcomes play a role in the choice.<br>II. Both theories predict that a choice should stay the same when identical options are described as lives saved or as lives lost.",
+   "o": [
+    "I and II are both true",
+    "I is false, II is true",
+    "I is true, II is false",
+    "I and II are both false"
+   ],
+   "a": 2,
+   "spot": "Check each statement against both theories: probabilities (both use them), wording (only prospect theory predicts a change).",
+   "why": "Expected utility weighs <b>utility and probability</b>, and prospect theory evaluates <b>prospects</b>: possible outcomes together with their probabilities, so I is true. II is false: <b>invariance</b> is a prediction of expected utility theory only, whereas prospect theory says the wording shifts the <b>reference point</b>, so “saved” and “die” lead to different choices."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "In a quiz, Mila must say which of two Brazilian cities has more inhabitants. She has heard of one of them but never of the other, so she picks the one she knows. Which strategy is she using, and when does it tend to work?",
+   "o": [
+    "Anchoring and adjustment, which works well when the first city mentioned is the larger one",
+    "The representativeness heuristic, which works well when the known city looks typical of large cities",
+    "Take-the-best, which works well when she can compare both cities on their most important cue",
+    "The recognition heuristic, which works well when knowing a name is related to the size being judged"
+   ],
+   "a": 3,
+   "spot": "Knows one name, not the other, and picks the known one → recognition.",
+   "why": "The <b>recognition heuristic</b>: if you recognise one of two options and not the other, infer that the recognised one has the higher value. It is a special case of availability that is usually <b>accurate</b>, because big cities are talked about more (Milan vs Modena). Take-the-best needs a criterion on which both options can be compared, and Mila knows nothing about the second city."
+  },
+  {
+   "s": "fig",
+   "t": "dec",
+   "q": "Participants received $5 and decided how much to put in a risky fund (the rest went into a safe option), after a male or a female experimenter had given them no touch, a handshake or a touch on the shoulder. The table shows the average amount invested in the risky fund.<table class=\"qt\"><tr><th>Experimenter</th><th>No touch</th><th>Handshake</th><th>Shoulder touch</th></tr><tr><td>Male</td><td>$2.59</td><td>$2.18</td><td>$2.63</td></tr><tr><td>Female</td><td>$1.05</td><td>$2.04</td><td>$3.44</td></tr></table>Which conclusion fits the table?",
+   "o": [
+    "A handshake increased risk taking more than a touch on the shoulder did, and this held for both male and female experimenters",
+    "A female experimenter reduced risk taking in every condition compared with a male experimenter",
+    "Any physical contact increased risk taking, and this effect was about equally large for male and female experimenters",
+    "The type of touch mattered mainly with a female experimenter, and her touch on the shoulder led to the most risk taking"
+   ],
+   "a": 3,
+   "spot": "Compare the rows: the male row barely moves, the female row climbs → an interaction.",
+   "why": "With a male experimenter the amounts stay between $2.18 and $2.63, so touch made little difference. With a female experimenter the amount rises from <b>$1.05</b> (no touch) to <b>$3.44</b> (shoulder): an <b>interaction</b> between type of touch and sex of the toucher. “Female reduced risk taking everywhere” fails in the shoulder column, where $3.44 is higher than $2.63. Levav and Argo link this to the feeling of <b>security</b> that touch gives."
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "Simon (1957) proposed that people show bounded rationality. What does this mean?",
+   "o": [
+    "People choose rationally only when information is presented as natural frequencies",
+    "People optimise every decision as soon as they have gathered all the relevant information",
+    "People are basically irrational, because automatic emotions override their reasoning in most decisions",
+    "People are rational, but within limits of time and resources, so they try to get close to optimising"
+   ],
+   "a": 3,
+   "spot": "“Bounded” rationality → rational, but with limits.",
+   "why": "Classical decision theory assumed that people <b>optimise</b>. Simon argued that we are <b>rational within limits</b>: time, information and memory are limited, so we aim for a choice that is close to the best without truly optimising. That is not the same as being irrational. Strategies such as <b>satisficing</b> follow from this idea."
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Participants saw pairs of names, one famous and one unknown, and judged which name occurs more often. What did Oppenheimer (2004) and Oppenheimer and Monin (2009) find?",
+   "o": [
+    "Most chose the unknown name, and cognitive load made no real difference to how often they did so",
+    "Most chose the unknown name, but under cognitive load about 80% chose the famous name",
+    "Most chose the famous name, and under cognitive load this fell to about 20%",
+    "Most chose the famous name, both with and without cognitive load"
+   ],
+   "a": 1,
+   "spot": "Famous name = the easy-to-retrieve option; cognitive load = less room for deliberate thought.",
+   "why": "Availability predicts choosing the famous name, yet most people chose the <b>unknown</b> one: deliberate thought <b>overrode</b> the heuristic. When <b>cognitive load</b> made deliberate thinking harder, people fell back on availability and chose the famous name <b>80%</b> of the time. So heuristics can be corrected, but only when there is capacity to spare."
+  },
+  {
+   "s": "fig",
+   "t": "heur",
+   "q": "A football coach is convinced that players who eat pasta before a match score more often. He kept this record for one season.<table class=\"qt\"><tr><th></th><th>Scored</th><th>Did not score</th><th>Total</th></tr><tr><td>Pasta</td><td>12</td><td>18</td><td>30</td></tr><tr><td>No pasta</td><td>8</td><td>12</td><td>20</td></tr></table>What does the table show?",
+   "o": [
+    "No relationship: 40% scored in both groups, so the coach's belief is an illusory correlation",
+    "No conclusion is possible without knowing how many goals were scored in the whole league",
+    "Pasta hurts scoring, because most pasta eaters (18 of 30) did not score",
+    "Pasta helps scoring, because more pasta eaters (12) than non-pasta eaters (8) scored a goal this season"
+   ],
+   "a": 0,
+   "spot": "A 2×2 table plus a belief in a link → compare proportions using all four cells.",
+   "why": "12 of 30 is 40%, and 8 of 20 is also <b>40%</b>, so there is no relationship. The coach attends to the <b>one cell</b> “pasta and scored”, which is how an <b>illusory correlation</b> arises (Chapman & Chapman). Comparing raw counts (12 vs 8) is the tempting error: there are simply more pasta eaters."
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "What is the key difference between myside bias and confirmation bias, as described in the reader?",
+   "o": [
+    "Confirmation bias concerns evidence about your own position; myside bias also occurs without any personal stake",
+    "Myside bias concerns remembering past events in line with their outcome; confirmation bias concerns predicting future events",
+    "Confirmation bias is caused by the anchoring heuristic; myside bias is caused by the representativeness heuristic",
+    "Myside bias is about evidence for a position you are committed to; confirmation bias also occurs without any personal stake"
+   ],
+   "a": 3,
+   "spot": "Two similar biases → ask which one requires personal investment.",
+   "why": "<b>Myside bias</b> means judging evidence more leniently when it favours the side you are already on. <b>Confirmation bias</b> is broader: Wason's 2-4-6 participants had no stake in “ascending by twos”, but still only tested triples that would fit. Myside bias can be seen as confirmation bias applied to beliefs you are committed to. The third option describes <b>hindsight bias</b>."
+  },
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "Jonas has ten minutes before his train leaves. In the station shop he walks along the shelf and takes the first sandwich that costs less than €5 and has no onion in it, without looking at the rest. Which decision strategy is this?",
+   "o": [
+    "The default heuristic",
+    "Satisficing",
+    "Elimination by aspects",
+    "Take-the-best"
+   ],
+   "a": 1,
+   "spot": "“The first option that is good enough, then stop” → satisficing.",
+   "why": "In <b>satisficing</b> (Simon) you consider options <b>one by one</b> and stop at the first that meets your minimum criteria; the rest are never inspected. In <b>elimination by aspects</b> you go through aspects, removing every option that fails each criterion, until one is left. Satisficing suits a quick, low-stakes choice like this, but would be a poor strategy for a medical diagnosis."
+  },
+  {
+   "s": "def",
+   "t": "heur",
+   "q": "When judging how risky or how useful something is, people sometimes ask themselves “How do I feel about it?” and use that feeling as their answer. Which concept describes this?",
+   "o": [
+    "The recognition heuristic",
+    "The availability heuristic",
+    "Myside bias",
+    "The affect heuristic"
+   ],
+   "a": 3,
+   "spot": "A feeling replaces the harder question → affect.",
+   "why": "The <b>affect heuristic</b> (Slovic et al., 2007) uses the positive or negative feeling attached to something as a shortcut for judging risk, benefit or frequency. A sign of it: whatever people judge beneficial they also judge safe, and this inverse link grew <b>stronger under time pressure</b> (Finucane et al., 2000). Availability works on how easily examples come to mind, not on feelings."
+  },
+  {
+   "s": "find",
+   "t": "dec",
+   "q": "Caruso, Gilbert and Wilson (2008) asked students about their winter-break trip, either a couple of weeks before the break or a couple of weeks after it. What did they find?",
+   "o": [
+    "Students thinking about the trip still to come rated it more enjoyable and would pay more to extend it",
+    "Students valued the trip more before the break only when the survey framed it as a gain",
+    "Students rated the trip equally enjoyable before and after, but would pay more to extend it afterwards",
+    "Students thinking about the trip already over rated it as more enjoyable and would pay more to extend it"
+   ],
+   "a": 0,
+   "spot": "The same trip, judged before or after → future versus past value.",
+   "why": "They found a <b>temporal value asymmetry</b>: the coming trip was rated more enjoyable and was worth more (<b>$113</b> vs <b>$91</b> to extend it), a pattern found in all five studies. The future is less certain and more changeable, so people value it more. Caruso and colleagues conclude that prospect theory, which looks at a single moment, needs a <b>time dimension</b>."
+  },
+  {
+   "s": "fig",
+   "t": "heur",
+   "q": "The figure shows the percentage of correct answers on Bayesian judgement problems presented either as probabilities or as natural frequencies, in two studies. Which conclusion is best supported?",
+   "chart": {
+    "type": "bar",
+    "title": "Correct answers on Bayesian problems",
+    "x": [
+     "Gigerenzer & Hoffrage (1995)",
+     "Hoffrage et al. (2015): advanced medical students"
+    ],
+    "y": "% correct",
+    "series": [
+     {
+      "name": "Probabilities",
+      "v": [
+       16,
+       7
+      ]
+     },
+     {
+      "name": "Natural frequencies",
+      "v": [
+       46,
+       45
+      ]
+     }
+    ],
+    "note": "Eysenck & Keane",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "Natural frequencies only help on simple problems, so the advantage vanishes in complex diagnostic tasks",
+    "The advantage of natural frequencies is also found in people with considerable medical training",
+    "Natural frequencies help lay participants, but advanced medical students solve both versions about equally well",
+    "Advanced medical students solve probability problems better than lay participants, thanks to their expertise"
+   ],
+   "a": 1,
+   "spot": "Two studies, two formats → is the frequency advantage there in both, including the experts?",
+   "why": "In both studies the <b>natural-frequency</b> bars are far higher: 46% vs 16% (Gigerenzer & Hoffrage, 1995) and <b>45% vs 7%</b> for advanced medical students (Hoffrage et al., 2015), even though the medical tasks were complex. So prior knowledge does not remove the benefit. Comparing 16% with 7% across studies says nothing about expertise, because the tasks were different."
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "A GP makes two judgements.<br>I. “This patient's symptoms look just like a textbook case of flu, so it is probably flu.”<br>II. “Flu must be common this winter: I can think of many flu patients from the past few weeks.”<br>Which heuristics mainly underlie these judgements?",
+   "o": [
+    "I reflects availability, whereas II reflects representativeness",
+    "I and II both reflect availability",
+    "I and II both reflect representativeness",
+    "I reflects representativeness, II reflects availability"
+   ],
+   "a": 3,
+   "spot": "A case compared with a category → representativeness; counting the examples you can recall → availability.",
+   "why": "In I a <b>specific case</b> is judged by how much it <b>resembles</b> a category: representativeness. In II a frequency is estimated from how easily <b>examples come to mind</b>: availability. A quick check: “is it similar?” points to representativeness, “can I recall many?” points to availability."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "Eva estimates that writing her thesis chapter will take two weeks. All her previous chapters took much longer than she had planned. Which approach is most likely to make her new estimate more realistic?",
+   "o": [
+    "Assume she will have more free time next month than now, so that her plan becomes realistic",
+    "Start from her two-week estimate and add a few days, because a small correction to a first estimate is usually enough",
+    "Base the estimate on the chapter she finished fastest, because that shows what she can achieve",
+    "Split the chapter into parts, estimate each, and imagine how long another student would need, obstacles included"
+   ],
+   "a": 3,
+   "spot": "Projects that always take longer than planned → planning fallacy; look for the strategy that counters it.",
+   "why": "The <b>planning fallacy</b> comes from an optimistic scenario plus too little <b>adjustment</b> from it. Splitting a project into parts, picturing every step and imagining <b>someone else</b> doing it give more realistic estimates. Adding a few days is the insufficient adjustment itself, and remembering quick past tasks and expecting more future free time are listed <b>causes</b> of the fallacy, not cures."
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Fischhoff, Slovic and Lichtenstein (1977) asked people to answer 200 two-choice general-knowledge questions and to say how sure they were of each answer. What did they find?",
+   "o": [
+    "Answers given with 100% certainty were always correct, but answers given with 50% certainty were mostly wrong",
+    "Answers given with 100% certainty were correct only about 80% of the time",
+    "People were underconfident: when they were 80% sure, nearly all their answers were correct",
+    "People were well calibrated: their certainty matched the proportion of correct answers"
+   ],
+   "a": 1,
+   "spot": "Certainty compared with accuracy → calibration; the classic result is overconfidence.",
+   "why": "This is the classic demonstration of <b>overconfidence</b>: when people were <b>100% sure</b>, they were right only <b>80%</b> of the time. Their confidence was higher than their accuracy justified. Reasons given in the readings include not realising how little we know and not realising that our sources are unreliable."
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "Why is expected utility theory called a normative model of decision making?",
+   "o": [
+    "It is based on the norms of a culture, so it predicts different choices in different countries",
+    "It describes how a fully rational decision maker should choose, which makes it a benchmark for real choices",
+    "It describes how most people actually choose in daily life, which makes it the best predictor of real choices",
+    "It describes the shortcuts that people normally use when they have little time to choose"
+   ],
+   "a": 1,
+   "spot": "“Normative” = how one should choose; “descriptive” = how people actually choose.",
+   "why": "Expected utility theory states how an ideal, fully rational person <b>should</b> choose, by combining utility and probability. That makes it a <b>yardstick</b> for measuring rationality, not an accurate description: real people violate it, for example in preference reversals. <b>Prospect theory</b> is the descriptive alternative."
+  },
+  {
+   "s": "fig",
+   "t": "dec",
+   "q": "The figure shows the percentage of risky choices in a gain frame and a loss frame, for participants with or without acute stress (a hand in ice-cold water for two minutes). By how many percentage points is the difference between the loss and the gain frame larger under stress than without stress? Give a whole number.",
+   "chart": {
+    "type": "bar",
+    "title": "Risky choices by frame and stress",
+    "x": [
+     "Gain frame",
+     "Loss frame"
+    ],
+    "y": "% risky choices",
+    "series": [
+     {
+      "name": "No stress",
+      "v": [
+       42,
+       61
+      ]
+     },
+     {
+      "name": "Acute stress",
+      "v": [
+       33,
+       66
+      ]
+     }
+    ],
+    "note": "Porcelli & Delgado (2009), via Robinson-Riegler",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "5",
+    "14",
+    "33",
+    "19"
+   ],
+   "a": 1,
+   "spot": "Work out the frame difference within each stress condition, then subtract the two.",
+   "why": "Without stress: 61 − 42 = <b>19</b> points. Under stress: 66 − 33 = <b>33</b> points. The framing effect is therefore 33 − 19 = <b>14</b> points larger under stress. Porcelli and Delgado (2009) explain this as stress hampering effortful <b>System 2</b>, so automatic System 1 tendencies show more strongly. 19 and 33 are the separate differences, not the change between them."
+  },
+  {
+   "s": "find",
+   "t": "dec",
+   "q": "Gonzalez, Dana, Koshino and Just (2005) used fMRI while participants made choices in problems like the Asian disease problem. Which pattern did the brain scans show?",
+   "o": [
+    "Less activity for the risky option in a gain frame and for the sure option in a loss frame",
+    "More activity in a loss frame for both options, but no difference between sure and risky options",
+    "Equal activity for sure and risky options, with the frame affecting only the final choice",
+    "Less activity for the sure option in a gain frame and for the risky option in a loss frame"
+   ],
+   "a": 3,
+   "spot": "Brain effort compared across frames → it mirrors the option the frame favours.",
+   "why": "Activity was mainly <b>frontal and parietal</b> (working memory and some imagery). The option that people prefer in each frame needed less effort: less activity for the <b>sure option in gains</b> and for the <b>risky option in losses</b>. This suggests that part of decision making is driven by a wish to <b>minimise cognitive effort</b>."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "A couple already has three daughters. While expecting their fourth child, the father says: “After three girls, this one is surely going to be a boy.” Which error is he making?",
+   "o": [
+    "Base-rate neglect",
+    "The hot-hand belief",
+    "The conjunction fallacy",
+    "The gambler's fallacy"
+   ],
+   "a": 3,
+   "spot": "A run of one outcome makes the opposite feel “due” on an independent trial.",
+   "why": "Each birth is <b>independent</b>, so three girls do not make a boy more likely. Expecting the opposite outcome after a streak is the <b>gambler's fallacy</b>, representativeness gone wrong: we expect even a short sequence to look balanced (the law of small numbers). The <b>hot hand</b> is the reverse belief, that a streak will continue."
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "One criticism of the heuristics-and-biases approach is that a wrong judgement does not prove that the mind processed the information in a biased way. Which alternative explanation does this criticism offer?",
+   "o": [
+    "The person may have been exposed to a small, biased sample of information from the environment",
+    "The anchor may simply prime similar values instead of starting a process of adjustment",
+    "The heuristics are so vaguely defined that they cannot predict in advance which judgement people will make",
+    "Emotional and motivational influences were hardly studied in the laboratory until recently"
+   ],
+   "a": 0,
+   "spot": "“Not the mind's processing” → the error comes from outside: the information itself.",
+   "why": "All four options are real criticisms, but only one moves the cause <b>outside the mind</b>: judgements are often wrong because people met a <b>small, biased sample</b> of information (an environmental feature), for example skewed media coverage. The other options criticise <b>vague definitions</b>, limited theory (priming instead of adjustment) and the neglect of emotion."
+  },
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "A company changes its pension scheme: new employees are now enrolled automatically unless they sign a form to leave. Participation rises sharply. Which concept best explains this?",
+   "o": [
+    "Satisficing",
+    "The default heuristic",
+    "The take-the-best heuristic",
+    "The sunk-cost effect"
+   ],
+   "a": 1,
+   "spot": "“What happens if you do nothing” changed → defaults.",
+   "why": "The <b>default heuristic</b>: when there is a standard option, people tend to keep it. The readings' example is organ donation: about <b>28%</b> donors in the United States, where you must opt in, against <b>99.9%</b> in France, where you must opt out. Gigerenzer sees this as an <b>ecologically rational</b> use of the environment rather than a flaw."
+  },
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Which research question best fits Gigerenzer's approach to heuristics rather than that of Kahneman and Tversky?",
+   "o": [
+    "Why does human judgement fall short of the optimal answer given by probability theory?",
+    "Which systematic errors reveal the shortcuts people use when they judge probabilities?",
+    "Given our cognitive limits, how do we still manage to make good decisions in our environment?",
+    "How can the illusions produced by heuristics be shown in carefully worded laboratory problems?"
+   ],
+   "a": 2,
+   "spot": "Error-focused (half empty) versus success-focused (half full).",
+   "why": "Kahneman and Tversky asked why judgement <b>falls short</b> and what <b>errors</b> reveal: the other three options. Gigerenzer asks how we decide <b>well</b> despite limits: heuristics are an <b>adaptive toolbox</b> of fast-and-frugal strategies fitted to the environment (ecological rationality). Both camps do agree that heuristics usually serve us well."
+  }
+ ]
+});
+EXAMS.push({
+ "id": "t6s2",
+ "group": "t6",
+ "shuffle": true,
+ "title": "Theme 6 · Set 2",
+ "blurb": "25 questions on Theme 6 (Judgement and decision making), covering all its readings and the five exam skills: key concepts, main findings, figures and tables, comparing theories and applying them. Your results show your score per topic and per skill.",
+ "questions": [
+  {
+   "s": "def",
+   "t": "heur",
+   "q": "A test is used to screen for a rare liver disease. In judgement research, what is the base rate in this situation?",
+   "o": [
+    "The proportion of people in the population who have the disease",
+    "The proportion of people with the disease who get a positive result",
+    "The proportion of people with a positive result who really have the disease",
+    "The proportion of people without the disease who get a negative result"
+   ],
+   "a": 0,
+   "spot": "“Base rate” → how common the condition is in the population, before any test.",
+   "why": "The <b>base rate</b> is the relative frequency of a characteristic in the population: here, how many people have the disease. The second option is the test's hit rate, and the third is what you usually want to <b>calculate</b> with Bayes' theorem. Mixing up the hit rate with that third probability is exactly the error behind <b>base-rate neglect</b>."
+  },
+  {
+   "s": "fig",
+   "t": "heur",
+   "q": "Experienced judges (on average 15 years in the job) heard a typical court case. The “prosecutor”, introduced as a computer science student, demanded either 12 or 34 months.<table class=\"qt\"><tr><th>Sentence demanded</th><th>Average sentence given by the judges</th></tr><tr><td>12 months</td><td>28 months</td></tr><tr><td>34 months</td><td>36 months</td></tr></table>Which statement about these results is correct?",
+   "o": [
+    "The judges adjusted fully away from the low demand, so anchoring only occurred for the high demand",
+    "The result reflects availability, because the higher demand was easier for the judges to remember",
+    "The judges ignored the demand, as shown by both sentences being higher than the demands",
+    "A demand from an obvious layperson still shifted the experts' sentences by about 8 months"
+   ],
+   "a": 3,
+   "spot": "A number from an irrelevant source + experts' later estimates → anchoring.",
+   "why": "The only difference between the conditions was the demand, and the sentences differed by 36 − 28 = <b>8 months</b>. So the demand worked as an <b>anchor</b>, although it came from someone with no legal expertise and the judges were <b>experts</b>. Both sentences lying above the demands does not show the demand was ignored: the low demand still pulled the sentence down."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "At a university, 50 of every 1,000 essays are plagiarised. A detection tool flags 40 of the 50 plagiarised essays, and it also flags 95 of the 950 honest essays. An essay has just been flagged. What is the probability that it really is plagiarised? Give a whole percentage.",
+   "o": [
+    "4%",
+    "80%",
+    "90%",
+    "30%"
+   ],
+   "a": 3,
+   "spot": "“Given that it was flagged, how likely is…?” → Bayes; count all flagged essays first.",
+   "why": "Flagged essays: 40 + 95 = <b>135</b>. Of these, 40 are plagiarised: 40 / 135 ≈ 0.296, so about <b>30%</b>. The tempting 80% is the tool's hit rate (40 of 50): it answers “how often is plagiarism flagged?”, not “how often is a flag plagiarism?”. Because honest essays are so common (the <b>base rate</b>), even a small false-alarm rate produces more false flags than true ones."
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Bialek (2017) used the lawyer–engineer problem with samples of 1,000 people. When 997 of the 1,000 were engineers, the average judged probability that a random description was of an engineer was .84; when only 3 of the 1,000 were engineers, it was .53. What does this show?",
+   "o": [
+    "People overused the base rate, giving it more weight than the description",
+    "People used the base rate, but not as fully as Bayes' theorem requires",
+    "People ignored the base rate completely, as in the original lawyer–engineer problem",
+    "People used the base rate only when the description sounded like a typical lawyer"
+   ],
+   "a": 1,
+   "spot": "Estimates move with the base rate, but far less than the base rate moves.",
+   "why": "The estimates differ (.84 vs .53), so the <b>base rate was used</b>, unlike in the original problem where the 70 : 30 split made no difference. But the base rates were extreme (997 vs 3 of 1,000), and the estimates moved much less than that, so people used them <b>only partly</b>. This is one of the findings showing that base-rate neglect is not absolute."
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "The gambler's fallacy and the hot-hand belief are both about streaks, yet they predict opposite things for the next outcome. According to the reader, what largely determines which of the two beliefs people adopt?",
+   "o": [
+    "Whether they see the outcomes as produced by an agent with a changeable skill state or by a mechanism without one",
+    "Whether they have seen the streak themselves or have only heard about it from others",
+    "Whether the streak consists of successes or of failures, regardless of what or who produced the outcomes in the streak",
+    "Whether the outcomes are presented as probabilities or as natural frequencies"
+   ],
+   "a": 0,
+   "spot": "Same kind of sequence, opposite beliefs → what is thought to be producing the outcomes?",
+   "why": "A roulette wheel is a <b>mechanism</b> with no state, so a streak feels like a debt that must be repaid: the <b>gambler's fallacy</b>. A basketball player is an <b>agent</b> whose skill state can change, so a streak is read as a sign that he is “hot”: the <b>hot hand</b>. Croson and Sundali (2005) even found both beliefs in the same gamblers on the same evening."
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "Which description fits the take-the-best heuristic?",
+   "o": [
+    "Remove all options that fail a minimum on one attribute, then move on to the next attribute, and so on",
+    "Look at the options one at a time and choose the first one that is good enough",
+    "Find the single criterion that matters most to you and base the choice on that criterion alone",
+    "Choose the option you recognise when you do not recognise the other option"
+   ],
+   "a": 2,
+   "spot": "“Take the best” cue and decide on it alone.",
+   "why": "<b>Take-the-best</b> means choosing on the one most important criterion, such as fuel consumption, safety or looks when buying a car. It is a <b>fast-and-frugal heuristic</b>: little information, quick decisions, and often results as good as or better than far more complex strategies. The other options describe elimination by aspects, satisficing and the recognition heuristic."
+  },
+  {
+   "s": "fig",
+   "t": "dec",
+   "q": "Participants chose between a sure and a risky programme against a disease expected to kill 600 people. For one group the options were worded in terms of lives saved, for the other in terms of lives lost. Judge these statements.<br>I. In the “saved” frame, most participants avoided the risk.<br>II. The risky programme saved more lives on average in the “die” frame than in the “saved” frame.",
+   "chart": {
+    "type": "bar",
+    "title": "Choices in the disease problem",
+    "x": [
+     "“Saved” frame (gain)",
+     "“Die” frame (loss)"
+    ],
+    "y": "% of participants",
+    "series": [
+     {
+      "name": "Sure programme",
+      "v": [
+       72,
+       22
+      ]
+     },
+     {
+      "name": "Risky programme",
+      "v": [
+       28,
+       78
+      ]
+     }
+    ],
+    "note": "Tversky & Kahneman (1981)",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "I is true, II is false",
+    "I and II are both false",
+    "I is false, II is true",
+    "I and II are both true"
+   ],
+   "a": 0,
+   "spot": "Read the bars per frame, then ask whether the outcomes themselves differ between the frames.",
+   "why": "I is true: <b>72%</b> chose the sure programme when outcomes were worded as lives saved, which is <b>risk averse</b>. II is false: the programmes are identical in both frames (on average 200 saved, 400 dead); only the <b>wording</b> differs. That 78% chose the gamble in the “die” frame shows a <b>framing effect</b>, not a better programme."
+  },
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "On a game show you can flip a coin once: heads, you win €60; tails, you lose €50. Most people refuse this bet, although on average it gains €5. Which idea from prospect theory best explains the refusal?",
+   "o": [
+    "Invariance: the choice does not depend on how the bet is described",
+    "Risk seeking for losses: people prefer to avoid a sure loss of €50",
+    "Loss aversion: losing €50 feels worse than winning €60 feels good",
+    "Diminishing sensitivity: the second €10 of the gain adds very little value"
+   ],
+   "a": 2,
+   "spot": "A fair-looking bet with a possible loss is refused → losses weigh more than gains.",
+   "why": "In prospect theory the value function is <b>steeper for losses</b> than for gains: the pain of losing €50 is larger than the pleasure of winning a similar amount. So the possible loss outweighs the slightly larger gain, and the bet is refused even though its <b>expected value</b> is positive. Risk seeking for losses concerns a choice between a sure loss and a gamble, which is not the choice here."
+  },
+  {
+   "s": "fig",
+   "t": "heur",
+   "q": "Krynski and Tenenbaum (2007) gave a mammogram problem in two versions. In the standard version, 6% of women without breast cancer still get a positive result. In the benign-cyst version, 6% of women without breast cancer have a harmless cyst that looks like a tumour and causes a positive result. The figure shows two of the answer types. What do the results suggest?",
+   "chart": {
+    "type": "bar",
+    "title": "Answers in the two mammogram versions",
+    "x": [
+     "Correct answer",
+     "Base-rate neglect"
+    ],
+    "y": "% of participants",
+    "series": [
+     {
+      "name": "Standard (false positive)",
+      "v": [
+       24,
+       31
+      ]
+     },
+     {
+      "name": "Benign cyst",
+      "v": [
+       44,
+       7
+      ]
+     }
+    ],
+    "note": "Approximate, read from Figure 13.1 (Eysenck & Keane); base-rate neglect in the standard version was just over 30%",
+    "min": 0,
+    "max": 60
+   },
+   "o": [
+    "The two versions have different correct answers, so the change in correct answers is expected",
+    "Mentioning a harmless cyst makes people overuse the base rate, so fewer answers are correct",
+    "Base rates are used more often when the numbers are given as natural frequencies instead of percentages",
+    "Base rates are used more often when the problem gives a clear cause for false-positive results"
+   ],
+   "a": 3,
+   "spot": "Same numbers, one version adds a cause for false positives → what changes base-rate use?",
+   "why": "The numbers are identical; only a <b>causal explanation</b> of false positives was added. Correct answers rose from about <b>24%</b> to about <b>44%</b>, and base-rate neglect fell from over 30% to about 7%. Krynski and Tenenbaum argue that people can use base rates when they understand the <b>causal structure</b>, which lab problems often hide. Natural frequencies are a different manipulation (Gigerenzer & Hoffrage) and were not used here."
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "Which point is a criticism of the natural-frequency hypothesis of Gigerenzer and Hoffrage (1995)?",
+   "o": [
+    "Most word problems hand participants ready-made frequencies, which skips the complexity of natural sampling",
+    "Natural frequencies help students, but not people with a lot of relevant prior knowledge",
+    "In daily life people mostly meet summary statistics, so percentages are the natural format",
+    "The advantage of natural frequencies disappears as soon as visual aids are added to both versions of a problem"
+   ],
+   "a": 0,
+   "spot": "Which statement attacks the theory's logic rather than describing a (false) result?",
+   "why": "The hypothesis is about <b>natural sampling</b>: meeting cases one by one. Critics note that word problems give frequencies <b>ready-made</b>, so they do not test natural sampling at all, and that the samples we meet in real life can be biased. The other options contradict the findings: visual aids helped both formats while the advantage <b>remained</b> (McDowell & Jacobs, 2017), and medical students benefited too (Hoffrage et al., 2015)."
+  },
+  {
+   "s": "def",
+   "t": "heur",
+   "q": "Tversky and Kahneman (1971) described a belief in the “law of small numbers”. What does it refer to?",
+   "o": [
+    "Expecting a small sample to be as representative of the population as a large sample",
+    "Judging small categories as rarer than large ones because fewer of their examples come to mind",
+    "Believing that a small number of cues is enough to make a good decision",
+    "Giving small, precise numbers more weight as anchors than large, round numbers"
+   ],
+   "a": 0,
+   "spot": "“Small numbers” = small samples treated as if they were big ones.",
+   "why": "The <b>law of small numbers</b> is the mistaken belief that a small sample should already show the properties of the whole population or process. It explains why six reds at roulette make black feel “due” (the <b>gambler's fallacy</b>) and why one anecdote (“I know a man who…”) feels like evidence. The last option sounds like take-the-best, which is a strategy, not an error."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "Two sellers offer similar second-hand cars. One asks €8,000, the other €7,950. Buyers are asked what they think each car is really worth. What is the most likely result?",
+   "o": [
+    "Buyers move further away from the €8,000 price than from the €7,950 price",
+    "Buyers move equally far from both prices, because the prices differ by only €50",
+    "Buyers move further away from the €7,950 price, because precise prices look suspicious",
+    "Buyers ignore both prices, because sellers are not a credible source of value"
+   ],
+   "a": 0,
+   "spot": "A price as a starting point → anchoring; round versus precise anchor.",
+   "why": "Both prices act as <b>anchors</b>, but people adjust <b>more</b> from a <b>round</b> anchor than from a precise one. In the readings, a TV priced at $3,000 led to bigger adjustments in estimated production costs than one priced at $2,991 (Janiszewski & Uy, 2008). Anchors also work when their source is not credible, as with the judges and the student “prosecutor”."
+  },
+  {
+   "s": "find",
+   "t": "dec",
+   "q": "In Arkes and Blumer's (1985) study, participants imagined they had bought a $50 ticket for a ski trip to Wisconsin and a $100 ticket for a ski trip to Michigan, both non-refundable and on the same weekend. The Wisconsin trip was described as more enjoyable. What did most participants choose, and why is that irrational?",
+   "o": [
+    "Michigan, although the $150 was lost whichever trip they chose, so only enjoyment should have counted",
+    "Wisconsin, although the Michigan ticket cost more, so they ignored a real and relevant difference in cost",
+    "Wisconsin, because they wanted to avoid wasting the money paid for the cheaper ticket",
+    "Michigan, because a higher price can reasonably signal that a trip will be better"
+   ],
+   "a": 0,
+   "spot": "Money already spent and not recoverable + a choice that follows the money → sunk cost.",
+   "why": "Most chose <b>Michigan</b>, because skipping the more expensive trip felt like wasting more money. But all <b>$150</b> was gone either way: the costs were <b>sunk</b>. A rational choice looks only at future costs and benefits, so the more enjoyable Wisconsin trip should have won. The third option fails because participants had been told directly that Wisconsin was more enjoyable."
+  },
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "What is the main difference between satisficing and elimination by aspects?",
+   "o": [
+    "Satisficing is used only for small decisions; elimination by aspects is used only when the best option must be found",
+    "Satisficing checks options one by one and stops at the first acceptable one; elimination by aspects checks attributes one by one, dropping options that fail each",
+    "Satisficing goes through attributes one by one and drops every option that fails each; elimination by aspects goes through options one by one and stops at the first acceptable one",
+    "Satisficing compares all options on all attributes; elimination by aspects uses only the single most important attribute"
+   ],
+   "a": 1,
+   "spot": "Two shortcut strategies → what is checked one at a time, options or attributes?",
+   "why": "<b>Satisficing</b> (Simon) moves through <b>options</b> and stops at the first that is good enough. <b>Elimination by aspects</b> (Tversky) moves through <b>attributes</b> (cost, then location…) and removes every option that fails each criterion until one remains. In practice people often use one of these to narrow the field and then compare the last few carefully (Payne, 1976). The last option describes neither: it mixes full comparison with take-the-best."
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Crupi and colleagues (2018) gave medical experts a scenario of a man with chronic anaemia. What did 49% of them do?",
+   "o": [
+    "Judge “alcoholism and thalassemia” more probable than alcoholism alone and than thalassemia alone",
+    "Ignore the base rate of thalassemia and choose the diagnosis they had seen most recently",
+    "Judge “alcoholism and thalassemia” more probable than thalassemia alone, but not than alcoholism alone",
+    "Prefer to wait rather than diagnose, which is an example of omission bias"
+   ],
+   "a": 0,
+   "spot": "Combination ranked above both of its parts → the double conjunction fallacy.",
+   "why": "Almost half of the experts committed the <b>double conjunction fallacy</b>: the combination was judged more probable than <b>each</b> condition on its own, which is statistically impossible. Ranking it above only one condition (second option) would be the ordinary conjunction fallacy. The finding fits Tentori's <b>hypothesis explanation</b>: the clinical evidence fitted the combination of both conditions especially well."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "Lena thinks her photo app adds a blur effect “only to portraits”. In fact it blurs every photo taken in low light. To test her idea she takes ten more portraits in a dim café; all are blurred, and she feels sure she is right. Which test would have been most informative?",
+   "o": [
+    "A landscape photo in low light, which her idea predicts will not be blurred",
+    "Ten more portraits in a different dim location, to rule out the café",
+    "Another portrait in low light, which her idea predicts will be blurred as well",
+    "Asking friends whether their portraits also get the blur effect"
+   ],
+   "a": 0,
+   "spot": "She only tests cases where her idea predicts “yes” → look for the test her idea forbids.",
+   "why": "Lena uses a <b>positive test strategy</b>, like Wason's 2-4-6 participants: every portrait fits both her idea and the true rule, so it cannot tell them apart. Only a case her idea <b>forbids</b> (a non-portrait in low light) can show that she is wrong. This is <b>confirmation bias</b>: looking where the answer will be yes."
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "According to Matlin, the framing effect means that the outcome of a decision is influenced by",
+   "o": [
+    "the background context of the choice and the way the question is worded",
+    "the amount of money already invested in one of the options",
+    "the first option that is presented and the time available to decide",
+    "the utility of the possible outcomes and the probability that each will occur"
+   ],
+   "a": 0,
+   "spot": "Framing has two sources in Matlin: what surrounds the choice and how it is put into words.",
+   "why": "Matlin describes two framing factors: the <b>background context</b> (losing a ticket versus losing a banknote) and the <b>wording</b> (lives saved versus lives lost). Utility and probability are the ingredients of <b>expected utility theory</b>, and money already invested refers to the sunk-cost effect."
+  },
+  {
+   "s": "fig",
+   "t": "dec",
+   "q": "Consider these two options.<table class=\"qt\"><tr><th>Option</th><th>What happens</th></tr><tr><td>A</td><td>Flip a coin: if it lands heads, you get $40</td></tr><tr><td>B</td><td>Roll a die: if it shows a 4, you get $50</td></tr></table>Most people choose A. How does expected utility theory account for this?",
+   "o": [
+    "A has the better mix of value and probability: about $20 expected, against about $8 for B",
+    "People underweight a 1-in-6 chance, which makes B seem worse than it is",
+    "A offers a sure $40, which is worth more than an uncertain $50",
+    "B feels like a $10 loss compared with A, and in decisions losses weigh more heavily than equal gains"
+   ],
+   "a": 0,
+   "spot": "Value × probability for each option → compare.",
+   "why": "Expected utility theory weighs the <b>value</b> of an outcome by its <b>probability</b>: A gives ½ × $40 = $20, B gives 1/6 × $50 ≈ $8.33. So A is the better combination, even though B pays $10 more when you win. The second option is wrong because A is not sure: the coin can land tails. Loss aversion belongs to prospect theory, and nothing is lost here."
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Brown and Siegler (1992) asked students to estimate the populations of El Salvador and Indonesia at a time when El Salvador was often in the news and Indonesia rarely. Indonesia had about 35 times as many inhabitants. What did the students estimate?",
+   "o": [
+    "A far larger population for Indonesia, because large countries are easier to recognise",
+    "Roughly equal populations, because news coverage made El Salvador more familiar",
+    "A larger population for El Salvador, because the news gave a high number as an anchor",
+    "Accurate populations, because frequent news exposure improves knowledge of countries"
+   ],
+   "a": 1,
+   "spot": "Media attention changes how familiar something is, not how big it is → distorted availability.",
+   "why": "Students judged the two populations as <b>roughly equal</b>, although Indonesia was about 35 times larger. In Matlin and Farmer's model, <b>familiarity</b> (here from media coverage) makes examples easier to retrieve without having anything to do with actual size or frequency. Availability then gives a <b>distorted</b> estimate."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "A product team is certain that its new app failed because the price was too high. Their coach asks them to imagine that a perfectly accurate crystal ball shows that the price was not the reason, and then to come up with other explanations and evidence for them. Which problem is the coach trying to reduce?",
+   "o": [
+    "The sunk-cost effect in their investment decisions",
+    "Overconfidence in their favourite explanation",
+    "The planning fallacy in their next launch",
+    "Anchoring on the first price they had set"
+   ],
+   "a": 1,
+   "spot": "“Imagine your favourite hypothesis is wrong, now explain why” → a debiasing technique for overconfidence.",
+   "why": "The <b>crystal-ball technique</b> targets <b>overconfidence</b>: people find it hard to think of alternative hypotheses and rarely search for counter-evidence. By assuming the favourite explanation is wrong, decision makers are forced to generate and test <b>alternatives</b>. The readings note that leaders rarely use such techniques for important decisions, for example about weapons of mass destruction in Iraq."
+  },
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Which statement is NOT one of the reasons given in the readings for why expected utility theory is a poor description of how people decide?",
+   "o": [
+    "People rarely, if ever, have all the information needed to make the decision",
+    "Even with all the information, people could not combine and weigh it accurately",
+    "It ignores the probabilities of outcomes and looks only at how much they are worth",
+    "It assumes decisions are based on consequences that cannot be foreseen with certainty"
+   ],
+   "a": 2,
+   "spot": "“NOT a reason” → find the statement that misdescribes expected utility theory itself.",
+   "why": "The readings give three reasons: people lack <b>full information</b>, cannot <b>combine and weigh</b> it accurately, and cannot <b>foresee consequences</b> with certainty. The first option is simply false: expected utility theory is built on combining utility <b>with probability</b>. That is why it still works as a normative yardstick."
+  },
+  {
+   "s": "fig",
+   "t": "heur",
+   "q": "People were asked to give confidence intervals for unknown quantities, that is, ranges they were 98% or 90% sure would contain the true value. The figure shows how often the intervals should contain the true value and how often they actually did. Which explanation fits the results?",
+   "chart": {
+    "type": "bar",
+    "title": "Confidence intervals: promised vs actual hit rate",
+    "x": [
+     "98% intervals",
+     "90% intervals"
+    ],
+    "y": "% containing the true value",
+    "series": [
+     {
+      "name": "Should contain it",
+      "v": [
+       98,
+       90
+      ]
+     },
+     {
+      "name": "Actually did (about)",
+      "v": [
+       60,
+       50
+      ]
+     }
+    ],
+    "note": "Block & Harper (1991), Hoffrage (2004); Teigen & Jørgensen (2005), via Matlin & Farmer; approximate",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "People recall vivid extreme values easily, which makes their ranges much too wide",
+    "People judge a range by how typical it looks, so they ignore the base rate of extreme values",
+    "People who know the outcome treat it as certain and narrow their range afterwards",
+    "People take their best guess as an anchor and widen the range too little on either side"
+   ],
+   "a": 3,
+   "spot": "Ranges that miss far more often than promised → too narrow → where do people start?",
+   "why": "A 98% interval contained the answer only about <b>60%</b> of the time (Block & Harper, 1991; Hoffrage, 2004), and students' 90% intervals reflected only about <b>50%</b> certainty (Teigen & Jørgensen, 2005). The intervals are <b>too narrow</b>, because people start from a best estimate (the <b>anchor</b>) and adjust too little. The second option predicts ranges that are too wide, the opposite of the data."
+  },
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "Ruben sets aside €100 a month for eating out. In the third week that money is gone, so he turns down a dinner invitation from a friend, even though he has just won €100 in a pub quiz, which he has put aside as “savings”. Which concept best explains his choice?",
+   "o": [
+    "Psychological accounting",
+    "Anchoring and insufficient adjustment",
+    "The sunk-cost effect",
+    "Satisficing"
+   ],
+   "a": 0,
+   "spot": "Money treated differently depending on the mental account it sits in → psychological accounting.",
+   "why": "In <b>psychological accounting</b>, people make different decisions depending on how an outcome is perceived, here on which <b>mental account</b> the money is booked. Ruben's “eating out” account is empty, so dinner feels unaffordable, although the quiz money could pay for it. It is the same mechanism as the lost concert ticket: the second ticket is charged to the already used <b>concert account</b>."
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Ditto and colleagues (1998) told participants that a test strip turning blue signalled an enzyme deficiency and that the test was misleading 1 time in 10. The strip turned blue. What happened?",
+   "o": [
+    "Most ignored the 1-in-10 figure and accepted the bad news as accurate, unlike people told that blue meant good health",
+    "Both groups used the 1-in-10 figure equally, because the result was about their own health",
+    "Neither group used the 1-in-10 figure, which shows that motivation does not affect base-rate use",
+    "Most used the 1-in-10 figure to argue the test was inaccurate, unlike people told that blue meant good health"
+   ],
+   "a": 3,
+   "spot": "Bad news about yourself plus a base rate that offers a way out → motivation.",
+   "why": "Participants who got <b>bad news</b> seized on the <b>base rate</b> (1 in 10 misleading) to argue the test was wrong. Those told that blue meant <b>no</b> health problem judged the same test accurate, because they had no motive to doubt it. People use base rates when they are <b>motivated</b> to, a pattern related to <b>myside bias</b>."
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "Sternberg argues that the conjunction fallacy can be produced by more than one heuristic. Which pairing is correct?",
+   "o": [
+    "More seven-letter words judged to end in “-ing” than to have n as second-to-last letter: representativeness; the Linda problem: availability",
+    "More seven-letter words judged to end in “-ing” than to have n as second-to-last letter: availability; Linda: representativeness",
+    "Both the “-ing” words and Linda: the recognition heuristic, because familiar categories are judged larger",
+    "Both the “-ing” words and Linda: anchoring and adjustment, starting from the first category mentioned"
+   ],
+   "a": 1,
+   "spot": "Which example is about generating instances, and which about fitting a description?",
+   "why": "Every “-ing” word of seven letters has n as its second-to-last letter, so the subset was overestimated because “-ing” words are <b>easier to generate</b>: <b>availability</b>. In the Linda problem, “feminist bank teller” fits the description better: <b>representativeness</b>. Both produce a <b>conjunction fallacy</b>: a subset judged more probable than the set that contains it."
+  }
+ ]
+});
+EXAMS.push({
+ "id": "t6s3",
+ "group": "t6",
+ "shuffle": true,
+ "title": "Theme 6 · Set 3",
+ "blurb": "25 questions on Theme 6 (Judgement and decision making), covering all its readings and the five exam skills: key concepts, main findings, figures and tables, comparing theories and applying them. Your results show your score per topic and per skill.",
+ "questions": [
+  {
+   "s": "def",
+   "t": "heur",
+   "q": "In Matlin and Farmer's model of the availability heuristic (Figure 12.2), recency and familiarity are described as factors that",
+   "o": [
+    "make examples easier to retrieve without being related to how often the event really occurs",
+    "make the availability heuristic more accurate, because recent and familiar events are more frequent",
+    "replace availability with representativeness, because familiar events look more typical",
+    "set the anchor from which people later adjust their estimate of frequency"
+   ],
+   "a": 0,
+   "spot": "“Contaminating” factors between true frequency and estimated frequency.",
+   "why": "In the model, true frequency normally drives <b>availability</b>, which drives the estimate, which is why the heuristic is usually accurate. <b>Recency</b> and <b>familiarity</b> also raise availability but have nothing to do with real frequency, so they <b>distort</b> the estimate. The second option is the tempting one, but recent or familiar does not mean frequent."
+  },
+  {
+   "s": "fig",
+   "t": "dec",
+   "q": "Lichtenstein and Slovic (1971) offered pairs of gambles such as these.<table class=\"qt\"><tr><th>Gamble</th><th>Chance to win</th><th>Chance to lose</th></tr><tr><td>P</td><td>99% to win $4.00</td><td>1% to lose $1.00</td></tr><tr><td>$</td><td>33% to win $16.00</td><td>67% to lose $2.00</td></tr></table>Participants said which gamble they would rather play and what price they would ask if they had to sell each gamble. Which pattern did they find, and what does it violate?",
+   "o": [
+    "Many chose to play P and also asked a higher price for P, which violates loss aversion",
+    "Many chose to play $ and also asked a higher price for $, which fits expected utility theory",
+    "Many chose to play $ but asked a higher price for P, which violates invariance",
+    "Many chose to play P but asked a higher price for $, which violates invariance"
+   ],
+   "a": 3,
+   "spot": "Choice versus selling price for the same pair → which feature drives each, and is the preference consistent?",
+   "why": "The <b>choice</b> was driven by the <b>probability</b> of winning (P, 99%), the <b>selling price</b> by the <b>amount</b> to be won ($, $16). Preferring P but valuing $ more is a <b>preference reversal</b>, which violates <b>invariance</b>: a preference should not depend on how it is asked for. The pattern was replicated in a Las Vegas casino, card dealers included."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "A sports app asks users to rank three statements about next Sunday's match, from most to least likely.<br>1. Ajax wins.<br>2. Ajax wins after being behind at half time.<br>3. Ajax is behind at half time.<br>Which ranking breaks the rules of probability?",
+   "o": [
+    "1 and 3 equally likely, then 2",
+    "3, then 1, then 2",
+    "1, then 3, then 2",
+    "1, then 2, then 3"
+   ],
+   "a": 3,
+   "spot": "Statement 2 is “behind AND wins” → it can never be more likely than either of its parts.",
+   "why": "Statement 2 is a <b>conjunction</b> of 1 and 3, so it must be ranked <b>no higher than either</b> of them. In “1, then 2, then 3”, the comeback story is placed above “Ajax is behind at half time”, which is a <b>conjunction fallacy</b>. The comeback feels likely because it makes a vivid, coherent story, just as “feminist bank teller” fits Linda."
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Carli (1999) had students read the same story about Barbara and Jack, ending either with a rape or with a marriage proposal. Afterwards they took a true/false memory test. What did she find?",
+   "o": [
+    "Each group falsely remembered details that fitted the other ending, showing a search for balance",
+    "Each group said it could have predicted its ending and falsely remembered details that fitted that ending",
+    "Both groups remembered the story accurately, but said that their ending had come as a surprise",
+    "Only the group with the tragic ending showed hindsight, because negative outcomes are more available in memory"
+   ],
+   "a": 1,
+   "spot": "Two endings, one identical story → does knowing the outcome change prediction and memory?",
+   "why": "Both groups showed <b>hindsight bias</b>: each believed it could have predicted its own ending. They also made <b>memory errors</b> in line with the ending, “remembering” details that were never in the story. Carli's study helps explain <b>blaming the victim</b>: people reconstruct reasons why an outcome was deserved. A common explanation is anchoring on the known outcome as 100% certain."
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "Klayman and Ha (1987) re-evaluated Wason's 2-4-6 findings. What is their main point?",
+   "o": [
+    "Participants did not really test their hypothesis, because they had no personal stake in the rule",
+    "Participants anchored on the first triple they were given and failed to adjust their hypothesis to the feedback",
+    "Testing cases you expect to fit is usually efficient, but fails when the true rule is broader than the hypothesis",
+    "The bias disappears when the triples are presented as natural frequencies instead of numbers"
+   ],
+   "a": 2,
+   "spot": "A critical re-evaluation of confirmation bias → is the strategy always bad?",
+   "why": "Klayman and Ha call the behaviour a <b>positive test strategy</b>: testing cases where you expect the property to be present. In realistic settings, where the hypothesised set is small compared with all possibilities, this is a reasonably <b>efficient</b> strategy. The 2-4-6 task is built so that the true rule is <b>broader</b> than the hypothesis, the one setting where the strategy fails. So confirmation bias is usually serviceable and only occasionally catastrophic."
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "Brazilian street children could accurately solve complex sums when selling sweets, but not when the same sums were presented in a classroom. Todd and Gigerenzer (2007) use such examples to illustrate",
+   "o": [
+    "bounded rationality: people satisfice because their working memory is too small for complex classroom sums",
+    "the representativeness heuristic: street sums looked more like typical sums than classroom sums",
+    "the natural-frequency hypothesis: the children met frequencies on the street and percentages at school",
+    "ecological rationality: people make sensible decisions by exploiting the features of their environment"
+   ],
+   "a": 3,
+   "spot": "Good reasoning in a real setting, poor reasoning in an artificial one → fit with the environment.",
+   "why": "<b>Ecological rationality</b> (Todd & Gigerenzer, 2007) means that people develop heuristics that give useful, adaptive decisions in their <b>real environment</b>. The children reasoned well where the task fitted their daily life. Bounded rationality is related, but the example is about the <b>environment</b>, not about memory limits."
+  },
+  {
+   "s": "fig",
+   "t": "heur",
+   "q": "Tversky and Kahneman (1983) asked students to estimate the percentage of men in a health survey who (a) had had one or more heart attacks, and (b) were over 55 and had had one or more heart attacks.<table class=\"qt\"><tr><th>Question format</th><th>Mean estimate (a)</th><th>Mean estimate (b)</th><th>Gave (b) a higher estimate than (a)</th></tr><tr><td>Percentages</td><td>18%</td><td>30%</td><td>65% of respondents</td></tr><tr><td>Frequencies (“how many of the 1,000 men…”)</td><td>not reported</td><td>not reported</td><td>25% of respondents</td></tr></table>Judge these statements.<br>I. In the percentage format, the mean estimates show a conjunction fallacy.<br>II. The frequency format made the conjunction fallacy disappear.",
+   "o": [
+    "I and II are both false",
+    "I is false, II is true",
+    "I and II are both true",
+    "I is true, II is false"
+   ],
+   "a": 3,
+   "spot": "(b) is a subset of (a) → it can never be larger; then compare 65% with 25%.",
+   "why": "Men who are over 55 <b>and</b> have had a heart attack are a <b>subset</b> of all men who have had a heart attack, so (b) can never exceed (a). A mean of 30% for (b) against 18% for (a) is a <b>conjunction fallacy</b>, so I is true. II is false: the frequency format <b>reduced</b> the fallacy from 65% to 25% of respondents, but did not remove it."
+  },
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "The same message about a new vaccine, framed in terms of the lives lost by not vaccinating, is posted by the national health institute and by an anonymous social media account known for false stories. What do the readings predict?",
+   "o": [
+    "The framing effect will be equally strong, because framing depends only on the wording",
+    "The framing effect will be weaker for the version posted by the anonymous account",
+    "The framing effect will be stronger for the anonymous account, because surprising sources stick in memory",
+    "Neither version will show a framing effect, because framing only works for choices between programmes"
+   ],
+   "a": 1,
+   "spot": "Same frame, different source → does source credibility matter?",
+   "why": "Framing effects are <b>less persuasive</b> when they come from sources with <b>low credibility</b> (Druckman, 2001). So the identical loss frame should move people less when it comes from the unreliable account. Framing is not limited to laboratory programmes: it appears in medical, health and political messages too."
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "A cross-cultural study compared overconfidence among respondents from China, the United States and Japan. Which pattern was reported?",
+   "o": [
+    "American respondents were the most overconfident; Chinese respondents were the least and also took the longest to decide",
+    "The three groups were equally overconfident, which suggests that overconfidence does not vary",
+    "Japanese respondents were the most overconfident, but they also took the least time to decide",
+    "Chinese respondents were the most overconfident; Japanese respondents were the least and took the longest to decide"
+   ],
+   "a": 3,
+   "spot": "Overconfidence differs between individuals and cultures → which order?",
+   "why": "<b>Chinese</b> respondents showed the most overconfidence, Americans were in between, and <b>Japanese</b> respondents were the least confident and the <b>slowest</b> to decide (Weber & Morris, 2010; Yates, 2010). Overconfidence also differs between individuals: 77% of students were overconfident on general-knowledge questions, 23% were accurate or underconfident (Stanovich, 1999)."
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "Why is it hard to show in a single study that a judgement is driven by the affect heuristic rather than by the availability heuristic?",
+   "o": [
+    "Availability concerns the probability of events, whereas affect only concerns their monetary value",
+    "The affect heuristic only operates under time pressure, whereas availability only operates when there is no time pressure",
+    "Both heuristics are forms of anchoring, so neither can be separated from anchoring effects",
+    "Events that evoke strong feelings are also more memorable, so both heuristics predict the same judgements"
+   ],
+   "a": 3,
+   "spot": "Two explanations that predict the same outcome → why can one study not separate them?",
+   "why": "Affect-laden events (murder, plane crashes) are also <b>more memorable</b>, so they are more <b>available</b>. An affect account and an availability account then predict the <b>same</b> judgements, which makes them hard to separate. Critics add that the affect heuristic names a phenomenon but specifies the process only loosely. Time pressure strengthens affect effects (Finucane et al., 2000), but affect is not limited to it."
+  },
+  {
+   "s": "def",
+   "t": "heur",
+   "q": "Anchoring and adjustment is thought to underlie the spotlight effect. What is the spotlight effect?",
+   "o": [
+    "Thinking after an event that you knew all along it was going to happen",
+    "Believing that other people notice your actions and appearance more than they really do",
+    "Attending only to the one cell of a 2×2 table that confirms what you already expected to find",
+    "Judging events that get media attention as more frequent than they really are"
+   ],
+   "a": 1,
+   "spot": "“Spotlight” → you feel as if a spotlight is on you.",
+   "why": "The <b>spotlight effect</b> is our tendency to think that others notice what we do and how we look more than they actually do. The readings name <b>anchoring and adjustment</b> as the likely mechanism behind it, just as anchoring helps explain hindsight bias and the planning fallacy. The other options describe illusory correlation, <b>hindsight bias</b> and availability."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "A penalty taker shoots to the left on 80% of his penalties and to the right on 20%, and each kick is independent of earlier ones. Goalkeeper A dives left on a random 80% of kicks and right on the other 20%. Goalkeeper B always dives left. On average, what percentage of kicks does each goalkeeper guess correctly? Give whole percentages.",
+   "o": [
+    "A 80%, B 68%",
+    "A 64%, B 80%",
+    "A 68%, B 80%",
+    "A 80%, B 80%"
+   ],
+   "a": 2,
+   "spot": "Matching the pattern versus always choosing the most likely side → compute hits per strategy.",
+   "why": "Goalkeeper A is right when both go left (0.8 × 0.8 = 0.64) or both go right (0.2 × 0.2 = 0.04): <b>68%</b>. Goalkeeper B is right whenever the ball goes left: <b>80%</b>. Copying the pattern feels right because the dives then <b>resemble</b> the shots (representativeness), but on every single kick left is the better guess. 64% forgets the right-side hits."
+  },
+  {
+   "s": "find",
+   "t": "dec",
+   "q": "Tversky and Kahneman (1981) asked people whether they would buy a ticket for a concert after discovering that they had lost either the ticket they had already bought, or a banknote worth the same as the ticket. What did they find?",
+   "o": [
+    "Far fewer people would buy a ticket after losing the ticket (46%) than after losing the money (88%)",
+    "About the same proportion would buy a ticket in both cases, as expected utility theory predicts",
+    "Far fewer people would buy a ticket after losing the money (46%) than after losing the ticket (88%)",
+    "Most people would buy a new ticket after losing the ticket, in order to recover what they had already invested"
+   ],
+   "a": 0,
+   "spot": "Same amount lost, different thing lost → background context and mental accounts.",
+   "why": "With a lost banknote <b>88%</b> would still buy a ticket; with a lost ticket only <b>46%</b> would. The money lost is the same, so a rational decision maker should answer both the same. The difference comes from <b>psychological accounting</b>: a second ticket is charged to the <b>concert account</b>, so the concert feels as if it costs twice as much."
+  },
+  {
+   "s": "comp",
+   "t": "dec",
+   "q": "Gigerenzer (2008) lists several misconceptions about heuristics. Which statement would he reject?",
+   "o": [
+    "Heuristics are also used for important decisions, not only for minor ones",
+    "Heuristics are needed only because of the limits of human cognition",
+    "Heuristics result from the thinker's limits together with the demands of the environment",
+    "Simple heuristics such as take-the-best can lead to very good decisions"
+   ],
+   "a": 1,
+   "spot": "“Which would he reject?” → find the misconception, phrased as if it were true.",
+   "why": "Gigerenzer rejects the idea that heuristics exist <b>only</b> because of our cognitive limits: he argues that the <b>combination</b> of cognitive limits and <b>environmental demands</b> makes them necessary. He also rejects the views that heuristics give second-best results, are used only for minor decisions, and that more information and computation are always better. The other three options are statements he agrees with."
+  },
+  {
+   "s": "fig",
+   "t": "dec",
+   "q": "The figure shows a hypothetical value function according to prospect theory. Which feature of the curve reflects loss aversion?",
+   "chart": {
+    "type": "line",
+    "title": "Hypothetical prospect-theory value function",
+    "x": [
+     "−€1,000",
+     "−€500",
+     "€0",
+     "+€500",
+     "+€1,000"
+    ],
+    "y": "Subjective value",
+    "series": [
+     {
+      "name": "Subjective value",
+      "v": [
+       -170,
+       -110,
+       0,
+       50,
+       80
+      ]
+     }
+    ],
+    "note": "Hypothetical values to illustrate the shape in Kahneman & Tversky (1984), Figure 11.4",
+    "min": -200,
+    "max": 100
+   },
+   "o": [
+    "A loss of €500 lowers subjective value more (−110) than a gain of €500 raises it (+50)",
+    "The curve passes through zero at the point where nothing is gained or lost",
+    "The second €500 of gain adds less extra value (+30) than the first €500 of gain did (+50)",
+    "The second €500 of loss lowers value less (−60) than the first €500 of loss (−110)"
+   ],
+   "a": 0,
+   "spot": "Loss aversion = gains and losses of the same size compared → which side is steeper?",
+   "why": "<b>Loss aversion</b> means that a loss weighs more than an equally large gain: the curve is <b>steeper for losses</b>, so −€500 (−110) moves value further than +€500 (+50). The second option shows the <b>concave</b> gain side (risk aversion for gains), the third the <b>convex</b> loss side (risk seeking for losses), and the fourth the <b>reference point</b>."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "A therapist asks a depressed client to spend a few minutes recalling pleasant events from the past weeks, so that pleasant events in the coming weeks will seem more likely to him. Which mechanism is the therapist relying on?",
+   "o": [
+    "Pleasant events look more representative of a normal week than unpleasant events",
+    "Events he recognises are judged more frequent than events he does not recognise",
+    "Recently recalled events are more available, so similar events seem more likely",
+    "The first event recalled becomes an anchor from which later estimates are adjusted"
+   ],
+   "a": 2,
+   "spot": "Recalling examples first and then judging likelihood → availability via recency.",
+   "why": "MacLeod and Campbell (1992) found that recalling pleasant past events made pleasant future events seem <b>likelier</b>, and recalling unpleasant events did the same for unpleasant ones. Recently retrieved examples are more <b>available</b>, so <b>recency</b> shifts the estimate. The therapist uses this distortion in a helpful direction."
+  },
+  {
+   "s": "def",
+   "t": "dec",
+   "q": "Which of these is a judgement rather than a decision, in the sense used in the readings?",
+   "o": [
+    "Estimating how likely the train is to be delayed this evening",
+    "Deciding to buy travel insurance before a holiday",
+    "Choosing between taking the train or the bus to work this evening",
+    "Selecting which of three job offers to accept"
+   ],
+   "a": 0,
+   "spot": "Judgement = “how likely?”; decision = “which one?”",
+   "why": "<b>Judgement</b> is estimating the probability of an event using incomplete information, so it is checked against <b>accuracy</b>. <b>Decision making</b> is choosing between options, which brings in risk. Judgements often feed decisions: how likely the train is delayed may decide whether you take the bus."
+  },
+  {
+   "s": "find",
+   "t": "heur",
+   "q": "Lord, Ross and Lepper (1979) let supporters and opponents of the death penalty read the same two studies, one supporting and one opposing the death penalty. What happened?",
+   "o": [
+    "Each side judged the study supporting its own view as sounder, and the two groups ended further apart",
+    "Both sides judged the two studies equally sound, but remembered mainly the one study that supported their own view",
+    "Both sides moved towards the middle, because they had read the same mixed evidence",
+    "Only the supporters judged the studies in a biased way, because their view was the majority view"
+   ],
+   "a": 0,
+   "spot": "Same evidence, opposite camps → do they converge or polarise?",
+   "why": "Each group rated the study that supported its position as <b>methodologically sound</b> and the other as flawed, so the same evidence pushed them <b>further apart</b>. This is the evaluative side of <b>confirmation bias</b>: evidence is weighted by whether it agrees with what you already believe. Reading mixed evidence did not lead to the middle."
+  },
+  {
+   "s": "app",
+   "t": "dec",
+   "q": "Nora wants a new laptop. From 60 models she first removes all that cost more than €1,000, then all with less than 16 GB of memory, and so on until three are left. She then compares those three on every feature, weighing how much each matters to her. Which description fits her overall strategy?",
+   "o": [
+    "Satisficing throughout, because she stops as soon as she finds a laptop that is good enough for all her needs",
+    "The default heuristic, because she keeps the options that the shop happens to show first",
+    "Elimination by aspects to narrow the options, then a thorough comparison such as subjective expected utility",
+    "Take-the-best throughout, because she bases her choice on the one most important feature"
+   ],
+   "a": 2,
+   "spot": "Two phases: cut by attributes, then weigh the few that remain.",
+   "why": "Removing every option that fails one attribute at a time is <b>elimination by aspects</b>. Once a handful remain, she switches to a <b>thorough, careful strategy</b> such as subjective expected utility. Payne (1976) describes exactly this combination: a shortcut to <b>narrow</b> the field, then careful weighing of the last few options."
+  },
+  {
+   "s": "fig",
+   "t": "heur",
+   "q": "Participants read a description of Jack (45, married, careful, ambitious, little interest in politics, hobbies such as woodworking, sailing and number puzzles), said to be drawn at random from 100 descriptions. One group was told there were 70 engineers and 30 lawyers, the other the reverse. The figure shows the base rate of engineers and the average judged probability that Jack is an engineer. What does it show?",
+   "chart": {
+    "type": "bar",
+    "title": "Lawyer–engineer problem",
+    "x": [
+     "Told 70 engineers / 30 lawyers",
+     "Told 30 engineers / 70 lawyers"
+    ],
+    "y": "%",
+    "series": [
+     {
+      "name": "Base rate of engineers",
+      "v": [
+       70,
+       30
+      ]
+     },
+     {
+      "name": "Judged probability that Jack is an engineer",
+      "v": [
+       90,
+       90
+      ]
+     }
+    ],
+    "note": "Kahneman & Tversky (1973), via Eysenck & Keane",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "The judgements depended on how easily engineers came to mind, as expected from availability",
+    "The judgements ignored the base rate, as expected if people judge by resemblance to a typical engineer",
+    "The judgements were anchored on the first number they heard, as expected from insufficient adjustment",
+    "The judgements followed the base rate, as expected if people update their prior odds as Bayes' theorem requires"
+   ],
+   "a": 1,
+   "spot": "Base rate changes a lot, judgement does not change at all → base-rate neglect; then ask why.",
+   "why": "The base rate of engineers was 70% or 30%, yet the judged probability was <b>90% in both groups</b>: the base rate was <b>ignored</b>. Jack's description resembles a typical engineer, so people relied on <b>representativeness</b>. Bayes' theorem would require a clearly lower judgement in the 30-engineer group. The anchoring option fails because the two groups heard different first numbers but gave the same answer."
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "Gilovich, Vallone and Tversky (1985) concluded that the hot hand in basketball does not exist. What is the current view after Miller and Sanjurjo (2018)?",
+   "o": [
+    "The original analysis was correct; both the hot hand and the gambler's fallacy are genuine cognitive illusions",
+    "The original analysis was correct for professional players, but the hot hand is real for amateur players",
+    "The original analysis had a selection bias; corrected, both the hot hand and the gambler's fallacy turn out to be accurate beliefs about how streaks work",
+    "The original analysis had a selection bias; corrected, hot-hand shooting seems real but modest, while the gambler's fallacy remains a fallacy"
+   ],
+   "a": 3,
+   "spot": "A classic finding re-analysed → what changed, and for which of the two streak beliefs?",
+   "why": "Miller and Sanjurjo showed that looking only at shots after a streak builds in a <b>selection bias</b>: under pure chance the hit rate after streaks comes out <b>below</b> the true rate. Correcting for it reverses the result in several datasets, so the hot hand looks <b>real but modest</b>. The <b>gambler's fallacy</b> is untouched: a roulette wheel still has no memory. The lesson: a famous demonstration of irrationality can itself rest on a statistical error."
+  },
+  {
+   "s": "app",
+   "t": "heur",
+   "q": "A 28-year-old marathon runner with no risk factors comes to the emergency department with sudden numbness in one arm. The doctor quickly concludes it is a trapped nerve, because “she is far too young and fit for anything serious”. Which heuristic most likely shaped this judgement?",
+   "o": [
+    "Recognition",
+    "Representativeness",
+    "Availability",
+    "Anchoring and adjustment"
+   ],
+   "a": 1,
+   "spot": "“Doesn't fit the picture of a typical patient” → judging by resemblance.",
+   "why": "The doctor judges the patient by how much she <b>resembles</b> the typical person with a serious condition, and she does not. That is <b>representativeness</b>, just like Dr Croskerry, who dismissed the chest pain of a fit forest ranger who then had a heart attack. A useful counter-heuristic is <b>ROWS</b>: rule out the worst-case scenario first. Availability would require recent similar cases coming to mind."
+  },
+  {
+   "s": "find",
+   "t": "dec",
+   "q": "How general is the framing effect found in problems like the Asian disease problem, according to the readings?",
+   "o": [
+    "It is strong in people without training, but disappears in people who have had formal training in statistics",
+    "It appears in written laboratory problems, but not in medical or relationship decisions",
+    "It appears in younger adults, while older adults choose the same option in both frames",
+    "It is generally strong in statistically trained and untrained people, and in younger and older adults"
+   ],
+   "a": 3,
+   "spot": "Robustness question → across which groups and settings has framing been found?",
+   "why": "The pattern (risk averse for gains, risk seeking for losses) has been <b>replicated</b> many times and is generally strong in <b>statistically trained and naive</b> people, and in <b>younger and older</b> adults. Framing also shows up outside the lab, in <b>medical decisions</b>, health behaviour and decisions about continuing romantic relationships."
+  },
+  {
+   "s": "def",
+   "t": "heur",
+   "q": "In Sternberg's chapter, what is meant by a conditional probability?",
+   "o": [
+    "The likelihood that an event does not occur, found by subtracting its probability from 1",
+    "The likelihood of one event given that another event has occurred, calculated with Bayes's theorem",
+    "The likelihood that one of two mutually exclusive events occurs, found by adding their probabilities",
+    "The likelihood of an event, estimated from how easily similar events can be remembered"
+   ],
+   "a": 1,
+   "spot": "“Conditional” = “given that…”.",
+   "why": "A <b>conditional probability</b> is the probability of one event <b>given</b> another, for example getting an A for the course given an A on the final exam. It is calculated with <b>Bayes's theorem</b>, which is so complex that people rarely use it in daily life. The second and third options are the addition and complement rules from Table 12.1 (0.1 + 0.1 = 0.2; 1 − 0.1 = 0.9)."
+  },
+  {
+   "s": "comp",
+   "t": "heur",
+   "q": "The readings use anchoring and adjustment to explain several other biases. Which bias is NOT explained this way in the readings?",
+   "o": [
+    "Confidence intervals that are too narrow",
+    "The gambler's fallacy",
+    "Hindsight bias",
+    "The planning fallacy"
+   ],
+   "a": 1,
+   "spot": "“NOT explained by anchoring” → which one belongs to a different heuristic?",
+   "why": "The planning fallacy (anchoring on an optimistic scenario), <b>hindsight bias</b> (anchoring on the known outcome as 100% certain) and <b>too-narrow confidence intervals</b> (anchoring on a best guess) are all explained by too little adjustment. The <b>gambler's fallacy</b> comes from <b>representativeness</b>: expecting a short run of independent outcomes to look like the long-run pattern."
+  }
+ ]
+});

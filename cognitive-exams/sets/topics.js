@@ -21,6 +21,22 @@ const TOPICS = {
   emo:   { name: "Cognition and emotion", where: "Lecture 3", links: [["Lecture 3 · Cognition and emotion", B + "dashshboard-/cognitive-lectures/#l3"]] },
   lang:  { name: "Language and thought", where: "Lecture 4", links: [["Lecture 4 · Language and thought", B + "dashshboard-/cognitive-lectures/#l4"]] },
   ai:    { name: "AI and large language models", where: "Theme 8", links: [["Theme 8 visual notes", B + "dashshboard-/cognitive-theme8/"], ["Theme 8 in-depth", B + "dashshboard-/cognitive-indepth/#t8-1"]] },
+  blind: { name: "Failures of awareness: inattentional and change blindness (Simons)", where: "Theme 1 · Part A", links: [["Theme 1 visual notes", B + "cognitive_theme_1/#visual"], ["Theme 1 in-depth", B + "dashshboard-/cognitive-indepth/#t1-1"]] },
+  math:  { name: "Working memory and children's arithmetic (McGonnell et al., 2024)", where: "Theme 2 · Part C", links: [["Theme 2 visual notes", B + "cognitive_theme2_version_5/#visual"], ["Theme 2 in-depth", B + "dashshboard-/cognitive-indepth/#t2-1"]] },
+  net:   { name: "Semantic networks, spreading activation and similarity approaches", where: "Theme 4 · Part B", links: [["Theme 4 visual notes", B + "cognitive_theme4_version2/#visual"], ["Theme 4 in-depth", B + "dashshboard-/cognitive-indepth/#t4-1"]] },
+  sd:    { name: "Semantic dementia and drawing (Bozeat et al., 2003)", where: "Theme 4 · Part C", links: [["Theme 4 visual notes", B + "cognitive_theme4_version2/#visual"], ["Theme 4 videos", B + "cognitive_theme4_version2/#videos"]] },
+  rot:   { name: "Mental rotation, image scanning and imagery in the brain", where: "Theme 5", links: [["Theme 5 visual notes", B + "theme5_cognitive_version2/#visual"], ["Theme 5 in-depth", B + "dashshboard-/cognitive-indepth/#t5-1"]] },
+  biz:   { name: "The bizarreness effect (Besken & Mulligan, 2021)", where: "Theme 5 · Resource D", links: [["Theme 5 visual notes", B + "theme5_cognitive_version2/#visual"], ["Theme 5 in-depth", B + "dashshboard-/cognitive-indepth/#t5-1"]] },
+  cre:   { name: "Creativity and inhibitory control (Camarda et al., 2018)", where: "Theme 7 · Part C", links: [["Theme 7 visual notes", B + "theme-7_teaching/#visual"], ["Theme 7 in-depth", B + "dashshboard-/cognitive-indepth/#t7-1"]] },
+  llm:   { name: "Using LLMs in psychology (Demszky et al., 2023)", where: "Theme 8 · Part A", links: [["Theme 8 visual notes", B + "dashshboard-/cognitive-theme8/"], ["Theme 8 in-depth", B + "dashshboard-/cognitive-indepth/#t8-1"]] },
+  llmt:  { name: "LLM access timing and time availability (Zhi et al., 2026)", where: "Theme 8 · Part B", links: [["Theme 8 visual notes", B + "dashshboard-/cognitive-theme8/"], ["Theme 8 in-depth", B + "dashshboard-/cognitive-indepth/#t8-1"]] },
+  aic:   { name: "AI use and creativity (Huang, 2025)", where: "Theme 8 · Part C", links: [["Theme 8 visual notes", B + "dashshboard-/cognitive-theme8/"], ["Theme 8 in-depth", B + "dashshboard-/cognitive-indepth/#t8-1"]] },
 };
 const SKILLS = { def: "Key concepts and definitions", find: "Main findings", fig: "Reading figures and tables", comp: "Comparing theories", app: "Applying to new situations" };
 window.EXAMS = window.EXAMS || [];
+const GROUPS = [
+  { id: "t1", name: "Theme 1", sub: "Attention" }, { id: "t2", name: "Theme 2", sub: "Working memory" },
+  { id: "t3", name: "Theme 3", sub: "Autobiographical memory" }, { id: "t4", name: "Theme 4", sub: "Concepts and categories" },
+  { id: "t5", name: "Theme 5", sub: "Mental imagery" }, { id: "t6", name: "Theme 6", sub: "Judgement and decisions" },
+  { id: "t7", name: "Theme 7", sub: "Problem solving" }, { id: "t8", name: "Theme 8", sub: "LLMs" },
+  { id: "mock", name: "Mock exams", sub: "Real exams and full mocks" } ];

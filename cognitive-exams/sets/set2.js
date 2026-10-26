@@ -1,9 +1,9 @@
 // Set 2: built from students' recollections of the 2025 exam.
 // The topics come from those recollections; the exact wording and the answer options are reconstructed.
 EXAMS.push({
-  id: "set2",
+  id: "set2", "group": "mock",
   shuffle: true,
-  title: "Set 2 · The 2025 exam, reconstructed",
+  title: "The 2025 exam (reconstructed)",
   blurb: "Questions rebuilt from what students remembered of the 2025 exam. The topics are real; the wording and options are reconstructed, and checked against your study material.",
   questions: [
 { q: "Which description fits <i>positive affect</i> best?",

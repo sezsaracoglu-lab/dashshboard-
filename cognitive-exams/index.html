@@ -26,7 +26,12 @@ h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5.5vw,2.9rem);l
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 22px}
 .tab{font:inherit;font-size:.92rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;color:var(--ink)}
 .tab[aria-selected=true]{background:var(--navy);border-color:var(--navy);color:#fff}
-.tab.soon{color:var(--muted);border-style:dashed;cursor:default}
+.tab small{display:block;font-size:.74rem;font-weight:500;opacity:.75;margin-top:1px}
+.tabs{flex-direction:column;gap:12px}
+.grow,.srow{display:flex;gap:8px;flex-wrap:wrap}
+.grow .tab{padding:8px 14px;text-align:left}
+.srow{padding-top:12px;border-top:1px solid var(--line)}
+.srow .tab{border-radius:12px;text-align:left;min-width:150px}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}
 .intro h2{font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.15;margin-bottom:6px}
 .intro p{color:var(--muted)}
@@ -105,6 +110,14 @@ footer{color:var(--muted);font-size:.85rem;padding:30px 0 40px}
 <script src="sets/set4.js"></script>
 <script src="sets/set5.js"></script>
 <script src="sets/set6.js"></script>
+<script src="sets/th1.js"></script>
+<script src="sets/th2.js"></script>
+<script src="sets/th3.js"></script>
+<script src="sets/th4.js"></script>
+<script src="sets/th5.js"></script>
+<script src="sets/th6.js"></script>
+<script src="sets/th7.js"></script>
+<script src="sets/th8.js"></script>
 <script>
 const L = "abcd";
 const $ = (s) => document.querySelector(s);
@@ -140,11 +153,15 @@ function load(id){ try { return JSON.parse(localStorage.getItem(key(id))) || {an
 function save(id, st){ try { localStorage.setItem(key(id), JSON.stringify(st)); } catch(e){} }
 
 function tabs(active){
-  $("#tabs").innerHTML = EXAMS.map(e=>`<button class="tab" role="tab" aria-selected="${e.id===active}" data-id="${e.id}">${e.title}</button>`).join("")
-    + `<span class="tab soon" aria-disabled="true">More sets coming</span>`;
+  const g = exam(active).group;
+  const inG = EXAMS.filter(e=>e.group===g);
+  $("#tabs").innerHTML = `<div class="grow">` + GROUPS.map(x=>`<button class="tab grp" role="tab" aria-selected="${x.id===g}" data-g="${x.id}">${x.name}<small>${x.sub}</small></button>`).join("") + `</div>`
+    + `<div class="srow">` + inG.map(e=>{ const st=load(e.id), n=e.questions.length, d=Object.keys(st.ans).length, r=Object.entries(st.ans).filter(([i,c])=>e.questions[i].a===c).length;
+        return `<button class="tab" role="tab" aria-selected="${e.id===active}" data-id="${e.id}">${e.title.replace(/^Theme \d+ · /,"")}<small>${d? (d===n? r+"/"+n+" correct" : d+"/"+n+" answered") : n+" questions"}</small></button>`; }).join("") + `</div>`;
   document.querySelectorAll(".tab[data-id]").forEach(b=>b.onclick=()=>{location.hash=b.dataset.id});
+  document.querySelectorAll(".tab[data-g]").forEach(b=>b.onclick=()=>{location.hash=b.dataset.g});
 }
-function exam(id){ return EXAMS.find(e=>e.id===id) || EXAMS[0]; }
+function exam(id){ return EXAMS.find(e=>e.id===id) || EXAMS.find(e=>e.group===id) || EXAMS.find(e=>e.id==="t1s1"); }
 
 function intro(e){
   const st = load(e.id); const n=e.questions.length; const done=Object.keys(st.ans).length;

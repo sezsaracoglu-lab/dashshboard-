@@ -1,8 +1,8 @@
 // Mock exam built from the course readings, in-depth answers and lectures. Options are shuffled.
 EXAMS.push({
- "id": "set5",
+ "id": "set5", "group": "mock",
  "shuffle": true,
- "title": "Set 5 · Mock exam B",
+ "title": "Mock exam B",
  "blurb": "A full 25-question mock exam covering Themes 1 to 8 and the extra lectures, with all five exam skills: key concepts, main findings, figures and tables, comparing theories and applying them. Your results show your score per topic and per skill.",
  "questions": [
   {

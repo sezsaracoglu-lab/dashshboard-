@@ -1,0 +1,830 @@
+{
+ "s2": [
+  {
+   "s": "def",
+   "t": "auto",
+   "q": "A researcher wants to know how much of their own everyday life people still remember after four years, and she wants to check every answer against a written record made on the day itself. Which method fits this aim best?",
+   "o": [
+    "The diary technique",
+    "The Galton-Crovitz cue-word technique",
+    "Targeted event recall",
+    "The Autobiographical Memory Interview"
+   ],
+   "a": 0,
+   "spot": "Need to check accuracy against a record made at the time → the method that creates that record.",
+   "why": "In the <b>diary technique</b> participants write down events as they happen, and memory for those documented events is tested later, so every answer can be checked (Wagenaar, 1986, used this over four years). The <b>cue-word technique</b> samples memories from the whole life, but nobody recorded those events at the time, so their accuracy cannot be checked.",
+   "src": "pty_t3 3.2.1; v3dump A.3.3 Wagenaar"
+  },
+  {
+   "s": "def",
+   "t": "sms",
+   "q": "In a memory-specificity task, participants must recall one specific event for each cue word. For the cue <i>proud</i>, which answer counts as a <b>specific</b> memory?",
+   "o": [
+    "“The afternoon last May when I passed my driving test”",
+    "“Whenever I helped my little brother with his homework”",
+    "“My years at secondary school in Leiden”",
+    "“I am proud of the kind of person I am”"
+   ],
+   "a": 0,
+   "spot": "Specific = one event that lasted less than one day.",
+   "why": "The task asks for an event <b>lasting less than one day</b>; passing the driving test is one such event. “Whenever I helped…” sums up many events: an <b>over-general memory</b>, typical in depression. “My years at secondary school” is a lifetime period, and the last answer is a fact about the self, not an event.",
+   "src": "v3dump A.5.2; pty_t3 3.6"
+  },
+  {
+   "s": "find",
+   "t": "ca",
+   "q": "Usher and Neisser (1993) asked adults about four childhood events that relatives could confirm. What did they find about how far back memory for these events reached?",
+   "o": [
+    "A sibling's birth and a hospital stay were remembered from an earlier age than a death or a house move",
+    "All four events could be remembered from exactly the same age, about three years, whatever the event",
+    "A death in the family and a house move were remembered from an earlier age than a sibling's birth or a hospital stay",
+    "None of the events could be remembered when they had happened before the age of five"
+   ],
+   "a": 0,
+   "spot": "Four kinds of events, one question: did the starting age differ by event?",
+   "why": "The age at which memory started <b>differed by event</b>: a sibling's birth and a hospitalisation reached further back than a death or a move. A hospital stay is distinctive and frightening, and a sibling's birth is retold again and again. So the end of childhood amnesia is <b>not one fixed age</b>. Memory before 5 was relatively poor, but not absent.",
+   "src": "v3dump A.2.1 Usher & Neisser key study"
+  },
+  {
+   "s": "comp",
+   "t": "amn",
+   "q": "Baddeley considered several reasons why Jon has spared recognition, unlike most amnesic patients. Mayes et al. (2002) then found the same pattern (poor recall, normal recognition) in a patient whose damage, limited to the hippocampus, happened in <b>adulthood</b>. Which explanation does this weaken most?",
+   "o": [
+    "That Jon is special because his damage happened very early in life",
+    "That Jon is special because his damage spared the perirhinal and entorhinal cortex around the hippocampus",
+    "That the hippocampus supports recollection, while familiarity-based recognition relies on the perirhinal cortex",
+    "That amnesia mainly disrupts the binding of items to the time and place in which they occurred"
+   ],
+   "a": 0,
+   "spot": "A new case that differs from Jon in ONE respect (age at damage) but shows the same pattern.",
+   "why": "If an adult-onset case shows Jon's pattern, the <b>early age</b> of the damage cannot be what makes Jon special. The case fits the other explanation better: what matters is the <b>specificity</b> of the damage (hippocampus only, perirhinal cortex spared), as in <b>Aggleton and Brown's</b> (1999) theory. So the finding supports, rather than weakens, the location account.",
+   "src": "v3dump B.2.3 (Mayes et al., 2002; Aggleton & Brown)"
+  },
+  {
+   "s": "def",
+   "t": "mal",
+   "q": "After a police interview that mentioned a scar, a witness sincerely reports that she saw a scar on the robber's face. According to the source-monitoring framework (Johnson, Hashtroudi & Lindsay, 1993), how does such an error arise?",
+   "o": [
+    "People judge a memory's source from its characteristics, and a vivid suggested detail can be attributed to seeing",
+    "Every memory carries a stored label with its source, and the interview erased the label that was attached to the original memory",
+    "The suggested detail overwrote the original memory trace, so the true version no longer exists in memory",
+    "The witness never encoded the robber's face, so she fills the gap with a guess she knows is uncertain"
+   ],
+   "a": 0,
+   "spot": "Where did it come from? Source is a judgement, not a label.",
+   "why": "Source monitoring says source is <b>not stored as a label</b>. People attribute a source by evaluating features of the memory (perceptual detail, context, traces of thinking). A suggested detail that feels vivid enough is attributed to perception: a <b>source-monitoring error</b>, the explanation the lecture prefers for the misinformation effect (<b>coexistence</b>, not replacement).",
+   "src": "pty_t3 3.7.2; l2.js 'Why does misinformation work?'"
+  },
+  {
+   "s": "fig",
+   "t": "auto",
+   "q": "The figure shows how many cue-word memories a 70-year-old produced from each period of her life. She says: “My memory simply fades: the longer ago, the less I remember.” Which part of the figure shows most clearly that the curve is <b>not</b> just ordinary fading?",
+   "chart": {
+    "type": "bar",
+    "title": "Memories per life period (one 70-year-old)",
+    "x": [
+     "0–5",
+     "5–10",
+     "10–20",
+     "20–30",
+     "30–40",
+     "40–50",
+     "50–60",
+     "60–70"
+    ],
+    "y": "Number of memories",
+    "series": [
+     {
+      "name": "Memories",
+      "v": [
+       2,
+       8,
+       22,
+       25,
+       12,
+       10,
+       14,
+       30
+      ]
+     }
+    ],
+    "note": "Hypothetical data, shaped like the retention function of Rubin, Wetzler & Nebes (1986)",
+    "min": 0
+   },
+   "o": [
+    "The 10–30 periods beat the 30–50 periods, so some older periods are remembered better than more recent ones",
+    "The period from 60 to 70 gives the most memories, so the most recent events are remembered best",
+    "The periods from 30 to 50 give the fewest memories, so interference from middle age wipes out memories of that time",
+    "The rise at the right-hand end shows that recent memories are still held in a short-term store"
+   ],
+   "a": 0,
+   "spot": "“Not just fading” → look for a place where OLDER beats MORE RECENT.",
+   "why": "Pure forgetting predicts that the number of memories rises steadily towards the present. The <b>reminiscence bump</b> breaks that rule: the years 10 to 30 are older, yet give more memories than the years 30 to 50. The high bar for 60 to 70 is exactly what forgetting predicts, so it does not contradict her. The recent rise is a <b>long-term forgetting curve</b>, not a short-term store.",
+   "src": "v3dump A.1.3 retention function; pty_t3 3.3.3-3.3.4"
+  },
+  {
+   "s": "fig",
+   "t": "photo",
+   "q": "Wegner, Erber and Raymond (1991) had dating couples recall word lists with their own partner (natural pairs) or with a stranger (impromptu pairs), either without instructions or with an assigned rule saying who should remember which categories. The table shows the mean number of items recalled.<br><table class=\"qt\"><tr><th>Pairs</th><th>No instructions</th><th>Assigned structure</th></tr><tr><td>Natural pairs</td><td>31.4</td><td>23.8</td></tr><tr><td>Impromptu pairs</td><td>27.6</td><td>30.1</td></tr></table>Which conclusion fits these data best?",
+   "o": [
+    "Couples run a system with their own division of labour, and an imposed structure that cuts across it hurts them",
+    "Couples are simply better rememberers than strangers, whatever the instructions they are given",
+    "An assigned structure improves the recall of every pair, because it reduces the overlap between what the two partners remember",
+    "Strangers recall less than couples in both conditions, because they cannot rely on each other"
+   ],
+   "a": 0,
+   "spot": "Look for the crossover: who goes up, who goes down with assigned structure?",
+   "why": "Without instructions, couples beat strangers (31.4 vs 27.6). With an assigned structure the pattern <b>reverses</b>: strangers improve (30.1) and couples drop to 23.8. So couples are not just better rememberers; they run a <b>transactive memory system</b> that the imposed rule broke. This is the theory the <b>offloading hypothesis</b> borrows from.",
+   "src": "pty_t3 3.11.4 Wegner, Erber & Raymond (1991)"
+  },
+  {
+   "s": "find",
+   "t": "sms",
+   "q": "Patients with retrograde amnesia often have great difficulty recalling specific episodes, while they can still name general events and lifetime periods; patient KC had no episodic memories but could access some general knowledge about his life. Which part of Conway's self-memory system does this support most directly?",
+   "o": [
+    "The hierarchical structure of the autobiographical knowledge base, with levels that can be damaged separately",
+    "The idea that the working self steers which memories are stored and retrieved, in line with a person's current goals",
+    "The distinction between generative and direct retrieval of autobiographical memories",
+    "The idea that coherence with the self usually wins over correspondence with the facts"
+   ],
+   "a": 0,
+   "spot": "Some levels lost, others kept → evidence about levels.",
+   "why": "If the most specific level (episodes) can be lost while broader levels (general events, lifetime periods) survive, the knowledge base must have <b>separable levels</b>: support for its <b>hierarchical structure</b> (Conway & Pleydell-Pearce, 2000; Rosenbaum et al., 2005). The working self is supported by other evidence, such as Woike et al. (1999).",
+   "src": "v3dump A.4.4; pty_t3 3.4.1"
+  },
+  {
+   "s": "app",
+   "t": "amn",
+   "q": "A rehabilitation team teaches a patient with mild cognitive impairment a new routine for taking his medication. Based on research on consolidation, what should they do in the ten minutes straight after the lesson?",
+   "o": [
+    "Let him rest in a quiet, dim room with as little new input as possible",
+    "Go straight on to other memory exercises, so that he keeps his brain active",
+    "Let him chat about other topics first and leave the quiet rest for the end of the session",
+    "Test him on the routine immediately and repeatedly, so that recall is practised"
+   ],
+   "a": 0,
+   "spot": "New traces are fragile → protect the first minutes.",
+   "why": "Consolidation says new memory traces are <b>most fragile right after learning</b>. Dewar et al. (2009) showed that interference early in a delay caused the most forgetting in MCI patients, and quiet rest after learning helped patients much more than controls. So the first minutes should be kept <b>free of interference</b>; other exercises or chatting straight away would do the most damage.",
+   "src": "v3dump B.2.4 Dewar et al. 2009/2010; pty_t3 3.9"
+  },
+  {
+   "s": "comp",
+   "t": "auto",
+   "q": "Research on the reminiscence bump shows that very <b>unexpected</b> personal events, which are not part of any cultural plan for a life, also show a strong bump. Which statement fits this finding best?",
+   "o": [
+    "It fits the life-script account less well, and fits the role of a rapidly developing self-identity better",
+    "It fits the life-script account best, because unexpected events are part of the script for adolescence",
+    "It fits the peak-functioning account less well, and is better explained by the cognitive-mechanisms account",
+    "It shows that the bump is caused only by first-time experiences, so all other accounts can be dropped"
+   ],
+   "a": 0,
+   "spot": "Script = expected events. What if UNexpected events bump too?",
+   "why": "A <b>life script</b> guides retrieval of <b>expected</b> events (leaving home, marriage), so unexpected events should not bump; yet they do. That fits the idea that our strongest memories are those relevant to <b>self-identity</b> (Conway, 2005), which is formed in these years. The script still explains why the bump is stronger for positive memories, so several factors contribute.",
+   "src": "v3dump A.3.2 (Eysenck & Keane life-script account); pty_t3 3.3.5"
+  },
+  {
+   "s": "find",
+   "t": "photo",
+   "q": "Before Soares and Storm (2018), Niforatos et al. (2017) compared photos that people took themselves with photos taken automatically by a wearable camera. What did they find, and which hypothesis does it support?",
+   "o": [
+    "Memory was impaired only when photos were taken manually, which supports the attentional-disengagement hypothesis",
+    "Memory was impaired only with the wearable camera, which supports the offloading hypothesis",
+    "Memory was impaired equally in both cases, which supports the offloading hypothesis",
+    "Memory improved in both cases, which supports the idea that taking a photo makes an object distinctive (a von Restorff effect)"
+   ],
+   "a": 0,
+   "spot": "Same photos stored, different act of taking them → which hypothesis cares about the act?",
+   "why": "Both cameras produce stored photos, so offloading predicts impairment in both. The impairment appeared only with <b>manual</b> photo-taking, so it is the <b>act</b> of photographing that pulls attention from the experience: support for <b>attentional disengagement</b>. Mols et al. (2015) add that people feel more disengaged when they photograph a trip.",
+   "src": "v3dump C.1.1; pty_t3 3.11"
+  },
+  {
+   "s": "def",
+   "t": "ca",
+   "q": "Some researchers write about “the emergence of autobiographical memory”, others about “the offset of childhood amnesia”. How do these two phrases relate to each other?",
+   "o": [
+    "They describe the same process seen from two sides",
+    "The first is about infancy, the second about adolescence",
+    "The first is a brain process, the second a social process",
+    "The first is about facts, the second about episodes"
+   ],
+   "a": 0,
+   "spot": "Beginning of one thing = end of the other.",
+   "why": "The <b>offset</b> (end) of childhood amnesia is the moment at which lasting life memories begin, which is the <b>emergence</b> of autobiographical memory. Robinson-Riegler stresses that both phrases describe the <b>same process</b>. The social-cognitive account adds that this process is gradual, not a sudden switch.",
+   "src": "v3dump A.2.1"
+  },
+  {
+   "s": "fig",
+   "t": "sms",
+   "q": "Dalgleish et al. (2011) asked people to list their most important lifetime periods and to choose positive and negative words for each. The table shows the pattern of their results (values are hypothetical; the pattern is as reported).<br><table class=\"qt\"><tr><th>Group</th><th>Proportion negative words</th><th>Reuse of the same positive words across periods</th></tr><tr><td>Currently depressed</td><td>.45</td><td>low</td></tr><tr><td>In remission</td><td>.30</td><td>medium</td></tr><tr><td>Healthy controls</td><td>.20</td><td>high</td></tr></table>Which conclusion fits this pattern best?",
+   "o": [
+    "Depression goes with a negative, poorly integrated life story that is only partly restored after remission",
+    "After remission the life story is fully restored, so a negative self-image is only a symptom of a current depression",
+    "Depressed patients describe their positive qualities more consistently across lifetime periods than healthy people do",
+    "The groups differ in how negative their life story is, but not in how integrated it is"
+   ],
+   "a": 0,
+   "spot": "Three groups in a row: where does the middle group sit, and what does low reuse of positive words mean?",
+   "why": "Currently depressed patients chose more negative words and reused positive words less across periods: their self-image is negative and <b>compartmentalised</b>. The remitted group lies <b>in between</b>, so recovery seems to bring a healthier story, but not fully, which suggests a lasting <b>risk factor</b>. Low reuse of positive words is itself a sign of poor integration, so the groups differ in integration too.",
+   "src": "v3dump A.5.2 Dalgleish et al. key study; pty_t3 3.6.1"
+  },
+  {
+   "s": "comp",
+   "t": "photo",
+   "q": "Judge these statements about what Soares and Storm (2018) can conclude.<br>I. The results are inconsistent with an explicit offloading account, in which people forget because they consciously count on a saved photo.<br>II. The results also rule out that people have built up an implicit, automatic habit of treating photographed things as stored elsewhere.",
+   "o": [
+    "I is true, and II is false.",
+    "I is false, but II is true.",
+    "Both I and II are true.",
+    "Both I and II are false."
+   ],
+   "a": 0,
+   "spot": "Separate the conscious version of offloading from the automatic version.",
+   "why": "I is <b>true</b>: memory was impaired even when people knew the photo was gone (Snapchat, Delete), so conscious trust in a saved photo cannot explain it. II is <b>false</b>: the authors suggest that <b>automatic offloading</b>, an implicit transactive memory with cameras, may still exist and may even be how disengagement happens.",
+   "src": "v3dump C.1.4 and TRAP 'what is ruled out'"
+  },
+  {
+   "s": "app",
+   "t": "ca",
+   "q": "Four-year-old Sem says: “At Grandma's we always have pancakes and then we feed the ducks.” He also says: “That time the big duck bit my finger and I cried.” According to Nelson (1993), these two statements come from, respectively,",
+   "o": [
+    "a generic event memory and the autobiographical memory system",
+    "the autobiographical memory system and a generic event memory",
+    "procedural memory and the autobiographical memory system",
+    "a generic event memory and a lifetime period in the knowledge base"
+   ],
+   "a": 0,
+   "spot": "“Always” = repeated routine; “that time” = one unique event.",
+   "why": "Nelson says memory talk helps children build a <b>generic event memory</b> for repeated events (what usually happens at Grandma's) and an <b>autobiographical memory system</b> for unique events (the day the duck bit him). A lifetime period is a level in Conway's adult model, not Nelson's term for a routine.",
+   "src": "v3dump A.2.3 (Nelson, 1993)"
+  },
+  {
+   "s": "def",
+   "t": "amn",
+   "q": "Which description fits the classic amnesic syndrome in its pure form?",
+   "o": [
+    "Severely impaired episodic memory, with working memory, semantic memory, implicit memory and intelligence preserved",
+    "Severely impaired episodic and implicit memory, with working memory and intelligence preserved",
+    "Severely impaired working memory and episodic memory, with semantic memory, implicit memory and general intelligence preserved",
+    "Severely impaired semantic memory, with episodic memory, working memory and intelligence preserved"
+   ],
+   "a": 0,
+   "spot": "Pure amnesia: only ONE thing breaks.",
+   "why": "In its pure form the amnesic syndrome is a selective loss of <b>episodic memory</b>. <b>Working memory</b> (so H.M. had a normal digit span), <b>semantic memory</b>, <b>implicit memory</b> (Warrington & Weiskrantz's word fragments) and intelligence are spared. In practice, other problems often come along.",
+   "src": "pty_t3 3.7; v3dump B.1.2"
+  },
+  {
+   "s": "find",
+   "t": "amn",
+   "q": "Janowsky, Shimamura and Squire (1989) tested patients with frontal-lobe lesions who were <b>not</b> amnesic. They remembered newly learned facts normally, but were poor at remembering where the facts had come from. Why is this finding important?",
+   "o": [
+    "With normal item memory, the source problem is not a side effect of weak memory; it points to a prefrontal role",
+    "It shows that source amnesia is caused only by damage to the hippocampus, exactly as in the classic amnesic patients",
+    "It shows that frontal patients have anterograde amnesia that is limited to the most recent facts",
+    "It shows that source memory and item memory rely on exactly the same brain system"
+   ],
+   "a": 0,
+   "spot": "Facts fine, source poor, and no amnesia → what can you rule out?",
+   "why": "In amnesic patients you could argue that the source is lost because the whole memory is weak. These frontal patients had <b>normal item memory</b>, yet poor <b>source memory</b>, so the two can come apart. This points to a <b>prefrontal</b> contribution to source monitoring, next to the hippocampal contribution to binding.",
+   "src": "pty_t3 3.7.2"
+  },
+  {
+   "s": "app",
+   "t": "sms",
+   "q": "Three years after leaving a job, Hugo says he is far happier now than he was in those years. His diary from that time, however, shows that he rated his mood then as fairly good. According to Conway (2005), this is best explained by",
+   "o": [
+    "coherence winning over correspondence: he remembers his past self as worse, which fits who he is now",
+    "correspondence winning over coherence: his memory sticks to the facts and his diary was wrong",
+    "direct retrieval: the memory of his old job was triggered by a cue without the working self",
+    "over-general memory: he avoids specific memories of the old job because they bring up intense negative emotions"
+   ],
+   "a": 0,
+   "spot": "Memory drifts away from the record, towards the current self-story.",
+   "why": "Conway says we want memories to be <b>coherent</b> with our current goals and self-image and to <b>correspond</b> to the facts, and that over time coherence tends to win. People often claim life is better now, but this usually comes from <b>misremembering past selves as worse</b> (Newman & Lindsay, 2009). His diary shows the correspondence side was lost.",
+   "src": "v3dump A.4.2"
+  },
+  {
+   "s": "fig",
+   "t": "mal",
+   "q": "Godden and Baddeley (1975) had divers learn word lists either underwater or on land, and recall them in the same or the other place. The table shows the percentage recalled.<br><table class=\"qt\"><tr><th>Learned</th><th>Recalled</th><th>% recalled</th></tr><tr><td>Underwater</td><td>Underwater</td><td>32</td></tr><tr><td>Underwater</td><td>Land</td><td>23</td></tr><tr><td>Land</td><td>Land</td><td>38</td></tr><tr><td>Land</td><td>Underwater</td><td>24</td></tr></table>Which statement is correct?",
+   "o": [
+    "Recall was better whenever recall and learning took place in the same setting: context acts as a cue at retrieval",
+    "Learning on land was always better, which shows that the underwater setting disrupted encoding",
+    "Recall underwater was always worse, which shows that the underwater setting disrupted retrieval",
+    "The place of recall did not matter, because the scores only depended on where the words were learned"
+   ],
+   "a": 0,
+   "spot": "Compare same-place cells with different-place cells, for each learning place.",
+   "why": "For words learned underwater, recall underwater beat recall on land (32 vs 23); for words learned on land, recall on land beat recall underwater (38 vs 24). So the <b>match</b> matters: <b>context-dependent memory</b>, a retrieval effect. Land learning was not always better (land then underwater gave 24, below underwater then underwater at 32).",
+   "src": "l2.js 'Biases in retrieval' (Godden & Baddeley table)"
+  },
+  {
+   "s": "find",
+   "t": "auto",
+   "q": "Rubin, Rahhal and Poon (1998) tested older adults' general knowledge about Academy Award winners, World Series winners and news events from different decades of their lives. What does their finding add to our understanding of the reminiscence bump?",
+   "o": [
+    "Knowledge was best for material from early adulthood, so the bump is not limited to personal life events such as firsts",
+    "Knowledge was best for the most recent decade, so the bump only exists for personal life memories and not for public events",
+    "Knowledge was equally good for all decades, so public knowledge shows no bump at all",
+    "Knowledge was best for early childhood, so public events show the reverse of the bump"
+   ],
+   "a": 0,
+   "spot": "Public knowledge, not personal events → is the bump still there?",
+   "why": "Older adults knew most about the world of their <b>early adulthood</b> (recent events were also known fairly well). Together with the findings for songs, books and films, this shows that the bump also holds for <b>public knowledge</b>. So it is not just a collection of personal ‘firsts’: something about those years makes everything stick.",
+   "src": "v3dump A.3.1; pty_t3 3.3.5"
+  },
+  {
+   "s": "app",
+   "t": "mal",
+   "q": "Staff in a café see a customer start a violent fight. Later, they remember surprisingly little, not only about the fight itself but also about what the customer ordered and said in the minutes <b>before</b> the fight. Which finding from the lecture does this resemble most?",
+   "o": [
+    "Clifford and Scott (1978): a violent event impaired recall of the whole episode, including what came before and after",
+    "Hastorf and Cantril (1954): the observers' expectations shaped what they saw and remembered",
+    "Loftus (1977): information given after the event distorted one detail of the original memory",
+    "Godden and Baddeley (1975): recall was worse because the setting at recall differed from the setting in which events were learned"
+   ],
+   "a": 0,
+   "spot": "Memory loss spreads to the calm part BEFORE the violence → the observed event itself disrupts encoding.",
+   "why": "Clifford and Scott found that the violent version of a film led to poorer recall of the <b>whole film</b>, not just the violent scene. That is a bias from <b>characteristics of the observed</b> at encoding. Hastorf and Cantril is about the <b>observer's</b> expectations, and Loftus (1977) is about information given after the event.",
+   "src": "l2.js 'Biases in encoding: the observed'"
+  },
+  {
+   "s": "comp",
+   "t": "ca",
+   "q": "Children aged 2 to 3 can recall events from when they were 1 to 2 years old (Bauer, 2004), although as adults they will have lost these memories. Which explanation of childhood amnesia does this finding weaken most?",
+   "o": [
+    "The purely neurological account, which says the infant brain is too immature to store lasting memories",
+    "The language account, which says memories are organised through memory talk with parents",
+    "The self account, which says a sense of self is needed before experiences can be organised as memories of one's own",
+    "The social-cognitive account, which says several abilities come together gradually"
+   ],
+   "a": 0,
+   "spot": "If toddlers CAN store and recall it, what can't be missing?",
+   "why": "If the brain could not yet store events, 3-year-olds should not remember things from 18 months either, but they do. So the basic brain machinery is in place, and a <b>purely neurological</b> account is doubtful: brain development is <b>necessary but not sufficient</b>. The finding leaves room for language, self and the social-cognitive account, which explain why the stored events later get lost.",
+   "src": "v3dump A.2.2 (Bauer, 2004; Bauer, 2007)"
+  },
+  {
+   "s": "fig",
+   "t": "amn",
+   "q": "The table shows recall and recognition scores of four amnesic patients (z-scores; 0 is the population average; values are hypothetical). Which patient is the strongest challenge to the modal model's assumption that recall and recognition rest on the same storage, and what kind of brain damage would you expect in that patient?<br><table class=\"qt\"><tr><th>Patient</th><th>Recall</th><th>Recognition</th></tr><tr><td>P</td><td>−2.5</td><td>−2.4</td></tr><tr><td>Q</td><td>−2.6</td><td>−0.1</td></tr><tr><td>R</td><td>−1.2</td><td>−1.1</td></tr><tr><td>S</td><td>−0.8</td><td>−0.7</td></tr></table>",
+   "o": [
+    "Patient Q, with damage limited to the hippocampus and a spared perirhinal cortex",
+    "Patient P, with damage limited to the hippocampus and a spared perirhinal cortex",
+    "Patient Q, with damage to the perirhinal cortex and a spared hippocampus",
+    "Patient R, with wide damage to the whole medial temporal lobe, including the perirhinal cortex"
+   ],
+   "a": 0,
+   "spot": "Look for the patient where the two scores split, then link the spared score to a brain area.",
+   "why": "Patients P, R and S are impaired about equally on both tests, which fits one shared store. Patient Q has very poor recall but <b>normal recognition</b>, the pattern of <b>Jon</b>. Aggleton and Brown (1999) link recollection to the <b>hippocampus</b> and familiarity to the <b>perirhinal cortex</b>, so you would expect hippocampal damage with a spared perirhinal cortex, as in Jon.",
+   "src": "pty_t3 3.8.2-3.8.3; v3dump B.2.2-B.2.3"
+  },
+  {
+   "s": "comp",
+   "t": "sms",
+   "q": "Woike et al. (1999) found that agentic people mostly recalled agentic memories and communal people mostly communal ones, which is taken as support for the working self. A critic says the result does not need a working self at all. Which alternative explanation fits the critic best?",
+   "o": [
+    "Agentic people may simply have lived through more agentic events, because personality was measured, not manipulated",
+    "The memories were retrieved directly, without any search, so current goals could not have played a role",
+    "The participants had a retrograde amnesia for the memories that did not fit their own personality",
+    "The memories came from the reminiscence bump, a period in which all memories are equally goal-related and identity-defining"
+   ],
+   "a": 0,
+   "spot": "Working self = recall is filtered by goals. Rival = the events themselves differ.",
+   "why": "The working self says goals <b>filter</b> what is retrieved. But the design is <b>correlational</b>: personality was measured, so agentic people may simply <b>experience</b> more achievement events, and then recall would reflect what happened, not a goal-based filter. The strong match still fits the working self, but it supports rather than proves it.",
+   "src": "t3.js A6 answer (critical note); v3dump A.4.4"
+  },
+  {
+   "s": "app",
+   "t": "amn",
+   "q": "After a head injury, a man can learn new things normally. He can describe his school years and his wedding, 20 years ago, in detail, but he remembers almost nothing of the two years just before the accident. Which description fits best?",
+   "o": [
+    "Retrograde amnesia, worst for the most recent period, in line with Ribot's law that older memories last longer",
+    "Anterograde amnesia, because the memories he is missing are the most recent ones he made",
+    "Retrograde amnesia with a reminiscence bump, because his school years and his wedding both fall in the bump period",
+    "Source amnesia, because he knows facts about the last two years but not where he learned them"
+   ],
+   "a": 0,
+   "spot": "Lost: memories from BEFORE the injury, mostly the latest ones. New learning: fine.",
+   "why": "Losing memories from before the injury is <b>retrograde</b> amnesia; new learning is fine, so it is not anterograde. Retrograde loss is usually worst for the period <b>just before</b> the damage, and older memories survive better: <b>Ribot's law</b>. The wedding being remembered reflects its age, not the bump.",
+   "src": "pty_t3 3.10 Ribot's law; v3dump B.1.1 (Matlin)"
+  }
+ ],
+ "s3": [
+  {
+   "s": "def",
+   "t": "sms",
+   "q": "Conway (2005) describes the structure of autobiographical knowledge as a network rather than a simple tree. What is the reason?",
+   "o": [
+    "One episodic memory can link upward to several general events and lifetime periods at the same time",
+    "Lifetime periods never overlap in time, so each memory belongs to exactly one period",
+    "The working self stores a separate copy of every memory that is relevant to one of the person's current goals",
+    "Episodic memories are stored in order of date, so they can be searched day by day"
+   ],
+   "a": 0,
+   "spot": "Tree = one parent per branch. Network = several links.",
+   "why": "In a tree, every memory would hang under exactly one branch. In Conway's structure (life story, themes, lifetime periods, general events, episodic memories) <b>one episode can connect to several</b> general events and lifetime periods, for example to both a work theme and a friendship. That is why it is a <b>network</b>.",
+   "src": "pty_t3 3.4; v3dump A.4.1"
+  },
+  {
+   "s": "find",
+   "t": "ca",
+   "q": "In Usher and Neisser's (1993) study, participants also said how often they had thought or talked about an early event and whether they had seen photos of it. How was this rehearsal related to memory?",
+   "o": [
+    "For events at 3 or younger, stories and photos went with fewer memories; for events at 4 to 5, with stronger memories",
+    "Stories and photos improved memory for events at every age, and most strongly for the earliest events",
+    "Stories and photos had no relation to memory at any age, so rehearsal plays no role in childhood memory",
+    "For events at 4 to 5, stories and photos went with fewer memories; for events at age 3 or younger, they went with stronger memories"
+   ],
+   "a": 0,
+   "spot": "The effect of rehearsal depends on the age at the event: which way round?",
+   "why": "Rehearsal <b>depended on age</b>. For very early events (3 or younger), family stories and photos went with <b>fewer</b> memories, probably because fragile early memories get mixed up with the stories. At <b>4 to 5</b>, memories were sturdy enough to benefit, so stories and photos made them stronger. Swapping the two age groups is the classic trap here.",
+   "src": "v3dump A.2.1 Usher & Neisser key study"
+  },
+  {
+   "s": "fig",
+   "t": "mal",
+   "q": "In Loftus and Palmer's (1974) study, all participants saw the same film of a car accident. Afterwards they were asked how fast the cars were going when they <i>contacted</i> or <i>smashed into</i> each other. Which conclusion fits the figure and the lecture best?",
+   "chart": {
+    "type": "bar",
+    "title": "Speed estimates by verb (Loftus & Palmer, 1974)",
+    "x": [
+     "contacted",
+     "smashed"
+    ],
+    "y": "Estimated speed (mph)",
+    "series": [
+     {
+      "name": "Mean estimate",
+      "v": [
+       30.5,
+       40.8
+      ]
+     }
+    ],
+    "note": "Values from Lecture 2; the other verbs (hit, bumped, collided) fell in between",
+    "min": 0,
+    "max": 50
+   },
+   "o": [
+    "The verb in the question raised the estimates by about 10 mph: a bias at retrieval",
+    "The “smashed” group saw a faster crash on the film, so the difference arose during encoding",
+    "The question strengthened a correct memory of the speed, as in Loftus (1975)",
+    "The difference shows decay: the “contacted” group had forgotten more of the film"
+   ],
+   "a": 0,
+   "spot": "Same film for everyone; only the verb in the question differed.",
+   "why": "Because everyone saw the <b>same film</b>, encoding was the same. Only the verb in the question differed, and “smashed” gave estimates about 10 mph higher than “contacted” (40.8 vs 30.5). The lecture files this under <b>retrieval</b> biases: <b>leading questions</b> at the moment of remembering. Nothing here shows a correct memory being strengthened.",
+   "src": "l2.js 'Biases in retrieval'"
+  },
+  {
+   "s": "def",
+   "t": "amn",
+   "q": "Which description fits <i>developmental amnesia</i> (Vargha-Khadem et al., 1997)?",
+   "o": [
+    "Severe episodic memory problems after very early hippocampal damage, while language and facts develop well enough for school",
+    "Any form of amnesia that starts in childhood, whatever the cause and whichever memory systems are affected",
+    "The normal lack of memories from the first years of life, which every adult shows",
+    "A loss of semantic memory after early damage to the perirhinal cortex, while episodic memory develops as normal in the hippocampus"
+   ],
+   "a": 0,
+   "spot": "Early damage + which parts of memory survive it.",
+   "why": "Developmental amnesia is defined by a combination: <b>early</b> damage largely limited to the <b>hippocampus</b>, severely impaired everyday <b>episodic</b> memory, and <b>semantic</b> learning good enough for mainstream schooling. It is not just ‘amnesia in a child’, and it is not <b>childhood amnesia</b>, which is normal forgetting of the earliest years.",
+   "src": "pty_t3 3.8.1"
+  },
+  {
+   "s": "comp",
+   "t": "auto",
+   "q": "Judge these statements about the role of the brain, according to Robinson-Riegler.<br>I. Brain development is necessary but not sufficient to explain why childhood amnesia ends.<br>II. Brain functioning is necessary and sufficient to explain the reminiscence bump.",
+   "o": [
+    "Both I and II are true.",
+    "I is true, and II is false.",
+    "I is false, and II is true.",
+    "Both I and II are false."
+   ],
+   "a": 0,
+   "spot": "Two phenomena, two different verdicts on the brain.",
+   "why": "I is <b>true</b>: the brain must mature, but toddlers already store memories, so language, self and memory talk are also needed. II is <b>true</b> too: Robinson-Riegler calls brain functioning <b>necessary and sufficient</b> for the bump, in line with the <b>peak-functioning</b> account (Janssen & Murre, 2008). Cognitive factors explain <i>which</i> things we remember from that period.",
+   "src": "v3dump A.3.2"
+  },
+  {
+   "s": "def",
+   "t": "photo",
+   "q": "On a hospital ward, nurse Ilse never memorises the codes for patients' allergies, because she knows that pharmacist Ravi always has them. In Wegner's (1987) theory of transactive memory, what does Ilse store about the allergy codes?",
+   "o": [
+    "A directory entry: knowledge of who holds the information, which is cheaper than storing the codes themselves",
+    "Event-specific knowledge: the images, feelings and other details of each moment on which Ravi told her the codes",
+    "A generic event memory: a summary of the repeated occasions on which she asked Ravi",
+    "Prosthetic memory: an exact external copy of the codes that she can consult herself"
+   ],
+   "a": 0,
+   "spot": "She knows WHO knows, not WHAT the codes are.",
+   "why": "In <b>transactive memory</b>, people who know each other well act as one memory system. Each stores some information and a <b>directory</b> of what the others know, so remembering means either retrieving it yourself or retrieving <b>who to ask</b>. The team holds more than any one person, at the cost that Ilse is stuck when Ravi is away.",
+   "src": "pty_t3 3.11.4"
+  },
+  {
+   "s": "find",
+   "t": "sms",
+   "q": "Summerfield et al. (2009) asked participants to retrieve both real and imagined personal events. What did they find?",
+   "o": [
+    "Only real events activated the ventromedial prefrontal cortex and the posterior cingulate cortex",
+    "Real and imagined events activated exactly the same brain areas, so the brain cannot tell them apart",
+    "Only imagined events activated the medial temporal lobe, because imagining needs more construction",
+    "Only real events activated the amygdala, because imagined events never carry emotion"
+   ],
+   "a": 0,
+   "spot": "Real versus made-up: does the brain treat them differently?",
+   "why": "Only <b>real</b> events activated the <b>ventromedial prefrontal cortex</b> and the <b>posterior cingulate cortex</b>, so the brain seems to treat a true memory differently from an invented one. A separate meta-analysis (Svoboda et al., 2006) found the medial and ventromedial prefrontal cortex active in almost all autobiographical retrieval.",
+   "src": "v3dump A.5.1; pty_t3 3.5"
+  },
+  {
+   "s": "fig",
+   "t": "amn",
+   "q": "Two patients have an equally dense, pure anterograde amnesia and equally high intelligence. The table summarises their memory for the past (scores are hypothetical; the pattern follows Baddeley & Wilson, 1986).<br><table class=\"qt\"><tr><th>Patient</th><th>Learning new information</th><th>Memory for events before the illness</th></tr><tr><td>A</td><td>severely impaired</td><td>detailed, e.g. wartime experiences</td></tr><tr><td>B</td><td>severely impaired</td><td>hazy, e.g. knows he was in the Navy and at university, but not in which order</td></tr></table>Which conclusion does this pattern support?",
+   "o": [
+    "Anterograde and retrograde severity are not strongly related, which suggests that the two have different origins",
+    "Retrograde amnesia is always as severe as anterograde amnesia, so patient A must be exaggerating his memories",
+    "Patient B shows Ribot's law, because his most recent memories are better preserved than his old ones",
+    "Patient A cannot have amnesia, because the amnesic syndrome always includes a loss of old memories"
+   ],
+   "a": 0,
+   "spot": "Same anterograde score, very different retrograde score → are the two linked?",
+   "why": "With the <b>same</b> anterograde deficit, the two patients differ hugely in memory for the past. So the severity of the two forms is <b>not highly correlated</b> (Shimamura & Squire, 1991), which suggests <b>different origins</b>. Ribot's law says <b>older</b> memories survive better, not recent ones, and pure amnesia does not require retrograde loss (patient KI).",
+   "src": "pty_t3 3.10; v3dump B.2.5"
+  },
+  {
+   "s": "app",
+   "t": "ca",
+   "q": "Lotte, aged 30, says she clearly remembers her second birthday party: the cake, the balloons and her grandfather singing. Her family has shown her the video of that party many times. Why can a researcher not simply count this as evidence of a memory from age 2?",
+   "o": [
+    "There is no way to tell whether she remembers the party itself or the video and the family stories about it",
+    "Memories from age 2 cannot exist at all, because the hippocampus does not function in any way before about the age of 4",
+    "Birthday parties are generic events, and generic events are never stored before adolescence",
+    "Video recordings are only stored in procedural memory, so they cannot produce visual details"
+   ],
+   "a": 0,
+   "spot": "The problem of checking early memories: where did the content come from?",
+   "why": "Studying childhood amnesia is hard because an early ‘memory’ may really be the <b>family story</b> or the <b>photo or video</b> seen many times, and the person cannot tell which. That is why Usher and Neisser used events that could be <b>corroborated</b>. Brain immaturity does not rule out all early memories: toddlers can recall events from when they were 1 to 2.",
+   "src": "v3dump A.2.1; pty_t3 3.3.1"
+  },
+  {
+   "s": "find",
+   "t": "photo",
+   "q": "In Soares and Storm's (2018) studies, participants were told which paintings to photograph. What do studies on <i>volitional</i> photography (Diehl et al., 2016; Barasch et al., 2017) suggest?",
+   "o": [
+    "When people choose for themselves what to photograph, taking photos can increase engagement and memory",
+    "When people choose for themselves what to photograph, the impairment becomes even stronger than with instructed photos",
+    "Choosing what to photograph has no effect, because the impairment depends only on whether the photo is saved",
+    "Choosing what to photograph only matters when the photos are reviewed later in the same session"
+   ],
+   "a": 0,
+   "spot": "Instructed versus own choice: a boundary condition of the effect.",
+   "why": "The photo-taking-impairment effect was found with <b>instructed</b> photos. When people choose what to photograph (<b>volitional photography</b>), photo-taking can actually <b>increase</b> engagement (Diehl et al., 2016) and memory (Barasch et al., 2017). So the effect may arise mainly when photographing is imposed, which limits how far the lab result generalises.",
+   "src": "v3dump C.1.4; pty_t3 3.11.3"
+  },
+  {
+   "s": "comp",
+   "t": "ca",
+   "q": "Some studies place the end of childhood amnesia at 2 to 2.5 years, others closer to 5 years. Which account predicts this disagreement most directly?",
+   "o": [
+    "The social-cognitive account, because several abilities that memory depends on arrive at different times in different children",
+    "The neurological account, because the hippocampus matures at one fixed age that is the same for every child in every culture",
+    "The life-script account, because every culture expects memories to start at a different age",
+    "The peak-functioning account, because the brain encodes best between the ages of 2 and 5"
+   ],
+   "a": 0,
+   "spot": "A variable, gradual offset → an account built on several ingredients.",
+   "why": "Nelson and Fivush's (2004) <b>social-cognitive</b> account says autobiographical memory <b>emerges gradually</b> as explicit memory, language, memory talk, a sense of a past self and theory of mind come together. If these arrive at different times for different children, the offset should <b>vary</b>, which is what the literature shows (Multhaup et al., 2005, found large individual differences). A fixed brain clock would predict one age for everyone.",
+   "src": "v3dump A.2.6"
+  },
+  {
+   "s": "app",
+   "t": "sms",
+   "q": "Two depressed patients do a memory-specificity task. Before the task, both are told that retrieving memories might have unpleasant side effects. Mira usually copes with problems by avoiding them; Sanne usually tackles problems head-on. According to the affect-regulation hypothesis and Debeer et al. (2011), what should happen?",
+   "o": [
+    "Mira's memories should become more over-general after the warning, while Sanne's should change little",
+    "Both patients' memories should become more over-general, because all depressed people avoid specific memories",
+    "Sanne's memories should become more over-general, because people who tackle problems search harder",
+    "Neither patient should change, because over-general memory is caused only by depression itself"
+   ],
+   "a": 0,
+   "spot": "A threat + a coping style → who avoids?",
+   "why": "The <b>affect-regulation hypothesis</b> sees over-general memory as <b>cognitive avoidance</b> of painful specific memories. Debeer et al. found that threat instructions increased over-general memories <b>only</b> in people high in <b>avoidant coping</b>. Not every depressed person copes by avoiding, so the warning should mainly affect Mira.",
+   "src": "v3dump A.5.2; pty_t3 3.6"
+  },
+  {
+   "s": "find",
+   "t": "amn",
+   "q": "De Renzi, Liotti and Nichelli (1987) described an Italian woman with retrograde amnesia who remembered her personal life very well, but recalled almost no public events, not even the war she had lived through. What does this case show?",
+   "o": [
+    "Personal memories and public knowledge within autobiographical memory can be impaired independently of each other",
+    "Retrograde amnesia always affects public knowledge before it affects personal memories",
+    "Personal memories depend on public semantic memory, so a loss of public knowledge is impossible when personal memories are intact",
+    "Her amnesia was anterograde, because public events are learned after personal ones"
+   ],
+   "a": 0,
+   "spot": "One kind of past kept, the other lost → a dissociation.",
+   "why": "Retrograde amnesia usually impairs <b>both</b> personal and public memory, but this woman kept her personal life and lost public events. So <b>personal-episodic</b> and <b>public-semantic</b> knowledge can be impaired <b>independently</b>, at least to some extent: the same dissociation logic as elsewhere in the theme.",
+   "src": "v3dump B.2.5; pty_t3 3.10"
+  },
+  {
+   "s": "fig",
+   "t": "photo",
+   "q": "The table shows the comparisons in Soares and Storm (2018).<br><table class=\"qt\"><tr><th>Experiment</th><th>Comparison</th><th>p</th><th>Cohen's d</th></tr><tr><td>1 (n = 42)</td><td>Camera vs Observe</td><td>.003</td><td>0.70</td></tr><tr><td>1</td><td>Snapchat vs Observe</td><td>&lt; .001</td><td>1.21</td></tr><tr><td>1</td><td>Snapchat vs Camera</td><td>.031</td><td>0.48</td></tr><tr><td>2 (n = 51)</td><td>Camera vs Observe</td><td>.026</td><td>0.58</td></tr><tr><td>2</td><td>Delete vs Observe</td><td>.005</td><td>0.61</td></tr><tr><td>2</td><td>Camera vs Delete</td><td>.80</td><td>not reported</td></tr></table>Which statement is <b>NOT</b> correct?",
+   "o": [
+    "The Camera–Observe difference was larger in Experiment 2 than in Experiment 1",
+    "The largest single difference in either experiment was between Snapchat and Observe",
+    "In both experiments, every photo condition was significantly worse than Observe",
+    "In Experiment 2, keeping or deleting the photo made no significant difference"
+   ],
+   "a": 0,
+   "spot": "NOT correct → check each claim against the p and d columns.",
+   "why": "Camera vs Observe gave d = 0.70 in Experiment 1 but d = 0.58 in Experiment 2, so it was <b>smaller</b> in Experiment 2: that statement is false. Snapchat vs Observe (d = 1.21) is indeed the <b>largest</b> effect, every photo condition was significantly below Observe (all p &lt; .05), and Camera vs Delete was <b>not significant</b> (p = .80).",
+   "src": "v3dump C.1.2-C.1.3 statistics"
+  },
+  {
+   "s": "app",
+   "t": "amn",
+   "q": "A patient with hippocampal damage is asked to imagine lying on a tropical beach. He can name the sand, the sun and the palm trees, but cannot describe a coherent scene. Which statement fits the readings best?",
+   "o": [
+    "Amnesic patients imagine the separate parts but fail to integrate them, linked to the hippocampus's spatial role",
+    "The patient has lost semantic memory, because he can no longer imagine what a beach looks like",
+    "Imagining the future is a working-memory task, not a memory task, so it should be fully spared in the classic amnesic syndrome",
+    "The patient shows source amnesia, because he cannot tell whether he ever visited a beach"
+   ],
+   "a": 0,
+   "spot": "Parts present, whole missing → integration, mental time travel forward.",
+   "why": "Episodic memory is a system for <b>mental time travel</b>, and amnesic patients struggle to travel forward too: they can imagine the <b>elements</b> but not <b>integrate</b> them (Hassabis et al., 2007), linked to the hippocampus's spatial role. He still knows what belongs on a beach, so semantic memory is fine. Mullally and Maguire (2013) add that remembering and imagining are best seen as separate functions.",
+   "src": "v3dump B.2.1; pty_t3 3.7.1"
+  },
+  {
+   "s": "fig",
+   "t": "auto",
+   "q": "Wagenaar (1986) recorded events from his own life in a diary and later tested his memory for them. The figure shows the approximate result. Which explanation of this kind of decline is <b>NOT</b> one given in the reading?",
+   "chart": {
+    "type": "bar",
+    "title": "Recall of diary events (Wagenaar, 1986)",
+    "x": [
+     "Shortly after the event",
+     "After four years"
+    ],
+    "y": "% recalled",
+    "series": [
+     {
+      "name": "Recall",
+      "v": [
+       75,
+       32
+      ]
+     }
+    ],
+    "note": "Approximate: ‘nearly 75%’ falling to ‘less than 33%’ (Robinson-Riegler)",
+    "min": 0,
+    "max": 100
+   },
+   "o": [
+    "The events had been pushed out of a short-term store by newer events",
+    "Events that are never thought about or discussed leave weak traces",
+    "So many similar events happen that one is hard to pick out from the others",
+    "Repeated daily routines blend together and turn into general facts"
+   ],
+   "a": 0,
+   "spot": "Forgetting over years → a long-term explanation. Which option belongs to seconds, not years?",
+   "why": "Recall fell from about 75% to under a third over four years: a <b>standard forgetting curve</b>. The reading gives three causes: <b>lack of rehearsal</b>, <b>interference</b> from similar events and <b>routine</b>, which turns repeated episodes into autobiographical facts (Linton, 1975). A <b>short-term store</b> holds items for seconds, so it cannot explain forgetting over years.",
+   "src": "v3dump A.3.3 (Wagenaar, 1986)"
+  },
+  {
+   "s": "def",
+   "t": "ca",
+   "q": "In the social-cognitive account of the emergence of autobiographical memory, children before about age 4 are said to lack a <i>consciousness of the past</i> (extended consciousness; Povinelli et al., 1999). What does this mean?",
+   "o": [
+    "They do not yet have a sense of a past self that is connected to their present self",
+    "They do not yet know that other people can have beliefs and knowledge that they do not share",
+    "They cannot yet store any explicit memories of events at all",
+    "They cannot yet use language to tell others about what happened"
+   ],
+   "a": 0,
+   "spot": "Past ME linked to present ME.",
+   "why": "<b>Extended consciousness</b> is a sense of a <b>past self</b> connected to the present self, which children lack until about age 4. It is one of several ingredients in Nelson and Fivush's account. Knowing that others have different beliefs is <b>theory of mind</b>, a separate ingredient, and basic explicit memory is already in place by about age 2.",
+   "src": "v3dump A.2.6"
+  },
+  {
+   "s": "comp",
+   "t": "photo",
+   "q": "In Experiment 1 of Soares and Storm, photos had to be taken within the 15 seconds that each painting was on screen. In Experiment 2, the 15 seconds started only after the photo had been taken, and memory was still impaired. Which explanation of the impairment does Experiment 2 rule out?",
+   "o": [
+    "That photographed paintings were remembered less because they were looked at for less time",
+    "That taking a photo disengages attention from the painting during encoding",
+    "That people have learned an automatic link between photographing and ‘this is saved elsewhere’",
+    "That taking a photo creates a feeling of having already encoded the painting"
+   ],
+   "a": 0,
+   "spot": "What did Experiment 2 equalise?",
+   "why": "In Experiment 1 the photo conditions lost viewing time, so <b>less looking time</b> could explain the impairment. Experiment 2 gave photo conditions at least the <b>full 15 seconds</b> after the photo, and memory was still worse, so viewing time is ruled out. Disengagement, automatic offloading and a <b>metacognitive illusion</b> all remain possible, and the authors propose the last two.",
+   "src": "v3dump C.1.2-C.1.4; t3.js C4/C5"
+  },
+  {
+   "s": "app",
+   "t": "mal",
+   "q": "After a staged bag theft, an interviewer asks one group of witnesses: “Did the man in the red cap run to the left?” The man really did wear a red cap. Another group gets the same question without the cap. According to Loftus (1975), what should happen when both groups are later asked whether the man wore a cap?",
+   "o": [
+    "More witnesses in the first group should report the cap: consistent information strengthens memory",
+    "Fewer witnesses in the first group should report the cap, because any post-event information distorts the memory",
+    "Both groups should report the cap equally often, because post-event information only affects details that were false",
+    "More witnesses in the first group should report a cap of a different colour, because the question creates a compromise memory"
+   ],
+   "a": 0,
+   "spot": "The mentioned detail is TRUE → strengthen, distort or create?",
+   "why": "When post-event information is <b>consistent</b> with what really happened, it works like a rehearsal. Loftus (1975) found that mentioning the stop sign made 53% later report it, against 35% without the mention: <b>strengthening</b>. Distortion (Loftus, 1977) needs <b>inconsistent</b> information, such as calling a green car blue.",
+   "src": "l2.js 'Biases in storage: strengthen'"
+  },
+  {
+   "s": "comp",
+   "t": "amn",
+   "q": "Vargha-Khadem et al. argue that patients with developmental amnesia show that episodic and semantic memory are partly separate. Squire and Zola (1998) reject this. Which argument do Squire and Zola use?",
+   "o": [
+    "Their good recognition and moment-to-moment memory could, over years of school, build up facts without a separate route",
+    "The patients' semantic knowledge is in fact completely absent once IQ is taken into account",
+    "The patients' damage is limited to the perirhinal cortex, so their spared hippocampus can still support episodic learning",
+    "Semantic memory depends only on the hippocampus, while episodic memory depends on the frontal lobes"
+   ],
+   "a": 0,
+   "spot": "A difference of degree, not a dissociation: how could facts be learned without a separate system?",
+   "why": "Squire and Zola point to the patients' <b>good recognition</b> and moment-to-moment memory: with <b>years of repeated exposure</b> at school, that could slowly build up facts. They also note IQ was in places below average, which makes ‘average knowledge’ harder to read. On their view the medial temporal lobe supports both kinds of memory, so this is a <b>difference of degree</b>.",
+   "src": "pty_t3 3.8.1"
+  },
+  {
+   "s": "find",
+   "t": "mal",
+   "q": "Loftus and Pickrell (1995) gave adults descriptions of three true childhood events and one made-up event about being lost in a shopping mall. What did they find?",
+   "o": [
+    "About 25% came to remember the false event, compared with 68% of the true events",
+    "About 68% came to remember the false event, compared with 25% of the true events",
+    "Nobody remembered the false event, although about 68% of the true events were remembered",
+    "About 16% remembered the false event, about as many as remembered the true events"
+   ],
+   "a": 0,
+   "spot": "Two numbers: false event versus true events.",
+   "why": "About <b>25%</b> of participants came to ‘remember’ being lost in the mall, against <b>68%</b> for the true events. So whole <b>false episodes</b> can be implanted, a step up from changing a single detail. The 16% belongs to a different study: Bugs Bunny at Disneyland (Braun et al., 2002).",
+   "src": "l2.js 'Implanted and false memories'"
+  },
+  {
+   "s": "def",
+   "t": "auto",
+   "q": "As a child, Daan had swimming lessons every Saturday for six years. Today he cannot re-live any single lesson, but he knows that he swam on Saturdays. What does this illustrate?",
+   "o": [
+    "Repeated episodes lose their individual character and turn into an autobiographical fact",
+    "A single episode turns into a reminiscence bump memory, because it happened before the age of 10",
+    "The lessons were never encoded, because procedural skills block episodic memory",
+    "The memory is a case of source amnesia, because he forgot who taught him to swim"
+   ],
+   "a": 0,
+   "spot": "Many similar episodes → what is left is knowing, not re-living.",
+   "why": "Robinson-Riegler notes that memory for events shifts from <b>episodic</b> to <b>semantic</b>. When an event is repeated many times, the separate episodes blur, and what remains is general knowledge about yourself: an <b>autobiographical fact</b>. Linton (1975) showed this, and it is one reason the forgetting curve falls for routine events.",
+   "src": "v3dump A.1.1 and A.3.3 (Linton, 1975)"
+  },
+  {
+   "s": "fig",
+   "t": "sms",
+   "q": "A brain-imaging study compares two ways of retrieving autobiographical memories. The table shows the activation pattern (hypothetical values in arbitrary units).<br><table class=\"qt\"><tr><th>Condition</th><th>Prefrontal cortex</th><th>Left hippocampus</th></tr><tr><td>X</td><td>high (8)</td><td>low (3)</td></tr><tr><td>Y</td><td>low (3)</td><td>high (7)</td></tr></table>According to the self-memory system and Addis et al. (2012), which condition is which?",
+   "o": [
+    "X is generative retrieval, because a strategic, goal-directed search needs the prefrontal cortex; Y is direct retrieval",
+    "X is direct retrieval, because a cue triggers the memory through the prefrontal cortex; Y is generative retrieval",
+    "X is generative retrieval, because the hippocampus is not involved in remembering personal events; Y is direct retrieval",
+    "Both are generative retrieval, because every autobiographical memory has to be constructed by the working self"
+   ],
+   "a": 0,
+   "spot": "Strategic search → prefrontal. Spontaneous pop-up → left hippocampus.",
+   "why": "<b>Generative</b> retrieval is a deliberate search guided by the working self, so it should involve areas for <b>strategic search</b>: Addis et al. found more <b>prefrontal</b> activity. <b>Direct</b> retrieval bypasses the working self and showed more <b>left hippocampus</b> activity. Watch the reasons as well as the labels: the hippocampus is involved in remembering personal events.",
+   "src": "v3dump A.4.3 (Addis et al., 2012); pty_t3 3.4.1"
+  },
+  {
+   "s": "app",
+   "t": "amn",
+   "q": "A memory clinic wants a test of retrograde amnesia that does not go out of date and that can be checked with relatives. It asks for facts such as the name of the patient's first school, first job and where they spent last Christmas, plus one specific event from each period of life. Which test is this, and what is known about it?",
+   "o": [
+    "The Autobiographical Memory Interview; it proved reliable, even in Korsakoff patients",
+    "The Doors and People Test; it measures recall and recognition of events from the patient's own life separately",
+    "The Galton-Crovitz cue-word technique; it shows how memories are spread across the whole lifespan",
+    "A famous-faces test; it shows that older memories are better preserved than recent ones in amnesia"
+   ],
+   "a": 0,
+   "spot": "Personal facts per life period + one specific incident per period → a named interview.",
+   "why": "The <b>Autobiographical Memory Interview</b> (Kopelman, Wilson & Baddeley, 1990) asks personal-semantic facts and one specific event per life period, which can be checked with relatives. It proved <b>sensitive and reliable</b>, and even <b>Korsakoff</b> patients, known for confabulating, mostly answered accurately or said they could not remember. The Doors and People Test measures recall and recognition of new material, not the patient's past.",
+   "src": "pty_t3 3.10"
+  },
+  {
+   "s": "comp",
+   "t": "auto",
+   "q": "Janssen and Murre (2008) found a reminiscence bump even for ordinary, unimportant memories, which supports the peak-functioning account. How can this be reconciled with the cognitive-mechanisms account, which stresses importance and distinctiveness?",
+   "o": [
+    "Over time, novel, emotional and important events are rehearsed at the expense of mundane ones, and come to dominate",
+    "Ordinary events from early adulthood are in fact more distinctive than important events, so the two accounts predict the same",
+    "The peak-functioning account only applies to public knowledge, and the cognitive account only to personal memories",
+    "The two accounts cannot be reconciled, so the cognitive-mechanisms account has to be rejected"
+   ],
+   "a": 0,
+   "spot": "Encoding favours the age; later rehearsal favours special events.",
+   "why": "Janssen and Murre suggest both can be true: encoding works especially well in <b>adolescence and early adulthood</b>, whatever the content (<b>peak functioning</b>), while over time <b>novel, emotional and important</b> events get <b>rehearsed</b> at the expense of mundane ones. So in older people, the special events win out, as the cognitive-mechanisms account expects.",
+   "src": "v3dump A.3.2 Janssen & Murre key study"
+  }
+ ]
+}

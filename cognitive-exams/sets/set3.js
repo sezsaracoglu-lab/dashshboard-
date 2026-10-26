@@ -1,7 +1,7 @@
 // Set 3: Theme 3 (autobiographical memory, amnesia, photo-taking). 20 new questions across the five exam skills.
 EXAMS.push({
-  id: "set3",
-  title: "Set 3 · Theme 3 test",
+  id: "set3", "group": "t3",
+  title: "Theme 3 · Set 1",
   blurb: "20 new questions on Theme 3, four for each exam skill: key concepts, main findings, reading figures and tables, comparing theories, and applying them to new situations. Your results also show your score per skill.",
   questions: [
 // ---------- KEY CONCEPTS ----------
