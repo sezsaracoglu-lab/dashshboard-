@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Course Story · Statistics 2</title>
+<meta name="description" content="Statistics 2 as one story: eight stops on one map of tests, three threads and where to go next.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--paper:#fff;--ink:#1d2433;--muted:#5d6472;--line:#e4e0d6;--sage:#4f7a5a;--sagep:#e8f1ea;--clay:#a8553d;--clayp:#f8e9e3;--navy:#2b3a5c;--navyp:#e7ebf3;--gold:#b8923a;--goldp:#fbf3df;
+--serif:'Fraunces',Georgia,serif;--sans:'Instrument Sans','Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{border-bottom:1px solid var(--line);background:rgba(247,245,240,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(6px)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.mark{font-family:var(--serif);font-weight:600;text-decoration:none;font-size:1.1rem}
+.menu{display:flex;gap:16px;font-size:.9rem}.menu a{text-decoration:none;color:var(--muted)}.menu a:hover{color:var(--ink)}
+/* journey bar */
+.jbar{position:sticky;top:56px;z-index:9;background:rgba(247,245,240,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);transform:translateY(-110%);opacity:0;visibility:hidden;transition:transform .35s ease,opacity .35s,visibility .35s}
+.jbar.on{transform:none;opacity:1;visibility:visible}
+.jbar .wrap{display:flex;gap:6px;align-items:center;height:48px;overflow-x:auto;scrollbar-width:none}
+.jbar a{flex:none;text-decoration:none;font-size:.8rem;font-weight:600;color:var(--muted);padding:5px 10px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+.jbar a.cur{background:var(--navy);color:#fff}
+.jbar a.done{color:var(--navy)}
+/* hero */
+.hero{padding:72px 0 40px;text-align:center}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.3rem,6.5vw,4.2rem);line-height:1.04;margin:14px auto 18px;max-width:14em}
+h1 em{font-style:italic;color:var(--clay)}
+.lede{font-size:1.15rem;color:var(--muted);max-width:36em;margin:0 auto}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:.95rem;border-radius:999px;padding:11px 20px;border:1.5px solid var(--ink);background:var(--paper)}
+.btn.solid{background:var(--ink);color:#fff}
+/* map */
+.map{margin:34px auto 0;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:26px 18px 18px}
+.map svg{width:100%;height:auto;display:block}
+.map .stop{cursor:pointer}
+.map .stop:hover circle.c{fill:var(--navy)}
+.map .stop:hover text.n{fill:#fff}
+.mlist{display:none;list-style:none;grid-template-columns:1fr 1fr;gap:8px;text-align:left}
+.mlist a{display:flex;gap:10px;align-items:center;text-decoration:none;background:var(--bg);border-radius:12px;padding:9px 10px;font-size:.88rem;line-height:1.25}
+.mlist a i{font-style:normal;flex:none;width:26px;height:26px;border-radius:50%;background:var(--navyp);color:var(--navy);font-weight:700;display:grid;place-items:center;font-size:.8rem}
+.mlist a small{display:block;color:var(--muted);font-size:.76rem}
+.mapnote{text-align:center;font-size:.9rem;color:var(--muted);margin-top:8px}
+/* section headings */
+.sec{padding:70px 0 10px}
+.sec h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1;margin:8px 0 12px}
+.sec .intro{color:var(--muted);max-width:40em;font-size:1.05rem}
+/* chapters */
+.ch{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:44px;align-items:center;padding:64px 0;border-top:1px solid var(--line)}
+.ch:nth-of-type(even) .pic{order:2}
+.pic{position:relative}
+.pic .fig{width:100%;aspect-ratio:16/9;display:block;border-radius:20px;border:1px solid var(--line);box-shadow:0 18px 40px rgba(29,36,51,.10);background:#fff}
+.grid4{width:100%;border-collapse:separate;border-spacing:6px;font-size:.86rem;margin-top:6px}.grid4 th{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;text-align:left;padding:4px 8px}.grid4 td{background:var(--bg);border-radius:10px;padding:9px 10px;vertical-align:top}.grid4 td.rw{background:transparent;font-weight:600;color:var(--ink);width:24%}.grid4 a{text-decoration:none;font-weight:600;color:var(--navy)}.grid4 td.hit{background:var(--navyp)}.grid4 .muted{color:#a9a395}
+.pic img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:20px;border:1px solid var(--line);box-shadow:0 18px 40px rgba(29,36,51,.10);background:#eee}
+.pic .num{position:absolute;top:-18px;left:-10px;font-family:var(--serif);font-size:4.4rem;line-height:1;color:var(--gold);text-shadow:0 2px 0 var(--bg),2px 0 0 var(--bg),-2px 0 0 var(--bg),0 -2px 0 var(--bg)}
+.meta{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+.ch h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.08;margin:6px 0 4px}
+.ch .q{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--clay);margin-bottom:12px}
+.ch p{margin-bottom:12px}
+.big{background:var(--navyp);border-radius:14px;padding:12px 16px;margin:14px 0;font-weight:500}
+.big b{color:var(--navy)}
+.reads{list-style:none;margin:10px 0 12px;display:grid;gap:6px}
+.reads li{font-size:.93rem;padding-left:26px;position:relative}
+.reads li span{position:absolute;left:0;top:2px;width:19px;height:19px;border-radius:6px;background:var(--goldp);color:#7a5b16;font-size:.7rem;font-weight:700;display:grid;place-items:center}
+.link{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;background:var(--sagep);border-radius:12px;padding:10px 14px;margin:12px 0;color:#2f4d38}
+.link b{white-space:nowrap}
+.go{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.go a{text-decoration:none;font-size:.85rem;font-weight:600;padding:8px 13px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper)}
+.go a:hover{border-color:var(--ink)}
+.go a.ex{background:var(--ink);color:#fff;border-color:var(--ink)}
+/* threads */
+.threads{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.th{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.th img{width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:1px solid var(--line)}
+.th .b{padding:18px}
+.th h4{font-family:var(--serif);font-weight:500;font-size:1.35rem;line-height:1.15;margin-bottom:6px}
+.th p{font-size:.94rem;color:var(--muted)}
+.dots{display:flex;gap:5px;margin-top:12px;flex-wrap:wrap}
+.dots i{font-style:normal;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:.75rem;font-weight:700;background:var(--bg);color:#b5b0a3;border:1px solid var(--line)}
+.dots i.y{background:var(--navy);color:#fff;border-color:var(--navy)}
+/* one sentence */
+.sentence{margin:70px 0 0;background:var(--navy);color:#fff;border-radius:26px;padding:44px 34px;text-align:center}
+.sentence .eyebrow{color:#e7c97f}
+.sentence p.s{font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.9rem);line-height:1.35;margin:14px auto 18px;max-width:30em}
+.sentence p.s b{color:#e7c97f;font-weight:500}
+.hook{display:inline-block;background:rgba(255,255,255,.12);border-radius:999px;padding:9px 18px;font-weight:600;font-size:.98rem}
+.tip{margin:26px auto 0;max-width:40em;font-size:.98rem;color:#d7dceb}
+/* next */
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;text-decoration:none;display:flex;flex-direction:column;gap:4px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(29,36,51,.08)}
+.card .ic{font-size:1.5rem}
+.card b{font-family:var(--serif);font-weight:500;font-size:1.2rem}
+.card span{font-size:.9rem;color:var(--muted)}
+.order{margin-top:26px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.order ol{margin:8px 0 0 20px;display:grid;gap:4px}
+footer{padding:50px 0 60px;color:var(--muted);font-size:.85rem;text-align:center}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.js .pic.rv{transform:translateY(34px) scale(.96)}
+.js .pic.rv.in{transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+@media (max-width:820px){
+  .ch{grid-template-columns:minmax(0,1fr);gap:26px;padding:48px 0}
+  .ch:nth-of-type(even) .pic{order:0}
+  .threads,.next{grid-template-columns:1fr}
+  .pic .num{font-size:3.4rem}
+  .sentence{padding:32px 20px}
+  .hero{padding:44px 0 30px}
+  .map svg{display:none}
+  .mlist{display:grid}
+  .map{padding:16px}
+  .mark{white-space:nowrap;font-size:1rem}
+  .menu{gap:12px;font-size:.82rem}
+  .menu a:last-child{display:none}
+  .menu a{white-space:nowrap}
+  .link{display:block}
+  .link b{white-space:normal;margin-right:4px}
+  .pic .num{left:-4px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');document.body.classList.add('js')</script>
+<header class="top"><div class="wrap"><a class="mark" href="../">Sezen Saracoglu</a>
+<nav class="menu"><a href="../study/">Study hub</a><a href="https://sezsaracoglu-lab.github.io/stat2_MocExams/">Exam drill</a><a href="#map">The test map</a></nav></div></header>
+
+<nav class="jbar" id="jbar" aria-label="The journey"><div class="wrap">
+<a href="#t1">1 · Toolkit</a><a href="#t2">2 · Yes / no</a><a href="#t3">3 · Cross-table</a><a href="#t4">4 · Two scales</a><a href="#t5">5 · Defend the line</a><a href="#t6">6 · 3+ groups</a><a href="#t7">7 · Two factors</a><a href="#t8">8 · Same people</a><a href="#map">Test map</a><a href="#threads">Threads</a><a href="#next">Start studying</a>
+</div></nav>
+
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow rv">Statistics 2 · Start here</div>
+  <h1 class="rv" style="--d:.1s">Could this be <em>chance?</em> And if not, how much does it matter?</h1>
+  <p class="lede rv" style="--d:.2s">Every theme this year asks those two questions about a different kind of data. We start with the toolkit from last year, then count categories, then measure relationships, then compare groups, until the whole map of tests is filled in. Read the story once before you study, and every formula will have a place to land.</p>
+  <div class="btns rv" style="--d:.3s"><a class="btn solid" href="#t1">Start the story ↓</a><a class="btn" href="#map">See the test map</a></div>
+  <div class="map rv" style="--d:.35s" aria-label="Map of the eight stops">
+  <svg viewBox="0 0 1000 250" role="img" aria-label="Journey map of the eight Statistics 2 themes">
+    <path d="M60 150 C 140 60, 200 60, 240 120 S 340 200, 400 130 S 500 50, 540 120 S 640 200, 700 130 S 800 50, 840 110 S 920 170, 945 120" fill="none" stroke="#e4e0d6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M60 150 C 140 60, 200 60, 240 120 S 340 200, 400 130 S 500 50, 540 120 S 640 200, 700 130 S 800 50, 840 110 S 920 170, 945 120" fill="none" stroke="#b8923a" stroke-width="4" stroke-dasharray="8 10" stroke-linecap="round"/>
+    <g font-family="Instrument Sans,Segoe UI,sans-serif" text-anchor="middle"><g class="stop" data-to="t1"><circle class="c" cx="60" cy="150" r="26" fill="#e7ebf3" stroke="#2b3a5c" stroke-width="2.5"/><text class="n" x="60" y="157" font-size="20" font-weight="700" fill="#2b3a5c">1</text><text x="60" y="200" font-size="15" font-weight="600" fill="#1d2433">🧰 Toolkit</text><text x="60" y="217" font-size="12.5" fill="#5d6472">Recap</text></g><g class="stop" data-to="t2"><circle class="c" cx="200" cy="78" r="26" fill="#e7ebf3" stroke="#2b3a5c" stroke-width="2.5"/><text class="n" x="200" y="85" font-size="20" font-weight="700" fill="#2b3a5c">2</text><text x="200" y="30" font-size="15" font-weight="600" fill="#1d2433">🪙 Yes / no</text><text x="200" y="47" font-size="12.5" fill="#5d6472">Proportions</text></g><g class="stop" data-to="t3"><circle class="c" cx="330" cy="172" r="26" fill="#e7ebf3" stroke="#2b3a5c" stroke-width="2.5"/><text class="n" x="330" y="179" font-size="20" font-weight="700" fill="#2b3a5c">3</text><text x="330" y="222" font-size="15" font-weight="600" fill="#1d2433">🧮 Cross-table</text><text x="330" y="239" font-size="12.5" fill="#5d6472">Chi-square</text></g><g class="stop" data-to="t4"><circle class="c" cx="470" cy="78" r="26" fill="#e7ebf3" stroke="#2b3a5c" stroke-width="2.5"/><text class="n" x="470" y="85" font-size="20" font-weight="700" fill="#2b3a5c">4</text><text x="470" y="30" font-size="15" font-weight="600" fill="#1d2433">📈 Two scales</text><text x="470" y="47" font-size="12.5" fill="#5d6472">Correlation</text></g><g class="stop" data-to="t5"><circle class="c" cx="610" cy="172" r="26" fill="#e7ebf3" stroke="#2b3a5c" stroke-width="2.5"/><text class="n" x="610" y="179" font-size="20" font-weight="700" fill="#2b3a5c">5</text><text x="610" y="222" font-size="15" font-weight="600" fill="#1d2433">🧱 Defend the line</text><text x="610" y="239" font-size="12.5" fill="#5d6472">Regression</text></g><g class="stop" data-to="t6"><circle class="c" cx="750" cy="88" r="26" fill="#e7ebf3" stroke="#2b3a5c" stroke-width="2.5"/><text class="n" x="750" y="95" font-size="20" font-weight="700" fill="#2b3a5c">6</text><text x="750" y="40" font-size="15" font-weight="600" fill="#1d2433">⚖️ 3+ groups</text><text x="750" y="57" font-size="12.5" fill="#5d6472">One-way ANOVA</text></g><g class="stop" data-to="t7"><circle class="c" cx="868" cy="132" r="26" fill="#e7ebf3" stroke="#2b3a5c" stroke-width="2.5"/><text class="n" x="868" y="139" font-size="20" font-weight="700" fill="#2b3a5c">7</text><text x="868" y="182" font-size="15" font-weight="600" fill="#1d2433">🔀 Two factors</text><text x="868" y="199" font-size="12.5" fill="#5d6472">Two-way ANOVA</text></g><g class="stop" data-to="t8"><circle class="c" cx="945" cy="120" r="26" fill="#2b3a5c" stroke="#2b3a5c" stroke-width="2.5"/><text class="n" x="945" y="127" font-size="20" font-weight="700" fill="#fff">8</text><text x="917" y="72" font-size="15" font-weight="600" fill="#1d2433">🔁 Same people</text><text x="917" y="89" font-size="12.5" fill="#5d6472">Repeated measures</text></g></g>
+  </svg>
+  <ol class="mlist"><li><a href="#t1"><i>1</i><span>🧰 Toolkit<small>Recap</small></span></a></li><li><a href="#t2"><i>2</i><span>🪙 Yes / no<small>Proportions</small></span></a></li><li><a href="#t3"><i>3</i><span>🧮 Cross-table<small>Chi-square</small></span></a></li><li><a href="#t4"><i>4</i><span>📈 Two scales<small>Correlation</small></span></a></li><li><a href="#t5"><i>5</i><span>🧱 Defend the line<small>Regression</small></span></a></li><li><a href="#t6"><i>6</i><span>⚖️ 3+ groups<small>One-way ANOVA</small></span></a></li><li><a href="#t7"><i>7</i><span>🔀 Two factors<small>Two-way ANOVA</small></span></a></li><li><a href="#t8"><i>8</i><span>🔁 Same people<small>Repeated measures</small></span></a></li></ol>
+  <p class="mapnote">Categories (2, 3) → relationships between scales (4, 5) → differences between groups (6, 7, 8).</p>
+  </div>
+</section>
+
+<section class="ch" id="t1">
+  <div class="pic rv"><span class="num">1</span><svg class="fig" viewBox="0 0 640 360" role="img" aria-label="Normal curve under the null hypothesis with both tails shaded" font-family="Instrument Sans,Segoe UI,sans-serif"><path d="M80,290 L80,289.4 L84,289.3 L88,289.2 L92,289.0 L96,288.8 L100,288.6 L104,288.3 L108,288.0 L112,287.6 L116,287.1 L120,286.6 L124,286.0 L128,285.4 L132,284.6 L136,283.7 L140,282.7 L144,281.5 L148,280.2 L152,278.8 L156,277.1 L160,275.3 L164,273.3 L168,271.1 L172,268.6 L176,265.9 L180,262.9 L183,290 Z" fill="#a8553d" opacity=".85"/><path d="M457,290 L460,262.9 L464,265.9 L468,268.6 L472,271.1 L476,273.3 L480,275.3 L484,277.1 L488,278.8 L492,280.2 L496,281.5 L500,282.7 L504,283.7 L508,284.6 L512,285.4 L516,286.0 L520,286.6 L524,287.1 L528,287.6 L532,288.0 L536,288.3 L540,288.6 L544,288.8 L548,289.0 L552,289.2 L556,289.3 L560,289.4 L560,290 Z" fill="#a8553d" opacity=".85"/><path d="M80,289.4 L84,289.3 L88,289.2 L92,289.0 L96,288.8 L100,288.6 L104,288.3 L108,288.0 L112,287.6 L116,287.1 L120,286.6 L124,286.0 L128,285.4 L132,284.6 L136,283.7 L140,282.7 L144,281.5 L148,280.2 L152,278.8 L156,277.1 L160,275.3 L164,273.3 L168,271.1 L172,268.6 L176,265.9 L180,262.9 L184,259.7 L188,256.2 L192,252.4 L196,248.3 L200,244.0 L204,239.3 L208,234.4 L212,229.2 L216,223.7 L220,217.9 L224,211.9 L228,205.7 L232,199.2 L236,192.6 L240,185.9 L244,179.1 L248,172.2 L252,165.2 L256,158.3 L260,151.5 L264,144.8 L268,138.2 L272,131.9 L276,125.9 L280,120.1 L284,114.8 L288,109.8 L292,105.4 L296,101.4 L300,98.0 L304,95.2 L308,92.9 L312,91.3 L316,90.3 L320,90.0 L324,90.3 L328,91.3 L332,92.9 L336,95.2 L340,98.0 L344,101.4 L348,105.4 L352,109.8 L356,114.8 L360,120.1 L364,125.9 L368,131.9 L372,138.2 L376,144.8 L380,151.5 L384,158.3 L388,165.2 L392,172.2 L396,179.1 L400,185.9 L404,192.6 L408,199.2 L412,205.7 L416,211.9 L420,217.9 L424,223.7 L428,229.2 L432,234.4 L436,239.3 L440,244.0 L444,248.3 L448,252.4 L452,256.2 L456,259.7 L460,262.9 L464,265.9 L468,268.6 L472,271.1 L476,273.3 L480,275.3 L484,277.1 L488,278.8 L492,280.2 L496,281.5 L500,282.7 L504,283.7 L508,284.6 L512,285.4 L516,286.0 L520,286.6 L524,287.1 L528,287.6 L532,288.0 L536,288.3 L540,288.6 L544,288.8 L548,289.0 L552,289.2 L556,289.3 L560,289.4" fill="none" stroke="#2b3a5c" stroke-width="4"/><line x1="60" x2="580" y1="290" y2="290" stroke="#5d6472" stroke-width="2"/><text x="320" y="60" font-size="18" fill="#2b3a5c" font-weight="700" text-anchor="middle">The world where H₀ is true</text><text x="320" y="320" font-size="15" fill="#5d6472" font-weight="500" text-anchor="middle">0</text><text x="130" y="250" font-size="15" fill="#a8553d" font-weight="700" text-anchor="middle">rare</text><text x="510" y="250" font-size="15" fill="#a8553d" font-weight="700" text-anchor="middle">rare</text><line x1="530" x2="530" y1="290" y2="215" stroke="#b8923a" stroke-width="4"/><circle cx="530" cy="210" r="7" fill="#b8923a"/><text x="530" y="195" font-size="15" fill="#b8923a" font-weight="700" text-anchor="middle">your result</text><text x="320" y="348" font-size="15" fill="#5d6472" font-weight="500" text-anchor="middle" font-style="italic">test statistic = signal ÷ noise · p = how rare under H₀</text></svg></div>
+  <div class="txt">
+    <div class="meta rv">Theme 1 · Recap of Statistics 1</div>
+    <h3 class="rv" style="--d:.05s">🧰 The toolkit and the courtroom</h3>
+    <p class="q rv" style="--d:.1s">How do you know a result is not just luck?</p>
+    <p class="rv" style="--d:.15s">Everything this year stands on last year. You describe data (frequencies, mean, median, SD), turn one score into a z-score, and then go beyond the sample with a test. A test works like a courtroom: H₀ is innocent until the evidence is too unlikely, and you can be wrong in two ways (Type I and Type II errors).</p>
+    <div class="big rv" style="--d:.2s"><b>Big idea:</b> choosing a test is <b>classification, not memory</b>. Row = your question, column = your data, cell = your test.</div>
+    <ul class="reads rv" style="--d:.25s"><li><span>A</span>Describing: levels of measurement, distributions, mean, median, SD</li><li><span>B</span>The z-score and the normal table</li><li><span>C</span>Hypothesis testing in six steps, the two errors, and last year's t-tests</li></ul>
+    
+    <div class="go rv" style="--d:.35s"><a href="https://sezsaracoglu-lab.github.io/stat2_theme1_recap/">Recap: last year in six topics</a></div>
+  </div>
+</section>
+<section class="ch" id="t2">
+  <div class="pic rv"><span class="num">2</span><svg class="fig" viewBox="0 0 640 360" role="img" aria-label="A sample proportion of 54.1 percent with its confidence interval" font-family="Instrument Sans,Segoe UI,sans-serif"><line x1="80" x2="560" y1="200" y2="200" stroke="#5d6472" stroke-width="2"/><line x1="80.0" x2="80.0" y1="195" y2="205" stroke="#5d6472" stroke-width="2"/><text x="80.0" y="228" font-size="14" fill="#5d6472" font-weight="500" text-anchor="middle">40%</text><line x1="160.0" x2="160.0" y1="195" y2="205" stroke="#5d6472" stroke-width="2"/><text x="160.0" y="228" font-size="14" fill="#5d6472" font-weight="500" text-anchor="middle">45%</text><line x1="239.99999999999997" x2="239.99999999999997" y1="195" y2="205" stroke="#5d6472" stroke-width="2"/><text x="239.99999999999997" y="228" font-size="14" fill="#5d6472" font-weight="500" text-anchor="middle">50%</text><line x1="320.00000000000006" x2="320.00000000000006" y1="195" y2="205" stroke="#5d6472" stroke-width="2"/><text x="320.00000000000006" y="228" font-size="14" fill="#5d6472" font-weight="500" text-anchor="middle">55%</text><line x1="399.99999999999994" x2="399.99999999999994" y1="195" y2="205" stroke="#5d6472" stroke-width="2"/><text x="399.99999999999994" y="228" font-size="14" fill="#5d6472" font-weight="500" text-anchor="middle">60%</text><line x1="480.0" x2="480.0" y1="195" y2="205" stroke="#5d6472" stroke-width="2"/><text x="480.0" y="228" font-size="14" fill="#5d6472" font-weight="500" text-anchor="middle">65%</text><line x1="559.9999999999999" x2="559.9999999999999" y1="195" y2="205" stroke="#5d6472" stroke-width="2"/><text x="559.9999999999999" y="228" font-size="14" fill="#5d6472" font-weight="500" text-anchor="middle">70%</text><rect x="265.6" y="160" width="79.99999999999989" height="16" rx="8" fill="#b8923a" opacity=".35"/><line x1="265.6" x2="345.5999999999999" y1="168" y2="168" stroke="#b8923a" stroke-width="5"/><line x1="265.6" x2="265.6" y1="152" y2="184" stroke="#b8923a" stroke-width="4"/><line x1="345.5999999999999" x2="345.5999999999999" y1="152" y2="184" stroke="#b8923a" stroke-width="4"/><circle cx="305.6" cy="168" r="10" fill="#2b3a5c"/><text x="305.6" y="130" font-size="17" fill="#2b3a5c" font-weight="700" text-anchor="middle">812 of 1,500 went to Florida: 54.1%</text><text x="305.6" y="278" font-size="18" fill="#1d2433" font-weight="700" text-anchor="middle">estimate ± margin of error</text><text x="305.6" y="305" font-size="15" fill="#5d6472" font-weight="500" text-anchor="middle">95% interval ≈ 51.6% to 56.6%</text><line x1="239.99999999999997" x2="239.99999999999997" y1="140" y2="200" stroke="#a8553d" stroke-width="3" stroke-dasharray="6 5"/><text x="229.99999999999997" y="185" font-size="15" fill="#a8553d" font-weight="700" text-anchor="end">claim: 50%?</text></svg></div>
+  <div class="txt">
+    <div class="meta rv">Theme 2 · Inference for proportions</div>
+    <h3 class="rv" style="--d:.05s">🪙 Counting yes and no</h3>
+    <p class="q rv" style="--d:.1s">What does a sample percentage say about the whole population?</p>
+    <p class="rv" style="--d:.15s">Now the data are categories with two outcomes: went to Florida or not, passed or not. You count 812 of 1,500 students: 54.1% is a fact about your sample. The interesting number is the one you cannot see, the true percentage among all students. There are two moves: a confidence interval (estimate ± margin of error) and a significance test (how strange is my sample if the claim were true?).</p>
+    <div class="big rv" style="--d:.2s"><b>Big idea:</b> every percentage from a sample is honest only <b>with its margin of error</b>.</div>
+    <ul class="reads rv" style="--d:.25s"><li><span>A</span>The sampling distribution of a proportion and the interval for one proportion (plus-four)</li><li><span>B</span>The z-test for one proportion and choosing a sample size</li><li><span>C</span>Two proportions: the difference, and pooling only for the test</li></ul>
+    <div class="link rv" style="--d:.3s"><b>↩ Builds on 1:</b> the same z and the same courtroom, now for counts instead of means.</div>
+    <div class="go rv" style="--d:.35s"><a href="https://sezsaracoglu-lab.github.io/stat2_lecture2/">Lecture 2</a><a href="https://sezsaracoglu-lab.github.io/stat2_theme2_focused/">12-step study</a><a href="https://sezsaracoglu-lab.github.io/stat2_practisequestions/">Practice questions</a><a class="ex" href="https://sezsaracoglu-lab.github.io/stat_2_theme2_practise-exam/">Theme 2 practice exam</a></div>
+  </div>
+</section>
+<section class="ch" id="t3">
+  <div class="pic rv"><span class="num">3</span><svg class="fig" viewBox="0 0 640 360" role="img" aria-label="Observed and expected counts in a two by two table" font-family="Instrument Sans,Segoe UI,sans-serif"><text x="150" y="70" font-size="17" fill="#2b3a5c" font-weight="700" text-anchor="middle">Observed</text><rect x="40" y="90" width="104" height="84" rx="10" fill="#fff" stroke="#2b3a5c" stroke-width="2.5"/><text x="92" y="142" font-size="30" fill="#2b3a5c" font-weight="700" text-anchor="middle">35</text><rect x="150" y="90" width="104" height="84" rx="10" fill="#fff" stroke="#2b3a5c" stroke-width="2.5"/><text x="202" y="142" font-size="30" fill="#2b3a5c" font-weight="700" text-anchor="middle">5</text><rect x="40" y="180" width="104" height="84" rx="10" fill="#fff" stroke="#2b3a5c" stroke-width="2.5"/><text x="92" y="232" font-size="30" fill="#2b3a5c" font-weight="700" text-anchor="middle">40</text><rect x="150" y="180" width="104" height="84" rx="10" fill="#fff" stroke="#2b3a5c" stroke-width="2.5"/><text x="202" y="232" font-size="30" fill="#2b3a5c" font-weight="700" text-anchor="middle">20</text><text x="490" y="70" font-size="17" fill="#5d6472" font-weight="700" text-anchor="middle">Expected if H₀</text><rect x="380" y="90" width="104" height="84" rx="10" fill="#fff" stroke="#5d6472" stroke-width="2.5"/><text x="432" y="142" font-size="30" fill="#5d6472" font-weight="700" text-anchor="middle">30</text><rect x="490" y="90" width="104" height="84" rx="10" fill="#fff" stroke="#5d6472" stroke-width="2.5"/><text x="542" y="142" font-size="30" fill="#5d6472" font-weight="700" text-anchor="middle">10</text><rect x="380" y="180" width="104" height="84" rx="10" fill="#fff" stroke="#5d6472" stroke-width="2.5"/><text x="432" y="232" font-size="30" fill="#5d6472" font-weight="700" text-anchor="middle">45</text><rect x="490" y="180" width="104" height="84" rx="10" fill="#fff" stroke="#5d6472" stroke-width="2.5"/><text x="542" y="232" font-size="30" fill="#5d6472" font-weight="700" text-anchor="middle">15</text><text x="320" y="165" font-size="20" fill="#5d6472" font-weight="600" text-anchor="middle">vs</text><text x="320" y="312" font-size="17" fill="#a8553d" font-weight="700" text-anchor="middle">χ² = Σ (O − E)² ⁄ E ≈ 5.56 · df = 1 · p = .018</text><text x="320" y="340" font-size="15" fill="#5d6472" font-weight="500" text-anchor="middle" font-style="italic">add up the surprise, cell by cell</text></svg></div>
+  <div class="txt">
+    <div class="meta rv">Theme 3 · Chi-square and two-way tables</div>
+    <h3 class="rv" style="--d:.05s">🧮 The cross-table</h3>
+    <p class="q rv" style="--d:.1s">Is the pattern in a table of counts real?</p>
+    <p class="rv" style="--d:.15s">What if a variable has more than two categories, or you have two categorical variables at once? Then you build a cross-table. The whole method is one idea: write down the table you would expect if there were no relationship, measure how far the real table is from it cell by cell, and add up the surprise. That total is χ².</p>
+    <div class="big rv" style="--d:.2s"><b>Big idea:</b> χ² = <b>observed vs expected</b>. A big enough total says the variables are related; it never says why.</div>
+    <ul class="reads rv" style="--d:.25s"><li><span>A</span>Reading a cross-table: joint, marginal and conditional distributions</li><li><span>B</span>The χ² test of independence: expected counts, df, p-value, when the test is allowed</li><li><span>C</span>χ² goodness of fit: one variable against a claimed distribution</li></ul>
+    <div class="link rv" style="--d:.3s"><b>↩ Builds on 2:</b> two proportions was a 2 × 2 table; χ² handles any size of table.</div>
+    <div class="go rv" style="--d:.35s"><a href="https://sezsaracoglu-lab.github.io/stat2_lecture3/">Lecture 3</a><a href="https://sezsaracoglu-lab.github.io/stat2_theme3_focusedstudy/">12-step study</a><a href="https://sezsaracoglu-lab.github.io/stat2_kaisquare_practical/">Practice questions</a><a class="ex" href="https://sezsaracoglu-lab.github.io/stat2_theme2_practise-exam/">Theme 3 practice exam</a></div>
+  </div>
+</section>
+<section class="ch" id="t4">
+  <div class="pic rv"><span class="num">4</span><svg class="fig" viewBox="0 0 640 360" role="img" aria-label="Scatterplot with a least-squares regression line" font-family="Instrument Sans,Segoe UI,sans-serif"><line x1="70" x2="590" y1="300" y2="300" stroke="#5d6472" stroke-width="2"/><line x1="70" x2="70" y1="40" y2="300" stroke="#5d6472" stroke-width="2"/><circle cx="203" cy="258" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="164" cy="267" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="122" cy="220" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="474" cy="168" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="457" cy="146" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="223" cy="261" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="173" cy="263" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="535" cy="122" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="488" cy="145" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="183" cy="201" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="239" cy="194" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="500" cy="94" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="512" cy="150" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="412" cy="176" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="333" cy="201" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="133" cy="290" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="539" cy="131" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="234" cy="201" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="526" cy="66" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="497" cy="102" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="334" cy="157" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="297" cy="219" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="167" cy="234" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="111" cy="317" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="112" cy="257" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="347" cy="167" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="316" cy="145" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="184" cy="319" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="288" cy="215" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="223" cy="265" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="261" cy="215" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="358" cy="155" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="524" cy="123" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="200" cy="244" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="457" cy="126" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="249" cy="207" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="175" cy="240" r="6" fill="#2b3a5c" opacity=".7"/><circle cx="425" cy="155" r="6" fill="#2b3a5c" opacity=".7"/><line x1="90" x2="570" y1="280" y2="98" stroke="#a8553d" stroke-width="5"/><text x="200" y="70" font-size="22" fill="#a8553d" font-weight="700" text-anchor="middle">ŷ = b₀ + b₁x</text><text x="200" y="98" font-size="15" fill="#5d6472" font-weight="500" text-anchor="middle">r: direction and strength</text><text x="330" y="330" font-size="15" fill="#5d6472" font-weight="500" text-anchor="middle">x (explanatory)</text><text x="34" y="170" font-size="15" fill="#5d6472" transform="rotate(-90 34 170)" text-anchor="middle">y (response)</text></svg></div>
+  <div class="txt">
+    <div class="meta rv">Theme 4 · Correlation and regression</div>
+    <h3 class="rv" style="--d:.05s">📈 Two scales together</h3>
+    <p class="q rv" style="--d:.1s">How do two measured variables move together?</p>
+    <p class="rv" style="--d:.15s">Now we leave categories and measure numbers on the same people: time outdoors and motor skills, a selection test and later performance. The picture comes first (the scatterplot: direction, form, strength, outliers). Then two numbers: r says how tightly the points follow a straight line, and the least-squares line ŷ = b₀ + b₁x lets you predict.</p>
+    <div class="big rv" style="--d:.2s"><b>Big idea:</b> r² is the share of variation the line explains. r = .30 explains only <b>9%</b>, and a lurking variable can fake the whole relationship.</div>
+    <ul class="reads rv" style="--d:.25s"><li><span>A</span>Scatterplots and the correlation r</li><li><span>B</span>The least-squares line, residuals and r²</li><li><span>C</span>Outliers, influential points, and causation vs common response vs confounding</li></ul>
+    <div class="link rv" style="--d:.3s"><b>↩ A new column of the map:</b> scale data instead of categories, and a relationship instead of a difference.</div>
+    <div class="go rv" style="--d:.35s"><a href="https://sezsaracoglu-lab.github.io/stat2_lecture4/">Lecture 4</a><a href="https://sezsaracoglu-lab.github.io/stat2_theme4_focusedteaching/">12-step study</a><a class="ex" href="https://sezsaracoglu-lab.github.io/stat2_regression_theme4_practise/">Homework 4</a></div>
+  </div>
+</section>
+<section class="ch" id="t5">
+  <div class="pic rv"><span class="num">5</span><svg class="fig" viewBox="0 0 640 360" role="img" aria-label="Regression line with a band, and R squared rising from .882 to .922" font-family="Instrument Sans,Segoe UI,sans-serif"><line x1="50" x2="330" y1="300" y2="300" stroke="#5d6472" stroke-width="2"/><line x1="50" x2="50" y1="60" y2="300" stroke="#5d6472" stroke-width="2"/><path d="M60,262 Q190,205 320,118 L320,78 Q190,175 60,238 Z" fill="#b8923a" opacity=".25"/><line x1="60" x2="320" y1="250" y2="98" stroke="#a8553d" stroke-width="5"/><text x="190" y="48" font-size="16" fill="#2b3a5c" font-weight="700" text-anchor="middle">could this line be nothing?</text><text x="190" y="330" font-size="15" fill="#5d6472" font-weight="500" text-anchor="middle">t = b₁ ⁄ SE · F = MSM ⁄ MSE</text><text x="380" y="106" font-size="15" fill="#1d2433" font-weight="600" text-anchor="start">One block</text><rect x="380" y="120" width="132" height="34" rx="6" fill="#c9c3b4"/><text x="522.3" y="144" font-size="15" fill="#1d2433" font-weight="700" text-anchor="start">R² = .882</text><text x="380" y="196" font-size="15" fill="#1d2433" font-weight="600" text-anchor="start">+ age, gender</text><rect x="380" y="210" width="138" height="34" rx="6" fill="#2b3a5c"/><text x="528.3" y="234" font-size="15" fill="#1d2433" font-weight="700" text-anchor="start">R² = .922</text><text x="490" y="320" font-size="15" fill="#a8553d" font-weight="700" text-anchor="middle">R² only climbs: p = .356, drop them</text></svg></div>
+  <div class="txt">
+    <div class="meta rv">Theme 5 · Regression inference and multiple regression</div>
+    <h3 class="rv" style="--d:.05s">🧱 Defending the line</h3>
+    <p class="q rv" style="--d:.1s">Could this line be nothing, how wrong will it be, and is one predictor enough?</p>
+    <p class="rv" style="--d:.15s">Lecture 4 drew a line; Lecture 5 asks you to defend it. First, could it be nothing? t = b₁ ⁄ SE on the slope and F = MSM ⁄ MSE on the model (in simple regression F = t²). Second, how far off will predictions be? The standard error of the estimate. Third, one predictor is never the real model, so you add more and each b becomes a partial effect.</p>
+    <div class="big rv" style="--d:.2s"><b>Big idea:</b> R² can only go up when you add predictors, so <b>test whether the extra block pays</b> (R² change).</div>
+    <ul class="reads rv" style="--d:.25s"><li><span>A</span>Testing the slope and the model; the regression ANOVA table</li><li><span>B</span>The standard error of the estimate; intervals for the mean vs one person</li><li><span>C</span>Multiple regression, partial effects and R² change</li></ul>
+    <div class="link rv" style="--d:.3s"><b>↩ Builds on 4:</b> the same line, now with a courtroom from Theme 1 around it.</div>
+    <div class="go rv" style="--d:.35s"><a href="https://sezsaracoglu-lab.github.io/stat2_lecture5/">Lecture 5</a><a href="https://sezsaracoglu-lab.github.io/stat2_theme5_focusedteachig/">12-step study</a><a href="https://sezsaracoglu-lab.github.io/stat2_multipleregression_101/">Multiple regression 101</a><a href="https://sezsaracoglu-lab.github.io/stat2_theme5_homework_Assigment/">Homework 5</a><a class="ex" href="https://sezsaracoglu-lab.github.io/STAT2-MULTIPLE_regression_practise/">Extra practice</a></div>
+  </div>
+</section>
+<section class="ch" id="t6">
+  <div class="pic rv"><span class="num">6</span><svg class="fig" viewBox="0 0 640 360" role="img" aria-label="Three groups of scores with their means and the grand mean" font-family="Instrument Sans,Segoe UI,sans-serif"><line x1="60" x2="590" y1="300" y2="300" stroke="#5d6472" stroke-width="2"/><circle cx="171" cy="203" r="7" fill="#c9c3b4" opacity=".8"/><circle cx="128" cy="223" r="7" fill="#c9c3b4" opacity=".8"/><circle cx="126" cy="186" r="7" fill="#c9c3b4" opacity=".8"/><circle cx="161" cy="204" r="7" fill="#c9c3b4" opacity=".8"/><circle cx="127" cy="237" r="7" fill="#c9c3b4" opacity=".8"/><circle cx="129" cy="216" r="7" fill="#c9c3b4" opacity=".8"/><circle cx="131" cy="167" r="7" fill="#c9c3b4" opacity=".8"/><circle cx="139" cy="232" r="7" fill="#c9c3b4" opacity=".8"/><circle cx="166" cy="166" r="7" fill="#c9c3b4" opacity=".8"/><line x1="100" x2="220" y1="210" y2="210" stroke="#1d2433" stroke-width="4"/><text x="160" y="330" font-size="15" fill="#5d6472" font-weight="600" text-anchor="middle">Group 1</text><circle cx="312" cy="125" r="7" fill="#b8923a" opacity=".8"/><circle cx="347" cy="178" r="7" fill="#b8923a" opacity=".8"/><circle cx="304" cy="169" r="7" fill="#b8923a" opacity=".8"/><circle cx="305" cy="178" r="7" fill="#b8923a" opacity=".8"/><circle cx="344" cy="180" r="7" fill="#b8923a" opacity=".8"/><circle cx="331" cy="184" r="7" fill="#b8923a" opacity=".8"/><circle cx="310" cy="201" r="7" fill="#b8923a" opacity=".8"/><circle cx="287" cy="161" r="7" fill="#b8923a" opacity=".8"/><circle cx="298" cy="167" r="7" fill="#b8923a" opacity=".8"/><line x1="260" x2="380" y1="170" y2="170" stroke="#1d2433" stroke-width="4"/><text x="320" y="330" font-size="15" fill="#5d6472" font-weight="600" text-anchor="middle">Group 2</text><circle cx="466" cy="108" r="7" fill="#2b3a5c" opacity=".8"/><circle cx="487" cy="95" r="7" fill="#2b3a5c" opacity=".8"/><circle cx="502" cy="99" r="7" fill="#2b3a5c" opacity=".8"/><circle cx="495" cy="126" r="7" fill="#2b3a5c" opacity=".8"/><circle cx="482" cy="121" r="7" fill="#2b3a5c" opacity=".8"/><circle cx="509" cy="154" r="7" fill="#2b3a5c" opacity=".8"/><circle cx="516" cy="117" r="7" fill="#2b3a5c" opacity=".8"/><circle cx="451" cy="99" r="7" fill="#2b3a5c" opacity=".8"/><circle cx="454" cy="82" r="7" fill="#2b3a5c" opacity=".8"/><line x1="420" x2="540" y1="120" y2="120" stroke="#1d2433" stroke-width="4"/><text x="480" y="330" font-size="15" fill="#5d6472" font-weight="600" text-anchor="middle">Group 3</text><line x1="60" x2="590" y1="165" y2="165" stroke="#a8553d" stroke-width="2.5" stroke-dasharray="7 6"/><text x="585" y="190" font-size="14" fill="#a8553d" font-weight="700" text-anchor="end">grand mean</text><text x="320" y="48" font-size="17" fill="#2b3a5c" font-weight="700" text-anchor="middle">F = between-group spread ÷ within-group spread</text></svg></div>
+  <div class="txt">
+    <div class="meta rv">Theme 6 · One-way ANOVA</div>
+    <h3 class="rv" style="--d:.05s">⚖️ Three or more groups</h3>
+    <p class="q rv" style="--d:.1s">Do several group means really differ?</p>
+    <p class="rv" style="--d:.15s">A t-test compares two groups. With three or more you would need many t-tests, and the false alarms pile up. ANOVA asks one question at once. The thesis: a difference between group means only means something relative to how much people differ inside the groups. So the total spread is split into between groups and within groups, each is averaged by its df, and their ratio is F.</p>
+    <div class="big rv" style="--d:.2s"><b>Big idea:</b> F ≈ 1 when H₀ is true. A large F says the means are further apart <b>than the noise allows</b>; post-hoc tests say which ones.</div>
+    <ul class="reads rv" style="--d:.25s"><li><span>A</span>Factor, levels, the two hypotheses (the Mozart study)</li><li><span>B</span>Three sums of squares, df, mean squares and F</li><li><span>C</span>R² as effect size, post-hoc tests, and causality from the design</li></ul>
+    <div class="link rv" style="--d:.3s"><b>↩ Builds on 1 and 5:</b> a t-test for more than two groups, and the same split of variance as regression.</div>
+    <div class="go rv" style="--d:.35s"><a href="https://sezsaracoglu-lab.github.io/stat2_theme6_annova/">Lecture 6</a><a href="https://sezsaracoglu-lab.github.io/stat2_theme6_short-teaching/">12-step study</a><a class="ex" href="https://sezsaracoglu-lab.github.io/stat2_theme6_homework/">Homework 6</a></div>
+  </div>
+</section>
+<section class="ch" id="t7">
+  <div class="pic rv"><span class="num">7</span><svg class="fig" viewBox="0 0 640 360" role="img" aria-label="Interaction plot with two non-parallel lines" font-family="Instrument Sans,Segoe UI,sans-serif"><line x1="90" x2="560" y1="300" y2="300" stroke="#5d6472" stroke-width="2"/><line x1="90" x2="90" y1="50" y2="300" stroke="#5d6472" stroke-width="2"/><line x1="180" x2="470" y1="230" y2="215" stroke="#c9c3b4" stroke-width="6"/><line x1="180" x2="470" y1="235" y2="85" stroke="#2b3a5c" stroke-width="6"/><circle cx="180" cy="230" r="9" fill="#c9c3b4"/><circle cx="470" cy="215" r="9" fill="#c9c3b4"/><circle cx="180" cy="235" r="9" fill="#2b3a5c"/><circle cx="470" cy="85" r="9" fill="#2b3a5c"/><text x="180" y="330" font-size="15" fill="#5d6472" font-weight="600" text-anchor="middle">Factor A: level 1</text><text x="470" y="330" font-size="15" fill="#5d6472" font-weight="600" text-anchor="middle">Factor A: level 2</text><text x="520" y="80" font-size="15" fill="#2b3a5c" font-weight="700" text-anchor="start">Factor B: level 2</text><text x="520" y="205" font-size="15" fill="#5d6472" font-weight="700" text-anchor="start">Factor B: level 1</text><text x="325" y="48" font-size="19" fill="#a8553d" font-weight="700" text-anchor="middle">not parallel = interaction</text><text x="325" y="270" font-size="13" fill="#5d6472" font-weight="500" text-anchor="middle" font-style="italic">(illustrative)</text></svg></div>
+  <div class="txt">
+    <div class="meta rv">Theme 7 · Two-way ANOVA</div>
+    <h3 class="rv" style="--d:.05s">🔀 Two factors at once</h3>
+    <p class="q rv" style="--d:.1s">Does the effect of one factor depend on the other?</p>
+    <p class="rv" style="--d:.15s">Two factors sort people into cells. The between-groups spread from Theme 6 is now split into three: factor A, factor B and what is left over, the interaction. That gives three F values against one shared MS Within. In the lecture's Michael Jackson example, fandom has no main effect at all, yet it decides whether the music adds two points or twenty-two.</p>
+    <div class="big rv" style="--d:.2s"><b>Big idea:</b> <b>read the interaction first</b>. Plot the cell means: lines that are not parallel mean the effect of one factor depends on the other.</div>
+    <ul class="reads rv" style="--d:.25s"><li><span>A</span>Design: factors, levels, cells, and the four kinds of mean</li><li><span>B</span>Three null hypotheses, the split of SS and df, three F values</li><li><span>C</span>Interpreting the interaction plot before the main effects</li></ul>
+    <div class="link rv" style="--d:.3s"><b>↩ Builds on 6:</b> the same machine, with its between-groups part split into three.</div>
+    <div class="go rv" style="--d:.35s"><a href="https://sezsaracoglu-lab.github.io/stat2_theme7_lecture/">Lecture 7</a><a href="https://sezsaracoglu-lab.github.io/stat2_theme7_focus-/">12-step study</a><a class="ex" href="https://sezsaracoglu-lab.github.io/stat2_theme7_solved_homework/">Homework 7</a></div>
+  </div>
+</section>
+<section class="ch" id="t8">
+  <div class="pic rv"><span class="num">8</span><svg class="fig" viewBox="0 0 640 360" role="img" aria-label="Profiles of four people across three situations" font-family="Instrument Sans,Segoe UI,sans-serif"><line x1="90" x2="560" y1="300" y2="300" stroke="#5d6472" stroke-width="2"/><polyline points="160,272 320,232 480,202" fill="none" stroke="#c9c3b4" stroke-width="4"/><circle cx="160" cy="272" r="7" fill="#c9c3b4"/><circle cx="320" cy="232" r="7" fill="#c9c3b4"/><circle cx="480" cy="202" r="7" fill="#c9c3b4"/><polyline points="160,236 320,206 480,174" fill="none" stroke="#b8923a" stroke-width="4"/><circle cx="160" cy="236" r="7" fill="#b8923a"/><circle cx="320" cy="206" r="7" fill="#b8923a"/><circle cx="480" cy="174" r="7" fill="#b8923a"/><polyline points="160,200 320,160 480,146" fill="none" stroke="#4f7a5a" stroke-width="4"/><circle cx="160" cy="200" r="7" fill="#4f7a5a"/><circle cx="320" cy="160" r="7" fill="#4f7a5a"/><circle cx="480" cy="146" r="7" fill="#4f7a5a"/><polyline points="160,162 320,132 480,92" fill="none" stroke="#2b3a5c" stroke-width="4"/><circle cx="160" cy="162" r="7" fill="#2b3a5c"/><circle cx="320" cy="132" r="7" fill="#2b3a5c"/><circle cx="480" cy="92" r="7" fill="#2b3a5c"/><text x="160" y="330" font-size="15" fill="#5d6472" font-weight="600" text-anchor="middle">Situation 1</text><text x="320" y="330" font-size="15" fill="#5d6472" font-weight="600" text-anchor="middle">Situation 2</text><text x="480" y="330" font-size="15" fill="#5d6472" font-weight="600" text-anchor="middle">Situation 3</text><text x="325" y="40" font-size="18" fill="#2b3a5c" font-weight="700" text-anchor="middle">the same people, measured three times</text><text x="325" y="68" font-size="15" fill="#a8553d" font-weight="700" text-anchor="middle">remove person differences first → smaller error, larger F</text></svg></div>
+  <div class="txt">
+    <div class="meta rv">Theme 8 · Repeated-measures ANOVA</div>
+    <h3 class="rv" style="--d:.05s">🔁 The same people, measured again</h3>
+    <p class="q rv" style="--d:.1s">What changes when every person appears in every condition?</p>
+    <p class="rv" style="--d:.15s">Now each person is measured in every condition, so each person has their own mean. The differences between persons can be computed and lifted out of the error first. What remains splits into what the conditions explain and the error. In the lecture's fear study this gives F(2, 6) = 9.60; the same twelve scores analysed as three separate groups give F = 4.24, which is not significant.</p>
+    <div class="big rv" style="--d:.2s"><b>Big idea:</b> people differ, and repeated measures <b>removes those person differences from the noise</b>, so the same effect is easier to detect.</div>
+    <ul class="reads rv" style="--d:.25s"><li><span>A</span>Why repeated measures, and counterbalancing</li><li><span>B</span>SS between persons, SS model and SS error; df (n − 1)(k − 1)</li><li><span>C</span>F, R² and when a causal reading is allowed</li></ul>
+    <div class="link rv" style="--d:.3s"><b>↩ Builds on 1 and 6:</b> the paired t-test from last year, grown up into ANOVA.</div>
+    <div class="go rv" style="--d:.35s"><a class="ex" href="https://sezsaracoglu-lab.github.io/stat2_theme8_lecturenotes/">Lecture 8</a></div>
+  </div>
+</section>
+
+<section class="sec" id="map">
+  <div class="eyebrow rv">The whole year on one map</div>
+  <h2 class="rv" style="--d:.05s">Row = your question. Column = your data. Cell = your test.</h2>
+  <p class="intro rv" style="--d:.1s">This is the map from your Theme 1 recap, with this year's stops filled in. Highlighted cells are the ones Statistics 2 teaches; tap one to jump to its stop.</p>
+  <div class="rv" style="--d:.15s;overflow-x:auto">
+  <table class="grid4">
+    <tr><th></th><th>Nominal (categories)</th><th>Ordinal (ranks)</th><th>Scale (interval / ratio)</th></tr>
+    <tr><td class="rw">One sample against a claim</td><td class="hit"><a href="#t2">z-test for a proportion</a> · <a href="#t3">χ² goodness of fit</a></td><td class="muted">–</td><td>z-test or t-test <span class="muted">(Theme 1)</span></td></tr>
+    <tr><td class="rw">Relationship between variables</td><td class="hit"><a href="#t3">χ² test of independence</a></td><td class="muted">Spearman's r</td><td class="hit"><a href="#t4">Correlation and regression</a> · <a href="#t5">multiple regression</a></td></tr>
+    <tr><td class="rw">Compare 2 groups, independent</td><td class="hit"><a href="#t2">two proportions</a> · <a href="#t3">χ²</a></td><td class="muted">Mann–Whitney U</td><td>Independent t-test <span class="muted">(Theme 1)</span></td></tr>
+    <tr><td class="rw">Compare 2 conditions, same people</td><td class="muted">McNemar</td><td class="muted">Wilcoxon</td><td>Paired t-test <span class="muted">(Theme 1)</span></td></tr>
+    <tr><td class="rw">Compare 3+ groups or conditions</td><td class="hit"><a href="#t3">χ² independence</a></td><td class="muted">Kruskal–Wallis / Friedman</td><td class="hit"><a href="#t6">One-way</a> · <a href="#t7">two-way</a> · <a href="#t8">repeated-measures ANOVA</a></td></tr>
+  </table></div>
+</section>
+
+<section class="sec" id="threads">
+  <div class="eyebrow rv">Three threads through every theme</div>
+  <h2 class="rv" style="--d:.05s">Every test is the same story told in different units</h2>
+  <p class="intro rv" style="--d:.1s">Spot these three in a question and you can usually reason your way to the answer. The dots show the themes where each one matters most.</p>
+  <div class="threads">
+    <article class="th rv"><div class="b"><h4>1 · Signal ÷ noise</h4><p>Every test statistic is a difference divided by how much difference chance would make: z, t = b ⁄ SE, χ² (surprise per expected count), F = between ⁄ within.</p><div class="dots"><i class="y">1</i><i class="y">2</i><i class="y">3</i><i>4</i><i class="y">5</i><i class="y">6</i><i class="y">7</i><i class="y">8</i></div></div></article>
+    <article class="th rv" style="--d:.1s"><div class="b"><h4>2 · Split the variance</h4><p>Total spread = the part your model explains + the part it does not. Regression (SSM, SSE), ANOVA (between, within), repeated measures (persons first). R² is the explained share.</p><div class="dots"><i>1</i><i>2</i><i>3</i><i class="y">4</i><i class="y">5</i><i class="y">6</i><i class="y">7</i><i class="y">8</i></div></div></article>
+    <article class="th rv" style="--d:.2s"><div class="b"><h4>3 · Significant is not the whole answer</h4><p>After "is it chance?" always ask "how big?" and "what may I conclude?": the margin of error, r² and R², which groups differ, and causation only from the design.</p><div class="dots"><i class="y">1</i><i class="y">2</i><i class="y">3</i><i class="y">4</i><i class="y">5</i><i class="y">6</i><i class="y">7</i><i class="y">8</i></div></div></article>
+  </div>
+</section>
+
+<section class="sentence rv">
+  <div class="eyebrow">The whole course in one sentence</div>
+  <p class="s">With the <b>toolkit</b> from last year (1), we test <b>counts of yes and no</b> (2) and <b>tables of categories</b> (3), then <b>relationships between scales</b> (4) and <b>models with several predictors</b> (5), then <b>differences between groups</b> (6), <b>with two factors</b> (7) and <b>within the same people</b> (8).</p>
+  <span class="hook">🪝 Toolkit, yes / no, cross-table, two scales, defend the line, 3+ groups, two factors, same people.</span>
+  <p class="tip"><b>Exam tip:</b> before any calculation, name the <b>row</b> (what is the question?) and the <b>column</b> (what kind of data?). The cell tells you the test; the six steps do the rest.</p>
+</section>
+
+<section class="sec" id="next">
+  <div class="eyebrow rv">Now start studying</div>
+  <h2 class="rv" style="--d:.05s">Where to go from here</h2>
+  <div class="next">
+    <a class="card rv" href="../study/"><span class="ic">🧭</span><b>Study hub</b><span>Every Statistics 2 theme with its lecture, 12-step study and homework.</span></a>
+    <a class="card rv" style="--d:.08s" href="https://sezsaracoglu-lab.github.io/STAT2_questionbank/"><span class="ic">🗂️</span><b>Question bank</b><span>Practice questions sorted per topic.</span></a>
+    <a class="card rv" style="--d:.16s" href="https://sezsaracoglu-lab.github.io/stat2mocexams/"><span class="ic">📝</span><b>Exam replica</b><span>A refined replica of the exam, under exam conditions.</span></a>
+    <a class="card rv" href="https://sezsaracoglu-lab.github.io/stat2_MocExams/"><span class="ic">🏁</span><b>Exam drill</b><span>A full exam drill across all themes.</span></a>
+    <a class="card rv" style="--d:.08s" href="https://sezsaracoglu-lab.github.io/stats-2_Moc2/"><span class="ic">🔁</span><b>Second exam drill</b><span>More exam-style practice across all themes.</span></a>
+    <a class="card rv" style="--d:.16s" href="https://sezsaracoglu-lab.github.io/stat2_SPSS_withdecimals/"><span class="ic">💻</span><b>SPSS drills</b><span>Run the same tests in SPSS and read the output.</span></a>
+  </div>
+  <div class="order rv"><b>A study rhythm that follows the story</b>
+    <ol><li>Read this page once, and keep the test map in mind.</li><li>For each theme: the lecture platform first, then the 12-step study.</li><li>Do the homework or practice questions for that theme, then the question bank.</li><li>When all eight are done: the exam replica and drills, plus the SPSS drills.</li></ol>
+  </div>
+</section>
+</main>
+<footer class="wrap">Diagrams are simplified illustrations; numbers come from the course lectures.</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){io.observe(e)});
+  // map stops
+  document.querySelectorAll('.map .stop').forEach(function(s){s.addEventListener('click',function(){location.hash=s.getAttribute('data-to')})});
+  // journey bar
+  var bar=document.getElementById('jbar'), links=[].slice.call(bar.querySelectorAll('a')), ids=links.map(function(a){return a.getAttribute('href').slice(1)});
+  var hero=document.querySelector('.map');
+  function upd(){
+    bar.classList.toggle('on', hero.getBoundingClientRect().bottom<0);
+    var cur=-1; ids.forEach(function(id,i){var el=document.getElementById(id); if(el && el.getBoundingClientRect().top<window.innerHeight*0.45) cur=i;});
+    links.forEach(function(a,i){a.classList.toggle('cur',i===cur);a.classList.toggle('done',i<cur);});
+    if(cur>=0){var a=links[cur], w=bar.querySelector('.wrap'); var l=a.offsetLeft-w.clientWidth/2+a.clientWidth/2; if(Math.abs(w.scrollLeft-l)>40) w.scrollLeft=l;}
+  }
+  window.addEventListener('scroll',upd,{passive:true}); upd();
+})();
+</script>
+</body>
+</html>
