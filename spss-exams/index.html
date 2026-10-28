@@ -115,10 +115,9 @@ const $ = (s) => document.querySelector(s);
 const SETS = DATA.sets, TOPICS = DATA.topics;
 const GROUPS = [
   {id:"rep", name:"Exam replicas", sub:"2025 · 2025 v2 · oefentoets"},
-  {id:"b1", name:"Block 1 · ANOVA", sub:"3 sets × 15"},
-  {id:"b2", name:"Block 2 · Categories & t-tests", sub:"3 sets × 15"},
-  {id:"b3", name:"Block 3 · Correlation & regression", sub:"3 sets × 15"},
-  {id:"x", name:"Session extras", sub:"15 gap skills from the sessions"},
+  {id:"b1", name:"Block 1 · ANOVA", sub:"3 sets × 21"},
+  {id:"b2", name:"Block 2 · Categories & t-tests", sub:"3 sets × 21"},
+  {id:"b3", name:"Block 3 · Correlation & regression", sub:"3 sets × 21"},
   {id:"more", name:"More SPSS practice", sub:"lessons and drills"}];
 const MORE = [
   ["https://sezsaracoglu-lab.github.io/stat2_SPSS_withdecimals/","SPSS 101 and exam drills","Learn each SPSS skill one screen at a time, the 2025 mirror, exam sets 1–10 and practice sets 1–5."],
@@ -127,7 +126,7 @@ const MORE = [
   ["https://sezsaracoglu-lab.github.io/SPSS_drill2_Categories_t-test/","Categories and t-test sets","Three sets of 15 Block 2 questions in exam wording."],
   ["more/session4-anova-practice.html","Session 4 ANOVA practice","Two full repeats of SPSS Session 4: recode, one-way ANOVA, what changes F, two-factor ANOVA."]];
 const QS = SETS.map(s => s.parts.flatMap((p, pi) => p.qs.map(q => Object.assign({p: pi}, q))));
-const key = (id) => "spsshy2_" + id;
+const key = (id) => "spsshy3_" + id;
 function load(id){ try { return JSON.parse(localStorage.getItem(key(id))) || {ans:{}}; } catch(e){ return {ans:{}}; } }
 function save(id, st){ try { localStorage.setItem(key(id), JSON.stringify(st)); } catch(e){} }
 function setOf(id){ return SETS.find(s=>s.id===id) || SETS.find(s=>s.group===id) || SETS[0]; }
