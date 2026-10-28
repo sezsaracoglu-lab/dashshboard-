@@ -126,7 +126,7 @@ const MORE = [
   ["https://sezsaracoglu-lab.github.io/SPSS_drill2_Categories_t-test/","Categories and t-test sets","Three sets of 15 Block 2 questions in exam wording."],
   ["more/session4-anova-practice.html","Session 4 ANOVA practice","Two full repeats of SPSS Session 4: recode, one-way ANOVA, what changes F, two-factor ANOVA."]];
 const QS = SETS.map(s => s.parts.flatMap((p, pi) => p.qs.map(q => Object.assign({p: pi}, q))));
-const key = (id) => "spsshy_" + id;
+const key = (id) => "spsshy2_" + id;
 function load(id){ try { return JSON.parse(localStorage.getItem(key(id))) || {ans:{}}; } catch(e){ return {ans:{}}; } }
 function save(id, st){ try { localStorage.setItem(key(id), JSON.stringify(st)); } catch(e){} }
 function setOf(id){ return SETS.find(s=>s.id===id) || SETS.find(s=>s.group===id) || SETS[0]; }
@@ -192,6 +192,7 @@ function render(i){
   if (a) {
     const cls = last[0]==="ok" ? "" : last[0]==="warn" ? "warn" : "bad";
     fb = `<div class="fb ${cls}"><h3>${last[0]==="ok"?"Correct!":last[0]==="warn"?"Almost.":"Not quite."}</h3>${last[1]!=="Correct!"?`<p>${last[1]}</p>`:""}
+      ${q.lk?`<p class="tp">Likelihood in 2026: <b>${q.lk}%</b> · ${q.lk>=75?"this type came up in both past exams":q.lk>=50?"this type came up in one past exam":"this type came up only in the professor's practice questions"}</p>`:""}
       ${!solved && !shown ? `<div class="btns"><button class="btn small" id="hint">Hint</button><button class="btn small" id="show">Show answer + steps</button></div>` : ""}
       ${(a.hint && !solved && !shown) ? `<p class="spot"><b>How to recognise it:</b> ${q.spot}</p>` : ""}
       ${(solved || shown) ? `<p class="spot"><b>How to recognise it:</b> ${q.spot}</p>${solution(q)}` : ""}</div>`;
