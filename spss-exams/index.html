@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>High-yield SPSS Exams · Statistics 2</title>
+<meta name="description" content="High-yield SPSS exam practice for Statistics 2: two exam replicas and three practice sets per exam block, with datasets to download, instant checking, hints and step-by-step SPSS solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--paper:#fff;--ink:#1d2433;--muted:#5d6472;--line:#e4e0d6;--sage:#4f7a5a;--sagep:#e8f1ea;--clay:#a8553d;--clayp:#f8e9e3;--navy:#2b3a5c;--navyp:#e7ebf3;--gold:#b8923a;--goldp:#fbf3df;
+--serif:'Fraunces',Georgia,serif;--sans:'Instrument Sans','Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 max(16px,4vw)}
+header.top{border-bottom:1px solid var(--line);background:rgba(247,245,240,.94);position:sticky;top:0;z-index:5;backdrop-filter:blur(6px)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;height:58px}
+.mark{font-family:var(--serif);font-weight:600;text-decoration:none;font-size:1.1rem}
+.menu{display:flex;gap:16px;font-size:.9rem}.menu a{text-decoration:none;color:var(--muted)}
+.head{padding:36px 0 18px}
+.eyebrow{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.08;margin:8px 0 10px}
+.head p{color:var(--muted);max-width:40em}
+.tabs{display:flex;flex-direction:column;gap:12px;margin:18px 0 22px}
+.tab{font:inherit;font-size:.92rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;color:var(--ink)}
+.tab[aria-selected=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.tab small{display:block;font-size:.74rem;font-weight:500;opacity:.75;margin-top:1px}
+.grow,.srow{display:flex;gap:8px;flex-wrap:wrap}
+.grow .tab{padding:8px 14px;text-align:left}
+.srow{padding-top:12px;border-top:1px solid var(--line)}
+.srow .tab{border-radius:12px;text-align:left;min-width:150px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}
+.intro h2{font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.15;margin-bottom:6px}
+.intro p{color:var(--muted)}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.pill{font-size:.85rem;padding:5px 12px;border-radius:999px;background:var(--navyp);color:var(--navy);font-weight:600}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{font:inherit;font-weight:600;font-size:.95rem;padding:10px 18px;border-radius:999px;border:1.5px solid var(--ink);background:var(--paper);cursor:pointer;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn.solid{background:var(--ink);color:#fff}
+.btn.small{font-size:.85rem;padding:6px 13px}
+.btn:disabled{opacity:.35;cursor:default}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0 4px}
+.bar i{display:block;height:100%;background:var(--sage);border-radius:99px;transition:width .3s}
+.qhead{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:.88rem;color:var(--muted);margin-top:4px}
+.qtext{font-size:1.12rem;margin:16px 0 14px;line-height:1.55}
+.files{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:16px}
+.file{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--sagep);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.file small{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);font-weight:600}
+.file b{font-size:.95rem;word-break:break-all}
+.file a{flex:none;font-weight:600;font-size:.85rem;text-decoration:none;background:var(--sage);color:#fff;border-radius:999px;padding:6px 12px}
+.ctx{font-size:.9rem;color:var(--muted);background:var(--goldp);border-radius:12px;padding:10px 14px;margin-top:12px}
+.ctx b{color:var(--ink)}
+.ans{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.ans input{font:500 1.05rem var(--sans);width:11rem;padding:10px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink)}
+.ans input:focus{outline:none;border-color:var(--navy)}
+.recon{font-size:.8rem;color:var(--gold);font-weight:600;margin-left:6px}
+.fb{margin-top:16px;border-radius:14px;padding:16px 18px;border-left:6px solid var(--sage);background:var(--sagep)}
+.fb.bad{border-left-color:var(--clay);background:var(--clayp)}
+.fb.warn{border-left-color:var(--gold);background:var(--goldp)}
+.fb h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin-bottom:6px}
+.fb p{margin-top:6px}
+.fb .spot{font-size:.95rem;color:var(--navy)}
+.fb ol{margin:6px 0 0 1.2em;font-size:.95rem}.fb li{margin:3px 0}
+.fb h4{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+.fb .big{font-family:var(--serif);font-size:1.7rem;color:var(--sage);line-height:1.1}
+.fb .tp{font-size:.88rem;margin-top:10px;color:var(--muted)}
+.fb code{font-size:.88rem;background:#fff;padding:1px 5px;border-radius:5px}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}
+.dots{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.dot{width:30px;height:30px;border-radius:8px;border:1.5px solid var(--line);background:var(--paper);font:600 .75rem var(--sans);color:var(--muted);cursor:pointer}
+.dot.ok{background:var(--sage);border-color:var(--sage);color:#fff}.dot.no{background:var(--clay);border-color:var(--clay);color:#fff}
+.dot.cur{outline:2.5px solid var(--gold);outline-offset:1px}
+.res h2{font-family:var(--serif);font-weight:500;font-size:1.7rem}
+.score{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin:14px 0 6px}
+.ring{width:130px;height:130px;flex:none}
+.score .big{font-family:var(--serif);font-size:2.6rem;line-height:1}
+.score p{color:var(--muted)}
+.tt{width:100%;border-collapse:collapse;margin-top:10px;font-size:.92rem}
+.tt th{text-align:left;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:6px 4px;border-bottom:1px solid var(--line)}
+.tt td{padding:8px 4px;border-bottom:1px solid var(--line);vertical-align:middle}
+.mini{height:8px;background:var(--line);border-radius:99px;overflow:hidden;width:100%;min-width:60px}
+.mini i{display:block;height:100%}
+.study{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.st{border:1px solid var(--line);border-left:6px solid var(--clay);border-radius:12px;padding:12px 14px;background:var(--paper)}
+.st h4{font-size:1rem}.st .w{font-size:.85rem;color:var(--muted)}
+.qlinks{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.qlinks button{font:600 .75rem var(--sans);border:1px solid var(--clay);color:var(--clay);background:#fff;border-radius:6px;padding:2px 7px;cursor:pointer}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.more a{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px;text-decoration:none;display:flex;flex-direction:column;gap:6px}
+.more a:hover{border-color:var(--navy)}
+.more b{font-family:var(--serif);font-weight:600;font-size:1.15rem}
+.more span{font-size:.9rem;color:var(--muted)}
+.more em{font-style:normal;font-weight:600;color:var(--navy);font-size:.88rem;margin-top:auto}
+.note{font-size:.85rem;color:var(--muted);margin-top:14px}
+footer{color:var(--muted);font-size:.85rem;padding:30px 0 40px}
+@media (max-width:560px){.card{padding:16px}.qtext{font-size:1.04rem}.ans input{width:100%}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="mark" href="../">Sezen Saracoglu</a>
+<nav class="menu"><a href="../study/">Study hub</a><a href="../stat2-course/">Statistics 2</a><a href="https://sezsaracoglu-lab.github.io/stat2_SPSS_withdecimals/">SPSS 101</a></nav></div></header>
+<main class="wrap">
+  <div class="head"><div class="eyebrow">Statistics 2 · SPSS exam</div><h1>High-yield SPSS exams</h1>
+  <p>Start with the two exam replicas, then train each exam block on its own. Download the dataset, answer in SPSS, type your number and press Check. After your first try you can open a hint (how to recognise the question) or the full step-by-step solution. At the end you get your score and the topics to practise again.</p></div>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <section id="view"></section>
+</main>
+<footer class="wrap">Your answers are saved in this browser, so you can stop and continue later. Datasets are practice data made to match the exam stories.</footer>
+
+<script src="sets.js"></script>
+<script>
+const $ = (s) => document.querySelector(s);
+const SETS = DATA.sets, TOPICS = DATA.topics;
+const GROUPS = [
+  {id:"rep", name:"Exam replicas", sub:"2025 exam · oefentoets"},
+  {id:"b1", name:"Block 1 · ANOVA", sub:"3 sets × 15"},
+  {id:"b2", name:"Block 2 · Categories & t-tests", sub:"3 sets × 15"},
+  {id:"b3", name:"Block 3 · Correlation & regression", sub:"3 sets × 15"},
+  {id:"more", name:"More SPSS practice", sub:"lessons and drills"}];
+const MORE = [
+  ["https://sezsaracoglu-lab.github.io/stat2_SPSS_withdecimals/","SPSS 101 and exam drills","Learn each SPSS skill one screen at a time, the 2025 mirror, exam sets 1–10 and practice sets 1–5."],
+  ["https://sezsaracoglu-lab.github.io/SPSS_Anova_2/","ANOVA exam sets","Three sets of 15 ANOVA questions in exam wording."],
+  ["https://sezsaracoglu-lab.github.io/SPSS_drill2_Categories_t-test/","Categories and t-test sets","Three sets of 15 Block 2 questions in exam wording."],
+  ["more/session4-anova-practice.html","Session 4 ANOVA practice","Two full repeats of SPSS Session 4: recode, one-way ANOVA, what changes F, two-factor ANOVA."]];
+const QS = SETS.map(s => s.parts.flatMap((p, pi) => p.qs.map(q => Object.assign({p: pi}, q))));
+const key = (id) => "spsshy_" + id;
+function load(id){ try { return JSON.parse(localStorage.getItem(key(id))) || {ans:{}}; } catch(e){ return {ans:{}}; } }
+function save(id, st){ try { localStorage.setItem(key(id), JSON.stringify(st)); } catch(e){} }
+function setOf(id){ return SETS.find(s=>s.id===id) || SETS.find(s=>s.group===id) || SETS[0]; }
+function qsOf(s){ return QS[SETS.indexOf(s)]; }
+
+function parseNum(v){ v=String(v).trim().replace(/\s/g,"").replace(",","."); if(v.startsWith("<")) return 0; if(v.startsWith(".")) v="0"+v; if(v.startsWith("-.")) v="-0"+v.slice(1); const n=parseFloat(v); return isNaN(n)?null:n; }
+function check(q, raw){
+  const v = parseNum(raw); if (v===null) return ["warn","Type a number, for example .043 or 4,213."];
+  const tol = q.dec ? 1.01*Math.pow(10,-q.dec) : 0.5, near = x => Math.abs(x-q.ans) <= tol;
+  if (q.isp && q.ans < 0.0005 && Math.abs(v) < 0.0011) return ["ok","Correct. SPSS shows .000, which you report as p < .001."];
+  if (near(v)) return ["ok","Correct!"];
+  if (q.sf && near(-v)) return ["ok","Correct size. The sign only depends on the order of the groups or the direction of the effect."];
+  if (near(v/100)) return ["warn","That looks like a percentage. The question asks for a proportion: divide by 100."];
+  if (q.dec && Math.abs(v-q.ans) <= 3*tol) return ["warn",`Very close. Check your rounding to ${q.dec} decimals.`];
+  return ["bad","Not yet. Open the hint, check which table and row you used, and try again."];
+}
+
+function tabs(active){
+  const g = active==="more" ? "more" : setOf(active).group;
+  let h = `<div class="grow">` + GROUPS.map(x=>`<button class="tab grp" role="tab" aria-selected="${x.id===g}" data-g="${x.id}">${x.name}<small>${x.sub}</small></button>`).join("") + `</div>`;
+  if (g!=="more") h += `<div class="srow">` + SETS.filter(s=>s.group===g).map(s=>{ const st=load(s.id), n=qsOf(s).length, d=Object.keys(st.ans).length, r=Object.values(st.ans).filter(a=>a.first==="ok").length;
+      return `<button class="tab" role="tab" aria-selected="${s.id===active}" data-id="${s.id}">${s.short}<small>${d?(d===n?r+"/"+n+" first-try correct":d+"/"+n+" answered"):n+" questions"}</small></button>`; }).join("") + `</div>`;
+  $("#tabs").innerHTML = h;
+  document.querySelectorAll(".tab[data-id]").forEach(b=>b.onclick=()=>{location.hash=b.dataset.id});
+  document.querySelectorAll(".tab[data-g]").forEach(b=>b.onclick=()=>{location.hash=b.dataset.g});
+}
+function filesHTML(s){
+  const seen = new Set();
+  return `<div class="files">` + s.parts.filter(p=>!seen.has(p.file) && seen.add(p.file)).map(p=>`<div class="file"><div><small>${p.label}</small><b>${p.file}</b></div><a href="data/${p.file}" download>Download</a></div>`).join("") + `</div>`;
+}
+function intro(s){
+  const st = load(s.id), qs = qsOf(s), n = qs.length, done = Object.keys(st.ans).length, right = Object.values(st.ans).filter(a=>a.first==="ok").length;
+  $("#view").innerHTML = `<div class="card intro"><h2>${s.title}</h2><p>${s.blurb}</p>
+    <div class="stats"><span class="pill">${n} questions</span><span class="pill">${done} answered</span>${done?`<span class="pill">${right} correct first try</span>`:""}</div>
+    <div class="bar"><i style="width:${done/n*100}%"></i></div>
+    ${filesHTML(s)}
+    ${s.parts.map(p=>`<p class="ctx"><b>${p.label}.</b> ${p.story}</p>`).join("")}
+    <div class="btns"><button class="btn solid" id="go">${done&&done<n?"Continue":done===n?"See my results":"Start"}</button>
+    ${done?`<button class="btn" id="reset">Start again</button>`:""}</div></div>`;
+  $("#go").onclick=()=>{ if(done===n) results(s); else quiz(s,null); };
+  if(done) $("#reset").onclick=()=>{ save(s.id,{ans:{}}); tabs(s.id); intro(s); };
+}
+let cur = null;
+function quiz(s, only){
+  const st = load(s.id), qs = qsOf(s), order = only || qs.map((_,i)=>i);
+  const ans = only ? {} : st.ans;
+  const i = only ? 0 : Math.max(0, order.findIndex(k=>!ans[k]));
+  cur = {s, qs, order, ans, retry: !!only, open: {}};
+  render(i);
+}
+function solution(q){
+  return `<div class="big">${q.show}</div><h4>Step by step in SPSS</h4><ol>${q.steps.map(x=>`<li>${x}</li>`).join("")}</ol>
+    <h4>Where to read the answer</h4><p>${q.read}</p>${q.why?`<h4>Why / check</h4><p>${q.why}</p>`:""}
+    <p class="tp">Topic: <b>${TOPICS[q.t]}</b></p>`;
+}
+function render(i){
+  const {s, qs, order, ans, retry} = cur; cur.i = i;
+  const k = order[i], q = qs[k], a = ans[k], part = s.parts[q.p];
+  const okCount = order.filter(x=>ans[x] && ans[x].first==="ok").length, nDone = order.filter(x=>ans[x]).length;
+  const last = a ? a.last : null, solved = a && a.solved, shown = a && a.shown;
+  let fb = "";
+  if (!a && cur.tmp) { fb = `<div class="fb warn"><p>${cur.tmp[1]}</p></div>`; } cur.tmp = null;
+  if (a) {
+    const cls = last[0]==="ok" ? "" : last[0]==="warn" ? "warn" : "bad";
+    fb = `<div class="fb ${cls}"><h3>${last[0]==="ok"?"Correct!":last[0]==="warn"?"Almost.":"Not quite."}</h3>${last[1]!=="Correct!"?`<p>${last[1]}</p>`:""}
+      ${!solved && !shown ? `<div class="btns"><button class="btn small" id="hint">Hint</button><button class="btn small" id="show">Show answer + steps</button></div>` : ""}
+      ${(a.hint && !solved && !shown) ? `<p class="spot"><b>How to recognise it:</b> ${q.spot}</p>` : ""}
+      ${(solved || shown) ? `<p class="spot"><b>How to recognise it:</b> ${q.spot}</p>${solution(q)}` : ""}</div>`;
+  }
+  $("#view").innerHTML = `<div class="card">
+    <div class="qhead"><span>${retry?"Retry · ":""}Question ${i+1} of ${order.length} · ${part.label}</span><span>${okCount} correct first try · ${nDone} answered</span></div>
+    <div class="bar"><i style="width:${nDone/order.length*100}%"></i></div>
+    <div class="qtext">${q.q}${q.recon?`<span class="recon" title="This question was cut off in the original file; the ending is the most likely one.">✎ reconstructed ending</span>`:""}</div>
+    <div class="ans"><input id="inp" inputmode="decimal" autocomplete="off" aria-label="Your answer" value="${a&&a.v!==undefined?a.v:""}" ${solved?"disabled":""}>
+      <button class="btn solid" id="chk" ${solved?"disabled":""}>Check</button>
+      <a class="btn small" href="data/${part.file}" download>${part.file}</a></div>
+    ${fb}
+    <div class="nav"><button class="btn" id="prev" ${i===0?"disabled":""}>← Previous</button>
+      <span style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="fin">Finish and see results</button>
+      <button class="btn solid" id="next">${i===order.length-1?"Results":"Next →"}</button></span></div>
+    <div class="dots">${order.map((x,j)=>{ const aa=ans[x]; const c=!aa?"":(aa.first==="ok"?"ok":"no");
+      return `<button class="dot ${c} ${j===i?"cur":""}" data-j="${j}" aria-label="Question ${j+1}">${j+1}</button>`; }).join("")}</div></div>`;
+  const inp = $("#inp");
+  const run = () => { const res = check(q, inp.value); if (parseNum(inp.value)===null) { cur.tmp = res; render(i); return; }
+    const prev = ans[k]; const rec = prev || {first: res[0]==="ok" ? "ok" : "no"};
+    rec.v = inp.value; rec.last = res; if (res[0]==="ok") rec.solved = true; ans[k] = rec;
+    if (!retry) save(s.id, {ans}); render(i); };
+  if (!solved) { $("#chk").onclick = run; inp.onkeydown = e => { if (e.key==="Enter") run(); }; if (!a) inp.focus({preventScroll:true}); }
+  if ($("#hint")) $("#hint").onclick = () => { ans[k].hint = true; if(!retry) save(s.id,{ans}); render(i); };
+  if ($("#show")) $("#show").onclick = () => { ans[k].shown = true; if(!retry) save(s.id,{ans}); render(i); };
+  $("#prev").onclick = () => render(i-1);
+  $("#next").onclick = () => i===order.length-1 ? results(s) : render(i+1);
+  $("#fin").onclick = () => results(s);
+  document.querySelectorAll(".dot").forEach(d=>d.onclick=()=>render(+d.dataset.j));
+  window.scrollTo({top: document.querySelector("#tabs").offsetTop - 70});
+}
+function results(s){
+  const retry = cur && cur.s===s && cur.retry, qs = qsOf(s);
+  const order = retry ? cur.order : qs.map((_,i)=>i), ans = retry ? cur.ans : load(s.id).ans;
+  const done = order.filter(k=>ans[k]), right = done.filter(k=>ans[k].first==="ok");
+  const pct = done.length ? Math.round(right.length/done.length*100) : 0, per = {};
+  done.forEach(k=>{ const t=qs[k].t; per[t]=per[t]||{n:0,ok:0,miss:[]}; per[t].n++; if(ans[k].first==="ok") per[t].ok++; else per[t].miss.push(k); });
+  const weak = Object.entries(per).filter(([t,v])=>v.miss.length).sort((a,b)=>b[1].miss.length-a[1].miss.length);
+  const msg = pct>=80?"Excellent: you are exam-ready on these skills.":pct>=65?"Good: a pass with room to spare. Polish the skills below.":pct>=55?"Close to a pass. Practise the skills below first.":"Not there yet, and that is fine: this list tells you exactly where to start.";
+  const C = 2*Math.PI*52, col = pct>=65?"#4f7a5a":pct>=55?"#b8923a":"#a8553d", wrongAll = done.filter(k=>ans[k].first!=="ok");
+  $("#view").innerHTML = `<div class="card res"><div class="eyebrow">${retry?"Retry results":"Your results"}</div><h2>${s.title}</h2>
+    <div class="score"><svg class="ring" viewBox="0 0 130 130"><circle cx="65" cy="65" r="52" fill="none" stroke="#e4e0d6" stroke-width="14"/>
+      <circle cx="65" cy="65" r="52" fill="none" stroke="${col}" stroke-width="14" stroke-linecap="round" stroke-dasharray="${C*pct/100} ${C}" transform="rotate(-90 65 65)"/>
+      <text x="65" y="74" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="30" fill="#1d2433">${pct}%</text></svg>
+      <div><div class="big">${right.length} / ${done.length}</div><p>correct on the first try${done.length<order.length?` (${order.length-done.length} not answered yet)`:""}</p><p style="margin-top:6px;color:var(--ink)">${msg}</p></div></div>
+    ${weak.length?`<h3 style="font-family:var(--serif);font-weight:600;margin-top:18px">Practise these skills again</h3>
+    <div class="study">${weak.map(([t,v])=>`<div class="st"><h4>${TOPICS[t]}</h4><div class="w">${v.miss.length} not right first time, of ${v.n}</div>
+      <div class="qlinks">${v.miss.map(k=>`<button data-k="${k}">Q${k+1}</button>`).join("")}</div></div>`).join("")}</div>`
+    :`<p style="margin-top:16px">Everything right on the first try. Nothing to practise again here.</p>`}
+    <h3 style="font-family:var(--serif);font-weight:600;margin-top:22px">Score per skill</h3>
+    <table class="tt"><tr><th>Skill</th><th>Correct</th><th style="width:30%"></th></tr>
+    ${Object.entries(per).sort((a,b)=>a[1].ok/a[1].n-b[1].ok/b[1].n).map(([t,v])=>{ const p=v.ok/v.n*100; return `<tr><td>${TOPICS[t]}</td><td>${v.ok}/${v.n}</td><td><div class="mini"><i style="width:${p}%;background:${p>=65?"#4f7a5a":p>=50?"#b8923a":"#a8553d"}"></i></div></td></tr>`;}).join("")}</table>
+    <div class="btns">${wrongAll.length?`<button class="btn solid" id="retry">Retry my ${wrongAll.length} missed questions</button>`:""}
+      <button class="btn" id="review">Review all questions</button><button class="btn" id="again">Start the whole set again</button></div></div>`;
+  document.querySelectorAll(".qlinks button").forEach(b=>b.onclick=()=>{ const k=+b.dataset.k; cur={s,qs,order,ans,retry}; render(order.indexOf(k)); });
+  if (wrongAll.length) $("#retry").onclick=()=>quiz(s, wrongAll);
+  $("#review").onclick=()=>{ cur={s,qs,order,ans,retry}; render(0); };
+  $("#again").onclick=()=>{ save(s.id,{ans:{}}); tabs(s.id); quiz(s,null); };
+}
+function more(){
+  $("#view").innerHTML = `<div class="card intro"><h2>More SPSS practice</h2><p>The other SPSS pages built for this exam. Each one has its datasets built in, exam-style wording and step-by-step solutions.</p></div>
+    <div class="more" style="margin-top:14px">${MORE.map(([u,t,d])=>`<a href="${u}"${u.startsWith("http")?' target="_blank" rel="noopener"':""}><b>${t}</b><span>${d}</span><em>Open →</em></a>`).join("")}</div>`;
+}
+function route(){ const id=(location.hash||"").slice(1); if (id==="more"){ tabs("more"); more(); return; } const s=setOf(id); tabs(s.id); cur=null; intro(s); }
+window.addEventListener("hashchange", route); route();
+</script>
+</body>
+</html>
