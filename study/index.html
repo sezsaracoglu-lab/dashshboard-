@@ -86,6 +86,10 @@ button.course[aria-pressed=true]{background:var(--navy);color:#fff}button.course
 .soon{display:inline-block;align-self:flex-start;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);background:var(--goldp);border-radius:999px;padding:3px 9px}
 /* tools */
 .tools{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:18px;align-items:start}.tools>*{min-width:0}
+.vwrap{display:flex;flex-direction:column;gap:12px;min-width:0}
+.vtabs{display:inline-flex;align-self:flex-start;gap:4px;padding:4px;background:var(--paper);border:1px solid var(--line);border-radius:999px}
+.vtab{border:0;background:transparent;font:inherit;font-size:.9rem;font-weight:600;color:var(--muted);padding:7px 16px;border-radius:999px;cursor:pointer}
+.vtab[aria-selected=true]{background:var(--navy);color:#fff}
 .video{position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#e9e4d8;border:1px solid var(--line)}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .toolcol{display:flex;flex-direction:column;gap:12px}
@@ -183,9 +187,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div></section>
 
 <section class="block" id="tools"><div class="wrap">
-<div class="shead"><div><div class="eyebrow">Tools and videos</div><h2>Watch, check, calculate</h2><p>My video series explains each theme in plain words, with drawings. Next to it, the tools I use every week.</p></div></div>
+<div class="shead"><div><div class="eyebrow">Tools and videos</div><h2>Watch, check, calculate</h2><p>My video series explain each theme in plain words, one for Cognitive Psychology and one for Statistics 2, with drawings. Next to it, the tools I use every week.</p></div></div>
 <div class="tools">
-<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLaAyrrTos0mI" title="Cognitive Psychology: Inside the Thinking Mind (video playlist)" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="vwrap"><div class="vtabs" role="tablist" aria-label="Video series"><button type="button" role="tab" class="vtab" data-pl="PLaAyrrTos0mI" data-t="Cognitive Psychology: Inside the Thinking Mind" aria-selected="true">Cognitive Psychology</button><button type="button" role="tab" class="vtab" data-pl="PLYIWFBp8jVm4" data-t="Statistics 2: cinematic and explainer videos per theme" aria-selected="false">Statistics 2</button></div>
+<div class="video"><iframe id="vframe" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLaAyrrTos0mI" title="Cognitive Psychology: Inside the Thinking Mind (video playlist)" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
 <div class="toolcol">
 <a class="tool feat" href="https://lindemann.shinyapps.io/essb_grading/" target="_blank" rel="noopener"><span class="ic" style="background:rgba(255,255,255,.12)"><svg viewBox="0 0 24 24" fill="none" stroke="#e7c97f" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8 7h8M8 11h2M12 11h2M8 15h2M12 15h2M16 15v3M8 18h6"/></svg></span><span><b>Grade calculator ↗</b><span>Work out your final course grade from your scores (ESSB grading tool).</span></span></a>
 <a class="tool" href="#map"><span class="ic" style="background:var(--sagep)"><svg viewBox="0 0 24 24" fill="none" stroke="#4f7a5a" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="8" height="7" rx="1.5"/><rect x="13" y="4" width="8" height="7" rx="1.5"/><rect x="3" y="13" width="8" height="7" rx="1.5"/><rect x="13" y="13" width="8" height="7" rx="1.5"/></svg></span><span><b>Course map</b><span>Year, block, course: everything for a course in one click.</span></span></a>
@@ -202,11 +207,11 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 const COURSES={
   cognitive:{name:'Cognitive Psychology',year:'Year 2',block:'Block 1 · Frames of Action',img:'../cognitive-course/img/t5.jpg',alt:'Sketch of a head with a cat imagined inside it',
     q:'How does a mind turn the world into thought?',p:'Eight themes from attention to AI, each with visual lecture notes, videos and in-depth answers, plus practice papers and one-page memory sheets.',
-    quick:[['Course story','../cognitive-course/',1],['Practice papers','../cognitive-exams/'],['Memory sheets','../cognitive-memory/'],['In-depth','../cognitive-indepth/'],['Lectures','../cognitive-lectures/']],
+    quick:[['Course story','../cognitive-course/',1],['Practice papers','../cognitive-exams/'],['Memory sheets','../cognitive-memory/'],['In-depth','../cognitive-indepth/'],['Lectures','../cognitive-lectures/'],['Videos ↗','https://www.youtube.com/playlist?list=PLaAyrrTos0mI']],
     readme:['Cognitive Psychology']},
   stats2:{name:'Methods and Statistics 2',year:'Year 2',block:'Block 1 · Frames of Action',img:'../stat2-course/img/cover.jpg',alt:'Scatterplot with a regression line',
     q:'Could it be chance, and how much does it matter?',p:'Eight stops on one map of tests, from proportions to repeated-measures ANOVA, with SPSS practice on realistic datasets.',
-    quick:[['Course story','../stat2-course/',1],['Exam prep','../stat2-exam2026/'],['Exam prep per theme','../stat2-exam2026/themes.html'],['SPSS practice','../spss-exams/'],['Last-minute SPSS check','../spss-lastminute/']],
+    quick:[['Course story','../stat2-course/',1],['Exam prep','../stat2-exam2026/'],['Exam prep per theme','../stat2-exam2026/themes.html'],['SPSS practice','../spss-exams/'],['Last-minute SPSS check','../spss-lastminute/'],['Videos ↗','https://www.youtube.com/playlist?list=PLYIWFBp8jVm4']],
     readme:['Statistics 2','SPSS 2']}
 };
 const README_URL='https://raw.githubusercontent.com/sezsaracoglu-lab/psychology_year_2/main/README.md';
@@ -229,7 +234,7 @@ async function openCourse(id,scroll){
   panel.innerHTML=`<div class="phead"><div class="pic"><img src="${c.img}" alt="${esc(c.alt)}"></div><div class="txt">
     <div class="crumb"><a href="#map">Study hub</a> › ${c.year} › ${c.block} › <b>${esc(c.name)}</b></div>
     <h2>${esc(c.name)}</h2><p><b style="color:var(--ink);font-weight:600">${esc(c.q)}</b> ${esc(c.p)}</p>
-    <div class="quick">${c.quick.map(([l,u,m])=>`<a class="${m?'main':''}" href="${u}">${esc(l)}</a>`).join('')}</div></div></div>
+    <div class="quick">${c.quick.map(([l,u,m])=>`<a class="${m?'main':''}" href="${u}"${/^https?:/.test(u)?' target="_blank" rel="noopener"':''}>${esc(l)}</a>`).join('')}</div></div></div>
     <div class="pbody" id="pbody"><p class="note">Loading all study links…</p></div>`;
   if(scroll)panel.scrollIntoView({behavior:'smooth',block:'start'});
   const L=await lib();const body=document.getElementById('pbody');
@@ -250,6 +255,7 @@ document.querySelectorAll('button.course').forEach(b=>b.onclick=()=>{const id=b.
   history.replaceState(null,'','#'+id);openCourse(id,true)});
 function route(){const h=location.hash.slice(1);
   if(COURSES[h])openCourse(h,true);else if(h==='year3'||h==='year2'){selectYear(h==='year3'?'y3':'y2');closeCourse(false);document.getElementById('map').scrollIntoView({behavior:'smooth'})}}
+document.querySelectorAll('.vtab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.vtab').forEach(x=>x.setAttribute('aria-selected',String(x===t)));const f=document.getElementById('vframe');f.src='https://www.youtube-nocookie.com/embed/videoseries?list='+t.dataset.pl;f.title=t.dataset.t+' (video playlist)'});
 window.addEventListener('hashchange',route);route();lib();
 </script>
 <script src="../assets/sitenav.js" defer></script>

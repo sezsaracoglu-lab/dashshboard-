@@ -78,6 +78,10 @@ h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4vw,2.5rem);l
 .video{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:start}
 .frame{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;max-width:100%}
 .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:14px}.vcta{margin-top:0}
+.vtabs{display:inline-flex;gap:4px;padding:4px;background:var(--paper);border:1px solid var(--line);border-radius:999px}
+.vtab{border:0;background:transparent;font:inherit;font-size:.9rem;font-weight:600;color:var(--muted);padding:7px 16px;border-radius:999px;cursor:pointer}
+.vtab[aria-selected=true]{background:var(--navy);color:#fff}
 .vlist{display:flex;flex-direction:column;gap:6px}
 .vrow{display:grid;grid-template-columns:70px minmax(0,1fr);gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.92rem}
 .vrow b{font-weight:600;color:var(--sage);font-variant-numeric:tabular-nums}
@@ -165,10 +169,11 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;border-top:1p
 </section>
 
 <section class="block" id="videos">
-  <div class="shead"><div><div class="eyebrow">YouTube</div><h2>Cognitive Psychology: Inside the Thinking Mind</h2><p>A video series that explains the big ideas of cognitive psychology in plain language: attention, memory, categories, imagery, judgement, problem solving and AI. Each video starts from the logic, then the evidence, then a clear conclusion.</p></div>
-  <a class="btn" id="ytbtn" href="https://www.youtube.com/playlist?list=PLaAyrrTos0mI" target="_blank" rel="noopener">Open the playlist ↗</a></div>
+  <div class="shead"><div><div class="eyebrow">YouTube</div><h2 id="vh">Cognitive Psychology: Inside the Thinking Mind</h2><p id="vp">A video series that explains the big ideas of cognitive psychology in plain language: attention, memory, categories, imagery, judgement, problem solving and AI. Each video starts from the logic, then the evidence, then a clear conclusion.</p>
+  <div class="vbar"><div class="vtabs" role="tablist" aria-label="Video series"><button type="button" role="tab" class="vtab" data-pl="cog" aria-selected="true">Cognitive Psychology</button><button type="button" role="tab" class="vtab" data-pl="stat" aria-selected="false">Statistics 2</button></div>
+  <div class="cta vcta"><a class="btn" id="ytbtn" href="https://www.youtube.com/playlist?list=PLaAyrrTos0mI" target="_blank" rel="noopener">Open the playlist ↗</a></div></div></div></div>
   <div class="video">
-    <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLaAyrrTos0mI" title="Cognitive Psychology: Inside the Thinking Mind playlist" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="frame"><iframe id="vframe" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLaAyrrTos0mI" title="Cognitive Psychology: Inside the Thinking Mind playlist" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <div class="vlist" id="vlist"></div>
   </div>
 </section>
@@ -227,7 +232,19 @@ const VIDEOS = [
   ["T7A","You Know the Answer… So Why Can’t You Solve It?"],["T7C","Can Your Brain’s Brakes Make You More Creative?"],
   ["T8A","Using Large Language Models in Psychology"],["T8B","Does AI Help or Hurt Critical Thinking?"]];
 // ---------------------------
+const STAT_VIDEOS = [["Theme 1","Foundations, design and ethics"],["Theme 2","Inference for proportions"],["Theme 3","Chi-square tests"],["Theme 4","Correlation and regression"],["Theme 5","Multiple regression"],["Theme 6","One-way ANOVA"],["Theme 7","Two-way ANOVA"],["Theme 8","Repeated-measures ANOVA"]];
+const PLAYLISTS = {
+  cog:{id:"PLaAyrrTos0mI",h:"Cognitive Psychology: Inside the Thinking Mind",p:"A video series that explains the big ideas of cognitive psychology in plain language: attention, memory, categories, imagery, judgement, problem solving and AI. Each video starts from the logic, then the evidence, then a clear conclusion.",rows:VIDEOS},
+  stat:{id:"PLYIWFBp8jVm4",h:"Statistics 2: one map of tests, theme by theme",p:"A cinematic video and a plain-language explainer per theme of Methods and Statistics 2: what each test is for, the logic behind it, and how to read the result.",rows:STAT_VIDEOS}};
+function showPlaylist(k){const v=PLAYLISTS[k];
+  document.querySelectorAll('.vtab').forEach(t=>t.setAttribute('aria-selected',String(t.dataset.pl===k)));
+  document.getElementById('vh').textContent=v.h;document.getElementById('vp').textContent=v.p;
+  document.getElementById('ytbtn').href='https://www.youtube.com/playlist?list='+v.id;
+  const f=document.getElementById('vframe');f.src='https://www.youtube-nocookie.com/embed/videoseries?list='+v.id;f.title=v.h+' playlist';
+  document.getElementById('vlist').innerHTML=v.rows.map(([c,t])=>`<div class="vrow"><b>${c}</b><span>${t}</span></div>`).join('');}
+document.querySelectorAll('.vtab').forEach(t=>t.onclick=()=>showPlaylist(t.dataset.pl));
 document.getElementById('vlist').innerHTML = VIDEOS.map(([c,t])=>`<div class="vrow"><b>${c}</b><span>${t}</span></div>`).join('');
+if(location.hash==='#videos-stats'){showPlaylist('stat');}
 const posts = document.getElementById('posts');
 posts.innerHTML = ARTICLES.slice(0,6).map(a=>`<a class="post" href="${a.url}"><div class="pim">${a.img?`<img src="${a.img}" alt="" loading="lazy">`:'People ⟷ Technology'}</div><div class="pt"><span class="k">${a.tag||'Article'}</span><h3>${a.title}</h3><p>${a.blurb||''}</p><span class="pd">${a.date||''}</span></div></a>`).join('');
 if (LINKS.linkedin){const b=document.getElementById('libtn');b.href=LINKS.linkedin;b.hidden=false;
