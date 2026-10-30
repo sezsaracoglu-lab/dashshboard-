@@ -13,7 +13,7 @@
    "a": 0,
    "spot": "Ask which animal is small on the 'mental screen', not which is small in real life.",
    "why": "Statement I is true: next to a horse the mouse is imagined <b>small</b>, so its details are hard to 'see' and take longer to check. Statement II is false: next to a horse-sized beetle the mouse is again the small one, so it is checked <b>more slowly</b>, not faster. What counts is the <b>relative size in the image</b>, the core of Kosslyn's image-scaling work and the <b>functional-equivalence</b> idea.",
-   "src": "[PAST-2][LO][IDQ] Kosslyn 1975; Sternberg 294-295; pty_t5 5.10",
+   "src": "[CORE][LO][IDQ] Kosslyn 1975; Sternberg 294-295; pty_t5 5.10",
    "hy": "1 Image scaling"
   },
   {
@@ -29,7 +29,7 @@
    "a": 3,
    "spot": "Which group behaved the same in both conditions?",
    "why": "The <b>Year 3 pupils</b> answered faster about larger features in both conditions; many said they used imagery anyway. Year 6 pupils and adults, without the imagery instruction, were faster for <b>distinctive</b> features (claws), which points to <b>propositional</b> knowledge that develops later than pictorial knowledge.",
-   "src": "[PAST-1][LO] Kosslyn 1976; Sternberg 295-296; pty_t5 5.10",
+   "src": "[CORE][LO] Kosslyn 1976; Sternberg 295-296; pty_t5 5.10",
    "hy": "2 Imagery vs propositional route"
   },
   {
@@ -70,7 +70,7 @@
    "a": 2,
    "spot": "Look at the slope: does time grow with the angle or not?",
    "why": "The line is <b>flat</b>: deciding takes equally long at 0 and 180 degrees. A <b>propositional</b> description of a letter does not change with its orientation, so this account predicts no angle effect. The <b>analogue</b> view predicts the classic Shepard and Metzler pattern, a <b>linear rise</b> with angle, because rotating an image takes time just like rotating a real object.",
-   "src": "[PAST-1][LO][IDQ] Shepard & Metzler 1971; Matlin 213-214; pty_t5 5.6",
+   "src": "[CORE][LO][IDQ] Shepard & Metzler 1971; Matlin 213-214; pty_t5 5.6",
    "hy": "3 Mental rotation predictions"
   },
   {
@@ -86,7 +86,7 @@
    "a": 2,
    "spot": "Analogue = it resembles what it stands for.",
    "why": "Seven dots <b>resemble</b> the quantity: more dots means more, just as an analogue clock's hands resemble time passing. The word 'seven', the numeral 7 and the Dutch 'zeven' are <b>arbitrary symbols</b> that we simply agreed on, so they are <b>symbolic</b> codes.",
-   "src": "[PAST-1][LO][IDQ] Paivio dual code; Sternberg 277; pty_t5 5.3",
+   "src": "[CORE][LO][IDQ] Paivio dual code; Sternberg 277; pty_t5 5.3",
    "hy": "4 Analogue vs symbolic"
   },
   {
@@ -102,7 +102,7 @@
    "a": 1,
    "spot": "Is a sign mostly a picture or mostly an agreed symbol?",
    "why": "Statement I is false: most signs are <b>arbitrary</b>, like spoken words, so sign language is mainly a <b>symbolic</b> code with only some iconic signs; you must learn it. Statement II is true: ASL signers constantly rotate a signer's movements by 180 degrees to match their own perspective, which makes them skilled at <b>mental rotation</b> of a scene.",
-   "src": "[PAST-2][CORE] set2 sign language; Matlin 214 (Emmorey et al., 1998); pty_t5 5.6",
+   "src": "[CORE] set2 sign language; Matlin 214 (Emmorey et al., 1998); pty_t5 5.6",
    "hy": "5 Sign languages"
   },
   {
@@ -118,7 +118,7 @@
    "a": 0,
    "spot": "No inner pictures: what changes, the score, the feeling, or the flashbacks?",
    "why": "Aphantasia means <b>no voluntary visual imagery</b>. On visual working memory tasks aphantasics reach similar <b>accuracy</b>, probably with non-visual strategies, but report <b>less confidence</b>. Because intrusive memories after trauma are usually vivid images, aphantasics tend to have <b>fewer</b> of them, not more.",
-   "src": "[PAST-2] set2 aphantasia items (exam explanations)",
+   "src": "[CORE] set2 aphantasia items (exam explanations)",
    "hy": "6 Aphantasia"
   },
   {
@@ -378,7 +378,7 @@
    "a": 3,
    "spot": "Which group is faster for the distinctive, not the large, feature?",
    "why": "Group B is faster for <b>claws</b>, the small but distinctive feature. That is the <b>propositional</b> pattern: claws are strongly associated with 'cat'. Kosslyn found it in adults and Year 6 pupils <b>without</b> imagery instructions. Imagery gives Group A's pattern (larger part faster), and Year 3 pupils showed Group A's pattern in both conditions.",
-   "src": "[PAST-1][LO] Kosslyn 1976; Sternberg 295-296; pty_t5 5.10",
+   "src": "[CORE][LO] Kosslyn 1976; Sternberg 295-296; pty_t5 5.10",
    "hy": "2 Imagery vs propositional route"
   },
   {
@@ -552,7 +552,7 @@
    "a": 2,
    "spot": "Size on the mental screen decides how easy details are.",
    "why": "In this image the ladybird is the <b>large</b> animal, so its details are easy to inspect, just as in perception. What counts is the <b>size in the image</b>, not real-world size (Kosslyn, 1975). This fits the <b>functional-equivalence hypothesis</b>.",
-   "src": "[PAST-2][LO][IDQ AB6] Kosslyn 1975; pty_t5 5.10, 5.14.6",
+   "src": "[CORE][LO][IDQ AB6] Kosslyn 1975; pty_t5 5.10, 5.14.6",
    "hy": "1 Image scaling"
   },
   {
@@ -568,7 +568,7 @@
    "a": 0,
    "spot": "Who predicts the flat line, and does a word resemble an angle?",
    "why": "Statement I is true: a <b>propositional</b> description does not change with orientation, so it predicts no angle effect; the linear rise found by Shepard and Metzler supports the <b>analogue</b> view. Statement II is false: 'ninety degrees' is made of arbitrary words, a <b>symbolic</b> code.",
-   "src": "[PAST-1][LO] Shepard & Metzler 1971; pty_t5 5.3, 5.6",
+   "src": "[CORE][LO] Shepard & Metzler 1971; pty_t5 5.3, 5.6",
    "hy": "3 Mental rotation predictions"
   },
   {
@@ -618,7 +618,7 @@
    "a": 0,
    "spot": "No imagery instruction: think association, not size.",
    "why": "Without imagery, adults rely on <b>verbal-propositional</b> knowledge, where <b>distinctive</b> features (claws for a cat) are strongly associated with the animal and are verified fast. With an imagery instruction the pattern flips: the physically <b>larger</b> head is 'seen' faster (Kosslyn, 1976).",
-   "src": "[PAST-1][LO] Kosslyn 1976; pty_t5 5.10",
+   "src": "[CORE][LO] Kosslyn 1976; pty_t5 5.10",
    "hy": "2 Imagery vs propositional route"
   },
   {
@@ -634,7 +634,7 @@
    "a": 3,
    "spot": "Being visible and spatial does not make a sign resemble its meaning.",
    "why": "Most signs are <b>arbitrary</b>, so sign languages are mainly <b>symbolic</b> with only some iconic signs. The other statements are correct: an <b>onomatopoeia</b> has an analogue feature, the numeral 9 is an agreed symbol, and clock hands are <b>analogous</b> to time passing.",
-   "src": "[PAST-2][IDQ AB3] set2 sign language; pty_t5 5.3, 5.14.3",
+   "src": "[CORE][IDQ AB3] set2 sign language; pty_t5 5.3, 5.14.3",
    "hy": "4 Analogue vs symbolic"
   },
   {
@@ -728,7 +728,7 @@
    "a": 1,
    "spot": "Which result depends on size in the image itself?",
    "why": "A proposition about a rabbit is the same whatever it is imagined next to, so only an <b>analogue</b> image with limited resolution predicts the relative-size effect (Kosslyn, 1975). Distinctive-feature speed, Reed's hidden figures and the 20/80 mile label all fit a <b>propositional</b> account well.",
-   "src": "[PAST-2][LO][IDQ] Kosslyn 1975; Reed 1974; pty_t5 5.8, 5.10",
+   "src": "[CORE][LO][IDQ] Kosslyn 1975; Reed 1974; pty_t5 5.8, 5.10",
    "hy": "1 Image scaling"
   },
   {

@@ -40,4 +40,4 @@ const GROUPS = [
   { id: "t3", name: "Theme 3", sub: "Autobiographical memory" }, { id: "t4", name: "Theme 4", sub: "Concepts and categories" },
   { id: "t5", name: "Theme 5", sub: "Mental imagery" }, { id: "t6", name: "Theme 6", sub: "Judgement and decisions" },
   { id: "t7", name: "Theme 7", sub: "Problem solving" }, { id: "t8", name: "Theme 8", sub: "LLMs" },
-  { id: "mock", name: "Mock exams", sub: "Real exams and full mocks" } ];
+  { id: "mock", name: "Mock exams", sub: "Full mock papers" } ];

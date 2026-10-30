@@ -13,7 +13,7 @@
    "a": 1,
    "spot": "Same product, same facts, only the description differs.",
    "why": "<b>Invariance</b> says a choice should not depend on how the same option is <b>described</b>. “95% fat-free” and “5% fat” are the same yoghurt, so a different choice is a framing effect. Transitivity is about a consistent order of preferences (A over B over C), and cancellation about ignoring outcomes that two options share.",
-   "src": "[PAST-1][PAST-2][LO D1, D4][IDQ DE6] Robinson-Riegler p. 482; Matlin pp. 437-440",
+   "src": "[CORE][LO D1, D4][IDQ DE6] Robinson-Riegler p. 482; Matlin pp. 437-440",
    "hy": "1 Invariance / framing"
   },
   {
@@ -29,7 +29,7 @@
    "a": 0,
    "spot": "“Prefers X to Y and Y to Z, so…” asks what follows logically.",
    "why": "<b>Transitivity</b>: if A is preferred to B and B to C, then A must be preferred to C. Otherwise your preferences go round in a circle. “Same choice however described” is <b>invariance</b>, “ignore shared outcomes” is <b>cancellation</b>, and the last option describes loss aversion from prospect theory.",
-   "src": "[PAST-2] set2 transitivity item; EU principles as defined in set1/set2",
+   "src": "[CORE] set2 transitivity item; EU principles as defined in set1/set2",
    "hy": "7 Transitivity"
   },
   {
@@ -45,7 +45,7 @@
    "a": 0,
    "spot": "Check each scenario against the principle it names.",
    "why": "Statement I is true: tea > coffee > juice > tea is a <b>circle</b>, which breaks <b>transitivity</b>. Statement II is false: the two price labels describe the same deal, so the principle that is broken is <b>invariance</b> (framing), not cancellation. Cancellation is about ignoring an outcome that two options have in common.",
-   "src": "[PAST-1][PAST-2] set1/set2 EU principle items",
+   "src": "[CORE] set1/set2 EU principle items",
    "hy": "7 Transitivity + 1 Invariance"
   },
   {
@@ -61,7 +61,7 @@
    "a": 0,
    "spot": "Find what the two choices have in common and what was removed.",
    "why": "Choice 2 is choice 1 with the same <b>89% chance of €1 million</b> taken out of both options. By <b>cancellation (independence)</b>, an outcome shared by both options should not affect the choice, so A should go with C and B with D. People switch because A is <b>certain</b>: the <b>certainty effect</b> (Allais paradox). It is not invariance, because choice 2 is a different gamble, not a new wording of the same one.",
-   "src": "[PAST-2] set2 Allais item; Allais paradox as explained in set2",
+   "src": "[CORE] set2 Allais item; Allais paradox as explained in set2",
    "hy": "4 Certainty effect / Allais / cancellation"
   },
   {
@@ -77,7 +77,7 @@
    "a": 0,
    "spot": "A definition on the probability side of decision making.",
    "why": "The <b>certainty effect</b> is about <b>probabilities</b>: a sure thing gets extra weight compared with something that is merely likely (it drives the Allais paradox). Losses weighing more is <b>loss aversion</b>; a different choice for a new description is <b>framing</b>; judging by resemblance is <b>representativeness</b>.",
-   "src": "[PAST-1][PAST-2] set1/set2 certainty effect items",
+   "src": "[CORE] set1/set2 certainty effect items",
    "hy": "4 Certainty effect"
   },
   {
@@ -93,7 +93,7 @@
    "a": 0,
    "spot": "Ask of each: is it about how much, or about how likely?",
    "why": "<b>Loss aversion</b> is about <b>how much</b> an outcome hurts or pleases: the value curve is steeper for losses. The <b>certainty effect</b> is about <b>how likely</b>: a 100% chance is weighted more than its size alone justifies. So one belongs to the value function, the other to probability weighting.",
-   "src": "[PAST-1] set1 prospect theory item; [IDQ DE3] Robinson-Riegler p. 483",
+   "src": "[CORE] set1 prospect theory item; [IDQ DE3] Robinson-Riegler p. 483",
    "hy": "6 Value vs probability side"
   },
   {
@@ -138,7 +138,7 @@
    "a": 1,
    "spot": "Each extra step to the right adds less height.",
    "why": "Going from €0 to €1,000 adds much more utility than going from €4,000 to €5,000: each extra euro is worth less the more you already have. That is <b>diminishing marginal utility</b>, a <b>concave</b> curve. Loss aversion and reference dependence belong to prospect theory and need a curve with a gain side and a loss side; the certainty effect concerns probabilities, which are not on this graph.",
-   "src": "[PAST-2] set2 diminishing marginal utility item; illustrative curve",
+   "src": "[CORE] set2 diminishing marginal utility item; illustrative curve",
    "hy": "8 Diminishing marginal utility"
   },
   {
@@ -154,7 +154,7 @@
    "a": 0,
    "spot": "“Marginal” = the next extra unit.",
    "why": "<b>Diminishing marginal utility</b>: the next €100 means less to someone who has a lot than to someone who has little, so the utility curve is <b>concave</b>. The second option is <b>loss aversion</b>, the third the <b>certainty effect</b>, the fourth the rule that <b>sunk costs</b> should be ignored.",
-   "src": "[PAST-2] set2 diminishing marginal utility item",
+   "src": "[CORE] set2 diminishing marginal utility item",
    "hy": "8 Diminishing marginal utility"
   },
   {
@@ -207,7 +207,7 @@
    "a": 1,
    "spot": "Remove one feature, keep the other.",
    "why": "The real curve has two features: it <b>flattens</b> further from the reference point (<b>diminishing sensitivity</b>) and the loss side is <b>steeper</b> (<b>loss aversion</b>). Remove only loss aversion and you keep the S-shape, but the loss half becomes a mirror image of the gain half. A straight line would remove diminishing sensitivity too.",
-   "src": "[PAST-2][IDQ DE3, DE4] Robinson-Riegler Figure 11.4; illustrative values",
+   "src": "[CORE][IDQ DE3, DE4] Robinson-Riegler Figure 11.4; illustrative values",
    "hy": "5 Loss aversion / value function"
   },
   {
@@ -223,7 +223,7 @@
    "a": 2,
    "spot": "Same amount, losing hurts more than gaining pleases.",
    "why": "<b>Loss aversion</b>: in prospect theory the value function is <b>steeper for losses</b> than for gains, so losing €100 weighs more than winning €100. Diminishing marginal utility is about the next euro mattering less as you get richer, not about the gain/loss difference. No probabilities are involved, so it is not the certainty effect.",
-   "src": "[PAST-2][IDQ DE3] Robinson-Riegler p. 483",
+   "src": "[CORE][IDQ DE3] Robinson-Riegler p. 483",
    "hy": "5 Loss aversion"
   },
   {
@@ -330,7 +330,7 @@
    "a": 3,
    "spot": "First: what should a random sequence look like? Second: what comes to mind easily?",
    "why": "I is the <b>gambler's fallacy</b>: a short run is expected to look like a random process, so black seems due. That is <b>representativeness</b>. II: murders get much publicity, so examples come to mind easily and seem frequent (Lichtenstein et al., 1978). That is <b>availability</b>.",
-   "src": "[PAST-1] set1 'respectively' shape; Eysenck & Keane p. 626; Matlin & Farmer",
+   "src": "[CORE] set1 'respectively' shape; Eysenck & Keane p. 626; Matlin & Farmer",
    "hy": "2 Representativeness + 3 Availability"
   },
   {
@@ -346,7 +346,7 @@
    "a": 0,
    "spot": "A combination (A and B) judged likelier than one of its parts (A).",
    "why": "Every accountant who plays online games is also an accountant, so the combination can never be more likely: the <b>conjunction fallacy</b>. The added detail fits the description, so the combination looks more typical: <b>representativeness</b>, as in the Linda problem. The gambler's fallacy is about random sequences.",
-   "src": "[PAST-1][LO J5][IDQ ABC6] Matlin & Farmer; Eysenck & Keane",
+   "src": "[CORE][LO J5][IDQ ABC6] Matlin & Farmer; Eysenck & Keane",
    "hy": "2 Conjunction fallacy"
   },
   {
@@ -394,7 +394,7 @@
    "a": 2,
    "spot": "Two claims from the hindsight section: one explanation, one finding.",
    "why": "Both are true. Knowing the outcome happened (100% certain) acts as an <b>anchor</b>, and people do not adjust their “I would have predicted it” downward enough. Carli showed the memory side: each group falsely “remembered” details that fitted the ending (rape or proposal), so the past is <b>reconstructed</b> to match what we know now.",
-   "src": "[PAST-1][LO J5][IDQ ABC10] Matlin pp. 444-446",
+   "src": "[CORE][LO J5][IDQ ABC10] Matlin pp. 444-446",
    "hy": "9 Hindsight bias"
   },
   {
@@ -442,7 +442,7 @@
    "a": 2,
    "spot": "Look for the claim that someone is protected from the bias.",
    "why": "Overconfidence is widespread: <b>political leaders</b> overestimate their chances of success, and physicists and economists are overconfident about their theories (Matlin). The other statements are from the readings: Fischhoff et al. (1977) found 80% accuracy at 100% certainty, Stanovich (1999) 77% overconfident students, and the <b>planning fallacy</b> is overconfidence about time.",
-   "src": "[PAST-2][IDQ ABC4] Matlin pp. 440-443; Sternberg et al.",
+   "src": "[CORE][IDQ ABC4] Matlin pp. 440-443; Sternberg et al.",
    "hy": "14 Overconfidence"
   },
   {
@@ -458,7 +458,7 @@
    "a": 1,
    "spot": "A streak is expected to end, as if the machine remembers.",
    "why": "The <b>gambler's fallacy</b>: after a run of one outcome, the opposite seems “due”, because a short sequence is expected to look random (<b>representativeness</b>). The machine has no memory. The <b>hot hand</b> belief is the reverse: a streak is expected to <b>continue</b>. Sunk cost would be “I have put in so much, I can't stop now”, which is not the reason given.",
-   "src": "[PAST-1][PAST-2] set1/set2 representativeness items; Eysenck & Keane; Sternberg et al.",
+   "src": "[CORE] set1/set2 representativeness items; Eysenck & Keane; Sternberg et al.",
    "hy": "2 Gambler's fallacy"
   },
   {
@@ -474,7 +474,7 @@
    "a": 0,
    "spot": "Invariance: the preference stays the same across descriptions.",
    "why": "<b>Invariance</b>: if you prefer A to B in one presentation, you should prefer A to B in any other presentation of the same options (Robinson-Riegler). The second option is <b>cancellation</b>, the third <b>transitivity</b>, the fourth <b>dominance</b>.",
-   "src": "[PAST-1][PAST-2][LO D1][IDQ DE6] Robinson-Riegler p. 482",
+   "src": "[CORE][LO D1][IDQ DE6] Robinson-Riegler p. 482",
    "hy": "1 Invariance"
   },
   {
@@ -508,7 +508,7 @@
    "a": 0,
    "spot": "Which theory predicts framing effects, and which forbids them?",
    "why": "I is true: “90% survive” and “10% die” describe the same operation, so a different choice breaks <b>invariance</b>. II is false: <b>expected utility theory</b> forbids such a difference. The idea that losses weigh more is <b>loss aversion</b> from <b>prospect theory</b>, which is the theory that explains the effect.",
-   "src": "[PAST-1][PAST-2][LO D1, D4] Robinson-Riegler pp. 482-484 (framing in medical decisions)",
+   "src": "[CORE][LO D1, D4] Robinson-Riegler pp. 482-484 (framing in medical decisions)",
    "hy": "1 Invariance"
   },
   {
@@ -524,7 +524,7 @@
    "a": 1,
    "spot": "A specific case (Limburg) judged more likely than the whole (the Netherlands).",
    "why": "Limburg is part of the Netherlands, so a flood there can never be more likely than a flood anywhere in the country. Judging the vivid, specific case as more probable is the <b>conjunction fallacy</b>, like murders in Detroit versus Michigan. The specific story looks <b>representative</b> of floods, so it feels likelier.",
-   "src": "[PAST-1] set1 California item; Matlin & Farmer (Detroit vs Michigan)",
+   "src": "[CORE] set1 California item; Matlin & Farmer (Detroit vs Michigan)",
    "hy": "2 Conjunction fallacy"
   },
   {
@@ -540,7 +540,7 @@
    "a": 1,
    "spot": "Frequency judged by how easily examples come to mind.",
    "why": "Mark judges <b>frequency</b> by how easily <b>examples</b> come to mind: recent, repeated photos make Bali very <b>available</b>. Availability errs when recency and familiarity, rather than true frequency, drive retrieval. The recognition heuristic would apply if he knew only one of two destinations.",
-   "src": "[PAST-1][PAST-2][LO J4] Matlin & Farmer (recency and familiarity)",
+   "src": "[CORE][LO J4] Matlin & Farmer (recency and familiarity)",
    "hy": "3 Availability"
   },
   {
@@ -556,7 +556,7 @@
    "a": 1,
    "spot": "Only the first pair contains a sure option, and only there do people play safe.",
    "why": "Dividing both chances by four should not change the preference, yet it does. When one option is <b>certain</b>, it gets extra weight; once it is only probable (25%), the bigger prize wins. This is the <b>certainty effect</b>, the probability side of prospect theory. There are no losses here, so loss aversion does not apply.",
-   "src": "[PAST-1][PAST-2] certainty effect as in set1/set2",
+   "src": "[CORE] certainty effect as in set1/set2",
    "hy": "4 Certainty effect"
   }
  ],
@@ -574,7 +574,7 @@
    "a": 2,
    "spot": "Follow the chain: does it close into a circle?",
    "why": "Anna > Ben and Ben > Chris logically requires Anna > Chris. Preferring Chris makes the preferences <b>circular</b>, which violates <b>transitivity</b>. Invariance would need the same options described in two ways; cancellation concerns outcomes that two options share.",
-   "src": "[PAST-2] set2 transitivity item",
+   "src": "[CORE] set2 transitivity item",
    "hy": "7 Transitivity"
   },
   {
@@ -590,7 +590,7 @@
    "a": 1,
    "spot": "Loss aversion = losses loom larger.",
    "why": "<b>Loss aversion</b> is the <b>steeper</b> loss side: losing €50 drops value more than gaining €50 raises it. Concave for gains and convex for losses, and flattening further out, describe <b>diminishing sensitivity</b>. The <b>reference point</b> says gains and losses are judged from what you have now.",
-   "src": "[PAST-2][IDQ DE3] Robinson-Riegler Figure 11.4, p. 483",
+   "src": "[CORE][IDQ DE3] Robinson-Riegler Figure 11.4, p. 483",
    "hy": "5 Loss aversion"
   },
   {
@@ -606,7 +606,7 @@
    "a": 0,
    "spot": "Outcome known, then the past “prediction” is rewritten.",
    "why": "<b>Hindsight bias</b>: once the outcome is known, people believe they knew it all along. The known result serves as an anchor and memory is <b>reconstructed</b> to fit it (Carli, 1999). Confirmation bias is searching for evidence that supports a current belief; the planning fallacy is underestimating how long a project takes.",
-   "src": "[PAST-1][LO J5] Matlin pp. 444-446",
+   "src": "[CORE][LO J5] Matlin pp. 444-446",
    "hy": "9 Hindsight bias"
   },
   {
@@ -622,7 +622,7 @@
    "a": 2,
    "spot": "Two streak beliefs: one always wrong, one not so clearly wrong.",
    "why": "I is true: a fair coin has no memory, so “tails is due” is the <b>gambler's fallacy</b>. II is also true: Gilovich et al. (1985) found no hot hand, but Miller and Sanjurjo (2018) corrected a <b>selection bias</b> in that analysis and found a real but modest hot hand. So the gambler's fallacy stays a fallacy, the hot hand is less clearly one.",
-   "src": "[PAST-2] hot hand item; Eysenck & Keane (Miller & Sanjurjo, 2018)",
+   "src": "[CORE] hot hand item; Eysenck & Keane (Miller & Sanjurjo, 2018)",
    "hy": "2 Gambler's fallacy / hot hand"
   }
  ],
@@ -640,7 +640,7 @@
    "a": 1,
    "spot": "Expected value is equal, so the answer must lie in how utility grows with money.",
    "why": "With <b>diminishing marginal utility</b> the utility curve is <b>concave</b>: €1,000 is worth less than twice the utility of €500. The gamble's expected <b>utility</b> is therefore lower than that of the sure €500, so a rational chooser is <b>risk averse</b>. The first option is loss aversion, but nothing can be lost here; the third is framing, which expected utility theory does not allow to matter.",
-   "src": "[PAST-2][IDQ DE4] set2 diminishing marginal utility item",
+   "src": "[CORE][IDQ DE4] set2 diminishing marginal utility item",
    "hy": "8 Diminishing marginal utility"
   },
   {
@@ -656,7 +656,7 @@
    "a": 0,
    "spot": "What does the certainty of one option do to cancellation?",
    "why": "I is the correct definition of <b>cancellation (independence)</b>. II is false: in the <b>Allais paradox</b> people <b>break</b> cancellation exactly when a certain option is available. Removing a shared chance from both options flips their choice, because the sure thing gets extra weight (the <b>certainty effect</b>).",
-   "src": "[PAST-2] set2 Allais item",
+   "src": "[CORE] set2 Allais item",
    "hy": "4 Allais / cancellation"
   },
   {

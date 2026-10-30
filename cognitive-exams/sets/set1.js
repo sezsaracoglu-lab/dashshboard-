@@ -1,9 +1,9 @@
-// Set 1: the official practice exam questions (40), with the official answer key.
+// Set 1: Practice paper 1 (40 questions), with the answer key.
 // a = index of the correct option (0 = a, 1 = b, 2 = c, 3 = d)
 EXAMS.push({
   id: "set1", "group": "mock",
-  title: "Official practice exam",
-  blurb: "The 40 practice questions from the course, with the official answer key. Click an answer to see the explanation.",
+  title: "Practice paper 1",
+  blurb: "40 practice questions with the answer key. Click an answer to see the explanation.",
   questions: [
 { q: "The manner in which supermarkets indicate the price of products has been shown to influence buying behavior. Which principle of expected utility theory does this finding violate?",
   o: ["Transitivity", "Continuity", "Invariance", "Cancellation"], a: 2, t: "dec",

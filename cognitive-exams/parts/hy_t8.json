@@ -13,7 +13,7 @@
    "a": 0,
    "spot": "Who gets an opportunity, not how a group is described.",
    "why": "<b>Allocational harm</b>: an AI system hands out resources or opportunities (here: interviews) unequally across groups, because the data contain <b>historically biased decisions</b>. <b>Representational harm</b> would be about how a group is portrayed, for example described as less capable or left out of the picture.",
-   "src": "[PAST-2][IDQ][CORE] Demszky et al. 2023, Concern 2 (bias); pty_t8 8.5.2",
+   "src": "[CORE][IDQ][CORE] Demszky et al. 2023, Concern 2 (bias); pty_t8 8.5.2",
    "hy": "1. AI harms: allocational vs representational"
   },
   {
@@ -29,7 +29,7 @@
    "a": 0,
    "spot": "Portrayal versus distribution.",
    "why": "Statement I is true: Demszky et al. name <b>sampling bias</b> (over-represented privileged groups) and <b>data-processing bias</b> as causes of representational harm. Statement II is false: a demeaning description is <b>representational</b> harm. <b>Allocational</b> harm is about the unequal distribution of resources (such as loans) or opportunities (such as therapy).",
-   "src": "[PAST-2][IDQ A.6][CORE] Demszky et al. 2023, Concern 2; pty_t8 8.5.2",
+   "src": "[CORE][IDQ A.6][CORE] Demszky et al. 2023, Concern 2; pty_t8 8.5.2",
    "hy": "1. AI harms + 3. sources of bias"
   },
   {
@@ -61,7 +61,7 @@
    "a": 0,
    "spot": "Two reasons: better modelling and more data.",
    "why": "Demszky et al. give two reasons. LLMs go beyond <b>bag-of-words</b> methods by approximating <b>meaning in context</b>, and they are trained on <b>hundreds of billions of utterances</b> from web pages, books, social media and forums. They do not check truth: they predict plausible language, which is why they can give fluent but wrong advice.",
-   "src": "[PAST-2][CORE] Demszky et al. 2023, Introduction; pty_t8 8.1",
+   "src": "[CORE] Demszky et al. 2023, Introduction; pty_t8 8.1",
    "hy": "2. Why AI/LLMs became so powerful"
   },
   {
@@ -77,7 +77,7 @@
    "a": 0,
    "spot": "One ingredient is never the whole story.",
    "why": "The jump came from a <b>combination</b>: enormous amounts of <b>training data</b>, huge <b>computing resources</b> to fit models with millions of parameters (fitting ChatGPT is estimated to have cost 3 billion dollars) and <b>better algorithms</b>, such as the transformer that approximates meaning in context. Hand-written rules and fixed dictionary meanings describe the older approaches, and LLMs contain no theory of truth.",
-   "src": "[PAST-2][CORE] Demszky et al. 2023, Introduction, training, equitable access; pty_t8 8.1, 8.2, 8.6",
+   "src": "[CORE] Demszky et al. 2023, Introduction, training, equitable access; pty_t8 8.1, 8.2, 8.6",
    "hy": "2. Why AI/LLMs became so powerful"
   },
   {
@@ -472,7 +472,7 @@
    "a": 0,
    "spot": "Who gets the chance?",
    "why": "Job opportunities reach one group more than another, so this is <b>allocational harm</b>, rooted in historically biased patterns in the data. <b>Representational harm</b> is about how a group is depicted. Variation between runs is <b>stochasticity</b>, not a harm.",
-   "src": "[PAST-2][IDQ][CORE] Demszky et al. 2023, Concern 2; pty_t8 8.5.2",
+   "src": "[CORE][IDQ][CORE] Demszky et al. 2023, Concern 2; pty_t8 8.5.2",
    "hy": "1. AI harms: allocational vs representational"
   },
   {
@@ -547,7 +547,7 @@
    "a": 0,
    "spot": "Which one describes something LLMs do not do?",
    "why": "Progress came from <b>data</b> (hundreds of billions of utterances), <b>better models</b> (transformers that approximate meaning in context) and enormous <b>resources</b> to fit the parameters. LLMs do not check truth: they predict <b>plausible</b> language, which is why they can sound convincing and still be wrong.",
-   "src": "[PAST-2][CORE] Demszky et al. 2023, Introduction, training, equitable access; pty_t8 8.1-8.3, 8.6",
+   "src": "[CORE] Demszky et al. 2023, Introduction, training, equitable access; pty_t8 8.1-8.3, 8.6",
    "hy": "2. Why AI/LLMs became so powerful"
   },
   {

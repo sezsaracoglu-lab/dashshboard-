@@ -13,7 +13,7 @@
    "a": 0,
    "spot": "Two claims about algorithms vs heuristics: check each against the definitions.",
    "why": "I is <b>true</b>: a heuristic is a rule of thumb that ignores some options, which is why it is fast but can miss the answer (rejecting words that start with LY misses LYMPHOID). II is <b>false</b>: an <b>algorithm</b> guarantees a solution and is often slow, but not always. On a well-structured puzzle such as the Tower of Hanoi, an algorithm reaches the minimum number of moves.",
-   "src": "[PAST-1][LO A3][IDQ AB2] Matlin; pty_t7 7.3, 7.6.2",
+   "src": "[CORE][LO A3][IDQ AB2] Matlin; pty_t7 7.3, 7.6.2",
    "hy": "Algorithms vs heuristics"
   },
   {
@@ -29,7 +29,7 @@
    "a": 0,
    "spot": "Trying every possible answer in order = which strategy?",
    "why": "Trying every possible answer systematically is an <b>exhaustive search</b>, the textbook example of an <b>algorithm</b>: it is guaranteed to open the lock, but it can take up to 1000 tries. Hill climbing would need a sense of being 'closer' to the goal after each try, which a lock does not give. Means-ends would split the problem into subgoals.",
-   "src": "[PAST-1][LO A3] Matlin; pty_t7 7.3",
+   "src": "[CORE][LO A3] Matlin; pty_t7 7.3",
    "hy": "Algorithms vs heuristics"
   },
   {
@@ -82,7 +82,7 @@
    "a": 0,
    "spot": "Gradual line vs flat-then-jump line: which one is insight?",
    "why": "For <b>routine</b> problems such as algebra, warmth rises <b>gradually</b> (line X), as expected from step-by-step reasoning. For <b>insight</b> problems, warmth stays cold and only shoots up at the very last moment (line Y). This sudden jump supports the Gestalt idea that insight is a special process, different from ordinary problem solving.",
-   "src": "[PAST-1][LO C5][IDQ C1] Metcalfe & Wiebe (1987); pty_t7 7.11",
+   "src": "[CORE][LO C5][IDQ C1] Metcalfe & Wiebe (1987); pty_t7 7.11",
    "hy": "Metcalfe warmth ratings"
   },
   {
@@ -98,7 +98,7 @@
    "a": 0,
    "spot": "Look for the finding that shows insight behaves differently from routine problems.",
    "why": "Metcalfe found that people predict their own success well on <b>routine</b> problems but poorly on <b>insight</b> problems; successful solvers were even pessimistic. That difference fits the Gestalt view. The gradual insights described by <b>Smith (1995a)</b> point the other way, because they make insight look more like ordinary thinking. Pausing at subproblems (Greeno) and keeping a formula (Luchins) are about means-ends analysis and mental set.",
-   "src": "[PAST-1][LO C5] Metcalfe (1986); Smith (1995a); pty_t7 7.11",
+   "src": "[CORE][LO C5] Metcalfe (1986); Smith (1995a); pty_t7 7.11",
    "hy": "Metcalfe warmth ratings"
   },
   {
@@ -525,7 +525,7 @@
    "a": 0,
    "spot": "Prediction of success on insight problems: accurate or not, and in which direction?",
    "why": "On routine problems, people predict their own success well. On <b>insight</b> problems they do not: <b>successful</b> solvers were often <b>pessimistic</b>, while unsuccessful solvers were often optimistic. This fits the idea that the insight solution arrives suddenly, without a felt approach.",
-   "src": "[PAST-1][LO C5][IDQ C1] Metcalfe (1986); Metcalfe & Wiebe (1987); pty_t7 7.11",
+   "src": "[CORE][LO C5][IDQ C1] Metcalfe (1986); Metcalfe & Wiebe (1987); pty_t7 7.11",
    "hy": "Metcalfe warmth ratings"
   },
   {
@@ -575,7 +575,7 @@
    "a": 0,
    "spot": "Rule of thumb that skips options: name it, and say what it costs.",
    "why": "Skipping unlikely letter combinations is a <b>heuristic</b>: a rule of thumb that is usually right and saves time. But it gives <b>no guarantee</b>: the answer is LYMPHOID, which starts with the rejected LY. An <b>algorithm</b> such as an exhaustive search would try every order and always find it, at the cost of time.",
-   "src": "[PAST-1][LO A3] Matlin; pty_t7 7.3",
+   "src": "[CORE][LO A3] Matlin; pty_t7 7.3",
    "hy": "Algorithms vs heuristics"
   },
   {

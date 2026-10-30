@@ -123,4 +123,5 @@ const lb=document.getElementById("lb"); lb.onclick=()=>lb.classList.remove("on")
 function go(i){ history.replaceState(null,"","#t"+(i+1)); render(i); window.scrollTo({top:0,behavior:"smooth"}); }
 tabs.onclick=e=>{const b=e.target.closest(".tab"); if(b) go(+b.dataset.i)};
 const h=/^#t(\d)$/.exec(location.hash); render(h? Math.min(7,Math.max(0,h[1]-1)) : 0);
-</script></body></html>
+</script><script src="https://sezsaracoglu-lab.github.io/dashshboard-/assets/sitenav.js" defer></script>
+</body></html>

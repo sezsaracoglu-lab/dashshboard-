@@ -123,7 +123,7 @@ footer{color:var(--muted);font-size:.85rem;padding:30px 0 40px}
 const L = "abcd";
 const $ = (s) => document.querySelector(s);
 let cur = null;   // {exam, order:[qIdx...], i, retry}
-// deterministic option shuffle for reconstructed sets
+// deterministic option shuffle for shuffled sets
 function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 EXAMS.forEach(e=>{ if(!e.shuffle) return; e.questions.forEach((q,qi)=>{ if(q.ns) return; const r=rng(1000+qi*7+[...e.id].reduce((a,c)=>a*31+c.charCodeAt(0),7)%9973); const idx=[0,1,2,3];
   for(let k=3;k>0;k--){const j=Math.floor(r()*(k+1));[idx[k],idx[j]]=[idx[j],idx[k]];}
@@ -244,7 +244,7 @@ function results(e){
         ks.map(x=>{ const v=sk[x], p=v.ok/v.n*100; return `<tr><td>${SKILLS[x]}</td><td>${v.ok}/${v.n}</td><td><div class="mini"><i style="width:${p}%;background:${p>=65?"#4f7a5a":p>=50?"#b8923a":"#a8553d"}"></i></div></td></tr>`; }).join("")+`</table>`; })()}
     <div class="btns">${wrongAll.length?`<button class="btn solid" id="retry">Retry my ${wrongAll.length} wrong answers</button>`:""}
       <button class="btn" id="review">Review all questions</button><button class="btn" id="again">Start the whole set again</button></div>
-    ${e.id==="set2"?`<p class="note">Set 2 is reconstructed from students' memories of the 2025 exam, so the real wording may differ.</p>`:""}</div>`;
+    </div>`;
   document.querySelectorAll(".qlinks button").forEach(b=>b.onclick=()=>{ const k=+b.dataset.k; cur={e,order,ans,retry}; render(order.indexOf(k)); });
   if(wrongAll.length) $("#retry").onclick=()=>quiz(e, wrongAll);
   $("#review").onclick=()=>{ cur={e,order,ans,retry}; render(0); };
@@ -254,5 +254,6 @@ function results(e){
 function route(){ const id=(location.hash||"").slice(1); const e=exam(id); tabs(e.id); cur=null; intro(e); }
 window.addEventListener("hashchange", route); route();
 </script>
+<script src="https://sezsaracoglu-lab.github.io/dashshboard-/assets/sitenav.js" defer></script>
 </body>
 </html>

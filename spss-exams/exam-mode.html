@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SPSS exam mode</title>
-<meta name="description" content="High-yield SPSS exam practice for Statistics 2: two exam replicas and three practice sets per exam block, with datasets to download, instant checking, hints and step-by-step SPSS solutions.">
+<meta name="description" content="High-yield SPSS exam practice for Statistics 2: three full mock papers and three practice sets per exam block, with datasets to download, instant checking, hints and step-by-step SPSS solutions.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -103,7 +103,7 @@ footer{color:var(--muted);font-size:.85rem;padding:30px 0 40px}
 <nav class="menu"><a href="../study/">Study hub</a><a href="../stat2-course/">Statistics 2</a><a href="https://sezsaracoglu-lab.github.io/stat2_SPSS_withdecimals/">SPSS 101</a></nav></div></header>
 <main class="wrap">
   <div class="head"><div class="eyebrow">Statistics 2 · SPSS exam</div><h1>High-yield SPSS exams</h1>
-  <p>Start with the three exam replicas, then train each exam block on its own. Download the dataset, answer in SPSS, type your number and press Check. After your first try you can open a hint (how to recognise the question) or the full step-by-step solution. At the end you get your score and the topics to practise again.</p></div>
+  <p>Start with the three full mock papers, then train each exam block on its own. Download the dataset, answer in SPSS, type your number and press Check. After your first try you can open a hint (how to recognise the question) or the full step-by-step solution. At the end you get your score and the topics to practise again.</p></div>
   <div class="tabs" id="tabs" role="tablist"></div>
   <section id="view"></section>
 </main>
@@ -114,14 +114,14 @@ footer{color:var(--muted);font-size:.85rem;padding:30px 0 40px}
 const $ = (s) => document.querySelector(s);
 const SETS = DATA.sets, TOPICS = DATA.topics;
 const GROUPS = [
-  {id:"rep", name:"Exam replicas", sub:"2025 · 2025 v2 · oefentoets"},
+  {id:"rep", name:"Full mock papers", sub:"Mock papers A, B and C"},
   {id:"b1", name:"Block 1 · ANOVA", sub:"3 sets × 21"},
   {id:"b2", name:"Block 2 · Categories & t-tests", sub:"3 sets × 21"},
   {id:"b3", name:"Block 3 · Correlation & regression", sub:"3 sets × 21"},
   {id:"more", name:"More SPSS practice", sub:"lessons and drills"}];
 const MORE = [
   ["../spss-block3/","Practise Block 3 · Correlation & regression","One extra set of 20 regression questions on a new dataset."],
-  ["https://sezsaracoglu-lab.github.io/stat2_SPSS_withdecimals/","SPSS 101 and exam drills","Learn each SPSS skill one screen at a time, the 2025 mirror, exam sets 1–10 and practice sets 1–5."],
+  ["https://sezsaracoglu-lab.github.io/stat2_SPSS_withdecimals/","SPSS 101 and exam drills","Learn each SPSS skill one screen at a time, a full mock paper, exam sets 1–10 and practice sets 1–5."],
   ["https://sezsaracoglu-lab.github.io/SPSS2_Examdrill/","SPSS 2 Exam Drill 2","A second full SPSS exam drill."],
   ["https://sezsaracoglu-lab.github.io/SPSS_Anova_2/","ANOVA exam sets","Three sets of 15 ANOVA questions in exam wording."],
   ["https://sezsaracoglu-lab.github.io/SPSS_drill2_Categories_t-test/","Categories and t-test sets","Three sets of 15 Block 2 questions in exam wording."],
@@ -193,7 +193,7 @@ function render(i){
   if (a) {
     const cls = last[0]==="ok" ? "" : last[0]==="warn" ? "warn" : "bad";
     fb = `<div class="fb ${cls}"><h3>${last[0]==="ok"?"Correct!":last[0]==="warn"?"Almost.":"Not quite."}</h3>${last[1]!=="Correct!"?`<p>${last[1]}</p>`:""}
-      ${q.lk?`<p class="tp">Likelihood in 2026: <b>${q.lk}%</b> · ${q.lk>=75?"this type came up in both past exams":q.lk>=50?"this type came up in one past exam":"this type came up only in the professor's practice questions"}</p>`:""}
+      ${q.lk?`<p class="tp">Likelihood in 2026: <b>${q.lk}%</b> · ${q.lk>=75?"very common question type":q.lk>=50?"common question type":"less common question type"}</p>`:""}
       ${!solved && !shown ? `<div class="btns"><button class="btn small" id="hint">Hint</button><button class="btn small" id="show">Show answer + steps</button></div>` : ""}
       ${(a.hint && !solved && !shown) ? `<p class="spot"><b>How to recognise it:</b> ${q.spot}</p>` : ""}
       ${(solved || shown) ? `<p class="spot"><b>How to recognise it:</b> ${q.spot}</p>${solution(q)}` : ""}</div>`;
@@ -201,7 +201,7 @@ function render(i){
   $("#view").innerHTML = `<div class="card">
     <div class="qhead"><span>${retry?"Retry · ":""}Question ${i+1} of ${order.length} · ${part.label}</span><span>${okCount} correct first try · ${nDone} answered</span></div>
     <div class="bar"><i style="width:${nDone/order.length*100}%"></i></div>
-    <div class="qtext">${q.q}${q.recon?`<span class="recon" title="This question was cut off in the original file; the ending is the most likely one.">✎ reconstructed ending</span>`:""}</div>
+    <div class="qtext">${q.q}${q.recon?`<span class="recon" title="The ending of this question was completed.">✎ completed ending</span>`:""}</div>
     <div class="ans"><input id="inp" inputmode="decimal" autocomplete="off" aria-label="Your answer" value="${a&&a.v!==undefined?a.v:""}" ${solved?"disabled":""}>
       <button class="btn solid" id="chk" ${solved?"disabled":""}>Check</button>
       <a class="btn small" href="data/${part.file}" download>${part.file}</a></div>
@@ -260,5 +260,6 @@ function more(){
 function route(){ const id=(location.hash||"").slice(1); if (id==="more"){ tabs("more"); more(); return; } const s=setOf(id); tabs(s.id); cur=null; intro(s); }
 window.addEventListener("hashchange", route); route();
 </script>
+<script src="https://sezsaracoglu-lab.github.io/dashshboard-/assets/sitenav.js" defer></script>
 </body>
 </html>

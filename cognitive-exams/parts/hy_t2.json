@@ -13,7 +13,7 @@
    "a": 0,
    "spot": "Switching back and forth between two tasks, or stopping a habit?",
    "why": "Alternating between two tasks (French, Spanish, French...) is <b>shifting</b>. Holding back a strong, automatic response (looking left, as at home) is <b>inhibition</b>, the function behind the Stroop task. <b>Updating</b> would be replacing old contents of working memory with the newest item, which neither situation is about.",
-   "src": "[PAST-1][PAST-2][LO B4][IDQ B5] Miyake et al. (2000); E&K pp. 220-221",
+   "src": "[CORE][LO B4][IDQ B5] Miyake et al. (2000); E&K pp. 220-221",
    "hy": "1 Executive functions"
   },
   {
@@ -29,7 +29,7 @@
    "a": 1,
    "spot": "Which component does each second task load, and which one hurt?",
    "why": "Repeating ‘the the the’ is <b>articulatory suppression</b>: it occupies the phonological loop, and it did not hurt, so the loop is not needed. Pressing keys in a fixed spatial pattern loads the <b>visuo-spatial sketchpad</b> (the same task Robbins et al. used), and it did hurt. Two tasks only clash when they use the <b>same component</b>.",
-   "src": "[PAST-1][PAST-2][LO B5][IDQ B1] dual-task logic; Robbins et al. (1996), E&K p. 216",
+   "src": "[CORE][LO B5][IDQ B1] dual-task logic; Robbins et al. (1996), E&K p. 216",
    "hy": "2 Dual-task logic"
   },
   {
@@ -71,7 +71,7 @@
       ]
      }
     ],
-    "note": "Approximate values read from the figure in the official practice exam (Barrouillet et al., Experiment 1).",
+    "note": "Approximate values read from Barrouillet et al., Experiment 1.",
     "min": 0,
     "max": 1
    },
@@ -83,8 +83,8 @@
    ],
    "a": 0,
    "spot": "‘What would it look like if...’: find where the drop is now, and ask whether it would still happen.",
-   "why": "Recall of the black letters now drops only at <b>5</b> rehearsed letters: the loop overflows and rehearsal starts to cost the other letters. If the loop could hold <b>six</b>, five letters would still fit, so the 5 bar would stay level with 3 and 4. The drop at 5 is why the official practice exam concludes that the loop holds about <b>four</b> items.",
-   "src": "[PAST-1][PAST-2] Barrouillet et al. maxispan, Experiment 1 (practice exam figure); pty_t2 2.14.2",
+   "why": "Recall of the black letters now drops only at <b>5</b> rehearsed letters: the loop overflows and rehearsal starts to cost the other letters. If the loop could hold <b>six</b>, five letters would still fit, so the 5 bar would stay level with 3 and 4. The drop at 5 is why the conclusion is that the loop holds about <b>four</b> items.",
+   "src": "[CORE] Barrouillet et al. maxispan, Experiment 1 (practice exam figure); pty_t2 2.14.2",
    "hy": "3 Maxispan"
   },
   {
@@ -144,7 +144,7 @@
    "a": 3,
    "spot": "Store or process? The store is the ‘inner ear’, the rehearsal is the ‘inner voice’.",
    "why": "The <b>phonological store</b> is <b>passive</b>: it holds speech sounds that fade within about two seconds. Rehearsal is done by the separate <b>articulatory control process</b> (the inner voice). The other statements are correct descriptions of the visual cache, the central executive and the episodic buffer (Baddeley, 2012).",
-   "src": "[PAST-1][LO B2][LO B3] E&K pp. 215-218; Baddeley (1990, 2012)",
+   "src": "[CORE][LO B2][LO B3] E&K pp. 215-218; Baddeley (1990, 2012)",
    "hy": "4 WM model components"
   },
   {
@@ -160,7 +160,7 @@
    "a": 2,
    "spot": "A filled delay before recall: which items were only in short-term memory?",
    "why": "The last titles are still in <b>short-term memory</b> at the end of the list. Thirty seconds of sums push them out, so the <b>recency effect</b> disappears. The first titles were rehearsed more and reached <b>long-term memory</b>, so the <b>primacy effect</b> survives the delay.",
-   "src": "[PAST-1][LO A2][LO A5][IDQ A2] serial-position effect; M&F pp. 113-114",
+   "src": "[CORE][LO A2][LO A5][IDQ A2] serial-position effect; M&F pp. 113-114",
    "hy": "5 Serial-position curve"
   },
   {
@@ -176,7 +176,7 @@
    "a": 3,
    "spot": "Atkinson-Shiffrin = boxes in a row; what moves information from box 2 to box 3?",
    "why": "In the Atkinson-Shiffrin model, information passes <b>step by step</b> from sensory memory to short-term memory, and <b>rehearsal</b> (a control process people actively use) transfers it to long-term memory. That is also how the model explains the <b>primacy effect</b>: early items get the most rehearsal. The episodic buffer and central executive belong to Baddeley's later working memory model.",
-   "src": "[PAST-1][LO A5][IDQ A4] M&F p. 117; Atkinson & Shiffrin (1968)",
+   "src": "[CORE][LO A5][IDQ A4] M&F p. 117; Atkinson & Shiffrin (1968)",
    "hy": "7 Atkinson-Shiffrin"
   },
   {
@@ -192,7 +192,7 @@
    "a": 0,
    "spot": "Same letters, fewer units: what is the unit of short-term memory?",
    "why": "Short-term memory capacity is counted in <b>chunks</b>, not letters (Miller, 1956). Familiar abbreviations from long-term memory pack ten letters into <b>four chunks</b>, well within the limit. The capacity itself does not grow; each slot simply holds more. Release from proactive interference is about a change of meaning category across trials, which does not happen here.",
-   "src": "[PAST-1][LO A1][LO A4][IDQ A1] Miller (1956); M&F pp. 111-112",
+   "src": "[CORE][LO A1][LO A4][IDQ A1] Miller (1956); M&F pp. 111-112",
    "hy": "6 Chunking"
   },
   {
@@ -256,7 +256,7 @@
    "a": 3,
    "spot": "Cache = what it looks like. Scribe = where it is and how it moves.",
    "why": "The <b>inner scribe</b> handles <b>spatial and movement</b> information; it also rehearses the contents of the visual cache and passes information to the central executive. The <b>visual cache</b> stores form and colour. Silent rehearsal of speech is the phonological loop, and binding into chunks is the episodic buffer.",
-   "src": "[PAST-1][PAST-2][LO B3] Logie (1995); E&K p. 218",
+   "src": "[CORE][LO B3] Logie (1995); E&K p. 218",
    "hy": "4 WM components / 8 Sketchpad"
   },
   {
@@ -322,7 +322,7 @@
    "a": 0,
    "spot": "Which secondary task loads the loop, and what does it do now?",
    "why": "Articulatory suppression (saying ‘see-saw’) occupies the <b>phonological loop</b>. In the real data it left move quality almost unchanged, while the keypad task (<b>sketchpad</b>) and random number generation (<b>central executive</b>) lowered it. If the loop were needed, the suppression bars would drop too. Tapping is the control task that loads no specific component.",
-   "src": "[PAST-1][PAST-2][IDQ B1] Robbins et al. (1996), E&K Figure 6.4 (approximate values)",
+   "src": "[CORE][IDQ B1] Robbins et al. (1996), E&K Figure 6.4 (approximate values)",
    "hy": "2 Dual-task logic (chess)"
   },
   {
@@ -370,7 +370,7 @@
    "a": 1,
    "spot": "Allen et al. (2012): did counting backwards stop the binding?",
    "why": "Baddeley (2000) first assumed the executive controls access to the buffer. Later findings changed this: counting backwards hurt memory for colour-shape combinations no more than for single features (Allen et al., 2012), so binding happens <b>automatically elsewhere</b>. The buffer is now <b>an essentially passive structure</b> on which these bindings are displayed. The last option is tempting because the executive indeed stores nothing, but the buffer does not hold its plans.",
-   "src": "[PAST-1][LO B1][IDQ B6] Baddeley (2012); Allen et al. (2012); E&K pp. 225-226",
+   "src": "[CORE][LO B1][IDQ B6] Baddeley (2012); Allen et al. (2012); E&K pp. 225-226",
    "hy": "14 Episodic buffer"
   },
   {
@@ -528,7 +528,7 @@
    "a": 1,
    "spot": "Which end of the curve changed, and what removes that end?",
    "why": "Curve B has the same <b>primacy</b> effect as curve A but no <b>recency</b> effect. The last words are only in short-term memory, and a <b>distracting task</b> before recall pushes them out. A faster presentation rate would lower the start of the curve (less rehearsal, less primacy), and immediate recall is what produced the recency in curve A.",
-   "src": "[PAST-1][LO A2][LO A5][IDQ A5] serial-position effect; M&F pp. 113-114",
+   "src": "[CORE][LO A2][LO A5][IDQ A5] serial-position effect; M&F pp. 113-114",
    "hy": "5 Serial-position curve"
   }
  ],
@@ -546,7 +546,7 @@
    "a": 2,
    "spot": "Keep replacing old contents with the newest item.",
    "why": "<b>Updating</b> is monitoring working memory and quickly adding new items and deleting old ones, as in keeping track of the latest member of each category (Miyake et al., 2000). Inhibition is overriding a dominant response, shifting is switching between tasks. Task setting is one of Stuss and Alexander's processes: planning, setting up a stimulus-response relationship.",
-   "src": "[PAST-1][PAST-2][LO B4] Miyake et al. (2000); E&K p. 221",
+   "src": "[CORE][LO B4] Miyake et al. (2000); E&K p. 221",
    "hy": "1 Executive functions"
   },
   {
@@ -572,7 +572,7 @@
       ]
      }
     ],
-    "note": "Approximate values read from the figure in the official practice exam (Barrouillet et al., Experiment 1).",
+    "note": "Approximate values read from Barrouillet et al., Experiment 1.",
     "min": 0,
     "max": 1
    },
@@ -585,7 +585,7 @@
    "a": 2,
    "spot": "Where does the bar drop?",
    "why": "Recall of the non-rehearsed letters stays about the same with 3 or 4 rehearsed letters and drops with <b>5</b>. So up to four letters fit in the <b>phonological loop</b>; with five, rehearsal overflows and takes resources from the other letters. The study is about the loop, not the episodic buffer.",
-   "src": "[PAST-1][PAST-2] Barrouillet et al. maxispan, Experiment 1 (practice exam figure)",
+   "src": "[CORE] Barrouillet et al. maxispan, Experiment 1 (practice exam figure)",
    "hy": "3 Maxispan"
   },
   {
@@ -601,7 +601,7 @@
    "a": 2,
    "spot": "Storage-only box, or storage plus processing? Which model added processing?",
    "why": "In the Atkinson-Shiffrin model, short-term memory is a <b>storage</b> box on the way to long-term memory. The idea that it also does complex <b>processing</b> came with Baddeley and Hitch's <b>working memory</b>, and it is one of that model's advantages. The other three statements describe Atkinson and Shiffrin's information-processing approach correctly.",
-   "src": "[PAST-1][LO A5] M&F p. 117; E&K p. 226",
+   "src": "[CORE][LO A5] M&F p. 117; E&K p. 226",
    "hy": "7 Atkinson-Shiffrin"
   },
   {
@@ -635,7 +635,7 @@
    "a": 1,
    "spot": "Which second task hurt, and which component does it load?",
    "why": "Saying ‘hiya’ over and over is <b>articulatory suppression</b>, which occupies the <b>phonological loop</b>. It hurt recall, so the lists were held there. Pressing keys in a spatial pattern loads the <b>sketchpad</b>, and it did not hurt. The central executive does not store information at all.",
-   "src": "[PAST-1][PAST-2][LO B5] dual-task logic; E&K pp. 215-217",
+   "src": "[CORE][LO B5] dual-task logic; E&K pp. 215-217",
    "hy": "2 Dual-task logic"
   },
   {
@@ -651,7 +651,7 @@
    "a": 2,
    "spot": "After a long delay, which part of the U-curve is gone?",
    "why": "Twenty minutes of other activity empties <b>short-term memory</b>, so the <b>recency</b> advantage for the last items is lost. The first items received more rehearsal and reached <b>long-term memory</b> (primacy), so they survive. The middle items were never well remembered, so they are forgotten as well.",
-   "src": "[PAST-1][LO A2][IDQ A2] serial-position effect; M&F p. 114",
+   "src": "[CORE][LO A2][IDQ A2] serial-position effect; M&F p. 114",
    "hy": "5 Serial-position curve"
   },
   {
@@ -667,7 +667,7 @@
    "a": 3,
    "spot": "Boss who stores nothing; where in the brain, and how many functions?",
    "why": "Executive processes are linked mainly to <b>prefrontal cortex</b>, but patients with diffuse trauma or multiple sclerosis can have poor executive functioning with <b>little or no frontal damage</b> (Stuss, 2011). The executive <b>stores nothing</b>: intermediate results are held by the other components. The number and nature of executive processes is still <b>disputed</b>.",
-   "src": "[PAST-1][LO B2][CORE] E&K pp. 220-224; Stuss (2011)",
+   "src": "[CORE][LO B2][CORE] E&K pp. 220-224; Stuss (2011)",
    "hy": "21 Central executive"
   },
   {
@@ -701,7 +701,7 @@
    "a": 2,
    "spot": "Which interference hurts which memory task: is there a crossover?",
    "why": "Articulatory suppression hurts the <b>letters</b> most, so they are in the <b>phonological loop</b>. Spatial tapping hurts the <b>positions</b> most, so they are in the <b>sketchpad</b>. This crossover rules out the idea that one secondary task is just harder: then it would hurt both memory tasks.",
-   "src": "[PAST-1][PAST-2][LO B5] dual-task logic and double dissociation; E&K pp. 215-219",
+   "src": "[CORE][LO B5] dual-task logic and double dissociation; E&K pp. 215-219",
    "hy": "2 Dual-task logic / 10 Double dissociation"
   },
   {
@@ -733,7 +733,7 @@
    "a": 0,
    "spot": "Performance drops over trials, then jumps back after a switch of category.",
    "why": "Earlier animal names interfere with new ones: <b>proactive interference</b>. Switching to a different category (digits) removes most of that interference, so recall recovers: <b>release from proactive interference</b>. Retroactive interference is new material spoiling old memories; the recency effect is about list position; chunking is grouping items into units.",
-   "src": "[PAST-1 (option)][LO A3][IDQ A3] M&F pp. 115-116",
+   "src": "[CORE (option)][LO A3][IDQ A3] M&F pp. 115-116",
    "hy": "9 Release from PI"
   },
   {
@@ -749,7 +749,7 @@
    "a": 0,
    "spot": "Heard words or read words: which ones need the inner voice to get in?",
    "why": "<b>Spoken</b> words enter the <b>phonological store</b> directly. It is <b>written</b> words that must first be ‘said’ by the articulatory control process to get in (Baddeley, 1990). That is why articulatory suppression removes the word-length effect for written words. The other statements are correct.",
-   "src": "[PAST-1][LO B3][IDQ B2] Baddeley (1990), E&K Figure 6.5",
+   "src": "[CORE][LO B3][IDQ B2] Baddeley (1990), E&K Figure 6.5",
    "hy": "13 Phonological loop"
   }
  ]

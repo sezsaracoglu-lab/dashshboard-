@@ -138,11 +138,11 @@
         + '</p></div>';
     }
     if (q.recon) {
-      h += '<div class="blk flagb"><div class="lbl">📝 Reconstructed</div><p>'
+      h += '<div class="blk flagb"><div class="lbl">📝 About this question</div><p>'
         + q.recon + '</p></div>';
     }
     if (q.recall) {
-      h += '<div class="blk flagb rcl"><div class="lbl">⚠️ Check against your note'
+      h += '<div class="blk flagb rcl"><div class="lbl">⚠️ Check the numbers'
         + '</div><p>' + q.recall + '</p></div>';
     }
     return h;
@@ -157,8 +157,8 @@
     if (!s.theme && q.theme && META.themes[q.theme]) {
       tags.push('<span class="tg">' + esc(META.themes[q.theme]) + '</span>');
     }
-    if (q.recon) tags.push('<span class="tg rec">reconstructed</span>');
-    if (q.recall) tags.push('<span class="tg rcl">check your note</span>');
+    if (q.recon) tags.push('<span class="tg rec">adapted</span>');
+    if (q.recall) tags.push('<span class="tg rcl">check the numbers</span>');
     sec.innerHTML = '<div class="qhead"><span class="qno">Question ' + (i + 1) + '</span>'
       + '<span class="qtags">' + tags.join('') + '</span></div>'
       + (q.src ? '<div class="qhead"><span>' + q.src + '</span></div>' : '')
@@ -351,8 +351,8 @@
     var nrcl = s.questions.filter(function (q) { return !!q.recall; }).length;
     var pills = ['<span class="pill">' + s.questions.length + ' questions</span>',
       '<span class="pill y">average exam chance ~' + avg + '%</span>'];
-    if (nrec) pills.push('<span class="pill v">' + nrec + ' reconstructed</span>');
-    if (nrcl) pills.push('<span class="pill c">' + nrcl + ' to check against your note</span>');
+    if (nrec) pills.push('<span class="pill v">' + nrec + ' adapted</span>');
+    if (nrcl) pills.push('<span class="pill c">' + nrcl + ' with numbers to check</span>');
 
     var intro = el('div', 'card lead intro');
     intro.innerHTML = '<h2>' + s.icon + ' ' + esc(s.name) + '</h2><p>' + esc(s.blurb)

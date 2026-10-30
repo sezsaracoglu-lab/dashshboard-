@@ -1,10 +1,9 @@
-// Set 2: built from students' recollections of the 2025 exam.
-// The topics come from those recollections; the exact wording and the answer options are reconstructed.
+// Set 2: Practice paper 2.
 EXAMS.push({
   id: "set2", "group": "mock",
   shuffle: true,
-  title: "The 2025 exam (reconstructed)",
-  blurb: "Questions rebuilt from what students remembered of the 2025 exam. The topics are real; the wording and options are reconstructed, and checked against your study material.",
+  title: "Practice paper 2",
+  blurb: "A full practice paper. Every question is checked against your study material.",
   questions: [
 { q: "Which description fits <i>positive affect</i> best?",
   o: ["A general emotional state characterised by pleasant feelings and approach-oriented motivation", "A short, intense reaction to one specific event", "A conscious judgement that a situation is safe", "A neutral, low-arousal mood without motivation"], a: 0, t: "emo",
@@ -29,7 +28,7 @@ EXAMS.push({
 { q: "Which statement correctly summarises the results of Soares and Storm (2018)?",
   o: ["Observe was best; photos impaired memory even when they were not kept (Snapchat, Delete)", "Deleting the photo restored memory to the Observe level", "Snapchat photos were remembered better than Camera photos", "Only kept photos (Camera) impaired memory, as offloading predicts"], a: 0, t: "photo",
   spot: "Was memory still worse when the photo was gone?",
-  why: "Observe was best. In Experiment 1 Snapchat was even <b>worse</b> than Camera; in Experiment 2 Delete was <b>as bad as</b> Camera. So not keeping the photo did not help: evidence against offloading and for <b>attentional disengagement</b>. (Some students remembered this the other way round; the article is clear.)" },
+  why: "Observe was best. In Experiment 1 Snapchat was even <b>worse</b> than Camera; in Experiment 2 Delete was <b>as bad as</b> Camera. So not keeping the photo did not help: evidence against offloading and for <b>attentional disengagement</b>. (This is easy to remember the other way round; the article is clear.)" },
 { q: "A shop shows the same discount as “25% off” or as “pay 75%”, and customers choose differently. Which principle of expected utility theory is violated?",
   o: ["Transitivity", "Invariance", "Cancellation", "Dominance"], a: 1, t: "dec",
   spot: "Same option, different description.",
@@ -117,7 +116,7 @@ EXAMS.push({
 { q: "In the maxispan procedure, recall of the refreshed items was worse with 3 verbally rehearsed items than with 4. Why?",
   o: ["The phonological loop was underused", "The episodic buffer was overloaded", "The central executive was switched off", "There was more proactive interference with 3 items"], a: 0, t: "wm",
   spot: "3 is below the loop's capacity.",
-  why: "The loop holds about <b>4</b> items. With only 3 it is <b>underused</b>, so more has to be kept by attentional refreshing; 4 uses the loop optimally; with 5 it overflows. This fits the official practice question on Barrouillet et al. (2020)." },
+  why: "The loop holds about <b>4</b> items. With only 3 it is <b>underused</b>, so more has to be kept by attentional refreshing; 4 uses the loop optimally; with 5 it overflows. This fits the practice question on Barrouillet et al. (2020)." },
 { q: "Russian has separate basic words for light blue and dark blue; English does not. Russians discriminate light from dark blue faster than English speakers. When does this advantage disappear?",
   o: ["Under spatial interference", "Under verbal interference", "When the colours are shown for a long time", "Never: it is a perceptual difference"], a: 1, t: "lang",
   spot: "Is the advantage carried by words?",

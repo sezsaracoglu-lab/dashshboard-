@@ -1,10 +1,10 @@
-// High-yield sets: questions ranked by an evidence-based blueprint (past exams, learning objectives, in-depth questions, centrality in readings and slides). Options are shuffled.
+// High-yield sets: questions ranked by an evidence-based blueprint (earlier practice papers, learning objectives, in-depth questions, centrality in readings and slides). Options are shuffled.
 EXAMS.push({
  "id": "hym1",
  "group": "hy",
  "shuffle": true,
  "title": "High-yield mock 1",
- "blurb": "A full 40-question mock exam in the format of the real exam: 10 questions from the lecture slides and 30 from the eight themes (4 each from Themes 1 to 6, 3 each from Themes 7 and 8). Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "A full 40-question mock exam in exam format: 10 questions from the lecture slides and 30 from the eight themes (4 each from Themes 1 to 6, 3 each from Themes 7 and 8). Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "find",
@@ -472,7 +472,7 @@ EXAMS.push({
       ]
      }
     ],
-    "note": "Approximate values read from the figure in the official practice exam (Barrouillet et al., Experiment 1).",
+    "note": "Approximate values read from Barrouillet et al., Experiment 1.",
     "min": 0,
     "max": 1
    },
@@ -647,7 +647,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "High-yield mock 2",
- "blurb": "A full 40-question mock exam in the format of the real exam: 10 questions from the lecture slides and 30 from the eight themes (4 each from Themes 1 to 6, 3 each from Themes 7 and 8). Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "A full 40-question mock exam in exam format: 10 questions from the lecture slides and 30 from the eight themes (4 each from Themes 1 to 6, 3 each from Themes 7 and 8). Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "comp",
@@ -1337,7 +1337,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "High-yield mock 3",
- "blurb": "A full 40-question mock exam in the format of the real exam: 10 questions from the lecture slides and 30 from the eight themes (4 each from Themes 1 to 6, 3 each from Themes 7 and 8). Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "A full 40-question mock exam in exam format: 10 questions from the lecture slides and 30 from the eight themes (4 each from Themes 1 to 6, 3 each from Themes 7 and 8). Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "def",
@@ -1935,7 +1935,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "Theme 1 · Attention",
- "blurb": "25 high-yield questions on Attention. Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "25 high-yield questions on Attention. Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "app",
@@ -2378,7 +2378,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "Theme 2 · Working memory",
- "blurb": "25 high-yield questions on Working memory. Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "25 high-yield questions on Working memory. Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "app",
@@ -2446,7 +2446,7 @@ EXAMS.push({
       ]
      }
     ],
-    "note": "Approximate values read from the figure in the official practice exam (Barrouillet et al., Experiment 1).",
+    "note": "Approximate values read from Barrouillet et al., Experiment 1.",
     "min": 0,
     "max": 1
    },
@@ -2458,7 +2458,7 @@ EXAMS.push({
    ],
    "a": 0,
    "spot": "‘What would it look like if...’: find where the drop is now, and ask whether it would still happen.",
-   "why": "Recall of the black letters now drops only at <b>5</b> rehearsed letters: the loop overflows and rehearsal starts to cost the other letters. If the loop could hold <b>six</b>, five letters would still fit, so the 5 bar would stay level with 3 and 4. The drop at 5 is why the official practice exam concludes that the loop holds about <b>four</b> items."
+   "why": "Recall of the black letters now drops only at <b>5</b> rehearsed letters: the loop overflows and rehearsal starts to cost the other letters. If the loop could hold <b>six</b>, five letters would still fit, so the 5 bar would stay level with 3 and 4. The drop at 5 is why the conclusion is that the loop holds about <b>four</b> items."
   },
   {
    "s": "fig",
@@ -2871,7 +2871,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "Theme 3 · Autobiographical memory",
- "blurb": "25 high-yield questions on Autobiographical memory. Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "25 high-yield questions on Autobiographical memory. Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "fig",
@@ -3353,7 +3353,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "Theme 4 · Concepts and categories",
- "blurb": "25 high-yield questions on Concepts and categories. Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "25 high-yield questions on Concepts and categories. Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "app",
@@ -3819,7 +3819,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "Theme 5 · Mental imagery",
- "blurb": "25 high-yield questions on Mental imagery. Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "25 high-yield questions on Mental imagery. Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "app",
@@ -4316,7 +4316,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "Theme 6 · Judgement and decisions",
- "blurb": "25 high-yield questions on Judgement and decisions. Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "25 high-yield questions on Judgement and decisions. Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "app",
@@ -4772,7 +4772,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "Theme 7 · Problem solving",
- "blurb": "25 high-yield questions on Problem solving. Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "25 high-yield questions on Problem solving. Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "def",
@@ -5243,7 +5243,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "Theme 8 · LLMs in psychology",
- "blurb": "25 high-yield questions on LLMs in psychology. Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "25 high-yield questions on LLMs in psychology. Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "def",
@@ -5659,7 +5659,7 @@ EXAMS.push({
  "group": "hy",
  "shuffle": true,
  "title": "Lecture slides",
- "blurb": "25 high-yield questions on the five lecture slide decks (5 per lecture). Every question targets a high-yield item: content asked on the past exams (official practice exam, 2025 exam), learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
+ "blurb": "25 high-yield questions on the five lecture slide decks (5 per lecture). Every question targets a high-yield item: content from earlier practice papers, learning objectives, Canvas in-depth questions and the most central studies, figures and concepts in the readings and slides.",
  "questions": [
   {
    "s": "app",

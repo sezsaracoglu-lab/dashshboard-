@@ -13,7 +13,7 @@
    "a": 1,
    "spot": "Two tasks at the same moment, or one after the other in turns?",
    "why": "The DJ does two things <b>at the same time</b> (talking and mixing): <b>divided attention</b>. The teacher does the tasks <b>alternately</b>, never at the same moment: <b>task switching</b>. The lecture stresses that going back and forth is not divided attention, which is why the reversed option is the tempting trap.",
-   "src": "[PAST-1][PAST-2][CORE] l1 slides 4-6",
+   "src": "[CORE] l1 slides 4-6",
    "hy": "Forms of attention in everyday scenarios"
   },
   {
@@ -68,7 +68,7 @@
    "a": 3,
    "spot": "NOT correct: look at the right-hand side of the switch line. Does it reach the repetition line?",
    "why": "At 1250 ms the switch line is still clearly above the repetition line: that leftover gap is the <b>residual cost</b>, and going from 650 to 1250 ms hardly helps any more. So preparation <b>reduces</b> the switch cost (preparation effect) but never removes it. The other statements are correct: the biggest gap is at 50 ms, and repetition trials float above the single-task line (<b>mixing cost</b>).",
-   "src": "[PAST-1][CORE] Monsell (2003), l1 slides 7-8",
+   "src": "[CORE] Monsell (2003), l1 slides 7-8",
    "hy": "Task-switching costs"
   },
   {
@@ -84,7 +84,7 @@
    "a": 1,
    "spot": "Residual = what is left over.",
    "why": "The <b>residual cost</b> is the part of the switch cost that preparation cannot remove: even with a long interval, switch trials stay slower. The first option is the <b>mixing cost</b>, the third is the <b>preparation effect</b>, and the fourth is simply the switch cost at a short interval.",
-   "src": "[PAST-1][CORE] Monsell (2003), l1 slides 7-8",
+   "src": "[CORE] Monsell (2003), l1 slides 7-8",
    "hy": "Task-switching costs"
   },
   {
@@ -116,7 +116,7 @@
    "a": 0,
    "spot": "Compare the forms: what is added (time) and what differs (at the same time vs alternately)?",
    "why": "Statement I is true: the lecture describes <b>sustained attention</b> (vigilance) as selective attention plus time. Statement II is false: in <b>task switching</b> the tasks are done <b>alternately</b>, whereas <b>divided attention</b> means doing them at the same time. Having two tasks is not enough to call it divided.",
-   "src": "[PAST-1][PAST-2][CORE] l1 slides 5-6",
+   "src": "[CORE] l1 slides 5-6",
    "hy": "Forms of attention in everyday scenarios"
   },
   {
@@ -132,7 +132,7 @@
    "a": 1,
    "spot": "When did the groups differ: during learning, between learning and test, or at the test?",
    "why": "Learning and testing were identical; the groups only differed in what happened <b>in between</b>. Sleep helps <b>consolidation</b>, which belongs to the <b>storage</b> stage. Encoding would require a difference during learning, retrieval a difference at the test. Recoding is part of encoding.",
-   "src": "[PAST-1][PAST-2][CORE][LEX] l2 slides 8-12",
+   "src": "[CORE][LEX] l2 slides 8-12",
    "hy": "Memory stages"
   },
   {
@@ -192,7 +192,7 @@
    "a": 3,
    "spot": "Which feature belongs to the other branch of declarative memory?",
    "why": "Reliving an experience tied to <b>when and where</b> is the hallmark of <b>episodic</b> memory. <b>Semantic</b> memory answers 'what', has no reliving, is resistant to forgetting, and sits next to episodic memory under <b>declarative</b> memory.",
-   "src": "[PAST-1][CORE] l2 slides 5-7",
+   "src": "[CORE] l2 slides 5-7",
    "hy": "LTM hierarchy"
   },
   {
@@ -240,7 +240,7 @@
    "a": 0,
    "spot": "Duration, intensity, cause: which profile matches?",
    "why": "A <b>mood</b> lasts long, is relatively weak and has no clear cause (irritable all afternoon without knowing why). A short, intense, event-driven reaction is an <b>emotion</b>. <b>Affect</b> is the umbrella term covering both. An evaluation of an event is an <b>appraisal</b>.",
-   "src": "[PAST-2][CORE] l3 slide 3",
+   "src": "[CORE] l3 slide 3",
    "hy": "Emotion vs mood vs affect"
   },
   {
@@ -256,7 +256,7 @@
    "a": 1,
    "spot": "Answer three things in order: valence, intensity, direction.",
    "why": "Wanting the pastry is <b>pleasant</b> (positive valence) with a strong urge to <b>approach</b> (high motivational intensity). High intensity <b>narrows</b> attention, whatever the valence. Positive affect only broadens attention when motivational intensity is <b>low</b>, as when relaxing to music.",
-   "src": "[PAST-2][CORE][LEX] l3 slides 10-11",
+   "src": "[CORE][LEX] l3 slides 10-11",
    "hy": "Motivational dimensional model"
   },
   {
@@ -351,7 +351,7 @@
    "a": 1,
    "spot": "Determinism = the mechanism; relativity = the consequence.",
    "why": "<b>Determinism</b> is the claim that language <b>determines</b> non-linguistic cognition. <b>Relativity</b> is the consequence: speakers of <b>different languages think differently</b>. The third option reverses the direction, and the fourth contradicts the lecture's point that there is no natural way to carve up reality.",
-   "src": "[PAST-2][CORE] l4 slide 2",
+   "src": "[CORE] l4 slide 2",
    "hy": "Sapir-Whorf: determinism, relativity, strong vs weak"
   },
   {
@@ -398,7 +398,7 @@
    "a": 0,
    "spot": "If perception itself had changed, could blocking language take the advantage away?",
    "why": "If Russian had permanently restructured perception, blocking the verbal system would not matter: the cross-category advantage would show in <b>all</b> conditions. In reality it <b>disappeared under verbal interference</b> but not under spatial interference, so the colour words work <b>online</b> during the task: weak, not strong, determinism.",
-   "src": "[PAST-2][CORE] Winawer et al. (2007), l4 slides 7-11",
+   "src": "[CORE] Winawer et al. (2007), l4 slides 7-11",
    "hy": "Russian blues"
   },
   {
@@ -414,7 +414,7 @@
    "a": 3,
    "spot": "Only tense distinguished the test pictures. Who encodes 'when'?",
    "why": "English obliges speakers to mark <b>tense</b>, so they encoded the stage of the action more distinctly (about <b>41%</b>). Indonesian speakers were around <b>31%</b>, close to chance (33%). Paying attention to the actor would not help, because the actor was the same in all test pictures.",
-   "src": "[PAST-2][CORE] Boroditsky et al. (2002), l4 slides 20-24",
+   "src": "[CORE] Boroditsky et al. (2002), l4 slides 20-24",
    "hy": "Tense"
   },
   {
@@ -430,7 +430,7 @@
    "a": 0,
    "spot": "Strong = language makes thinking impossible without the word; weak = it makes some things easier.",
    "why": "Statement I is true: with only two colour words, the Dani could still learn colour categories (Heider, 1972), so the <b>strong</b> version was abandoned. Statement II is false: because the advantage <b>vanishes</b> when language is blocked, language works <b>online</b> and does not permanently restructure perception, which fits the <b>weak</b> version.",
-   "src": "[PAST-2][CORE] l4 slides 3-11",
+   "src": "[CORE] l4 slides 3-11",
    "hy": "Sapir-Whorf: determinism, relativity, strong vs weak"
   },
   {
@@ -462,7 +462,7 @@
    "a": 0,
    "spot": "Congruent = intuition and logic agree; incongruent = they clash.",
    "why": "A problem is <b>incongruent</b> (a conflict problem) when the <b>base rate</b> (e.g. 995 democrats) and the stereotypical <b>description</b> (sounds republican) point in different directions. Extreme base rates occur in both versions; what changes is whether they agree with the description.",
-   "src": "[PAST-2][CORE] l5 slide 8",
+   "src": "[CORE] l5 slide 8",
    "hy": "Congruent vs incongruent; conflict effect; belief bias"
   },
   {
@@ -478,7 +478,7 @@
    "a": 0,
    "spot": "Who detects conflict in each model?",
    "why": "Statement I is true: in the <b>serial</b> model System 1 gives a default answer and only an engaged System 2 can notice a problem. Statement II is false: in the <b>parallel</b> model detection comes from System 2 and is slow and effortful. Fast, effortless detection by System 1's logical intuitions is the <b>hybrid</b> model.",
-   "src": "[PAST-1][PAST-2][CORE] l5 slide 7",
+   "src": "[CORE] l5 slide 7",
    "hy": "Conflict detection and the serial/parallel/hybrid tests"
   },
   {
@@ -515,7 +515,7 @@
    "a": 0,
    "spot": "A bias blind spot predicts equal times. Are the times equal?",
    "why": "The <b>serial</b> model assumes a <b>bias blind spot</b>: biased reasoners only look at the description, so they should take about equally long on both versions. Instead they were slower on <b>incongruent</b> problems (about 15 vs 12 s), so they sensed the conflict. That contradicts the serial model and fits the parallel and hybrid models.",
-   "src": "[PAST-2][CORE] De Neys & Glumicic (2008), l5 slides 8-11",
+   "src": "[CORE] De Neys & Glumicic (2008), l5 slides 8-11",
    "hy": "Conflict detection and the serial/parallel/hybrid tests"
   },
   {
@@ -531,7 +531,7 @@
    "a": 1,
    "spot": "Tie up System 2: does the alarm still ring?",
    "why": "Confidence stayed <b>lower on incongruent problems</b> (about 85% vs 97%) <b>even under load</b>. Since the load knocked out System 2, conflict detection must be fast and automatic: System 1 contains <b>logical intuitions</b>. That fits the <b>hybrid</b> model and not the parallel model, which predicts detection to vanish under load.",
-   "src": "[PAST-2][CORE][LEX] Bago & De Neys (2017), l5 slide 12",
+   "src": "[CORE][LEX] Bago & De Neys (2017), l5 slide 12",
    "hy": "Conflict detection and the serial/parallel/hybrid tests"
   },
   {
@@ -547,7 +547,7 @@
    "a": 1,
    "spot": "Valid = the conclusion must follow from the premises, whether it is true or not.",
    "why": "Sharks can swim like fish, but nothing in the premises says that everything that swims is a fish, so the conclusion does <b>not follow</b>: <b>invalid</b>. Yet the conclusion is true and <b>believable</b>. Logic and belief disagree, so this is a <b>conflict</b> problem, the type accepted about 71% of the time (Evans, 2003).",
-   "src": "[PAST-2][CORE] Evans (2003), l5 slides 3-5",
+   "src": "[CORE] Evans (2003), l5 slides 3-5",
    "hy": "Congruent vs incongruent; conflict effect; belief bias"
   }
  ],
@@ -565,7 +565,7 @@
    "a": 0,
    "spot": "Long period + rare events = vigilance.",
    "why": "<b>Vigilance</b> means keeping attention on one source for a long time while waiting for <b>infrequent</b> events, like the dam operator. The train reader is <b>selective</b> attention (shutting out noise), the cook is <b>divided</b> attention (two things at once), and the designer is <b>task switching</b> (alternating).",
-   "src": "[PAST-2][CORE] l1 slide 5",
+   "src": "[CORE] l1 slide 5",
    "hy": "Forms of attention in everyday scenarios"
   },
   {
@@ -581,7 +581,7 @@
    "a": 3,
    "spot": "Switch cost: compare within the mixed block. Mixing cost: mixed block vs single block.",
    "why": "The <b>switch cost</b> compares switch trials with repetition trials <b>within the mixed block</b>: 830 - 610 = 220 ms. The difference between repetition trials and the single-task block, 610 - 450 = 160 ms, is the <b>mixing cost</b>. The student added both steps of the stairs together. A residual cost can only be judged at a long preparation interval.",
-   "src": "[PAST-1][PAST-2][CORE][LEX] l1 slide 11",
+   "src": "[CORE][LEX] l1 slide 11",
    "hy": "Task-switching costs"
   },
   {
@@ -597,7 +597,7 @@
    "a": 3,
    "spot": "Inconsistent information after the event pulls the memory towards the suggestion.",
    "why": "This mirrors Loftus (1977): <b>inconsistent post-event information</b> bends a detail towards the suggestion, so the remembered colour shifts towards <b>blue</b>. Strengthening only happens when the information is <b>consistent</b> with what was seen. The effect is about distortion, not just confidence.",
-   "src": "[PAST-1][CORE] Loftus (1977), l2 slide 17",
+   "src": "[CORE] Loftus (1977), l2 slide 17",
    "hy": "Misinformation effect"
   },
   {
@@ -613,7 +613,7 @@
    "a": 0,
    "spot": "What (fact), when and where (episode), or how (skill)?",
    "why": "A fact without time or place is <b>semantic</b>. A personal event tied to a place and moment is <b>episodic</b>. A practised skill that runs automatically is <b>procedural</b>. Semantic and episodic are declarative; procedural is a separate branch of long-term memory.",
-   "src": "[PAST-1][CORE][LEX] l2 slides 5-7",
+   "src": "[CORE][LEX] l2 slides 5-7",
    "hy": "LTM hierarchy"
   },
   {
@@ -629,7 +629,7 @@
    "a": 2,
    "spot": "Broadening needs two things: pleasant and no urge to act.",
    "why": "Only the hammock combines <b>positive</b> affect with <b>low</b> motivational intensity, which <b>broadens</b> attention. The bees and the train are negative and high in intensity, and the dessert is positive but high in intensity (wanting): all three <b>narrow</b> attention.",
-   "src": "[PAST-2][CORE] l3 slide 10",
+   "src": "[CORE] l3 slide 10",
    "hy": "Motivational dimensional model"
   },
   {
@@ -661,7 +661,7 @@
    "a": 1,
    "spot": "A control condition: what alternative explanation does it exclude?",
    "why": "If both kinds of interference removed the advantage, it could simply be that <b>any</b> busy mind loses it. Because the advantage disappeared under <b>verbal</b> but not <b>spatial</b> interference, the effect depends on <b>language</b> specifically. The spatial task is the <b>control</b>.",
-   "src": "[PAST-2][CORE] Winawer et al. (2007), l4 slides 7-10",
+   "src": "[CORE] Winawer et al. (2007), l4 slides 7-10",
    "hy": "Russian blues"
   },
   {
@@ -677,7 +677,7 @@
    "a": 0,
    "spot": "English grammar puts a clock on every verb.",
    "why": "English speakers weigh <b>tense</b> (when), so two pictures at the <b>same stage</b> feel alike even with different actors (about 6.3 vs 5.6). Indonesian speakers do the reverse: <b>same actor</b>, different stage is rated more similar. Background and camera angle were not manipulated.",
-   "src": "[PAST-2][CORE] Boroditsky et al. (2002), l4 slides 20-23",
+   "src": "[CORE] Boroditsky et al. (2002), l4 slides 20-23",
    "hy": "Tense"
   },
   {
@@ -693,7 +693,7 @@
    "a": 2,
    "spot": "Fast and automatic, or slow and effortful?",
    "why": "Mental multiplication of two-digit numbers is slow, <b>effortful</b> and conscious: <b>System 2</b> (like 22 x 76 on the slide). Reading a simple text, recognising an emotion and completing a familiar phrase run automatically through <b>associations</b>: <b>System 1</b>.",
-   "src": "[PAST-1][CORE] Kahneman (2011), l5 slide 6",
+   "src": "[CORE] Kahneman (2011), l5 slide 6",
    "hy": "System 1 vs System 2"
   },
   {
@@ -709,7 +709,7 @@
    "a": 1,
    "spot": "In which model does detection need System 2?",
    "why": "In the <b>parallel</b> model conflict is detected by <b>System 2</b>, so burdening System 2 should <b>remove</b> detection. In the <b>hybrid</b> model detection comes from <b>logical intuitions in System 1</b>, so it should <b>survive</b> the load. Bago & De Neys (2017) found that it survived.",
-   "src": "[PAST-2][CORE] l5 slides 7 and 12",
+   "src": "[CORE] l5 slides 7 and 12",
    "hy": "Conflict detection and the serial/parallel/hybrid tests"
   }
  ],
@@ -727,7 +727,7 @@
    "a": 0,
    "spot": "Mixing cost = repetition trial (mixed block) minus single-task trial.",
    "why": "In AABB runs the <b>second</b> trial of a run is the <b>repetition</b> trial: 610 ms. The <b>mixing cost</b> is 610 - 470 = <b>140 ms</b>. The 270 ms (880 - 610) is the switch cost, and 410 ms (880 - 470) wrongly lumps both costs together.",
-   "src": "[PAST-1][PAST-2][CORE] l1 slides 6-8",
+   "src": "[CORE] l1 slides 6-8",
    "hy": "Task-switching costs"
   },
   {
@@ -743,7 +743,7 @@
    "a": 3,
    "spot": "Where do repetition trials come from: the same mixed sequence or a pure block?",
    "why": "In alternating runs (e.g. AABB), the <b>repetition trials</b> are the second trials of each run, <b>inside the same mixed block</b>. Trials from a separate block with one task are <b>single-task trials</b>, used for the mixing cost. The other three statements describe the paradigm correctly.",
-   "src": "[PAST-1][CORE] l1 slide 6",
+   "src": "[CORE] l1 slide 6",
    "hy": "Task-switching costs"
   },
   {
@@ -759,7 +759,7 @@
    "a": 2,
    "spot": "One verb in the question at the moment of remembering.",
    "why": "Changing only the <b>verb</b> in the question is the <b>Loftus & Palmer (1974)</b> design (contacted 30.5 mph vs smashed 40.8 mph). The lecture files it under <b>retrieval</b> biases, because the wording acts when the memory is being brought back. Godden & Baddeley is also retrieval, but about the physical context, not the question.",
-   "src": "[PAST-1][CORE] l2 slides 22-23",
+   "src": "[CORE] l2 slides 22-23",
    "hy": "Retrieval biases: leading questions and context"
   },
   {
@@ -818,7 +818,7 @@
    "a": 1,
    "spot": "Does the new information disturb the old memory, or the other way round?",
    "why": "The misleading question comes <b>after</b> the event and disrupts the memory of it: later information reaching back to an earlier trace is <b>retroactive</b> interference. Proactive interference would be old information disturbing new learning. Weapon focus is an encoding problem during the event itself.",
-   "src": "[PAST-1][CORE] Loftus et al. (1978), l2 slides 18-20",
+   "src": "[CORE] Loftus et al. (1978), l2 slides 18-20",
    "hy": "Misinformation effect"
   },
   {
@@ -866,7 +866,7 @@
    "a": 1,
    "spot": "Strong = a wall. Weak = a slope.",
    "why": "The <b>weak</b> version says language influences the <b>ease</b>, bias or fluency of thinking (Slobin; Hunt & Agnoli), not what can be thought. The first and third options are the <b>strong</b> version, abandoned after the Dani findings. The last option denies any influence at all.",
-   "src": "[PAST-2][CORE] l4 slides 3-5",
+   "src": "[CORE] l4 slides 3-5",
    "hy": "Sapir-Whorf: determinism, relativity, strong vs weak"
   },
   {
@@ -926,7 +926,7 @@
    "a": 2,
    "spot": "Time, sweat, doubt.",
    "why": "De Neys et al. (2011) found <b>lower confidence</b> after conflict problems (about 70% vs 79%), even in biased reasoners: they sense <b>doubt</b>. Other signs are longer response times and higher skin conductance. Being <b>faster</b> on incongruent problems is the opposite of what was found.",
-   "src": "[PAST-2][CORE] De Neys et al. (2010, 2011), l5 slides 9-11",
+   "src": "[CORE] De Neys et al. (2010, 2011), l5 slides 9-11",
    "hy": "Conflict detection and the serial/parallel/hybrid tests"
   },
   {
@@ -1113,7 +1113,7 @@
    "a": 3,
    "spot": "Compare the two invalid bars.",
    "why": "For invalid arguments, believable conclusions were accepted about <b>71%</b> of the time and unbelievable ones about <b>10%</b>: a huge effect of <b>believability</b>, so the last statement is wrong. The others are correct: valid-believable is highest (about 89%), 71% beats 56%, and if <b>validity</b> alone counted the two valid bars would match.",
-   "src": "[PAST-2][CORE] Evans (2003), l5 slides 3-5",
+   "src": "[CORE] Evans (2003), l5 slides 3-5",
    "hy": "Congruent vs incongruent; conflict effect; belief bias"
   },
   {

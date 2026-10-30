@@ -185,5 +185,6 @@ function render(){const th=IDQ[T];const qs=th.questions;I=Math.max(0,Math.min(I,
 window.addEventListener('hashchange',()=>{const m=location.hash.match(/^#t([1-8])(?:-(\d+))?/);if(m&&(+m[1]!==T||(m[2]&&+m[2]-1!==I))){T=+m[1];I=m[2]?+m[2]-1:0;render()}});
 render();
 </script>
+<script src="https://sezsaracoglu-lab.github.io/dashshboard-/assets/sitenav.js" defer></script>
 </body>
 </html>

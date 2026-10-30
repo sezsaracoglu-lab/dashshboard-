@@ -13,7 +13,7 @@
    "a": 2,
    "spot": "Two checks: must every member have it? Does having it guarantee membership?",
    "why": "Anyone who has given birth is a parent, so the feature is <b>sufficient</b>. But fathers and adoptive parents are parents without giving birth, so it is <b>not necessary</b>. The tempting ‘necessary but not sufficient’ is the reverse pattern (like four sides for a square).",
-   "src": "[PAST-1][PAST-2][LO] classical view; Murphy 4.3",
+   "src": "[CORE][LO] classical view; Murphy 4.3",
    "hy": "1 Necessary vs sufficient"
   },
   {
@@ -45,7 +45,7 @@
    "a": 0,
    "spot": "Same object, two people, two levels: who knows more?",
    "why": "For most people the everyday middle level (‘wine’) is the <b>basic level</b>. Experts know many distinguishing features, so a more specific level becomes the most differentiated and useful one for them (birdwatchers see sparrows, carpenters claw hammers). The basic level is <b>not fixed</b> by the world: it depends on the knower.",
-   "src": "[PAST-1][PAST-2][LO] basic level and expertise; Murphy 4.4 (Tanaka & Taylor, 1991)",
+   "src": "[CORE][LO] basic level and expertise; Murphy 4.4 (Tanaka & Taylor, 1991)",
    "hy": "2 Hierarchy levels / basic level"
   },
   {
@@ -84,7 +84,7 @@
    "a": 0,
    "spot": "Read the bars: which level dominates?",
    "why": "1,595 names were <b>basic level</b>, only 14 subordinate and 1 superordinate: the basic level is the default. The figure cannot show that this is universal; Berlin (1992) found that the basic level <b>shifts across cultures</b>. And superordinate categories are learned late, not first.",
-   "src": "[PAST-1][PAST-2][LO] Rosch et al. (1976); Murphy 4.4",
+   "src": "[CORE][LO] Rosch et al. (1976); Murphy 4.4",
    "hy": "2 Hierarchy levels / basic level"
   },
   {
@@ -100,7 +100,7 @@
    "a": 0,
    "spot": "Typicality = how much an item looks like the family.",
    "why": "This is <b>family resemblance</b>: typical items share many features with other members and few with other categories. Frequency has some effect but is not the main cause (a rug is seen as often as a table yet is less typical furniture). The classical view cannot explain typicality at all, since every member would be equally good.",
-   "src": "[PAST-1][LO A4] Rosch & Mervis (1975); Murphy 4.3.4",
+   "src": "[CORE][LO A4] Rosch & Mervis (1975); Murphy 4.3.4",
    "hy": "3 Typicality = family resemblance"
   },
   {
@@ -132,7 +132,7 @@
    "a": 1,
    "spot": "Classification driven by a few specific remembered examples.",
    "why": "Mila's category ‘cat’ includes the <b>specific examples</b> she remembers. New things are compared with them, so whatever closely resembles the stored Sphynx is called a cat. A prototype is an <b>average</b> built across all members; averaged over dozens of fluffy cats it is fluffy, so it does not predict calling a hairless animal a cat. Close similarity to one well-remembered example deciding the category is the exemplar signature (Allen & Brooks, 1991).",
-   "src": "[PAST-1][LO] exemplar approach; Murphy 4.5.2 (Allen & Brooks, 1991)",
+   "src": "[CORE][LO] exemplar approach; Murphy 4.5.2 (Allen & Brooks, 1991)",
    "hy": "4 Exemplar approach"
   },
   {
@@ -196,7 +196,7 @@
    "a": 2,
    "spot": "Made up on the spot to serve a goal.",
    "why": "An <b>ad hoc category</b> (Barsalou, 1983) forms for a specific goal; its members (stickers, snacks, a tablet) share nothing except that goal. Birds of prey are a natural kind, kitchen utensils are artefacts, and ‘a golden cage’ is a <b>metaphorical</b> concept, the loosest type of all.",
-   "src": "[PAST-2] Robinson-Riegler; Barsalou (1983); Goldstone & Kersten (2003)",
+   "src": "[CORE] Robinson-Riegler; Barsalou (1983); Goldstone & Kersten (2003)",
    "hy": "7 Category types"
   },
   {
@@ -212,7 +212,7 @@
    "a": 0,
    "spot": "Count the links between the prime and each target.",
    "why": "Activation <b>spreads</b> from FIRE along its links and weakens with <b>distance</b>. SMOKE is one link away and gets the biggest head start; ROSE is two links away (via RED) and gets a smaller one; CHAIR is not connected at all, so it gets no priming.",
-   "src": "[PAST-1][LO B3] Collins & Loftus (1975); Robinson-Riegler Fig. 5.11",
+   "src": "[CORE][LO B3] Collins & Loftus (1975); Robinson-Riegler Fig. 5.11",
    "hy": "5 Semantic network / spreading activation"
   },
   {
@@ -352,7 +352,7 @@
    "a": 1,
    "spot": "Shared features are the ones that can slip into the wrong drawing.",
    "why": "Shared features (eyes, four legs) are the ones that <b>intrude</b> into drawings of items that lack them. Animals have more of them, so animals get more intrusions. That is what was found: omissions did not differ by domain, and once <b>distinctiveness</b> was taken into account, domain no longer predicted intrusions.",
-   "src": "[LO C2][PAST-1 related] Bozeat et al. (2003) distinctiveness analysis",
+   "src": "[LO C2][CORE related] Bozeat et al. (2003) distinctiveness analysis",
    "hy": "16 Living vs artefact via distinctiveness"
   },
   {
@@ -368,7 +368,7 @@
    "a": 2,
    "spot": "Shared features survive; distinctive ones go.",
    "why": "Eyes are <b>shared by the whole domain</b> (almost all animals have them), and shared features are the most robust, so omitting them is least likely. The tail fan is <b>distinctive</b> and goes first, which leaves a generic bird. Four legs is a typical intrusion of a shared animal feature.",
-   "src": "[PAST-1][LO C2] Bozeat et al. (2003) Study 2",
+   "src": "[CORE][LO C2] Bozeat et al. (2003) Study 2",
    "hy": "6 Distinctive lost first, shared intrude"
   },
   {
@@ -521,7 +521,7 @@
    "a": 1,
    "spot": "Must every grandmother have it? Does it guarantee being one?",
    "why": "Every grandmother is a woman, so the feature is <b>necessary</b>. But many women are not grandmothers, so it is <b>not sufficient</b>. A definition needs features that are each necessary and together sufficient, such as ‘woman’ plus ‘parent of a parent’.",
-   "src": "[PAST-1][PAST-2] classical view; Murphy 4.3",
+   "src": "[CORE] classical view; Murphy 4.3",
    "hy": "1 Necessary vs sufficient"
   },
   {
@@ -537,7 +537,7 @@
    "a": 0,
    "spot": "Which level comes first in development?",
    "why": "‘Dog’ is the <b>basic level</b>, and basic-level names are the first labels children use (Brown, 1958), the same names adults prefer (Anglin, 1977). Superordinate categories such as ‘animal’ turn out to be particularly <b>difficult</b> for children, and subordinates come later.",
-   "src": "[PAST-1][PAST-2][LO A1] Murphy 4.4",
+   "src": "[CORE][LO A1] Murphy 4.4",
    "hy": "2 Hierarchy levels / basic level"
   },
   {
@@ -553,7 +553,7 @@
    "a": 2,
    "spot": "Concepts joined by associations, no levels or members.",
    "why": "Nodes joined by links of different kinds (RING is not a type of wedding) form a <b>semantic network</b>. Activating WEDDING <b>spreads activation</b> to directly linked RING, which is then recognised faster: semantic priming.",
-   "src": "[PAST-1][LO B3] Collins & Loftus (1975); Robinson-Riegler",
+   "src": "[CORE][LO B3] Collins & Loftus (1975); Robinson-Riegler",
    "hy": "5 Semantic network / spreading activation"
   },
   {
@@ -587,7 +587,7 @@
    "a": 3,
    "spot": "Three are findings; one mixes in the classical view.",
    "why": "Typical items are categorised faster, learned earlier, and named first (‘apples and lemons’). ‘More necessary features’ makes no sense: by definition <b>every</b> member has all necessary features. Typicality comes from <b>family resemblance</b>, not from definitions.",
-   "src": "[PAST-1][LO A4] Murphy 4.3.2",
+   "src": "[CORE][LO A4] Murphy 4.3.2",
    "hy": "3 Typicality = family resemblance"
   },
   {
@@ -653,7 +653,7 @@
    "a": 2,
    "spot": "Test both directions with a counterexample.",
    "why": "Penguins are birds that cannot fly, so flying is <b>not necessary</b>. Bats and bees fly but are not birds, so it is <b>not sufficient</b> either. A classical definition needs features that are each necessary and together sufficient, and for most everyday concepts none can be found.",
-   "src": "[PAST-1][PAST-2] classical view; Murphy 4.3",
+   "src": "[CORE] classical view; Murphy 4.3",
    "hy": "1 Necessary vs sufficient"
   },
   {
@@ -669,7 +669,7 @@
    "a": 1,
    "spot": "Most specific, broadest, everyday middle.",
    "why": "<b>Granny Smith</b> is a specific type (subordinate), <b>fruit</b> is the broad class (superordinate), and <b>apple</b> is the everyday middle level people name first (basic). Watch the order: the list is not given from specific to general.",
-   "src": "[PAST-1][PAST-2] Murphy 4.4",
+   "src": "[CORE] Murphy 4.4",
    "hy": "2 Hierarchy levels / basic level"
   },
   {
@@ -685,7 +685,7 @@
    "a": 2,
    "spot": "The context makes certain stored examples easy to retrieve.",
    "why": "In the <b>exemplar approach</b> a category is a set of stored examples, and the current context makes some of them extra <b>retrievable</b>. A single fixed <b>prototype</b> should not change with the season, which is why context effects are a problem for prototype theory.",
-   "src": "[PAST-1][LO A3] exemplar approach and context; Murphy 4.5.2",
+   "src": "[CORE][LO A3] exemplar approach and context; Murphy 4.5.2",
    "hy": "4 Exemplar approach"
   },
   {

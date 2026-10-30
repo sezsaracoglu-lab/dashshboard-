@@ -36,7 +36,7 @@
    "a": 1,
    "spot": "Look at the bar for the photo that was NOT kept and compare it with Observe.",
    "why": "Both photo bars are lower than Observe, and the Snapchat bar is even the lowest. So a photo that participants knew would disappear still <b>impaired memory</b>, which offloading cannot explain. The tempting option that only a saved photo impairs memory describes what <b>offloading</b> predicted, not what was found. Chance was .25, and all bars are clearly above it.",
-   "src": "[PAST-1][PAST-2][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11; Figure 1 (values approximate)",
+   "src": "[CORE][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11; Figure 1 (values approximate)",
    "hy": "1. Offloading vs disengagement: observed bars"
   },
   {
@@ -75,7 +75,7 @@
    "a": 3,
    "spot": "Offloading = the camera remembers for you. Which photo can no longer remember anything?",
    "why": "Offloading says you remember less because you count on the <b>camera</b> to store the information. A deleted photo cannot do that, so memory in the <b>Delete</b> condition should return to the Observe level, with only Camera lower. In the real data, Delete is as low as Camera, which fits <b>attentional disengagement</b> instead. The Camera bar being lower is predicted by both accounts, so it does not need to change.",
-   "src": "[PAST-1][PAST-2][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11; Figure 1 (values approximate)",
+   "src": "[CORE][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11; Figure 1 (values approximate)",
    "hy": "1. Offloading vs disengagement: predicted bars"
   },
   {
@@ -91,7 +91,7 @@
    "a": 0,
    "spot": "NOT correct: find the one result that goes against what the article reports.",
    "why": "Deleted photos were remembered as <b>badly</b> as saved ones (Camera and Delete did not differ, p = .80), and both were worse than Observe. The other statements are true: the design was <b>within-subjects</b>, the four-option detail questions put chance at .25, and 52% of those surveyed thought photos help memory while only 19% said they impair it.",
-   "src": "[PAST-1][PAST-2][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11",
+   "src": "[CORE][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11",
    "hy": "10. Soares & Storm design and results"
   },
   {
@@ -107,7 +107,7 @@
    "a": 1,
    "spot": "What were the two weak points of the Snapchat condition, and how were they fixed?",
    "why": "In Experiment 1, using Snapchat probably took <b>extra time</b> from the 15 seconds of viewing, and participants may not have believed the photos were really gone. Experiment 2 fixed both: the 15 seconds of viewing began <b>after</b> the photo, and participants <b>deleted</b> each photo themselves. Participants did not choose what to photograph, the design stayed within-subjects, and the Tetris delay was kept.",
-   "src": "[PAST-1][PAST-2][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11; IDQ C1",
+   "src": "[CORE][LO C2][IDQ C1] Soares & Storm (2018); pty_t3 3.11; IDQ C1",
    "hy": "10. Soares & Storm design"
   },
   {
@@ -123,7 +123,7 @@
    "a": 0,
    "spot": "Knowing WHO or WHAT holds the information instead of holding it yourself.",
    "why": "In a <b>transactive memory</b> system you store a directory of who (or what) knows something rather than the information itself (Wegner, 1987). It works between people (the brother) and between people and devices (the phone), which is the idea behind <b>offloading</b>. Attentional disengagement is about losing focus while photographing, and source amnesia is forgetting where a fact came from.",
-   "src": "[PAST-2][LO C1][IDQ C2] Wegner (1987); pty_t3 3.11.4",
+   "src": "[CORE][LO C1][IDQ C2] Wegner (1987); pty_t3 3.11.4",
    "hy": "4. Transactive memory / offloading"
   },
   {
@@ -139,7 +139,7 @@
    "a": 2,
    "spot": "Disengagement = attention leaves the moment.",
    "why": "Attentional disengagement says the <b>act</b> of photographing draws attention away from the experience, so it is processed less deeply. This should happen whether or not the photo is kept. The second option is the rival <b>offloading</b> hypothesis, which depends on expecting the photo to be available later.",
-   "src": "[PAST-1][LO C3] Soares & Storm (2018); pty_t3 3.11",
+   "src": "[CORE][LO C3] Soares & Storm (2018); pty_t3 3.11",
    "hy": "1. Two explanations defined"
   },
   {
@@ -171,7 +171,7 @@
    "a": 2,
    "spot": "Did the memory pop up by itself, or was it searched for step by step?",
    "why": "In I, a cue activates one specific memory at once, without a search: <b>direct retrieval</b>. In II, you search on purpose, from lifetime period to general event to one specific event, guided by the goal of the question: <b>generative retrieval</b> through the working self.",
-   "src": "[PAST-1][PAST-2][LO A2][IDQ A1] Conway & Pleydell-Pearce (2000); pty_t3 3.4",
+   "src": "[CORE][LO A2][IDQ A1] Conway & Pleydell-Pearce (2000); pty_t3 3.4",
    "hy": "2. Generative vs direct retrieval"
   },
   {
@@ -187,7 +187,7 @@
    "a": 0,
    "spot": "Direct retrieval bypasses the working self. What does that mean for links to identity?",
    "why": "Direct retrieval <b>bypasses the working self</b>, so its memories are more specific but <b>less</b> relevant to personal identity than generated ones. The other statements are research findings: direct retrieval was about three times faster (Uzer et al., 2012) and showed more <b>left hippocampus</b> activity, while generative retrieval showed more prefrontal activity.",
-   "src": "[PAST-1][LO A2][IDQ A1] Eysenck & Keane; pty_t3 3.4.1",
+   "src": "[CORE][LO A2][IDQ A1] Eysenck & Keane; pty_t3 3.4.1",
    "hy": "2. Generative vs direct retrieval: evidence"
   },
   {
@@ -328,7 +328,7 @@
    "a": 0,
    "spot": "Elaborative talk adds detail and new questions; does more of it push memories earlier?",
    "why": "There was a strong <b>negative correlation</b> between the ratio of elaborations to repetitions and the age of the earliest memory: more <b>elaborative</b> talk, earlier first memories. Because parents elaborate more with daughters, this style of talk, not sex as such, helps explain <b>female superiority</b> in autobiographical recall.",
-   "src": "[PAST-1][IDQ A3][LO A1] Jack et al. (2009); rev th3 Part A",
+   "src": "[CORE][IDQ A3][LO A1] Jack et al. (2009); rev th3 Part A",
    "hy": "7. Female superiority / elaborative style"
   },
   {
@@ -344,7 +344,7 @@
    "a": 3,
    "spot": "What does the baby keep (skills) and what does the adult lack (events)?",
    "why": "Infants learn and keep skills and habits, which is <b>procedural</b> memory. Memory for specific personal events, <b>episodic</b> memory, develops later, which is why adults have childhood amnesia for these years. Retrograde amnesia is memory loss after brain damage, not normal development.",
-   "src": "[PAST-1][LO A1] set1 key; Robinson-Riegler",
+   "src": "[CORE][LO A1] set1 key; Robinson-Riegler",
    "hy": "8. Infant memory dissociation"
   },
   {
@@ -360,7 +360,7 @@
    "a": 0,
    "spot": "Independent self versus interdependent self.",
    "why": "Statement I is true: US memories were earlier. Statement II reverses the finding: <b>US</b> memories reflected autonomy and the self more, while Taiwanese memories were later and more <b>social</b>. An independent self goes with earlier, self-focused memories; an interdependent self with later, socially focused ones.",
-   "src": "[PAST-2][LO A1] Wang (2006); rev th3 Part A",
+   "src": "[CORE][LO A1] Wang (2006); rev th3 Part A",
    "hy": "9. Culture and earliest memories"
   },
   {
@@ -408,7 +408,7 @@
    "a": 0,
    "spot": "Is it the past before the damage, or new events after it, that is lost?",
    "why": "Tom keeps memories from <b>before</b> the infection but cannot store <b>new</b> events: <b>anterograde amnesia</b>, like H.M., who did not recognise people who had just left the room. Retrograde amnesia would be the reverse: losing memories from before the damage.",
-   "src": "[PAST-2][LO B4][IDQ B1] Baddeley et al.; pty_t3 3.7",
+   "src": "[CORE][LO B4][IDQ B1] Baddeley et al.; pty_t3 3.7",
    "hy": "3. Anterograde vs retrograde"
   },
   {
@@ -424,7 +424,7 @@
    "a": 1,
    "spot": "What happens to new memory traces when other tasks come right after learning?",
    "why": "New traces are fragile and need <b>consolidation</b>, which is most vulnerable early on. Amnesic patients recalled a story almost as well as controls after an hour in a quiet, dark room, but remembered almost nothing after an hour of assessment tasks (Dewar, Cowan & Della Sala, 2010). So a long <b>test battery</b> causes interference and makes recall look worse than it is.",
-   "src": "[PAST-1][IDQ B5] Dewar et al. (2009, 2010); pty_t3 3.9",
+   "src": "[CORE][IDQ B5] Dewar et al. (2009, 2010); pty_t3 3.9",
    "hy": "5. Test battery underestimates recall"
   },
   {
@@ -440,7 +440,7 @@
    "a": 0,
    "spot": "He has the fact but not WHERE it came from.",
    "why": "The patient keeps the item (the fact) but loses <b>where and when</b> he learned it: <b>source amnesia</b> (Schacter, Harbluk & McLachlan, 1984). This fits the idea that amnesia breaks the link between information and its context. It is a failure of <b>source memory</b>, not loss of old memories (retrograde).",
-   "src": "[PAST-1][LO B3] Schacter et al. (1984); pty_t3 3.7.1-3.7.2",
+   "src": "[CORE][LO B3] Schacter et al. (1984); pty_t3 3.7.1-3.7.2",
    "hy": "6. Source amnesia"
   },
   {
@@ -537,7 +537,7 @@
    "a": 1,
    "spot": "Offloading needs a camera that will remember for you.",
    "why": "Statement I is false: if the camera cannot keep the photo, there is nothing to <b>offload</b> to, so memory should be (nearly) normal. Statement II is true: <b>disengagement</b> comes from the act of photographing itself, so it predicts an impairment in any case. Soares and Storm found the impairment with Snapchat and Delete photos too.",
-   "src": "[PAST-1][PAST-2][LO C3] Soares & Storm (2018)",
+   "src": "[CORE][LO C3] Soares & Storm (2018)",
    "hy": "1. Offloading vs disengagement predictions"
   },
   {
@@ -553,7 +553,7 @@
    "a": 1,
    "spot": "Searched step by step, from broad to specific.",
    "why": "Lisa builds the memory step by step, from a <b>lifetime period</b> (the bank) to a general event (team meetings) to one specific event, guided by her goal. That is <b>generative retrieval</b> through the working self. In direct retrieval a cue would bring the specific memory to mind at once.",
-   "src": "[PAST-1][PAST-2][LO A2] Conway & Pleydell-Pearce (2000)",
+   "src": "[CORE][LO A2] Conway & Pleydell-Pearce (2000)",
    "hy": "2. Generative vs direct retrieval"
   },
   {
@@ -569,7 +569,7 @@
    "a": 0,
    "spot": "Before or after the damage?",
    "why": "Ellen can form <b>new</b> memories but has lost memories from <b>before</b> the accident: <b>retrograde amnesia</b>. Such loss is often worst for the period just before the damage. Anterograde amnesia would be the reverse: trouble learning new information after the damage.",
-   "src": "[PAST-2][LO B4] pty_t3 3.7",
+   "src": "[CORE][LO B4] pty_t3 3.7",
    "hy": "3. Anterograde vs retrograde"
   },
   {
@@ -585,7 +585,7 @@
    "a": 0,
    "spot": "Elaborative versus repetitive memory talk.",
    "why": "Parent A uses an <b>elaborative</b> style; parent B a <b>repetitive</b> one. Children of elaborative parents give richer accounts of the past, and more elaboration at age 2 to 4 predicted earlier first memories ten years later (Jack et al., 2009). Parents elaborate more with daughters, which helps explain <b>female superiority</b> in autobiographical recall.",
-   "src": "[PAST-1][IDQ A3][LO A1] Jack et al. (2009); Reese & Fivush (1993)",
+   "src": "[CORE][IDQ A3][LO A1] Jack et al. (2009); Reese & Fivush (1993)",
    "hy": "7. Female superiority / elaborative style"
   }
  ],
@@ -619,7 +619,7 @@
    "a": 3,
    "spot": "Generative = you construct the memory yourself.",
    "why": "<b>Generative retrieval</b> is a deliberate, effortful search that combines the <b>working self</b> with the knowledge base, so it is goal-driven. The other options describe <b>direct retrieval</b>: fast, cue-triggered, more specific, less identity-related and linked to the left hippocampus.",
-   "src": "[PAST-1][PAST-2][LO A2] Conway & Pleydell-Pearce (2000); pty_t3 3.4",
+   "src": "[CORE][LO A2] Conway & Pleydell-Pearce (2000); pty_t3 3.4",
    "hy": "2. Generative vs direct retrieval"
   },
   {
@@ -635,7 +635,7 @@
    "a": 1,
    "spot": "Can the two forms come apart? Think of KI.",
    "why": "Statement I is false: the two severities are <b>not</b> strongly related (Shimamura & Squire, 1991), and KI had dense anterograde amnesia without retrograde amnesia, so the causes probably differ. Statement II is true: <b>retrograde amnesia</b> is usually worst just before the damage, and older memories are better kept.",
-   "src": "[PAST-2][LO B4][IDQ B1] Baddeley et al.; pty_t3 3.7, 3.10",
+   "src": "[CORE][LO B4][IDQ B1] Baddeley et al.; pty_t3 3.7, 3.10",
    "hy": "3. Anterograde vs retrograde"
   },
   {
@@ -669,7 +669,7 @@
    "a": 0,
    "spot": "Snapchat does not keep the photo. Which hypothesis does that test?",
    "why": "Snapchat does not save photos, so the camera could not act as a <b>transactive memory</b> partner. If <b>offloading</b> caused the impairment, it should vanish in that condition. It did not: Snapchat photos were remembered even worse, which counts against offloading.",
-   "src": "[PAST-2][LO C3][IDQ C1] Soares & Storm (2018)",
+   "src": "[CORE][LO C3][IDQ C1] Soares & Storm (2018)",
    "hy": "10. Soares & Storm design logic"
   },
   {

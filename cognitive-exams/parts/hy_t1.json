@@ -13,7 +13,7 @@
    "a": 1,
    "spot": "Noticing a translation = the MEANING of the ignored ear was analysed.",
    "why": "A translation sounds completely different, so the only thing the two ears share is <b>meaning</b>. In <b>Broadbent's</b> model the ignored ear is blocked at the sensory level, before meaning, so this should be impossible. Treisman (weakened but still analysed) and <b>late selection</b> (everything analysed for meaning first) can both explain it.",
-   "src": "[PAST-1][IDQ B3][CORE] Treisman (1964) bilinguals; Sternberg p.151",
+   "src": "[CORE][IDQ B3][CORE] Treisman (1964) bilinguals; Sternberg p.151",
    "hy": "2 Evidence Broadbent cannot explain"
   },
   {
@@ -29,7 +29,7 @@
    "a": 2,
    "spot": "Broadbent: what can the filter know BEFORE meaning is analysed?",
    "why": "Broadbent's filter works <b>early</b>, right after the sensory register. At that point only <b>physical features</b> are available, such as pitch, loudness, accent and location. Sense, personal importance and emotional content all require meaning, which in Broadbent's model is only analysed for the one channel that has already passed the filter.",
-   "src": "[PAST-1][PAST-2][CORE] Broadbent (1958); Sternberg p.150",
+   "src": "[CORE] Broadbent (1958); Sternberg p.150",
    "hy": "1 Broadbent early filter"
   },
   {
@@ -45,7 +45,7 @@
    "a": 1,
    "spot": "NOT correct: find the one that gets the ORDER in Treisman wrong.",
    "why": "In Treisman's model the low-level check (loudness, pitch) comes <b>first</b>: non-matching input is <b>attenuated</b>, and only <b>after</b> that is meaning analysed. So meaning is analysed after the weakening, not before. The other three statements are correct: both models select on physical features, Broadbent blocks the ignored message before meaning, and in Treisman a meaningful signal such as your name can still break into awareness.",
-   "src": "[PAST-0][PAST-1][CORE] Sternberg pp.150-152, Figure 4.9",
+   "src": "[CORE] Sternberg pp.150-152, Figure 4.9",
    "hy": "3 Treisman attenuation"
   },
   {
@@ -61,7 +61,7 @@
    "a": 3,
    "spot": "What are they tuned to? Unexpected things that MATCH it get noticed.",
    "why": "People notice unexpected objects more often when they <b>share features with the attended items</b>: their <b>attentional set</b>. That is also why people who count passes by the team in black notice the black gorilla more often than people who count passes by the team in white (Simons & Chabris, 1999; Most et al., 2001). A blue mascot matches the ignored team, so it is filtered out with them. Standing out against the attended team does not help.",
-   "src": "[PAST-1][IDQ A1][CORE] Simons; Most et al. (2001)",
+   "src": "[CORE][IDQ A1][CORE] Simons; Most et al. (2001)",
    "hy": "4 Attentional set / similarity"
   },
   {
@@ -77,7 +77,7 @@
    "a": 3,
    "spot": "Something NEW appears (I) or something DIFFERS between two versions (II)?",
    "why": "In I an unexpected object appears while attention is on another task: <b>inattentional blindness</b>. In II nothing new appears; the scene differs between two versions and the person misses the difference: <b>change blindness</b>. Change blindness needs a comparison with a stored earlier state, so memory is involved as well as attention.",
-   "src": "[PAST-2][IDQ A4] Simons; pty_t1 1.5.8",
+   "src": "[CORE][IDQ A4] Simons; pty_t1 1.5.8",
    "hy": "5 Change vs inattentional blindness"
   },
   {
@@ -125,7 +125,7 @@
    "a": 2,
    "spot": "Did they follow the STORY? Then meaning leaked through.",
    "why": "Participants briefly picked up the <b>first few words</b> of the story in the ignored ear. To follow the story they must have processed the <b>content</b> of the unattended message. That is why Treisman replaced Broadbent's block with a filter that only <b>attenuates</b> the ignored input.",
-   "src": "[PAST-1][CORE] Treisman (1960); Sternberg p.151",
+   "src": "[CORE] Treisman (1960); Sternberg p.151",
    "hy": "2 Evidence Broadbent cannot explain"
   },
   {
@@ -305,7 +305,7 @@
    "a": 1,
    "spot": "Critics said: 'with a vivid, opaque display, people WOULD notice'. Translate that into misses.",
    "why": "The critics claimed people missed the event only because the display was <b>ghostly</b>. Then a fully visible video should give almost <b>no misses</b>. Instead, about <b>half</b> missed the gorilla in the fully visible version, so the critics were wrong: the cause is attention, not the odd look of the display.",
-   "src": "[PAST-1][CORE] Neisser (1979); Simons & Chabris (1999), in Simons",
+   "src": "[CORE] Neisser (1979); Simons & Chabris (1999), in Simons",
    "hy": "7 Neisser selective looking / critics"
   },
   {
@@ -353,7 +353,7 @@
    "a": 2,
    "spot": "Two streams at once, follow one, ignore the other.",
    "why": "In <b>dichotic listening</b> two messages arrive at the same time and you follow one. Neisser and Becklen (1975) built the <b>visual analogue</b>: two overlapping videos, monitor one, and the ignored one's events are missed. Visual search is about finding one target among distractors, and comparing photos is a <b>change blindness</b> task.",
-   "src": "[PAST-1][CORE] Neisser & Becklen (1975), in Simons",
+   "src": "[CORE] Neisser & Becklen (1975), in Simons",
    "hy": "7 Neisser selective looking"
   },
   {
@@ -369,7 +369,7 @@
    "a": 2,
    "spot": "Two findings from Simons: one purely auditory, one visual task with a sound.",
    "why": "Statement I is the study by <b>Dalton and Fraenkel (2012)</b>: inattentional deafness for a voice saying 'I am a gorilla'. Statement II is <b>Macdonald and Lavie (2011)</b>: high visual perceptual load induces inattentional deafness. The second finding shows the limit is not tied to one sense but lies in <b>attention</b>.",
-   "src": "[PAST-1][IDQ B1][CORE] Simons",
+   "src": "[CORE][IDQ B1][CORE] Simons",
    "hy": "15 Inattentional deafness"
   },
   {
@@ -417,7 +417,7 @@
    "a": 0,
    "spot": "Why does 'it never happened to me' feel like evidence?",
    "why": "Simons says our <b>experiences mislead us</b>: we are fully aware of what we noticed, but we are, by definition, unaware of what we missed. If we treat our experience as representative, we conclude that we always notice. That is why nearly <b>90%</b> believe they would see the gorilla. The idea that important events automatically capture attention is exactly the <b>mistaken intuition</b>.",
-   "src": "[PAST-2][LO][CORE] Simons; Levin & Angelone (2008)",
+   "src": "[CORE][LO][CORE] Simons; Levin & Angelone (2008)",
    "hy": "8 Mistaken intuitions"
   },
   {
@@ -449,7 +449,7 @@
    "a": 1,
    "spot": "Filter AFTER meaning = late selection.",
    "why": "<b>Deutsch and Deutsch</b> (1963; Norman, 1968) put the filter <b>after</b> perceptual processing: all messages are analysed for physical features and meaning, and only then filtered out. Treisman weakens the ignored message before meaning, Broadbent blocks it before meaning, and Neisser's preattentive processes register only physical features.",
-   "src": "[PAST-1][PAST-2 options][CORE] Sternberg p.152, Figure 4.10",
+   "src": "[CORE][CORE options][CORE] Sternberg p.152, Figure 4.10",
    "hy": "9 Deutsch & Deutsch late filter"
   },
   {
@@ -499,7 +499,7 @@
    "a": 2,
    "spot": "Treisman: attenuate = weaken.",
    "why": "Treisman's filter <b>attenuates</b>: it passes on a weakened version of non-target messages instead of blocking them. A weak but meaningful signal, such as your name, can still reach awareness. A tap that shuts off is <b>Broadbent</b>; a gate after full understanding is <b>Deutsch and Deutsch</b>.",
-   "src": "[PAST-0][IDQ B3][CORE] Sternberg pp.151-152",
+   "src": "[CORE][IDQ B3][CORE] Sternberg pp.151-152",
    "hy": "3 Treisman attenuation"
   },
   {
@@ -515,7 +515,7 @@
    "a": 3,
    "spot": "Two versions of the same scene, one difference.",
    "why": "Missing a difference between <b>two versions</b> of the same scene is <b>change blindness</b>. To see it she must store the old version and compare it with the new one. <b>Inattentional blindness</b> is missing an unexpected object that appears while attention is on something else, such as the gorilla.",
-   "src": "[PAST-2][IDQ A4] pty_t1 1.5.8",
+   "src": "[CORE][IDQ A4] pty_t1 1.5.8",
    "hy": "5 Change vs inattentional blindness"
   },
   {
@@ -556,7 +556,7 @@
    "a": 0,
    "spot": "Broadbent passes physical features and blocks meaning. Which bar needs meaning AND is high?",
    "why": "Broadbent predicts that <b>physical</b> changes (voice, tone) are noticed and changes in <b>meaning</b> (language) are not, which matches three bars. But about <b>one third</b> notice their <b>own name</b>, which requires recognising meaning in the blocked ear. This is the finding that led Moray and Treisman to revise the model.",
-   "src": "[PAST-1][IDQ B3][CORE] Cherry (1953); Moray (1959); Sternberg pp.149-151",
+   "src": "[CORE][IDQ B3][CORE] Cherry (1953); Moray (1959); Sternberg pp.149-151",
    "hy": "1 Broadbent / 2 evidence against"
   },
   {
@@ -572,7 +572,7 @@
    "a": 2,
    "spot": "Both videos hit the retina. Did that mean they were seen?",
    "why": "Both events produced signals on the <b>retina</b>, yet participants often missed unexpected events in the ignored video, such as the clapping players stopping to <b>shake hands</b>. They could tell that other 'stuff' was happening, but not its meaning. Like dichotic listening, awareness follows <b>attention</b>, not the senses.",
-   "src": "[PAST-1][CORE] Neisser & Becklen (1975), in Simons",
+   "src": "[CORE] Neisser & Becklen (1975), in Simons",
    "hy": "7 Neisser selective looking"
   }
  ],
@@ -590,7 +590,7 @@
    "a": 2,
    "spot": "She follows the STORY, not the ear. What must have been processed?",
    "why": "Sanne could only follow the fairy tale into the other ear if the <b>meaning</b> of that ear was being processed. If selection were based only on location (a purely <b>physical</b> filter, as in Broadbent), she would have kept repeating whatever came into her left ear. Treisman found this and concluded that ignored messages are <b>attenuated</b>, not blocked.",
-   "src": "[PAST-1][CORE] Treisman (1960); Gray & Wedderburn (1960); Sternberg p.151",
+   "src": "[CORE] Treisman (1960); Gray & Wedderburn (1960); Sternberg p.151",
    "hy": "2 Evidence Broadbent cannot explain"
   },
   {
@@ -622,7 +622,7 @@
    "a": 2,
    "spot": "Something fully visible and unexpected, missed because attention is elsewhere.",
    "why": "Missing a <b>fully visible, unexpected</b> object because attention is <b>focused on something else</b> is <b>inattentional blindness</b>. Change blindness would need two versions of a scene that differ. Being in the middle of the visual field does not help: in the gorilla study half the observers missed a gorilla in the middle of the screen.",
-   "src": "[PAST-2][LO][CORE] Simons; Mack & Rock (1998)",
+   "src": "[CORE][LO][CORE] Simons; Mack & Rock (1998)",
    "hy": "6 IB definition"
   },
   {
@@ -677,7 +677,7 @@
    "a": 2,
    "spot": "Broadbent: early, physical, blocked. Did Cherry's pattern fit that?",
    "why": "Statement I is Broadbent's core idea: an <b>early filter</b> right after the sensory register, so ignored input never reaches perception. Statement II is also true: noticing a <b>tone</b> or a voice change needs no deep processing, while noticing a <b>language switch</b> does. Cherry's pattern fitted the early filter neatly, until findings such as the own-name effect challenged it.",
-   "src": "[PAST-1][PAST-2][CORE] Sternberg pp.150-151",
+   "src": "[CORE] Sternberg pp.150-151",
    "hy": "1 Broadbent early filter"
   },
   {
@@ -693,7 +693,7 @@
    "a": 0,
    "spot": "Where does each model put meaning analysis relative to the filter?",
    "why": "In <b>Treisman's</b> model the ignored message is first <b>attenuated</b> on physical grounds and then analysed for meaning in weakened form. In <b>Deutsch and Deutsch's</b> late-filter model every message is analysed in full, and selection happens only <b>after</b> meaning. So both let meaning through, in different ways. Blocking with an exception for names is <b>Moray</b>.",
-   "src": "[PAST-1][IDQ B3][CORE] Sternberg pp.151-152",
+   "src": "[CORE][IDQ B3][CORE] Sternberg pp.151-152",
    "hy": "3 Treisman / 9 Deutsch & Deutsch"
   },
   {
