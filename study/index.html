@@ -69,6 +69,7 @@ button.course[aria-pressed=true]{background:var(--navy);color:#fff}button.course
 .phead p{color:var(--muted);font-size:.95rem}
 .quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
 .quick a{text-decoration:none;font-size:.86rem;font-weight:600;border:1.5px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--paper)}
+.grp{transition:box-shadow .4s,border-color .4s}.grp.flash{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,146,58,.25)}
 .quick a:hover{border-color:var(--ink)}.quick a.main{background:var(--ink);color:#fff;border-color:var(--ink)}
 .pbody{padding:20px 24px 24px}
 .sub{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--clay);margin:6px 0 10px}
@@ -205,7 +206,7 @@ const COURSES={
     readme:['Cognitive Psychology']},
   stats2:{name:'Methods and Statistics 2',year:'Year 2',block:'Block 1 · Frames of Action',img:'../stat2-course/img/cover.jpg',alt:'Scatterplot with a regression line',
     q:'Could it be chance, and how much does it matter?',p:'Eight stops on one map of tests, from proportions to repeated-measures ANOVA, with SPSS practice on realistic datasets.',
-    quick:[['Course story','../stat2-course/',1],['Exam prep','../stat2-exam2026/'],['SPSS practice','../spss-exams/'],['Last-minute SPSS check','../spss-lastminute/']],
+    quick:[['Course story','../stat2-course/',1],['Exam prep','../stat2-exam2026/'],['Exam prep per theme','../stat2-exam2026/themes.html'],['SPSS practice','../spss-exams/'],['Last-minute SPSS check','../spss-lastminute/']],
     readme:['Statistics 2','SPSS 2']}
 };
 const README_URL='https://raw.githubusercontent.com/sezsaracoglu-lab/psychology_year_2/main/README.md';
@@ -235,8 +236,9 @@ async function openCourse(id,scroll){
   const parts=c.readme.filter(k=>L[k]&&L[k].groups.length);
   if(!parts.length){body.innerHTML='<p class="note">The study links could not load. Please refresh the page.</p>';return}
   body.innerHTML=parts.map(k=>`${c.readme.length>1?`<div class="sub">${esc(k)}</div>`:'<div class="sub">All study links</div>'}<div class="groups">${
-    L[k].groups.filter(g=>g.links.length).map(g=>`<div class="grp"><h4>${esc(g.title)}</h4><ul>${g.links.map(([l,u])=>`<li><a href="${u}">${esc(l)}</a></li>`).join('')}</ul></div>`).join('')}</div>`).join('')
+    L[k].groups.filter(g=>g.links.length).map(g=>`<div class="grp" id="g-${g.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}"><h4>${esc(g.title)}</h4><ul>${g.links.map(([l,u])=>`<li><a href="${u}">${esc(l)}</a></li>`).join('')}</ul></div>`).join('')}</div>`).join('')
     +`<button class="close" type="button" id="closep">← Back to the Year 2 map</button>`;
+  panel.querySelectorAll('.quick a[href^="#g-"]').forEach(a=>a.onclick=e=>{e.preventDefault();const g=document.getElementById(a.getAttribute('href').slice(1));if(g){g.scrollIntoView({behavior:'smooth',block:'center'});g.classList.add('flash');setTimeout(()=>g.classList.remove('flash'),1600)}});
   document.getElementById('closep').onclick=()=>{history.replaceState(null,'','#map');closeCourse(true)};
 }
 function closeCourse(scroll){panel.hidden=true;document.querySelectorAll('button.course').forEach(b=>b.setAttribute('aria-pressed','false'));if(scroll)document.getElementById('map').scrollIntoView({behavior:'smooth'})}

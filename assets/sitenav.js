@@ -11,7 +11,7 @@
     { title: "Start", links: [["Home", D], ["Study hub · course map", D + "study/"], ["Grade calculator ↗", "https://lindemann.shinyapps.io/essb_grading/", 1]] },
     { title: "Year 2 · Block 1 · Cognitive Psychology", links: [["All study links", D + "study/#cognitive"], ["Course story", D + "cognitive-course/"], ["Practice papers", D + "cognitive-exams/"], ["Memory sheets", D + "cognitive-memory/"], ["In-depth", D + "cognitive-indepth/"], ["Lectures", D + "cognitive-lectures/"]],
       themes: [["1", B + "cognitive_theme_1/"], ["2", B + "cognitive_theme2_version_5/"], ["3", B + "cognitive_theme2_version2/"], ["4", B + "cognitive_theme4_version2/"], ["5", B + "theme5_cognitive_version2/"], ["6", B + "cognitive_theme6_version2/"], ["7", B + "theme-7_teaching/"], ["8", D + "cognitive-theme8/"]] },
-    { title: "Year 2 · Block 1 · Methods and Statistics 2", links: [["All study links", D + "study/#stats2"], ["Course story", D + "stat2-course/"], ["Exam prep", D + "stat2-exam2026/"], ["SPSS practice", D + "spss-exams/"]] },
+    { title: "Year 2 · Block 1 · Methods and Statistics 2", links: [["All study links", D + "study/#stats2"], ["Course story", D + "stat2-course/"], ["Exam prep", D + "stat2-exam2026/"], ["Exam prep per theme", D + "stat2-exam2026/themes.html"], ["SPSS practice", D + "spss-exams/"]] },
     { title: "Year 3", links: [["Year 3 plan", D + "study/#year3"]] }
   ];
   function el(t, a, kids) { var e = document.createElement(t); if (a) for (var k in a) { if (k === "text") e.textContent = a[k]; else e.setAttribute(k, a[k]); } (kids || []).forEach(function (c) { e.appendChild(c); }); return e; }
