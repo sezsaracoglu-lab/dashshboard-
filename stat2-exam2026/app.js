@@ -44,6 +44,18 @@
   function tabs() {
     var box = $('#tabs');
     box.innerHTML = '';
+    (window.PAGECFG.links || []).forEach(function (L) {
+      var row = el('div', 'trow');
+      if (L.label) row.appendChild(el('div', 'rowlbl', esc(L.rowlabel || '')));
+      var a = document.createElement('a');
+      a.className = 'tab link';
+      a.href = L.href;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = L.icon + ' ' + esc(L.label) + ' \u2197<small>' + esc(L.note) + '</small>';
+      row.appendChild(a);
+      box.appendChild(row);
+    });
     var groups = window.PAGECFG.rows;
     groups.forEach(function (g, gi) {
       var mine = SETS.filter(g.pick);
@@ -153,7 +165,10 @@
     var sec = el('section', 'card q');
     sec.id = 'q' + (i + 1);
     var tags = [];
-    tags.push('<span class="tg ch' + q.pct + '">exam chance ~' + q.pct + '%</span>');
+    /* a paper copied from elsewhere carries no exam-chance estimate, so it carries no tag */
+    if (q.pct) {
+      tags.push('<span class="tg ch' + q.pct + '">exam chance ~' + q.pct + '%</span>');
+    }
     /* no topic tag in the header: naming the theme tells her which method to reach
        for before she has read the question. The theme still drives the score panel. */
     if (q.recon) tags.push('<span class="tg rec">reconstructed</span>');
@@ -161,7 +176,8 @@
     sec.innerHTML = '<div class="qhead"><span class="qno">Question ' + (i + 1) + '</span>'
       + '<span class="qtags">' + tags.join('') + '</span></div>'
       + (q.src ? '<div class="qhead"><span>' + q.src + '</span></div>' : '')
-      + '<div class="qtext">' + q.q + '</div>' + tableHTML(q);
+      + (q.top ? tableHTML(q) : '')
+      + '<div class="qtext">' + q.q + '</div>' + (q.top ? '' : tableHTML(q));
 
     var opts = el('div', 'opts');
     q.o.forEach(function (text, oi) {
@@ -344,12 +360,14 @@
   function render(s) {
     var v = $('#view');
     v.innerHTML = '';
-    var avg = Math.round(s.questions.reduce(function (a, q) { return a + q.pct; }, 0)
-      / s.questions.length);
+    var withpct = s.questions.filter(function (q) { return !!q.pct; });
+    var avg = withpct.length
+      ? Math.round(withpct.reduce(function (a, q) { return a + q.pct; }, 0) / withpct.length)
+      : 0;
     var nrec = s.questions.filter(function (q) { return !!q.recon; }).length;
     var nrcl = s.questions.filter(function (q) { return !!q.recall; }).length;
-    var pills = ['<span class="pill">' + s.questions.length + ' questions</span>',
-      '<span class="pill y">average exam chance ~' + avg + '%</span>'];
+    var pills = ['<span class="pill">' + s.questions.length + ' questions</span>'];
+    if (avg) pills.push('<span class="pill y">average exam chance ~' + avg + '%</span>');
     if (nrec) pills.push('<span class="pill v">' + nrec + ' reconstructed</span>');
     if (nrcl) pills.push('<span class="pill c">' + nrcl + ' to check against your note</span>');
 

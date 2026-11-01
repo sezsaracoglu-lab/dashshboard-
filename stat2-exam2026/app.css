@@ -43,6 +43,8 @@ h1{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,5.5vw,2.9rem)
   text-align:left;line-height:1.3}
 .tab:hover{border-color:var(--navy)}
 .tab[aria-selected=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.tab.link{display:inline-block;text-decoration:none;border-style:dashed;border-color:var(--gold);background:var(--goldp)}
+.tab.link:hover{border-color:var(--clay);border-style:solid}
 .tab small{display:block;font-size:.78rem;font-weight:500;opacity:.78;margin-top:2px}
 .tab .tick{color:var(--sage);font-weight:700}
 .tab[aria-selected=true] .tick{color:#cfe6d6}
