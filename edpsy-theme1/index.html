@@ -95,8 +95,15 @@ details.qc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.qc p
 .verd{display:inline-block;border-radius:6px;padding:1px 8px;font-size:.72rem;font-weight:700;letter-spacing:.04em}
 .verd.s{background:#eaf6ee;color:var(--ok)}.verd.a{background:#fbecea;color:var(--bad)}.verd.m{background:var(--pgold);color:var(--dgold)}.verd.sh{background:var(--blue);color:var(--navy)}
 .range{width:100%}
-.scr{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr)}
-@media (min-width:901px){.scr>.fig:first-child{position:sticky;top:64px;align-self:start}}
+.scr{grid-template-columns:1fr;gap:18px}
+.scr>.fig{width:100%;max-width:920px;margin:0 auto;position:relative}
+.scr>.fig svg{max-height:none}
+.scr>.teach,.scr>div:not(.fig){max-width:900px;margin:0 auto;width:100%}
+.zoom{position:absolute;top:10px;right:10px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 11px;font:inherit;font-size:.8rem;color:var(--navy);cursor:pointer;z-index:2}
+.zoom:hover{background:var(--pgold)}
+#lbox{position:fixed;inset:0;z-index:200;background:rgba(250,247,241,.97);display:flex;align-items:center;justify-content:center;padding:24px}
+#lbox[hidden]{display:none}#lbox .in{width:min(1500px,100%);max-height:100%;overflow:auto;background:#fffdf9;border:1px solid var(--line);border-radius:18px;padding:16px}
+#lbox svg{width:100%;height:auto;display:block}#lbox .x{position:fixed;top:16px;right:20px;border:0;background:var(--navy);color:#fff;border-radius:999px;padding:8px 16px;font:inherit;font-weight:600;cursor:pointer}
 .vq{background:var(--blue);border-radius:14px;padding:9px 15px;margin:6px 0 12px;font-size:.95rem}
 .teach{font-size:1rem;line-height:1.68}.teach p{margin:0 0 .85em}.teach.wide{max-width:880px;margin:12px 0}
 .tm{cursor:pointer;color:var(--navy);border-bottom:2px dotted var(--gold)}.tm:hover{background:var(--pgold)}
@@ -349,11 +356,11 @@ svg text{font-family:'DM Sans',sans-serif}
 <text x="190" y="118" text-anchor="middle">just listening</text><text x="295" y="112" text-anchor="middle">verbatim notes,</text><text x="295" y="126" text-anchor="middle">repeating</text>
 <text x="400" y="112" text-anchor="middle">concept map,</text><text x="400" y="126" text-anchor="middle">asking questions</text><text x="505" y="112" text-anchor="middle">defending a position</text><text x="505" y="126" text-anchor="middle">in a small group</text>
 <text x="20" y="190" class="t-b">Reading</text><text x="20" y="206">a text</text>
-<text x="190" y="190" text-anchor="middle">reading silently</text><text x="295" y="184" text-anchor="middle">underlining,</text><text x="295" y="198" text-anchor="middle">copy-and-delete summary</text>
-<text x="400" y="184" text-anchor="middle">self-explaining,</text><text x="400" y="198" text-anchor="middle">notes in own words</text><text x="505" y="184" text-anchor="middle">asking and answering</text><text x="505" y="198" text-anchor="middle">questions with a partner</text>
+<text x="190" y="190" text-anchor="middle">reading silently</text><text x="295" y="180" text-anchor="middle">underlining,</text><text x="295" y="194" text-anchor="middle">copy-and-delete</text><text x="295" y="208" text-anchor="middle">summary</text>
+<text x="400" y="180" text-anchor="middle">self-explaining,</text><text x="400" y="194" text-anchor="middle">notes in</text><text x="400" y="208" text-anchor="middle">own words</text><text x="505" y="180" text-anchor="middle">asking and</text><text x="505" y="194" text-anchor="middle">answering questions</text><text x="505" y="208" text-anchor="middle">with a partner</text>
 <text x="20" y="262" class="t-b">Watching</text><text x="20" y="278">a video</text>
 <text x="190" y="262" text-anchor="middle">just watching</text><text x="295" y="256" text-anchor="middle">pause, rewind,</text><text x="295" y="270" text-anchor="middle">fast-forward</text>
-<text x="400" y="256" text-anchor="middle">explaining concepts,</text><text x="400" y="270" text-anchor="middle">compare to prior knowledge</text><text x="505" y="256" text-anchor="middle">debating with a peer,</text><text x="505" y="270" text-anchor="middle">similarities/differences</text></g>
+<text x="400" y="252" text-anchor="middle">explaining concepts,</text><text x="400" y="266" text-anchor="middle">comparing to prior</text><text x="400" y="280" text-anchor="middle">knowledge</text><text x="505" y="252" text-anchor="middle">debating with a peer,</text><text x="505" y="266" text-anchor="middle">similarities and</text><text x="505" y="280" text-anchor="middle">differences</text></g>
 <path d="M10 150 L555 150 M10 222 L555 222" stroke="#e8e1d3"/>
 <text x="280" y="316" text-anchor="middle" class="t-g">Any task can be done in any mode. The mode decides the learning.</text>
 </svg><figcaption>After Chi &amp; Wylie's Table 1.</figcaption></figure>
@@ -1665,6 +1672,12 @@ document.addEventListener('click',e=>{const t=e.target.closest('.tm');if(!t){if(
  const d=GLOSS[t.dataset.g];if(!d)return;gpop.innerHTML='<b>'+d[0]+'</b>'+d[1];gpop.hidden=false;
  const r=t.getBoundingClientRect(),w=Math.min(320,window.innerWidth-24);gpop.style.maxWidth=w+'px';
  let x=r.left+window.scrollX;if(x+w>window.scrollX+window.innerWidth-12)x=window.scrollX+window.innerWidth-12-w;gpop.style.left=Math.max(12,x)+'px';gpop.style.top=(r.bottom+window.scrollY+6)+'px'});
+
+const lb=document.createElement('div');lb.id='lbox';lb.hidden=true;lb.innerHTML='<button class="x" type="button">✕ Close</button><div class="in"></div>';document.body.appendChild(lb);
+lb.onclick=e=>{if(e.target===lb||e.target.classList.contains('x'))lb.hidden=true};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.hidden=true});
+$$('.scr>.fig').forEach(f=>{if(!f.querySelector('svg'))return;const b=document.createElement('button');b.type='button';b.className='zoom';b.textContent='⤢ Enlarge';f.appendChild(b);
+ b.onclick=()=>{const svgs=$$('svg',f).map(s=>s.outerHTML).join('');const cap=f.querySelector('figcaption');lb.querySelector('.in').innerHTML=svgs+(cap?'<p class="mini" style="text-align:center">'+cap.innerHTML+'</p>':'');lb.hidden=false}});
 /* ---------- routing ---------- */
 function route(){const h=location.hash.slice(1);if(!h)return;if(h==='videos')return show('vd');const m=h.match(/^(icap|gls|dp|lg)-(\d+)$/);if(m)return show(m[1],+m[2]);if($('#p-'+h))show(h)}
 window.addEventListener('hashchange',route);route();
