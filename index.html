@@ -170,7 +170,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;border-top:1p
 
 <section class="block" id="videos">
   <div class="shead"><div><div class="eyebrow">YouTube</div><h2 id="vh">Cognitive Psychology: Inside the Thinking Mind</h2><p id="vp">A video series that explains the big ideas of cognitive psychology in plain language: attention, memory, categories, imagery, judgement, problem solving and AI. Each video starts from the logic, then the evidence, then a clear conclusion.</p>
-  <div class="vbar"><div class="vtabs" role="tablist" aria-label="Video series"><button type="button" role="tab" class="vtab" data-pl="cog" aria-selected="true">Cognitive Psychology</button><button type="button" role="tab" class="vtab" data-pl="stat" aria-selected="false">Statistics 2</button></div>
+  <div class="vbar"><div class="vtabs" role="tablist" aria-label="Video series"><button type="button" role="tab" class="vtab" data-pl="cog" aria-selected="true">Cognitive Psychology</button><button type="button" role="tab" class="vtab" data-pl="stat" aria-selected="false">Statistics 2</button><button type="button" role="tab" class="vtab" data-pl="edpsy" aria-selected="false">Educational Psychology</button></div>
   <div class="cta vcta"><a class="btn" id="ytbtn" href="https://www.youtube.com/playlist?list=PLaAyrrTos0mI" target="_blank" rel="noopener">Open the playlist ↗</a></div></div></div></div>
   <div class="video">
     <div class="frame"><iframe id="vframe" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLaAyrrTos0mI" title="Cognitive Psychology: Inside the Thinking Mind playlist" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
@@ -233,9 +233,11 @@ const VIDEOS = [
   ["T8A","Using Large Language Models in Psychology"],["T8B","Does AI Help or Hurt Critical Thinking?"]];
 // ---------------------------
 const STAT_VIDEOS = [["Theme 1","Foundations, design and ethics"],["Theme 2","Inference for proportions"],["Theme 3","Chi-square tests"],["Theme 4","Correlation and regression"],["Theme 5","Multiple regression"],["Theme 6","One-way ANOVA"],["Theme 7","Two-way ANOVA"],["Theme 8","Repeated-measures ANOVA"]];
+const EDPSY_VIDEOS = [["T1 · A1","ICAP Framework Explained (Chi & Wylie, 2014)"],["T1 · A2","Generative Learning Strategies by Age (Brod, 2021)"]];
 const PLAYLISTS = {
   cog:{id:"PLaAyrrTos0mI",h:"Cognitive Psychology: Inside the Thinking Mind",p:"A video series that explains the big ideas of cognitive psychology in plain language: attention, memory, categories, imagery, judgement, problem solving and AI. Each video starts from the logic, then the evidence, then a clear conclusion.",rows:VIDEOS},
-  stat:{id:"PLYIWFBp8jVm4",h:"Statistics 2: one map of tests, theme by theme",p:"A cinematic video and a plain-language explainer per theme of Methods and Statistics 2: what each test is for, the logic behind it, and how to read the result.",rows:STAT_VIDEOS}};
+  stat:{id:"PLYIWFBp8jVm4",h:"Statistics 2: one map of tests, theme by theme",p:"A cinematic video and a plain-language explainer per theme of Methods and Statistics 2: what each test is for, the logic behind it, and how to read the result.",rows:STAT_VIDEOS},
+  edpsy:{id:"PLIfgLNbeNTOE",h:"Educational Psychology: how people learn, article by article",p:"One video per article of Educational Psychology: what the researchers asked, how they tested it, what they found and what it means for teaching and studying. Starts with Theme 1, learning strategies.",rows:EDPSY_VIDEOS}};
 function showPlaylist(k){const v=PLAYLISTS[k];
   document.querySelectorAll('.vtab').forEach(t=>t.setAttribute('aria-selected',String(t.dataset.pl===k)));
   document.getElementById('vh').textContent=v.h;document.getElementById('vp').textContent=v.p;
@@ -245,6 +247,7 @@ function showPlaylist(k){const v=PLAYLISTS[k];
 document.querySelectorAll('.vtab').forEach(t=>t.onclick=()=>showPlaylist(t.dataset.pl));
 document.getElementById('vlist').innerHTML = VIDEOS.map(([c,t])=>`<div class="vrow"><b>${c}</b><span>${t}</span></div>`).join('');
 if(location.hash==='#videos-stats'){showPlaylist('stat');}
+if(location.hash==='#videos-edpsy'){showPlaylist('edpsy');}
 const posts = document.getElementById('posts');
 posts.innerHTML = ARTICLES.slice(0,6).map(a=>`<a class="post" href="${a.url}"><div class="pim">${a.img?`<img src="${a.img}" alt="" loading="lazy">`:'People ⟷ Technology'}</div><div class="pt"><span class="k">${a.tag||'Article'}</span><h3>${a.title}</h3><p>${a.blurb||''}</p><span class="pd">${a.date||''}</span></div></a>`).join('');
 if (LINKS.linkedin){const b=document.getElementById('libtn');b.href=LINKS.linkedin;b.hidden=false;
