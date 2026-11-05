@@ -95,12 +95,21 @@ details.qc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.qc p
 .verd{display:inline-block;border-radius:6px;padding:1px 8px;font-size:.72rem;font-weight:700;letter-spacing:.04em}
 .verd.s{background:#eaf6ee;color:var(--ok)}.verd.a{background:#fbecea;color:var(--bad)}.verd.m{background:var(--pgold);color:var(--dgold)}.verd.sh{background:var(--blue);color:var(--navy)}
 .range{width:100%}
-.scr{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:26px;align-items:start}
+.scr{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:stretch}
 .scr>.fig{position:relative;padding-bottom:46px}
-@media (min-width:1000px){.scr>.fig{position:sticky;top:66px;max-height:calc(100vh - 80px);overflow:auto}
- .scr>.fig svg{max-height:calc(100vh - 170px);width:100%}}
-.scr>.teach{font-size:.98rem}
 @media (max-width:999px){.scr{grid-template-columns:1fr}}
+.teach.guided{display:flex;flex-direction:column;gap:10px}
+.pager{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 20px 14px;display:flex;flex-direction:column;flex:1;min-height:280px;box-shadow:0 6px 18px rgba(52,70,107,.06)}
+.pager .pl{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--dgold);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.pager .pl i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;letter-spacing:0}
+.pager .pg{display:none;font-size:1.02rem;line-height:1.68;margin:0;animation:fade .25s}.pager .pg.on{display:block}
+.pager .pn2{margin-top:auto;padding-top:12px;display:flex;align-items:center;gap:8px;border-top:1px dashed var(--line)}
+.pager .dots{display:flex;gap:6px;flex:1}.pager .dots button{width:30px;height:8px;border-radius:8px;border:0;background:#e6e0d3;cursor:pointer;padding:0}.pager .dots button.on{background:var(--gold)}.pager .dots button.seen{background:#d9c49a}
+.pager .pv,.pager .nx{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:6px 12px;font:inherit;font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:600}
+.pager .nx{background:var(--navy);color:#fff;border-color:var(--navy)}.pager button:disabled{opacity:.35;cursor:default}
+.pager .cnt{font-size:.78rem;color:var(--muted)}
+.afterbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:16px;align-items:start}.afterbox>*{margin:0!important}
+.afterbox .tiles{grid-column:1/-1}
 .zoom{position:absolute;bottom:10px;right:10px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 11px;font:inherit;font-size:.8rem;color:var(--navy);cursor:pointer;z-index:2}
 .zoom:hover{background:var(--pgold)}
 #lbox{position:fixed;inset:0;z-index:200;background:rgba(250,247,241,.97);display:flex;align-items:center;justify-content:center;padding:24px}
@@ -1680,6 +1689,30 @@ lb.onclick=e=>{if(e.target===lb||e.target.classList.contains('x'))lb.hidden=true
 document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.hidden=true});
 $$('.scr>.fig').forEach(f=>{if(!f.querySelector('svg'))return;const b=document.createElement('button');b.type='button';b.className='zoom';b.textContent='⤢ Enlarge';f.appendChild(b);
  b.onclick=()=>{const svgs=$$('svg',f).map(s=>s.outerHTML).join('');const cap=f.querySelector('figcaption');lb.querySelector('.in').innerHTML=svgs+(cap?'<p class="mini" style="text-align:center">'+cap.innerHTML+'</p>':'');lb.hidden=false}});
+
+/* guided reading */
+const LBL={4:['Context','The idea','The evidence','So what'],3:['Context','The idea','So what'],2:['Context','The idea'],5:['Context','The idea','The evidence','More evidence','So what']};
+$$('.scr>.teach').forEach(t=>{let ps=Array.from(t.children).filter(x=>x.tagName==='P');if(ps.length<2)return;
+ t.classList.add('guided');let L=LBL[ps.length]||ps.map((_,i)=>'Part '+(i+1));
+ const card=t.querySelector(':scope>dl.idcard');if(card){const w=document.createElement('div');card.before(w);w.appendChild(card);ps=[w].concat(ps);L=['The article at a glance'].concat(L)}
+ const pg=document.createElement('div');pg.className='pager';
+ pg.innerHTML='<div class="pl"><i>1</i><span></span></div>';ps[0].before(pg);
+ ps.forEach(p=>{p.classList.add('pg');pg.appendChild(p)});
+ const nav=document.createElement('div');nav.className='pn2';nav.innerHTML='<div class="dots">'+ps.map((_,i)=>'<button type="button" aria-label="'+L[i]+'"></button>').join('')+'</div><span class="cnt"></span><button type="button" class="pv">◀</button><button type="button" class="nx">Next ▶</button>';pg.appendChild(nav);
+ let i=0;const seenP=new Set([0]);
+ function go(k){i=Math.max(0,Math.min(ps.length-1,k));seenP.add(i);ps.forEach((p,j)=>p.classList.toggle('on',j===i));
+  pg.querySelector('.pl i').textContent=i+1;pg.querySelector('.pl span').textContent=L[i];
+  $$('.dots button',pg).forEach((d,j)=>{d.classList.toggle('on',j===i);d.classList.toggle('seen',seenP.has(j)&&j!==i)});
+  pg.querySelector('.cnt').textContent=(i+1)+' / '+ps.length;pg.querySelector('.pv').disabled=i===0;
+  const nx=pg.querySelector('.nx');nx.textContent=i===ps.length-1?'✓ Done':'Next ▶';nx.disabled=i===ps.length-1}
+ pg.go=go;pg.cur=()=>i;
+ $$('.dots button',pg).forEach((d,j)=>d.onclick=()=>go(j));pg.querySelector('.pv').onclick=()=>go(i-1);pg.querySelector('.nx').onclick=()=>go(i+1);go(0);
+ // move boxes and tiles below the row
+ const extra=Array.from(t.children).filter(x=>x.matches('.trapb,.exq,.goldb,.tiles'));
+ if(extra.length){const ab=document.createElement('div');ab.className='afterbox';extra.forEach(x=>ab.appendChild(x));t.closest('.scr').after(ab)}
+});
+document.addEventListener('keydown',e=>{if(e.target.closest('input,textarea,select'))return;if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
+ const st=document.querySelector('.panel.on .step.on');if(!st)return;const pg=st.querySelector('.pager');if(!pg)return;e.preventDefault();pg.go(pg.cur()+(e.key==='ArrowRight'?1:-1))});
 /* ---------- routing ---------- */
 function route(){const h=location.hash.slice(1);if(!h)return;if(h==='videos')return show('vd');const m=h.match(/^(icap|gls|dp|lg)-(\d+)$/);if(m)return show(m[1],+m[2]);if($('#p-'+h))show(h)}
 window.addEventListener('hashchange',route);route();
