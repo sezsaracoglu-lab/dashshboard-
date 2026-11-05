@@ -95,6 +95,13 @@ details.qc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.qc p
 .verd{display:inline-block;border-radius:6px;padding:1px 8px;font-size:.72rem;font-weight:700;letter-spacing:.04em}
 .verd.s{background:#eaf6ee;color:var(--ok)}.verd.a{background:#fbecea;color:var(--bad)}.verd.m{background:var(--pgold);color:var(--dgold)}.verd.sh{background:var(--blue);color:var(--navy)}
 .range{width:100%}
+.nut{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.nutfig{position:relative;padding-bottom:46px}.nutfig svg{width:100%;height:auto;display:block}
+.pager.nutp .dots{flex-wrap:wrap;gap:4px;min-width:0}.pager.nutp .dots button{width:14px;height:8px}.pager .pn2{flex-wrap:wrap}.nut>*{min-width:0}
+.nuttxt p{font-size:1.02rem;line-height:1.68;margin:0}
+.nutfix{background:#fdf6e6;border:1px dashed var(--gold);border-radius:12px;padding:9px 12px;margin-top:12px;font-size:.88rem;line-height:1.5}.nutfix b{color:var(--dgold)}
+@media (max-width:999px){.nut{grid-template-columns:1fr}}
+
 .scr{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:stretch}
 .scr>.fig{position:relative;padding-bottom:46px}
 @media (max-width:999px){.scr{grid-template-columns:1fr}}
@@ -180,6 +187,7 @@ svg text{font-family:'DM Sans',sans-serif}
 <button class="nb" data-p="icap">📘 <span>ICAP framework<small>Chi &amp; Wylie (2014)</small></span></button>
 <button class="nb" data-p="gls">📗 <span>Generative learning by age<small>Brod (2021)</small></span></button>
 <button class="nb" data-p="dp">📙 <span>Distributed practice<small>Gerbier &amp; Toppino (2015)</small></span></button>
+<button class="nb" data-p="nut">📇 <span>In a nutshell<small>Visual recap per article</small></span></button>
 <div class="nsep">Pull it together</div>
 <button class="nb" data-p="lg">🎯 <span>Learning goals<small>All 8 answered</small></span></button>
 <button class="nb" data-p="case">📱 <span>The case: design the app<small>Apply all three</small></span></button>
@@ -890,6 +898,15 @@ svg text{font-family:'DM Sans',sans-serif}
 </section>
 
 </div></section>
+
+<!-- ================= IN A NUTSHELL ================= -->
+<section class="panel" id="p-nut">
+<div class="eyebrow">Theme 1 · Visual recap</div>
+<h1>📇 In a nutshell</h1>
+<p class="sub">Each article as a short visual deck: one big picture and a few sentences per card. Built from your summary decks, redrawn, completed and checked against the articles. Cards marked <b>✏️ Improved</b> correct or add something the original summary got wrong or left out. Use ◀ ▶, the bars or your arrow keys.</p>
+<div class="opts" id="nutTabs" style="margin-bottom:14px"><button data-k="icap" class="ok">📘 ICAP · Chi &amp; Wylie</button><button data-k="gls">📗 Generative learning · Brod</button><button data-k="dp">📙 Distributed practice · Gerbier &amp; Toppino</button></div>
+<div id="nutDeck"></div>
+</section>
 
 
 <!-- ================= LEARNING GOALS (visual walk-through) ================= -->
@@ -1713,6 +1730,108 @@ $$('.scr>.teach').forEach(t=>{let ps=Array.from(t.children).filter(x=>x.tagName=
 });
 document.addEventListener('keydown',e=>{if(e.target.closest('input,textarea,select'))return;if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
  const st=document.querySelector('.panel.on .step.on');if(!st)return;const pg=st.querySelector('.pager');if(!pg)return;e.preventDefault();pg.go(pg.cur()+(e.key==='ArrowRight'?1:-1))});
+
+/* ================= IN A NUTSHELL ================= */
+const C={P:'#7d8799',A:'#b8923a',C:'#2f8a57',I:'#34466b',g:'#c9a96e',r:'#c0392b',ink:'#2f3542',mu:'#6b7280'};
+const tx=(x,y,s,o='')=>`<text x="${x}" y="${y}" ${o}>${s}</text>`;
+const box=(x,y,w,h,f,s='none',r=12,extra='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${f}" stroke="${s}" ${extra}/>`;
+const H=s=>tx(300,30,s,'text-anchor="middle" class="t-h"');
+const M=['P','A','C','I'],MN=['Passive','Active','Constructive','Interactive'];
+const NUT={icap:[
+{t:'The problem: "active learning" is too vague',svg:H('From a fuzzy slogan to four precise modes')+
+ `<circle cx="150" cy="190" r="115" fill="#eef0f4"/>`+['"get them involved"','"meaningful learning"','"really think about it"'].map((s,i)=>tx(150,150+i*40,s,`text-anchor="middle" font-size="14" font-style="italic" fill="${C.mu}"`)).join('')+
+ `<path d="M275 190 L330 190" stroke="${C.g}" stroke-width="4"/><path d="M330 180 L345 190 L330 200z" fill="${C.g}"/>`+
+ M.map((m,i)=>box(360+(i%2)*110,95+Math.floor(i/2)*110,100,100,C[m],'none',14)+tx(410+(i%2)*110,160+Math.floor(i/2)*110,m,'text-anchor="middle" font-size="44" font-weight="700" fill="#fff"')).join('')+
+ tx(300,345,'Defined by what you can SEE students do (overt behaviour)','text-anchor="middle" class="t-g"'),
+ txt:'Teachers are told to "make students active", but that advice never says <b>how</b> to create an active task, <b>which</b> task is best, or how to <b>upgrade</b> one they already use. Chi and Wylie (2014) replace the slogan with four modes, defined by students\' visible behaviour. Because you can see the behaviour, a teacher can design for it and check it.'},
+{t:'The ICAP hypothesis: a staircase of engagement',svg:H('Each step up = more learning')+
+ M.map((m,i)=>box(40+i*130,280-i*60,120,60+i*60,C[m],'none',10)+tx(100+i*130,305-i*60,MN[i],'text-anchor="middle" fill="#fff" font-weight="700" font-size="14"')+tx(100+i*130,325-i*60,['receiving','manipulating','generating','dialoguing'][i],'text-anchor="middle" fill="#f3efe6" font-size="12"')).join('')+
+ `<path d="M60 70 L540 70" stroke="${C.g}" stroke-width="2" stroke-dasharray="6 5"/>`+tx(300,60,'I &gt; C &gt; A &gt; P','text-anchor="middle" font-size="20" font-weight="700" fill="#34466b"'),
+ txt:'The four modes form a hierarchy. <b>Passive</b>: receiving (just listening). <b>Active</b>: manipulating the material (underlining, pausing a video). <b>Constructive</b>: generating something beyond the material (explaining, a concept map). <b>Interactive</b>: a dialogue in which both partners generate. The prediction is <b>Interactive &gt; Constructive &gt; Active &gt; Passive</b>, and each higher mode includes the lower ones.'},
+{t:'What happens inside: four knowledge-change processes',svg:H('Same information, four different fates')+
+ [0,1,2,3].map(i=>{const x=20+i*145;let g=box(x,60,130,220,'#fff','#d9d2c3',14);
+  if(i===0)g+=`<circle cx="${x+65}" cy="150" r="40" fill="none" stroke="${C.P}" stroke-width="4"/><circle cx="${x+65}" cy="150" r="10" fill="${C.I}"/>`;
+  if(i===1)g+=[[40,120],[90,110],[95,175],[35,180]].map(p=>`<circle cx="${x+p[0]}" cy="${p[1]}" r="8" fill="${C.P}"/>`).join('')+`<path d="M${x+40} 120 L${x+90} 110 L${x+95} 175 L${x+35} 180 Z" fill="none" stroke="${C.P}" stroke-width="2"/><circle cx="${x+65}" cy="147" r="10" fill="${C.A}"/>`;
+  if(i===2)g+=`<path d="M${x+30} 180 L${x+60} 120 L${x+95} 170 Z" fill="none" stroke="${C.P}" stroke-width="2"/><path d="M${x+60} 120 L${x+80} 90 L${x+110} 100 M${x+95} 170 L${x+115} 140" fill="none" stroke="${C.C}" stroke-width="3"/>`+[[80,90],[110,100],[115,140]].map(p=>`<circle cx="${x+p[0]}" cy="${p[1]}" r="7" fill="${C.C}"/>`).join('');
+  if(i===3)g+=`<circle cx="${x+42}" cy="150" r="26" fill="none" stroke="${C.I}" stroke-width="3"/><circle cx="${x+88}" cy="150" r="26" fill="none" stroke="#5f9bd6" stroke-width="3"/><path d="M${x+55} 122 Q ${x+65} 105 ${x+75} 122" fill="none" stroke="${C.g}" stroke-width="3"/><path d="M${x+75} 178 Q ${x+65} 195 ${x+55} 178" fill="none" stroke="${C.g}" stroke-width="3"/>`;
+  return g+tx(x+65,230,['STORE','INTEGRATE','INFER','CO-INFER'][i],`text-anchor="middle" font-weight="700" font-size="14" fill="${C[M[i]]}"`)+tx(x+65,252,['isolated','fills a gap','adds new links','builds on partner'][i],`text-anchor="middle" class="t-s"`)}).join('')+
+ tx(300,320,'Hypothetical processes: proposed by the authors, never measured directly','text-anchor="middle" class="t-s"'),
+ txt:'Each visible mode is linked to a hidden process. Passive learners <b>store</b> information in isolation. Active learners <b>integrate</b> it: marking a sentence activates what they know, and the new piece fills a gap. Constructive learners <b>infer</b> new knowledge. Interactive learners <b>co-infer</b>, building on each other\'s ideas.',fix:'The original deck presents these processes as established. The article says they are <b>hypothetical</b>: Chi and Wylie did not test them directly.'},
+{t:'Passive: receiving, so knowledge stays "inert"',svg:H('Stored, but not connected')+box(60,60,240,240,'#fff',C.P,6,'stroke-width="10"')+`<circle cx="180" cy="180" r="14" fill="${C.I}"/>`+
+ [[380,90,'You see','listening, watching'],[380,170,'In the head','isolated storing'],[380,250,'You can','recall, only with the same cue']].map(r=>box(330,r[1]-30,250,62,'#fff','#d9d2c3',10)+tx(345,r[1]-8,r[2],'class="t-g"')+tx(345,r[1]+14,r[3],'class="t-t"')).join(''),
+ txt:'In the passive mode you only receive information. It is stored on its own, as "inert" knowledge that comes back only with the same cue. One student read how blood clots and could repeat it. Asked for her own theory of healing, she gave her old idea: the new knowledge sat apart from what she knew. Outcome: <b>recall</b>, minimal understanding.'},
+{t:'Active: manipulating fills gaps in what you know',svg:H('The new piece fits into an existing schema')+
+ [[120,120],[220,90],[300,150],[260,240],[140,240],[90,180]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="10" fill="${C.P}"/>`).join('')+`<path d="M120 120 L220 90 L300 150 L260 240 L140 240 L90 180 Z M120 120 L260 240 M220 90 L140 240" fill="none" stroke="${C.P}" stroke-width="2"/>`+
+ box(170,140,60,60,C.A,'none',10)+tx(200,177,'new','text-anchor="middle" fill="#fff" font-weight="700"')+
+ [[400,100,'You see','underlining, copying, pausing'],[400,180,'In the head','integrating'],[400,260,'You can','apply to similar cases']].map(r=>box(345,r[1]-30,235,62,'#fff','#d9d2c3',10)+tx(360,r[1]-8,r[2],'class="t-g"')+tx(360,r[1]+14,r[3],'class="t-t"')).join(''),
+ txt:'In the active mode you physically handle the material in a way that focuses attention: underlining, highlighting, pausing and rewinding a video. Emphasising a part activates what you already know, and the new information fills gaps in that schema. Outcome: you can <b>apply</b> it to similar problems. That is real learning, but shallow understanding.'},
+{t:'Constructive: generating new links and repairs',svg:H('Going beyond the information given')+
+ [[120,120],[220,90],[250,200],[140,230]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="10" fill="${C.P}"/>`).join('')+`<path d="M120 120 L220 90 L250 200 L140 230 Z" fill="none" stroke="${C.P}" stroke-width="2"/>`+
+ `<path d="M220 90 L300 60 M250 200 L320 170 L330 240 M300 60 L330 110" fill="none" stroke="${C.C}" stroke-width="4"/>`+[[300,60],[320,170],[330,240],[330,110]].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="9" fill="${C.C}"/>`).join('')+
+ tx(300,52,'inference','class="t-ok"')+tx(340,175,'justification','class="t-ok"')+
+ [[460,100,'You see','explaining, concept maps, own notes'],[460,180,'In the head','inferring, revising'],[460,260,'You can','transfer to new cases']].map(r=>box(375,r[1]-30,215,62,'#fff','#d9d2c3',10)+tx(388,r[1]-8,r[2],'class="t-g"')+tx(388,r[1]+14,r[3],'font-size="11.5" fill="#2f3542"')).join(''),
+ txt:'In the constructive mode you produce something that the material did not contain: a self-explanation, a concept map, a diagram, notes in your own words. Drawing a free-body diagram that a worked example lacked is constructive; copying a diagram that was already there is only active. You infer, and can even <b>repair</b> a wrong model, such as moving from a single-loop to a double-loop picture of blood circulation. Outcome: <b>transfer</b>, deep understanding.'},
+{t:'Interactive: co-inferring, but only in a joint dialogue',svg:H('Joint dialogue vs individual dialogue')+
+ box(20,55,270,250,'#eef3fa',C.I,14)+tx(155,82,'JOINT ✓','text-anchor="middle" class="t-b"')+`<circle cx="95" cy="170" r="38" fill="${C.I}"/><circle cx="215" cy="170" r="38" fill="#5f9bd6"/><path d="M130 150 Q155 120 180 150" fill="none" stroke="${C.g}" stroke-width="4"/><path d="M180 190 Q155 220 130 190" fill="none" stroke="${C.g}" stroke-width="4"/>`+tx(155,250,'both generate ideas','text-anchor="middle" class="t-t"')+tx(155,270,'+ frequent turn taking','text-anchor="middle" class="t-t"')+
+ box(310,55,270,250,'#fbecea',C.r,14)+tx(445,82,'INDIVIDUAL ✗','text-anchor="middle" class="t-r"')+`<circle cx="385" cy="170" r="38" fill="${C.C}"/><circle cx="505" cy="170" r="28" fill="${C.A}"/><path d="M425 160 L470 160" stroke="${C.ink}" stroke-width="3"/>`+tx(505,225,'"uh-huh"','text-anchor="middle" font-style="italic" class="t-s"')+tx(445,250,'one explains (C), other agrees (A)','text-anchor="middle" class="t-t"')+tx(445,270,'speaker learns more','text-anchor="middle" class="t-t"'),
+ txt:'Interactive is not just "talking together". Two criteria must both hold: <b>both partners are constructive</b>, and there is <b>enough turn taking</b>. Then each partner builds on the other\'s inferences in a spiral, producing ideas neither had alone (co-create, deepest understanding). If one partner dominates and the other only agrees, it is an <b>individual dialogue</b>: the speaker is constructive, the listener only active.',fix:'The original deck shows only the ideal loop. The article stresses the contrast with individual dialogue, which explains why some collaboration studies found no benefit.'},
+{t:'The master table: behaviour to outcome',svg:H('Chi & Wylie\'s Table 2 in one view')+
+ ['','Behaviour','Process','Knowledge change','Outcome'].map((r,ri)=>ri?tx(20,72+ri*58,r,'class="t-b"'):'').join('')+
+ M.map((m,i)=>{const x=140+i*112;let g=box(x,48,106,36,C[m],'none',8)+tx(x+53,71,MN[i],'text-anchor="middle" fill="#fff" font-weight="700" font-size="12"');
+  [['receiving','manipulating','generating','dialoguing'],['storing','integrating','inferring','co-inferring'],['encapsulated','schema completed','schema enriched','new perspectives'],['recall','apply','transfer','co-create']].forEach((row,ri)=>{g+=box(x,94+ri*58,106,48,i%2?'#fbfaf6':'#fff','#e8e1d3',8)+tx(x+53,123+ri*58,row[i],'text-anchor="middle" font-size="12" fill="#2f3542"')});return g}).join('')+
+ tx(300,342,'minimal → shallow → deep → deepest understanding','text-anchor="middle" class="t-g"'),
+ txt:'Read the table as one chain per column. What the student does (behaviour) triggers a process in the head, which changes knowledge in a particular way, which decides what the student can do afterwards. Exam questions often give you one cell and ask for another, for example "which process belongs to highlighting?" (integrating).'},
+{t:'Task and mode are independent',svg:H('Any task can be done in any mode')+
+ M.map((m,i)=>box(160+i*108,50,100,32,C[m],'none',8)+tx(210+i*108,71,MN[i],'text-anchor="middle" fill="#fff" font-weight="700" font-size="12"')).join('')+
+ [['Listening','just listening','verbatim notes','concept map','defend a position'],['Reading','reading silently','underlining','own-words notes','question a partner'],['Watching','just watching','pause, rewind','explain concepts','debate with a peer']].map((r,ri)=>tx(20,128+ri*80,r[0],'class="t-b"')+r.slice(1).map((c,ci)=>box(160+ci*108,100+ri*80,100,52,'#fff','#e8e1d3',8)+tx(210+ci*108,131+ri*80,c,'text-anchor="middle" font-size="11.5" fill="#2f3542"')).join('')).join(''),
+ txt:'The instructional task (listening, reading, watching) does not decide the mode; what the student does with it does. The same lecture can be passive (just listening), active (verbatim notes), constructive (building a concept map) or interactive (defending a position in a small group). So a teacher can raise engagement without changing the content.',fix:'The original matrix left the "listening to a lecture" row empty. It is filled in here from the article\'s Table 1.'},
+{t:'Intended is not enacted',svg:H('The same instruction, two different modes')+
+ box(20,140,140,70,'#fff',C.I,10)+tx(90,170,'"Summarize','text-anchor="middle" class="t-b"')+tx(90,190,'this chapter"','text-anchor="middle" class="t-b"')+
+ `<path d="M160 175 L200 175 L200 105 L240 105 M200 175 L200 245 L240 245" fill="none" stroke="${C.I}" stroke-width="3"/>`+
+ box(240,75,170,60,'#fff',C.A,10)+tx(325,100,'copy and delete','text-anchor="middle" class="t-t"')+tx(325,120,'sentences','text-anchor="middle" class="t-t"')+box(240,215,170,60,'#fff',C.C,10)+tx(325,240,'synthesize in','text-anchor="middle" class="t-t"')+tx(325,260,'own words','text-anchor="middle" class="t-t"')+
+ box(430,75,150,60,C.A,'none',10)+tx(505,110,'ACTIVE','text-anchor="middle" fill="#fff" font-weight="700"')+box(430,215,150,60,C.C,'none',10)+tx(505,250,'CONSTRUCTIVE','text-anchor="middle" fill="#fff" font-weight="700"')+
+ tx(300,325,'Judge the product, not the instruction. Overt can also differ from covert thinking.','text-anchor="middle" class="t-s"'),
+ txt:'A teacher can <b>intend</b> a constructive task, but students decide how they <b>enact</b> it. "Summarize this chapter" becomes active if students copy and delete sentences, and constructive only if they synthesize in their own words. That is why Chi and Wylie say teachers must <b>analyse the outputs</b>. And because a student who only underlines might be thinking deeply, ICAP only claims a greater probability, not certainty.'},
+{t:'Same activity, different mode, different learning',svg:H('Note taking, done in different modes')+
+ [['P','reading only','(control)'],['A','underlining key','sentences'],['A','cut and paste','segments'],['C','free-form notes','own words'],['I','collaborative','notes']].map((s,i)=>box(20+i*115,70,105,120,'#fff',C[s[0]],12,'stroke-width="2"')+tx(72+i*115,95,MN[M.indexOf(s[0])],`text-anchor="middle" font-weight="700" font-size="12" fill="${C[s[0]]}"`)+tx(72+i*115,135,s[1],'text-anchor="middle" font-size="11.5" fill="#2f3542"')+tx(72+i*115,153,s[2],'text-anchor="middle" font-size="11.5" fill="#2f3542"')).join('')+
+ box(20,210,220,60,'#e2f1e6','none',10)+tx(130,235,'Underlining &gt; reading','text-anchor="middle" class="t-ok"')+tx(130,255,'Rickards &amp; Friedman (1978)','text-anchor="middle" class="t-s"')+
+ box(250,210,180,60,'#e2f1e6','none',10)+tx(340,235,'Free-form &gt; cut/paste','text-anchor="middle" class="t-ok"')+tx(340,255,'Bauer &amp; Koedinger (2007)','text-anchor="middle" class="t-s"')+
+ box(440,210,140,60,'#f6eedd','none',10)+tx(510,235,'Better notes,','text-anchor="middle" class="t-g"')+tx(510,255,'no learning diff.','text-anchor="middle" class="t-g"')+tx(510,290,'Kam et al. (2005)','text-anchor="middle" class="t-s"')+
+ tx(300,330,'Highlighting = copy-paste: same mode (both active), same learning','text-anchor="middle" class="t-s"'),
+ txt:'The strongest evidence compares the <b>same activity</b> done in different modes. Underlining beat just reading (active &gt; passive). Free-form notes beat cut-and-paste notes (constructive &gt; active). Collaborative note taking produced better notes, with more reflections and questions, but the small classroom sample showed <b>no significant learning difference</b>. And two active versions (highlighting, copy-paste) gave equal learning, as ICAP predicts.',fix:'The original slide grouped verbatim copying with "active", mixed up the studies behind the constructive cell, and implied collaborative notes improved learning. In the article, copying everything verbatim is passive, the free-form vs cut-and-paste result is Bauer &amp; Koedinger, and Kam et al. found no learning difference.'},
+{t:'The evidence: about 8 to 10% per mode',svg:(()=>{let s=H('Menekse et al. (2013): pretest vs posttest');const pre=[52,51,53,52],post=[55,62,73,82];
+ s+=`<path d="M60 300 L560 300" stroke="#6b7280"/>`;[0,25,50,75,100].forEach(v=>s+=tx(52,304-v*2.2,v,'text-anchor="end" class="t-s"'));
+ M.forEach((m,i)=>{const x=90+i*120;s+=box(x,300-pre[i]*2.2,40,pre[i]*2.2,'#dedbd3','none',3)+box(x+44,300-post[i]*2.2,50,post[i]*2.2,C[m],'none',3)+tx(x+69,294-post[i]*2.2,post[i],'text-anchor="middle" class="t-b"')+tx(x+47,320,MN[i],'text-anchor="middle" class="t-s"')});
+ return s+tx(300,345,'grey = pretest · approximate, read from Chi & Wylie\'s Figure 2','text-anchor="middle" class="t-s"')})(),
+ txt:'In the only study with all four modes, students learned materials science by reading (passive), highlighting (active), interpreting a graph alone (constructive) or with a peer (interactive). <b>Pretests were equal</b> (about 50%), so the groups started level. Posttests rose step by step, by roughly 8 to 10% per mode. Coleman et al. and Gobert &amp; Clement found the same order with three modes.',fix:'The original chart showed only posttests and exaggerated the gaps. Showing the equal pretests is what makes the result convincing.'},
+{t:'When ICAP can fail',svg:H('Three factors that override the prediction')+
+ [['THE TEST','Shallow recall items','can\'t show differences','easy MC items equal'],['THE TOPIC','Arbitrary rules (a/an/the)','or no schema (emergence)','Wylie 2011'],['THE TASK','Two tasks, same mode,','can still differ','invent &gt; compare']].map((r,i)=>box(20+i*190,60,180,190,'#fbecea','#efc9c3',14)+tx(110+i*190,92,r[0],'text-anchor="middle" class="t-r"')+tx(110+i*190,135,r[1],'text-anchor="middle" font-size="12" fill="#2f3542"')+tx(110+i*190,155,r[2],'text-anchor="middle" font-size="12" fill="#2f3542"')+tx(110+i*190,215,r[3],'text-anchor="middle" class="t-s"')).join('')+
+ box(20,265,560,58,'#fff',C.g,12,'stroke-dasharray="5 4"')+tx(300,290,'Built-in caveats: processes are hypothetical; overt behaviour is only a proxy','text-anchor="middle" class="t-t"')+tx(300,310,'ICAP\'s claims are about differences ACROSS modes','text-anchor="middle" class="t-g"'),
+ txt:'ICAP looks at only one thing, what students do, so other factors can override it. A <b>shallow test</b> that only asks for recall makes all modes look equal. A <b>domain</b> with arbitrary rules, or one so new that learners have no schema, gives explaining nothing to work with. And two <b>tasks in the same mode</b> can differ: inventing beat comparing and contrasting, although both were interactive.',fix:'The original deck covered only the assessment limit. The article names three overriding factors plus two built-in caveats.'},
+{t:'ICAP as a tool, and how it compares',svg:H('Four uses, three comparisons')+
+ [['Explain','mixed findings'],['Control','compare within a mode'],['Evaluate','code students\' outputs'],['Design','upgrade a lesson']].map((u,i)=>box(20+i*142,55,132,80,'#fff',C.I,12)+tx(86+i*142,88,u[0],'text-anchor="middle" class="t-b"')+tx(86+i*142,110,u[1],'text-anchor="middle" class="t-s"')).join('')+
+ [['Constructivism','same learner focus, ICAP more concrete'],['Cognitive load theory','often the opposite: more effort, more learning'],['Bloom (revised)','Bloom = ends (goals), ICAP = means (activities)']].map((c,i)=>box(20,155+i*58,560,48,i%2?'#fbfaf6':'#f6eedd','none',10)+tx(36,184+i*58,c[0],'class="t-b"')+tx(230,184+i*58,c[1],'class="t-t"')).join(''),
+ txt:'ICAP is also a practical tool. It <b>explains</b> mixed findings (summarizing "works" or not depending on its mode and its comparison), helps pick a fair <b>control</b> condition (same mode), helps <b>evaluate</b> students\' work, and guides <b>design</b>: lecture → guided notes → concept map → building the map with a partner. It often predicts the opposite of cognitive load theory (more effort, more learning), except when the effort is germane load.',fix:'New card: the original deck did not cover ICAP\'s uses or its comparison with other theories, which the article treats in Section 3.'},
+{t:'The take-away: design for the highest mode you can reach',svg:H('The ICAP escalator')+
+ `<path d="M60 300 Q 330 290 560 70" fill="none" stroke="${C.I}" stroke-width="6"/>`+M.map((m,i)=>{const x=[90,240,390,530][i],y=[298,280,210,95][i];return `<circle cx="${x}" cy="${y}" r="13" fill="#fff" stroke="${C[m]}" stroke-width="5"/>`+tx(x,y+36,MN[i],`text-anchor="middle" font-weight="700" font-size="13" fill="${C[m]}"`)+tx(x,y+54,['recall','apply','transfer','co-create'][i],'text-anchor="middle" class="t-s"')}).join('')+
+ box(40,60,300,80,'#f6eedd',C.g,12)+tx(55,88,'Ask one question per activity:','class="t-g"')+tx(55,110,'Does the learner produce something','class="t-t"')+tx(55,128,'beyond the material? With a partner?','class="t-t"'),
+ txt:'The whole article in one line: the more learners have to <b>produce</b>, and the more they build on a partner\'s ideas, the deeper they learn. So design for the highest mode you can reach, check what students actually produce, and use a deep test to see the difference. 💬 To a friend: "Listen, touch, make, talk: each step up usually means deeper learning."'}
+]};
+
+function buildDeck(key){const host=$('#nutDeck');const d=NUT[key];
+ if(!d){host.innerHTML='<div class="box" style="text-align:center;padding:40px 20px"><div style="font-size:2.4rem">📇</div><h3>Coming soon</h3><p class="mini">Send the summary PDF for this article and it will be turned into an improved, corrected visual deck here.</p></div>';return}
+ host.innerHTML='<div class="nut"><figure class="fig nutfig"><svg viewBox="0 0 600 360" id="nutSvg" role="img"></svg><button class="zoom" type="button" id="nutZoom">⤢ Enlarge</button></figure><div class="pager nutp"><div class="pl"><i>1</i><span id="nutTitle"></span></div><div id="nutTxt" class="nuttxt"></div><div id="nutFix"></div><div class="pn2"><div class="dots" id="nutDots"></div><span class="cnt" id="nutCnt"></span><button type="button" class="pv" id="nutPv">◀</button><button type="button" class="nx" id="nutNx">Next ▶</button></div></div></div>';
+ $('#nutDots').innerHTML=d.map((s,i)=>'<button type="button" aria-label="'+s.t.replace(/"/g,'')+'"></button>').join('');
+ let i=0;const seenN=new Set();
+ function go(k){i=Math.max(0,Math.min(d.length-1,k));seenN.add(i);const s=d[i];$('#nutSvg').innerHTML=s.svg;$('#nutTitle').textContent=s.t;$('.nutp .pl i').textContent=i+1;$('#nutTxt').innerHTML='<p>'+s.txt+'</p>';
+  $('#nutFix').innerHTML=s.fix?'<div class="nutfix"><b>✏️ Improved</b> '+s.fix+'</div>':'';
+  $$('#nutDots button').forEach((b,j)=>{b.classList.toggle('on',j===i);b.classList.toggle('seen',seenN.has(j)&&j!==i)});$('#nutCnt').textContent=(i+1)+' / '+d.length;$('#nutPv').disabled=i===0;$('#nutNx').disabled=i===d.length-1;$('#nutNx').textContent=i===d.length-1?'✓ Done':'Next ▶'}
+ $$('#nutDots button').forEach((b,j)=>b.onclick=()=>go(j));$('#nutPv').onclick=()=>go(i-1);$('#nutNx').onclick=()=>go(i+1);
+ $('#nutZoom').onclick=()=>{lb.querySelector('.in').innerHTML=$('#nutSvg').outerHTML;lb.hidden=false};
+ host.go=go;host.cur=()=>i;go(0)}
+$$('#nutTabs button').forEach(b=>b.onclick=()=>{$$('#nutTabs button').forEach(x=>x.classList.toggle('ok',x===b));buildDeck(b.dataset.k)});buildDeck('icap');
+document.addEventListener('keydown',e=>{if(!$('#p-nut').classList.contains('on'))return;if(e.target.closest('input,textarea,select'))return;const h=$('#nutDeck');if(!h.go)return;if(e.key==='ArrowRight')h.go(h.cur()+1);if(e.key==='ArrowLeft')h.go(h.cur()-1)});
+
 /* ---------- routing ---------- */
 function route(){const h=location.hash.slice(1);if(!h)return;if(h==='videos')return show('vd');const m=h.match(/^(icap|gls|dp|lg)-(\d+)$/);if(m)return show(m[1],+m[2]);if($('#p-'+h))show(h)}
 window.addEventListener('hashchange',route);route();
