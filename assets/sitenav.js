@@ -12,7 +12,7 @@
     { title: "Year 2 · Block 1 · Cognitive Psychology", links: [["All study links", D + "study/#cognitive"], ["Course story", D + "cognitive-course/"], ["Practice papers", D + "cognitive-exams/"], ["Memory sheets", D + "cognitive-memory/"], ["In-depth", D + "cognitive-indepth/"], ["Lectures", D + "cognitive-lectures/"], ["Videos ↗", "https://www.youtube.com/playlist?list=PLaAyrrTos0mI", 1]],
       themes: [["1", B + "cognitive_theme_1/"], ["2", B + "cognitive_theme2_version_5/"], ["3", B + "cognitive_theme2_version2/"], ["4", B + "cognitive_theme4_version2/"], ["5", B + "theme5_cognitive_version2/"], ["6", B + "cognitive_theme6_version2/"], ["7", B + "theme-7_teaching/"], ["8", D + "cognitive-theme8/"]] },
     { title: "Year 2 · Block 1 · Methods and Statistics 2", links: [["All study links", D + "study/#stats2"], ["Course story", D + "stat2-course/"], ["Exam prep", D + "stat2-exam2026/"], ["Exam prep per theme", D + "stat2-exam2026/themes.html"], ["SPSS practice", D + "spss-exams/"], ["Videos ↗", "https://www.youtube.com/playlist?list=PLYIWFBp8jVm4", 1]] },
-    { title: "Year 2 · Block 2 · Educational Psychology", links: [["All study links", D + "study/#edpsy"], ["Practice exams", D + "edpsy-exams/"]],
+    { title: "Year 2 · Block 2 · Educational Psychology", links: [["All study links", D + "study/#edpsy"], ["Course story", D + "edpsy-course/"], ["Practice exams", D + "edpsy-exams/"]],
       themes: [["1", D + "edpsy-theme1/"]] },
     { title: "Year 3", links: [["Year 3 plan", D + "study/#year3"]] }
   ];
