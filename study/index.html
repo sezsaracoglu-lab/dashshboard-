@@ -159,7 +159,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <button class="course" data-course="cognitive" aria-pressed="false"><i class="dot d-k"></i><div>Cognitive Psychology<small>Open study tools →</small></div></button>
 <div class="course"><i class="dot d-v"></i><div>Professional Ethics<small>Coming soon</small></div></div></div>
 <div class="blk"><div class="when">Block 2 · Nov–Feb</div><h3>Psychology in Practice</h3>
-<div class="course"><i class="dot d-k"></i><div>Human Learning<small>Coming soon</small></div></div>
+<button class="course" data-course="edpsy" aria-pressed="false"><i class="dot d-k"></i><div>Educational Psychology<small>Open study tools →</small></div></button>
 <div class="course"><i class="dot d-k"></i><div>World of Work<small>Coming soon</small></div></div>
 <div class="course"><i class="dot d-a"></i><div>Psychological Science<small>Coming soon</small></div></div></div>
 <div class="blk"><div class="when">Block 3 · Feb–Apr</div><h3>Complex Minds</h3>
@@ -212,7 +212,12 @@ const COURSES={
   stats2:{name:'Methods and Statistics 2',year:'Year 2',block:'Block 1 · Frames of Action',img:'../stat2-course/img/cover.jpg',alt:'Scatterplot with a regression line',
     q:'Could it be chance, and how much does it matter?',p:'Eight stops on one map of tests, from proportions to repeated-measures ANOVA, with SPSS practice on realistic datasets.',
     quick:[['Course story','../stat2-course/',1],['Exam prep','../stat2-exam2026/'],['Exam prep per theme','../stat2-exam2026/themes.html'],['SPSS practice','../spss-exams/'],['Last-minute SPSS check','../spss-lastminute/'],['Videos ↗','https://www.youtube.com/playlist?list=PLYIWFBp8jVm4']],
-    readme:['Statistics 2','SPSS 2']}
+    readme:['Statistics 2','SPSS 2']},
+  edpsy:{name:'Educational Psychology',year:'Year 2',block:'Block 2 · Psychology in Practice',img:'../edpsy-theme1/img/cover.svg',alt:'ICAP staircase from passive to interactive, and massed versus spaced study sessions',
+    q:'How do people learn effectively, and how do you design for it?',p:'Eight themes on motivation, self-regulation, memory strategies, learning problems, assessment, technology, training and transfer, each applied to a real professional case.',
+    quick:[['Theme 1 · Learning strategies','../edpsy-theme1/',1],['Practice exams','../edpsy-exams/'],['Theme 1 learning goals','../edpsy-theme1/#lg'],['Theme 1 case','../edpsy-theme1/#case']],
+    readme:['Educational Psychology'],
+    fallback:[['Theme 1 · Learning strategies',[['Start here · the theme as one story','https://sezsaracoglu-lab.github.io/dashshboard-/edpsy-theme1/'],['Article 1 · ICAP framework (Chi & Wylie, 2014)','https://sezsaracoglu-lab.github.io/dashshboard-/edpsy-theme1/#icap-1'],['Article 2 · Generative learning by age (Brod, 2021)','https://sezsaracoglu-lab.github.io/dashshboard-/edpsy-theme1/#gls-1'],['Article 3 · Distributed practice (Gerbier & Toppino, 2015)','https://sezsaracoglu-lab.github.io/dashshboard-/edpsy-theme1/#dp-1'],['Learning goals · all 8 answered','https://sezsaracoglu-lab.github.io/dashshboard-/edpsy-theme1/#lg'],['The case · design the study app','https://sezsaracoglu-lab.github.io/dashshboard-/edpsy-theme1/#case'],['Videos','https://sezsaracoglu-lab.github.io/dashshboard-/edpsy-theme1/#videos']]],['Practice Exams',[['Theme 1 · 25 exam-style questions','https://sezsaracoglu-lab.github.io/dashshboard-/edpsy-exams/#t1']]]]}
 };
 const README_URL='https://raw.githubusercontent.com/sezsaracoglu-lab/psychology_year_2/main/README.md';
 let LIB=null;
@@ -239,6 +244,7 @@ async function openCourse(id,scroll){
   if(scroll)panel.scrollIntoView({behavior:'smooth',block:'start'});
   const L=await lib();const body=document.getElementById('pbody');
   const parts=c.readme.filter(k=>L[k]&&L[k].groups.length);
+  if(!parts.length&&c.fallback){L[c.readme[0]]={groups:c.fallback.map(([t,l])=>({title:t,links:l}))};parts.push(c.readme[0]);}
   if(!parts.length){body.innerHTML='<p class="note">The study links could not load. Please refresh the page.</p>';return}
   body.innerHTML=parts.map(k=>`${c.readme.length>1?`<div class="sub">${esc(k)}</div>`:'<div class="sub">All study links</div>'}<div class="groups">${
     L[k].groups.filter(g=>g.links.length).map(g=>`<div class="grp" id="g-${g.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}"><h4>${esc(g.title)}</h4><ul>${g.links.map(([l,u])=>`<li><a href="${u}">${esc(l)}</a></li>`).join('')}</ul></div>`).join('')}</div>`).join('')
