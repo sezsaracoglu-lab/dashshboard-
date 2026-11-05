@@ -95,6 +95,16 @@ details.qc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.qc p
 .verd{display:inline-block;border-radius:6px;padding:1px 8px;font-size:.72rem;font-weight:700;letter-spacing:.04em}
 .verd.s{background:#eaf6ee;color:var(--ok)}.verd.a{background:#fbecea;color:var(--bad)}.verd.m{background:var(--pgold);color:var(--dgold)}.verd.sh{background:var(--blue);color:var(--navy)}
 .range{width:100%}
+.try{background:var(--peach);border-radius:14px;padding:10px 14px;margin:12px 0 8px;font-size:.93rem}
+.ans{display:none;background:#fff;border:1px solid var(--line);border-left:5px solid var(--navy);border-radius:14px;padding:12px 16px;margin-top:10px;font-size:.95rem}.ans.on{display:block;animation:fade .25s}.ans p{margin:.3em 0 .6em}
+.evi{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0}
+.ev{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:.88rem;line-height:1.45}.ev b{display:block;color:var(--navy);margin:6px 0 2px;font-size:.95rem}.ev p{margin:0 0 6px}.ev i{color:var(--muted);display:block}
+.conf{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;padding:12px 14px;background:#fff;border:1px dashed var(--gold);border-radius:14px;font-size:.9rem}.conf span{font-weight:700;color:var(--navy);margin-right:4px}
+.conf button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer}.conf button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ictest{background:var(--blue);border-radius:12px;padding:10px 12px;margin-top:8px;font-size:.88rem}.ictest label{display:flex;gap:8px;align-items:flex-start;margin:6px 0}
+.plan8{display:flex;flex-direction:column;gap:4px;margin-bottom:6px;font-size:.86rem}.plan8 label{display:flex;gap:8px;align-items:flex-start;background:#fff;border-radius:8px;padding:5px 8px}
+#lg1Svg,#lg2Svg,#lg3Svg,#lg4Svg,#lg5Svg,#lg6Svg,#lg7Svg,#lg8Svg,#lgWeb{width:100%;height:auto;display:block}
+
 #cepSvg,#menChart,#dialSvg{max-width:660px;display:block;margin:0 auto}
 .lgcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 20px;margin:14px 0}
 .lgcard .lq{display:flex;gap:12px;align-items:flex-start}.lgcard .ln{flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
@@ -483,7 +493,7 @@ svg text{font-family:'DM Sans',sans-serif}
 <tr><td>It can fail with shallow tests, odd domains, task differences within a mode.</td><td>Check the test and the topic before you blame the framework.</td></tr>
 <tr><td>A tool to explain findings, pick controls, code outputs and design lessons.</td><td>Useful for teachers and app designers.</td></tr>
 </tbody></table></div>
-<p>Learning goals answered here: <button class="lgtag" data-go="lg">LG 1</button><button class="lgtag" data-go="lg">LG 2</button><button class="lgtag" data-go="lg">LG 3</button></p>
+<p>Learning goals answered here: <button class="lgtag" data-jump="lg:2">LG 1</button><button class="lgtag" data-jump="lg:3">LG 2</button><button class="lgtag" data-jump="lg:4">LG 3</button></p>
 <h3>Quick check</h3>
 <details class="qc"><summary>A student underlines key sentences but, in her head, explains each one to herself. What mode does ICAP assign, and why?</summary><p>Active. ICAP codes the overt behaviour (underlining). The covert self-explaining is possible, which is why ICAP only claims "greater probability".</p></details>
 <details class="qc"><summary>Two students talk about a text. One explains everything, the other mostly says "yes, ok". Who learns more according to ICAP?</summary><p>The speaker. This is an individual dialogue: the speaker is constructive, the listener only active. Both would benefit only in a joint dialogue.</p></details>
@@ -730,7 +740,7 @@ svg text{font-family:'DM Sans',sans-serif}
 <tr><td>Evidence is thin and probably overestimated; age is only a proxy.</td><td>Treat the table as a first map, not the final word.</td></tr>
 </tbody></table></div>
 <div class="game" id="g-rx"><span class="lbl">GAME · PRESCRIBE THE STRATEGY</span><h4>You are the study advisor. Pick the best plan for each learner.</h4><div id="rxBox"></div><div class="out" id="rxOut"></div></div>
-<p>Learning goals answered here: <button class="lgtag" data-go="lg">LG 4</button><button class="lgtag" data-go="lg">LG 5</button><button class="lgtag" data-go="lg">LG 6</button></p>
+<p>Learning goals answered here: <button class="lgtag" data-jump="lg:5">LG 4</button><button class="lgtag" data-jump="lg:6">LG 5</button><button class="lgtag" data-jump="lg:7">LG 6</button></p>
 </section>
 
 </div></section>
@@ -972,7 +982,7 @@ svg text{font-family:'DM Sans',sans-serif}
 </tbody></table></div>
 <div class="box"><h4 style="margin-top:0">⚠️ Limits the authors name</h4><p>Much of the research uses <b>simple materials in the lab</b>, although text and classroom studies are growing. There is little <b>applied research</b> on how to use spacing in specific educational contexts. Several brain findings are <b>correlational</b>. Reconsolidation needs much more research, especially in <b>humans</b>.</p></div>
 <div class="box" id="openBack"><h4 style="margin-top:0">↩ Back to the French Revolution</h4><p>The article ends: "So, how should you schedule your learning of the history lesson?" The answer from the review is <b>C</b>: study every part in several sessions, spread over days, with self-testing. If you also want to remember it next year, keep reviewing after the exam.</p></div>
-<p>Learning goals answered here: <button class="lgtag" data-go="lg">LG 7</button><button class="lgtag" data-go="lg">LG 8</button></p>
+<p>Learning goals answered here: <button class="lgtag" data-jump="lg:8">LG 7</button><button class="lgtag" data-jump="lg:9">LG 8</button></p>
 <h3>Quick check</h3>
 <details class="qc"><summary>Why can't deficient processing explain the whole spacing effect?</summary><p>It predicts that memory keeps improving (or levels off) as lag increases. It cannot explain the decline at long lags, or why the optimal lag depends on the retention interval. Study-phase retrieval can.</p></details>
 <details class="qc"><summary>A student self-tests right after studying, gets 95% and stops. What is the problem?</summary><p>Testing soon after studying inflates performance, so she overestimates what she will remember. Self-tests should come after an extended delay.</p></details>
@@ -980,60 +990,300 @@ svg text{font-family:'DM Sans',sans-serif}
 
 </div></section>
 
-<!-- ================= LEARNING GOALS ================= -->
+
+<!-- ================= LEARNING GOALS (visual walk-through) ================= -->
 <section class="panel" id="p-lg">
 <div class="eyebrow">Theme 1 · All eight learning goals</div>
 <h1>🎯 The learning goals, answered</h1>
-<p class="sub">Each answer is written as you could give it in the tutorial or recognise it on the exam: the answer first, then the evidence, then a plain-words line. Try answering out loud before you open each one.</p>
+<p class="sub">One goal per screen. Play with the graph first, try the answer out loud, then reveal the model answer. Each screen also has the studies behind the answer, a few tap-open extras and two check questions. Rate your confidence at the bottom of each screen: the map remembers it.</p>
+<div class="rail" data-walk="lg"></div>
+<div class="walk" id="w-lg">
 
-<div class="lgcard"><div class="lq"><div class="ln">1</div><div><h3>What are the four modes of engagement in the ICAP framework, and how do they impact learning outcomes?</h3><button class="lgtag" data-jump="icap:3">ICAP · Concepts</button><button class="lgtag" data-jump="icap:6">ICAP · Findings</button></div></div>
-<details class="qc"><summary>Show the answer</summary>
-<p style="background:none;padding:0">ICAP (Chi &amp; Wylie, 2014) sorts engagement by students' <b>overt behaviour</b> into four modes. <b>Passive</b>: receiving information without doing anything else (listening, reading). <b>Active</b>: physically manipulating the material in a way that focuses attention (underlining, copying, pausing a video). <b>Constructive</b>: generating outputs that go beyond the material (self-explaining, concept maps, notes in your own words). <b>Interactive</b>: a dialogue in which both partners are constructive and take frequent turns.</p>
-<p style="background:none;padding:0">Each mode is linked to a knowledge-change process: <b>storing</b> (isolated, "inert" knowledge), <b>integrating</b> with activated prior knowledge, <b>inferring</b> new knowledge, and <b>co-inferring</b> with a partner. These lead to <b>recall</b>, <b>apply</b>, <b>transfer</b> and <b>co-create</b>, or minimal, shallow, deep and deepest understanding. Hence the ICAP hypothesis: <b>I &gt; C &gt; A &gt; P</b>. Menekse et al. (2013) found gains of roughly 8 to 10% per mode in one study with all four modes.</p>
-<div class="plain">💬 In plain words: the more you have to produce, and the more you build on a partner's ideas, the deeper you learn.</div></details></div>
-
-<div class="lgcard"><div class="lq"><div class="ln">2</div><div><h3>How can you design activities to move students from passive to interactive engagement?</h3><button class="lgtag" data-jump="icap:8">ICAP · Use it as a tool</button></div></div>
-<details class="qc"><summary>Show the answer</summary>
-<p style="background:none;padding:0">Change what students must <b>produce</b>, not the topic or the delivery (task and mode are independent). From a lecture: add a <b>guided-notes</b> sheet (active), then ask students to <b>build a concept map</b> or explain in their own words (constructive), then have pairs <b>build or defend the map together</b>, asking each other for justifications (interactive). In general: replace selecting with generating (generate link labels instead of choosing them; draw molecules instead of picking images), use prompts that need more than yes or no, and give incomplete worked examples.</p>
-<p style="background:none;padding:0">Two design checks. (1) <b>Intended vs enacted</b>: a summary task can be done as copy-and-delete, so evaluate the products. (2) Group work is only <b>interactive</b> if the task is generative <i>and</i> both partners contribute with turn taking (joint, not individual, dialogue).</p>
-<div class="plain">💬 In plain words: listen → fill in → build → build together and challenge each other.</div></details></div>
-
-<div class="lgcard"><div class="lq"><div class="ln">3</div><div><h3>What are the limitations of the ICAP framework?</h3><button class="lgtag" data-jump="icap:7">ICAP · Limits</button></div></div>
-<details class="qc"><summary>Show the answer</summary>
-<p style="background:none;padding:0">Three factors can override the hypothesis. <b>Assessment</b>: shallow tests (recall, easy multiple-choice) cannot detect differences (Aleven &amp; Koedinger, 2002; easy items in Menekse et al.). <b>Domain</b>: topics with arbitrary rules (English articles, Wylie, 2011) or so unfamiliar that learners have no schema to build on (emergence). <b>Task differences within a mode</b>: two interactive tasks can differ (inventing beat comparing and contrasting).</p>
-<p style="background:none;padding:0">Built-in caveats: the knowledge-change processes are <b>hypothetical</b> and untested; <b>overt behaviour is only a proxy</b> (covert processing, intended vs enacted), so predictions hold with greater probability, not certainty; boundaries between modes are <b>fuzzy</b> (problem solving); ICAP covers only <b>one</b> aspect of learning (what students do).</p>
-<div class="plain">💬 In plain words: ICAP is a good first cut, but the test, the topic and the exact task still matter, and what students do on the outside doesn't always match what happens inside.</div></details></div>
-
-<div class="lgcard"><div class="lq"><div class="ln">4</div><div><h3>What are Generative Learning Strategies, and how do they differ from passive learning methods?</h3><button class="lgtag" data-jump="gls:3">Brod · Concepts</button></div></div>
-<details class="qc"><summary>Show the answer</summary>
-<p style="background:none;padding:0">GLSs are activities that prompt learners to <b>produce something meaningful that goes beyond the information provided</b> (Brod, 2021). Learners must activate prior knowledge and link it to the new information, which supports <b>integration</b> into existing knowledge. They come from the <b>constructivist</b> view of learning. The six reviewed: concept mapping, explaining, predicting, questioning, practice testing and drawing.</p>
-<p style="background:none;padding:0">They differ from <b>passive</b> methods (listening, rereading), and also from merely <b>active</b> ones (highlighting, paraphrasing), because those reproduce the material without adding content. Brod equates GLSs with Chi's <b>constructive</b> mode. Practice testing counts as generative even when the answer is wrong.</p>
-<div class="plain">💬 In plain words: you don't just take it in or mark it, you make something new with it.</div></details></div>
-
-<div class="lgcard"><div class="lq"><div class="ln">5</div><div><h3>How do developmental processes like cognitive and metacognitive growth influence GLS effectiveness across age groups?</h3><button class="lgtag" data-jump="gls:4">Brod · Developing learner</button><button class="lgtag" data-jump="gls:7">Brod · Why the differences</button></div></div>
-<details class="qc"><summary>Show the answer</summary>
-<p style="background:none;padding:0">Strategy use grows with three processes. <b>Knowledge</b>: a richer semantic network to link to, and freed capacity. <b>Cognitive capacity</b>: executive functions (working memory, inhibition, shifting), tied to the maturing prefrontal cortex, which underlie reasoning and revising mental models. <b>Metacognition</b>: monitoring and control, which mature late. Children show <b>production</b>, <b>mediation</b> and <b>utilization deficiencies</b>.</p>
-<p style="background:none;padding:0">So GLSs generally work better with age; around age 10 abstract self-reflection emerges. Strategies differ because their <b>prerequisites</b> differ. Predicting and testing mostly need effortful retrieval and basic feedback processing, so they work in lower elementary school. Questioning and drawing need prior knowledge and metacognitive monitoring to construct a useful question or drawing, so they are largely ineffective until secondary school (Table 1). Breitwieser &amp; Brod (2020): children benefited more from predictions than examples, linked to reasoning ability.</p>
-<div class="plain">💬 In plain words: a strategy only works once the brain skills it needs have grown. Guessing needs little, drawing and asking good questions need a lot.</div></details></div>
-
-<div class="lgcard"><div class="lq"><div class="ln">6</div><div><h3>How can GLS techniques (e.g., concept mapping) be adapted for different learners?</h3><button class="lgtag" data-jump="gls:8">Brod · Limits and support</button></div></div>
-<details class="qc"><summary>Show the answer</summary>
-<p style="background:none;padding:0">Match the <b>amount of support</b> to the learner's prerequisites. Younger or weaker learners get part of the material and metacognitive prompts. Concept mapping: high-school students profited more from a <b>high-coherence</b> map where they only label existing lines, university students from a <b>low-coherence</b> map where they create and label lines (Gurlitt &amp; Renkl, 2008). Elementary children who <b>filled in parts</b> of a map did better than those who built the whole map, which produced poor maps and no benefit (Karpicke et al., 2014). Drawing: provide background parts (Schmeck et al., 2014) or prompt learners to compare their drawing with an illustration (Van Meter et al., 2006). Questioning: give question stems (King, 1994).</p>
-<p style="background:none;padding:0">The limit: if learners are given everything and need no effortful retrieval, the task is <b>no longer generative</b>. In the long run, choose strategies by individual prerequisites, not just age.</p>
-<div class="plain">💬 In plain words: give younger learners a scaffold, not the answer.</div></details></div>
-
-<div class="lgcard"><div class="lq"><div class="ln">7</div><div><h3>What is distributed practice, and why is it effective for long-term learning?</h3><button class="lgtag" data-jump="dp:3">Spacing · Concepts</button><button class="lgtag" data-jump="dp:5">Mechanisms</button><button class="lgtag" data-jump="dp:7">Retrieval</button></div></div>
-<details class="qc"><summary>Show the answer</summary>
-<p style="background:none;padding:0"><b>Distributed practice</b> means repeating material in study sessions separated by time, instead of massing the same total time in immediate succession. Spacing improves long-term retention for almost all materials, ages and species (Gerbier &amp; Toppino, 2015). Example: three 10-minute sessions over 3 days gave 35% better retention after four days than one 30-minute session (Bloom &amp; Shuell).</p>
-<p style="background:none;padding:0">Why it works: (1) <b>Deficient processing</b>: an immediate repetition gets less processing (smaller pupil dilation; repetition suppression in fMRI). (2) <b>Synaptic plasticity</b>: spaced stimulation produces more lasting LTP and consolidation, and over day-long gaps sleep and systems consolidation strengthen gist. (3) <b>Study-phase retrieval</b>: a repetition must remind you of the earlier encounter, and harder but successful retrieval strengthens memory and slows forgetting. This explains the <b>inverted U</b> and why the optimal lag grows with the retention interval. <b>Reconsolidation</b> may link retrieval to synaptic change.</p>
-<div class="plain">💬 In plain words: a repeat that comes a bit later makes your brain work to pull the memory back, and that effort makes it last.</div></details></div>
-
-<div class="lgcard"><div class="lq"><div class="ln">8</div><div><h3>How can distributed practice be applied in educational settings?</h3><button class="lgtag" data-jump="dp:8">Spacing · Classroom</button></div></div>
-<details class="qc"><summary>Show the answer</summary>
-<p style="background:none;padding:0">Three rules: <b>avoid massing</b>, keep the intervals between practice opportunities <b>as long as possible</b>, and <b>include practice tests</b>. Teachers: summarize the previous day's lesson at the <b>start</b> of the next class, with a <b>quiz before</b> the summary; use several short reviews instead of one end-of-term review; give <b>cumulative</b> quizzes; put older material in homework; add follow-up reviews after compressed courses. Learners: plan several spaced sessions, <b>self-test after a delay</b>, use adaptive spacing software. Use an <b>expanding schedule</b> when forgetting is fast (young learners, low working memory, high interference).</p>
-<p style="background:none;padding:0">Avoid two traps: easy initial learning ≠ good retention, and learned material still needs review. Exceptions: massing can help early with complex material; gaps can be too long; cramming suits only a very short retention interval.</p>
-<div class="plain">💬 In plain words: spread it out, quiz yourself, keep coming back, and don't trust that "I've got it" feeling.</div></details></div>
+<!-- 0 MAP -->
+<section class="step" data-t="Map">
+<div class="shead"><div class="snum">MAP<b>🗺️</b></div><div><div class="k">How the eight goals connect to the three articles</div><h2>Your learning-goal map</h2></div></div>
+<div class="ask">👆 <b>Tap a goal</b> to jump to it. Colours show how confident you said you are: <span class="verd a">not yet</span> <span class="verd m">getting there</span> <span class="verd s">exam-ready</span>.</div>
+<figure class="fig"><svg viewBox="0 0 900 430" id="lgMap" role="img" aria-label="Map linking the eight learning goals to the three articles"></svg><figcaption>Three articles, eight goals. Dashed lines show where articles talk to each other.</figcaption></figure>
+<div class="tw" style="margin-top:14px"><table class="tb"><thead><tr><th>Article</th><th>Goals</th><th>The one-line answer</th></tr></thead><tbody>
+<tr><td><b>Chi &amp; Wylie (2014)</b> · ICAP</td><td>1, 2, 3</td><td>Engagement has four visible modes. Learning rises from passive to interactive, unless the test, topic or task gets in the way.</td></tr>
+<tr><td><b>Brod (2021)</b> · generative learning</td><td>4, 5, 6</td><td>Producing something new helps learning, but each strategy needs brain skills that grow with age, so younger learners need the right strategy and enough support.</td></tr>
+<tr><td><b>Gerbier &amp; Toppino (2015)</b> · spacing</td><td>7, 8</td><td>Spread repetitions over time and make each one a retrieval. Gaps should fit how long you need to remember.</td></tr>
+</tbody></table></div>
 </section>
+
+<!-- LG1 -->
+<section class="step" data-t="LG 1 · Four modes">
+<div class="shead"><div class="snum">GOAL<b>1</b></div><div><div class="k">Learning goal 1 · Chi &amp; Wylie (2014)</div><h2>What are the four modes of engagement in ICAP, and how do they impact learning outcomes?</h2></div></div>
+<div class="ask">🧪 <b>Try it:</b> tap each mode and watch the chain change: what you see the student do → what happens in their head → what they can do afterwards.</div>
+<div class="scr">
+<figure class="fig"><div class="opts" id="lg1Modes" style="justify-content:center"></div><svg viewBox="0 0 560 400" id="lg1Svg" role="img" aria-label="Behaviour to outcome chain for the selected mode, plus posttest scores"></svg><figcaption>Chain from Chi &amp; Wylie's Table 2. Bars: posttest % correct in Menekse et al. (2013). <span class="bg">approximate, read from Figure 2</span></figcaption></figure>
+<div>
+<div class="try">✋ <b>Answer out loud first.</b> A full answer names: (1) the four modes with one example each, (2) the mental process behind each one, (3) the prediction I &gt; C &gt; A &gt; P, and (4) one study that supports it.</div>
+<button class="btn sm reveal" data-r="ans1">👁 Reveal the model answer</button>
+<div class="ans" id="ans1">
+<p>ICAP (Chi &amp; Wylie, 2014) sorts engagement by students' <b>overt behaviour</b> into four modes. <b>Passive</b>: receiving information without doing anything else (listening, reading). <b>Active</b>: physically manipulating the material in a way that focuses attention (underlining, copying, pausing a video). <b>Constructive</b>: generating outputs that go beyond the material (self-explaining, concept maps, notes in your own words). <b>Interactive</b>: a dialogue in which both partners are constructive and take frequent turns.</p>
+<p>Each mode is linked to a knowledge-change process: <b>storing</b> (isolated, "inert" knowledge), <b>integrating</b> with activated prior knowledge, <b>inferring</b> new knowledge, and <b>co-inferring</b> with a partner. These lead to <b>recall</b>, <b>apply</b>, <b>transfer</b> and <b>co-create</b>, or minimal, shallow, deep and deepest understanding. Hence the ICAP hypothesis: <b>I &gt; C &gt; A &gt; P</b>. Menekse et al. (2013) found gains of roughly 8 to 10% per mode in one study with all four modes.</p>
+<div class="plain">💬 In plain words: the more you have to produce, and the more you build on a partner's ideas, the deeper you learn.</div>
+</div>
+<div class="chips"><button data-c="h">🔑 Hook</button><button data-c="x">✗ Common mistake</button><button data-c="t">✎ Exam tip</button></div>
+<div class="cb h" data-c="h">Receive → Manipulate → Generate → Dialogue: <b>"listen, touch, make, talk"</b>. And the outcomes climb the same way: <b>recall → apply → transfer → co-create</b>.</div>
+<div class="cb x" data-c="x"><span class="w">✗ "Constructive means the student works hard."</span><span class="r">✓ Constructive means the student produces something <i>new</i> beyond the material. Copying a long text by hand is effortful but only active.</span></div>
+<div class="cb t" data-c="t">Exam stems often describe a behaviour and ask for the mode, or ask which <b>process</b> (store, integrate, infer, co-infer) or <b>outcome</b> belongs to a mode. Learn the four rows of Table 2 as one chain.</div>
+</div></div>
+<h4>🔬 The evidence behind the answer</h4>
+<div class="evi">
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Menekse et al. (2013)</b><p>Read / highlight / interpret a graph / interpret it with a peer. Only study with all four modes.</p><i>In plain words: each step up the ladder added about 8 to 10% on the posttest.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Coleman et al. (1997)</b><p>Listening, summarizing, explaining. Near and far transfer rose in that order.</p><i>In plain words: explaining beat summarizing, which beat listening.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Gobert &amp; Clement (1999)</b><p>Drawing diagrams &gt; writing summaries &gt; only reading, on spatial and causal knowledge.</p><i>In plain words: making a picture of plate tectonics taught more than summarizing it.</i></div>
+<div class="ev"><span class="verd sh">SHOWS</span><b>Bauer &amp; Koedinger (2007)</b><p>Highlighting vs copy-paste notes: no difference.</p><i>In plain words: two activities in the same mode give the same learning, as ICAP predicts.</i></div>
+</div>
+<div class="game"><span class="lbl">CHECK YOURSELF</span><div id="lgq1"></div><div class="out" id="lgq1o"></div></div>
+<p class="mini">Go deeper: <button class="lgtag" data-jump="icap:3">ICAP · Concepts</button><button class="lgtag" data-jump="icap:6">ICAP · Findings</button></p>
+<div class="conf" data-g="1"></div>
+</section>
+
+<!-- LG2 -->
+<section class="step" data-t="LG 2 · Move them up">
+<div class="shead"><div class="snum">GOAL<b>2</b></div><div><div class="k">Learning goal 2 · Chi &amp; Wylie (2014)</div><h2>How can you design activities to move students from passive to interactive engagement?</h2></div></div>
+<div class="ask">🧪 <b>Try it:</b> slide the same lecture up the ladder and see what students must <i>produce</i> at each rung. Then test whether a pair activity is truly interactive.</div>
+<div class="scr">
+<figure class="fig"><input type="range" min="0" max="3" value="0" class="range" id="lg2R" aria-label="Engagement mode"><svg viewBox="0 0 560 330" id="lg2Svg" role="img" aria-label="Lecture activity at the chosen mode"></svg>
+<div class="ictest"><b>Interactive checker</b> · is this pair activity really interactive?
+<label><input type="checkbox" id="lg2a"> Both partners generate new ideas (not just agree or copy)</label>
+<label><input type="checkbox" id="lg2b"> They take frequent turns and build on each other</label>
+<div class="out" id="lg2v"></div></div></figure>
+<div>
+<div class="out" id="lg2Out" style="margin-top:0"></div>
+<div class="try">✋ <b>Answer out loud first.</b> Name: (1) the key design lever (what students produce), (2) one upgrade for each step from passive to interactive, (3) the two checks that stop a design from slipping back down.</div>
+<button class="btn sm reveal" data-r="ans2">👁 Reveal the model answer</button>
+<div class="ans" id="ans2">
+<p>Change what students must <b>produce</b>, not the topic or the delivery (task and mode are independent). From a lecture: add a <b>guided-notes</b> sheet (active), then ask students to <b>build a concept map</b> or explain in their own words (constructive), then have pairs <b>build or defend the map together</b>, asking each other for justifications (interactive). In general: replace selecting with generating (generate link labels instead of choosing them; draw molecules instead of picking images), use prompts that need more than yes or no, and give incomplete worked examples.</p>
+<p>Two design checks. (1) <b>Intended vs enacted</b>: a summary task can be done as copy-and-delete, so evaluate the products. (2) Group work is only <b>interactive</b> if the task is generative <i>and</i> both partners contribute with turn taking (joint, not individual, dialogue).</p>
+<div class="plain">💬 In plain words: listen → fill in → build → build together and challenge each other.</div>
+</div>
+<div class="chips"><button data-c="f">💬 Say it to a friend</button><button data-c="x">✗ Common mistake</button><button data-c="t">✎ Exam tip</button></div>
+<div class="cb f" data-c="f">You don't need a new lesson to raise engagement. Keep the content, change the job: from receiving it, to marking it, to making something with it, to making something with someone else.</div>
+<div class="cb x" data-c="x"><span class="w">✗ "Put them in groups and it becomes interactive."</span><span class="r">✓ Zhang &amp; Linn: pairs who only selected images were active. Pairs who drew molecules were interactive. The task must be generative, and both must contribute.</span></div>
+<div class="cb t" data-c="t">Case questions: "As an instructional designer, which change raises engagement to the constructive level?" Find the option where students <b>generate</b>. Menus, copying, pausing and highlighting are all active.</div>
+</div></div>
+<h4>🔬 The evidence behind the answer</h4>
+<div class="evi">
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Zhang &amp; Linn (2013)</b><p>Pairs drawing molecules &gt; pairs selecting images.</p><i>In plain words: generating together beats choosing together.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Kramarski &amp; Dudai (2009)</b><p>Prompts to respond to and modify a friend's explanation &gt; self-explain prompts only.</p><i>In plain words: reacting to each other's thinking adds to explaining alone.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Russell et al. (1983)</b><p>Notes on a partial, scaffolded outline &gt; a near-verbatim handout.</p><i>In plain words: a small active job beats being handed everything.</i></div>
+<div class="ev"><span class="verd sh">SHOWS</span><b>Teacher workshops</b><p>Teachers could understand ICAP and apply it when designing new lessons.</p><i>In plain words: the framework is usable in practice (initial results).</i></div>
+</div>
+<div class="game"><span class="lbl">CHECK YOURSELF</span><div id="lgq2"></div><div class="out" id="lgq2o"></div></div>
+<p class="mini">Go deeper: <button class="lgtag" data-jump="icap:8">ICAP · Use it as a tool</button><button class="lgtag" data-jump="icap:4">ICAP · Assumptions</button></p>
+<div class="conf" data-g="2"></div>
+</section>
+
+<!-- LG3 -->
+<section class="step" data-t="LG 3 · Limits">
+<div class="shead"><div class="snum">GOAL<b>3</b></div><div><div class="k">Learning goal 3 · Chi &amp; Wylie (2014)</div><h2>What are the limitations of the ICAP framework?</h2></div></div>
+<div class="ask">🧪 <b>Try it:</b> switch on a situation and watch what happens to the predicted staircase of results.</div>
+<div class="scr">
+<figure class="fig"><div class="opts" id="lg3Btns" style="justify-content:center"><button data-k="0" class="ok">ICAP works</button><button data-k="1">Shallow test</button><button data-k="2">Arbitrary-rule topic</button><button data-k="3">Two tasks, one mode</button></div><svg viewBox="0 0 560 320" id="lg3Svg" role="img" aria-label="Predicted learning by mode under different conditions"></svg><figcaption><span class="bg">illustrative</span> Bar heights show the pattern, not real data.</figcaption></figure>
+<div>
+<div class="out" id="lg3Out" style="margin-top:0"></div>
+<div class="try">✋ <b>Answer out loud first.</b> Name the <b>three overriding factors</b>, each with its example study, and at least <b>two built-in caveats</b>.</div>
+<button class="btn sm reveal" data-r="ans3">👁 Reveal the model answer</button>
+<div class="ans" id="ans3">
+<p>Three factors can override the hypothesis. <b>Assessment</b>: shallow tests (recall, easy multiple-choice) cannot detect differences (Aleven &amp; Koedinger, 2002; easy items in Menekse et al.). <b>Domain</b>: topics with arbitrary rules (English articles, Wylie, 2011) or so unfamiliar that learners have no schema to build on (emergence). <b>Task differences within a mode</b>: two interactive tasks can differ (inventing beat comparing and contrasting).</p>
+<p>Built-in caveats: the knowledge-change processes are <b>hypothetical</b> and untested; <b>overt behaviour is only a proxy</b> (covert processing, intended vs enacted), so predictions hold with greater probability, not certainty; boundaries between modes are <b>fuzzy</b> (problem solving); ICAP covers only <b>one</b> aspect of learning (what students do).</p>
+<div class="plain">💬 In plain words: ICAP is a good first cut, but the test, the topic and the exact task still matter, and what students do on the outside doesn't always match what happens inside.</div>
+</div>
+<div class="chips"><button data-c="h">🔑 Hook</button><button data-c="x">✗ Common mistake</button><button data-c="t">✎ Exam tip</button></div>
+<div class="cb h" data-c="h"><b>T-T-T</b>: the <b>Test</b>, the <b>Topic</b>, the <b>Task</b>. Plus two "inside" caveats: hidden processes and hidden thinking.</div>
+<div class="cb x" data-c="x"><span class="w">✗ "Within-mode differences prove ICAP wrong."</span><span class="r">✓ ICAP predicts differences <i>across</i> modes. Inventing and comparing both still beat lower modes.</span></div>
+<div class="cb t" data-c="t">"Which is NOT a limitation" questions: the false options often say ICAP was never tested in classrooms (it was), or that passive learning gives no learning at all (it gives recall).</div>
+</div></div>
+<h4>🔬 The evidence behind the answer</h4>
+<div class="evi">
+<div class="ev"><span class="verd m">LIMIT · TEST</span><b>Aleven &amp; Koedinger (2002)</b><p>Explaining helped on hard-to-guess and transfer problems, not on easy-to-guess items.</p><i>In plain words: easy questions hide deep learning.</i></div>
+<div class="ev"><span class="verd m">LIMIT · TOPIC</span><b>Wylie (2011)</b><p>Choosing an article plus its rule = choosing the article alone.</p><i>In plain words: there is no "why" to reason out for a / an / the.</i></div>
+<div class="ev"><span class="verd m">LIMIT · TOPIC</span><b>Chi, Roscoe et al. (2012)</b><p>Prompts taught facts about molecules, not emergent between-level causality.</p><i>In plain words: you can't build on a schema you don't have.</i></div>
+<div class="ev"><span class="verd m">LIMIT · TASK</span><b>Chi, Dohmen et al. (2012)</b><p>Invent &gt; compare and contrast, both interactive. 100% vs 10% made triple-feature statements.</p><i>In plain words: the task's structure steers how students think.</i></div>
+</div>
+<div class="game"><span class="lbl">CHECK YOURSELF</span><div id="lgq3"></div><div class="out" id="lgq3o"></div></div>
+<p class="mini">Go deeper: <button class="lgtag" data-jump="icap:7">ICAP · Limits</button></p>
+<div class="conf" data-g="3"></div>
+</section>
+
+<!-- LG4 -->
+<section class="step" data-t="LG 4 · Generative">
+<div class="shead"><div class="snum">GOAL<b>4</b></div><div><div class="k">Learning goal 4 · Brod (2021)</div><h2>What are Generative Learning Strategies, and how do they differ from passive learning methods?</h2></div></div>
+<div class="ask">🧪 <b>Try it:</b> tap any activity on the line. Where does it sit between "take it in", "mark it" and "make something new"?</div>
+<div class="scr">
+<figure class="fig"><svg viewBox="0 0 560 360" id="lg4Svg" role="img" aria-label="Spectrum from passive through active to generative activities"></svg><figcaption>The dividing line Brod draws, mapped onto ICAP.</figcaption></figure>
+<div>
+<div class="out" id="lg4Out" style="margin-top:0">Tap a dot on the line.</div>
+<div class="try">✋ <b>Answer out loud first.</b> Give: (1) Brod's definition, (2) the mechanism (prior knowledge + integration), (3) the six strategies, (4) how they differ from passive <i>and</i> from merely active methods, (5) the link to ICAP.</div>
+<button class="btn sm reveal" data-r="ans4">👁 Reveal the model answer</button>
+<div class="ans" id="ans4">
+<p>GLSs are activities that prompt learners to <b>produce something meaningful that goes beyond the information provided</b> (Brod, 2021). Learners must activate prior knowledge and link it to the new information, which supports <b>integration</b> into existing knowledge. They come from the <b>constructivist</b> view of learning. The six reviewed: concept mapping, explaining, predicting, questioning, practice testing and drawing.</p>
+<p>They differ from <b>passive</b> methods (listening, rereading), and also from merely <b>active</b> ones (highlighting, paraphrasing), because those reproduce the material without adding content. Brod equates GLSs with Chi's <b>constructive</b> mode. Practice testing counts as generative even when the answer is wrong.</p>
+<div class="plain">💬 In plain words: you don't just take it in or mark it, you make something new with it.</div>
+</div>
+<div class="chips"><button data-c="h">🔑 Hook</button><button data-c="x">✗ Common mistake</button><button data-c="t">✎ Exam tip</button></div>
+<div class="cb h" data-c="h">If you can do it with a highlighter, it isn't generative. If you need a blank page, it probably is.</div>
+<div class="cb x" data-c="x"><span class="w">✗ "A practice test only counts as generative if you get the answer right."</span><span class="r">✓ It counts independent of correctness. Even a failed retrieval attempt helps structure knowledge.</span></div>
+<div class="cb t" data-c="t">Watch "summarizing": it is generative only if the learner enriches the text. A summary that condenses or paraphrases is not. Brod left summarizing out of the review for exactly this reason.</div>
+</div></div>
+<h4>🔬 The evidence behind the answer</h4>
+<div class="evi">
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Schroeder et al. (2018)</b><p>Self-generated concept maps: 0.72 SDs. Self-generating beats studying a provided map.</p><i>In plain words: making the map teaches more than reading one.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Rowland (2014)</b><p>Practice testing vs restudy: 0.50 SDs.</p><i>In plain words: pulling it out of memory beats reading it again.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Fiorella &amp; Zhang (2018)</b><p>Drawing vs reading only: 0.46 SDs comprehension, 0.75 transfer.</p><i>In plain words: turning text into a picture helps, for adults especially.</i></div>
+<div class="ev"><span class="verd sh">SHOWS</span><b>Chi (2009) link</b><p>Brod: his distinction is "highly similar" to Chi's active vs constructive.</p><i>In plain words: generative = constructive.</i></div>
+</div>
+<div class="game"><span class="lbl">CHECK YOURSELF</span><div id="lgq4"></div><div class="out" id="lgq4o"></div></div>
+<p class="mini">Go deeper: <button class="lgtag" data-jump="gls:3">Brod · Concepts</button></p>
+<div class="conf" data-g="4"></div>
+</section>
+
+<!-- LG5 -->
+<section class="step" data-t="LG 5 · Development">
+<div class="shead"><div class="snum">GOAL<b>5</b></div><div><div class="k">Learning goal 5 · Brod (2021)</div><h2>How do developmental processes like cognitive and metacognitive growth influence GLS effectiveness across age groups?</h2></div></div>
+<div class="ask">🧪 <b>Try it:</b> move the age slider. Watch the three growing capacities, and see which strategies "unlock" at each school level.</div>
+<div class="scr">
+<figure class="fig"><input type="range" min="0" max="3" value="0" class="range" id="lg5R" aria-label="School level"><div class="mini" id="lg5L" style="text-align:center;font-weight:700;color:var(--navy)"></div><svg viewBox="0 0 560 300" id="lg5Svg" role="img" aria-label="Growth of knowledge, executive functions and metacognition with age"></svg><div id="lg5Chips" class="opts" style="justify-content:center"></div><figcaption>Curves <span class="bg">illustrative</span> · strategy verdicts are Brod's exact Table 1.</figcaption></figure>
+<div>
+<div class="out" id="lg5Out" style="margin-top:0"></div>
+<div class="try">✋ <b>Answer out loud first.</b> Name: (1) the three developmental processes, (2) the three deficiencies, (3) why strategies <i>differ</i> in when they start working (prerequisites), (4) one supporting study.</div>
+<button class="btn sm reveal" data-r="ans5">👁 Reveal the model answer</button>
+<div class="ans" id="ans5">
+<p>Strategy use grows with three processes. <b>Knowledge</b>: a richer semantic network to link to, and freed capacity. <b>Cognitive capacity</b>: executive functions (working memory, inhibition, shifting), tied to the maturing prefrontal cortex, which underlie reasoning and revising mental models. <b>Metacognition</b>: monitoring and control, which mature late. Children show <b>production</b>, <b>mediation</b> and <b>utilization deficiencies</b>.</p>
+<p>So GLSs generally work better with age; around age 10 abstract self-reflection emerges. Strategies differ because their <b>prerequisites</b> differ. Predicting and testing mostly need effortful retrieval and basic feedback processing, so they work in lower elementary school. Questioning and drawing need prior knowledge and metacognitive monitoring to construct a useful question or drawing, so they are largely ineffective until secondary school (Table 1). Breitwieser &amp; Brod (2020): children benefited more from predictions than examples, linked to reasoning ability.</p>
+<div class="plain">💬 In plain words: a strategy only works once the brain skills it needs have grown. Guessing needs little, drawing and asking good questions need a lot.</div>
+</div>
+<div class="chips"><button data-c="h">🔑 Hook</button><button data-c="x">✗ Common mistake</button><button data-c="t">✎ Exam tip</button></div>
+<div class="cb h" data-c="h"><b>"Test and guess work early. Draw and ask come late."</b> And the three things that grow: <b>know, control, reflect</b>.</div>
+<div class="cb x" data-c="x"><span class="w">✗ "Age itself explains it."</span><span class="r">✓ Brod: age is not an explanatory variable. Children struggle because they typically lack the prerequisites. Age is only a rough proxy.</span></div>
+<div class="cb t" data-c="t">Know which capacity matters for which strategy: <b>feedback processing</b> (predicting, testing), <b>reasoning</b> (explaining, examples), <b>metacognitive monitoring</b> (questioning, drawing).</div>
+</div></div>
+<h4>🔬 The evidence behind the answer</h4>
+<div class="evi">
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Breitwieser &amp; Brod (2020)</b><p>Children: predictions &gt; examples. Students: equal. The more adult-like, the higher the reasoning score.</p><i>In plain words: the strategy needing reasoning only works once reasoning has grown.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Van Meter et al. (2006)</b><p>Sixth graders benefited from drawing; fourth graders did not, even with high support.</p><i>In plain words: drawing needs skills that 9-year-olds don't have yet.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Denner &amp; Rickards (1987)</b><p>Grades 5, 8, 11: self-generated questions improved with age; only 11th graders mostly targeted main ideas.</p><i>In plain words: good questions need metacognition.</i></div>
+<div class="ev"><span class="verd sh">SHOWS</span><b>Lipowski et al. (2014)</b><p>Testing beat restudy in 1st and 3rd graders.</p><i>In plain words: retrieval works early.</i></div>
+</div>
+<div class="game"><span class="lbl">CHECK YOURSELF</span><div id="lgq5"></div><div class="out" id="lgq5o"></div></div>
+<p class="mini">Go deeper: <button class="lgtag" data-jump="gls:4">Brod · Developing learner</button><button class="lgtag" data-jump="gls:7">Brod · Why the differences</button></p>
+<div class="conf" data-g="5"></div>
+</section>
+
+<!-- LG6 -->
+<section class="step" data-t="LG 6 · Adapt it">
+<div class="shead"><div class="snum">GOAL<b>6</b></div><div><div class="k">Learning goal 6 · Brod (2021)</div><h2>How can GLS techniques (e.g., concept mapping) be adapted for different learners?</h2></div></div>
+<div class="ask">🧪 <b>Try it:</b> pick a learner. The concept map changes to show what you <b>give</b> them (solid) and what they must <b>generate</b> (dashed, gold).</div>
+<div class="scr">
+<figure class="fig"><div class="opts" id="lg6Who" style="justify-content:center"><button data-w="0" class="ok">🧒 Grade 4–5</button><button data-w="1">🧑 High school</button><button data-w="2">🎓 University</button></div><svg viewBox="0 0 560 330" id="lg6Svg" role="img" aria-label="Concept map with given and to-generate parts"></svg>
+<div class="tw"><table class="tb"><thead><tr><th>Strategy</th><th>Support that worked</th></tr></thead><tbody><tr><td>✏️ Drawing</td><td>Background parts given (Schmeck et al., 2014); prompt to compare with an illustration (Van Meter et al., 2006)</td></tr><tr><td>❓ Questioning</td><td>Generic questions or question stems (King, 1994)</td></tr></tbody></table></div></figure>
+<div>
+<div class="out" id="lg6Out" style="margin-top:0"></div>
+<div class="try">✋ <b>Answer out loud first.</b> Explain: (1) the principle (match support to prerequisites), (2) concept-map adaptations for two age groups with their studies, (3) one support for drawing or questioning, (4) the limit of support.</div>
+<button class="btn sm reveal" data-r="ans6">👁 Reveal the model answer</button>
+<div class="ans" id="ans6">
+<p>Match the <b>amount of support</b> to the learner's prerequisites. Younger or weaker learners get part of the material and metacognitive prompts. Concept mapping: high-school students profited more from a <b>high-coherence</b> map where they only label existing lines, university students from a <b>low-coherence</b> map where they create and label lines (Gurlitt &amp; Renkl, 2008). Elementary children who <b>filled in parts</b> of a map did better than those who built the whole map, which produced poor maps and no benefit (Karpicke et al., 2014). Drawing: provide background parts (Schmeck et al., 2014) or prompt learners to compare their drawing with an illustration (Van Meter et al., 2006). Questioning: give question stems (King, 1994).</p>
+<p>The limit: if learners are given everything and need no effortful retrieval, the task is <b>no longer generative</b>. In the long run, choose strategies by individual prerequisites, not just age.</p>
+<div class="plain">💬 In plain words: give younger learners a scaffold, not the answer.</div>
+</div>
+<div class="chips"><button data-c="h">🔑 Hook</button><button data-c="f">💬 Say it to a friend</button><button data-c="t">✎ Exam tip</button></div>
+<div class="cb h" data-c="h"><b>"Scaffold, not answer."</b> Younger = more given, but always something left to generate.</div>
+<div class="cb f" data-c="f">Giving part of the work frees up a child's limited working memory for the thinking part. But hand over the whole thing and there's no thinking left to do.</div>
+<div class="cb t" data-c="t">Coherence is the trap word: <b>high</b>-coherence map = lines already drawn (more support, high school). <b>Low</b>-coherence = learners create the lines (less support, university).</div>
+</div></div>
+<h4>🔬 The evidence behind the answer</h4>
+<div class="evi">
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Gurlitt &amp; Renkl (2008)</b><p>Map coherence × age group interaction.</p><i>In plain words: students got more from making the links, high-schoolers from labelling given ones.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Karpicke et al. (2014)</b><p>Whole map alone: poor maps, no benefit. Filling in parts: better than both no-support and no-map groups.</p><i>In plain words: children need half a map, not a blank page.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Van Meter (2001; 2006)</b><p>Comparing one's drawing with a provided illustration: more accurate drawings, more learning, better self-monitoring.</p><i>In plain words: a check-your-drawing prompt does the monitoring children can't yet do.</i></div>
+<div class="ev"><span class="verd m">MIXED</span><b>King (1994)</b><p>Question stems helped 4th–5th graders; unguided questioning did not.</p><i>In plain words: stems help, but Brod asks whether filling in stems is still real generation.</i></div>
+</div>
+<div class="game"><span class="lbl">CHECK YOURSELF</span><div id="lgq6"></div><div class="out" id="lgq6o"></div></div>
+<p class="mini">Go deeper: <button class="lgtag" data-jump="gls:8">Brod · Limits and support</button></p>
+<div class="conf" data-g="6"></div>
+</section>
+
+<!-- LG7 -->
+<section class="step" data-t="LG 7 · Why spacing works">
+<div class="shead"><div class="snum">GOAL<b>7</b></div><div><div class="k">Learning goal 7 · Gerbier &amp; Toppino (2015)</div><h2>What is distributed practice, and why is it effective for long-term learning?</h2></div></div>
+<div class="ask">🧪 <b>Try it:</b> compare massed and spaced memory over time, then switch on each mechanism to see where it works.</div>
+<div class="scr">
+<figure class="fig"><div class="opts" id="lg7Btns" style="justify-content:center"><button data-k="0" class="ok">The effect</button><button data-k="1">① Deficient processing</button><button data-k="2">② Consolidation</button><button data-k="3">③ Study-phase retrieval</button></div><svg viewBox="0 0 560 330" id="lg7Svg" role="img" aria-label="Memory over time after massed versus spaced study"></svg><figcaption><span class="bg">illustrative</span> curves showing the pattern the review describes.</figcaption></figure>
+<div>
+<div class="out" id="lg7Out" style="margin-top:0"></div>
+<div class="try">✋ <b>Answer out loud first.</b> Give: (1) the definition with "same total time", (2) one number, (3) three mechanisms, (4) why the inverted U matters for choosing between them.</div>
+<button class="btn sm reveal" data-r="ans7">👁 Reveal the model answer</button>
+<div class="ans" id="ans7">
+<p><b>Distributed practice</b> means repeating material in study sessions separated by time, instead of massing the same total time in immediate succession. Spacing improves long-term retention for almost all materials, ages and species (Gerbier &amp; Toppino, 2015). Example: three 10-minute sessions over 3 days gave 35% better retention after four days than one 30-minute session (Bloom &amp; Shuell).</p>
+<p>Why it works: (1) <b>Deficient processing</b>: an immediate repetition gets less processing (smaller pupil dilation; repetition suppression in fMRI). (2) <b>Synaptic plasticity</b>: spaced stimulation produces more lasting LTP and consolidation, and over day-long gaps sleep and systems consolidation strengthen gist. (3) <b>Study-phase retrieval</b>: a repetition must remind you of the earlier encounter, and harder but successful retrieval strengthens memory and slows forgetting. This explains the <b>inverted U</b> and why the optimal lag grows with the retention interval. <b>Reconsolidation</b> may link retrieval to synaptic change.</p>
+<div class="plain">💬 In plain words: a repeat that comes a bit later makes your brain work to pull the memory back, and that effort makes it last.</div>
+</div>
+<div class="chips"><button data-c="h">🔑 Hook</button><button data-c="x">✗ Common mistake</button><button data-c="t">✎ Exam tip</button></div>
+<div class="cb h" data-c="h"><b>"Space for the date you need it."</b> Three reasons, short to long: too-soon repeats get <b>less effort</b>, synapses need <b>time to build</b>, and each repeat must <b>remind</b> you.</div>
+<div class="cb x" data-c="x"><span class="w">✗ "Deficient processing explains the whole spacing effect."</span><span class="r">✓ It cannot explain why memory falls again when gaps are too long, or why the best gap depends on the retention interval. Study-phase retrieval can.</span></div>
+<div class="cb t" data-c="t">Match finding → mechanism: pupil dilation / repetition suppression → <b>deficient processing</b>; LTP with anisomycin → <b>synaptic plasticity</b>; inverted U, same-context advantage → <b>study-phase retrieval</b>; reminder + drug → <b>reconsolidation</b>.</div>
+</div></div>
+<h4>🔬 The evidence behind the answer</h4>
+<div class="evi">
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Bloom &amp; Shuell</b><p>One 30-min session vs three 10-min sessions over 3 days: 35% better after four days.</p><i>In plain words: same time, better spread, more remembered.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Xue et al.</b><p>Spaced faces: less repetition suppression in fusiform cortex, better recognition.</p><i>In plain words: the brain works harder on a later repeat.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Scharf et al.</b><p>Spaced (5 min) vs massed (20 s) stimulations: larger LTP, reduced by anisomycin.</p><i>In plain words: spacing builds stronger, protein-based synapse changes.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Cepeda et al. (Exp. 2)</b><p>Gaps of 0 to 168 days, test after 168 days: 28-day gap best.</p><i>In plain words: there is a best gap, and it depends on when you need it.</i></div>
+</div>
+<div class="game"><span class="lbl">CHECK YOURSELF</span><div id="lgq7"></div><div class="out" id="lgq7o"></div></div>
+<p class="mini">Go deeper: <button class="lgtag" data-jump="dp:3">Spacing · Concepts</button><button class="lgtag" data-jump="dp:5">The brain</button><button class="lgtag" data-jump="dp:7">Retrieval</button></p>
+<div class="conf" data-g="7"></div>
+</section>
+
+<!-- LG8 -->
+<section class="step" data-t="LG 8 · In the classroom">
+<div class="shead"><div class="snum">GOAL<b>8</b></div><div><div class="k">Learning goal 8 · Gerbier &amp; Toppino (2015)</div><h2>How can distributed practice be applied in educational settings?</h2></div></div>
+<div class="ask">🧪 <b>Try it:</b> you plan an 8-week course. Switch on the article's recommendations and watch the timeline and the retention meter.</div>
+<div class="scr">
+<figure class="fig"><div class="plan8" id="lg8Opts"></div><svg viewBox="0 0 560 300" id="lg8Svg" role="img" aria-label="Eight-week course timeline with study events"></svg><figcaption>Meter <span class="bg">illustrative</span> · recommendations from the article.</figcaption></figure>
+<div>
+<div class="out" id="lg8Out" style="margin-top:0"></div>
+<div class="try">✋ <b>Answer out loud first.</b> Name: (1) the three rules, (2) three teacher moves, (3) two learner moves, (4) the two traps and one exception.</div>
+<button class="btn sm reveal" data-r="ans8">👁 Reveal the model answer</button>
+<div class="ans" id="ans8">
+<p>Three rules: <b>avoid massing</b>, keep the intervals between practice opportunities <b>as long as possible</b>, and <b>include practice tests</b>. Teachers: summarize the previous day's lesson at the <b>start</b> of the next class, with a <b>quiz before</b> the summary; use several short reviews instead of one end-of-term review; give <b>cumulative</b> quizzes; put older material in homework; add follow-up reviews after compressed courses. Learners: plan several spaced sessions, <b>self-test after a delay</b>, use adaptive spacing software. Use an <b>expanding schedule</b> when forgetting is fast (young learners, low working memory, high interference).</p>
+<p>Avoid two traps: easy initial learning ≠ good retention, and learned material still needs review. Exceptions: massing can help early with complex material; gaps can be too long; cramming suits only a very short retention interval.</p>
+<div class="plain">💬 In plain words: spread it out, quiz yourself, keep coming back, and don't trust that "I've got it" feeling.</div>
+</div>
+<div class="chips"><button data-c="h">🔑 Hook</button><button data-c="f">💬 Say it to a friend</button><button data-c="t">✎ Exam tip</button></div>
+<div class="cb h" data-c="h"><b>"Space it, test it, revisit it."</b> And two traps: <b>easy ≠ learned</b>, <b>learned ≠ done</b>.</div>
+<div class="cb f" data-c="f">Teachers don't need new methods, just a new calendar: start class with a quiz on last time, keep tests cumulative, and slip old topics into homework.</div>
+<div class="cb t" data-c="t">Case options to reject: "one intensive review week before the exam" (massed), "longer summary at the end of the lesson" (immediate repetition), "homework only on today's lesson" (no spacing).</div>
+</div></div>
+<h4>🔬 The evidence behind the answer</h4>
+<div class="evi">
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Classroom studies</b><p>Spaced practice and tests helped in vocabulary, statistics, history, intro psychology, phonics, middle-school science, a web course.</p><i>In plain words: it works outside the lab too.</i></div>
+<div class="ev"><span class="verd s">SUPPORTS</span><b>Retrieval attempts</b><p>Learning is better after a retrieval attempt followed by the correct answer than with no attempt.</p><i>In plain words: quiz first, even if they get it wrong.</i></div>
+<div class="ev"><span class="verd m">CAUTION</span><b>Students' beliefs</b><p>Students prefer massing, and may still predict massing works better after experiencing spacing.</p><i>In plain words: spacing feels worse while it works better, so build it into the schedule.</i></div>
+<div class="ev"><span class="verd m">LIMIT</span><b>Applied research</b><p>Basic research identifies the variables, but not how to apply them in each specific context.</p><i>In plain words: teachers must use their own ingenuity for now.</i></div>
+</div>
+<div class="game"><span class="lbl">CHECK YOURSELF</span><div id="lgq8"></div><div class="out" id="lgq8o"></div></div>
+<p class="mini">Go deeper: <button class="lgtag" data-jump="dp:8">Spacing · Classroom</button><button class="lgtag" data-go="case">📱 Design the app</button></p>
+<div class="conf" data-g="8"></div>
+</section>
+
+<!-- PULL TOGETHER -->
+<section class="step" data-t="Pull it together">
+<div class="shead"><div class="snum">ALL<b>🧵</b></div><div><div class="k">Compare and connect · course goal 4</div><h2>How the three articles talk to each other</h2></div></div>
+<div class="ask">👆 <b>Tap a link</b> (the gold numbered dots) to see how two ideas connect. The exam likes questions that join two articles.</div>
+<div class="scr">
+<figure class="fig"><svg viewBox="0 0 560 380" id="lgWeb" role="img" aria-label="Connections between ICAP, generative learning and spacing"></svg></figure>
+<div><div class="out" id="lgWebOut" style="margin-top:0">Tap a numbered link.</div>
+<div class="box" style="margin-top:12px"><h4 style="margin-top:0">🧵 The red thread</h4><p>All three articles say: learning lasts when the <b>learner does the mental work</b>. ICAP calls it generating and co-inferring. Brod calls it generative learning, and asks <b>who</b> can do which kind. Gerbier &amp; Toppino add <b>when</b>: retrieve after a gap. One message for the app case: <i>make them produce, at the right level, at the right time.</i></p></div>
+</div></div>
+<div class="game"><span class="lbl">MIXED CHECK · 6 QUESTIONS ACROSS ALL GOALS</span><div id="lgqAll"></div><div class="out" id="lgqAllo"></div></div>
+</section>
+
+</div></section>
 
 <!-- ================= CASE ================= -->
 <section class="panel" id="p-case">
@@ -1097,10 +1347,10 @@ $$('.walk').forEach(w=>{
   steps.forEach((s,i)=>{
     const b=document.createElement('button');b.type='button';b.innerHTML='<i>'+(i+1)+'</i>'+esc(s.dataset.t);b.onclick=()=>{W.go(i);history.replaceState(null,'','#'+id+'-'+(i+1))};rail.appendChild(b);
     const nav=document.createElement('div');nav.className='snav';
-    nav.innerHTML=(i?'<button class="btn ghost" data-d="-1">← '+esc(steps[i-1].dataset.t)+'</button>':'<span></span>')+(i<steps.length-1?'<button class="btn" data-d="1">'+esc(steps[i+1].dataset.t)+' →</button>':'<button class="btn" data-next="1">Next article →</button>');
+    nav.innerHTML=(i?'<button class="btn ghost" data-d="-1">← '+esc(steps[i-1].dataset.t)+'</button>':'<span></span>')+(i<steps.length-1?'<button class="btn" data-d="1">'+esc(steps[i+1].dataset.t)+' →</button>':'<button class="btn" data-next="1">'+(id==='lg'?'The case: design the app →':id==='dp'?'Learning goals →':'Next article →')+'</button>');
     s.appendChild(nav);
     nav.querySelectorAll('[data-d]').forEach(x=>x.onclick=()=>{W.go(i+(+x.dataset.d));rail.scrollIntoView({behavior:'smooth'})});
-    const nx=nav.querySelector('[data-next]');if(nx)nx.onclick=()=>{const order=['icap','gls','dp','lg'];show(order[order.indexOf(id)+1]||'lg')};
+    const nx=nav.querySelector('[data-next]');if(nx)nx.onclick=()=>{const order=['icap','gls','dp','lg','case'];show(order[order.indexOf(id)+1]||'case')};
   });
   const W={i:0,go(i,quiet){i=Math.max(0,Math.min(steps.length-1,i));W.i=i;steps.forEach((s,k)=>s.classList.toggle('on',k===i));
     const rb=$$('button',rail);rb.forEach((b,k)=>{b.classList.toggle('on',k===i);b.classList.toggle('done',seen.has(id+':'+(k+1))&&k!==i)});
@@ -1328,8 +1578,197 @@ seqGame('featBox','featOut',[
  {q:'A "study buddy" mode: two users explain a topic to each other and must respond to each other\'s explanation before moving on.',a:'Interactive',why:'<b>Keep:</b> both generate and take turns: a joint dialogue.'},
  {q:'A group chat where one strong student posts the answers and the others react with emoji.',a:'Active',why:'<b>Drop or redesign:</b> an individual dialogue. The poster may be constructive, but the reactors only affirm, which is active at best.'}],MODES);
 
+
+/* ================= LEARNING GOALS (visual) ================= */
+const conf=store.get('conf',{});
+const CCOL={0:'#c0392b',1:'#b8923a',2:'#2f8a57'};
+$$('.conf').forEach(c=>{const g=c.dataset.g;c.innerHTML='<span>How ready are you for goal '+g+'?</span><button data-v="0">😕 Not yet</button><button data-v="1">🙂 Getting there</button><button data-v="2">😎 Exam-ready</button>';
+ const mark=()=>$$('button',c).forEach(b=>b.classList.toggle('on',conf[g]===+b.dataset.v));mark();
+ $$('button',c).forEach(b=>b.onclick=()=>{conf[g]=+b.dataset.v;store.set('conf',conf);mark();drawMap()})});
+document.addEventListener('click',e=>{const r=e.target.closest('.reveal');if(!r)return;const a=$('#'+r.dataset.r);const on=!a.classList.contains('on');a.classList.toggle('on',on);r.textContent=on?'🙈 Hide the model answer':'👁 Reveal the model answer'});
+
+/* map */
+function drawMap(){const s=$('#lgMap');if(!s)return;
+ const A=[{x:150,n:'Chi & Wylie (2014)',t:'ICAP',c:'#34466b'},{x:450,n:'Brod (2021)',t:'Generative learning',c:'#2f8a57'},{x:750,n:'Gerbier & Toppino (2015)',t:'Distributed practice',c:'#a8854a'}];
+ const G=[[60,0,'Four modes'],[150,0,'Move them up'],[240,0,'Limits'],[360,1,'Generative'],[450,1,'Development'],[540,1,'Adapt it'],[700,2,'Why spacing works'],[800,2,'In the classroom']];
+ let h='<path d="M210 70 Q 300 20 390 70" fill="none" stroke="#c9a96e" stroke-width="2.5" stroke-dasharray="7 5"/><text x="300" y="30" text-anchor="middle" class="t-g">generative = constructive</text><path d="M510 70 Q 600 20 690 70" fill="none" stroke="#c9a96e" stroke-width="2.5" stroke-dasharray="7 5"/><text x="600" y="30" text-anchor="middle" class="t-g">practice testing in both</text>';
+ G.forEach(([x,a])=>h+='<path d="M'+A[a].x+' 104 L'+x+' 236" stroke="#d9d2c3" stroke-width="2"/>');
+ A.forEach(a=>h+='<rect x="'+(a.x-110)+'" y="50" width="220" height="56" rx="14" fill="'+a.c+'"/><text x="'+a.x+'" y="74" text-anchor="middle" fill="#fff" font-weight="700" font-size="14">'+a.t+'</text><text x="'+a.x+'" y="94" text-anchor="middle" fill="#f3efe6" font-size="12">'+a.n+'</text>');
+ G.forEach(([x,a,l],k)=>{const v=conf[k+1],col=v===undefined?'#fff':CCOL[v];h+='<g data-lg="'+(k+1)+'" style="cursor:pointer"><circle cx="'+x+'" cy="270" r="34" fill="'+col+'" stroke="'+A[a].c+'" stroke-width="3"/><text x="'+x+'" y="278" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="26" font-weight="700" fill="'+(v===undefined?'#34466b':'#fff')+'">'+(k+1)+'</text>';
+  l.split(' ').reduce((r,w)=>{const L=r[r.length-1];if(L&&(L+' '+w).length<=11)r[r.length-1]=L+' '+w;else r.push(w);return r},[]).forEach((ln,i)=>h+='<text x="'+x+'" y="'+(326+i*16)+'" text-anchor="middle" class="t-t">'+ln+'</text>');h+='</g>'});
+ h+='<text x="450" y="415" text-anchor="middle" class="t-s">tap a goal to open it · colour = your own confidence rating</text>';
+ s.innerHTML=h;$$('g[data-lg]',s).forEach(g=>g.onclick=()=>{WALK.lg.go(+g.dataset.lg);history.replaceState(null,'','#lg-'+(+g.dataset.lg+1))})}
+drawMap();
+
+/* LG1 chain */
+const CH={P:['Listening, watching','STORE','isolated, "inert"','RECALL (same context)','Minimal understanding: you can repeat it when the cue is the same, like the student who could recite how blood clots but still held her old theory of how a cut heals.'],
+A:['Highlighting, copying notes','INTEGRATE','schema filled in','APPLY (similar cases)','Shallow understanding: emphasising parts activates what you know, and the new bits fill its gaps.'],
+C:['Self-explaining, concept map','INFER','schema enriched, revised','TRANSFER (new cases)','Deep understanding: you add inferences and reasons, and can even revise a wrong model (single-loop → double-loop circulation).'],
+I:['Discussing, building together','CO-INFER','ideas neither had','CO-CREATE','Deepest understanding: each partner builds on the other\'s inferences in a spiral (the Alice and Bob example).']};
+const MC={P:'#7d8799',A:'#b8923a',C:'#2f8a57',I:'#34466b'};
+function drawLG1(m){$$('#lg1Modes button').forEach(b=>b.classList.toggle('ok',b.dataset.m===m));const d=CH[m],c=MC[m];
+ let h='<text x="280" y="22" text-anchor="middle" class="t-h" style="font-size:19px">'+MODES[['P','A','C','I'].indexOf(m)]+' mode</text>';
+ ['YOU SEE','IN THE HEAD','KNOWLEDGE','YOU CAN'].forEach((t,k)=>{const x=10+k*138;h+='<rect x="'+x+'" y="40" width="124" height="104" rx="12" fill="'+(k===0?'#fff':c)+'" stroke="'+c+'" stroke-width="2"/><text x="'+(x+62)+'" y="62" text-anchor="middle" font-size="10.5" font-weight="700" fill="'+(k===0?c:'#f3efe6')+'" letter-spacing="1">'+t+'</text>';
+  const words=d[k].split(' ');let lines=[''];words.forEach(w=>{if((lines[lines.length-1]+' '+w).trim().length>15)lines.push(w);else lines[lines.length-1]=(lines[lines.length-1]+' '+w).trim()});
+  lines.forEach((ln,i)=>h+='<text x="'+(x+62)+'" y="'+(90+i*17)+'" text-anchor="middle" font-size="13" font-weight="700" fill="'+(k===0?'#2f3542':'#fff')+'">'+esc(ln)+'</text>');
+  if(k<3)h+='<path d="M'+(x+126)+' 92 L'+(x+136)+' 92" stroke="#c9a96e" stroke-width="3"/>'});
+ h+='<text x="280" y="180" text-anchor="middle" class="t-b">Posttest % correct, Menekse et al. (2013)</text><path d="M60 370 L520 370" stroke="#6b7280"/>';
+ ['P','A','C','I'].forEach((k,i)=>{const v=MEN.post[i],x=80+i*112,hh=v*1.9;h+='<rect x="'+x+'" y="'+(370-MEN.pre[i]*1.9)+'" width="30" height="'+MEN.pre[i]*1.9+'" fill="#e3e1da"/><rect x="'+(x+34)+'" y="'+(370-hh)+'" width="44" height="'+hh+'" rx="4" fill="'+(k===m?MC[k]:'#d6d9e0')+'"/><text x="'+(x+56)+'" y="'+(364-hh)+'" text-anchor="middle" font-size="13" font-weight="700" fill="'+(k===m?MC[k]:'#9aa1ad')+'">'+v+'</text><text x="'+(x+40)+'" y="388" text-anchor="middle" class="t-s">'+MODES[i]+'</text>'});
+ h+='<text x="60" y="200" class="t-s">light bars = pretest</text>';$('#lg1Svg').innerHTML=h;
+}
+$('#lg1Modes').innerHTML=['P','A','C','I'].map(k=>'<button data-m="'+k+'"><span class="mode '+k+'">'+k+'</span> '+MODES[['P','A','C','I'].indexOf(k)]+'</button>').join('');
+$$('#lg1Modes button').forEach(b=>b.onclick=()=>{drawLG1(b.dataset.m);const d=CH[b.dataset.m];lg1Out(d)});
+function lg1Out(d){let o=$('#lg1Info');if(!o){o=document.createElement('div');o.id='lg1Info';o.className='out';o.style.marginTop='0';const side=$('#lg1Svg').closest('.scr').children[1];side.insertBefore(o,side.firstChild)}o.innerHTML='<b>'+d[3]+'.</b> '+d[4]}
+drawLG1('P');lg1Out(CH.P);
+
+/* LG2 ladder */
+const LAD=[['P','Listen to the lecture','nothing visible: they only receive','A good start, but the knowledge is stored in isolation.'],
+ ['A','Fill in a guided-notes sheet','copied key points in the gaps','The article\'s own example: guided notes turn a lecture into an active task.'],
+ ['C','Build a concept map during the lecture','new links and labels in their own words','Also the article\'s example: a concept map during the lecture makes it constructive.'],
+ ['I','Build the map in pairs and ask each other "why is this link right?"','a shared map neither could have made alone','Both partners generate and take turns: a joint dialogue.']];
+function drawLG2(i){const d=LAD[i];let h='<text x="280" y="24" text-anchor="middle" class="t-h" style="font-size:19px">Same lecture, four jobs</text>';
+ LAD.forEach((r,k)=>{const x=20+k*132,y=250-k*55,on=k===i;h+='<rect x="'+x+'" y="'+y+'" width="124" height="'+(310-y)+'" rx="10" fill="'+(on?MC[r[0]]:'#efece4')+'"/><text x="'+(x+62)+'" y="'+(y+24)+'" text-anchor="middle" font-size="13" font-weight="700" fill="'+(on?'#fff':'#8b8f99')+'">'+MODES[k]+'</text>';
+  if(on)h+='<text x="'+(x+62)+'" y="'+(y-12)+'" text-anchor="middle" font-size="30">'+(k===3?'🧑‍🤝‍🧑':'🧑‍🎓')+'</text>'});
+ h+='<rect x="20" y="40" width="300" height="70" rx="12" fill="#fff" stroke="'+MC[d[0]]+'" stroke-width="2"/><text x="34" y="62" class="t-g">THE JOB</text>';
+ const w=d[1].split(' ');let L=[''];w.forEach(x=>{if((L[L.length-1]+' '+x).length>40)L.push(x);else L[L.length-1]=(L[L.length-1]+' '+x).trim()});L.slice(0,2).forEach((ln,k)=>h+='<text x="34" y="'+(82+k*17)+'" class="t-t" font-weight="700">'+esc(ln)+'</text>');
+ $('#lg2Svg').innerHTML=h;$('#lg2Out').innerHTML='<span class="mode '+d[0]+'">'+MODES[i]+'</span> <b>Students produce:</b> '+d[2]+'. '+d[3]}
+$('#lg2R').oninput=e=>drawLG2(+e.target.value);drawLG2(0);
+function lg2v(){const a=$('#lg2a').checked,b=$('#lg2b').checked,o=$('#lg2v');
+ o.className='out '+(a&&b?'ok':'no');o.innerHTML=a&&b?'<b>✓ Interactive.</b> Both generate and they build on each other with frequent turns: a joint dialogue, where co-inferring can happen.':a?'<b>Not fully interactive.</b> Both are constructive, but like two students taking turns giving mini-lectures, too few turns means they will likely not reap the same benefits.':b?'<b>Not interactive.</b> Lots of turns, but one partner mostly agrees or copies: an individual dialogue. The speaker is constructive, the listener only active.':'<b>Not interactive.</b> Sitting together is not the same as co-constructing. This is active at most.'}
+$('#lg2a').onchange=lg2v;$('#lg2b').onchange=lg2v;lg2v();
+
+/* LG3 scenarios */
+const SC=[{b:[['Passive',35,'P'],['Active',50,'A'],['Constructive',65,'C'],['Interactive',80,'I']],t:'<b>The normal prediction:</b> each mode up gives more learning, on a test that measures deep understanding.'},
+ {b:[['Passive',74,'P'],['Active',75,'A'],['Constructive',75,'C'],['Interactive',76,'I']],t:'<b>Shallow test:</b> easy recall questions can be answered after passive learning too, so the staircase flattens. In Menekse et al. the easy multiple-choice items showed no differences; the hard items did.'},
+ {b:[['Choose the article',60,'A'],['Choose + give the rule',60,'C']],t:'<b>Arbitrary-rule topic:</b> choosing a / an / the plus the rule was no better than choosing alone (Wylie, 2011). There is no deeper reason to infer. The same can happen when learners lack any schema to build on (emergence).'},
+ {b:[['Passive',35,'P'],['Active',50,'A'],['Interactive: compare',68,'I'],['Interactive: invent',88,'I']],t:'<b>Two tasks, one mode:</b> inventing beat comparing and contrasting, although both are interactive (Chi, Dohmen et al., 2012). ICAP still holds <i>across</i> modes: both beat the lower modes.'}];
+function drawLG3(k){$$('#lg3Btns button').forEach(b=>b.classList.toggle('ok',+b.dataset.k===k));const s=SC[k];const n=s.b.length,bw=Math.min(100,420/n-20);
+ let h='<path d="M50 280 L530 280 M50 280 L50 30" stroke="#6b7280"/><text x="30" y="160" class="t-s" transform="rotate(-90 30 160)">learning (predicted)</text>';
+ s.b.forEach((b,i)=>{const x=70+i*(460/n)+((460/n)-bw)/2,hh=b[1]*2.8;h+='<rect x="'+x+'" y="'+(280-hh)+'" width="'+bw+'" height="'+hh+'" rx="6" fill="'+MC[b[2]]+'"/><text x="'+(x+bw/2)+'" y="300" text-anchor="middle" font-size="11.5" fill="#2f3542">'+esc(b[0])+'</text>'});
+ if(k===1)h+='<path d="M60 '+(280-75*2.8)+' L525 '+(280-75*2.8)+'" stroke="#c0392b" stroke-dasharray="6 4"/><text x="525" y="'+(272-75*2.8)+'" text-anchor="end" class="t-r">everyone gets the easy items</text>';
+ $('#lg3Svg').innerHTML=h;$('#lg3Out').innerHTML=s.t}
+$$('#lg3Btns button').forEach(b=>b.onclick=()=>drawLG3(+b.dataset.k));drawLG3(0);
+
+/* LG4 spectrum */
+const SPEC=[[60,'Listening','P','Receiving only. Passive in ICAP; not a GLS.'],[100,'Rereading','P','Taking the material in again. Nothing produced.'],[175,'Highlighting','A','Brod\'s own example of a strategy that needs activity but generates no extra content.'],[215,'Paraphrasing','A','Restating the given information: active, not generative.'],[255,'Condensing summary','A','A summary only counts as generative if learners enrich it. Condensing alone does not.'],
+ [315,'Concept map','C','Generate the relations among concepts. Self-generated maps beat provided maps.'],[355,'Explaining','C','Answer "why?" (elaborative interrogation) or explain to yourself: infer beyond the text.'],[395,'Predicting','C','Guess before you are told: activates prior knowledge, triggers curiosity and surprise.'],[435,'Questioning','C','Write questions about the material: needs prior knowledge and metacognition to find gaps.'],[475,'Testing','C','Generate answers from memory. Counts even when the answer is wrong.'],[515,'Drawing','C','Turn words into a picture of spatial relations: select, organise, construct.']];
+function drawLG4(sel){let h='<text x="280" y="26" text-anchor="middle" class="t-h" style="font-size:19px">From taking in to making new</text>';
+ h+='<rect x="30" y="150" width="110" height="40" rx="8" fill="#eef0f4"/><rect x="145" y="150" width="140" height="40" rx="8" fill="#f6eedd"/><rect x="290" y="150" width="245" height="40" rx="8" fill="#e2f1e6"/>';
+ h+='<text x="85" y="175" text-anchor="middle" class="t-b" style="fill:#7d8799">PASSIVE</text><text x="215" y="175" text-anchor="middle" class="t-g">ACTIVE</text><text x="412" y="175" text-anchor="middle" class="t-ok">GENERATIVE = CONSTRUCTIVE</text>';
+ h+='<path d="M30 210 L535 210" stroke="#34466b" stroke-width="3" marker-end="url(#lg4a)"/><defs><marker id="lg4a" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#34466b"/></marker></defs>';
+ SPEC.forEach((d,i)=>{const up=i%2===0,on=i===sel;h+='<g data-i="'+i+'" style="cursor:pointer"><circle cx="'+d[0]+'" cy="210" r="'+(on?11:8)+'" fill="'+MC[d[2]]+'" stroke="'+(on?'#c9a96e':'#fff')+'" stroke-width="3"/><path d="M'+d[0]+' '+(up?200:220)+' L'+d[0]+' '+(up?120:250)+'" stroke="#d9d2c3"/><text x="'+d[0]+'" y="'+(up?112:268)+'" text-anchor="middle" font-size="11.5" font-weight="'+(on?700:400)+'" fill="#2f3542">'+esc(d[1])+'</text></g>'});
+ h+='<text x="30" y="320" class="t-s">reproduces the material</text><text x="535" y="320" text-anchor="end" class="t-s">produces meaningful content beyond it</text><text x="280" y="346" text-anchor="middle" class="t-g">mechanism: activate prior knowledge → link → integrate</text>';
+ $('#lg4Svg').innerHTML=h;$$('#lg4Svg g[data-i]').forEach(g=>g.onclick=()=>{const d=SPEC[+g.dataset.i];drawLG4(+g.dataset.i);$('#lg4Out').innerHTML='<span class="mode '+d[2]+'">'+(d[2]==='C'?'GLS':d[2]==='A'?'Active, not a GLS':'Passive')+'</span> <b>'+d[1]+':</b> '+d[3]})}
+drawLG4(-1);
+
+/* LG5 growth */
+const LVL=[['Grades 1–3 (about 6–9)',7.5,3,'Knowledge, executive functions and metacognition are all still low. Strategies that mainly need retrieval plus basic feedback processing (predicting, testing) already work. Production, mediation and utilization deficiencies are common.'],
+ ['Grades 4–5 (about 9–11)',10,2,'Around age 10 abstract self-reflection emerges. Concept mapping now works (with support). Explaining and questioning are mixed; drawing is still unfavorable.'],
+ ['Secondary school',15,1,'Executive functions keep maturing with the prefrontal cortex. Almost everything is favorable; questioning is still mixed, and drawing needs high support.'],
+ ['University',20,0,'All six strategies favorable. Knowledge, reasoning and monitoring are mature enough to profit from low-support versions.']];
+function drawLG5(s){const L=LVL[s],X=a=>60+(a-6)*29,Y=v=>250-v*2;
+ const curve=f=>{let p=[];for(let a=6;a<=22;a+=.5)p.push(X(a)+','+Y(f(a)));return p.join(' ')};
+ let h='<path d="M60 250 L530 250 M60 250 L60 30" stroke="#6b7280"/>';[6,10,14,18,22].forEach(a=>h+='<text x="'+X(a)+'" y="268" text-anchor="middle" class="t-s">'+a+'</text>');h+='<text x="295" y="288" text-anchor="middle" class="t-s">age (years)</text><text x="40" y="150" class="t-s" transform="rotate(-90 40 150)">capacity</text>';
+ h+='<polyline fill="none" stroke="#34466b" stroke-width="3" points="'+curve(a=>10+4.6*(a-6))+'"/><polyline fill="none" stroke="#2f8a57" stroke-width="3" points="'+curve(a=>10+80/(1+Math.exp(-(a-11)/2.2)))+'"/><polyline fill="none" stroke="#a8854a" stroke-width="3" stroke-dasharray="7 4" points="'+curve(a=>6+85/(1+Math.exp(-(a-14)/2.3)))+'"/>';
+ h+='<text x="'+X(19.5)+'" y="'+Y(62)+'" text-anchor="end" font-size="11.5" font-weight="700" fill="#34466b">knowledge</text><text x="'+X(12.6)+'" y="'+Y(76)+'" text-anchor="end" font-size="11.5" font-weight="700" fill="#2f8a57">executive functions</text><text x="'+X(12.4)+'" y="'+Y(20)+'" font-size="11.5" font-weight="700" fill="#a8854a">metacognition (late)</text>';
+ h+='<path d="M'+X(L[1])+' 30 L'+X(L[1])+' 250" stroke="#c0392b" stroke-width="2"/><circle cx="'+X(L[1])+'" cy="30" r="6" fill="#c0392b"/>';
+ $('#lg5Svg').innerHTML=h;$('#lg5L').textContent=L[0];
+ $('#lg5Chips').innerHTML=T1.rows.map(r=>{const v=r[1+L[2]];return '<span class="verd '+VN[v][1]+'" style="font-size:.8rem;padding:4px 9px">'+(v==='F'?'🔓 ':'🔒 ')+r[0]+' · '+VN[v][0]+'</span>'}).join('');
+ $('#lg5Out').innerHTML='<b>'+L[0]+':</b> '+L[3]}
+$('#lg5R').oninput=e=>drawLG5(+e.target.value);drawLG5(0);
+
+/* LG6 concept map */
+const NODES=[['Photosynthesis',280,60],['Light',100,175],['Chlorophyll',280,200],['Glucose',460,175],['Oxygen',460,290]];
+const LINKS=[[0,1,'needs'],[0,2,'happens in'],[0,3,'produces'],[0,4,'releases']];
+const WHO=[{nodes:[1,1,1,0,0],lines:1,labels:1,t:'<b>Grade 4–5: fill in parts.</b> Most of the map is given; pupils supply the missing concepts. Karpicke et al. (2014): this beat building the whole map, which gave poor maps and no benefit.'},
+ {nodes:[1,1,1,1,1],lines:1,labels:0,t:'<b>High school: high-coherence map.</b> Concepts and lines are given; students label the relations. Gurlitt &amp; Renkl (2008): high-school students profited more from this structured version.'},
+ {nodes:[1,1,1,1,1],lines:0,labels:0,t:'<b>University: low-coherence map.</b> Concepts given; students create <i>and</i> label the lines. Gurlitt &amp; Renkl (2008): university students profited more from this self-organising version.'}];
+function drawLG6(w){$$('#lg6Who button').forEach(b=>b.classList.toggle('ok',+b.dataset.w===w));const c=WHO[w];let h='';
+ LINKS.forEach(([a,b,l])=>{const A=NODES[a],B=NODES[b],mx=(A[1]+B[1])/2,my=(A[2]+B[2])/2;h+='<path d="M'+A[1]+' '+A[2]+' L'+B[1]+' '+B[2]+'" stroke="'+(c.lines?'#34466b':'#c9a96e')+'" stroke-width="2.5" '+(c.lines?'':'stroke-dasharray="7 5"')+'/>';
+  h+='<rect x="'+(mx-46)+'" y="'+(my-12)+'" width="92" height="22" rx="6" fill="'+(c.labels?'#fff':'#fbf3df')+'" stroke="'+(c.labels?'#d9d2c3':'#c9a96e')+'" '+(c.labels?'':'stroke-dasharray="4 3"')+'/><text x="'+mx+'" y="'+(my+4)+'" text-anchor="middle" font-size="11.5" fill="'+(c.labels?'#2f3542':'#a8854a')+'" font-weight="700">'+(c.labels?l:'? label')+'</text>'});
+ NODES.forEach((n,i)=>{const g=c.nodes[i];h+='<rect x="'+(n[1]-62)+'" y="'+(n[2]-18)+'" width="124" height="36" rx="18" fill="'+(g?'#34466b':'#fbf3df')+'" stroke="'+(g?'#34466b':'#c9a96e')+'" stroke-width="2" '+(g?'':'stroke-dasharray="5 4"')+'/><text x="'+n[1]+'" y="'+(n[2]+5)+'" text-anchor="middle" font-size="13" font-weight="700" fill="'+(g?'#fff':'#a8854a')+'">'+(g?n[0]:'? concept')+'</text>'});
+ h+='<rect x="20" y="300" width="14" height="14" rx="3" fill="#34466b"/><text x="40" y="312" class="t-s">given</text><rect x="90" y="300" width="14" height="14" rx="3" fill="#fbf3df" stroke="#c9a96e" stroke-dasharray="3 2"/><text x="110" y="312" class="t-s">to generate</text>';
+ $('#lg6Svg').innerHTML=h;$('#lg6Out').innerHTML=c.t+' <br><span class="mini">Too much support (a finished map) = no longer generative.</span>'}
+$$('#lg6Who button').forEach(b=>b.onclick=()=>drawLG6(+b.dataset.w));drawLG6(0);
+
+/* LG7 curves */
+const L7=['<b>The effect:</b> same total study time. Massed study (three repeats on day 0) feels strong at first but fades fast. Spaced study (days 0, 3 and 8) is forgotten more slowly and ends higher. Two spaced presentations can be twice as effective as two massed ones.',
+ '<b>① Deficient processing</b> (seconds to hours): the 2nd and 3rd massed repeats feel familiar, so they get less processing: smaller pupil dilation, repetition suppression in the brain. It cannot explain why too-long gaps hurt.',
+ '<b>② Synaptic plasticity and consolidation</b> (minutes to days): spaced stimulation gives more lasting late LTP (protein synthesis). Over day-long gaps, sleep and systems consolidation strengthen the gist that later repeats build on.',
+ '<b>③ Study-phase retrieval</b> (the leading account): each spaced repeat must remind you of the earlier one. A harder but successful reminding strengthens memory and slows forgetting. Too long a gap and the reminding fails: the inverted U.'];
+function drawLG7(k){$$('#lg7Btns button').forEach(b=>b.classList.toggle('ok',+b.dataset.k===k));const X=d=>60+d*15,Y=v=>270-v*2.2;
+ let h='<path d="M60 270 L530 270 M60 270 L60 40" stroke="#6b7280"/>';[0,5,10,15,20,25,30].forEach(d=>h+='<text x="'+X(d)+'" y="288" text-anchor="middle" class="t-s">'+d+'</text>');h+='<text x="295" y="308" text-anchor="middle" class="t-s">days</text><text x="40" y="160" class="t-s" transform="rotate(-90 40 160)">memory</text>';
+ let m=[],s=[];for(let d=0;d<=30;d+=.5){m.push(X(d)+','+Y(90*Math.exp(-d/6)+8));let v;if(d<3)v=70*Math.exp(-d/4)+8;else if(d<8)v=80*Math.exp(-(d-3)/8)+10;else v=88*Math.exp(-(d-8)/30)+4;s.push(X(d)+','+Y(v))}
+ h+='<polyline fill="none" stroke="#c0392b" stroke-width="3" points="'+m.join(' ')+'"/><polyline fill="none" stroke="#2f8a57" stroke-width="3" points="'+s.join(' ')+'"/>';
+ h+='<text x="'+X(28)+'" y="'+Y(15)+'" text-anchor="end" class="t-r">massed</text><text x="'+X(28)+'" y="'+Y(62)+'" text-anchor="end" class="t-ok">spaced</text>';
+ [0,.6,1.2].forEach(d=>h+='<rect x="'+(X(d)-3)+'" y="252" width="7" height="16" fill="#c0392b"/>');[0,3,8].forEach(d=>h+='<rect x="'+(X(d)-3)+'" y="232" width="7" height="16" fill="#2f8a57"/>');
+ if(k===1)h+='<rect x="80" y="70" width="210" height="48" rx="10" fill="#fff" stroke="#c0392b"/><text x="92" y="90" class="t-r">repeats 2 and 3 feel familiar</text><text x="92" y="108" class="t-s">→ less processing, weaker encoding</text><path d="M110 120 L75 250" stroke="#c0392b" stroke-dasharray="4 3"/>';
+ if(k===2)h+='<text x="'+X(1.5)+'" y="205" font-size="20">🌙</text><text x="'+X(5.5)+'" y="205" font-size="20">🌙🌙</text><rect x="250" y="70" width="250" height="48" rx="10" fill="#fff" stroke="#34466b"/><text x="262" y="90" class="t-b">sleep + consolidation between sessions</text><text x="262" y="108" class="t-s">late LTP; gist gets stabilised</text>';
+ if(k===3){h+='<path d="M'+X(0)+' 228 Q '+X(1.5)+' 196 '+X(3)+' 228 M'+X(3)+' 228 Q '+X(5.5)+' 190 '+X(8)+' 228" fill="none" stroke="#c9a96e" stroke-width="2.5"/><rect x="250" y="70" width="250" height="48" rx="10" fill="#fff" stroke="#c9a96e"/><text x="262" y="90" class="t-g">each repeat reminds you of the last</text><text x="262" y="108" class="t-s">harder (but successful) retrieval = stronger</text>'}
+ $('#lg7Svg').innerHTML=h;$('#lg7Out').innerHTML=L7[k]}
+$$('#lg7Btns button').forEach(b=>b.onclick=()=>drawLG7(+b.dataset.k));drawLG7(0);
+
+/* LG8 planner */
+const P8=[['q','Quiz at the start of each lesson on the previous one',15],['c','Cumulative quizzes in weeks 3 and 6',15],['h','Homework mixes in older topics',10],['e','Expanding reviews of week-1 topics (weeks 2, 3, 5, 8)',20],['x','One intensive review week just before the exam',4]];
+$('#lg8Opts').innerHTML=P8.map(p=>'<label><input type="checkbox" data-k="'+p[0]+'"> '+p[1]+'</label>').join('');
+function drawLG8(){const on={};$$('#lg8Opts input').forEach(i=>on[i.dataset.k]=i.checked);const X=w=>40+(w-1)*58;
+ let h='<text x="20" y="22" class="t-b">8-week course</text>';for(let w=1;w<=8;w++){h+='<rect x="'+X(w)+'" y="34" width="50" height="190" rx="8" fill="#fbfaf6" stroke="#e8e1d3"/><text x="'+(X(w)+25)+'" y="52" text-anchor="middle" class="t-s">wk '+w+'</text><rect x="'+(X(w)+8)+'" y="60" width="34" height="14" rx="4" fill="#34466b"/><text x="'+(X(w)+25)+'" y="71" text-anchor="middle" fill="#fff" font-size="9">lesson</text>';
+  if(on.q&&w>1)h+='<circle cx="'+(X(w)+25)+'" cy="92" r="7" fill="#2f8a57"/><text x="'+(X(w)+25)+'" y="96" text-anchor="middle" fill="#fff" font-size="9">Q</text>';
+  if(on.c&&(w===3||w===6))h+='<rect x="'+(X(w)+6)+'" y="108" width="38" height="18" rx="4" fill="#a8854a"/><text x="'+(X(w)+25)+'" y="121" text-anchor="middle" fill="#fff" font-size="9">cumul.</text>';
+  if(on.h&&w>1)h+='<text x="'+(X(w)+25)+'" y="148" text-anchor="middle" font-size="15">📚</text>';
+  if(on.e&&[2,3,5,8].includes(w))h+='<circle cx="'+(X(w)+25)+'" cy="172" r="8" fill="#c9a96e"/><text x="'+(X(w)+25)+'" y="176" text-anchor="middle" fill="#fff" font-size="9">R</text>';
+  if(on.x&&w===8)h+='<rect x="'+(X(w)+4)+'" y="188" width="42" height="30" rx="4" fill="#c0392b"/><text x="'+(X(w)+25)+'" y="207" text-anchor="middle" fill="#fff" font-size="9">cram</text>'}
+ h+='<rect x="'+(X(8)+56)+'" y="34" width="40" height="190" rx="8" fill="#34466b"/><text x="'+(X(8)+76)+'" y="134" text-anchor="middle" fill="#fff" font-size="11" font-weight="700" transform="rotate(-90 '+(X(8)+76)+' 134)">EXAM</text>';
+ let v=20;P8.forEach(p=>{if(on[p[0]])v+=p[2]});v=Math.min(v,96);
+ h+='<text x="20" y="252" class="t-b">Long-term retention</text><rect x="160" y="240" width="370" height="18" rx="9" fill="#f3f1ec"/><rect x="160" y="240" width="'+3.7*v+'" height="18" rx="9" fill="'+(v>=70?'#2f8a57':v>=45?'#b8923a':'#c0392b')+'"/><text x="'+(166+3.7*v)+'" y="254" class="t-b">'+(v>=70?'strong':v>=45?'better':'weak')+'</text>';
+ h+='<text x="20" y="284" class="t-s">Q = quiz before the summary · R = review · 📚 = older topics in homework</text>';$('#lg8Svg').innerHTML=h;
+ const msg=[];if(on.q)msg.push('✓ <b>Quiz first:</b> retrieval after a day of consolidation; questions beat plain repetition.');if(on.c)msg.push('✓ <b>Cumulative quizzes:</b> spaced practice of old and new material; fewer reasons to cram.');if(on.h)msg.push('✓ <b>Mixed homework:</b> a painless way to schedule spacing.');if(on.e)msg.push('✓ <b>Expanding reviews:</b> short gaps first so retrieval succeeds, then longer gaps.');if(on.x)msg.push('⚠️ <b>Review week:</b> recent material gets reviewed after only a short gap, and everything only once. It helps the exam, little else.');
+ $('#lg8Out').innerHTML=msg.length?msg.join('<br>'):'Switch on a recommendation to add it to the timeline.'}
+$$('#lg8Opts input').forEach(i=>i.onchange=drawLG8);drawLG8();
+
+/* web of connections */
+const WEB=[[280,62,'<b>① Generative = constructive.</b> Brod defines GLSs as producing meaningful content beyond the given information and says this is "highly similar" to Chi\'s active vs constructive distinction. So everything Brod reviews sits in ICAP\'s C mode.'],
+ [180,175,'<b>② Control conditions matter in both.</b> ICAP: compare an intervention with one in the same mode. Brod: concept mapping is 1.05 SDs better than a passive control but only 0.48 SDs better than an active one. The comparison shapes the effect.'],
+ [395,225,'<b>③ Practice testing appears in two articles.</b> Brod: generating answers is a GLS, favorable at all ages. Gerbier &amp; Toppino: the testing effect, especially after long retention intervals. In an app: quiz from memory, on a spaced schedule.'],
+ [175,265,'<b>④ Effort and retrieval.</b> ICAP: higher modes are more effortful and give more learning (unlike cognitive load theory). Gerbier &amp; Toppino: harder, successful retrieval is more beneficial (recall over recognition). Selecting from a menu is active in ICAP and an easy retrieval in spacing terms. Typing the answer is better on both counts.'],
+ [280,190,'<b>⑤ The app case joins all three.</b> Mode (make users generate, ideally together), match (pick strategies their age can use, with the right support), moment (spaced, expanding, with tests).']];
+function drawWeb(sel){let h='';const N=[[110,110,'ICAP','Chi & Wylie','#34466b'],[450,110,'Generative','Brod','#2f8a57'],[280,320,'Spacing','Gerbier & Toppino','#a8854a']];
+ h+='<path d="M110 110 L450 110 M450 110 L280 320 M110 110 L280 320" stroke="#d9d2c3" stroke-width="3"/><circle cx="280" cy="190" r="42" fill="#fbf3df" stroke="#c9a96e" stroke-width="2"/><text x="280" y="186" text-anchor="middle" font-size="22">📱</text><text x="280" y="208" text-anchor="middle" class="t-g">the app</text>';
+ N.forEach(n=>h+='<circle cx="'+n[0]+'" cy="'+n[1]+'" r="56" fill="'+n[4]+'"/><text x="'+n[0]+'" y="'+(n[1]-2)+'" text-anchor="middle" fill="#fff" font-weight="700" font-size="15">'+n[2]+'</text><text x="'+n[0]+'" y="'+(n[1]+16)+'" text-anchor="middle" fill="#f3efe6" font-size="11">'+n[3]+'</text>');
+ WEB.forEach((w,i)=>h+='<g data-w="'+i+'" style="cursor:pointer"><circle cx="'+w[0]+'" cy="'+w[1]+'" r="'+(i===sel?17:14)+'" fill="'+(i===sel?'#34466b':'#c9a96e')+'" stroke="#fff" stroke-width="3"/><text x="'+w[0]+'" y="'+(w[1]+5)+'" text-anchor="middle" fill="#fff" font-weight="700" font-size="13">'+(i+1)+'</text></g>');
+ $('#lgWeb').innerHTML=h;$$('#lgWeb g[data-w]').forEach(g=>g.onclick=()=>{drawWeb(+g.dataset.w);$('#lgWebOut').innerHTML=WEB[+g.dataset.w][2]})}
+drawWeb(-1);
+
+/* check-yourself quizzes */
+const Q=(q,o,why)=>({q,o,a:0,why});
+const LQ={
+1:[Q('Students watching a video are told to rewind the parts they find hard. Which knowledge-change process does ICAP link to this?',['Integrating','Storing','Inferring','Co-inferring'],'Rewinding is a manipulation (active). Emphasising parts activates a schema that new information is <b>integrated</b> into.'),
+ Q('Which outcome does ICAP predict for knowledge learned only passively?',['Recall in an identical context','Transfer to a distant problem','Applying it to similar problems','Co-creating new ideas with others'],'Passive learning stores knowledge in an isolated, "inert" way, so it can be <b>recalled</b> when the same cue or context returns.')],
+2:[Q('A teacher adds a worksheet on which students fill in missing words from the lecture slides. Which mode does this reach?',['Active','Passive','Constructive','Interactive'],'Filling in given content is the guided-notes example: <b>active</b>. Nothing new is generated.'),
+ Q('Two students each give the other a five-minute mini-lecture without interrupting. Why might this fall short of interactive?',['There is too little turn taking for them to build on each other\'s ideas','Explaining a topic is only an active activity','Interactive learning always requires a teacher to take part','Mini-lectures are by definition not content relevant'],'Interactive needs constructive partners <b>and</b> frequent turn taking. Alternating mini-lectures lack the back-and-forth.')],
+3:[Q('A study finds no difference between self-explaining and rereading on a test of ten fact-recall questions. What would Chi and Wylie check first?',['Whether the test was too shallow to show a difference','Whether self-explaining is really a passive activity','Whether rereading was secretly interactive','Whether the domain was emergence'],'Recall questions can be answered after passive learning too. <b>Shallow assessments</b> are the first factor that can override ICAP.'),
+ Q('Which caveat is built into ICAP itself?',['The knowledge-change processes for each mode are hypothetical','ICAP has never been tested in real classrooms','ICAP ignores students\' overt behaviour','ICAP claims passive learning produces no learning at all'],'The authors say they have not verified the <b>knowledge-change processes</b>. ICAP was tested in classrooms, is built on overt behaviour, and predicts recall from passive learning.')],
+4:[Q('What makes an activity generative according to Brod (2021)?',['The learner produces meaningful content beyond the information given','The learner performs a physical action with the material','The learner works on the material together with a partner','The learner\'s answer turns out to be correct'],'GLSs prompt learners to <b>produce something meaningful beyond the provided information</b>. Correctness and collaboration are not part of the definition.'),
+ Q('A student condenses a text to half its length without adding anything. How does Brod classify this summary?',['Not a generative strategy','A generative strategy, because the text is rewritten','A generative strategy, but only for university students','An interactive strategy'],'A summary only qualifies when learners <b>enrich</b> the text with additional content. Condensing or paraphrasing does not.')],
+5:[Q('Which developing capacity is most needed to write good, diagnostic questions about a text?',['Metacognitive monitoring','Recognition memory','Basic feedback processing','Visual perception'],'Generating good questions requires judging what you do and don\'t understand: <b>metacognitive monitoring</b>, which matures late.'),
+ Q('In Breitwieser and Brod (2020), what was related to how adult-like children\'s results were?',['Their reasoning ability','Their prior knowledge of the facts','Their motivation to learn','Their reading speed'],'The more adult-like the pattern (similar learning from predictions and examples), the higher the children\'s <b>reasoning</b> scores.')],
+6:[Q('A fifth-grade teacher gives pupils a concept map in which all concepts and labelled links are already filled in. What is the problem?',['The task is no longer generative','Fifth graders cannot read concept maps','Concept maps are unfavorable at this age','The map has too low coherence'],'If everything is given and no effortful retrieval is needed, the strategy is <b>no longer generative</b>.'),
+ Q('Which support did Van Meter et al. (2006) find most helpful for sixth graders\' learning from drawing?',['A prompt to compare their drawing with a provided illustration','Drawing without reading the text first','Extra time with no other support','Copying a finished drawing'],'The high-support condition prompted students to <b>compare their drawing with an illustration</b>, compensating for weaker monitoring.')],
+7:[Q('Which account explains why memory declines when the gap between repetitions becomes too long?',['Study-phase retrieval','Deficient processing','Repetition suppression','Synaptic consolidation'],'Longer gaps make reminding harder but also more likely to fail. Beyond the optimum, failures win: the <b>inverted U</b> of study-phase retrieval.'),
+ Q('Why are gaps of a day or more thought to be special?',['Sleep and systems consolidation can occur between repetitions','Deficient processing is strongest after 24 hours','Synaptic consolidation has not started yet','More irrelevant surface cues are stored'],'After a day, synaptic consolidation is largely complete, <b>sleep</b> intervenes, and <b>systems consolidation</b> strengthens durable gist.')],
+8:[Q('Which homework design best applies distributed practice?',['Part of each assignment covers material from earlier weeks','All homework covers only that day\'s lesson','Homework is replaced by one big assignment before the exam','Homework is given only when a test is near'],'Devoting part of homework to <b>older material</b> is the article\'s "painless" way to schedule spaced practice.'),
+ Q('For which learners do the authors especially suggest an expanding schedule?',['Learners who forget quickly, such as young learners or those with low working memory','Students preparing for a test tomorrow','Experts who have already mastered the material','Learners studying material with no interference'],'Expanding schedules help when <b>forgetting is too rapid</b> to bridge long gaps at first: high interference, young age, low working memory.')]};
+Object.keys(LQ).forEach(k=>seqGame('lgq'+k,'lgq'+k+'o',LQ[k]));
+seqGame('lgqAll','lgqAllo',[
+ Q('Brod\'s generative learning strategies correspond to which ICAP mode?',['Constructive','Active','Interactive','Passive'],'Both define the key feature as producing content beyond the given information.'),
+ Q('Practice testing plays a central role in which articles?',['Brod (2021) and Gerbier & Toppino (2015)','Only Chi & Wylie (2014)','Only Brod (2021)','Chi & Wylie (2014) and Gerbier & Toppino (2015)'],'Brod reviews it as a GLS; Gerbier and Toppino discuss the testing effect and recommend tests in spaced practice.'),
+ Q('An app for 8-year-olds must be constructive and age-appropriate. Which activity fits both?',['Guessing an answer before seeing the correct one','Drawing the content without support','Writing their own questions about the text','Highlighting key words in a text'],'Predicting is generative (constructive) and favorable below grade 4. Drawing and questioning are unfavorable at that age; highlighting is only active.'),
+ Q('Which statement links ICAP and Gerbier & Toppino?',['Both suggest that more effortful processing, like generating or retrieving, leads to more durable learning','Both recommend massed practice for long-term retention','Both define engagement by students\' motivation','Both say easy learning predicts good retention'],'ICAP: higher modes are more effortful and give more learning. Spacing: harder but successful retrieval is more beneficial.'),
+ Q('An app quiz asks users to tap one of four answers. How do the two frameworks judge this?',['Active in ICAP, and an easier recognition retrieval than typing the answer from memory','Constructive in ICAP, and the hardest form of retrieval','Interactive in ICAP, because the app responds','Passive in ICAP, and no retrieval at all'],'Selecting from a menu is active. Retrieval is more beneficial when based on recall rather than recognition.'),
+ Q('Which limitation do Brod and Gerbier & Toppino share?',['Evidence on how to apply their conclusions to specific learners or settings is still limited','Both reviews are based only on animal studies','Both found that their strategies never work for children','Both rely on a single experiment'],'Brod: few age-comparative studies. Gerbier and Toppino: a lack of applied research for specific educational contexts.')]);
+
 /* ---------- routing ---------- */
-function route(){const h=location.hash.slice(1);if(!h)return;if(h==='videos')return show('vd');const m=h.match(/^(icap|gls|dp)-(\d+)$/);if(m)return show(m[1],+m[2]);if($('#p-'+h))show(h)}
+function route(){const h=location.hash.slice(1);if(!h)return;if(h==='videos')return show('vd');const m=h.match(/^(icap|gls|dp|lg)-(\d+)$/);if(m)return show(m[1],+m[2]);if($('#p-'+h))show(h)}
 window.addEventListener('hashchange',route);route();
 })();
 </script>
