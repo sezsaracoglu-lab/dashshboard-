@@ -14,6 +14,8 @@
     { title: "Year 2 · Block 1 · Methods and Statistics 2", links: [["All study links", D + "study/#stats2"], ["Course story", D + "stat2-course/"], ["Exam prep", D + "stat2-exam2026/"], ["Exam prep per theme", D + "stat2-exam2026/themes.html"], ["SPSS practice", D + "spss-exams/"], ["Videos ↗", "https://www.youtube.com/playlist?list=PLYIWFBp8jVm4", 1]] },
     { title: "Year 2 · Block 2 · Educational Psychology", links: [["All study links", D + "study/#edpsy"], ["Course story", D + "edpsy-course/"], ["Practice exams", D + "edpsy-exams/"]],
       themes: [["1", D + "edpsy-theme1/"]] },
+    { title: "Year 2 · Block 2 · World of Work", links: [["All study links", D + "study/#wow"]],
+      themes: [["1", D + "wow-theme1/"]] },
     { title: "Year 3", links: [["Year 3 plan", D + "study/#year3"]] }
   ];
   function el(t, a, kids) { var e = document.createElement(t); if (a) for (var k in a) { if (k === "text") e.textContent = a[k]; else e.setAttribute(k, a[k]); } (kids || []).forEach(function (c) { e.appendChild(c); }); return e; }

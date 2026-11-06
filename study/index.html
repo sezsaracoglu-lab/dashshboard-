@@ -160,7 +160,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <div class="course"><i class="dot d-v"></i><div>Professional Ethics<small>Coming soon</small></div></div></div>
 <div class="blk"><div class="when">Block 2 · Nov–Feb</div><h3>Psychology in Practice</h3>
 <button class="course" data-course="edpsy" aria-pressed="false"><i class="dot d-k"></i><div>Educational Psychology<small>Open study tools →</small></div></button>
-<div class="course"><i class="dot d-k"></i><div>World of Work<small>Coming soon</small></div></div>
+<button class="course" data-course="wow" aria-pressed="false"><i class="dot d-k"></i><div>World of Work<small>Open study tools →</small></div></button>
 <div class="course"><i class="dot d-a"></i><div>Psychological Science<small>Coming soon</small></div></div></div>
 <div class="blk"><div class="when">Block 3 · Feb–Apr</div><h3>Complex Minds</h3>
 <div class="course"><i class="dot d-k"></i><div>Psychometrics<small>Coming soon</small></div></div>
@@ -213,6 +213,11 @@ const COURSES={
     q:'Could it be chance, and how much does it matter?',p:'Eight stops on one map of tests, from proportions to repeated-measures ANOVA, with SPSS practice on realistic datasets.',
     quick:[['Course story','../stat2-course/',1],['Exam prep','../stat2-exam2026/'],['Exam prep per theme','../stat2-exam2026/themes.html'],['SPSS practice','../spss-exams/'],['Last-minute SPSS check','../spss-lastminute/'],['Videos ↗','https://www.youtube.com/playlist?list=PLYIWFBp8jVm4']],
     readme:['Statistics 2','SPSS 2']},
+  wow:{name:'World of Work',year:'Year 2',block:'Block 2 · Psychology in Practice',img:'../wow-theme1/img/cover.svg',alt:'A balance with job demands on one side and job resources on the other',
+    q:'Why do some people burn out at work while others thrive, and what can organizations do about it?',p:'Four themes on meaningful work and performance, green leadership and the ageing workforce, technology, work–home balance and recovery, and selection with digital media and AI, all seen through job demands–resources theory.',
+    quick:[['Theme 1 · Job demands and resources','../wow-theme1/',1],['Theme 1 learning goals','../wow-theme1/#lg'],['Tutorial 1 prep','../wow-theme1/#tut']],
+    readme:['World of Work'],
+    fallback:[['Theme 1 · Job demands and resources',[['Start here · the theme as one story','https://sezsaracoglu-lab.github.io/dashshboard-/wow-theme1/'],['Learning goals · meeting 1','https://sezsaracoglu-lab.github.io/dashshboard-/wow-theme1/#lg'],['Tutorial 1 prep · your own demands and resources','https://sezsaracoglu-lab.github.io/dashshboard-/wow-theme1/#tut']]]]},
   edpsy:{name:'Educational Psychology',year:'Year 2',block:'Block 2 · Psychology in Practice',img:'../edpsy-theme1/img/cover.svg',alt:'ICAP staircase from passive to interactive, and massed versus spaced study sessions',
     q:'How do people learn effectively, and how do you design for it?',p:'Eight themes on motivation, self-regulation, memory strategies, learning problems, assessment, technology, training and transfer, each applied to a real professional case.',
     quick:[['Course story','../edpsy-course/',1],['Theme 1 · Learning strategies','../edpsy-theme1/'],['Practice exams','../edpsy-exams/'],['Theme 1 learning goals','../edpsy-theme1/#lg'],['Theme 1 case','../edpsy-theme1/#case'],['In a nutshell','../edpsy-theme1/#nut'],['Videos ↗','https://www.youtube.com/playlist?list=PLIfgLNbeNTOE']],

@@ -1,0 +1,382 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World of Work · Theme 1</title>
+<meta name="description" content="Educational Psychology Theme 1: the three articles (ICAP, generative learning by age, distributed practice) as interactive walk-throughs, with all eight learning goals answered.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>:root{--bg:#faf7f1;--card:#fff;--line:#e8e1d3;--gold:#c9a96e;--dgold:#a8854a;--pgold:#f6eedd;--navy:#34466b;--ink:#2b2f3a;--muted:#6b7280;--blue:#e3ecf7;--rose:#f7e4e4;--green:#e2f1e6;--peach:#fbe9d9;--ok:#2f8a57;--bad:#c0392b;
+--mP:#7d8799;--mA:#b8923a;--mC:#2f8a57;--mI:#34466b}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.6}
+h1,h2,h3,.brand{font-family:'Cormorant Garamond',Georgia,serif;color:var(--navy);text-wrap:balance}
+h1{font-size:2.4rem;margin:.1em 0 .2em;line-height:1.1}h2{font-size:1.9rem;margin:.1em 0 .3em;line-height:1.15}h3{font-size:1.45rem;margin:1em 0 .4em}h4{color:var(--navy);margin:1em 0 .4em;font-size:1.02rem}
+p{margin:.5em 0}
+.app{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}
+.side{position:sticky;top:0;height:100vh;overflow:auto;background:#fff;border-right:1px solid var(--line);padding:22px 16px;display:flex;flex-direction:column;gap:14px}
+.brand{font-size:1.6rem;font-weight:700;line-height:1.1}.brand span{display:block;color:var(--dgold);font-size:1.12rem;margin-top:4px}
+.crumb{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.nav{display:flex;flex-direction:column;gap:7px}
+.nb{border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:10px 13px;text-align:left;font:inherit;font-size:.93rem;font-weight:500;color:var(--navy);cursor:pointer;display:flex;gap:8px;align-items:flex-start;text-decoration:none;line-height:1.3}
+.nb small{display:block;font-size:.74rem;color:var(--muted);font-weight:400}
+.nb.on{background:var(--navy);color:#fff;border-color:var(--navy)}.nb.on small{color:#d7dceb}
+.nb:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.nsep{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dgold);font-weight:700;margin:6px 4px 0}
+.prog{margin-top:auto;font-size:.8rem;color:var(--muted)}.pbar{height:8px;background:var(--pgold);border-radius:8px;overflow:hidden;margin:4px 0}.pbar i{display:block;height:100%;width:0;background:var(--gold);transition:width .4s}
+main{padding:26px clamp(16px,3vw,40px) 90px;min-width:0;max-width:1400px}
+.panel{display:none}.panel.on{display:block}
+.eyebrow{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dgold);font-weight:700}
+.sub{color:var(--muted);margin:.2em 0 1em;font-size:1.04rem;max-width:820px}
+.mini{font-size:.9rem;color:var(--muted)}
+.bg{font-size:.72rem;background:var(--blue);color:var(--navy);border-radius:6px;padding:1px 7px;font-weight:700;white-space:nowrap}
+.hero{background:linear-gradient(135deg,#fdf8ee 0%,#eef3fa 100%);border:1px solid var(--line);border-radius:24px;padding:26px 30px;position:relative;overflow:hidden}
+.hero .emo{position:absolute;right:24px;top:16px;font-size:3.6rem}
+.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}
+.acard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;text-align:left;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:6px;transition:transform .15s,box-shadow .15s;color:var(--ink)}
+.acard:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(52,70,107,.1)}
+.acard .n{font-size:.72rem;letter-spacing:.12em;color:var(--dgold);font-weight:700}.acard b{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--navy);line-height:1.15}
+.acard .q{font-size:.9rem;color:var(--muted)}.acard .go{font-weight:700;color:var(--navy);font-size:.88rem;margin-top:auto}
+.box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin:16px 0}
+.call{background:var(--pgold);border-left:6px solid var(--gold);border-radius:12px;padding:12px 18px;margin:14px 0;font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--navy);font-style:italic}
+.tw{overflow-x:auto;margin:10px 0}
+table.tb{border-collapse:collapse;width:100%;background:#fff;font-size:.9rem}
+.tb th{background:var(--navy);color:#fff;text-align:left;padding:8px 10px;font-weight:600}.tb td{border-top:1px solid var(--line);padding:8px 10px;vertical-align:top}
+.tb tr:nth-child(even) td{background:#fcfaf6}
+/* ---------- article walk-through ---------- */
+.ahead{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.cite{font-size:.92rem;color:var(--muted);margin:0}
+.rail{position:sticky;top:0;z-index:20;background:var(--bg);display:flex;gap:6px;overflow-x:auto;padding:10px 0 10px;border-bottom:1px solid var(--line);margin:12px 0 16px;scrollbar-width:thin}
+.rail button{flex:0 0 auto;display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px 5px 5px;font:inherit;font-size:.82rem;color:var(--navy);cursor:pointer}
+.rail button i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--pgold);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.75rem;color:var(--dgold)}
+.rail button.on{background:var(--navy);color:#fff;border-color:var(--navy)}.rail button.on i{background:var(--gold);color:#fff}
+.rail button.done i{background:var(--ok);color:#fff}
+.step{display:none;animation:fade .25s}.step.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.shead{display:flex;gap:14px;align-items:center;margin-bottom:8px}
+.snum{flex:0 0 auto;width:58px;height:58px;border-radius:16px;background:var(--pgold);border:2px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;color:var(--dgold);font-size:.7rem;line-height:1.1;letter-spacing:.06em}
+.snum b{font-size:1.45rem;font-style:normal}
+.shead h2{margin:0}.shead .k{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dgold);font-weight:700}
+.ask{background:var(--blue);border-radius:14px;padding:9px 15px;margin:8px 0 14px;font-size:.95rem}
+.scr{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:22px;align-items:start}
+.scr>*{min-width:0}
+.fig{margin:0;background:#fffdf9;border:1px solid var(--line);border-radius:18px;padding:12px}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;font-style:italic;margin-top:6px}
+.lede{font-size:1.02rem;line-height:1.6}
+.lede p{margin:0 0 .7em}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}
+.chips button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 11px;font:inherit;font-size:.82rem;color:var(--navy);cursor:pointer}
+.chips button.on{background:var(--pgold);border-color:var(--gold);font-weight:700}
+.cb{display:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 15px;margin-top:8px;font-size:.93rem;line-height:1.55}.cb.on{display:block}
+.cb.x{background:#fbecea;border-color:#efc9c3}.cb.f{background:var(--green);border-color:#cfe5d6}.cb.h{background:var(--peach);border-color:#f0d4b9}.cb.t{background:var(--pgold);border-color:var(--gold)}.cb.o{background:#f3f5fa;border-color:#d6deec;font-style:italic}
+.cb .w{display:block;color:var(--bad);font-weight:700}.cb .r{display:block;color:var(--ok);font-weight:700;margin-top:6px}
+.snav{display:flex;justify-content:space-between;gap:10px;margin-top:22px;padding-top:14px;border-top:1px dashed var(--line)}
+.btn{border:0;background:var(--navy);color:#fff;border-radius:12px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer}.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}.btn:disabled{opacity:.4;cursor:default}
+.btn.sm{padding:6px 12px;font-size:.88rem}
+/* games */
+.game{background:#f2f6fc;border:2px dashed #a9bede;border-radius:20px;padding:16px 18px;margin:18px 0}
+.game .lbl{display:inline-block;background:var(--navy);color:#fff;border-radius:8px;padding:2px 9px;font-size:.7rem;letter-spacing:.1em;font-weight:700;margin-bottom:6px}
+.game h4{margin:.1em 0 .3em}
+.out{background:#fff;border-radius:12px;padding:10px 14px;margin-top:10px;min-height:22px;font-size:.93rem}
+.out.ok{border-left:5px solid var(--ok)}.out.no{border-left:5px solid var(--bad)}
+.opts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.opts button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:7px 12px;font:inherit;font-size:.9rem;color:var(--navy);cursor:pointer}
+.opts button.ok{background:#eaf6ee;border-color:var(--ok);color:var(--ok);font-weight:700}.opts button.no{background:#fbecea;border-color:var(--bad);color:var(--bad)}
+.mode{display:inline-block;border-radius:6px;padding:0 7px;font-size:.75rem;font-weight:700;color:#fff;vertical-align:middle}
+.mode.P{background:var(--mP)}.mode.A{background:var(--mA)}.mode.C{background:var(--mC)}.mode.I{background:var(--mI)}
+.card-q{background:#fff;border-radius:14px;padding:14px 16px;font-size:1rem;border:1px solid var(--line)}
+.score{font-weight:700;color:var(--navy)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:10px 0}
+.tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;text-align:left;font:inherit;cursor:pointer;color:var(--ink);font-size:.88rem;line-height:1.4}
+.tile b{display:block;color:var(--navy);font-size:.95rem;margin-bottom:2px}.tile .bk{display:none;margin-top:6px;color:var(--ink)}.tile.open{background:var(--pgold);border-color:var(--gold)}.tile.open .bk{display:block}
+.idcard{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.93rem}
+.idcard dt{font-weight:700;color:var(--navy)}.idcard dd{margin:0}
+details.qc{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:9px 14px;margin:6px 0}
+details.qc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.qc p{margin:.5em 0 0;background:var(--peach);border-radius:10px;padding:8px 12px;font-size:.93rem}
+.lgtag{display:inline-block;background:var(--navy);color:#fff;border-radius:999px;padding:1px 9px;font-size:.75rem;font-weight:700;margin:2px 3px 2px 0;cursor:pointer;border:0;font-family:inherit}
+.verd{display:inline-block;border-radius:6px;padding:1px 8px;font-size:.72rem;font-weight:700;letter-spacing:.04em}
+.verd.s{background:#eaf6ee;color:var(--ok)}.verd.a{background:#fbecea;color:var(--bad)}.verd.m{background:var(--pgold);color:var(--dgold)}.verd.sh{background:var(--blue);color:var(--navy)}
+.range{width:100%}
+.nut{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.nutfig{position:relative;padding-bottom:46px}.nutfig svg{width:100%;height:auto;display:block}
+.pager.nutp .dots{flex-wrap:wrap;gap:4px;min-width:0}.pager.nutp .dots button{width:14px;height:8px}.pager .pn2{flex-wrap:wrap}.nut>*{min-width:0}
+.lgacc{display:grid;gap:8px;margin:8px 0 12px}details.lgi{background:#fff;border:1px solid var(--line);border-left:5px solid var(--c);border-radius:12px;padding:0}details.lgi summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:11px 14px}details.lgi summary::-webkit-details-marker{display:none}.lgn{width:28px;height:28px;border-radius:50%;background:var(--c);color:#fff;font-weight:700;display:grid;place-items:center;font-size:.9rem}.lgq{font-weight:600;color:var(--navy);line-height:1.35}.lga{font-size:.74rem;font-weight:700;color:var(--c);white-space:nowrap}.lga:after{content:" ▸";}details.lgi[open] .lga:after{content:" ▾"}.lgb{padding:0 16px 12px 60px}.lgb p{margin:.4em 0;line-height:1.6}.lgw{background:var(--pgold);border-radius:10px;padding:7px 11px;font-size:.93rem}@media(max-width:640px){details.lgi summary{grid-template-columns:30px 1fr}.lga{grid-column:2}.lgb{padding:0 14px 12px}}
+.nuttxt p{font-size:1.02rem;line-height:1.68;margin:0}
+.nutfix{background:#fdf6e6;border:1px dashed var(--gold);border-radius:12px;padding:9px 12px;margin-top:12px;font-size:.88rem;line-height:1.5}.nutfix b{color:var(--dgold)}
+@media (max-width:999px){.nut{grid-template-columns:1fr}}
+
+.scr{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.scr>.fig{position:relative;padding-bottom:46px}
+@media (max-width:999px){.scr{grid-template-columns:1fr}}
+.teach.guided{display:flex;flex-direction:column;gap:10px}
+.pager{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 20px 14px;display:flex;flex-direction:column;flex:1;min-height:280px;box-shadow:0 6px 18px rgba(52,70,107,.06)}
+.pager .pl{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--dgold);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.pager .pl i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;letter-spacing:0}
+.pager .pg{display:none;font-size:1.02rem;line-height:1.68;margin:0;animation:fade .25s}.pager .pg.on{display:block}
+.pager .pn2{margin-top:auto;padding-top:12px;display:flex;align-items:center;gap:8px;border-top:1px dashed var(--line)}
+.pager .dots{display:flex;gap:6px;flex:1}.pager .dots button{width:30px;height:8px;border-radius:8px;border:0;background:#e6e0d3;cursor:pointer;padding:0}.pager .dots button.on{background:var(--gold)}.pager .dots button.seen{background:#d9c49a}
+.pager .pv,.pager .nx{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:6px 12px;font:inherit;font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:600}
+.pager .nx{background:var(--navy);color:#fff;border-color:var(--navy)}.pager button:disabled{opacity:.35;cursor:default}
+.pager .cnt{font-size:.78rem;color:var(--muted)}
+.afterbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:16px;align-items:start}.afterbox>*{margin:0!important}
+.afterbox .tiles{grid-column:1/-1}
+.zoom{position:absolute;bottom:10px;right:10px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 11px;font:inherit;font-size:.8rem;color:var(--navy);cursor:pointer;z-index:2}
+.zoom:hover{background:var(--pgold)}
+#lbox{position:fixed;inset:0;z-index:200;background:rgba(250,247,241,.97);display:flex;align-items:center;justify-content:center;padding:24px}
+#lbox[hidden]{display:none}#lbox .in{width:min(1500px,100%);max-height:100%;overflow:auto;background:#fffdf9;border:1px solid var(--line);border-radius:18px;padding:16px}
+#lbox svg{width:100%;height:auto;display:block}#lbox .x{position:fixed;top:16px;right:20px;border:0;background:var(--navy);color:#fff;border-radius:999px;padding:8px 16px;font:inherit;font-weight:600;cursor:pointer}
+.vq{background:var(--blue);border-radius:14px;padding:9px 15px;margin:6px 0 12px;font-size:.95rem}
+.teach{font-size:1rem;line-height:1.68}.teach p{margin:0 0 .85em}.teach.wide{max-width:880px;margin:12px 0}
+.tm{cursor:pointer;color:var(--navy);border-bottom:2px dotted var(--gold)}.tm:hover{background:var(--pgold)}
+#gpop{position:absolute;z-index:100;max-width:320px;background:#fff;border:1px solid var(--gold);border-radius:14px;padding:11px 14px;box-shadow:0 12px 30px rgba(52,70,107,.18);font-size:.9rem;line-height:1.5}
+#gpop b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy)}
+.trapb{background:#fbecea;border:1px solid #efc9c3;border-radius:14px;padding:11px 15px;margin:12px 0;font-size:.93rem}.trapb b{display:block;color:var(--bad);margin-bottom:4px}
+.trapb .w{display:block;color:#8f2c20}.trapb .r{display:block;color:var(--ok);font-weight:600;margin-top:4px}
+details.exq{background:var(--pgold);border:1px solid var(--gold);border-radius:14px;padding:10px 15px;margin:12px 0;font-size:.93rem}details.exq summary{cursor:pointer;list-style:none}details.exq summary b{display:block;color:var(--dgold);margin-bottom:3px}
+details.exq summary span{color:var(--ink)}details.exq summary:after{content:" ▸ tap for the model answer";color:var(--dgold);font-size:.82rem;font-weight:700}details.exq[open] summary:after{content:""}details.exq p{background:#fff;border-radius:10px;padding:8px 12px;margin:8px 0 0}
+.goldb{background:var(--pgold);border-left:6px solid var(--gold);border-radius:12px;padding:10px 16px;margin:12px 0;font-family:'Cormorant Garamond',serif;font-size:1.22rem;color:var(--navy);font-style:italic}
+.endb{background:#fff;border:2px solid var(--gold);border-radius:20px;padding:18px 22px;margin:20px 0}.endb h3{margin-top:0}
+.lock{display:grid;grid-template-columns:2fr 1fr 1.4fr;gap:10px}.lock div{border-radius:14px;padding:11px 14px;font-size:.92rem;line-height:1.5}.lock b{display:block;font-size:.72rem;letter-spacing:.1em;color:var(--navy);margin-bottom:4px}
+.lock .f{background:var(--green);font-style:italic}.lock .h{background:var(--peach);font-weight:600}.lock .t{background:var(--blue)}
+.think{background:#fcfaf5;border-radius:12px;padding:10px 14px}.conn{background:var(--blue);border-radius:12px;padding:10px 14px;margin-top:12px}
+@media (max-width:900px){.lock{grid-template-columns:1fr}}
+
+.try{background:var(--peach);border-radius:14px;padding:10px 14px;margin:12px 0 8px;font-size:.93rem}
+.ans{display:none;background:#fff;border:1px solid var(--line);border-left:5px solid var(--navy);border-radius:14px;padding:12px 16px;margin-top:10px;font-size:.95rem}.ans.on{display:block;animation:fade .25s}.ans p{margin:.3em 0 .6em}
+.evi{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0}
+.ev{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:.88rem;line-height:1.45}.ev b{display:block;color:var(--navy);margin:6px 0 2px;font-size:.95rem}.ev p{margin:0 0 6px}.ev i{color:var(--muted);display:block}
+.conf{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;padding:12px 14px;background:#fff;border:1px dashed var(--gold);border-radius:14px;font-size:.9rem}.conf span{font-weight:700;color:var(--navy);margin-right:4px}
+.conf button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer}.conf button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ictest{background:var(--blue);border-radius:12px;padding:10px 12px;margin-top:8px;font-size:.88rem}.ictest label{display:flex;gap:8px;align-items:flex-start;margin:6px 0}
+.plan8{display:flex;flex-direction:column;gap:4px;margin-bottom:6px;font-size:.86rem}.plan8 label{display:flex;gap:8px;align-items:flex-start;background:#fff;border-radius:8px;padding:5px 8px}
+#lg1Svg,#lg2Svg,#lg3Svg,#lg4Svg,#lg5Svg,#lg6Svg,#lg7Svg,#lg8Svg,#lgWeb{width:100%;height:auto;display:block}
+
+#cepSvg,#menChart,#dialSvg{max-width:660px;display:block;margin:0 auto}
+.lgcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 20px;margin:14px 0}
+.lgcard .lq{display:flex;gap:12px;align-items:flex-start}.lgcard .ln{flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.lgcard h3{margin:.05em 0 .1em;font-size:1.3rem}
+.plain{background:var(--green);border-radius:12px;padding:8px 14px;margin:8px 0;font-size:.93rem}
+svg text{font-family:'DM Sans',sans-serif}
+.t-h{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:21px;fill:#34466b}
+.t-b{font-size:13px;font-weight:700;fill:#34466b}.t-t{font-size:12.5px;fill:#2f3542}.t-s{font-size:11px;fill:#6b7280}
+.t-g{font-size:12px;font-weight:700;fill:#a8854a}.t-r{font-size:12px;font-weight:700;fill:#c0392b}.t-ok{font-size:12px;font-weight:700;fill:#2f8a57}
+.pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:10px 0}
+.pairs .pc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 8px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);font-weight:700}
+.flash{background:#fff;border:1px solid var(--line);border-radius:16px;min-height:120px;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--navy);font-weight:700;text-align:center;padding:12px}
+.flash small{font-family:'DM Sans';font-size:.85rem;color:var(--muted);font-weight:400}
+.sched{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin:10px 0}
+.sched button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 2px;font:inherit;font-size:.78rem;color:var(--navy);cursor:pointer;line-height:1.2}
+.sched button.on{background:var(--navy);color:#fff}.sched button.ex{background:var(--bad);color:#fff;cursor:default}
+.inp{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:10px;font:inherit}
+.vdcard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:16px;padding:14px 16px;margin:14px 0}
+.vlinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.vlinks a{text-decoration:none;background:var(--rose);color:var(--bad);border-radius:999px;padding:5px 12px;font-size:.85rem}
+.menu-top{display:none}
+@media (max-width:900px){
+ .app{grid-template-columns:1fr}
+ .side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:14px 16px}
+ .nav{flex-direction:row;overflow-x:auto;gap:6px}.nb{flex:0 0 auto}.nb small{display:none}.nsep,.prog{display:none}
+ .scr,.cards3{grid-template-columns:1fr}
+ .hero .emo{display:none}h1{font-size:1.8rem}h2{font-size:1.45rem}.snum{width:48px;height:48px}
+ main{padding:18px 16px 90px}
+ .sched{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+.rmap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:10px 0 26px}.rcard{text-align:left;background:#fff;border:1px solid var(--line);border-top:5px solid var(--c);border-radius:14px;padding:14px 16px;cursor:pointer;display:flex;flex-direction:column;gap:6px;font:inherit;color:var(--ink)}.rcard:hover{box-shadow:0 6px 18px rgba(52,70,107,.12)}.rcard .rt{font-size:.68rem;letter-spacing:.12em;font-weight:700;color:var(--c)}.rcard b{font-size:1.05rem;color:var(--navy)}.rcard .rc{font-size:.78rem;color:#6b7280;line-height:1.4}.rcard .rw{font-size:.9rem;line-height:1.5}.rcard .rl{font-size:.75rem;font-weight:700;color:var(--dgold);margin-top:auto}@media(max-width:999px){.rmap{grid-template-columns:1fr 1fr}}@media(max-width:640px){.rmap{grid-template-columns:1fr}}.sl{display:block;font-size:.9rem;margin:6px 0}.sl input{width:100%;accent-color:var(--navy)}
+</style></head>
+<body>
+<div class="app"><aside class="side">
+<div><div class="crumb">World of Work · Year 2 · Block 2</div><div class="brand" style="margin-top:6px">Theme 1<span>Job demands and resources</span></div></div>
+<nav class="nav" aria-label="Theme 1 sections">
+<button class="nb on" data-p="start">🧭 <span>Start here<small>The theme as one story</small></span></button>
+<div class="nsep">The theory · articles</div>
+<button class="nb" data-p="r-faq">📘 <span>JD-R theory: FAQ<small>Bakker &amp; Demerouti (2024)</small></span></button>
+<button class="nb" data-p="r-ten">📘 <span>JD-R ten years later<small>Bakker, Demerouti &amp; Sanz-Vergel (2023)</small></span></button>
+<button class="nb" data-p="r-cor">📙 <span>JD-R and COR theory<small>Demerouti (2025)</small></span></button>
+<button class="nb" data-p="r-team">📗 <span>Team resource mobilization<small>Junker, Bakker &amp; Derks (2025)</small></span></button>
+<div class="nsep">What employees can do · texts</div>
+<button class="nb" data-p="r-craft">✂️ <span>Job crafting<small>Demerouti &amp; Bakker (2024)</small></span></button>
+<button class="nb" data-p="r-play">🎲 <span>Playful work design<small>Bakker &amp; Scharp (2024)</small></span></button>
+<div class="nsep">Pull it together</div>
+<button class="nb" data-p="lg">🎯 <span>Learning goals<small>All 7, with short answers</small></span></button>
+<button class="nb" data-p="tut">🪞 <span>Tutorial 1 prep<small>Your own demands and resources</small></span></button>
+</nav>
+<div class="prog"><span>First version · walk-throughs follow</span><div class="pbar"><i style="width:15%"></i></div></div>
+</aside>
+<main>
+
+<!-- ================= START HERE ================= -->
+<section class="panel on" id="p-start">
+<div class="hero"><div class="emo">🔋💼</div>
+<div class="eyebrow">Meeting 1 · Job demands and resources · prepared for Sezen</div>
+<h1>Why do some people burn out at work, while others thrive?</h1>
+<p>Two colleagues can have the same job, and one ends up exhausted while the other comes alive. This theme gives you the most widely used theory to explain why, and to know what leaders, teams and employees themselves can do about it.</p>
+</div>
+
+<div class="eyebrow" style="margin-top:6px">The story of this theme · 8 short chapters</div>
+<h2 style="margin-top:.1em">What is this theme really for, and how do the readings fit?</h2>
+<div class="lede" style="max-width:none;margin:10px 0 14px">
+<p><b>🔭 Zoomed out.</b> Every job has two kinds of ingredients. Some <b>take energy</b>: workload, time pressure, difficult clients. These are <b>job demands</b>. Others <b>give energy and motivation</b>: support from colleagues, feedback, autonomy, learning. These are <b>job resources</b>. When demands keep outweighing resources, people slowly drain until they <b>burn out</b>. When resources are rich, people become <b>engaged</b>, even when the work is hard. And it snowballs: drained people make choices that make their work worse, while engaged people shape their job so it gets better.</p>
+<p>Each reading looks at one side of that idea. The two <b>JD-R articles</b> explain the theory itself and what is new. <b>Demerouti (2025)</b> compares it with its "parent", <b>conservation of resources (COR)</b> theory. <b>Junker and colleagues</b> move up a level, from the individual to the <b>team</b>. The two <b>chapters</b> show what employees can do themselves: <b>job crafting</b> and <b>playful work design</b>.</p>
+<p><b>Why a psychologist learns this:</b> work fills a large part of adult life. As a work psychologist, HR professional or coach you will be asked why a team is exhausted or disengaged, and what to change. JD-R theory is the go-to framework for that diagnosis, and it works for students and their studies too.</p>
+</div>
+<p class="mini">Then follow the story chapter by chapter. Use ◀ ▶, the bars or your arrow keys.</p>
+<div id="storyDeck" style="margin:10px 0 26px"></div>
+
+<h3>The readings, and what each one is for</h3>
+<p class="mini">Articles are research papers (theory and evidence). Texts are book chapters (applications and interventions). The walk-throughs for each reading follow next.</p>
+<div class="rmap" id="rmap"></div>
+
+<h3>The seven learning goals, and where each one is answered</h3>
+<p class="mini">Tap a goal to open the short answer, why it is in the theme, and which reading to use.</p>
+<div class="lgacc" id="lgacc1"></div>
+</section>
+
+<!-- ================= READING PANELS (placeholders) ================= -->
+<div id="readingPanels"></div>
+
+<!-- ================= LEARNING GOALS ================= -->
+<section class="panel" id="p-lg">
+<div class="hero" style="padding:22px 26px"><div class="eyebrow">Pull it together</div><h1 style="font-size:2rem">The seven learning goals of meeting 1</h1><p>Short answers for now. Full model answers with visuals follow once the reading walk-throughs are built.</p></div>
+<div class="lgacc" id="lgacc2"></div>
+</section>
+
+<!-- ================= TUTORIAL PREP ================= -->
+<section class="panel" id="p-tut">
+<div class="hero" style="padding:22px 26px"><div class="eyebrow">Tutorial group 1 · preparation</div><h1 style="font-size:2rem">Your own job demands and resources</h1>
+<p>The tutorial starts with you: your study or side job. Are you facing a heavy workload? What resources can you draw on? Rate each one below and see where JD-R theory would place you.</p></div>
+<div class="scr" style="align-items:start">
+<figure class="fig"><svg viewBox="0 0 600 360" id="balSvg" role="img" aria-label="Your demands and resources on a balance"></svg></figure>
+<div class="pager" style="min-height:0"><div class="pl"><i>✎</i><span>Rate your own situation (1 = low, 5 = high)</span></div>
+<div id="sliders"></div>
+<div id="balOut" class="nuttxt" style="margin-top:10px"></div></div>
+</div>
+<div class="afterbox"><div class="trapb"><b>⚠️ Trap</b>A demand is not automatically bad. Challenging demands (a complex task, responsibility) can boost engagement when resources are present. Hindering demands (red tape, role conflict) mostly drain.</div>
+<details class="exq"><summary><b>💬 Tutorial question</b><span>Which of your resources would most effectively buffer your biggest demand, and why?</span></summary><p>A good answer names a specific demand, picks a resource that matches it (for example, social support for emotional demands, or autonomy over timing for time pressure), and uses the buffer idea: resources reduce the impact of demands on strain because they give the motivation to deal with them.</p></details></div>
+</section>
+
+</main></div>
+
+<script>
+(function(){
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const K={N:'#34466b',G:'#c9a96e',D:'#a8854a',C:'#2f8a57',R:'#c0392b',P:'#7d8799',A:'#b8923a',mu:'#6b7280'};
+const T=(x,y,s,o='')=>`<text x="${x}" y="${y}" ${o}>${s}</text>`;
+const R=(x,y,w,h,f,s='none',r=12,e='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${f}" stroke="${s}" ${e}/>`;
+const HD=s=>T(300,30,s,'text-anchor="middle" class="t-h"');
+const AR=(x1,y1,x2,y2,c=K.G,w=3)=>`<path d="M${x1} ${y1} L${x2} ${y2}" stroke="${c}" stroke-width="${w}"/><circle cx="${x2}" cy="${y2}" r="5" fill="${c}"/>`;
+const mid='text-anchor="middle"';
+
+/* ---------- readings ---------- */
+const READ=[
+{k:'r-faq',by:'Bakker &amp; Demerouti (2024)',type:'Article',col:K.N,ico:'📘',cite:'Bakker, A. B., & Demerouti, E. (2024). Job demands–resources theory: Frequently asked questions. Journal of Occupational Health Psychology, 29(3), 188–200.',short:'JD-R theory: frequently asked questions',role:'THE CORE THEORY',what:'The theory in seven propositions, then honest answers to its critics: can a resource also be a demand, how JD-R differs from COR theory, challenge versus hindrance demands, and whether loss and gain spirals really exist.',lg:[1,2,3,5],note:'Your folder holds this paper twice (journal version and the EUR portal copy). They are the same article.'},
+{k:'r-ten',by:'Bakker, Demerouti &amp; Sanz-Vergel (2023)',type:'Article',col:K.N,ico:'📘',cite:'Bakker, A. B., Demerouti, E., & Sanz-Vergel, A. (2023). Job demands–resources theory: Ten years later. Annual Review of Organizational Psychology and Organizational Behavior, 10, 25–53.',short:'JD-R theory: ten years later',role:'WHAT IS NEW',what:'Burnout and work engagement, their causes and consequences, and four innovations of the last decade: person × situation, multilevel JD-R, proactive approaches, and the work–home resources model.',lg:[1,2,4]},
+{k:'r-cor',by:'Demerouti (2025)',type:'Article',col:K.A,ico:'📙',cite:'Demerouti, E. (2025). Job demands-resources and conservation of resources theories: How do they help to explain employee well-being and future job design? Journal of Business Research, 192, 115296.',short:'JD-R and COR theory compared',role:'THE COMPARISON',what:'COR theory says people strive to gain, keep and protect resources. JD-R zooms in on job characteristics. The paper sets out what they share, how they differ, and what both predict for future jobs.',lg:[3,5]},
+{k:'r-team',by:'Junker, Bakker &amp; Derks (2025)',type:'Article',col:K.C,ico:'📗',cite:'Junker, T. L., Bakker, A. B., & Derks, D. (2025). Toward a theory of team resource mobilization: A systematic review and model of sustained agile team effectiveness. Human Resource Management Review, 35, 101043.',short:'Team resource mobilization',role:'UP A LEVEL: TEAMS',what:'For teams the question is not whether resources exist but whether the team mobilizes them. Agile work practices help; challenge demands strengthen mobilization, hindrance demands weaken it.',lg:[4]},
+{k:'r-craft',by:'Demerouti &amp; Bakker (2024)',type:'Text',col:'#6d5a9e',ico:'✂️',cite:'Demerouti, E., & Bakker, A. B. (2024). Job crafting: A powerful job redesign approach (Chapter 23).',short:'Job crafting',role:'BOTTOM-UP REDESIGN',what:'Instead of managers redesigning jobs top-down, employees change their own demands and resources to make work more meaningful and engaging. Predictors, outcomes and how good job crafting interventions work.',lg:[5]},
+{k:'r-play',by:'Bakker &amp; Scharp (2024)',type:'Text',col:'#6d5a9e',ico:'🎲',cite:'Bakker, A. B., & Scharp, Y. S. (2024). It pays to play: Playful work design. Chapter for Parker et al. (2024).',short:'Playful work design',role:'MAKING WORK FUN',what:'Employees can design fun and challenge into their own tasks, without changing the job itself. Why that keeps people engaged, especially in boring or demanding work.',lg:[5]}
+];
+const RN=Object.fromEntries(READ.map(r=>[r.k,r]));
+
+/* ---------- learning goals ---------- */
+const LG=[
+[1,'What are job demands and resources?','Job demands are aspects of the job that require sustained effort and therefore cost energy (workload, time pressure, emotional demands). Job resources are physical, psychological, social or organizational aspects that help reach work goals, reduce the impact of demands, and encourage growth (support, feedback, autonomy). JD-R is flexible: every job has its own demands and resources.','The vocabulary of the whole course: every later theme uses these two words.',['r-faq','r-ten']],
+[2,'Why do some employees burn out, whereas others thrive in their work?','JD-R proposes two processes. In the health-impairment process, high demands drain energy over time and lead to exhaustion and burnout. In the motivational process, resources spark work engagement and better performance. Resources also buffer the impact of demands, and demands boost the motivating power of resources. Thriving = high resources, even with high demands.','The heart of the theory, and the opening puzzle of the tutorial.',['r-faq','r-ten']],
+[3,'What is the difference between COR theory and JD-R theory?','COR theory is broader and person-focused: people strive to gain, keep and protect valued resources in any life domain, and stress comes from (threatened) resource loss. JD-R is narrower and job-focused: it specifies which job characteristics (demands and job resources) affect well-being and performance. JD-R borrows from COR, for example the gain-paradox idea behind its boost hypothesis.','Tests whether you can compare and connect theories, not just describe one.',['r-cor','r-faq']],
+[4,'What is the multi-level version of JD-R theory?','Employees are nested in teams, and teams in organizations. Top management sets HR practices and climate; leaders shape their team\'s demands and resources; those shape each employee\'s well-being and behaviour (trickle-down effects). At team level, Junker et al. add that teams must actively mobilize their resources.','Shows where interventions can start: the organization, the leader, the team or the person.',['r-ten','r-team']],
+[5,'Explain how employees or students can end up in a loss or gain spiral.','Loss cycle: demands cause strain, strain leads to self-undermining behaviour (mistakes, conflict), which creates even more demands. Gain spiral: resources create engagement, engaged people craft their job (seek resources and challenges), which creates even more resources. Both are stronger for people already high in burnout or engagement.','Explains why problems and successes snowball over time, and where job crafting fits.',['r-faq','r-cor','r-craft']],
+[6,'What is Study Demands–Resources Theory?','JD-R applied to students: study demands (workload, exam pressure) drain energy toward study burnout; study resources (support from teachers and peers, feedback, autonomy) build study engagement. Personal resources such as optimism and self-efficacy help too.','The same logic, transferred to your own world as a student.',[],'This reading is not in your Theme 1 folder yet. Add it and the walk-through will cover it.'],
+[7,'How can teachers influence student engagement?','Teachers are a key study resource: support, clear feedback, autonomy and well-designed challenges raise engagement; unclear demands and pressure without support drain it. In multilevel terms, the teacher plays the leader\'s role for the "team" of students.','Applies the leader level of multilevel JD-R to education.',[],'Linked to the Study Demands–Resources reading, which is not in your folder yet.']
+];
+
+function lgHTML(){return LG.map(([n,q,a,why,rs,miss])=>{const c=rs.length?RN[rs[0]].col:K.P;return `<details class="lgi" style="--c:${c}"><summary><span class="lgn">${n}</span><span class="lgq">${q}</span><span class="lga">${rs.length?rs.map(r=>RN[r].ico).join(' '):'⚠ reading missing'}</span></summary><div class="lgb"><p><b>In short:</b> ${a}</p><p class="lgw"><b>Why it is in the theme:</b> ${why}</p>${miss?`<p class="mini" style="color:#a8854a"><b>⚠ ${miss}</b></p>`:''}${rs.length?'<p class="mini" style="margin:6px 0 0">Read in: '+rs.map(r=>`<button class="lgtag" data-go="${r}">${RN[r].ico} ${RN[r].short}</button>`).join('')+'</p>':''}</div></details>`}).join('')}
+$('#lgacc1').innerHTML=lgHTML();$('#lgacc2').innerHTML=lgHTML();
+
+/* ---------- reading map ---------- */
+$('#rmap').innerHTML=READ.map(r=>`<button class="rcard" data-go="${r.k}" style="--c:${r.col}"><span class="rt">${r.type.toUpperCase()} · ${r.role}</span><b>${r.ico} ${r.short}</b><span class="rc">${r.by}</span><span class="rw">${r.what}</span><span class="rl">Learning goals ${r.lg.join(', ')}</span></button>`).join('');
+
+/* ---------- reading placeholder panels ---------- */
+$('#readingPanels').outerHTML=READ.map(r=>`<section class="panel" id="p-${r.k}"><div class="hero" style="padding:22px 26px;border-left:6px solid ${r.col}"><div class="eyebrow">${r.type} · ${r.role}</div><h1 style="font-size:2rem">${r.ico} ${r.short}</h1><p class="mini" style="margin:.3em 0 .8em">${r.cite}</p><p>${r.what}</p></div>
+<div class="lede" style="max-width:none"><p><b>Answers learning goals ${r.lg.join(', ')}.</b> The full walk-through for this ${r.type==='Article'?'article':'chapter'} (who wrote it, the question, key concepts, how they tested it, findings, limits, take-aways, with visuals and games) is built next, in the guided-reading layout.</p>${r.note?`<p class="mini">ℹ️ ${r.note}</p>`:''}</div>
+<p><button class="lgtag" data-go="start">← Back to Start here</button> <button class="lgtag" data-go="lg">🎯 Learning goals</button></p></section>`).join('');
+
+/* ---------- story ---------- */
+const STORY=[
+{t:'Chapter 1 · The puzzle: same job, different outcome',svg:HD('Two nurses, the same ward, two different stories')+
+ [[150,'Anna',K.R,'exhausted, cynical','thinking of quitting','BURNOUT'],[450,'Sam',K.C,'energetic, absorbed','proud of the work','ENGAGEMENT']].map(p=>R(p[0]-125,60,250,230,'#fff',p[2],16,'stroke-width="2"')+`<circle cx="${p[0]}" cy="115" r="30" fill="${p[2]}" opacity=".18"/>`+T(p[0],123,p[1],`${mid} font-size="20" font-weight="700" fill="${p[2]}"`)+T(p[0],180,p[3],`${mid} class="t-t"`)+T(p[0],200,p[4],`${mid} class="t-t"`)+R(p[0]-70,230,140,36,p[2],'none',10)+T(p[0],253,p[5],`${mid} fill="#fff" font-weight="700" font-size="13"`)).join('')+
+ T(300,180,'?',`${mid} font-size="44" font-weight="700" fill="#c9a96e"`)+
+ T(300,330,'Same shifts, same patients, same pay. So the difference must be in how the job works for each of them.',`${mid} class="t-g"`),
+ txt:'Start with a puzzle. Two nurses work on the same ward, with the same shifts and patients. One is exhausted, cynical and thinking of quitting: that is <b>burnout</b>. The other is energetic, absorbed and proud of her work: that is <b>work engagement</b>. Personality plays a part, but job demands–resources (JD-R) theory looks first at the job itself: what does it take from each person, and what does it give back?'},
+{t:'Chapter 2 · Two ingredients: demands and resources',svg:HD('Every job has things that cost energy and things that give it')+
+ R(30,60,255,230,'#fbecea','#efc9c3',16)+T(157,90,'JOB DEMANDS',`${mid} class="t-r"`)+T(157,108,'require sustained effort → cost energy',`${mid} class="t-s"`)+
+ ['workload','time pressure','emotional demands','role conflict'].map((s,i)=>R(60,125+i*38,195,30,'#fff','#efc9c3',8)+T(157,145+i*38,s,`${mid} class="t-t"`)).join('')+
+ R(315,60,255,230,'#eaf5ee','#bfe0cb',16)+T(442,90,'JOB RESOURCES',`${mid} class="t-ok"`)+T(442,108,'help reach goals → spark motivation',`${mid} class="t-s"`)+
+ ['social support','feedback','autonomy','learning opportunities'].map((s,i)=>R(345,125+i*38,195,30,'#fff','#bfe0cb',8)+T(442,145+i*38,s,`${mid} class="t-t"`)).join('')+
+ T(300,325,'Flexible: every occupation has its own demands and resources',`${mid} class="t-g"`),
+ txt:'JD-R sorts everything about a job into two groups. <b>Job demands</b> are aspects that require sustained physical or mental effort, so they come at a cost: fatigue, anxiety, a racing heart. <b>Job resources</b> are aspects that help you reach your goals, soften the demands and help you grow. Unlike older models, JD-R does not fix a list: a nurse, a pilot and a student each have their own demands and resources.'},
+{t:'Chapter 3 · Two processes: draining and energizing',svg:HD('Demands drain, resources motivate')+
+ R(30,70,130,50,'#fbecea',K.R,10)+T(95,100,'Job demands',`${mid} class="t-b"`)+AR(160,95,230,95,K.R)+R(240,70,130,50,'#fff',K.R,10)+T(305,100,'Exhaustion',`${mid} class="t-b"`)+AR(370,95,440,95,K.R)+R(450,70,130,50,K.R,'none',10)+T(515,93,'Health',`${mid} fill="#fff" font-weight="700" font-size="12"`)+T(515,109,'problems',`${mid} fill="#fff" font-size="11"`)+
+ T(300,145,'HEALTH-IMPAIRMENT PROCESS',`${mid} class="t-r"`)+
+ R(30,220,130,50,'#eaf5ee',K.C,10)+T(95,250,'Job resources',`${mid} class="t-b"`)+AR(160,245,230,245,K.C)+R(240,220,130,50,'#fff',K.C,10)+T(305,250,'Engagement',`${mid} class="t-b"`)+AR(370,245,440,245,K.C)+R(450,220,130,50,K.C,'none',10)+T(515,243,'Better',`${mid} fill="#fff" font-weight="700" font-size="12"`)+T(515,259,'performance',`${mid} fill="#fff" font-size="11"`)+
+ T(300,295,'MOTIVATIONAL PROCESS',`${mid} class="t-ok"`)+
+ `<path d="M95 220 Q95 180 300 175" fill="none" stroke="${K.G}" stroke-width="2.5" stroke-dasharray="6 5"/>`+T(300,195,'buffer: resources soften the impact of demands',`${mid} font-size="11.5" fill="#a8854a"`)+
+ T(300,335,'Engagement = vigor, dedication, absorption · Burnout = exhaustion + cynicism',`${mid} class="t-s"`),
+ txt:'The two ingredients set off two different processes. In the <b>health-impairment process</b>, demands slowly use up your energy, leading to exhaustion and, over time, health problems. In the <b>motivational process</b>, resources spark <b>work engagement</b> (vigor, dedication, absorption), which leads to better performance. The two meet: resources <b>buffer</b> the effect of demands, and demands <b>boost</b> the value of resources. Anna had high demands and few resources. Sam had the same demands but rich resources.'},
+{t:'Chapter 4 · It snowballs: loss and gain spirals',svg:HD('Over time, both paths reinforce themselves')+
+ `<circle cx="150" cy="180" r="100" fill="none" stroke="${K.R}" stroke-width="2" stroke-dasharray="7 6"/><circle cx="450" cy="180" r="100" fill="none" stroke="${K.C}" stroke-width="2" stroke-dasharray="7 6"/>`+
+ [[150,80,'demands'],[228,240,'strain'],[72,240,'self-undermining']].map(p=>R(p[0]-(p[2].length>8?62:42),p[1]-17,p[2].length>8?124:84,34,'#fff',K.R,17)+T(p[0],p[1]+5,p[2],`${mid} class="t-t"`)).join('')+
+ [[450,80,'resources'],[528,240,'engagement'],[372,240,'job crafting']].map(p=>R(p[0]-48,p[1]-17,96,34,'#fff',K.C,17)+T(p[0],p[1]+5,p[2],`${mid} class="t-t"`)).join('')+
+ T(150,175,'LOSS CYCLE',`${mid} class="t-r"`)+T(150,195,'↻',`${mid} font-size="22" fill="#c0392b"`)+T(450,175,'GAIN SPIRAL',`${mid} class="t-ok"`)+T(450,195,'↻',`${mid} font-size="22" fill="#2f8a57"`)+
+ T(300,330,'Both are stronger for people already high in burnout, or already high in engagement',`${mid} class="t-g"`),
+ txt:'JD-R adds time. In the <b>loss cycle</b>, demands cause strain, strained people start <b>self-undermining</b> (mistakes, conflicts, poor communication), and that creates even more demands. In the <b>gain spiral</b>, resources create engagement, engaged people <b>craft their job</b> by seeking new resources and challenges, and that creates even more resources. Both cycles run faster for people who are already high in burnout or in engagement. The rich get richer, and the drained get more drained.'},
+{t:'Chapter 5 · The parent theory: conservation of resources',svg:HD('COR is the broad theory; JD-R zooms in on the job')+
+ `<circle cx="300" cy="185" r="140" fill="#f6eedd" stroke="${K.G}" stroke-width="2"/>`+T(300,78,'COR THEORY (Hobfoll)',`${mid} class="t-g"`)+T(300,98,'people gain, keep and',`${mid} class="t-s"`)+T(300,113,'protect resources in',`${mid} class="t-s"`)+T(300,128,'every life domain',`${mid} class="t-s"`)+
+ `<circle cx="300" cy="228" r="70" fill="#fff" stroke="${K.N}" stroke-width="2.5"/>`+T(300,214,'JD-R',`${mid} font-size="18" font-weight="700" fill="#34466b"`)+T(300,236,'job demands +',`${mid} class="t-t"`)+T(300,254,'job resources',`${mid} class="t-t"`)+
+ R(455,95,135,120,'#fff','#d9d2c3',10)+T(522,118,'COR stress =',`${mid} class="t-b"`)+['threat of loss','actual loss','no gain after','investing'].map((s,i)=>T(522,140+i*17,s,`${mid} class="t-s"`)).join('')+
+ R(10,235,135,95,'#fff','#d9d2c3',10)+T(77,258,'JD-R borrows:',`${mid} class="t-b"`)+T(77,280,'gain paradox →',`${mid} class="t-s"`)+T(77,296,'boost hypothesis',`${mid} class="t-s"`),
+ txt:'JD-R did not appear from nowhere. Its "parent" is <b>conservation of resources (COR)</b> theory: people try to gain, keep and protect what they value, and stress comes from losing, or fearing to lose, those resources. COR is broad: personal, social and work resources, in every part of life. JD-R is narrower and more practical: it says <b>which job characteristics</b> matter for well-being and performance. JD-R borrows ideas from COR, such as the gain paradox behind its boost hypothesis.'},
+{t:'Chapter 6 · Up the levels: organization, leaders, teams',svg:HD('Multilevel JD-R: employees are nested in teams and organizations')+
+ [['ORGANIZATION','HR practices · climate · job design',40,K.N],['LEADERS','shape their team\'s demands and resources',95,K.A],['TEAM','mobilizes (or wastes) its resources',150,K.C],['EMPLOYEE','well-being · behaviour · performance',205,'#6d5a9e']].map((l,i)=>R(60+i*30,40+l[2],480-i*60,46,l[3],'none',10,'opacity=".92"')+T(300,63+l[2],l[0],`${mid} fill="#fff" font-weight="700" font-size="13"`)+T(300,79+l[2],l[1],`${mid} fill="#f3efe6" font-size="11"`)).join('')+
+ AR(560,90,560,280,K.G)+T(570,190,'trickle-down','font-size="11" fill="#a8854a" transform="rotate(90 570 190)"')+
+ T(300,325,'Junker et al. (2025): for teams, mobilizing resources matters more than having them',`${mid} class="t-g"`),
+ txt:'So far everything happened inside one person. <b>Multilevel JD-R</b> zooms out: employees work in teams, and teams in organizations. Top management sets HR practices and the climate, leaders shape their team\'s demands and resources, and that trickles down to each employee\'s well-being. <b>Junker and colleagues</b> add a twist for teams: the question is not only whether resources exist, but whether the team <b>mobilizes</b> them. Challenge demands help mobilization; hindrance demands block it.'},
+{t:'Chapter 7 · What employees can do themselves',svg:HD('Bottom-up: you can redesign your own work')+
+ R(30,60,160,230,'#f3f1ec','#d9d2c3',14)+T(110,88,'TOP-DOWN',`${mid} class="t-b"`)+T(110,106,'manager redesigns',`${mid} class="t-s"`)+T(110,122,'the job',`${mid} class="t-s"`)+T(110,200,'👔 → 🧑‍💼',`${mid} font-size="28"`)+T(110,265,'one size for all',`${mid} class="t-s"`)+
+ R(215,60,175,230,'#fff','#6d5a9e',14,'stroke-width="2"')+T(302,88,'✂️ JOB CRAFTING',`${mid} font-weight="700" font-size="13" fill="#6d5a9e"`)+['seek resources','seek challenges','reduce hindering','demands'].map((s,i)=>T(302,130+i*24,s,`${mid} class="t-t"`)).join('')+T(302,265,'Demerouti & Bakker',`${mid} class="t-s"`)+
+ R(410,60,175,230,'#fff','#6d5a9e',14,'stroke-width="2"')+T(497,88,'🎲 PLAYFUL WORK',`${mid} font-weight="700" font-size="13" fill="#6d5a9e"`)+T(497,106,'DESIGN',`${mid} font-weight="700" font-size="13" fill="#6d5a9e"`)+['design fun into tasks','design challenge','into tasks','job stays the same'].map((s,i)=>T(497,138+i*24,s,`${mid} class="t-t"`)).join('')+T(497,265,'Bakker & Scharp',`${mid} class="t-s"`)+
+ T(300,330,'Both feed the gain spiral: more resources and challenge → more engagement',`${mid} class="t-g"`),
+ txt:'Classic job design is <b>top-down</b>: a manager decides how the job looks. The two chapters show the <b>bottom-up</b> route. In <b>job crafting</b>, employees change their own demands and resources: asking for feedback, taking on a new challenge, cutting red tape. In <b>playful work design</b>, they keep the job but make the tasks fun or challenging, like turning a routine into a game against the clock. Both are the engine of the gain spiral from chapter 4.'},
+{t:'Chapter 8 · Why it matters, and what the professor wants',svg:HD('From explaining to advising')+
+ [['1','EXPLAIN','burnout vs. engagement with JD-R',K.P],['2','COMPARE','JD-R with COR; individual vs. team level',K.A],['3','TRANSFER','the same logic to students (study demands–resources)',K.C],['4','ADVISE','theory- and evidence-based fixes for a workplace case',K.N]].map((s,i)=>{const y=58+i*60;return R(40,y,370,50,'#fff',s[3],12,'stroke-width="2"')+`<circle cx="66" cy="${y+25}" r="14" fill="${s[3]}"/>`+T(66,y+30,s[0],`${mid} fill="#fff" font-weight="700" font-size="13"`)+T(90,y+21,s[1],`font-weight="700" font-size="13" fill="${s[3]}"`)+T(90,y+39,s[2],'font-size="11.5" fill="#2f3542"')}).join('')+
+ R(435,58,145,230,'#f6eedd',K.G,12)+T(507,84,'THE COURSE',`${mid} class="t-g"`)+['T1 meaningful work','& performance','T2 green leadership,','ageing workforce','T3 tech, work–home,','recovery','T4 selection, AI'].map((s,i)=>T(450,110+i*22,s,'font-size="11" fill="#2f3542"')).join('')+
+ T(300,330,'JD-R comes back in every theme: it is the lens for the whole course',`${mid} class="t-g"`),
+ txt:'The course goals for Theme 1 are to explain <b>when work is meaningful</b> in JD-R terms and <b>what drives employees to perform well</b>. Across the course you must integrate the readings, read them critically and turn theory into <b>evidence-based advice</b> for real workplace problems. Meeting 1 lays the foundation: if you can explain the two processes, the spirals, the levels and the bottom-up tools, you have the lens you will use in every later theme, from green leadership to AI in selection.'}
+];
+const host=$('#storyDeck');
+host.innerHTML='<div class="nut"><figure class="fig nutfig"><svg viewBox="0 0 600 360" id="stSvg" role="img"></svg><button class="zoom" type="button" id="stZoom">⤢ Enlarge</button></figure><div class="pager nutp"><div class="pl"><i>1</i><span id="stTitle"></span></div><div id="stTxt" class="nuttxt"></div><div class="pn2"><div class="dots" id="stDots"></div><span class="cnt" id="stCnt"></span><button type="button" class="pv" id="stPv">◀</button><button type="button" class="nx" id="stNx">Next ▶</button></div></div></div>';
+$('#stDots').innerHTML=STORY.map(s=>'<button type="button" aria-label="'+s.t+'"></button>').join('');
+let si=0;const seen=new Set();
+function go(k){si=Math.max(0,Math.min(STORY.length-1,k));seen.add(si);const s=STORY[si];$('#stSvg').innerHTML=s.svg;$('#stTitle').textContent=s.t;$('.pl i',host).textContent=si+1;$('#stTxt').innerHTML='<p>'+s.txt+'</p>';
+ $$('#stDots button').forEach((b,j)=>{b.classList.toggle('on',j===si);b.classList.toggle('seen',seen.has(j)&&j!==si)});$('#stCnt').textContent=(si+1)+' / '+STORY.length;$('#stPv').disabled=si===0;$('#stNx').disabled=si===STORY.length-1;$('#stNx').textContent=si===STORY.length-1?'✓ Done':'Next ▶'}
+$$('#stDots button').forEach((b,j)=>b.onclick=()=>go(j));$('#stPv').onclick=()=>go(si-1);$('#stNx').onclick=()=>go(si+1);go(0);
+
+/* ---------- lightbox ---------- */
+const lb=document.createElement('div');lb.id='lbox';lb.hidden=true;lb.innerHTML='<button class="x" type="button">✕ Close</button><div class="in"></div>';document.body.appendChild(lb);
+lb.onclick=e=>{if(e.target===lb||e.target.classList.contains('x'))lb.hidden=true};
+$('#stZoom').onclick=()=>{$('.in',lb).innerHTML=$('#stSvg').outerHTML;lb.hidden=false};
+
+/* ---------- tutorial self-check ---------- */
+const DEM=['Study workload','Time pressure / deadlines','Emotional pressure (worries, exams)'],RES=['Support from friends and peers','Feedback from teachers','Control over when and how you study','Optimism and belief in yourself'];
+const val={};
+$('#sliders').innerHTML='<p class="mini" style="margin:.2em 0"><b style="color:#c0392b">Demands</b></p>'+DEM.map((d,i)=>`<label class="sl">${d}<input type="range" min="1" max="5" value="3" data-k="d${i}"></label>`).join('')+'<p class="mini" style="margin:.6em 0 .2em"><b style="color:#2f8a57">Resources</b></p>'+RES.map((d,i)=>`<label class="sl">${d}<input type="range" min="1" max="5" value="3" data-k="r${i}"></label>`).join('');
+function bal(){$$('#sliders input').forEach(s=>val[s.dataset.k]=+s.value);const d=DEM.reduce((a,_,i)=>a+val['d'+i],0)/DEM.length,r=RES.reduce((a,_,i)=>a+val['r'+i],0)/RES.length;
+ const ang=Math.max(-18,Math.min(18,(r-d)*9));const q=d>=3?(r>=3?['Engaged: high demands, high resources','Hard but energizing. JD-R predicts engagement here, as long as resources stay strong (the buffer at work).',K.C]:['Burnout risk: high demands, low resources','The health-impairment process dominates. Strengthen one resource that matches your biggest demand, before the loss cycle starts.',K.R]):(r>=3?['Comfortable: low demands, high resources','Good for well-being. A little more challenge could boost engagement (the boost hypothesis).',K.N]:['Low engagement: low demands, low resources','Not stressful, but not motivating either. More resources and a bit of challenge would help.',K.P]);
+ $('#balSvg').innerHTML=`<path d="M300 300 L280 330 L320 330Z" fill="#c9a96e"/><g transform="rotate(${ang} 300 170)"><path d="M120 170 L480 170" stroke="#34466b" stroke-width="6"/><path d="M300 170 L300 300" stroke="#34466b" stroke-width="5"/>`+R(80,110,120,60,'#fbecea',K.R,10)+T(140,137,'demands',`${mid} class="t-r"`)+T(140,158,d.toFixed(1)+' / 5',`${mid} class="t-b"`)+R(400,110,120,60,'#eaf5ee',K.C,10)+T(460,137,'resources',`${mid} class="t-ok"`)+T(460,158,r.toFixed(1)+' / 5',`${mid} class="t-b"`)+`</g>`+R(150,52,300,30,'#fff',q[2],8)+T(300,72,q[0],`${mid} font-weight="700" font-size="12" fill="${q[2]}"`);
+ $('#balOut').innerHTML=`<p><b style="color:${q[2]}">${q[0]}.</b> ${q[1]}</p>`}
+$$('#sliders input').forEach(s=>s.oninput=bal);bal();
+
+/* ---------- navigation ---------- */
+function show(p){if(!$('#p-'+p))p='start';$$('.panel').forEach(x=>x.classList.toggle('on',x.id==='p-'+p));$$('.nb[data-p]').forEach(b=>b.classList.toggle('on',b.dataset.p===p));if(location.hash!=='#'+p)history.replaceState(null,'','#'+p);scrollTo(0,0)}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-p],[data-go]');if(!b)return;show(b.dataset.p||b.dataset.go)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.hidden=true;if(!$('#p-start').classList.contains('on')||e.target.closest('input,textarea,select'))return;if(e.key==='ArrowRight')go(si+1);if(e.key==='ArrowLeft')go(si-1)});
+if(location.hash)show(location.hash.slice(1));
+})();
+</script>
+<script src="https://sezsaracoglu-lab.github.io/dashshboard-/assets/sitenav.js" defer></script>
+</body></html>
