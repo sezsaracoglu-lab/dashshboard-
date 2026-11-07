@@ -160,6 +160,14 @@ details.qc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.qc p
 .nb[data-nb]{border:1px dashed var(--gold)!important}
 .privnote{background:var(--green);border-radius:12px;padding:10px 14px;font-size:.92rem}
 #gpop b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy)}
+.vq .fit{margin-top:6px;padding-top:6px;border-top:1px dashed rgba(52,70,107,.18);color:#3d4a66}
+.keyl{background:var(--pgold);border-left:5px solid var(--gold);border-radius:10px;padding:9px 14px;margin:12px 0 4px;font-size:.98rem;color:var(--navy)}.keyl b{color:var(--dgold);letter-spacing:.06em;font-size:.8rem}
+.chipbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 6px;padding-top:12px;border-top:1px dashed var(--line)}
+.chipbar .tapl{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.cbtn{font:inherit;font-size:.92rem;font-weight:600;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;color:var(--navy)}.cbtn[aria-expanded="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tdrawer{display:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:8px 0;font-size:.97rem;line-height:1.6}.tdrawer.on{display:block}
+.tdrawer .row3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.tdrawer .row3>div{background:var(--bg);border-radius:12px;padding:10px 12px}.tdrawer .row3 b{display:block;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dgold);margin-bottom:4px}
+@media(max-width:800px){.tdrawer .row3{grid-template-columns:1fr}}
 .trapb{background:#fbecea;border:1px solid #efc9c3;border-radius:14px;padding:11px 15px;margin:12px 0;font-size:.93rem}.trapb b{display:block;color:var(--bad);margin-bottom:4px}
 .trapb .w{display:block;color:#8f2c20}.trapb .r{display:block;color:var(--ok);font-weight:600;margin-top:4px}
 details.exq{background:var(--pgold);border:1px solid var(--gold);border-radius:14px;padding:10px 15px;margin:12px 0;font-size:.93rem}details.exq summary{cursor:pointer;list-style:none}details.exq summary b{display:block;color:var(--dgold);margin-bottom:3px}
@@ -1988,6 +1996,75 @@ $$('.walk').forEach(w=>{
   WALK[id]=W;W.go(0);
 });
 prog();
+/* ---------- teaching extras per step: how it fits, key insight, think of it like, friend · hook · exam tip ---------- */
+const TT={
+'r-faq-1':{fit:'Before we can explain why some people burn out and others thrive, we need to know whose explanation we are reading. Here it is the theory\'s own founders, which makes this the rulebook for the whole theme.',
+ think:'Reading an FAQ written by the inventors of a board game. Nobody knows the rules better, but they will also defend the game against every complaint.',
+ friend:'"This is the JD-R theory explained by the two people who invented it. They don\'t run a new study; they summarize the theory and answer the 13 questions people keep asking them."',
+ hook:'Founders + FAQ = rules, not results.',
+ tip:'Use verbs like "argue", "propose" and "cite" for this article, never "found". If an answer needs evidence, name the study they cite (for example Crawford et al., 2010), not Bakker and Demerouti (2024).'},
+'r-faq-2':{fit:'The theme question sounds simple: demands drain, resources help. This step shows why that simplicity is exactly the problem, and why the answer needs careful rules.',
+ key:'JD-R looks simple, so people apply it loosely; the FAQ exists to make sure it is used in the way that predicts best.',
+ think:'A recipe that only says "add salt and heat". Everyone thinks they can cook it, and everyone cooks something different.',
+ friend:'"The theory is so popular and so simple-looking that people kept using it in slightly wrong ways, so the founders wrote an FAQ to clear up the same 13 questions once and for all."',
+ hook:'Simple theory, repeated questions, one FAQ.',
+ tip:'If someone calls JD-R "common sense", connect it to the falsifiability question: the authors say an intuitive theory is fine and point to less obvious, testable predictions (mediation and moderation).'},
+'r-faq-3':{fit:'This is the core answer to the theme question in seven rules: demands drain energy, resources build motivation, and people can steer both.',
+ key:'Two ingredients (demands and resources) start two processes (health impairment and motivation), and people are actors who can craft their job or undermine themselves.',
+ think:'A phone battery. Demands are the apps that drain it; resources are the charger. Rules 6 and 7 add that you can manage your own apps, or keep opening more of them when the battery is already low.',
+ friend:'"Every job has things that cost energy and things that give energy. Too much of the first burns you out, enough of the second makes you engaged, and what you do yourself can make it better or worse."',
+ hook:'2 ingredients, 2 processes, 2 interactions, then personal resources, crafting and self-undermining.',
+ tip:'When asked to describe JD-R, name both processes with their chain: demands → exhaustion → health problems, and resources → engagement → performance. Then add that the list of demands and resources is flexible, unlike job characteristics theory.'},
+'r-faq-4':{fit:'This is the step that answers the opening puzzle most directly: same high demands, different outcomes, because resources change what demands do to people.',
+ key:'Thriving is not the absence of demands: it is challenging demands met by plenty of resources.',
+ think:'Two people walking in the same storm. The rain is identical, but one has a big umbrella (buffer). And on a hard climb, a tailwind helps far more than on flat ground (boost).',
+ friend:'"Support protects you on hard days, so demands hurt less. And support pays off most exactly when the work is challenging."',
+ hook:'Buffer = umbrella against strain. Boost = tailwind for engagement.',
+ tip:'Keep the outcomes apart: the buffer is about demands → strain (resources weaken it); the boost is about resources → engagement (challenging demands strengthen it). Mention a diary study, such as Tadić et al. (2015) with teachers.'},
+'r-faq-5':{fit:'A theory about burnout and thriving is only as good as its evidence. This step shows how to judge that evidence, and how a real effect can stay invisible.',
+ key:'A study can only see what its sample and analysis allow: with only high-demand employees, the buffer looks like a simple main effect.',
+ think:'Judging whether umbrellas work by only watching people on rainy days. Everyone with an umbrella is drier, but you never see that on a sunny day the umbrella makes no difference.',
+ friend:'"The evidence comes from big meta-analyses, diary studies and long-term studies. But be careful: if a study only looks at very busy employees, the interaction between demands and resources can hide."',
+ hook:'No low-demand days in the sample, no visible buffer.',
+ tip:'When a study reports that resources directly reduce burnout, give the authors\' explanations: a restricted sample (Figure 1), a missing interaction term, an unmodelled path through engagement, or burnout measured with motivation items.'},
+'r-faq-6':{fit:'JD-R did not appear from nowhere. Knowing its parent theory helps you see which parts of the answer to "why burn out or thrive?" are about work specifically, and which are about people in general.',
+ key:'COR is the broad parent theory about all valued resources; JD-R is the work-specific child that borrowed the gain paradox and the spirals.',
+ think:'COR is a general map of your whole life\'s battery; JD-R is the detailed floor plan of your workplace.',
+ friend:'"COR theory says people try to protect and build their resources in every part of life. JD-R zooms in on the job and says which demands and resources at work matter."',
+ hook:'COR = whole life, JD-R = the job.',
+ tip:'Name what JD-R borrowed: the gain paradox (the basis of the boost hypothesis) and the idea of loss and gain spirals, which JD-R spells out concretely. Avoid calling them rival theories.'},
+'r-faq-7':{fit:'To explain burnout and thriving you must be able to tell the ingredients and the outcomes apart. This step draws the lines.',
+ key:'A low resource is not a demand, challenges differ from hindrances, and engagement is not simply the absence of burnout.',
+ think:'Temperature and light. A dark room is not automatically cold, and a warm room is not automatically bright. Two different dials, just like burnout and engagement.',
+ friend:'"Little support doesn\'t count as a demand, some demands can even be good for you, and not being burned out doesn\'t mean you are engaged: you can be neither."',
+ hook:'Two dials, not one scale.',
+ tip:'Support your answer with numbers: the burnout–engagement correlations are only around −.25 to −.37 across three meta-analyses, so they are separate states. Give one challenge demand (time pressure) and one hindrance demand (role ambiguity).'},
+'r-faq-8':{fit:'This adds time to the theme question: burning out and thriving are not one-off states but loops that can keep feeding themselves week after week.',
+ key:'Loss cycle: demands → strain → self-undermining → more demands. Gain spiral: resources → engagement → crafting → more resources. Appealing, but the evidence is still limited.',
+ think:'A snowball rolling downhill. Each turn picks up more snow, so it grows faster. In a loss cycle it is strain that snowballs; in a gain spiral it is energy.',
+ friend:'"Stressed people make choices that make work even more stressful, and engaged people make choices that make work even better. The idea is convincing, but it\'s hard to prove."',
+ hook:'Drained people dig deeper; engaged people build higher.',
+ tip:'A true spiral needs two conditions (Salanova et al., 2010): effects in both directions and levels that keep rising or falling. Always add the authors\' own verdict: relatively little empirical support so far.'},
+'r-faq-9':{fit:'The last FAQs check how far the answer reaches: does it hold for different people, cultures and settings, including students?',
+ key:'JD-R makes testable predictions, personality moderates daily processes, effects are largely the same across cultures, and the logic works at home, in sport and in education.',
+ think:'Testing a good recipe in other kitchens: different ovens (personality), different countries (culture), even a school kitchen (education). Mostly, it still works.',
+ friend:'"The theory can be proven wrong, personality changes how strongly people react, culture hardly matters (only 4 of 24 tests), and the same logic works for students too."',
+ hook:'Testable, personal, cross-cultural, beyond the office.',
+ tip:'For culture, give the number: 4 of 24 cultural moderation tests (17%) were significant. For measurement, mention the two-stage advice: open interviews first, then questionnaires.'},
+
+};
+setTimeout(()=>$$('.walk').forEach(w=>{const id=w.id.slice(2);$$('.step',w).forEach((st,i)=>{const d=TT[id+'-'+(i+1)];if(!d)return;
+ const vq=st.querySelector('.vq');if(vq&&d.fit&&!vq.querySelector('.fit')){const f=document.createElement('div');f.className='fit';f.innerHTML='↳ <b>How it fits the theme:</b> '+d.fit;vq.appendChild(f)}
+ const anchor=st.querySelector(':scope>.afterbox')||st.querySelector(':scope>.scr');if(!anchor)return;
+ const wrap=document.createElement('div');wrap.className='ttx';let h='';
+ if(d.key&&!st.querySelector('.goldb'))h+='<div class="keyl"><b>★ KEY INSIGHT</b> · '+d.key+'</div>';
+ const k=id+'-'+(i+1);
+ h+='<div class="chipbar"><span class="tapl">Tap to open ▸</span><button class="cbtn" type="button" data-td="'+k+'-a" aria-expanded="false">🧠 Think of it like…</button><button class="cbtn" type="button" data-td="'+k+'-b" aria-expanded="false">💬 Say it to a friend · 🔑 Memory hook · ✎ Exam tip</button></div>'
+  +'<div class="tdrawer" id="td-'+k+'-a">🧠 '+d.think+'</div>'
+  +'<div class="tdrawer" id="td-'+k+'-b"><div class="row3"><div><b>💬 Say it to a friend</b>'+d.friend+'</div><div><b>🔑 Memory hook</b>'+d.hook+'</div><div><b>✎ Exam tip</b>'+d.tip+'</div></div></div>';
+ wrap.innerHTML=h;anchor.after(wrap)})}),0);
+document.addEventListener('click',e=>{const b=e.target.closest('.cbtn[data-td]');if(!b)return;const dr=document.getElementById('td-'+b.dataset.td);const on=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',on);dr.classList.toggle('on',on)});
+
 /* ---------- I got this / review again ---------- */
 const GOT=store.get('got',{});
 function gotRow(key,label,onch,sm){const r=document.createElement('div');r.className='gotrow'+(sm?' sm':'');
