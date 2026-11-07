@@ -230,7 +230,7 @@ svg text{font-family:'DM Sans',sans-serif}
 <button class="nb" data-p="nut">📇 <span>In a nutshell<small>Visual recap per reading</small></span></button>
 <button class="nb" data-p="lg">🎯 <span>Learning goals<small>All 7, model answers</small></span></button>
 <button class="nb" data-p="tut">🪞 <span>Tutorial 1 prep<small>Meeting 1, step by step</small></span></button>
-<button class="nb" data-p="vd">🎬 <span>Videos<small>One slot per reading</small></span></button>
+<button class="nb" data-p="vd">🎬 <span>Videos<small>3 of 6 ready</small></span></button>
 <button class="nb" data-p="nlm">🧠 <span>NotebookLM prompts<small>Deep dive per reading</small></span></button>
 <a class="nb" href="../wow-exams/#t1">📝 <span>Practice exam ↗<small>25 exam-style questions</small></span></a>
 </nav>
@@ -2478,7 +2478,11 @@ const RD=[['r-faq','📘','1 · Job Demands–Resources Theory: Frequently Asked
 ['r-craft','✂️','5 · Job Crafting: A Powerful Job Redesign Approach','Demerouti & Bakker (2024)','Job crafting'],
 ['r-play','🎲','6 · It Pays to Play: Playful Work Design','Bakker & Scharp (2024)','Playful work design']];
 $('#nutSlots').innerHTML=RD.map(r=>`<div class="rcard" style="--c:#c9a96e;cursor:default"><span class="rt">IN A NUTSHELL · WAITING FOR YOUR PDF</span><b>${r[1]} ${esc(r[2])}</b><span class="rc">${esc(r[3])}</span><span class="rw">Send the NotebookLM summary PDF for this reading and its deck appears here, checked against the reading.</span><span class="rl"><button class="lgtag" data-go="${r[0]}" type="button">Open the walk-through</button></span></div>`).join('');
-$('#vdSlots').innerHTML=RD.map(r=>`<div class="vdcard"><div class="eyebrow">Theme 1 · Reading ${r[2][0]} · ${esc(r[3])}</div><h3 style="margin:.2em 0 .1em">🎬 ${esc(r[4])}</h3><p class="mini">Video slot. Your video for this reading will appear here.</p><div style="aspect-ratio:16/9;border:2px dashed #d9d2c3;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#6b7280;background:#fff;margin-top:8px">▶ Video coming soon</div><div class="vlinks"><button class="lgtag" data-go="${r[0]}" type="button">${r[1]} Open the walk-through</button></div></div>`).join('');
+const VIDS={'r-faq':['t1_faq','JD-R theory: frequently asked questions','≈ 9 min · your video on Reading 1. Watch it after the walk-through, or as a first overview.'],
+'r-cor':['t1_cor','JD-R and COR theories compared: resources, demands and spirals','≈ 14½ min · your video on Reading 2. Watch it after the walk-through, or as a first overview.'],
+'r-ten':['t1_ten','JD-R theory ten years later: burnout, engagement and the multilevel model','≈ 11½ min · your video on Reading 3. Watch it after the walk-through, or as a first overview.']};
+$('#vdSlots').innerHTML=RD.map(r=>{const v=VIDS[r[0]];if(v)return `<div class="vdcard"><div class="eyebrow">Theme 1 · Reading ${r[2][0]} · ${esc(r[3])}</div><h3 style="margin:.2em 0 .1em">🎬 ${esc(v[1])}</h3><p class="mini">${esc(v[2])}</p><video controls preload="metadata" playsinline poster="videos/${v[0]}.jpg" style="width:100%;border-radius:12px;background:#000;aspect-ratio:16/9;display:block;margin-top:8px"><source src="videos/${v[0]}.mp4" type="video/mp4"></video><div class="vlinks"><button class="lgtag" data-go="${r[0]}" type="button">${r[1]} Open the walk-through</button></div></div>`;
+ return `<div class="vdcard"><div class="eyebrow">Theme 1 · Reading ${r[2][0]} · ${esc(r[3])}</div><h3 style="margin:.2em 0 .1em">🎬 ${esc(r[4])}</h3><p class="mini">Video slot. Your video for this reading will appear here.</p><div style="aspect-ratio:16/9;border:2px dashed #d9d2c3;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#6b7280;background:#fff;margin-top:8px">▶ Video coming soon</div><div class="vlinks"><button class="lgtag" data-go="${r[0]}" type="button">${r[1]} Open the walk-through</button></div></div>`}).join('');
 
 const NL={
 'r-faq':`Make a Deep Dive for a second-year psychology student who learns best from connected logic, not lists. Plain English first, then the academic term. Use everyday examples (nurses, students, office work).
