@@ -48,6 +48,13 @@ table.tb{border-collapse:collapse;width:100%;background:#fff;font-size:.9rem}
 .rail button i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--pgold);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.75rem;color:var(--dgold)}
 .rail button.on{background:var(--navy);color:#fff;border-color:var(--navy)}.rail button.on i{background:var(--gold);color:#fff}
 .rail button.done i{background:var(--ok);color:#fff}
+.gotrow{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;margin:18px 0 8px;padding:12px 14px;border:1px dashed var(--line);border-radius:14px;background:#fff}
+.gotrow span{font-size:.9rem;color:var(--muted,#5d6472);margin-right:4px}
+.gotrow button{font:inherit;font-size:.88rem;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;cursor:pointer;color:var(--navy)}
+.gotrow button.g.on{background:var(--ok);border-color:var(--ok);color:#fff}.gotrow button.r.on{background:#d9892b;border-color:#d9892b;color:#fff}
+.gotrow.sm{margin:10px 0 0;padding:8px 10px}
+.rail button.got i{background:var(--ok)!important;color:#fff!important}.rail button.rev i{background:#d9892b!important;color:#fff!important}
+.pager .dots button.got{background:var(--ok)!important}.pager .dots button.rev{background:#d9892b!important}
 .step{display:none;animation:fade .25s}.step.on{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .shead{display:flex;gap:14px;align-items:center;margin-bottom:8px}
@@ -1895,6 +1902,10 @@ $('#stDots').innerHTML=STORY.map(s=>'<button type="button" aria-label="'+s.t+'">
 let si=0;const seen=new Set();
 function go(k){si=Math.max(0,Math.min(STORY.length-1,k));seen.add(si);const s=STORY[si];$('#stSvg').innerHTML=s.svg;$('#stTitle').textContent=s.t;$('.pl i',host).textContent=si+1;$('#stTxt').innerHTML='<p>'+s.txt+'</p>';
  $$('#stDots button').forEach((b,j)=>{b.classList.toggle('on',j===si);b.classList.toggle('seen',seen.has(j)&&j!==si)});$('#stCnt').textContent=(si+1)+' / '+STORY.length;$('#stPv').disabled=si===0;$('#stNx').disabled=si===STORY.length-1;$('#stNx').textContent=si===STORY.length-1?'✓ Done':'Next ▶'}
+const SG=()=>{try{return JSON.parse(localStorage.getItem('wow1_gotst')||'{}')}catch(e){return {}}},SS=v=>{try{localStorage.setItem('wow1_gotst',JSON.stringify(v))}catch(e){}};
+const stGot=document.createElement('div');$('#stTxt').after(stGot);
+function stPaint(){const G=SG();$$('#stDots button').forEach((b,j)=>{b.classList.toggle('got',G['st:'+j]===1);b.classList.toggle('rev',G['st:'+j]===0)})}
+const _go=go;go=function(k){_go(k);const G=SG();stGot.innerHTML='';stGot.appendChild((function(){const r=document.createElement('div');r.className='gotrow sm';r.innerHTML='<button type="button" class="g">✓ I got this</button><button type="button" class="r">🔁 Review again</button>';const key='st:'+si,P=()=>{const G=SG();r.querySelector('.g').classList.toggle('on',G[key]===1);r.querySelector('.r').classList.toggle('on',G[key]===0)};r.querySelectorAll('button').forEach(b=>b.onclick=()=>{const G=SG(),v=b.classList.contains('g')?1:0;if(G[key]===v)delete G[key];else G[key]=v;SS(G);P();stPaint()});P();return r})());stPaint()};
 $$('#stDots button').forEach((b,j)=>b.onclick=()=>go(j));$('#stPv').onclick=()=>go(si-1);$('#stNx').onclick=()=>go(si+1);go(0);
 
 /* ---------- lightbox ---------- */
@@ -1931,7 +1942,7 @@ const ORDER=['r-faq','r-cor','r-ten','r-team','r-craft','r-play','lg','tut'];
 /* ---------- walk-through engine ---------- */
 const seen=new Set(store.get('seen',[]));
 const TOTAL=$$('.walk .step').length;
-function prog(){const t=$('#progT'),b=$('#progB');if(t)t.textContent=seen.size+' of '+TOTAL+' walk-through steps visited';if(b)b.style.width=(100*seen.size/Math.max(1,TOTAL))+'%'}
+function prog(){const t=$('#progT'),b=$('#progB');if(t)t.textContent=seen.size+' of '+TOTAL+' walk-through steps visited';if(b)b.style.width=(100*seen.size/Math.max(1,TOTAL))+'%';if(typeof gotProg==='function')try{gotProg()}catch(e){}}
 const WALK={};
 $$('.walk').forEach(w=>{
   const id=w.id.slice(2),steps=$$('.step',w),rail=$('.rail[data-walk="'+id+'"]');
@@ -1950,6 +1961,17 @@ $$('.walk').forEach(w=>{
   WALK[id]=W;W.go(0);
 });
 prog();
+/* ---------- I got this / review again ---------- */
+const GOT=store.get('got',{});
+function gotRow(key,label,onch,sm){const r=document.createElement('div');r.className='gotrow'+(sm?' sm':'');
+ r.innerHTML='<span>'+label+'</span><button type="button" class="g">✓ I got this</button><button type="button" class="r">🔁 Review again</button>';
+ const paint=()=>{r.querySelector('.g').classList.toggle('on',GOT[key]===1);r.querySelector('.r').classList.toggle('on',GOT[key]===0)};
+ r.querySelectorAll('button').forEach(b=>b.onclick=()=>{const v=b.classList.contains('g')?1:0;if(GOT[key]===v)delete GOT[key];else GOT[key]=v;store.set('got',GOT);paint();onch&&onch()});
+ paint();return r}
+function paintRail(id){const rail=$('.rail[data-walk="'+id+'"]');if(!rail)return;$$('button',rail).forEach((b,k)=>{const v=GOT[id+':'+(k+1)];b.classList.toggle('got',v===1);b.classList.toggle('rev',v===0);b.querySelector('i').textContent=v===1?'✓':(k+1)})}
+function gotProg(){const n=Object.keys(GOT).filter(k=>GOT[k]===1&&!k.startsWith('st:')).length;const t=$('#progT');if(t&&!t.dataset.base)t.dataset.base='1';if(t)t.textContent=seen.size+' of '+TOTAL+' walk-through steps visited · '+n+' marked "I got this"'}
+$$('.walk').forEach(w=>{const id=w.id.slice(2);$$('.step',w).forEach((st,i)=>{const nav=st.querySelector(':scope>.snav');const r=gotRow(id+':'+(i+1),'How did this section go?',()=>{paintRail(id);gotProg()});if(nav)nav.before(r);else st.appendChild(r)});paintRail(id)});
+gotProg();
 window.wowWalk=(p,st)=>{if(WALK[p])WALK[p].go(st?st-1:WALK[p].i)};
 
 /* ---------- tiles ---------- */
