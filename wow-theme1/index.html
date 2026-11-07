@@ -157,7 +157,7 @@ details.qc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.qc p
 .wcard .acts .wh{border-color:var(--gold);background:var(--pgold);color:var(--dgold);font-weight:600}
 .wtype{display:flex;gap:6px;margin:6px 0 4px}.wtype button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer;color:var(--navy)}.wtype button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
 .wcard .wt{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dgold)}.wcard.note{border-left-color:#6d8fc7}
-.nb[data-p="words"]{border:1px dashed var(--gold)!important}
+.nb[data-nb]{border:1px dashed var(--gold)!important}
 .privnote{background:var(--green);border-radius:12px;padding:10px 14px;font-size:.92rem}
 #gpop b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy)}
 .trapb{background:#fbecea;border:1px solid #efc9c3;border-radius:14px;padding:11px 15px;margin:12px 0;font-size:.93rem}.trapb b{display:block;color:var(--bad);margin-bottom:4px}
@@ -217,7 +217,7 @@ svg text{font-family:'DM Sans',sans-serif}
 <div><div class="crumb">World of Work · Year 2 · Block 2</div><div class="brand" style="margin-top:6px">Theme 1<span>Job demands and resources</span></div></div>
 <nav class="nav" aria-label="Theme 1 sections">
 <button class="nb on" data-p="start">🧭 <span>Start here<small>The theme as one story</small></span></button>
-<button class="nb" data-p="words">📒 <span>My notebook<small>Words and simple explanations · private</small></span></button>
+<button class="nb" data-nb="1" type="button">📒 <span>My notebook<small>Words and simple explanations · private</small></span></button>
 <div class="nsep">The theory · articles (read in this order)</div>
 <button class="nb" data-p="r-faq">📘 <span>1 · Job Demands–Resources Theory: Frequently Asked Questions<small>Bakker &amp; Demerouti (2024) · the rules of the theory</small></span></button>
 <button class="nb" data-p="r-cor">📙 <span>2 · Job Demands–Resources and Conservation of Resources Theories<small>Demerouti (2025) · where JD-R comes from</small></span></button>
@@ -1818,18 +1818,6 @@ svg text{font-family:'DM Sans',sans-serif}
 </section>
 
 <!-- ================= NOTEBOOKLM PROMPTS ================= -->
-<!-- ================= MY WORDS (private, stored only in this browser) ================= -->
-<section class="panel" id="p-words">
-<div class="eyebrow">Your own notebook · words and simple explanations</div>
-<h1>📒 My notebook</h1>
-<p class="privnote">🔒 <b>Private to you.</b> Everything here is saved only in this browser on this device. Nothing is uploaded or added to the website, so nobody else can see them. Use <b>Export</b> now and then to keep a backup or move your notebook to another device.</p>
-<p class="sub"><b>Words:</b> click an underlined term and choose <b>⭐ Save to my notebook</b>, or select a word and tap <b>＋ Save word</b>. <b>Explanations:</b> select a sentence or paragraph and tap <b>＋ Save explanation</b>, or use <b>＋ Add</b> to write one in your own words (or paste one Claude gave you). Everything remembers the section where you met it, so one click takes you back there.</p>
-<div class="wtools"><input id="wq" type="search" placeholder="Search your notebook"><div class="f" id="wf"><button type="button" data-f="all" class="on">All</button><button type="button" data-f="w">Words</button><button type="button" data-f="n">Explanations</button><button type="button" data-f="l">Still learning</button><button type="button" data-f="k">I know it</button></div>
-<button class="btn sm" type="button" id="wAdd">＋ Add</button><button class="btn sm ghost" type="button" id="wExp">⤓ Export</button><button class="btn sm ghost" type="button" id="wImpB">⤒ Import</button><input type="file" id="wImp" accept=".json,application/json" hidden></div>
-<p class="mini" id="wCount"></p>
-<div id="wList"></div>
-</section>
-
 <section class="panel" id="p-nlm">
 <div class="eyebrow">World of Work · Theme 1 · NotebookLM</div>
 <h1>🧠 NotebookLM deep-dive prompts</h1>
@@ -2683,77 +2671,14 @@ $$('.walk .scr>.teach').forEach(t=>{let ps=Array.from(t.children).filter(x=>x.ta
 document.addEventListener('keydown',e=>{if(e.target.closest('input,textarea,select'))return;if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
  const st=document.querySelector('.panel.on .step.on');if(!st)return;const pg=st.querySelector('.pager');if(!pg)return;e.preventDefault();pg.go(pg.cur()+(e.key==='ArrowRight'?1:-1))});
 
-/* ---------- My words: private list, stored only in this browser (localStorage) ---------- */
-(function(){
-const KEY='sez_mywords',COURSE='World of Work · Theme 1';
-const load=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}};
-const save=v=>{try{localStorage.setItem(KEY,JSON.stringify(v))}catch(e){alertNo()}};
-function alertNo(){const c=$('#wCount');if(c)c.textContent='Your browser blocked saving (private window?). Words cannot be kept here.'}
-const SHORT={start:'Start here','r-faq':'Reading 1 · JD-R FAQ','r-cor':'Reading 2 · JD-R and COR','r-ten':'Reading 3 · Ten Years Later','r-team':'Reading 4 · Team resource mobilization','r-craft':'Reading 5 · Job crafting','r-play':'Reading 6 · Playful work design',lg:'Learning goals',tut:'Tutorial 1 prep',nut:'In a nutshell',vd:'Videos',nlm:'NotebookLM prompts'};
-function here(){const pn=document.querySelector('.panel.on');if(!pn)return {label:COURSE,hash:''};const id=pn.id.slice(2);if(id==='words')return null;
- const steps=$$('.step',pn),on=pn.querySelector('.step.on');let label=SHORT[id]||id,hash=id;
- if(on){const k=steps.indexOf(on)+1;label+=' · '+on.dataset.t;hash=id+'-'+k}
- else if(id==='start'){const t=$('#stTitle');if(t&&t.textContent)label+=' · '+t.textContent}
- return {label,hash}}
-// dialog
-const dlg=document.createElement('div');dlg.id='wdlg';dlg.hidden=true;dlg.innerHTML='<div class="box" role="dialog" aria-modal="true" aria-label="Save a word"><h3 id="wdT">Save a word</h3><div class="wtype" id="wdTy"><button type="button" data-t="w">🔤 Word</button><button type="button" data-t="n">💡 Explanation</button></div><div class="where" id="wdW"></div><label for="wdA" id="wlA">Word</label><input id="wdA"><label for="wdB" id="wlB">Simple meaning</label><textarea id="wdB" placeholder="In your own plain words"></textarea><label for="wdC">Turkish</label><input id="wdC" placeholder="Türkçesi"><label for="wdD">Example (optional)</label><textarea id="wdD" placeholder="A sentence or situation that helps you remember"></textarea><div class="row"><button class="btn ghost" type="button" id="wdX">Cancel</button><button class="btn" type="button" id="wdS">⭐ Save</button></div></div>';
-document.body.appendChild(dlg);
-let editId=null,ctx=null;
-let ty='w';function setTy(t){ty=t;$$('#wdTy button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));$('#wlA').textContent=t==='n'?'Topic or question':'Word';$('#wlB').textContent=t==='n'?'My simple explanation':'Simple meaning';$('#wdB').style.minHeight=t==='n'?'150px':'64px';if(!editId)$('#wdT').textContent=t==='n'?'Save an explanation':'Save a word'}
-$$('#wdTy button').forEach(b=>b.onclick=()=>setTy(b.dataset.t));
-function open(word,mean,src,id,t){editId=id||null;ctx=src;const W=load(),e=id?W.find(x=>x.id===id):null;
- $('#wdT').textContent=e?'Edit':'Save a word';$('#wdA').value=e?e.w:(word||'');$('#wdB').value=e?e.en:(mean||'');$('#wdC').value=e?e.tr:'';$('#wdD').value=e?e.ex:'';
- const sr=e?e.src:src;$('#wdW').textContent='📍 '+(sr&&sr.label?sr.label:COURSE);setTy(e?(e.t||'w'):(t||'w'));dlg.hidden=false;setTimeout(()=>($('#wdA').value?$('#wdB'):$('#wdA')).focus(),30)}
-dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.hidden=true});
-$('#wdX').onclick=()=>dlg.hidden=true;
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!dlg.hidden)dlg.hidden=true});
-$('#wdS').onclick=()=>{const w=$('#wdA').value.trim();if(!w){$('#wdA').focus();return}
- const W=load();if(editId){const e=W.find(x=>x.id===editId);Object.assign(e,{t:ty,w,en:$('#wdB').value.trim(),tr:$('#wdC').value.trim(),ex:$('#wdD').value.trim()})}
- else{const dup=ty==='w'?W.find(x=>(x.t||'w')==='w'&&x.w.toLowerCase()===w.toLowerCase()):null;const rec={t:ty,w,en:$('#wdB').value.trim(),tr:$('#wdC').value.trim(),ex:$('#wdD').value.trim(),src:Object.assign({course:COURSE,page:location.pathname},ctx||{}),known:false,added:Date.now()};
-  if(dup)Object.assign(dup,rec);else W.push(Object.assign({id:'w'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)},rec))}
- save(W);dlg.hidden=true;render();toast('⭐ Saved to My notebook')};
-function toast(t){const d=document.createElement('div');d.textContent=t;d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:9px 16px;border-radius:999px;z-index:250;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,.2)';document.body.appendChild(d);setTimeout(()=>d.remove(),1600)}
-// save from glossary pop-up
-const gp=document.getElementById('gpop');
-if(gp)new MutationObserver(()=>{if(gp.hidden||gp.querySelector('.gsave'))return;const b=gp.querySelector('b');if(!b)return;const term=b.textContent,def=gp.textContent.slice(term.length);
- const btn=document.createElement('button');btn.type='button';btn.className='gsave';btn.textContent='⭐ Save to my notebook';btn.onclick=ev=>{ev.stopPropagation();gp.hidden=true;open(term,def,here())};gp.appendChild(btn)}).observe(gp,{childList:true,attributes:true,attributeFilter:['hidden']});
-// save any selected word
-const sb=document.createElement('button');sb.id='selSave';sb.type='button';sb.textContent='＋ Save word';sb.hidden=true;document.body.appendChild(sb);
-let selTxt='',selSrc=null;
-function checkSel(){setTimeout(()=>{const sel=window.getSelection(),t=sel?sel.toString().trim():'';
- if(!t||t.length>1500||!sel.rangeCount){sb.hidden=true;return}const long=t.split(/\s+/).length>6;sb.textContent=long?'＋ Save explanation':'＋ Save word';sb.dataset.long=long?1:'';
- const n=sel.anchorNode&&(sel.anchorNode.nodeType===1?sel.anchorNode:sel.anchorNode.parentElement);if(!n||n.closest('#wdlg,#p-words,input,textarea,.side')){sb.hidden=true;return}
- const src=here();if(!src){sb.hidden=true;return}
- const r=sel.getRangeAt(0).getBoundingClientRect();selTxt=t.replace(/[.,;:!?)"”’]+$/,'').replace(/^["“‘(]+/,'');selSrc=src;
- sb.style.left=Math.max(8,Math.min(window.scrollX+r.left,window.scrollX+innerWidth-130))+'px';sb.style.top=(window.scrollY+r.bottom+8)+'px';sb.hidden=false},10)}
-document.addEventListener('mouseup',e=>{if(e.target===sb)return;checkSel()});
-document.addEventListener('touchend',e=>{if(e.target===sb)return;checkSel()});
-document.addEventListener('selectionchange',()=>{const s=window.getSelection();if(!s||!s.toString().trim())setTimeout(()=>{const s2=window.getSelection();if(!s2||!s2.toString().trim())sb.hidden=true},200)});
-sb.addEventListener('mousedown',e=>e.preventDefault());
-sb.onclick=()=>{sb.hidden=true;if(sb.dataset.long){open('',selTxt,selSrc,null,'n');window.getSelection().removeAllRanges();return}const key=selTxt.toLowerCase();let def='';try{for(const k in GLOSS){if(GLOSS[k][0].toLowerCase()===key){def=GLOSS[k][1];break}}}catch(e){}open(selTxt,def,selSrc);window.getSelection().removeAllRanges()};
-// the list
-let filt='all';
-function render(){const L=$('#wList');if(!L)return;const q=($('#wq').value||'').toLowerCase();const W=load().sort((a,b)=>a.w.localeCompare(b.w,'en',{sensitivity:'base'}));
- const V=W.filter(x=>(filt==='all'||(filt==='w'&&(x.t||'w')==='w')||(filt==='n'&&x.t==='n')||(filt==='k'&&x.known)||(filt==='l'&&!x.known))&&(!q||[x.w,x.en,x.tr,x.ex].join(' ').toLowerCase().includes(q)));
- const k=W.filter(x=>x.known).length,nn=W.filter(x=>x.t==='n').length,nw=W.length-nn;$('#wCount').textContent=W.length?nw+(nw===1?' word':' words')+' · '+nn+(nn===1?' explanation':' explanations')+' · '+k+' known · '+(W.length-k)+' still learning':'';
- L.innerHTML=V.length?V.map(x=>'<div class="wcard'+(x.known?' known':'')+(x.t==='n'?' note':'')+'" data-id="'+x.id+'"><span class="wt">'+(x.t==='n'?'💡 Explanation':'🔤 Word')+'</span><h3>'+esc(x.w||'(untitled)')+'</h3>'+(x.en?'<p style="margin:4px 0;white-space:pre-line">'+esc(x.en)+'</p>':'')+(x.tr?'<p class="tr">🇹🇷 '+esc(x.tr)+'</p>':'')+(x.ex?'<p class="ex">✎ '+esc(x.ex)+'</p>':'')+
-  '<div class="acts">'+(x.src&&x.src.hash!==undefined?'<button type="button" class="wh" data-a="go">📍 '+esc(x.src.label||'Go to section')+' →</button>':'')+'<button type="button" class="k'+(x.known?' on':'')+'" data-a="k">'+(x.known?'✓ I know it':'Mark: I know it')+'</button><button type="button" data-a="e">✏️ Edit</button><button type="button" data-a="d">🗑 Delete</button></div></div>').join('')
-  :'<p class="mini">'+(W.length?'Nothing matches.':'Your notebook is empty. While you study, click an underlined term or select a word or sentence, and save it here.')+'</p>'}
-$('#wList').addEventListener('click',e=>{const b=e.target.closest('button[data-a]');if(!b)return;const id=b.closest('.wcard').dataset.id,W=load(),x=W.find(y=>y.id===id);if(!x)return;
- if(b.dataset.a==='k'){x.known=!x.known;save(W);render()}
- else if(b.dataset.a==='e')open(null,null,null,id);
- else if(b.dataset.a==='d'){if(b.dataset.sure){save(W.filter(y=>y.id!==id));render()}else{b.dataset.sure=1;b.textContent='Tap again to delete'}}
- else if(b.dataset.a==='go'){const s=x.src||{};if(s.page&&s.page!==location.pathname){location.href=s.page+(s.hash?'#'+s.hash:'');return}window.wowShow(s.hash||'start');history.replaceState(null,'','#'+(s.hash||'start'))}});
-$('#wq').oninput=render;
-$$('#wf button').forEach(b=>b.onclick=()=>{filt=b.dataset.f;$$('#wf button').forEach(x=>x.classList.toggle('on',x===b));render()});
-$('#wAdd').onclick=()=>open('','',{label:COURSE,hash:''},null,'w');
-$('#wExp').onclick=()=>{const blob=new Blob([JSON.stringify(load(),null,1)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='my-words-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500)};
-$('#wImpB').onclick=()=>$('#wImp').click();
-$('#wImp').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const inc=JSON.parse(r.result);if(!Array.isArray(inc))throw 0;const W=load();let n=0;
- inc.forEach(x=>{if(!x||!x.w)return;const d=W.find(y=>(y.t||'w')===(x.t||'w')&&y.w.toLowerCase()===String(x.w).toLowerCase());const rec={id:x.id||('w'+Math.random().toString(36).slice(2,10)),t:x.t==='n'?'n':'w',w:String(x.w),en:x.en||'',tr:x.tr||'',ex:x.ex||'',src:x.src||{label:COURSE,hash:''},known:!!x.known,added:x.added||Date.now()};if(d)Object.assign(d,rec,{id:d.id});else W.push(rec);n++});
- save(W);render();toast('⤒ Imported '+n+' items')}catch(err){toast('That file is not a word list')}e.target.value=''};r.readAsText(f)};
-render();
-})();
+/* ---------- My notebook (assets/notebook.js, private, in this browser only) ---------- */
+const NBSHORT={start:'Start here','r-faq':'Reading 1 · JD-R FAQ','r-cor':'Reading 2 · JD-R and COR','r-ten':'Reading 3 · Ten Years Later','r-team':'Reading 4 · Team resource mobilization','r-craft':'Reading 5 · Job crafting','r-play':'Reading 6 · Playful work design',lg:'Learning goals',tut:'Tutorial 1 prep',nut:'In a nutshell',vd:'Videos',nlm:'NotebookLM prompts'};
+window.SezNotebookHere=function(){const pn=document.querySelector('.panel.on');if(!pn)return null;const id=pn.id.slice(2),steps=$$('.step',pn),on=pn.querySelector('.step.on');
+ let label='Theme 1 · '+(NBSHORT[id]||id),hash=id;if(on){label+=' · '+on.dataset.t;hash=id+'-'+(steps.indexOf(on)+1)}else if(id==='start'){const t=$('#stTitle');if(t&&t.textContent)label+=' · '+t.textContent}
+ return {label,hash,course:'World of Work'}};
+window.SezNotebookGo=function(h){window.wowShow(h||'start');history.replaceState(null,'','#'+(h||'start'))};
+const nbBtn=document.querySelector('.nb[data-nb]');if(nbBtn)nbBtn.addEventListener('click',()=>{if(window.SezNotebook)window.SezNotebook.open()});
+if(location.hash==='#words'||location.hash==='#notebook'){history.replaceState(null,'','#start');const t=setInterval(()=>{if(window.SezNotebook){clearInterval(t);window.SezNotebook.open()}},200);setTimeout(()=>clearInterval(t),8000)}
 
 if(location.hash)window.wowShow(location.hash.slice(1));
 })();

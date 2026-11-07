@@ -1,7 +1,7 @@
 /* Site navigation for Sezen's study website.
    One small "Study hub" button (bottom right) on every study page, opening a panel
    with Home, the study hub, each course and the tools. Isolated in a shadow root so it
-   never changes the look of the page it sits on. Add to a page with:
+   never changes the look of the page it sits on. Also loads assets/notebook.js (the private My notebook). Add to a page with:
    <script src="https://sezsaracoglu-lab.github.io/dashshboard-/assets/sitenav.js" defer></script> */
 (function () {
   if (window.__sezNav) return; window.__sezNav = true;
@@ -28,7 +28,7 @@
       ".fab{display:flex;align-items:center;gap:8px;border:0;cursor:pointer;background:#2b3a5c;color:#fff;font-size:14px;font-weight:600;padding:10px 16px 10px 12px;border-radius:999px;box-shadow:0 8px 24px rgba(29,36,51,.22)}" +
       ".fab:hover{background:#1d2433}.fab svg{width:18px;height:18px}" +
       ".bar{display:flex;gap:8px;align-items:center}" +
-      ".home{display:grid;place-items:center;width:42px;height:42px;padding:0;border-radius:50%;background:#fff;color:#2b3a5c;border:1px solid #e4e0d6;box-shadow:0 8px 24px rgba(29,36,51,.16)}.home:hover{background:#f7f5f0}.home svg{width:20px;height:20px}" +
+      ".nbk{cursor:pointer;font-size:19px}.home{display:grid;place-items:center;width:42px;height:42px;padding:0;border-radius:50%;background:#fff;color:#2b3a5c;border:1px solid #e4e0d6;box-shadow:0 8px 24px rgba(29,36,51,.16)}.home:hover{background:#f7f5f0}.home svg{width:20px;height:20px}" +
       ".panel{position:absolute;right:0;bottom:54px;width:min(330px,calc(100vw - 32px));max-height:min(70vh,560px);overflow:auto;background:#fff;border:1px solid #e4e0d6;border-radius:18px;box-shadow:0 18px 50px rgba(29,36,51,.22);padding:14px;color:#1d2433;line-height:1.4}" +
       ".panel[hidden]{display:none}" +
       ".brand{font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;padding:2px 4px 10px;border-bottom:1px solid #e4e0d6;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}" +
@@ -68,7 +68,11 @@
     document.addEventListener("click", function (e) { if (!panel.hidden && !host.contains(e.target)) set(false); });
     var home = el("a", { class: "home", href: D, "aria-label": "Home", title: "Home" });
     home.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 5l8 6.5"/><path d="M6.5 10v9h11v-9"/></svg>';
-    var bar = el("div", { class: "bar" }, [home, fab]);
+    var nb = el("button", { class: "home nbk", type: "button", "aria-label": "My notebook", title: "My notebook (private)" });
+    nb.innerHTML = "<span>📒</span>";
+    nb.addEventListener("click", function () { set(false); if (window.SezNotebook) window.SezNotebook.open(); });
+    var bar = el("div", { class: "bar" }, [nb, home, fab]);
+    if (!window.SezNotebook && !document.getElementById("sez-nb-js")) { var sc = document.createElement("script"); sc.id = "sez-nb-js"; sc.src = D + "assets/notebook.js"; sc.defer = true; document.head.appendChild(sc); }
     root.appendChild(css); root.appendChild(panel); root.appendChild(bar);
     document.body.appendChild(host);
   }

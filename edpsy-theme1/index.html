@@ -127,6 +127,7 @@ details.qc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.qc p
 .teach{font-size:1rem;line-height:1.68}.teach p{margin:0 0 .85em}.teach.wide{max-width:880px;margin:12px 0}
 .tm{cursor:pointer;color:var(--navy);border-bottom:2px dotted var(--gold)}.tm:hover{background:var(--pgold)}
 #gpop{position:absolute;z-index:100;max-width:320px;background:#fff;border:1px solid var(--gold);border-radius:14px;padding:11px 14px;box-shadow:0 12px 30px rgba(52,70,107,.18);font-size:.9rem;line-height:1.5}
+.nb[data-nb]{border:1px dashed var(--gold)!important}
 #gpop b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy)}
 .trapb{background:#fbecea;border:1px solid #efc9c3;border-radius:14px;padding:11px 15px;margin:12px 0;font-size:.93rem}.trapb b{display:block;color:var(--bad);margin-bottom:4px}
 .trapb .w{display:block;color:#8f2c20}.trapb .r{display:block;color:var(--ok);font-weight:600;margin-top:4px}
@@ -184,6 +185,7 @@ svg text{font-family:'DM Sans',sans-serif}
 <div><div class="crumb">Educational Psychology · Year 2 · Block 2</div><div class="brand" style="margin-top:6px">Theme 1<span>Learning strategies</span></div></div>
 <nav class="nav" aria-label="Theme 1 sections">
 <button class="nb on" data-p="start">🧭 <span>Start here<small>The theme as one story</small></span></button>
+<button class="nb" data-nb="1" type="button">📒 <span>My notebook<small>Words and simple explanations · private</small></span></button>
 <div class="nsep">The three articles</div>
 <button class="nb" data-p="icap">📘 <span>ICAP framework<small>Chi &amp; Wylie (2014)</small></span></button>
 <button class="nb" data-p="gls">📗 <span>Generative learning by age<small>Brod (2021)</small></span></button>
@@ -2105,6 +2107,13 @@ go(0);
 function route(){const h=location.hash.slice(1);if(!h)return;if(h==='videos')return show('vd');const m=h.match(/^(icap|gls|dp|lg)-(\d+)$/);if(m)return show(m[1],+m[2]);if($('#p-'+h))show(h)}
 window.addEventListener('hashchange',route);route();
 })();
+/* ---------- My notebook (assets/notebook.js, private, in this browser only) ---------- */
+(function(){const N={start:'Start here',icap:'Article 1 · ICAP framework',gls:'Article 2 · Generative learning by age',dp:'Article 3 · Distributed practice',nut:'In a nutshell',lg:'Learning goals',case:'The case',vd:'Videos'};
+window.SezNotebookHere=function(){const pn=document.querySelector('.panel.on');if(!pn)return null;const id=pn.id.slice(2),steps=[...pn.querySelectorAll('.step')],on=pn.querySelector('.step.on');
+ let label='Theme 1 · '+(N[id]||id),hash=id;if(on&&steps.length){label+=' · '+on.dataset.t;hash=id+'-'+(steps.indexOf(on)+1)}
+ return {label,hash,course:'Educational Psychology'}};
+window.SezNotebookGo=function(h){if(location.hash==='#'+h)window.dispatchEvent(new HashChangeEvent('hashchange'));else location.hash=h||'start'};
+const b=document.querySelector('.nb[data-nb]');if(b)b.addEventListener('click',()=>{if(window.SezNotebook)window.SezNotebook.open()});})();
 </script>
 <script src="https://sezsaracoglu-lab.github.io/dashshboard-/assets/sitenav.js" defer></script>
 </body></html>
