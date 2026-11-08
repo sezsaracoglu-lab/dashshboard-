@@ -14,5 +14,6 @@ const TOPICS = {
 const SKILLS = { def: "Key concepts and definitions", find: "Main findings", fig: "Reading figures and tables", comp: "Comparing theories", app: "Applying to new situations" };
 window.EXAMS = window.EXAMS || [];
 const GROUPS = [
+  { id: "hy", name: "★ High-yield", sub: "Most likely exam questions" },
   { id: "t1", name: "Theme 1", sub: "Learning strategies" }
 ];
