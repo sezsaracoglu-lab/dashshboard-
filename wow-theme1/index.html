@@ -1864,7 +1864,7 @@ svg text{font-family:'DM Sans',sans-serif}
 <section class="panel" id="p-vd">
 <div class="eyebrow">World of Work · Theme 1 · Video lessons</div>
 <h1>🎬 Videos</h1>
-<p class="mini">All video lessons for this theme in one place, in the reading order. Each reading has its own slot; your videos go here as soon as they are made.</p>
+<p class="mini">One video per reading, grouped by meeting, with the same codes as your video folder (M1-1, M1-2, M2-1 …). Each card names its reading and opens its walk-through.</p>
 <div id="vdSlots"></div>
 </section>
 
@@ -3005,12 +3005,16 @@ const RD=[['r-faq','📘','1 · Job Demands–Resources Theory: Frequently Asked
 ['r-craft','✂️','5 · Job Crafting: A Powerful Job Redesign Approach','Demerouti & Bakker (2024)','Job crafting'],
 ['r-play','🎲','6 · It Pays to Play: Playful Work Design','Bakker & Scharp (2024)','Playful work design']];
 $('#nutSlots').innerHTML=RD.map(r=>`<div class="rcard" style="--c:#c9a96e;cursor:default"><span class="rt">IN A NUTSHELL · WAITING FOR YOUR PDF</span><b>${r[1]} ${esc(r[2])}</b><span class="rc">${esc(r[3])}</span><span class="rw">Send the NotebookLM summary PDF for this reading and its deck appears here, checked against the reading.</span><span class="rl"><button class="lgtag" data-go="${r[0]}" type="button">Open the walk-through</button></span></div>`).join('');
-const VIDS={'r-faq':['t1_faq','JD-R theory: frequently asked questions','≈ 9 min · your video on Reading 1. Watch it after the walk-through, or as a first overview.'],
-'r-cor':['t1_cor','JD-R and COR theories compared: resources, demands and spirals','≈ 14½ min · your video on Reading 3. Watch it after the walk-through, or as a first overview.'],
-'r-ten':['t1_ten','JD-R theory ten years later: burnout, engagement and the multilevel model','≈ 11½ min · your video on Reading 2. Watch it after the walk-through, or as a first overview.'],
-'r-team':['t1_team','Team resource mobilization: agile teams, challenge and hindrance demands','≈ 10½ min · your video on Reading 4. Watch it after the walk-through, or as a first overview.']};
-$('#vdSlots').innerHTML=RD.map(r=>{const v=VIDS[r[0]];if(v)return `<div class="vdcard"><div class="eyebrow">Theme 1 · Reading ${r[2][0]} · ${esc(r[3])}</div><h3 style="margin:.2em 0 .1em">🎬 ${esc(v[1])}</h3><p class="mini">${esc(v[2])}</p><video controls preload="metadata" playsinline poster="videos/${v[0]}.jpg" style="width:100%;border-radius:12px;background:#000;aspect-ratio:16/9;display:block;margin-top:8px"><source src="videos/${v[0]}.mp4" type="video/mp4"></video><div class="vlinks"><button class="lgtag" data-go="${r[0]}" type="button">${r[1]} Open the walk-through</button></div></div>`;
- return `<div class="vdcard"><div class="eyebrow">Theme 1 · Reading ${r[2][0]} · ${esc(r[3])}</div><h3 style="margin:.2em 0 .1em">🎬 ${esc(r[4])}</h3><p class="mini">Video slot. Your video for this reading will appear here.</p><div style="aspect-ratio:16/9;border:2px dashed #d9d2c3;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#6b7280;background:#fff;margin-top:8px">▶ Video coming soon</div><div class="vlinks"><button class="lgtag" data-go="${r[0]}" type="button">${r[1]} Open the walk-through</button></div></div>`}).join('');
+const VIDS={'r-faq':['t1_faq','M1-1','JD-R Theory Explained: Why Some People Burn Out and Others Thrive','8:59','jWE6KH-mcv4'],
+'r-ten':['t1_ten','M1-2','Burnout vs Work Engagement: What 10 Years of JD-R Research Shows','11:28','s3SCK4Jnwxg'],
+'r-cor':['t1_cor','M2-1','COR Theory vs JD-R Theory: Resource Spirals, Stress and Burnout Compared','14:30','2YYV_9YHX9g'],
+'r-team':['t1_team','M2-2','Team Resource Mobilization: How Teams Stay Effective Under Pressure','10:24','3T3msPxxIVU'],
+'r-craft':['t1_craft','M2-3','Job Crafting Explained: How Employees Redesign Their Own Jobs','11:50',''],
+'r-play':['t1_play','M2-4','Playful Work Design: How to Make Boring Work Fun and Challenging','9:30','']};
+const VMEET=[['Meeting 1 · The theory','What JD-R says, and what ten years of research added.',['r-faq','r-ten']],
+['Meeting 2 · Roots, teams and what employees can do','Where JD-R comes from (COR), how teams mobilize resources, and how employees shape their own work.',['r-cor','r-team','r-craft','r-play']]];
+$('#vdSlots').innerHTML=VMEET.map(m=>`<h2 class="vdmeet" style="margin:1.4em 0 .1em">${esc(m[0])}</h2><p class="mini" style="margin:0 0 .4em">${esc(m[1])}</p>`+m[2].map(k=>{const r=RD.find(x=>x[0]===k),v=VIDS[k];
+ return `<div class="vdcard"><div class="eyebrow">Theme 1 · ${v[1]} · Reading ${r[2][0]}: ${esc(r[2].slice(4))} · ${esc(r[3])}</div><h3 style="margin:.2em 0 .1em">🎬 ${esc(v[2])}</h3><p class="mini">${v[3]} · the video for this reading. Watch it after the walk-through, or first as an overview.</p><video controls preload="metadata" playsinline poster="videos/${v[0]}.jpg" style="width:100%;border-radius:12px;background:#000;aspect-ratio:16/9;display:block;margin-top:8px"><source src="videos/${v[0]}.mp4" type="video/mp4"></video><div class="vlinks"><button class="lgtag" data-go="${r[0]}" type="button">${r[1]} Open the walk-through</button>${v[4]?`<a href="https://www.youtube.com/watch?v=${v[4]}&list=PLGWxoHFPTyco" target="_blank" rel="noopener">▶ Watch on YouTube ↗</a>`:''}</div></div>`}).join('')).join('');
 
 const NL={
 'r-faq':`Make a Deep Dive for a second-year psychology student who learns best from connected logic, not lists. Plain English first, then the academic term. Use everyday examples (nurses, students, office work).
