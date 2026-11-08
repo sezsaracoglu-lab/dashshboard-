@@ -48,7 +48,7 @@
   var host, root, sb, dlg, drawer, filt = { t: "all", s: "all", c: "all", q: "" };
   var CSS =
     ":host{all:initial}*{box-sizing:border-box;font-family:'Instrument Sans','DM Sans','Segoe UI',system-ui,sans-serif}" +
-    ".sel{position:fixed;z-index:2147483001;border:0;background:#34466b;color:#fff;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;box-shadow:0 8px 20px rgba(52,70,107,.28);cursor:pointer}.sel[hidden]{display:none}" +
+    ".sel{position:fixed;z-index:2147483001;border:0;background:#34466b;color:#fff;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;box-shadow:0 8px 20px rgba(52,70,107,.28);cursor:pointer}.sel[hidden]{display:none}.sel.hlb{background:#f6e7b8;color:#6b4e12;box-shadow:0 8px 20px rgba(168,133,74,.28)}" +
     ".ov{position:fixed;inset:0;z-index:2147483002;background:rgba(43,47,58,.35);display:flex;align-items:center;justify-content:center;padding:16px}.ov[hidden]{display:none}" +
     ".box{background:#fff;border-radius:18px;max-width:540px;width:100%;padding:20px 22px;box-shadow:0 20px 50px rgba(0,0,0,.2);max-height:90vh;overflow:auto;color:#2b2f3a}" +
     "h2{margin:0 0 6px;font-family:'Cormorant Garamond',Fraunces,Georgia,serif;font-size:27px;font-weight:600;color:#34466b}" +
@@ -80,7 +80,7 @@
     host = document.createElement("div"); host.id = "sez-notebook";
     root = host.attachShadow ? host.attachShadow({ mode: "open" }) : host;
     root.innerHTML = "<style>" + CSS + "</style>" +
-      '<button class="sel" type="button" hidden></button>' +
+      '<button class="sel" type="button" hidden></button><button class="sel hlb" type="button" hidden>🖍 Highlight</button>' +
       '<div class="ov" hidden><div class="box" role="dialog" aria-modal="true" aria-label="Save to my notebook"><h2 id="dT">Save a word</h2>' +
       '<div class="pills" id="dTy"><button type="button" class="pill" data-t="w">🔤 Word</button><button type="button" class="pill" data-t="n">💡 Explanation</button></div>' +
       '<div class="where" id="dW"></div><label for="dA" id="lA">Word</label><input id="dA"><label for="dB" id="lB">Simple meaning</label><textarea id="dB" placeholder="In your own plain words"></textarea>' +
@@ -88,14 +88,15 @@
       '<div class="row"><button class="btn g" type="button" id="dX">Cancel</button><button class="btn" type="button" id="dS">⭐ Save</button></div></div></div>' +
       '<div class="dr" hidden><div class="pane" role="dialog" aria-label="My notebook"><div class="top"><div><div class="eye">Your own notebook · all courses</div><h2>📒 My notebook</h2></div><button class="x" type="button" id="nX" aria-label="Close">×</button></div>' +
       '<p class="priv">🔒 <b>Private to you.</b> Everything here is saved only in this browser on this device. Nothing is uploaded or added to the website, so nobody else can see it. Use <b>Export</b> now and then to keep a backup or move your notebook to another device.</p>' +
+      '<p class="how"><b>🖍 Highlights:</b> select any text on a study page and tap <b>🖍 Highlight</b>. Tap a highlight to remove it or save it here. Highlights stay on this computer only.</p>' +
       '<p class="how"><b>Words:</b> click an underlined term and choose ⭐ <i>Save to my notebook</i>, or select a word and tap <b>＋ Save word</b>. <b>Explanations:</b> select a sentence or paragraph and tap <b>＋ Save explanation</b>, or use <b>＋ Add</b>. Each entry remembers where you met it.</p>' +
       '<div class="tools"><input id="nQ" type="search" placeholder="Search your notebook"><div class="r"><select id="nC" aria-label="Course" style="width:auto;flex:1 1 200px"></select>' +
       '<button class="btn sm" type="button" id="nA">＋ Add</button><button class="btn sm g" type="button" id="nE">⤓ Export</button><button class="btn sm g" type="button" id="nI">⤒ Import</button><input type="file" id="nF" accept=".json,application/json" hidden></div>' +
       '<div class="pills" id="nT"><button type="button" class="pill on" data-t="all">All</button><button type="button" class="pill" data-t="w">Words</button><button type="button" class="pill" data-t="n">Explanations</button><span style="width:8px"></span><button type="button" class="pill" data-s="l">Still learning</button><button type="button" class="pill" data-s="k">I know it</button></div></div>' +
       '<div class="cnt" id="nN"></div><div id="nL"></div></div></div>';
     document.body.appendChild(host);
-    sb = q(".sel"); dlg = q(".ov"); drawer = q(".dr");
-    wireDialog(); wireDrawer(); wireSelection(); wireGlossary(); wireMarks(); setTimeout(refreshMarks, 600);
+    sb = q(".sel"); hb = q(".hlb"); dlg = q(".ov"); drawer = q(".dr");
+    wireDialog(); wireDrawer(); wireSelection(); wireGlossary(); wireMarks(); setTimeout(refreshMarks, 600); setTimeout(hApply, 900); setTimeout(hApply, 2500);
   }
   function q(s) { return root.querySelector(s); }
   function qa(s) { return Array.prototype.slice.call(root.querySelectorAll(s)); }
@@ -138,24 +139,28 @@
     function check() {
       clearTimeout(tmr); tmr = setTimeout(function () {
         var sel = window.getSelection(), t = sel ? sel.toString().trim() : "";
-        if (!t || t.length > 1500 || !sel.rangeCount || !dlg.hidden || !drawer.hidden) { sb.hidden = true; return; }
+        if (!t || t.length > 1500 || !sel.rangeCount || !dlg.hidden || !drawer.hidden) { sb.hidden = true; hb.hidden = true; return; }
         var n = sel.anchorNode && (sel.anchorNode.nodeType === 1 ? sel.anchorNode : sel.anchorNode.parentElement);
-        if (!n || n.closest("input,textarea,select,[contenteditable],#sez-sitenav,.side,nav")) { sb.hidden = true; return; }
-        var r = sel.getRangeAt(0).getBoundingClientRect(); if (!r.width && !r.height) { sb.hidden = true; return; }
+        if (!n || n.closest("input,textarea,select,[contenteditable],#sez-sitenav,.side,nav")) { sb.hidden = true; hb.hidden = true; return; }
+        var r = sel.getRangeAt(0).getBoundingClientRect(); if (!r.width && !r.height) { sb.hidden = true; hb.hidden = true; return; }
+        hRange = sel.getRangeAt(0).cloneRange();
         selLong = t.split(/\s+/).length > 6;
         selTxt = selLong ? t : t.replace(/[.,;:!?)"”’]+$/, "").replace(/^["“‘(]+/, "");
         selSrc = here(n);
         sb.textContent = selLong ? "＋ Save explanation" : "＋ Save word";
         var top = r.bottom + 8; if (top > innerHeight - 50) top = Math.max(8, r.top - 44);
-        sb.style.left = Math.max(8, Math.min(r.left, innerWidth - 190)) + "px"; sb.style.top = top + "px"; sb.hidden = false;
+        var L = Math.max(8, Math.min(r.left, innerWidth - 330)); sb.style.left = L + "px"; sb.style.top = top + "px"; sb.hidden = false;
+        hb.style.top = top + "px"; hb.hidden = false; hb.style.left = (L + sb.offsetWidth + 8) + "px";
       }, 250);
     }
     document.addEventListener("selectionchange", check);
     document.addEventListener("mouseup", function (e) { if (e.target !== host) check(); });
-    window.addEventListener("scroll", function () { sb.hidden = true; }, { passive: true });
+    window.addEventListener("scroll", function () { sb.hidden = true; hb.hidden = true; }, { passive: true });
     sb.addEventListener("mousedown", function (e) { e.preventDefault(); });
+    hb.addEventListener("mousedown", function (e) { e.preventDefault(); });
+    hb.onclick = function () { sb.hidden = true; hb.hidden = true; hAdd(); };
     sb.onclick = function () {
-      sb.hidden = true;
+      sb.hidden = true; hb.hidden = true;
       if (selLong) openDlg("", selTxt, selSrc, null, "n");
       else openDlg(selTxt, glossDef(selTxt), selSrc, null, "w");
       try { window.getSelection().removeAllRanges(); } catch (e) {}
@@ -244,7 +249,7 @@
     if (document.getElementById("sez-nbw-css")) return;
     var st = document.createElement("style"); st.id = "sez-nbw-css";
     st.textContent = "mark.sez-nbw{background:linear-gradient(transparent 62%,rgba(201,169,110,.32) 62%);color:inherit;border-bottom:1.5px dotted #a8854a;cursor:help;padding:0 1px;border-radius:2px}" +
-      "mark.sez-nbw.k{background:none}" +
+      "mark.sez-nbw.k{background:none}mark.sez-hl{background:#fbe7a1;color:inherit;border-radius:3px;padding:1px 0;box-shadow:0 0 0 1px rgba(201,169,110,.25);cursor:pointer}mark.sez-hl mark.sez-nbw{background:none}" +
       ".sez-nbpop{position:fixed;z-index:2147482990;max-width:320px;background:#fff;border:1px solid #e8e1d3;border-left:4px solid #c9a96e;border-radius:14px;padding:10px 14px 10px;box-shadow:0 10px 30px rgba(43,47,58,.18);font:15px/1.5 Inter,system-ui,sans-serif;color:#2b2f3a}" +
       ".sez-nbpop[hidden]{display:none}.sez-nbpop .e{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#a8854a;font-weight:700}" +
       ".sez-nbpop h4{margin:2px 0 4px;font:600 21px 'Cormorant Garamond',Fraunces,Georgia,serif;color:#34466b}.sez-nbpop p{margin:3px 0;white-space:pre-line}" +
@@ -287,17 +292,18 @@
     if (mo) mo.disconnect();
     unmark(); markAll();
     if (!mo && window.MutationObserver) mo = new MutationObserver(function (list) {
-      if (list.every(function (r) { return r.target.closest && r.target.closest("#sez-notebook,.sez-nbpop"); })) return;
-      clearTimeout(mtmr); mtmr = setTimeout(function () { mo.disconnect(); markAll(); mo.observe(document.body, { childList: true, subtree: true }); }, 400);
+      if (list.every(function (r) { return r.target.closest && r.target.closest("#sez-notebook,.sez-nbpop,mark.sez-hl"); })) return;
+      clearTimeout(mtmr); mtmr = setTimeout(function () { mo.disconnect(); markAll(); mo.observe(document.body, { childList: true, subtree: true }); hApply(); }, 400);
     });
     if (mo) mo.observe(document.body, { childList: true, subtree: true });
   }
   function showPop(mk) {
-    var x = load().filter(function (r) { return r.id === mk.dataset.id; })[0]; if (!x) return;
+    var x = mk ? load().filter(function (r) { return r.id === mk.dataset.id; })[0] : null;
     if (!pop) { pop = document.createElement("div"); pop.className = "sez-nbpop"; pop.hidden = true; document.body.appendChild(pop);
       pop.addEventListener("mouseenter", function () { clearTimeout(popT); }); pop.addEventListener("mouseleave", hidePop);
       pop.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; if (!root) build();
-        if (b.dataset.a === "e") { pop.hidden = true; openDlg("", "", null, b.dataset.id); } else { pop.hidden = true; open(); } }); }
+        if (b.dataset.a === "hr") { hRemove(b.dataset.id); return; } if (b.dataset.a === "hn") { pop.hidden = true; var tx = Array.prototype.map.call(document.querySelectorAll('mark.sez-hl[data-h="' + b.dataset.id + '"]'), function (m) { return m.textContent; }).join(""); var m0 = document.querySelector('mark.sez-hl[data-h="' + b.dataset.id + '"]'); openDlg("", tx, m0 ? here(m0) : null, null, "n"); return; } if (b.dataset.a === "e") { pop.hidden = true; openDlg("", "", null, b.dataset.id); } else { pop.hidden = true; open(); } }); }
+    if (!x) return;
     pop.innerHTML = '<div class="e">📒 My notebook' + (x.known ? " · ✓ I know it" : "") + "</div><h4>" + esc(x.w) + "</h4>" + (x.en ? "<p>" + esc(x.en) + "</p>" : '<p class="ex">No meaning saved yet.</p>') +
       (x.tr ? '<p class="tr">🇹🇷 ' + esc(x.tr) + "</p>" : "") + (x.ex ? '<p class="ex">✎ ' + esc(x.ex) + "</p>" : "") +
       '<div class="a"><button type="button" data-a="e" data-id="' + esc(x.id) + '">✏️ Edit</button><button type="button" data-a="o">📒 Open notebook</button></div>';
@@ -309,8 +315,73 @@
   function wireMarks() {
     document.addEventListener("mouseover", function (e) { var mk = e.target.closest && e.target.closest("mark.sez-nbw"); if (mk) { clearTimeout(popT); showPop(mk); } });
     document.addEventListener("mouseout", function (e) { if (e.target.closest && e.target.closest("mark.sez-nbw")) hidePop(); });
-    document.addEventListener("click", function (e) { var mk = e.target.closest && e.target.closest("mark.sez-nbw"); if (mk && !mk.closest(".tm,[data-g]")) { clearTimeout(popT); showPop(mk); } else if (!mk && pop && !pop.hidden && !e.target.closest(".sez-nbpop")) pop.hidden = true; });
+    document.addEventListener("click", function (e) { var hm = e.target.closest && e.target.closest("mark.sez-hl"); if (hm && !(e.target.closest("mark.sez-nbw")) && !String(window.getSelection() || "").trim()) { clearTimeout(popT); hPop(hm); return; }
+      var mk = e.target.closest && e.target.closest("mark.sez-nbw"); if (mk && !mk.closest(".tm,[data-g]")) { clearTimeout(popT); showPop(mk); } else if (!mk && pop && !pop.hidden && !e.target.closest(".sez-nbpop")) pop.hidden = true; });
     window.addEventListener("scroll", function () { if (pop) pop.hidden = true; }, { passive: true });
+  }
+
+
+  /* ---------- private highlights: stored only in this browser, per page ---------- */
+  var HKEY = "sez_highlights", hb = null, hRange = null;
+  function hLoad() { try { return JSON.parse(localStorage.getItem(HKEY) || "[]"); } catch (e) { return []; } }
+  function hSave(a) { try { localStorage.setItem(HKEY, JSON.stringify(a)); } catch (e) {} }
+  function hNodes() {
+    var out = [], tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, { acceptNode: function (n) {
+      var el = n.parentElement; if (!el || el.closest("script,style,#sez-notebook,.sez-nbpop,svg")) return NodeFilter.FILTER_REJECT; return NodeFilter.FILTER_ACCEPT; } });
+    var pos = 0; while (tw.nextNode()) { var n = tw.currentNode; out.push([n, pos]); pos += n.nodeValue.length; }
+    return out;
+  }
+  function hText(nodes) { return nodes.map(function (x) { return x[0].nodeValue; }).join(""); }
+  function hOffset(nodes, node, off) {
+    if (node.nodeType !== 3) { var c = node.childNodes[off] || null; var tw = document.createTreeWalker(c || node, NodeFilter.SHOW_TEXT); node = c ? (tw.currentNode.nodeType === 3 ? tw.currentNode : tw.nextNode()) : null; off = 0; if (!node) return -1; }
+    for (var i = 0; i < nodes.length; i++) if (nodes[i][0] === node) return nodes[i][1] + off;
+    return -1;
+  }
+  function hWrap(nodes, start, end, id) {
+    var did = false;
+    nodes.forEach(function (x) {
+      var n = x[0], a = x[1], b = a + n.nodeValue.length;
+      if (b <= start || a >= end || !n.parentNode) return;
+      var s = Math.max(start, a) - a, e = Math.min(end, b) - a; if (e <= s) return;
+      if (!n.nodeValue.slice(s, e).trim()) return;
+      var mid = n.splitText(s); mid.splitText(e - s);
+      var mk = document.createElement("mark"); mk.className = "sez-hl"; mk.dataset.h = id; mid.parentNode.replaceChild(mk, mid); mk.appendChild(mid); did = true;
+    });
+    return did;
+  }
+  function hApply() {
+    if (!document.body) return; markCSS(); var path = location.pathname;
+    var H = hLoad().filter(function (h) { return h.p === path && !document.querySelector('mark.sez-hl[data-h="' + h.id + '"]'); });
+    if (!H.length) return;
+    var stop = mo; if (stop) mo.disconnect();
+    H.forEach(function (h) {
+      var nodes = hNodes(), T = hText(nodes), i = T.indexOf(h.pre + h.t + h.suf), st;
+      if (i >= 0) st = i + h.pre.length; else { i = T.indexOf(h.t); if (i < 0) return; st = i; }
+      hWrap(nodes, st, st + h.t.length, h.id);
+    });
+    if (stop) mo.observe(document.body, { childList: true, subtree: true });
+  }
+  function hAdd() {
+    markCSS(); if (!hRange) return; var r = hRange; hRange = null;
+    var nodes = hNodes(), s = hOffset(nodes, r.startContainer, r.startOffset), e = hOffset(nodes, r.endContainer, r.endOffset);
+    if (s < 0 || e <= s) return; var T = hText(nodes), t = T.slice(s, e);
+    if (!t.trim()) return;
+    var id = "h" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    var H = hLoad(); H.push({ id: id, p: location.pathname, t: t, pre: T.slice(Math.max(0, s - 40), s), suf: T.slice(e, e + 40), at: Date.now() }); hSave(H);
+    if (mo) mo.disconnect(); hWrap(nodes, s, e, id); if (mo) mo.observe(document.body, { childList: true, subtree: true });
+    try { window.getSelection().removeAllRanges(); } catch (x) {}
+  }
+  function hRemove(id) {
+    hSave(hLoad().filter(function (h) { return h.id !== id; }));
+    Array.prototype.slice.call(document.querySelectorAll('mark.sez-hl[data-h="' + id + '"]')).forEach(function (m) { var p = m.parentNode; while (m.firstChild) p.insertBefore(m.firstChild, m); p.removeChild(m); p.normalize(); });
+    if (pop) pop.hidden = true;
+  }
+  function hPop(mk) {
+    var id = mk.dataset.h, txt = Array.prototype.map.call(document.querySelectorAll('mark.sez-hl[data-h="' + id + '"]'), function (m) { return m.textContent; }).join("");
+    if (!pop) showPop(null); if (!pop) return;
+    pop.innerHTML = '<div class="e">🖍 My highlight · only on this computer</div><p style="max-height:7.5em;overflow:auto">' + esc(txt) + '</p><div class="a"><button type="button" data-a="hr" data-id="' + esc(id) + '">✕ Remove highlight</button><button type="button" data-a="hn" data-id="' + esc(id) + '">📒 Save to notebook</button></div>';
+    pop.hidden = false; var r = mk.getBoundingClientRect(), w = pop.offsetWidth, h = pop.offsetHeight, top = r.bottom + 8; if (top + h > innerHeight - 8) top = Math.max(8, r.top - h - 8);
+    pop.style.left = Math.max(8, Math.min(r.left, innerWidth - w - 8)) + "px"; pop.style.top = top + "px";
   }
 
   function render() {
