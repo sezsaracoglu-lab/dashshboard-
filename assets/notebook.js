@@ -95,7 +95,7 @@
       '<div class="cnt" id="nN"></div><div id="nL"></div></div></div>';
     document.body.appendChild(host);
     sb = q(".sel"); dlg = q(".ov"); drawer = q(".dr");
-    wireDialog(); wireDrawer(); wireSelection(); wireGlossary();
+    wireDialog(); wireDrawer(); wireSelection(); wireGlossary(); wireMarks(); setTimeout(refreshMarks, 600);
   }
   function q(s) { return root.querySelector(s); }
   function qa(s) { return Array.prototype.slice.call(root.querySelectorAll(s)); }
@@ -236,6 +236,83 @@
     if (h) { var el = document.getElementById(h); if (location.hash !== "#" + h) location.hash = h; if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
   }
   function courseOf(x) { return ((x.src && x.src.course) || "My study").replace(/\s*·\s*Theme.*$/i, ""); }
+
+  /* ---------- saved words: highlight them on every page, show the saved meaning on hover/tap ---------- */
+  var mo = null, mtmr = null, pop = null, popT = null;
+  var SKIP = "script,style,textarea,input,select,button,svg,code,pre,a,#sez-notebook,#sez-sitenav,.sez-nbw,.sez-nbpop,[contenteditable],.side,nav,h1";
+  function markCSS() {
+    if (document.getElementById("sez-nbw-css")) return;
+    var st = document.createElement("style"); st.id = "sez-nbw-css";
+    st.textContent = "mark.sez-nbw{background:linear-gradient(transparent 62%,rgba(201,169,110,.32) 62%);color:inherit;border-bottom:1.5px dotted #a8854a;cursor:help;padding:0 1px;border-radius:2px}" +
+      "mark.sez-nbw.k{background:none}" +
+      ".sez-nbpop{position:fixed;z-index:2147482990;max-width:320px;background:#fff;border:1px solid #e8e1d3;border-left:4px solid #c9a96e;border-radius:14px;padding:10px 14px 10px;box-shadow:0 10px 30px rgba(43,47,58,.18);font:15px/1.5 Inter,system-ui,sans-serif;color:#2b2f3a}" +
+      ".sez-nbpop[hidden]{display:none}.sez-nbpop .e{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#a8854a;font-weight:700}" +
+      ".sez-nbpop h4{margin:2px 0 4px;font:600 21px 'Cormorant Garamond',Fraunces,Georgia,serif;color:#34466b}.sez-nbpop p{margin:3px 0;white-space:pre-line}" +
+      ".sez-nbpop .tr{color:#9a5b2a;font-style:italic}.sez-nbpop .ex{color:#6b7280;font-size:14px}" +
+      ".sez-nbpop .a{display:flex;gap:6px;margin-top:8px}.sez-nbpop button{border:1px solid #e8e1d3;background:#fff;border-radius:999px;padding:4px 10px;font-size:12.5px;cursor:pointer;color:#34466b}" +
+      "@media print{mark.sez-nbw{background:none;border:0}.sez-nbpop{display:none}}";
+    document.head.appendChild(st);
+  }
+  function unmark() {
+    Array.prototype.slice.call(document.querySelectorAll("mark.sez-nbw")).forEach(function (m) {
+      var p = m.parentNode; if (!p) return; p.replaceChild(document.createTextNode(m.textContent), m); p.normalize();
+    });
+  }
+  function rxEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  function markAll(scope) {
+    var W = load().filter(function (x) { return (x.t || "w") === "w" && x.w && x.w.trim().length > 1 && x.w.trim().split(/\s+/).length <= 6; });
+    if (!W.length) return;
+    var by = {}; W.forEach(function (x) { by[x.w.trim().toLowerCase()] = x; });
+    var keys = Object.keys(by).sort(function (a, b) { return b.length - a.length; });
+    var rx; try { rx = new RegExp("(^|[^\\p{L}\\p{N}])(" + keys.map(rxEsc).join("|") + ")(?:s|es)?(?=$|[^\\p{L}\\p{N}])", "giu"); } catch (e) { return; }
+    var tw = document.createTreeWalker(scope || document.body, NodeFilter.SHOW_TEXT, { acceptNode: function (n) {
+      if (!n.nodeValue || n.nodeValue.trim().length < 2) return NodeFilter.FILTER_REJECT;
+      var el = n.parentElement; if (!el || el.closest(SKIP)) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT; } });
+    var nodes = []; while (tw.nextNode()) nodes.push(tw.currentNode);
+    nodes.forEach(function (n) {
+      var t = n.nodeValue, m, last = 0, frag = null; rx.lastIndex = 0;
+      while ((m = rx.exec(t))) {
+        var start = m.index + m[1].length, word = m[0].slice(m[1].length), rec = by[m[2].toLowerCase()];
+        if (!rec) continue; frag = frag || document.createDocumentFragment();
+        frag.appendChild(document.createTextNode(t.slice(last, start)));
+        var mk = document.createElement("mark"); mk.className = "sez-nbw" + (rec.known ? " k" : ""); mk.dataset.id = rec.id; mk.textContent = word; frag.appendChild(mk);
+        last = start + word.length;
+      }
+      if (frag) { frag.appendChild(document.createTextNode(t.slice(last))); n.parentNode.replaceChild(frag, n); }
+    });
+  }
+  function refreshMarks() {
+    if (!document.body || /exam/i.test(location.pathname)) return; /* no hints inside practice exams */ markCSS();
+    if (mo) mo.disconnect();
+    unmark(); markAll();
+    if (!mo && window.MutationObserver) mo = new MutationObserver(function (list) {
+      if (list.every(function (r) { return r.target.closest && r.target.closest("#sez-notebook,.sez-nbpop"); })) return;
+      clearTimeout(mtmr); mtmr = setTimeout(function () { mo.disconnect(); markAll(); mo.observe(document.body, { childList: true, subtree: true }); }, 400);
+    });
+    if (mo) mo.observe(document.body, { childList: true, subtree: true });
+  }
+  function showPop(mk) {
+    var x = load().filter(function (r) { return r.id === mk.dataset.id; })[0]; if (!x) return;
+    if (!pop) { pop = document.createElement("div"); pop.className = "sez-nbpop"; pop.hidden = true; document.body.appendChild(pop);
+      pop.addEventListener("mouseenter", function () { clearTimeout(popT); }); pop.addEventListener("mouseleave", hidePop);
+      pop.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; if (!root) build();
+        if (b.dataset.a === "e") { pop.hidden = true; openDlg("", "", null, b.dataset.id); } else { pop.hidden = true; open(); } }); }
+    pop.innerHTML = '<div class="e">📒 My notebook' + (x.known ? " · ✓ I know it" : "") + "</div><h4>" + esc(x.w) + "</h4>" + (x.en ? "<p>" + esc(x.en) + "</p>" : '<p class="ex">No meaning saved yet.</p>') +
+      (x.tr ? '<p class="tr">🇹🇷 ' + esc(x.tr) + "</p>" : "") + (x.ex ? '<p class="ex">✎ ' + esc(x.ex) + "</p>" : "") +
+      '<div class="a"><button type="button" data-a="e" data-id="' + esc(x.id) + '">✏️ Edit</button><button type="button" data-a="o">📒 Open notebook</button></div>';
+    pop.hidden = false; var r = mk.getBoundingClientRect(), w = pop.offsetWidth, h = pop.offsetHeight;
+    var top = r.bottom + 8; if (top + h > innerHeight - 8) top = Math.max(8, r.top - h - 8);
+    pop.style.left = Math.max(8, Math.min(r.left, innerWidth - w - 8)) + "px"; pop.style.top = top + "px";
+  }
+  function hidePop() { clearTimeout(popT); popT = setTimeout(function () { if (pop) pop.hidden = true; }, 250); }
+  function wireMarks() {
+    document.addEventListener("mouseover", function (e) { var mk = e.target.closest && e.target.closest("mark.sez-nbw"); if (mk) { clearTimeout(popT); showPop(mk); } });
+    document.addEventListener("mouseout", function (e) { if (e.target.closest && e.target.closest("mark.sez-nbw")) hidePop(); });
+    document.addEventListener("click", function (e) { var mk = e.target.closest && e.target.closest("mark.sez-nbw"); if (mk && !mk.closest(".tm,[data-g]")) { clearTimeout(popT); showPop(mk); } else if (!mk && pop && !pop.hidden && !e.target.closest(".sez-nbpop")) pop.hidden = true; });
+    window.addEventListener("scroll", function () { if (pop) pop.hidden = true; }, { passive: true });
+  }
+
   function render() {
     if (!root) return;
     var W = load().sort(function (a, b) { return a.w.localeCompare(b.w, "en", { sensitivity: "base" }); });
@@ -257,10 +334,11 @@
         '<div class="acts">' + (srcUrl(s) || s.hash ? '<button type="button" class="wh" data-a="go">📍 ' + esc(s.label || "Go to section") + " →</button>" : "") +
         '<button type="button" class="kn' + (x.known ? " on" : "") + '" data-a="k">' + (x.known ? "✓ I know it" : "Mark: I know it") + '</button><button type="button" data-a="e">✏️ Edit</button><button type="button" data-a="d">🗑 Delete</button></div></div>';
     }).join("") : '<p class="how">' + (W.length ? "Nothing matches." : "Your notebook is empty. While you study, click an underlined term or select a word or sentence, and save it here.") + "</p>";
+    refreshMarks();
   }
   function open() { if (!root) build(); render(); drawer.hidden = false; if (innerWidth > 700) setTimeout(function () { q("#nQ").focus(); }, 30); }
 
   window.SezNotebook = { open: open, add: function (t) { if (!root) build(); openDlg("", "", here(), null, t || "w"); } };
-  window.addEventListener("storage", function (e) { if (e.key === KEY && root && !drawer.hidden) render(); });
+  window.addEventListener("storage", function (e) { if (e.key !== KEY) return; if (root && !drawer.hidden) render(); else refreshMarks(); });
   if (document.body) build(); else document.addEventListener("DOMContentLoaded", build);
 })();
