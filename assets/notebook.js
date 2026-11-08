@@ -48,7 +48,7 @@
   var host, root, sb, dlg, drawer, filt = { t: "all", s: "all", c: "all", q: "" };
   var CSS =
     ":host{all:initial}*{box-sizing:border-box;font-family:'Instrument Sans','DM Sans','Segoe UI',system-ui,sans-serif}" +
-    ".sel{position:fixed;z-index:2147483001;border:0;background:#34466b;color:#fff;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;box-shadow:0 8px 20px rgba(52,70,107,.28);cursor:pointer}.sel[hidden]{display:none}.sel.hlb{background:#f6e7b8;color:#6b4e12;box-shadow:0 8px 20px rgba(168,133,74,.28)}" +
+    ".sel{position:fixed;z-index:2147483001;border:0;background:#34466b;color:#fff;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;box-shadow:0 8px 20px rgba(52,70,107,.28);cursor:pointer}.sel[hidden]{display:none}.sel.hlb{background:#fff;color:#2b2f3a;border:1px solid #e8e1d3;display:flex;align-items:center;gap:6px;padding:5px 10px;cursor:default}.sel.hlb[hidden]{display:none}.hlb .hlt{font-size:13px;margin-right:2px}.hlb button{width:20px;height:20px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.18);cursor:pointer;padding:0}.hlb button:hover{transform:scale(1.18)}.hlb [data-c=y]{background:#fff200}.hlb [data-c=g]{background:#39ff14}.hlb [data-c=p]{background:#ff4fd8}.hlb [data-c=b]{background:#2ee6ff}.hlb [data-c=o]{background:#ff9f1c}" +
     ".ov{position:fixed;inset:0;z-index:2147483002;background:rgba(43,47,58,.35);display:flex;align-items:center;justify-content:center;padding:16px}.ov[hidden]{display:none}" +
     ".box{background:#fff;border-radius:18px;max-width:540px;width:100%;padding:20px 22px;box-shadow:0 20px 50px rgba(0,0,0,.2);max-height:90vh;overflow:auto;color:#2b2f3a}" +
     "h2{margin:0 0 6px;font-family:'Cormorant Garamond',Fraunces,Georgia,serif;font-size:27px;font-weight:600;color:#34466b}" +
@@ -80,7 +80,7 @@
     host = document.createElement("div"); host.id = "sez-notebook";
     root = host.attachShadow ? host.attachShadow({ mode: "open" }) : host;
     root.innerHTML = "<style>" + CSS + "</style>" +
-      '<button class="sel" type="button" hidden></button><button class="sel hlb" type="button" hidden>🖍 Highlight</button>' +
+      '<button class="sel" type="button" hidden></button><div class="sel hlb" hidden><span class="hlt">🖍 Highlight</span><button type="button" data-c="y" title="Neon yellow"></button><button type="button" data-c="g" title="Neon green"></button><button type="button" data-c="p" title="Neon pink"></button><button type="button" data-c="b" title="Neon blue"></button><button type="button" data-c="o" title="Neon orange"></button></div>' +
       '<div class="ov" hidden><div class="box" role="dialog" aria-modal="true" aria-label="Save to my notebook"><h2 id="dT">Save a word</h2>' +
       '<div class="pills" id="dTy"><button type="button" class="pill" data-t="w">🔤 Word</button><button type="button" class="pill" data-t="n">💡 Explanation</button></div>' +
       '<div class="where" id="dW"></div><label for="dA" id="lA">Word</label><input id="dA"><label for="dB" id="lB">Simple meaning</label><textarea id="dB" placeholder="In your own plain words"></textarea>' +
@@ -88,7 +88,7 @@
       '<div class="row"><button class="btn g" type="button" id="dX">Cancel</button><button class="btn" type="button" id="dS">⭐ Save</button></div></div></div>' +
       '<div class="dr" hidden><div class="pane" role="dialog" aria-label="My notebook"><div class="top"><div><div class="eye">Your own notebook · all courses</div><h2>📒 My notebook</h2></div><button class="x" type="button" id="nX" aria-label="Close">×</button></div>' +
       '<p class="priv">🔒 <b>Private to you.</b> Everything here is saved only in this browser on this device. Nothing is uploaded or added to the website, so nobody else can see it. Use <b>Export</b> now and then to keep a backup or move your notebook to another device.</p>' +
-      '<p class="how"><b>🖍 Highlights:</b> select any text on a study page and tap <b>🖍 Highlight</b>. Tap a highlight to remove it or save it here. Highlights stay on this computer only.</p>' +
+      '<p class="how"><b>🖍 Highlights:</b> select any text on a study page and tap one of the neon colours next to <b>🖍 Highlight</b>. Tap a highlight to remove it or save it here. Highlights stay on this computer only.</p>' +
       '<p class="how"><b>Words:</b> click an underlined term and choose ⭐ <i>Save to my notebook</i>, or select a word and tap <b>＋ Save word</b>. <b>Explanations:</b> select a sentence or paragraph and tap <b>＋ Save explanation</b>, or use <b>＋ Add</b>. Each entry remembers where you met it.</p>' +
       '<div class="tools"><input id="nQ" type="search" placeholder="Search your notebook"><div class="r"><select id="nC" aria-label="Course" style="width:auto;flex:1 1 200px"></select>' +
       '<button class="btn sm" type="button" id="nA">＋ Add</button><button class="btn sm g" type="button" id="nE">⤓ Export</button><button class="btn sm g" type="button" id="nI">⤒ Import</button><input type="file" id="nF" accept=".json,application/json" hidden></div>' +
@@ -158,7 +158,7 @@
     window.addEventListener("scroll", function () { sb.hidden = true; hb.hidden = true; }, { passive: true });
     sb.addEventListener("mousedown", function (e) { e.preventDefault(); });
     hb.addEventListener("mousedown", function (e) { e.preventDefault(); });
-    hb.onclick = function () { sb.hidden = true; hb.hidden = true; hAdd(); };
+    hb.onclick = function (e) { var c = e.target.dataset && e.target.dataset.c; if (!c) return; sb.hidden = true; hb.hidden = true; hAdd(c); };
     sb.onclick = function () {
       sb.hidden = true; hb.hidden = true;
       if (selLong) openDlg("", selTxt, selSrc, null, "n");
@@ -249,7 +249,7 @@
     if (document.getElementById("sez-nbw-css")) return;
     var st = document.createElement("style"); st.id = "sez-nbw-css";
     st.textContent = "mark.sez-nbw{background:linear-gradient(transparent 62%,rgba(201,169,110,.32) 62%);color:inherit;border-bottom:1.5px dotted #a8854a;cursor:help;padding:0 1px;border-radius:2px}" +
-      "mark.sez-nbw.k{background:none}mark.sez-hl{background:#fbe7a1;color:inherit;border-radius:3px;padding:1px 0;box-shadow:0 0 0 1px rgba(201,169,110,.25);cursor:pointer}mark.sez-hl mark.sez-nbw{background:none}" +
+      "mark.sez-nbw.k{background:none}mark.sez-hl{background:rgba(255,242,0,.55);color:inherit;border-radius:3px;padding:1px 0;cursor:pointer}mark.sez-hl[data-c=g]{background:rgba(57,255,20,.42)}mark.sez-hl[data-c=p]{background:rgba(255,79,216,.38)}mark.sez-hl[data-c=b]{background:rgba(46,230,255,.42)}mark.sez-hl[data-c=o]{background:rgba(255,159,28,.45)}.sez-nbpop .dots{display:flex;gap:6px;align-items:center;margin-top:6px}.sez-nbpop .dots button{width:20px;height:20px;border-radius:50%;padding:0;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.2)}mark.sez-hl mark.sez-nbw{background:none}" +
       ".sez-nbpop{position:fixed;z-index:2147482990;max-width:320px;background:#fff;border:1px solid #e8e1d3;border-left:4px solid #c9a96e;border-radius:14px;padding:10px 14px 10px;box-shadow:0 10px 30px rgba(43,47,58,.18);font:15px/1.5 Inter,system-ui,sans-serif;color:#2b2f3a}" +
       ".sez-nbpop[hidden]{display:none}.sez-nbpop .e{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#a8854a;font-weight:700}" +
       ".sez-nbpop h4{margin:2px 0 4px;font:600 21px 'Cormorant Garamond',Fraunces,Georgia,serif;color:#34466b}.sez-nbpop p{margin:3px 0;white-space:pre-line}" +
@@ -302,7 +302,7 @@
     if (!pop) { pop = document.createElement("div"); pop.className = "sez-nbpop"; pop.hidden = true; document.body.appendChild(pop);
       pop.addEventListener("mouseenter", function () { clearTimeout(popT); }); pop.addEventListener("mouseleave", hidePop);
       pop.addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; if (!root) build();
-        if (b.dataset.a === "hr") { hRemove(b.dataset.id); return; } if (b.dataset.a === "hn") { pop.hidden = true; var tx = Array.prototype.map.call(document.querySelectorAll('mark.sez-hl[data-h="' + b.dataset.id + '"]'), function (m) { return m.textContent; }).join(""); var m0 = document.querySelector('mark.sez-hl[data-h="' + b.dataset.id + '"]'); openDlg("", tx, m0 ? here(m0) : null, null, "n"); return; } if (b.dataset.a === "e") { pop.hidden = true; openDlg("", "", null, b.dataset.id); } else { pop.hidden = true; open(); } }); }
+        if (b.dataset.a === "hr") { hRemove(b.dataset.id); return; } if (b.dataset.a === "hc") { hColor(b.dataset.id, b.dataset.c); return; } if (b.dataset.a === "hn") { pop.hidden = true; var tx = Array.prototype.map.call(document.querySelectorAll('mark.sez-hl[data-h="' + b.dataset.id + '"]'), function (m) { return m.textContent; }).join(""); var m0 = document.querySelector('mark.sez-hl[data-h="' + b.dataset.id + '"]'); openDlg("", tx, m0 ? here(m0) : null, null, "n"); return; } if (b.dataset.a === "e") { pop.hidden = true; openDlg("", "", null, b.dataset.id); } else { pop.hidden = true; open(); } }); }
     if (!x) return;
     pop.innerHTML = '<div class="e">📒 My notebook' + (x.known ? " · ✓ I know it" : "") + "</div><h4>" + esc(x.w) + "</h4>" + (x.en ? "<p>" + esc(x.en) + "</p>" : '<p class="ex">No meaning saved yet.</p>') +
       (x.tr ? '<p class="tr">🇹🇷 ' + esc(x.tr) + "</p>" : "") + (x.ex ? '<p class="ex">✎ ' + esc(x.ex) + "</p>" : "") +
@@ -337,7 +337,7 @@
     for (var i = 0; i < nodes.length; i++) if (nodes[i][0] === node) return nodes[i][1] + off;
     return -1;
   }
-  function hWrap(nodes, start, end, id) {
+  function hWrap(nodes, start, end, id, c) {
     var did = false;
     nodes.forEach(function (x) {
       var n = x[0], a = x[1], b = a + n.nodeValue.length;
@@ -345,7 +345,7 @@
       var s = Math.max(start, a) - a, e = Math.min(end, b) - a; if (e <= s) return;
       if (!n.nodeValue.slice(s, e).trim()) return;
       var mid = n.splitText(s); mid.splitText(e - s);
-      var mk = document.createElement("mark"); mk.className = "sez-hl"; mk.dataset.h = id; mid.parentNode.replaceChild(mk, mid); mk.appendChild(mid); did = true;
+      var mk = document.createElement("mark"); mk.className = "sez-hl"; mk.dataset.h = id; mk.dataset.c = c || "y"; mid.parentNode.replaceChild(mk, mid); mk.appendChild(mid); did = true;
     });
     return did;
   }
@@ -357,18 +357,18 @@
     H.forEach(function (h) {
       var nodes = hNodes(), T = hText(nodes), i = T.indexOf(h.pre + h.t + h.suf), st;
       if (i >= 0) st = i + h.pre.length; else { i = T.indexOf(h.t); if (i < 0) return; st = i; }
-      hWrap(nodes, st, st + h.t.length, h.id);
+      hWrap(nodes, st, st + h.t.length, h.id, h.c);
     });
     if (stop) mo.observe(document.body, { childList: true, subtree: true });
   }
-  function hAdd() {
-    markCSS(); if (!hRange) return; var r = hRange; hRange = null;
+  function hAdd(c) {
+    c = c || "y"; markCSS(); if (!hRange) return; var r = hRange; hRange = null;
     var nodes = hNodes(), s = hOffset(nodes, r.startContainer, r.startOffset), e = hOffset(nodes, r.endContainer, r.endOffset);
     if (s < 0 || e <= s) return; var T = hText(nodes), t = T.slice(s, e);
     if (!t.trim()) return;
     var id = "h" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
-    var H = hLoad(); H.push({ id: id, p: location.pathname, t: t, pre: T.slice(Math.max(0, s - 40), s), suf: T.slice(e, e + 40), at: Date.now() }); hSave(H);
-    if (mo) mo.disconnect(); hWrap(nodes, s, e, id); if (mo) mo.observe(document.body, { childList: true, subtree: true });
+    var H = hLoad(); H.push({ id: id, c: c, p: location.pathname, t: t, pre: T.slice(Math.max(0, s - 40), s), suf: T.slice(e, e + 40), at: Date.now() }); hSave(H);
+    if (mo) mo.disconnect(); hWrap(nodes, s, e, id, c); if (mo) mo.observe(document.body, { childList: true, subtree: true });
     try { window.getSelection().removeAllRanges(); } catch (x) {}
   }
   function hRemove(id) {
@@ -376,10 +376,14 @@
     Array.prototype.slice.call(document.querySelectorAll('mark.sez-hl[data-h="' + id + '"]')).forEach(function (m) { var p = m.parentNode; while (m.firstChild) p.insertBefore(m.firstChild, m); p.removeChild(m); p.normalize(); });
     if (pop) pop.hidden = true;
   }
+  function hColor(id, c) {
+    var H = hLoad(); H.forEach(function (h) { if (h.id === id) h.c = c; }); hSave(H);
+    Array.prototype.slice.call(document.querySelectorAll('mark.sez-hl[data-h="' + id + '"]')).forEach(function (m) { m.dataset.c = c; });
+  }
   function hPop(mk) {
     var id = mk.dataset.h, txt = Array.prototype.map.call(document.querySelectorAll('mark.sez-hl[data-h="' + id + '"]'), function (m) { return m.textContent; }).join("");
     if (!pop) showPop(null); if (!pop) return;
-    pop.innerHTML = '<div class="e">🖍 My highlight · only on this computer</div><p style="max-height:7.5em;overflow:auto">' + esc(txt) + '</p><div class="a"><button type="button" data-a="hr" data-id="' + esc(id) + '">✕ Remove highlight</button><button type="button" data-a="hn" data-id="' + esc(id) + '">📒 Save to notebook</button></div>';
+    pop.innerHTML = '<div class="e">🖍 My highlight · only on this computer</div><p style="max-height:7.5em;overflow:auto">' + esc(txt) + '</p><div class="dots"><span style="font-size:12.5px;color:#6b7280">Colour:</span>' + [['y','#fff200'],['g','#39ff14'],['p','#ff4fd8'],['b','#2ee6ff'],['o','#ff9f1c']].map(function (k) { return '<button type="button" data-a="hc" data-c="' + k[0] + '" data-id="' + esc(id) + '" style="background:' + k[1] + '" title="Change colour"></button>'; }).join("") + '</div><div class="a"><button type="button" data-a="hr" data-id="' + esc(id) + '">✕ Remove highlight</button><button type="button" data-a="hn" data-id="' + esc(id) + '">📒 Save to notebook</button></div>';
     pop.hidden = false; var r = mk.getBoundingClientRect(), w = pop.offsetWidth, h = pop.offsetHeight, top = r.bottom + 8; if (top + h > innerHeight - 8) top = Math.max(8, r.top - h - 8);
     pop.style.left = Math.max(8, Math.min(r.left, innerWidth - w - 8)) + "px"; pop.style.top = top + "px";
   }
