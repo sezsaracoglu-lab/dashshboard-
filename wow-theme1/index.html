@@ -173,6 +173,15 @@ details.qc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.qc p
 .rtab{background:#fff;border:1px solid var(--line);border-left:6px solid var(--navy);border-radius:14px;padding:14px 18px;margin:14px 0}
 .rtab>b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--navy);margin-bottom:4px}
 .rtab .tw{overflow-x:auto}.rtab table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:640px}.rtab th{background:var(--navy);color:#fff;text-align:left;padding:8px 10px;font-weight:600}.rtab td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top;line-height:1.45}.rtab td:first-child{font-weight:700;color:var(--navy);background:#f7f4ee}
+.t2g{display:grid;grid-template-columns:minmax(110px,1.1fr) repeat(4,minmax(0,1fr));gap:6px;margin:10px 0;font-size:.88rem}
+.t2g>div{background:#faf8f3;border-radius:10px;padding:8px;text-align:center;line-height:1.35}
+.t2g .h{background:#fff;border:2px solid var(--c);font-weight:700;color:var(--c)}.t2g .h i{display:block;font-style:normal;font-size:1.6rem}
+.t2g .rl{background:var(--navy);color:#fff;text-align:left;font-weight:700;cursor:pointer}.t2g .rl small{display:block;font-weight:400;opacity:.8;font-size:.75rem}
+.t2g .span2{grid-column:span 2}.t2g .span4{grid-column:span 4;background:#eef2f8}
+.t2g .ch{display:inline-block;border-radius:999px;padding:2px 9px;font-weight:700;font-size:.8rem;margin:2px 0}
+.t2g .out_{background:#34466b;color:#fff}.t2g .in_{background:#c9a96e;color:#fff}.t2g .bad{background:#fbecea;color:#c0392b}.t2g .both{background:#f6eedd;color:#8a6a2f}.t2g .good{background:#e2f1e6;color:#2f8a57}
+.t2ex{background:#fff;border:1px dashed var(--gold);border-radius:12px;padding:10px 12px;margin:4px 0 8px;font-size:.92rem}
+@media(max-width:700px){.t2g{grid-template-columns:repeat(4,minmax(0,1fr))}.t2g .rl{grid-column:1/-1}.t2g .corner{display:none}}
 .rtab .src{font-size:.82rem;color:var(--muted);font-style:italic;margin:8px 0 0}
 .trapb{background:#fbecea;border:1px solid #efc9c3;border-radius:14px;padding:11px 15px;margin:12px 0;font-size:.93rem}.trapb b{display:block;color:var(--bad);margin-bottom:4px}
 .trapb .w{display:block;color:#8f2c20}.trapb .r{display:block;color:var(--ok);font-weight:600;margin-top:4px}
@@ -2406,8 +2415,8 @@ document.addEventListener('click',e=>{const b=e.target.closest('.cbtn[data-td]')
 
 /* ---------- tables and figures from the readings ---------- */
 const FIGS={
-'r-ten-9':{t:'Table 2 · Common problems in JD-R research',src:'Our version of Table 2 in the review (p. 42). Wording shortened; the content follows the table.',
- intro:'This is the review\'s checklist of mistakes researchers make when they use JD-R. The columns are the four things JD-R studies measure; the rows are five kinds of problems. The last column gives the article\'s own examples.',
+'r-ten-9':{viz:'t2',t:'Table 2 · Common problems in JD-R research',src:'Our version of Table 2 in the review (p. 42). Wording shortened; the content follows the table.',
+ intro:'This is the review\'s checklist of mistakes researchers make when they use JD-R. The columns are the four things JD-R studies measure; the rows are five kinds of problems. Read the picture across a row, and tap a dark row label to see the article\'s own example.',
  head:['Problem','Job demands','Job resources','Personal resources','Employee behaviours','Example from the table'],
  rows:[['Mixing up the categories','A low score on a resource is not a demand. Not all sectors have the same demands.','A low score on a demand is not a resource.','Not job resources: they are aspects of the self (positive beliefs).','Actions, not characteristics of the person or the job.','Low support does not mean conflict. Lack of conflict is not support. Proactive coping is not task autonomy.'],
  ['Who controls it','External: part of the work environment.','External: part of the work environment.','Internal: employees can choose to train themselves.','Internal: visible actions employees may choose.','Employees can use job crafting to increase resources such as social support.'],
@@ -2450,11 +2459,24 @@ const FIGS={
  ['A copywriter looks for funny incongruities in a text.','A receptionist greets every person in a different way.']]},
 
 };
+function T2VIZ(){const ex=FIGS['r-ten-9'].rows.map(r=>r[5]);
+ const H=(ic,t,c)=>`<div class="h" style="--c:${c}"><i>${ic}</i>${t}</div>`;
+ const R=(i,t,sub)=>`<div class="rl" data-t2="${i}">${t}<small>${sub} · tap for example</small></div>`;
+ const C=(cl,t,sub)=>`<div><span class="ch ${cl}">${t}</span>${sub?'<br><span class="mini">'+sub+'</span>':''}</div>`;
+ let h='<div class="t2g"><div class="corner" style="background:none"></div>'+H('⚖️','Job demands','#c0392b')+H('🧰','Job resources','#2f8a57')+H('💭','Personal resources','#6d5a9e')+H('🏃','Employee behaviours','#a8854a');
+ h+=R(0,'What is it?','don\'t mix them up')+C('bad','costs effort','a low resource is not a demand')+C('good','helps','a low demand is not a resource')+C('both','a belief about yourself','not a job resource')+C('both','an action you take','not a trait or job feature');
+ h+=R(1,'Who controls it?','outside or inside')+C('out_','🏢 outside','the work environment')+C('out_','🏢 outside','the work environment')+C('in_','🧠 inside','you can train them')+C('in_','🧠 inside','you choose them');
+ h+=R(2,'Good or bad?','for well-being')+`<div><span class="ch bad">👎 hindrance: bad</span><br><span class="ch both">± challenge: both</span></div>`+C('both','± can be both','too much of a good thing?')+C('good','👍 beneficial','')+C('both','± can be both','');
+ h+=R(3,'Level?','where to study it')+'<div class="span4">📐 <b>All four</b> can be studied at several levels (days, people, teams, organizations)</div>';
+ h+=R(4,'Other outcomes?','beyond burnout and engagement')+C('both','🩺 health outcomes','good and bad')+C('both','🔥 motivational outcomes','good and bad')+'<div class="span2"><span class="ch both">↔ both processes</span><br><span class="mini">health impairment and motivation</span></div>';
+ h+='</div><div class="t2ex" data-t2out>💡 <b>Tap a dark row label</b> to see the article\'s example for that problem.</div>';
+ setTimeout(()=>$$('[data-t2]').forEach(el=>el.onclick=()=>{const o=el.closest('.rtab').querySelector('[data-t2out]');o.innerHTML='💡 <b>'+el.firstChild.textContent+'</b> '+ex[+el.dataset.t2]}),50);
+ return h}
 setTimeout(()=>Object.keys(FIGS).forEach(k=>{const m=k.match(/^(r-[a-z]+)-(\d+)$/);const st=$$('#p-'+m[1]+' .step')[+m[2]-1];if(!st)return;const d=FIGS[k];
  const anchor=st.querySelector(':scope>.afterbox')||st.querySelector(':scope>.scr');const b=document.createElement('div');b.className='rtab';
  b.innerHTML='<b>📋 From the reading: '+d.t+'</b>'+(d.intro?'<p>'+d.intro+'</p>':'')+(d.note?'<p>'+d.note+'</p>':'')
-  +(d.rows?'<div class="tw"><table><tr>'+d.head.map(h=>'<th>'+h+'</th>').join('')+'</tr>'+d.rows.map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')+'</table></div>':'')
-  +(d.go?'<p><button class="lgtag" type="button" data-fgo="'+d.go[0]+'">'+d.go[1]+' →</button></p>':'')+'<p class="src">'+d.src+'</p>';
+  +(d.viz==='t2'?T2VIZ():'')+(d.rows&&d.viz?'<details><summary class="mini" style="cursor:pointer;margin:6px 0">Show Table 2 as text (all wording)</summary>':'')+(d.rows?'<div class="tw"><table><tr>'+d.head.map(h=>'<th>'+h+'</th>').join('')+'</tr>'+d.rows.map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')+'</table></div>':'')
+  +(d.rows&&d.viz?'</details>':'')+(d.go?'<p><button class="lgtag" type="button" data-fgo="'+d.go[0]+'">'+d.go[1]+' →</button></p>':'')+'<p class="src">'+d.src+'</p>';
  anchor.after(b)}),0);
 document.addEventListener('click',e=>{const b=e.target.closest('[data-fgo]');if(b)window.wowShow(b.dataset.fgo)});
 
