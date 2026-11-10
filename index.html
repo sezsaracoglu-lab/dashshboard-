@@ -103,6 +103,21 @@ h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4vw,2.5rem);l
 .tile .n{font-family:var(--serif);font-size:1.25rem;font-weight:600}
 .tile p{font-size:.9rem;color:var(--muted)}
 .tile .go{margin-top:auto;font-size:.88rem;font-weight:600;color:var(--sage)}
+.coach{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;align-items:stretch}
+.pbook{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:border-color .2s}
+.pbook:hover{border-color:var(--clay)}
+.pbook img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top left;border-bottom:1px solid var(--line);background:#fff}
+.pbook .pb{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pbook .k{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);font-weight:600}
+.pbook h3{font-family:var(--serif);font-weight:600;font-size:1.45rem;line-height:1.2}
+.pbook p{font-size:.95rem;color:var(--muted)}
+.pbook ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.pbook li{font-size:.8rem;color:var(--navy);background:var(--navyp);border-radius:999px;padding:3px 11px}
+.pbook .go{margin-top:auto;padding-top:8px;font-size:.92rem;font-weight:600;color:var(--clay)}
+.coach .threads{justify-content:space-between}.coach .thread{flex:1;display:flex;flex-direction:column;justify-content:center}
+@media (max-width:820px){.coach{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:480px){nav.menu{gap:6px 11px}nav.menu a{font-size:.8rem}}
+@media (max-width:560px){.vtabs{flex-wrap:wrap;max-width:100%;border-radius:18px}.vtab{padding:7px 12px}}
 .contact{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:center}
 footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
 @media (max-width:820px){.hero,.video,.contact{grid-template-columns:minmax(0,1fr)}.hero{padding-block:44px 32px}}
@@ -119,7 +134,7 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;border-top:1p
 <body>
 <header class="top"><div class="wrap">
   <a class="mark" href="#top">Sezen Saracoglu</a>
-  <nav class="menu"><a href="#work">Work</a><a href="#videos">Videos</a><a href="#writing">Writing</a><a href="#study">Study hub</a><a href="#contact">Contact</a></nav>
+  <nav class="menu"><a href="#work">Work</a><a href="#coaching">Coaching</a><a href="#videos">Videos</a><a href="#writing">Writing</a><a href="#study">Study hub</a><a href="#contact">Contact</a></nav>
 </div></header>
 
 <main class="wrap" id="top">
@@ -165,6 +180,18 @@ footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem;border-top:1p
       <li><b>International financial services</b><span>Human capital development, transformation and inclusion across Europe and Japan</span></li>
     </ol>
     <p class="edu"><b>Education:</b> BSc Psychology, Erasmus University Rotterdam (in progress) · MSc Innovation and Entrepreneurship, Istanbul Technical University · BA Business Administration · PCC, International Coaching Federation · Diploma in The Art and Science of Coaching, Erickson Coaching International. <b>Languages:</b> English, Turkish, Dutch (developing).</p>
+  </div>
+</section>
+
+<section class="block" id="coaching">
+  <div class="shead"><div><div class="eyebrow">Coaching and mentoring</div><h2>Growing people, one conversation at a time</h2><p>Coaching and mentoring run through everything I do. I coach leaders and teams, and I build tools that help others mentor well.</p></div></div>
+  <div class="coach">
+    <a class="pbook" href="mentoring-playbook/" target="_blank" rel="noopener"><img src="img/mentoring-playbook.jpg" alt="Start screen of the Mentoring Playbook: a partnership with purpose, with the session rhythm and the rules of the game" loading="lazy"><div class="pb"><span class="k">Interactive tool · Mentoring</span><h3>The Mentoring Playbook</h3><p>A working space I built for mentor and mentee: the whole journey from first meeting to closing review, a guide for running each session, coaching tools, and the forms to capture agreements, goals and progress.</p><ul><li>6+ sessions over six to seven months</li><li>Six-step session guide</li><li>Eight Word forms</li><li>Works offline, no account</li></ul><span class="go">Open the playbook →</span></div></a>
+    <div class="threads">
+      <div class="thread"><h3><span class="dot" style="background:var(--clay)"></span>Coaching leaders</h3><p>Professional Certified Coach (PCC, ICF), trained at Erickson Coaching International. I coach executives and senior leaders through the moments where the role asks them to grow.</p></div>
+      <div class="thread"><h3><span class="dot" style="background:var(--sage)"></span>Coaching teams and systems</h3><p>Qualifying in Organisation and Relationship Systems Coaching (ORSC), to work with leadership teams and boards as living systems rather than as collections of individuals.</p></div>
+      <div class="thread"><h3><span class="dot" style="background:var(--navy)"></span>Mentoring</h3><p>The mentor guides the process and the mentee owns the decisions. My playbook turns that principle into a practical route that any mentoring pair can follow.</p></div>
+    </div>
   </div>
 </section>
 
@@ -264,7 +291,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const groups=[
     ['.hero > div:first-child > *',.12],['.threads > *',.14],
-    ['section.block .shead',0],['.stats .stat',.1],['.focus .fc',.1],['.journey',0],['.journey li',.08],
+    ['section.block .shead',0],['.stats .stat',.1],['.focus .fc',.1],['.coach > *',.1],['.journey',0],['.journey li',.08],
     ['.frame',0],['.vrow',.03],['#posts .post',.1],['.study .tile',.1],['.contact > *',.15]];
   const all=[];
   groups.forEach(([sel,step])=>{const els=[...document.querySelectorAll(sel)];
