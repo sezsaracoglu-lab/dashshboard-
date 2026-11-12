@@ -1,0 +1,941 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psychological Science · Theme 1</title>
+<meta name="description" content="Psychological Science Theme 1: Passer chapter 8, single-factor experimental designs, as interactive walk-throughs with a replay of the colour experiment.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>:root{--bg:#faf7f1;--card:#fff;--line:#e8e1d3;--gold:#c9a96e;--dgold:#a8854a;--pgold:#f6eedd;--navy:#34466b;--ink:#2b2f3a;--muted:#6b7280;--blue:#e3ecf7;--rose:#f7e4e4;--green:#e2f1e6;--peach:#fbe9d9;--ok:#2f8a57;--bad:#c0392b;
+--mP:#7d8799;--mA:#b8923a;--mC:#2f8a57;--mI:#34466b}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.6}
+h1,h2,h3,.brand{font-family:'Cormorant Garamond',Georgia,serif;color:var(--navy);text-wrap:balance}
+h1{font-size:2.4rem;margin:.1em 0 .2em;line-height:1.1}h2{font-size:1.9rem;margin:.1em 0 .3em;line-height:1.15}h3{font-size:1.45rem;margin:1em 0 .4em}h4{color:var(--navy);margin:1em 0 .4em;font-size:1.02rem}
+p{margin:.5em 0}
+.app{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}
+.side{position:sticky;top:0;height:100vh;overflow:auto;background:#fff;border-right:1px solid var(--line);padding:22px 16px;display:flex;flex-direction:column;gap:14px}
+.brand{font-size:1.6rem;font-weight:700;line-height:1.1}.brand span{display:block;color:var(--dgold);font-size:1.12rem;margin-top:4px}
+.crumb{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.nav{display:flex;flex-direction:column;gap:7px}
+.nb{border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:10px 13px;text-align:left;font:inherit;font-size:.93rem;font-weight:500;color:var(--navy);cursor:pointer;display:flex;gap:8px;align-items:flex-start;text-decoration:none;line-height:1.3}
+.nb small{display:block;font-size:.74rem;color:var(--muted);font-weight:400}
+.nb.on{background:var(--navy);color:#fff;border-color:var(--navy)}.nb.on small{color:#d7dceb}
+.nb:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.nsep{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dgold);font-weight:700;margin:6px 4px 0}
+.prog{margin-top:auto;font-size:.8rem;color:var(--muted)}.pbar{height:8px;background:var(--pgold);border-radius:8px;overflow:hidden;margin:4px 0}.pbar i{display:block;height:100%;width:0;background:var(--gold);transition:width .4s}
+main{padding:26px clamp(16px,3vw,40px) 90px;min-width:0;max-width:1400px}
+.panel{display:none}.panel.on{display:block}
+.eyebrow{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dgold);font-weight:700}
+.sub{color:var(--muted);margin:.2em 0 1em;font-size:1.04rem;max-width:820px}
+.mini{font-size:.9rem;color:var(--muted)}
+.bg{font-size:.72rem;background:var(--blue);color:var(--navy);border-radius:6px;padding:1px 7px;font-weight:700;white-space:nowrap}
+.hero{background:linear-gradient(135deg,#fdf8ee 0%,#eef3fa 100%);border:1px solid var(--line);border-radius:24px;padding:26px 30px;position:relative;overflow:hidden}
+.hero .emo{position:absolute;right:24px;top:16px;font-size:3.6rem}
+.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}
+.acard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;text-align:left;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:6px;transition:transform .15s,box-shadow .15s;color:var(--ink)}
+.acard:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(52,70,107,.1)}
+.acard .n{font-size:.72rem;letter-spacing:.12em;color:var(--dgold);font-weight:700}.acard b{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--navy);line-height:1.15}
+.acard .q{font-size:.9rem;color:var(--muted)}.acard .go{font-weight:700;color:var(--navy);font-size:.88rem;margin-top:auto}
+.box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin:16px 0}
+.call{background:var(--pgold);border-left:6px solid var(--gold);border-radius:12px;padding:12px 18px;margin:14px 0;font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--navy);font-style:italic}
+.tw{overflow-x:auto;margin:10px 0}
+table.tb{border-collapse:collapse;width:100%;background:#fff;font-size:.9rem}
+.tb th{background:var(--navy);color:#fff;text-align:left;padding:8px 10px;font-weight:600}.tb td{border-top:1px solid var(--line);padding:8px 10px;vertical-align:top}
+.tb tr:nth-child(even) td{background:#fcfaf6}
+/* ---------- article walk-through ---------- */
+.ahead{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.cite{font-size:.92rem;color:var(--muted);margin:0}
+.rail{position:sticky;top:0;z-index:20;background:var(--bg);display:flex;gap:6px;overflow-x:auto;padding:10px 0 10px;border-bottom:1px solid var(--line);margin:12px 0 16px;scrollbar-width:thin}
+.rail button{flex:0 0 auto;display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px 5px 5px;font:inherit;font-size:.82rem;color:var(--navy);cursor:pointer}
+.rail button i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--pgold);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.75rem;color:var(--dgold)}
+.rail button.on{background:var(--navy);color:#fff;border-color:var(--navy)}.rail button.on i{background:var(--gold);color:#fff}
+.rail button.done i{background:var(--ok);color:#fff}
+.gotrow{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;margin:18px 0 8px;padding:12px 14px;border:1px dashed var(--line);border-radius:14px;background:#fff}
+.gotrow span{font-size:.9rem;color:var(--muted,#5d6472);margin-right:4px}
+.gotrow button{font:inherit;font-size:.88rem;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;cursor:pointer;color:var(--navy)}
+.gotrow button.g.on{background:var(--ok);border-color:var(--ok);color:#fff}.gotrow button.r.on{background:#d9892b;border-color:#d9892b;color:#fff}
+.gotrow.sm{margin:10px 0 0;padding:8px 10px}
+.rail button.got i{background:var(--ok)!important;color:#fff!important}.rail button.rev i{background:#d9892b!important;color:#fff!important}
+.pager .dots button.got{background:var(--ok)!important}.pager .dots button.rev{background:#d9892b!important}
+.step{display:none;animation:fade .25s}.step.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.shead{display:flex;gap:14px;align-items:center;margin-bottom:8px}
+.snum{flex:0 0 auto;width:58px;height:58px;border-radius:16px;background:var(--pgold);border:2px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;color:var(--dgold);font-size:.7rem;line-height:1.1;letter-spacing:.06em}
+.snum b{font-size:1.45rem;font-style:normal}
+.shead h2{margin:0}.shead .k{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dgold);font-weight:700}
+.ask{background:var(--blue);border-radius:14px;padding:9px 15px;margin:8px 0 14px;font-size:.95rem}
+.scr{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:22px;align-items:start}
+.scr>*{min-width:0}
+.fig{margin:0;background:#fffdf9;border:1px solid var(--line);border-radius:18px;padding:12px}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption{font-size:.8rem;color:var(--muted);text-align:center;font-style:italic;margin-top:6px}
+.lede{font-size:1.02rem;line-height:1.6}
+.lede p{margin:0 0 .7em}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}
+.chips button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 11px;font:inherit;font-size:.82rem;color:var(--navy);cursor:pointer}
+.chips button.on{background:var(--pgold);border-color:var(--gold);font-weight:700}
+.cb{display:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 15px;margin-top:8px;font-size:.93rem;line-height:1.55}.cb.on{display:block}
+.cb.x{background:#fbecea;border-color:#efc9c3}.cb.f{background:var(--green);border-color:#cfe5d6}.cb.h{background:var(--peach);border-color:#f0d4b9}.cb.t{background:var(--pgold);border-color:var(--gold)}.cb.o{background:#f3f5fa;border-color:#d6deec;font-style:italic}
+.cb .w{display:block;color:var(--bad);font-weight:700}.cb .r{display:block;color:var(--ok);font-weight:700;margin-top:6px}
+.snav{display:flex;justify-content:space-between;gap:10px;margin-top:22px;padding-top:14px;border-top:1px dashed var(--line)}
+.btn{border:0;background:var(--navy);color:#fff;border-radius:12px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer}.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}.btn:disabled{opacity:.4;cursor:default}
+.btn.sm{padding:6px 12px;font-size:.88rem}
+/* games */
+.game{background:#f2f6fc;border:2px dashed #a9bede;border-radius:20px;padding:16px 18px;margin:18px 0}
+.game .lbl{display:inline-block;background:var(--navy);color:#fff;border-radius:8px;padding:2px 9px;font-size:.7rem;letter-spacing:.1em;font-weight:700;margin-bottom:6px}
+.game h4{margin:.1em 0 .3em}
+.out{background:#fff;border-radius:12px;padding:10px 14px;margin-top:10px;min-height:22px;font-size:.93rem}
+.out.ok{border-left:5px solid var(--ok)}.out.no{border-left:5px solid var(--bad)}
+.opts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.opts button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:7px 12px;font:inherit;font-size:.9rem;color:var(--navy);cursor:pointer}
+.opts button.ok{background:#eaf6ee;border-color:var(--ok);color:var(--ok);font-weight:700}.opts button.no{background:#fbecea;border-color:var(--bad);color:var(--bad)}
+.mode{display:inline-block;border-radius:6px;padding:0 7px;font-size:.75rem;font-weight:700;color:#fff;vertical-align:middle}
+.mode.P{background:var(--mP)}.mode.A{background:var(--mA)}.mode.C{background:var(--mC)}.mode.I{background:var(--mI)}
+.card-q{background:#fff;border-radius:14px;padding:14px 16px;font-size:1rem;border:1px solid var(--line)}
+.score{font-weight:700;color:var(--navy)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:10px 0}
+.tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;text-align:left;font:inherit;cursor:pointer;color:var(--ink);font-size:.88rem;line-height:1.4}
+.tile b{display:block;color:var(--navy);font-size:.95rem;margin-bottom:2px}.tile .bk{display:none;margin-top:6px;color:var(--ink)}.tile.open{background:var(--pgold);border-color:var(--gold)}.tile.open .bk{display:block}
+.idcard{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.93rem}
+.idcard dt{font-weight:700;color:var(--navy)}.idcard dd{margin:0}
+details.qc{background:#fffdf8;border:1px solid var(--line);border-radius:12px;padding:9px 14px;margin:6px 0}
+details.qc summary{cursor:pointer;font-weight:600;color:var(--navy)}details.qc p{margin:.5em 0 0;background:var(--peach);border-radius:10px;padding:8px 12px;font-size:.93rem}
+.lgtag{display:inline-block;background:var(--navy);color:#fff;border-radius:999px;padding:1px 9px;font-size:.75rem;font-weight:700;margin:2px 3px 2px 0;cursor:pointer;border:0;font-family:inherit}
+.verd{display:inline-block;border-radius:6px;padding:1px 8px;font-size:.72rem;font-weight:700;letter-spacing:.04em}
+.verd.s{background:#eaf6ee;color:var(--ok)}.verd.a{background:#fbecea;color:var(--bad)}.verd.m{background:var(--pgold);color:var(--dgold)}.verd.sh{background:var(--blue);color:var(--navy)}
+.range{width:100%}
+.nut{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.nutfig{position:relative;padding-bottom:46px}.nutfig svg{width:100%;height:auto;display:block}
+.pager.nutp .dots{flex-wrap:wrap;gap:4px;min-width:0}.pager.nutp .dots button{width:14px;height:8px}.pager .pn2{flex-wrap:wrap}.nut>*{min-width:0}
+.lgacc{display:grid;gap:8px;margin:8px 0 12px}details.lgi{background:#fff;border:1px solid var(--line);border-left:5px solid var(--c);border-radius:12px;padding:0}details.lgi summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:11px 14px}details.lgi summary::-webkit-details-marker{display:none}.lgn{width:28px;height:28px;border-radius:50%;background:var(--c);color:#fff;font-weight:700;display:grid;place-items:center;font-size:.9rem}.lgq{font-weight:600;color:var(--navy);line-height:1.35}.lga{font-size:.74rem;font-weight:700;color:var(--c);white-space:nowrap}.lga:after{content:" ▸";}details.lgi[open] .lga:after{content:" ▾"}.lgb{padding:0 16px 12px 60px}.lgb p{margin:.4em 0;line-height:1.6}.lgw{background:var(--pgold);border-radius:10px;padding:7px 11px;font-size:.93rem}@media(max-width:640px){details.lgi summary{grid-template-columns:30px 1fr}.lga{grid-column:2}.lgb{padding:0 14px 12px}}
+.nuttxt p{font-size:1.02rem;line-height:1.68;margin:0}
+.nutfix{background:#fdf6e6;border:1px dashed var(--gold);border-radius:12px;padding:9px 12px;margin-top:12px;font-size:.88rem;line-height:1.5}.nutfix b{color:var(--dgold)}
+@media (max-width:999px){.nut{grid-template-columns:1fr}}
+
+.scr{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.scr>.fig{position:relative;padding-bottom:46px}
+@media (max-width:999px){.scr{grid-template-columns:1fr}}
+.teach.guided{display:flex;flex-direction:column;gap:10px}
+.pager{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 20px 14px;display:flex;flex-direction:column;flex:1;min-height:280px;box-shadow:0 6px 18px rgba(52,70,107,.06)}
+.pager .pl{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--dgold);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.pager .pl i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;letter-spacing:0}
+.pager .pg{display:none;font-size:1.02rem;line-height:1.68;margin:0;animation:fade .25s}.pager .pg.on{display:block}
+.pager .pn2{margin-top:auto;padding-top:12px;display:flex;align-items:center;gap:8px;border-top:1px dashed var(--line)}
+.pager .dots{display:flex;gap:6px;flex:1}.pager .dots button{width:30px;height:8px;border-radius:8px;border:0;background:#e6e0d3;cursor:pointer;padding:0}.pager .dots button.on{background:var(--gold)}.pager .dots button.seen{background:#d9c49a}
+.pager .pv,.pager .nx{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:6px 12px;font:inherit;font-size:.88rem;color:var(--navy);cursor:pointer;font-weight:600}
+.pager .nx{background:var(--navy);color:#fff;border-color:var(--navy)}.pager button:disabled{opacity:.35;cursor:default}
+.pager .cnt{font-size:.78rem;color:var(--muted)}
+.afterbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:16px;align-items:start}.afterbox>*{margin:0!important}
+.afterbox .tiles,.afterbox .verdict,.afterbox .vtiles{grid-column:1/-1}
+.zoom{position:absolute;bottom:10px;right:10px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 11px;font:inherit;font-size:.8rem;color:var(--navy);cursor:pointer;z-index:2}
+.zoom:hover{background:var(--pgold)}
+#lbox{position:fixed;inset:0;z-index:200;background:rgba(250,247,241,.97);display:flex;align-items:center;justify-content:center;padding:24px}
+#lbox[hidden]{display:none}#lbox .in{width:min(1500px,100%);max-height:100%;overflow:auto;background:#fffdf9;border:1px solid var(--line);border-radius:18px;padding:16px}
+#lbox svg{width:100%;height:auto;display:block}#lbox .x{position:fixed;top:16px;right:20px;border:0;background:var(--navy);color:#fff;border-radius:999px;padding:8px 16px;font:inherit;font-weight:600;cursor:pointer}
+.vq{background:var(--blue);border-radius:14px;padding:9px 15px;margin:6px 0 12px;font-size:.95rem}
+.teach{font-size:1rem;line-height:1.68}.teach p{margin:0 0 .85em}.teach.wide{max-width:880px;margin:12px 0}
+.tm{cursor:pointer;color:var(--navy);border-bottom:2px dotted var(--gold)}.tm:hover{background:var(--pgold)}
+#gpop{position:absolute;z-index:100;max-width:320px;background:#fff;border:1px solid var(--gold);border-radius:14px;padding:11px 14px;box-shadow:0 12px 30px rgba(52,70,107,.18);font-size:.9rem;line-height:1.5}
+#gpop .gsave{display:block;margin-top:8px;border:1px solid var(--gold);background:var(--pgold);color:var(--dgold);border-radius:999px;padding:4px 12px;font:inherit;font-size:.82rem;font-weight:700;cursor:pointer}
+#selSave{position:absolute;z-index:120;border:0;background:var(--navy);color:#fff;border-radius:999px;padding:6px 13px;font:inherit;font-size:.85rem;font-weight:600;box-shadow:0 8px 20px rgba(52,70,107,.25);cursor:pointer}
+#wdlg{position:fixed;inset:0;z-index:200;background:rgba(43,47,58,.35);display:flex;align-items:center;justify-content:center;padding:16px}
+#wdlg[hidden]{display:none}
+#wdlg .box{background:#fff;border-radius:18px;max-width:520px;width:100%;padding:20px 22px;box-shadow:0 20px 50px rgba(0,0,0,.2);max-height:90vh;overflow:auto}
+#wdlg h3{margin:0 0 4px;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--navy)}
+#wdlg label{display:block;font-size:.82rem;font-weight:700;color:var(--muted);margin:12px 0 4px;text-transform:uppercase;letter-spacing:.06em}
+#wdlg input,#wdlg textarea,.wtools input{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font:inherit;font-size:.95rem;background:#fffdf9}
+#wdlg textarea{min-height:64px;resize:vertical}
+#wdlg .where{font-size:.88rem;color:var(--dgold);background:var(--pgold);border-radius:10px;padding:7px 11px;margin-top:6px}
+#wdlg .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+.wtools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0}.wtools input{flex:1 1 220px;width:auto}
+.wtools .f button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:.85rem;cursor:pointer;color:var(--navy)}.wtools .f button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.wcard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;padding:12px 16px;margin:10px 0}
+.wcard.known{border-left-color:var(--ok);opacity:.85}
+.wcard h3{margin:0;font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--navy)}
+.wcard .tr{color:#9a5b2a;font-style:italic;margin:2px 0}.wcard .ex{color:var(--muted);font-size:.92rem;margin:4px 0}
+.wcard .acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.wcard .acts button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 11px;font:inherit;font-size:.82rem;cursor:pointer;color:var(--navy)}
+.wcard .acts button.k.on{background:var(--ok);color:#fff;border-color:var(--ok)}
+.wcard .acts .wh{border-color:var(--gold);background:var(--pgold);color:var(--dgold);font-weight:600}
+.wtype{display:flex;gap:6px;margin:6px 0 4px}.wtype button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer;color:var(--navy)}.wtype button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.wcard .wt{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dgold)}.wcard.note{border-left-color:#6d8fc7}
+.nb[data-nb]{border:1px dashed var(--gold)!important}
+.privnote{background:var(--green);border-radius:12px;padding:10px 14px;font-size:.92rem}
+#gpop b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy)}
+.vq .fit{margin-top:6px;padding-top:6px;border-top:1px dashed rgba(52,70,107,.18);color:#3d4a66}
+.keyl{background:var(--pgold);border-left:5px solid var(--gold);border-radius:10px;padding:9px 14px;margin:12px 0 4px;font-size:.98rem;color:var(--navy)}.keyl b{color:var(--dgold);letter-spacing:.06em;font-size:.8rem}
+.chipbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 6px;padding-top:12px;border-top:1px dashed var(--line)}
+.chipbar .tapl{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.cbtn{font:inherit;font-size:.92rem;font-weight:600;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;color:var(--navy)}.cbtn[aria-expanded="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tdrawer{display:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:8px 0;font-size:.97rem;line-height:1.6}.tdrawer.on{display:block}
+.tdrawer .row3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.tdrawer .row3>div{background:var(--bg);border-radius:12px;padding:10px 12px}.tdrawer .row3 b{display:block;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dgold);margin-bottom:4px}
+@media(max-width:800px){.tdrawer .row3{grid-template-columns:1fr}}
+.teach p.zero{background:#eef4ec;border-radius:12px;padding:12px 14px}
+.zerobox{background:#eef4ec;border:1px solid #cfe3cf;border-radius:16px;padding:14px 18px;margin:0 0 14px;font-size:1rem;line-height:1.65}.zerobox>b:first-child{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#2f6b45;margin-bottom:4px}
+.rtab{background:#fff;border:1px solid var(--line);border-left:6px solid var(--navy);border-radius:14px;padding:14px 18px;margin:14px 0}
+.rtab>b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--navy);margin-bottom:4px}
+.rtab .tw{overflow-x:auto}.rtab table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:640px}.rtab th{background:var(--navy);color:#fff;text-align:left;padding:8px 10px;font-weight:600}.rtab td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top;line-height:1.45}.rtab td:first-child{font-weight:700;color:var(--navy);background:#f7f4ee}
+.t2g{display:grid;grid-template-columns:minmax(110px,1.1fr) repeat(4,minmax(0,1fr));gap:6px;margin:10px 0;font-size:.88rem}
+.t2g>div{background:#faf8f3;border-radius:10px;padding:8px;text-align:center;line-height:1.35}
+.t2g .h{background:#fff;border:2px solid var(--c);font-weight:700;color:var(--c)}.t2g .h i{display:block;font-style:normal;font-size:1.6rem}
+.t2g .rl{background:var(--navy);color:#fff;text-align:left;font-weight:700;cursor:pointer}.t2g .rl small{display:block;font-weight:400;opacity:.8;font-size:.75rem}
+.t2g .span2{grid-column:span 2}.t2g .span4{grid-column:span 4;background:#eef2f8}
+.t2g .ch{display:inline-block;border-radius:999px;padding:2px 9px;font-weight:700;font-size:.8rem;margin:2px 0}
+.t2g .out_{background:#34466b;color:#fff}.t2g .in_{background:#c9a96e;color:#fff}.t2g .bad{background:#fbecea;color:#c0392b}.t2g .both{background:#f6eedd;color:#8a6a2f}.t2g .good{background:#e2f1e6;color:#2f8a57}
+.t2ex{background:#fff;border:1px dashed var(--gold);border-radius:12px;padding:10px 12px;margin:4px 0 8px;font-size:.92rem}
+@media(max-width:700px){.t2g{grid-template-columns:repeat(4,minmax(0,1fr))}.t2g .rl{grid-column:1/-1}.t2g .corner{display:none}}
+.rtab .src{font-size:.82rem;color:var(--muted);font-style:italic;margin:8px 0 0}
+.trapb{background:#fbecea;border:1px solid #efc9c3;border-radius:14px;padding:11px 15px;margin:12px 0;font-size:.93rem}.trapb b{display:block;color:var(--bad);margin-bottom:4px}
+.trapb .w{display:block;color:#8f2c20}.trapb .r{display:block;color:var(--ok);font-weight:600;margin-top:4px}
+details.exq{background:var(--pgold);border:1px solid var(--gold);border-radius:14px;padding:10px 15px;margin:12px 0;font-size:.93rem}details.exq summary{cursor:pointer;list-style:none}details.exq summary b{display:block;color:var(--dgold);margin-bottom:3px}
+details.exq summary span{color:var(--ink)}details.exq summary:after{content:" ▸ tap for the model answer";color:var(--dgold);font-size:.82rem;font-weight:700}details.exq[open] summary:after{content:""}details.exq p{background:#fff;border-radius:10px;padding:8px 12px;margin:8px 0 0}
+.goldb{background:var(--pgold);border-left:6px solid var(--gold);border-radius:12px;padding:10px 16px;margin:12px 0;font-family:'Cormorant Garamond',serif;font-size:1.22rem;color:var(--navy);font-style:italic}
+.endb{background:#fff;border:2px solid var(--gold);border-radius:20px;padding:18px 22px;margin:20px 0}.endb h3{margin-top:0}
+.lock{display:grid;grid-template-columns:2fr 1fr 1.4fr;gap:10px}.lock div{border-radius:14px;padding:11px 14px;font-size:.92rem;line-height:1.5}.lock b{display:block;font-size:.72rem;letter-spacing:.1em;color:var(--navy);margin-bottom:4px}
+.lock .f{background:var(--green);font-style:italic}.lock .h{background:var(--peach);font-weight:600}.lock .t{background:var(--blue)}
+.think{background:#fcfaf5;border-radius:12px;padding:10px 14px}.conn{background:var(--blue);border-radius:12px;padding:10px 14px;margin-top:12px}
+@media (max-width:900px){.lock{grid-template-columns:1fr}}
+
+.try{background:var(--peach);border-radius:14px;padding:10px 14px;margin:12px 0 8px;font-size:.93rem}
+.ans{display:none;background:#fff;border:1px solid var(--line);border-left:5px solid var(--navy);border-radius:14px;padding:12px 16px;margin-top:10px;font-size:.95rem}.ans.on{display:block;animation:fade .25s}.ans p{margin:.3em 0 .6em}
+.evi{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0}
+.ev{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:.88rem;line-height:1.45}.ev b{display:block;color:var(--navy);margin:6px 0 2px;font-size:.95rem}.ev p{margin:0 0 6px}.ev i{color:var(--muted);display:block}
+.conf{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;padding:12px 14px;background:#fff;border:1px dashed var(--gold);border-radius:14px;font-size:.9rem}.conf span{font-weight:700;color:var(--navy);margin-right:4px}
+.conf button{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer}.conf button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ictest{background:var(--blue);border-radius:12px;padding:10px 12px;margin-top:8px;font-size:.88rem}.ictest label{display:flex;gap:8px;align-items:flex-start;margin:6px 0}
+.plan8{display:flex;flex-direction:column;gap:4px;margin-bottom:6px;font-size:.86rem}.plan8 label{display:flex;gap:8px;align-items:flex-start;background:#fff;border-radius:8px;padding:5px 8px}
+#lg1Svg,#lg2Svg,#lg3Svg,#lg4Svg,#lg5Svg,#lg6Svg,#lg7Svg,#lg8Svg,#lgWeb{width:100%;height:auto;display:block}
+
+#cepSvg,#menChart,#dialSvg{max-width:660px;display:block;margin:0 auto}
+.lgcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 20px;margin:14px 0}
+.lgcard .lq{display:flex;gap:12px;align-items:flex-start}.lgcard .ln{flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.lgcard h3{margin:.05em 0 .1em;font-size:1.3rem}
+.plain{background:var(--green);border-radius:12px;padding:8px 14px;margin:8px 0;font-size:.93rem}
+svg text{font-family:'DM Sans',sans-serif}
+.t-h{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:21px;fill:#34466b}
+.t-b{font-size:13px;font-weight:700;fill:#34466b}.t-t{font-size:12.5px;fill:#2f3542}.t-s{font-size:11px;fill:#6b7280}
+.t-g{font-size:12px;font-weight:700;fill:#a8854a}.t-r{font-size:12px;font-weight:700;fill:#c0392b}.t-ok{font-size:12px;font-weight:700;fill:#2f8a57}
+.pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:10px 0}
+.pairs .pc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 8px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--navy);font-weight:700}
+.flash{background:#fff;border:1px solid var(--line);border-radius:16px;min-height:120px;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--navy);font-weight:700;text-align:center;padding:12px}
+.flash small{font-family:'DM Sans';font-size:.85rem;color:var(--muted);font-weight:400}
+.sched{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin:10px 0}
+.sched button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 2px;font:inherit;font-size:.78rem;color:var(--navy);cursor:pointer;line-height:1.2}
+.sched button.on{background:var(--navy);color:#fff}.sched button.ex{background:var(--bad);color:#fff;cursor:default}
+.inp{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:10px;font:inherit}
+.vdcard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:16px;padding:14px 16px;margin:14px 0}
+.vlinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.vlinks a{text-decoration:none;background:var(--rose);color:var(--bad);border-radius:999px;padding:5px 12px;font-size:.85rem}
+.menu-top{display:none}
+@media (max-width:900px){
+ .app{grid-template-columns:1fr}
+ .side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:14px 16px}
+ .nav{flex-direction:row;overflow-x:auto;gap:6px}.nb{flex:0 0 auto;max-width:260px}.nb small{display:none}.nsep,.prog{display:none}
+ .scr,.cards3{grid-template-columns:1fr}
+ .hero .emo{display:none}h1{font-size:1.8rem}h2{font-size:1.45rem}.snum{width:48px;height:48px}
+ main{padding:18px 16px 90px}
+ .sched{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+.rmap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:10px 0 26px}.rcard{text-align:left;background:#fff;border:1px solid var(--line);border-top:5px solid var(--c);border-radius:14px;padding:14px 16px;cursor:pointer;display:flex;flex-direction:column;gap:6px;font:inherit;color:var(--ink)}.rcard:hover{box-shadow:0 6px 18px rgba(52,70,107,.12)}.rcard .rt{font-size:.68rem;letter-spacing:.12em;font-weight:700;color:var(--c)}.rcard b{font-size:1.05rem;color:var(--navy)}.rcard .rc{font-size:.78rem;color:#6b7280;line-height:1.4}.rcard .rw{font-size:.9rem;line-height:1.5}.rcard .rl{font-size:.75rem;font-weight:700;color:var(--dgold);margin-top:auto}@media(max-width:999px){.rmap{grid-template-columns:1fr 1fr}}@media(max-width:640px){.rmap{grid-template-columns:1fr}}.sl{display:block;font-size:.9rem;margin:6px 0}.sl input{width:100%;accent-color:var(--navy)}
+@media(max-width:820px){.fig1grid{grid-template-columns:1fr!important}}
+.nb.soon{opacity:.55;cursor:default}
+.card-q b.tm{font-weight:700}
+@media(max-width:640px){.fig1grid{grid-template-columns:1fr!important}}
+</style></head>
+<body>
+<div class="app"><aside class="side">
+<div><div class="crumb">Psychological Science · Year 2 · Block 2</div><div class="brand" style="margin-top:6px">Theme 1<span>Single-factor experimental designs</span></div></div>
+<nav class="nav" aria-label="Theme 1 sections">
+<button class="nb on" data-p="start">🧭 <span>Start here<small>The chapter as one story</small></span></button>
+<button class="nb" data-nb="1" type="button">📒 <span>My notebook<small>Words and simple explanations · private</small></span></button>
+<div class="nsep">Passer · Chapter 8 · five sections</div>
+<button class="nb" data-p="r-logic">📘 <span>1 · The logic of experimentation<small>Control, cause and confounds · with the colour study replay</small></span></button>
+<div class="nb soon">📗 <span>2 · Manipulating independent variables<small>Coming next</small></span></div>
+<div class="nb soon">📙 <span>3 · Between-subjects designs<small>Coming next</small></span></div>
+<div class="nb soon">📕 <span>4 · Within-subjects designs<small>Coming next</small></span></div>
+<div class="nb soon">📊 <span>5 · Examining the results<small>Coming next</small></span></div>
+</nav>
+<div class="prog"><span id="progT">Walk-through steps</span><div class="pbar"><i id="progB"></i></div></div>
+</aside>
+<main>
+
+<!-- ================= START HERE ================= -->
+<section class="panel on" id="p-start">
+<div class="hero"><div class="emo">🧪</div>
+<div class="eyebrow">Theme 1 · Passer, Research Methods · Chapter 8 · Single-factor experimental designs</div>
+<h1>How can a researcher be sure that the one thing they changed caused the difference?</h1>
+<p>Students with a red number in the corner of their test page solved fewer puzzles, and the colour was the most plausible explanation. That sounds hard to believe. This theme shows how an experiment is built so that such a claim can be trusted, and how to spot the moment it cannot.</p>
+</div>
+
+<div class="eyebrow" style="margin-top:14px">The story of this theme</div>
+<h2 style="margin-top:.1em">What is this chapter really for, and how do its five sections fit?</h2>
+<div class="lede" style="max-width:none;margin:10px 0 14px">
+<p><b>🔭 Zoomed out.</b> An <b>experiment</b> is a study in which the researcher changes one thing on purpose, keeps everything else the same, and then measures what happens. The thing that is changed is the <b>independent variable</b>. The thing that is measured is the <b>dependent variable</b>. Chapter 8 is about the simplest kind of experiment: one with a single independent variable. Passer calls this a <b>single-factor design</b> ("factor" is another word for independent variable).</p>
+<p><b>One study runs through the whole chapter.</b> Andrew Elliot and his colleagues (2007) gave students a short puzzle test. Each test page had a participant number in the corner, written in red, green or black ink. Students with a red number solved fewer puzzles. The chapter keeps coming back to this study to show many of the design decisions a researcher has to make.</p>
+<p><b>Five sections, one line of thought.</b> (1) <b>The logic of experimentation</b> explains why an experiment can show cause and effect at all. (2) <b>Manipulating independent variables</b> shows how to create the conditions and how many you need. (3) <b>Between-subjects designs</b> put different people in each condition. (4) <b>Within-subjects designs</b> put the same people in every condition. (5) <b>Examining the results</b> shows how researchers decide whether a difference is more than chance.</p>
+<p><b>Why a psychologist learns this:</b> almost every claim of the form "X causes Y" in psychology rests on an experiment. If you can read the design, you can judge the claim. If you can build the design, you can test your own ideas.</p>
+</div>
+<div class="rmap">
+<button class="rcard" data-go="r-logic" style="--c:#34466b"><span class="rt">SECTION 1 · READY</span><b>📘 The logic of experimentation</b><span class="rc">Experimental control · three criteria for cause · confounding variables</span><span class="rw">Why changing one thing and holding the rest still lets you say "this caused that". Includes the colour study as a replay: you take the test, set the hypotheses and read the result.</span><span class="rl">Open the walk-through →</span></button>
+<div class="rcard" style="--c:#2f8a57;cursor:default;opacity:.6"><span class="rt">SECTION 2 · COMING NEXT</span><b>📗 Manipulating independent variables</b><span class="rw">Amount or type, how many conditions, experimental and control conditions.</span></div>
+<div class="rcard" style="--c:#b8923a;cursor:default;opacity:.6"><span class="rt">SECTION 3 · COMING NEXT</span><b>📙 Between-subjects designs</b><span class="rw">Different people per condition: independent groups, matched groups, natural groups.</span></div>
+<div class="rcard" style="--c:#c0392b;cursor:default;opacity:.6"><span class="rt">SECTION 4 · COMING NEXT</span><b>📕 Within-subjects designs</b><span class="rw">The same people in every condition: order effects and counterbalancing.</span></div>
+<div class="rcard" style="--c:#6d5a9e;cursor:default;opacity:.6"><span class="rt">SECTION 5 · COMING NEXT</span><b>📊 Examining the results</b><span class="rw">Descriptive and inferential statistics, the t test, ANOVA and post-hoc tests.</span></div>
+</div>
+</section>
+
+<!-- ================= SECTION 1: THE LOGIC OF EXPERIMENTATION ================= -->
+<section class="panel" id="p-r-logic">
+<div class="eyebrow">Section 1 of 5 · Textbook chapter · Why an experiment can show cause and effect</div>
+<h1>The logic of experimentation</h1>
+<p class="cite">Passer, M. W. (2021). <i>Research methods: Concepts and connections</i> (3rd ed.). Worth Publishers. Chapter 8, chapter opening and section "The logic of experimentation".</p>
+<div class="rail" data-walk="r-logic"></div>
+<div class="walk" id="w-r-logic">
+
+<!-- 1 WHERE WE ARE -->
+<section class="step" data-t="Where we are">
+<div class="shead"><div class="snum">STEP<b>1</b></div><div><div class="k">Orientation · the chapter and this section</div><h2>One changed thing, everything else held still</h2></div></div>
+<div class="vq">❓ <b>This step answers:</b> What is this chapter about, how is it built, and what does its first section want you to understand?</div>
+<div class="scr">
+<figure class="fig"><svg viewBox="0 0 560 350" role="img" aria-label="Map of chapter 8 in five stops">
+<text x="280" y="26" text-anchor="middle" class="t-h">Chapter 8 in five stops</text>
+<g>
+<rect x="12" y="48" width="100" height="232" rx="14" fill="#e3ecf7" stroke="#34466b" stroke-width="2.5"/><text x="62" y="72" text-anchor="middle" class="t-b">STOP 1</text><text x="62" y="92" text-anchor="middle" class="t-b">The logic</text><text x="62" y="120" text-anchor="middle" class="t-s">control</text><text x="62" y="138" text-anchor="middle" class="t-s">three criteria</text><text x="62" y="156" text-anchor="middle" class="t-s">for cause</text><text x="62" y="174" text-anchor="middle" class="t-s">confounding</text><text x="62" y="192" text-anchor="middle" class="t-s">variables</text><rect x="26" y="238" width="72" height="26" rx="13" fill="#34466b"/><text x="62" y="255" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">you are here</text>
+<rect x="120" y="48" width="100" height="232" rx="14" fill="#e2f1e6" stroke="#2f8a57"/><text x="170" y="72" text-anchor="middle" class="t-ok">STOP 2</text><text x="170" y="92" text-anchor="middle" class="t-b">The change</text><text x="170" y="120" text-anchor="middle" class="t-s">amount or type</text><text x="170" y="138" text-anchor="middle" class="t-s">how many</text><text x="170" y="156" text-anchor="middle" class="t-s">conditions</text><text x="170" y="174" text-anchor="middle" class="t-s">control</text><text x="170" y="192" text-anchor="middle" class="t-s">conditions</text>
+<rect x="228" y="48" width="100" height="232" rx="14" fill="#f6eedd" stroke="#c9a96e"/><text x="278" y="72" text-anchor="middle" class="t-g">STOP 3</text><text x="278" y="92" text-anchor="middle" class="t-b">Different people</text><text x="278" y="120" text-anchor="middle" class="t-s">between-subjects</text><text x="278" y="138" text-anchor="middle" class="t-s">designs</text><text x="278" y="156" text-anchor="middle" class="t-s">random</text><text x="278" y="174" text-anchor="middle" class="t-s">assignment</text>
+<rect x="336" y="48" width="100" height="232" rx="14" fill="#fbecea" stroke="#c0392b"/><text x="386" y="72" text-anchor="middle" class="t-r">STOP 4</text><text x="386" y="92" text-anchor="middle" class="t-b">Same people</text><text x="386" y="120" text-anchor="middle" class="t-s">within-subjects</text><text x="386" y="138" text-anchor="middle" class="t-s">designs</text><text x="386" y="156" text-anchor="middle" class="t-s">order effects</text><text x="386" y="174" text-anchor="middle" class="t-s">counterbalancing</text>
+<rect x="444" y="48" width="104" height="232" rx="14" fill="#efeaf7" stroke="#6d5a9e"/><text x="496" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#6d5a9e">STOP 5</text><text x="496" y="92" text-anchor="middle" class="t-b">The results</text><text x="496" y="120" text-anchor="middle" class="t-s">describe the data</text><text x="496" y="138" text-anchor="middle" class="t-s">chance or not?</text><text x="496" y="156" text-anchor="middle" class="t-s">t test, ANOVA</text>
+</g>
+<text x="280" y="312" text-anchor="middle" class="t-s">One study travels along all five stops: the colour experiment of Elliot et al. (2007).</text>
+<text x="280" y="332" text-anchor="middle" class="t-s">Stop 1 is the foundation. The other four are design choices built on it.</text>
+</svg><figcaption>The walk-throughs follow the chapter's own five sections (chapter outline).</figcaption></figure>
+<div class="teach"><dl class="idcard">
+<dt>Book</dt><dd>Michael Passer, <i>Research Methods: Concepts and Connections</i>, 3rd edition</dd>
+<dt>Chapter</dt><dd>8 · Single-factor experimental designs</dd>
+<dt>This section</dt><dd>The chapter opening and "The logic of experimentation"</dd>
+<dt>Figures and tables</dt><dd>Figure 8.1: the colour results · Table 8.1: how a confound hides inside a design</dd>
+</dl><p>Psychologists run a huge variety of experiments. One researcher switches off a gene in mice to see whether their feeding changes. Another compares different psychotherapies for depression. The topics could not be more different, so the first thing this chapter does is show what all experiments share.</p><p>Passer describes the shared method in one sentence. You isolate a factor of interest, you tinker with it, you try to keep other aspects of the situation constant, and then you see what effects your tinkering produces. He calls a well-made experiment "the best scientific tool available to draw clear conclusions about cause–effect relations".</p><p>That is a strong claim, and this section explains where the strength comes from. It introduces <b class="tm" data-g="control">experimental control</b>, shows how control satisfies the three conditions you need before you may say "X causes Y", and then names the enemy of every experiment: the <b class="tm" data-g="confound">confounding variable</b>.</p><p>The chapter teaches all of this through one study about the colour red. So before the logic, the next step tells that study as a story, and later in this walk-through you will sit the test yourself.</p><div class="goldb">★ Every experiment, whatever its topic, follows the same plan: change one thing, hold the rest still, measure what happens.</div></div></div>
+</section>
+
+<!-- 2 THE OPENING STUDY -->
+<section class="step" data-t="The colour study">
+<div class="shead"><div class="snum">STEP<b>2</b></div><div><div class="k">The study that runs through the chapter</div><h2>A red number in the corner of the page</h2></div></div>
+<div class="vq">❓ <b>This step answers:</b> What did Elliot and his colleagues do, what did they expect, and what did they find?</div>
+<div class="scr">
+<figure class="fig"><svg viewBox="0 0 560 360" role="img" aria-label="The procedure of the colour experiment">
+<text x="280" y="26" text-anchor="middle" class="t-h">What every participant went through</text>
+<g>
+<rect x="8" y="46" width="126" height="66" rx="12" fill="#e3ecf7" stroke="#34466b"/><text x="71" y="72" text-anchor="middle" class="t-b">1 · Practice</text><text x="71" y="92" text-anchor="middle" class="t-s">5-minute anagram test</text>
+<rect x="148" y="46" width="126" height="66" rx="12" fill="#f6eedd" stroke="#c9a96e"/><text x="211" y="72" text-anchor="middle" class="t-g">2 · Envelope</text><text x="211" y="92" text-anchor="middle" class="t-s">"check your ID code"</text>
+<rect x="288" y="46" width="126" height="66" rx="12" fill="#e3ecf7" stroke="#34466b"/><text x="351" y="72" text-anchor="middle" class="t-b">3 · Real test</text><text x="351" y="92" text-anchor="middle" class="t-s">15 anagrams · 5 min</text>
+<rect x="428" y="46" width="126" height="66" rx="12" fill="#e2f1e6" stroke="#2f8a57"/><text x="491" y="72" text-anchor="middle" class="t-ok">4 · Score</text><text x="491" y="92" text-anchor="middle" class="t-s">number solved</text>
+<g fill="#a8854a"><path d="M136 73 L146 79 L136 85Z"/><path d="M276 73 L286 79 L276 85Z"/><path d="M416 73 L426 79 L416 85Z"/></g>
+</g>
+<text x="280" y="146" text-anchor="middle" class="t-b">What the researchers changed: the ink of the code on your pages</text>
+<g>
+<rect x="60" y="162" width="120" height="124" rx="6" fill="#fff" stroke="#b9b2a3"/><text x="168" y="184" text-anchor="end" font-size="15" font-weight="700" fill="#c0392b" font-style="italic">No. 47</text><g stroke="#d9d2c3" stroke-width="5" stroke-linecap="round"><path d="M76 210 L164 210"/><path d="M76 232 L150 232"/><path d="M76 254 L164 254"/></g><text x="120" y="306" text-anchor="middle" class="t-r">red code</text>
+<rect x="220" y="162" width="120" height="124" rx="6" fill="#fff" stroke="#b9b2a3"/><text x="328" y="184" text-anchor="end" font-size="15" font-weight="700" fill="#2f8a57" font-style="italic">No. 47</text><g stroke="#d9d2c3" stroke-width="5" stroke-linecap="round"><path d="M236 210 L324 210"/><path d="M236 232 L310 232"/><path d="M236 254 L324 254"/></g><text x="280" y="306" text-anchor="middle" class="t-ok">green code</text>
+<rect x="380" y="162" width="120" height="124" rx="6" fill="#fff" stroke="#b9b2a3"/><text x="488" y="184" text-anchor="end" font-size="15" font-weight="700" fill="#222" font-style="italic">No. 47</text><g stroke="#d9d2c3" stroke-width="5" stroke-linecap="round"><path d="M396 210 L484 210"/><path d="M396 232 L470 232"/><path d="M396 254 L484 254"/></g><text x="440" y="306" text-anchor="middle" font-size="12" font-weight="700" fill="#222">black code</text>
+</g>
+<text x="280" y="338" text-anchor="middle" class="t-s">Chance decided which page you got. Same task, same instructions, same five minutes.</text>
+</svg><figcaption>Procedure as described in the chapter opening. The code number shown is our example.</figcaption></figure>
+<div class="teach"><p>Step 1 said every experiment changes one thing and holds the rest still. Here is what that looks like in a real laboratory, told from the chair of a participant.</p><p>You are asked to solve 15 five-letter <b class="tm" data-g="anagram">anagrams</b>, such as NIDRK (drink). After a 5-minute practice test you get an envelope with the real test: a cover page and five pages with three anagrams each. The experimenter asks you to check that your <b>participant ID code</b> is on every page. It is, handwritten in the upper-right corner. You work for five minutes, get your score, fill in a questionnaire and are <b class="tm" data-g="debrief">debriefed</b>. What you were not told: by <b class="tm" data-g="randassign">random assignment</b>, your code was written in red, green or black ink.</p><p>The researchers had a <b class="tm" data-g="hypothesis">hypothesis</b>: perceiving red would impair achievement on cognitive tasks. They based it on <b class="tm" data-g="classcond">classical conditioning</b>. They reasoned that, from childhood, red goes together with danger and with poor achievement (warning signs, a teacher's red pen). So red may become a signal that, without conscious awareness, raises people's sense of threat in achievement situations and so impairs performance. The result matched: overall, participants with red codes performed more poorly than those with green or black codes.</p><p>Could it be a fluke? The team <b class="tm" data-g="replicate">replicated</b> the experiment several times (Elliot et al., 2007, 2011): with American, German and French undergraduates and German high school students, with other comparison colours, with numerical, analogy and memory tasks taken from IQ tests, and with a coloured cover sheet instead of a coloured code. In every replication, participants exposed to red performed worse overall. The question for the rest of this section is why we may believe that colour was the cause.</p><div class="trapb"><b>⚠ The trap</b><span class="w">✗ Each student solved anagrams three times, once with each colour, and did worst with red.</span><span class="r">✓ Each student saw only one colour. Three different groups were compared, and chance decided who was in which group.</span></div><details class="exq"><summary><b>📝 Exam-style question</b><span>In the first colour experiment of Elliot et al. (2007), what did the researchers manipulate and what did they measure?</span></summary><p><b>Model answer:</b> They manipulated the colour of the ID code on the test pages (red, green or black). They measured cognitive performance as the number of anagrams solved in five minutes.</p></details></div></div>
+<div class="verdict examfig" style="background:#fff;border:2px solid var(--gold);border-radius:16px;padding:14px 16px;margin:16px 0">
+<div class="eyebrow">🎯 The chapter's own figure · Figure 8.1 (book p. 227)</div>
+<h3 style="margin:.2em 0 .2em">"Effects of color on cognitive performance"</h3>
+<p class="mini" style="margin:0 0 .6em">This is the figure from the chapter, redrawn by us. Bar heights and error bars are approximate, read from the figure. Look at it yourself first, then use the four looks, then try the questions before you open the answers.</p>
+<div style="display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px;align-items:start" class="fig1grid">
+<figure class="fig" style="margin:0"><svg viewBox="0 0 560 300" id="fig81" role="img" aria-label="Redrawn Figure 8.1: mean number of anagrams and analogies solved per colour condition"></svg><figcaption>Redrawn after Figure 8.1 in Passer (2021), based on Elliot et al. (2007). Values approximate, read from the figure.</figcaption></figure>
+<div>
+<p style="margin:.1em 0 .4em"><b>How to read it in four looks</b></p>
+<ol style="margin:0 0 .6em 1.1em;padding:0;font-size:.93rem;line-height:1.55">
+<li><b>What was measured?</b> The vertical axis shows the mean (average) number of items solved. Higher is better.</li>
+<li><b>What are the groups?</b> One bar per colour condition. Panel (a): U.S. undergraduates, ID code in red, green or black, anagram task. Panel (b): German undergraduates, test cover partly red, partly green or white, analogy items from an IQ test.</li>
+<li><b>Read each bar as a sentence.</b> "Students who saw red solved about 4.4 anagrams on average. Students who saw green or black solved about 5.7 to 5.8."</li>
+<li><b>Look at the thin I-shaped lines.</b> These are <b class="tm" data-g="errorbar">error bars</b>, here 95% confidence interval bars. They reflect how much the scores vary within each condition.</li>
+</ol>
+<p class="mini" style="margin:0"><b>Careful:</b> the vertical axes do not start at zero (3.5 in panel a, 9.5 in panel b). That makes the red bar look much shorter than the difference in numbers really is.</p>
+</div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:12px">
+<details class="exq" style="margin:0"><summary><b>Describe</b><span>What pattern do both panels of Figure 8.1 show?</span></summary><p><b>Model answer:</b> In both experiments the red condition has the lowest mean. The two other colours are close to each other and clearly higher than red.</p></details>
+<details class="exq" style="margin:0"><summary><b>Apply</b><span>Panel (b) used a different country, a different task and a different way of showing the colour. Why does that make the conclusion stronger?</span></summary><p><b>Model answer:</b> It is a replication with changes. If red still lowers performance with other participants, another task and a cover sheet instead of a code, the finding is less likely to be a fluke or to depend on one specific setup.</p></details>
+<details class="exq" style="margin:0"><summary><b>Why it matters</b><span>A student says: "In panel (a) the red bar is less than half as tall as the black bar, so red halves performance." What is wrong?</span></summary><p><b>Model answer:</b> The axis starts at 3.5, not 0. The means are about 4.4 versus about 5.8, a difference of roughly 1.4 anagrams, far from half.</p></details>
+<details class="exq" style="margin:0"><summary><b>Design</b><span>Why do both experiments include two comparison colours instead of only one?</span></summary><p><b>Model answer:</b> The chapter does not give the authors' reason. A sensible reading: with two comparison colours you can see that red stands apart from both, so the result is not just "red versus one particular colour". The chapter does note that the team always included red and varied the other colours.</p></details>
+</div></div>
+</section>
+
+<!-- 3 EXPERIMENTAL CONTROL -->
+<section class="step" data-t="Three levers of control">
+<div class="shead"><div class="snum">STEP<b>3</b></div><div><div class="k">Key concept · experimental control</div><h2>The researcher holds three levers</h2></div></div>
+<div class="vq">❓ <b>This step answers:</b> What exactly does a researcher control in an experiment?</div>
+<div class="scr">
+<figure class="fig"><svg viewBox="0 0 560 370" role="img" aria-label="Three levers of experimental control, each with its example from the colour experiment">
+<text x="280" y="26" text-anchor="middle" class="t-h">Experimental control = three levers</text>
+<g>
+<rect x="14" y="44" width="168" height="206" rx="16" fill="#f6eedd" stroke="#c9a96e" stroke-width="2"/>
+<circle cx="98" cy="78" r="18" fill="#c9a96e"/><text x="98" y="84" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">1</text>
+<text x="98" y="118" text-anchor="middle" class="t-g" font-size="14">MANIPULATE</text><text x="98" y="138" text-anchor="middle" class="t-b">the independent variable</text>
+<line x1="34" y1="152" x2="162" y2="152" stroke="#c9a96e" stroke-dasharray="4 4"/>
+<text x="98" y="172" text-anchor="middle" class="t-s">In the colour study:</text>
+<circle cx="66" cy="200" r="13" fill="#c0392b"/><circle cx="98" cy="200" r="13" fill="#2f8a57"/><circle cx="130" cy="200" r="13" fill="#222"/>
+<text x="98" y="236" text-anchor="middle" class="t-t">ink colour of the ID code</text>
+<rect x="196" y="44" width="168" height="206" rx="16" fill="#e2f1e6" stroke="#2f8a57" stroke-width="2"/>
+<circle cx="280" cy="78" r="18" fill="#2f8a57"/><text x="280" y="84" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">2</text>
+<text x="280" y="118" text-anchor="middle" class="t-ok" font-size="14">MEASURE</text><text x="280" y="138" text-anchor="middle" class="t-b">the dependent variable</text>
+<line x1="216" y1="152" x2="344" y2="152" stroke="#2f8a57" stroke-dasharray="4 4"/>
+<text x="280" y="172" text-anchor="middle" class="t-s">In the colour study:</text>
+<rect x="236" y="184" width="88" height="32" rx="6" fill="#fff" stroke="#2f8a57"/><text x="280" y="205" text-anchor="middle" font-size="13" font-weight="700" fill="#2f8a57">NIDRK → ?</text>
+<text x="280" y="236" text-anchor="middle" class="t-t">anagrams solved, and when</text>
+<rect x="378" y="44" width="168" height="206" rx="16" fill="#e3ecf7" stroke="#34466b" stroke-width="2"/>
+<circle cx="462" cy="78" r="18" fill="#34466b"/><text x="462" y="84" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">3</text>
+<text x="462" y="118" text-anchor="middle" class="t-b" font-size="14">REGULATE</text><text x="462" y="138" text-anchor="middle" class="t-b">everything else</text>
+<line x1="398" y1="152" x2="526" y2="152" stroke="#34466b" stroke-dasharray="4 4"/>
+<text x="462" y="172" text-anchor="middle" class="t-s">In the colour study:</text>
+<text x="462" y="196" text-anchor="middle" class="t-t">same task instructions</text><text x="462" y="216" text-anchor="middle" class="t-t">for everyone</text>
+<text x="462" y="236" text-anchor="middle" class="t-t">random assignment</text>
+</g>
+<g stroke="#a8854a" stroke-width="2.5" fill="none"><path d="M98 252 L98 276 L462 276 L462 252"/><path d="M280 252 L280 300"/></g>
+<path d="M273 298 L280 310 L287 298Z" fill="#a8854a"/>
+<rect x="60" y="312" width="440" height="44" rx="12" fill="#fff" stroke="#a8854a" stroke-width="2"/>
+<text x="280" y="331" text-anchor="middle" class="t-b">Goal: the manipulated variable, rather than other uncontrolled</text><text x="280" y="348" text-anchor="middle" class="t-b">factors, is the cause of any effect on behaviour</text>
+</svg><figcaption>Based on "Exercising control over variables". The three levers are our picture of the chapter's three-part list.</figcaption></figure>
+<div class="teach"><p>We have the story of the colour study. Now we take it apart. In everyday life, "control" means being able to regulate or direct something. In an experiment the word has a precise meaning with three parts, and each part is something the researcher decides.</p><p>First, the researcher can <b>manipulate</b> one or more <b class="tm" data-g="iv">independent variables</b>. Second, the researcher can <b>choose</b> which <b class="tm" data-g="dv">dependent variables</b> are measured, and how and when, so that the effect of the independent variable can be assessed. Third, the researcher can <b>regulate</b> other aspects of the research environment, including the way participants are exposed to the conditions. Think of a sound engineer at a mixing desk: one slider is moved on purpose, one meter is watched, and every other slider is taped in place.</p><p>Elliot et al. (2007) pulled all three levers. They manipulated the colour of the ID code. They chose to measure cognitive performance with an anagram task and controlled when it was given. And they regulated the rest: the task instructions were always the same, and participants were exposed to the colours by random assignment.</p><p>Why go to this trouble? Passer states the goal directly: control enables researchers to conclude that the variable they manipulate, rather than other uncontrolled factors, is the cause of any obtained effects on behaviour. In the colour study, it let the team conclude that ink colour was "the most plausible explanation" for the difference between the groups. The next step shows why these three levers are exactly the right ones.</p><div class="trapb"><b>⚠ The trap</b><span class="w">✗ Experimental control means the experiment has a control group.</span><span class="r">✓ Experimental control is the researcher's ability to manipulate, to choose the measurement and to regulate the rest. A control group is a different idea (section 2 of the chapter).</span></div><details class="exq"><summary><b>📝 Exam-style question</b><span>A researcher plays either fast or slow music while people fill in a maths test, uses the same test and the same room for everyone, and counts the number of correct answers after ten minutes. Name the three components of experimental control in this study.</span></summary><p><b>Model answer:</b> Manipulating the independent variable (music tempo: fast or slow). Choosing the dependent variable and how and when it is measured (number correct after ten minutes). Regulating other aspects of the environment (same test and room for everyone).</p></details></div></div>
+</section>
+
+<!-- 4 THREE CRITERIA -->
+<section class="step" data-t="Three tests for cause">
+<div class="shead"><div class="snum">STEP<b>4</b></div><div><div class="k">The logic · from control to cause</div><h2>Three questions before you may say "X causes Y"</h2></div></div>
+<div class="vq">❓ <b>This step answers:</b> How does experimental control help a researcher meet the three criteria for inferring cause and effect?</div>
+<div class="scr">
+<figure class="fig"><svg viewBox="0 0 560 380" role="img" aria-label="Three gates between cause and effect, and the lever that opens each">
+<text x="280" y="26" text-anchor="middle" class="t-h">Three gates on the road from X to Y</text>
+<rect x="4" y="118" width="66" height="64" rx="14" fill="#f6eedd" stroke="#c9a96e" stroke-width="2"/><text x="37" y="146" text-anchor="middle" font-size="20" font-weight="700" fill="#a8854a">X</text><text x="37" y="166" text-anchor="middle" class="t-s">colour</text>
+<rect x="484" y="118" width="72" height="64" rx="14" fill="#e2f1e6" stroke="#2f8a57" stroke-width="2"/><text x="520" y="146" text-anchor="middle" font-size="20" font-weight="700" fill="#2f8a57">Y</text><text x="520" y="166" text-anchor="middle" class="t-s">score</text>
+<path d="M70 150 L484 150" stroke="#d9d2c3" stroke-width="16" stroke-linecap="round"/>
+<g>
+<rect x="80" y="60" width="126" height="180" rx="14" fill="#fff" stroke="#34466b" stroke-width="2"/><text x="143" y="84" text-anchor="middle" class="t-b">GATE 1</text><text x="143" y="104" text-anchor="middle" class="t-b" font-size="14">Covariation</text><text x="143" y="130" text-anchor="middle" class="t-t">As X varies,</text><text x="143" y="148" text-anchor="middle" class="t-t">Y varies</text><path d="M115 196 L127 176 L139 190 L151 170 L171 184" fill="none" stroke="#34466b" stroke-width="2.5"/><text x="143" y="226" text-anchor="middle" class="t-s">scores differ by colour</text>
+<rect x="217" y="60" width="126" height="180" rx="14" fill="#fff" stroke="#34466b" stroke-width="2"/><text x="280" y="84" text-anchor="middle" class="t-b">GATE 2</text><text x="280" y="104" text-anchor="middle" class="t-b" font-size="14">Temporal order</text><text x="280" y="130" text-anchor="middle" class="t-t">X comes</text><text x="280" y="148" text-anchor="middle" class="t-t">before Y</text><circle cx="254" cy="186" r="9" fill="#c9a96e"/><path d="M266 186 L296 186" stroke="#34466b" stroke-width="2.5"/><path d="M294 180 L304 186 L294 192Z" fill="#34466b"/><circle cx="314" cy="186" r="9" fill="#2f8a57"/><text x="280" y="226" text-anchor="middle" class="t-s">colour first, then test</text>
+<rect x="354" y="60" width="126" height="180" rx="14" fill="#fff" stroke="#34466b" stroke-width="2"/><text x="417" y="84" text-anchor="middle" class="t-b">GATE 3</text><text x="417" y="104" text-anchor="middle" class="t-b" font-size="14">No rival story</text><text x="417" y="130" text-anchor="middle" class="t-t">No plausible</text><text x="417" y="148" text-anchor="middle" class="t-t">alternative</text><circle cx="417" cy="186" r="16" fill="none" stroke="#c0392b" stroke-width="2.5"/><path d="M406 197 L428 175" stroke="#c0392b" stroke-width="2.5"/><text x="417" y="226" text-anchor="middle" class="t-s">nothing else differs</text>
+</g>
+<g stroke="#a8854a" stroke-width="2" stroke-dasharray="5 4"><path d="M143 242 L143 282"/><path d="M280 242 L280 282"/><path d="M417 242 L417 282"/></g>
+<rect x="80" y="284" width="126" height="72" rx="12" fill="#f6eedd" stroke="#c9a96e"/><text x="143" y="304" text-anchor="middle" class="t-g">OPENED BY</text><text x="143" y="322" text-anchor="middle" class="t-t">manipulate X,</text><text x="143" y="340" text-anchor="middle" class="t-t">measure Y per group</text>
+<rect x="217" y="284" width="126" height="72" rx="12" fill="#f6eedd" stroke="#c9a96e"/><text x="280" y="304" text-anchor="middle" class="t-g">OPENED BY</text><text x="280" y="322" text-anchor="middle" class="t-t">expose first,</text><text x="280" y="340" text-anchor="middle" class="t-t">measure after</text>
+<rect x="354" y="284" width="126" height="72" rx="12" fill="#f6eedd" stroke="#c9a96e"/><text x="417" y="304" text-anchor="middle" class="t-g">OPENED BY</text><text x="417" y="322" text-anchor="middle" class="t-t">remove other factors</text><text x="417" y="340" text-anchor="middle" class="t-t">that could vary Y</text>
+</svg><figcaption>Based on "Causal inference and experimental control". The gates are our picture of the three criteria.</figcaption></figure>
+<div class="teach"><p>Step 3 gave the researcher three levers. This step shows what they are for. To conclude that a variable X has a causal influence on a variable Y, three criteria must be met. You have seen them in earlier chapters; here Passer maps each one onto a part of experimental control.</p><p>The three criteria are: <b class="tm" data-g="covariation">covariation</b> of X and Y (as X varies, Y varies), <b class="tm" data-g="temporal">temporal order</b> (the variation in X occurs before the variation in Y), and the <b>absence of plausible alternative explanations</b>. The logic behind them is simple: in principle, if X is the only factor in a situation that varies before a change in Y, then the logical conclusion is that the variation in X caused the change in Y. A detective uses the same logic: the suspect must be linked to the crime, must have been there before it happened, and nobody else may fit the facts.</p><p>Now the colour study, gate by gate. Covariation is achieved by creating two or more distinct conditions and checking whether the scores differ between them. Elliot et al. created red, green and black conditions, and the number of anagrams solved "differed significantly depending on the color condition". Temporal order is achieved by exposing people to the independent variable before the dependent variable can change: participants saw the colour first and then did the task, so anagram performance could not have caused the colour. The third criterion is pursued by eliminating other factors that might systematically make Y vary.</p><p>Notice the difference in wording. Passer says the first two criteria are "achieved". For the third he says researchers "attempt to achieve" it. The design itself fixes the time order (gate 2) and lets you check gate 1: whether the scores really differ is then shown by the data. Gate 3 has to be defended against every other factor one can think of, and that defence fills the rest of this section.</p><div class="trapb"><b>⚠ The trap</b><span class="w">✗ The red group scored lower, so the three criteria are met.</span><span class="r">✓ A difference between groups only shows covariation. You still need the time order, and above all you must rule out other explanations for the difference.</span></div><details class="exq"><summary><b>📝 Exam-style question</b><span>In a survey, students who drink more coffee report more stress. A journalist writes that coffee causes stress. Which of the three criteria for a causal conclusion are not met, and why?</span></summary><p><b>Model answer:</b> Covariation is met (coffee and stress go together). Temporal order is not established: stressed students may start drinking more coffee. Alternative explanations are not ruled out: for example a heavy workload could raise both. Nothing was manipulated and nothing was held constant.</p></details></div></div>
+</section>
+
+<!-- 5 CONFOUNDS -->
+<section class="step" data-t="The confound">
+<div class="shead"><div class="snum">STEP<b>5</b></div><div><div class="k">Key concept · extraneous and confounding variables</div><h2>When a second thing changes together with the first</h2></div></div>
+<div class="vq">❓ <b>This step answers:</b> What is a confounding variable, how does it differ from an extraneous variable, and why does it ruin a causal conclusion?</div>
+<div class="ask">🔬 <b>Be the researcher:</b> choose how the sessions are planned over three weeks, then switch between the two imaginary worlds and watch the bars.</div>
+<div class="scr">
+<figure class="fig"><svg viewBox="0 0 560 370" id="cfSvg" role="img" aria-label="Interactive: session planning over three weeks and the resulting group means"></svg>
+<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:8px"><button class="btn sm" type="button" id="cfA">📅 One colour per week</button><button class="btn sm ghost" type="button" id="cfB">🔀 Every colour in every week</button></div>
+<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:6px"><button class="btn sm ghost" type="button" id="cfW0">World A: red does nothing</button><button class="btn sm ghost" type="button" id="cfW1">World B: red really hurts</button></div>
+<figcaption>The planning example is the chapter's own (Table 8.1). The bar heights are illustrative, not data.</figcaption></figure>
+<div class="teach"><div class="out" id="cfOut" style="margin:0 0 12px"></div><p>Gate 3 asked for "no plausible alternative explanation". This step shows what such an alternative looks like, with the example Passer builds himself.</p><p>Many things can influence how well someone solves anagrams: how hot, humid or noisy the room is, for example. Elliot's team was not interested in those. For them, each one was an <b class="tm" data-g="extraneous">extraneous variable</b>: a factor that is not the focus of interest in a particular study, but that could influence the outcome if left uncontrolled. An extraneous variable is a risk. It becomes a real problem when it lines up with the conditions. A <b class="tm" data-g="confound">confounding variable</b> is a factor that covaries with the independent variable in such a way that we can no longer determine which one has caused the changes in the dependent variable.</p><p>Passer's thought experiment: suppose the colour experiment took three weeks, and all red-condition students took part in week 1, all green in week 2 and all black in week 3. Now imagine week 1 was midterm week. Anxiety, distraction or fatigue around the exams could explain why the red group did worst. Table 8.1 shows the problem: the row "colour" and the row "proximity to midterm exams" change together, column by column. In the lab on the left, plan the sessions that way and compare the two worlds. The bars cannot tell you which world you are in.</p><p>The remedy is in the design, before any data are collected. Researchers reduce confounding in two ways: by <b>keeping extraneous factors as constant as possible</b> across the conditions, and by <b>balancing</b> extraneous factors that cannot be held constant. Choose "every colour in every week" in the lab: midterm stress is still there, but it now weighs equally on all three colours. The next two steps apply these two remedies to the two places confounds come from: the environment and the participants.</p><div class="trapb"><b>⚠ The trap</b><span class="w">✗ Midterm stress affects anagram scores, so it is a confounding variable in any anagram study.</span><span class="r">✓ It is extraneous. It only becomes a confound when it differs systematically between the conditions, as when one colour is tested in midterm week.</span></div><details class="exq"><summary><b>📝 Exam-style question</b><span>A researcher compares a new study app with ordinary note cards. All app users are tested in a quiet library room, all note-card users in a busy cafeteria. The app group scores higher. Why can the researcher not conclude that the app works better?</span></summary><p><b>Model answer:</b> The location (noise level) covaries with the independent variable: it differs between the two conditions in the same way the study method does. It is a confounding variable, so it is impossible to tell whether the app or the quiet room caused the higher scores.</p></details></div></div>
+<div class="rtab" style="margin:16px 0 0"><b>Table 8.1 · Potential confounding of an independent variable</b><div class="tw"><table style="min-width:0"><thead><tr><th></th><th>Condition 1</th><th>Condition 2</th><th>Condition 3</th></tr></thead><tbody><tr><td>Independent variable: colour of ID code</td><td style="color:#c0392b;font-weight:700">Red</td><td style="color:#2f8a57;font-weight:700">Green</td><td style="font-weight:700">Black</td></tr><tr><td>Confounding variable: proximity to midterm exams</td><td>Midterm week</td><td>1 week after midterms</td><td>2 weeks after midterms</td></tr></tbody></table></div><p class="src">Table 8.1 in Passer (2021), section "Causal inference and experimental control". Read it column by column: in each column both rows change at once. That is what "covaries with the independent variable" looks like.</p></div>
+</section>
+
+<!-- 6 ENVIRONMENT -->
+<section class="step" data-t="Taming the setting">
+<div class="shead"><div class="snum">STEP<b>6</b></div><div><div class="k">Remedy 1 · confounds from the research environment</div><h2>Hold it constant, or spread it evenly</h2></div></div>
+<div class="vq">❓ <b>This step answers:</b> How do researchers stop the room, the clock and the experimenter from becoming confounding variables?</div>
+<div class="scr">
+<figure class="fig"><svg viewBox="0 0 560 380" role="img" aria-label="Two toolboxes against environmental confounds, plus the experimenter">
+<text x="280" y="26" text-anchor="middle" class="t-h">Two tools for the setting, four for the experimenter</text>
+<rect x="14" y="44" width="258" height="182" rx="16" fill="#e3ecf7" stroke="#34466b" stroke-width="2"/>
+<text x="143" y="70" text-anchor="middle" class="t-b" font-size="14">HOLD CONSTANT</text><text x="143" y="88" text-anchor="middle" class="t-s">the same for every participant</text>
+<g font-size="12" fill="#34466b" font-weight="700" text-anchor="middle">
+<rect x="30" y="102" width="108" height="30" rx="15" fill="#fff" stroke="#34466b"/><text x="84" y="122">same task</text>
+<rect x="148" y="102" width="108" height="30" rx="15" fill="#fff" stroke="#34466b"/><text x="202" y="122">same room</text>
+<rect x="30" y="140" width="108" height="30" rx="15" fill="#fff" stroke="#34466b"/><text x="84" y="160">same chair</text>
+<rect x="148" y="140" width="108" height="30" rx="15" fill="#fff" stroke="#34466b"/><text x="202" y="160">temperature</text>
+<rect x="30" y="178" width="108" height="30" rx="15" fill="#fff" stroke="#34466b"/><text x="84" y="198">humidity</text>
+<rect x="148" y="178" width="108" height="30" rx="15" fill="#fff" stroke="#34466b"/><text x="202" y="198">noise level</text></g>
+<rect x="288" y="44" width="258" height="182" rx="16" fill="#f6eedd" stroke="#c9a96e" stroke-width="2"/>
+<text x="417" y="70" text-anchor="middle" class="t-g" font-size="14">BALANCE</text><text x="417" y="88" text-anchor="middle" class="t-s">cannot be the same, so spread it equally</text>
+<g font-size="12" fill="#a8854a" font-weight="700" text-anchor="middle">
+<rect x="322" y="102" width="190" height="30" rx="15" fill="#fff" stroke="#c9a96e"/><text x="417" y="122">time of day</text>
+<rect x="322" y="140" width="190" height="30" rx="15" fill="#fff" stroke="#c9a96e"/><text x="417" y="160">day of the week</text>
+<rect x="322" y="178" width="190" height="30" rx="15" fill="#fff" stroke="#c9a96e"/><text x="417" y="198">week or month of the year</text></g>
+<rect x="14" y="242" width="532" height="124" rx="16" fill="#efeaf7" stroke="#6d5a9e" stroke-width="2"/>
+<circle cx="56" cy="282" r="13" fill="#6d5a9e"/><path d="M34 328 Q56 296 78 328 Z" fill="#6d5a9e"/>
+<text x="100" y="268" class="t-b" font-size="14" fill="#6d5a9e" style="fill:#6d5a9e">THE EXPERIMENTER IS PART OF THE SETTING</text><text x="100" y="286" class="t-s">Goal: no systematic difference in how conditions are treated</text>
+<g font-size="12" fill="#6d5a9e" font-weight="700" text-anchor="middle">
+<rect x="100" y="298" width="100" height="30" rx="15" fill="#fff" stroke="#6d5a9e"/><text x="150" y="318">training</text>
+<rect x="208" y="298" width="128" height="30" rx="15" fill="#fff" stroke="#6d5a9e"/><text x="272" y="318">fixed instructions</text>
+<rect x="344" y="298" width="94" height="30" rx="15" fill="#fff" stroke="#6d5a9e"/><text x="391" y="318">automation</text>
+<rect x="446" y="298" width="86" height="30" rx="15" fill="#fff" stroke="#6d5a9e"/><text x="489" y="318">masking</text></g>
+<text x="316" y="350" text-anchor="middle" class="t-s">Masking: the experimenter does not know the hypothesis, or who is in which condition</text>
+</svg><figcaption>Based on "Potential confounding variables: Environmental factors".</figcaption></figure>
+<div class="teach"><p>Step 5 ended with two remedies: hold constant, or balance. This step applies them to the first source of confounds, the research environment, which means everything around the participant.</p><p>Many environmental factors can simply be <b>held constant</b>, or nearly so. All participants can do the same anagram task, in the same room, on the same chair, and the room's temperature, humidity and noise can be kept reasonably steady. A factor that never changes cannot explain a difference between groups. Other factors cannot be held constant even in principle: not everyone can be tested at the same moment. Time of day, day of the week and time of the year have to be <b>balanced</b> instead, meaning each condition gets an equal share of them.</p><p>Passer shows how. On any given day, he would run an equal number of participants from each condition in the morning and in the afternoon. Then nobody can argue that the red group did worst because it was always tested on Friday afternoon at the end of a tiring week. And because every week of the three-week experiment includes students from every colour condition, proximity to midterms cannot explain the result either. Over the whole experiment these factors end up equivalent across the three conditions.</p><p>One part of the environment is easy to forget: the experimenter. Experimenters are not robots, so their behaviour varies a little from one participant to the next. That is not the danger. The danger is a <b>systematic</b> bias, where the experimenter consistently behaves differently depending on the condition a participant is in. The tools against it are rigorous training, a standardized set of instructions, automating instructions and data recording, and <b class="tm" data-g="masking">masking</b> (also called blinding), which chapter 10 covers in detail. With the setting tamed, one source of confounds remains: the people themselves.</p><div class="trapb"><b>⚠ The trap</b><span class="w">✗ Balancing removes the effect of time of day on the scores.</span><span class="r">✓ The effect is still there: people may still do worse on Friday afternoon. Balancing makes sure every condition gets the same share of it, so it cannot explain a difference between conditions.</span></div><details class="exq"><summary><b>📝 Exam-style question</b><span>A study with two conditions runs for four weeks in one lab. The lab cannot be used at the same hour for everyone. What should the researcher do about the time of testing, and why does simply "keeping it constant" not work here?</span></summary><p><b>Model answer:</b> Time of testing cannot be held constant because participants must be tested at different hours and on different days. The researcher should balance it: run equal numbers of participants from each condition in each time slot (morning and afternoon, each weekday, each week), so that time is equivalent across the conditions.</p></details></div></div>
+</section>
+
+<!-- 7 PARTICIPANTS -->
+<section class="step" data-t="Taming people differences">
+<div class="shead"><div class="snum">STEP<b>7</b></div><div><div class="k">Remedy 2 · confounds from participant characteristics</div><h2>Maybe the red group was just weaker to begin with</h2></div></div>
+<div class="vq">❓ <b>This step answers:</b> How do researchers make sure that the groups did not already differ before the experiment started?</div>
+<div class="ask">🎲 <b>Be the researcher:</b> put 30 volunteers into the three colour groups. Try both ways of assigning, deal a few times, then change the number of volunteers.</div>
+<div class="scr">
+<figure class="fig"><svg viewBox="0 0 560 360" id="raSvg" role="img" aria-label="Interactive: assigning volunteers with different anagram ability to three colour groups"></svg>
+<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:8px"><button class="btn sm ghost" type="button" id="raBias">📝 By sign-up order</button><button class="btn sm" type="button" id="raRand">🎲 Random assignment · deal again</button></div>
+<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:6px;align-items:center"><span class="mini">Volunteers:</span><button class="btn sm ghost" type="button" data-ran="6">6</button><button class="btn sm ghost" type="button" data-ran="30">30</button><button class="btn sm ghost" type="button" data-ran="300">300</button></div>
+<figcaption>Illustration with made-up ability scores, not data from the chapter. The sign-up rule (early sign-ups get green, late sign-ups get red) is our example of a biased way to assign.</figcaption></figure>
+<div class="teach"><div class="out" id="raOut" style="margin:0 0 12px"></div><p>Suppose the room, the clock and the experimenter are all under control. Passer says one objection still stands. Perhaps the students in the red condition would have done worst anyway, even with a green or black code. Maybe, as a group, they simply had poorer anagram ability, less confidence or lower intelligence. Then their low score would have nothing to do with red.</p><p>How this objection is handled depends on a basic design choice, which the rest of the chapter works out. In a <b class="tm" data-g="between">between-subjects design</b>, different participants are assigned to each condition. The usual protection there is <b class="tm" data-g="randassign">random assignment</b>: each participant has an equal probability of being assigned to any one of the conditions. Random assignment does not make people the same. It distributes their individual differences across the conditions in an unbiased, nonsystematic way, so that at the start of the experiment the groups are assumed to be equivalent to one another. Think of shuffling a deck before dealing three hands: nobody chose who gets the aces.</p><p>In a <b class="tm" data-g="within">within-subjects design</b>, each participant takes part in every condition. Stable characteristics such as general anagram ability and intelligence then essentially remain the same in every condition, because the people are the same, and cannot confound the results. But a new problem appears: boredom, fatigue and experience with the task change as a person moves from one condition to the next. If red were always the last condition, you could not tell whether red or tiredness lowered the scores. The protection is <b class="tm" data-g="counterbal">counterbalancing</b>: the order of conditions is varied so that no condition has an overall advantage over the others.</p><p>So there are two routes to the same goal, and each one answers the objection that opened this step. Elliot's team took the first route: different students per colour, assigned at random. That is why the low scores of the red group cannot plausibly be blamed on weaker students. You have now seen every piece of the logic. In the next step you run the colour study yourself.</p><div class="trapb"><b>⚠ The trap</b><span class="w">✗ Random assignment makes the groups identical.</span><span class="r">✓ It makes them equivalent overall: differences between people are spread over the groups without bias. Small chance differences remain, as you can see when you deal again in the lab.</span></div><details class="exq"><summary><b>📝 Exam-style question</b><span>A researcher lets participants choose whether they want to do a memory task with or without background music. The "with music" group remembers fewer words. Which alternative explanation has the researcher failed to rule out, and which procedure would have ruled it out?</span></summary><p><b>Model answer:</b> The groups may have differed before the task: people who choose music may differ in memory ability, motivation or habits from people who choose silence. Participant characteristics are confounded with the condition. Random assignment to the two conditions would have distributed these differences across the groups in an unbiased way.</p></details></div></div>
+</section>
+
+<!-- 8 REPLAY -->
+<section class="step" data-t="Replay the study">
+<div class="shead"><div class="snum">STEP<b>8</b></div><div><div class="k">Study Replay Lab · Elliot et al. (2007), experiment 1</div><h2>Take the test, then be the researcher</h2></div></div>
+<div class="vq">❓ <b>This step answers:</b> What were the hypotheses of the colour study, how was it tested, what was found, and what may you conclude?</div>
+<div class="game" id="g-replay"><span class="lbl">GAME · REPLAY THE COLOUR STUDY</span><h4>Seven stages: first you are the participant, then the researcher</h4><p class="mini">Everything about the procedure comes from the chapter. The short version of the test (its puzzle items, the cover story and the question about your code colour) and the two practice questions at the end are ours.</p><div id="rpLab"></div></div>
+</section>
+
+<!-- 9 LOCK IT IN -->
+<section class="step" data-t="Lock it in">
+<div class="shead"><div class="snum">STEP<b>9</b></div><div><div class="k">The section in one page</div><h2>Why an experiment can say "this caused that"</h2></div></div>
+<div class="vq">❓ <b>This step answers:</b> What is the conclusion of this section, in plain words, and what does it prepare you for?</div>
+<div class="scr">
+<figure class="fig"><svg viewBox="0 0 560 380" role="img" aria-label="Summary: control leads to the three criteria, with two shields against confounds">
+<text x="280" y="26" text-anchor="middle" class="t-h">The whole logic in one picture</text>
+<rect x="14" y="46" width="150" height="150" rx="16" fill="#f6eedd" stroke="#c9a96e" stroke-width="2"/><text x="89" y="70" text-anchor="middle" class="t-g" font-size="13">CONTROL</text>
+<text x="89" y="98" text-anchor="middle" class="t-t">1 · manipulate X</text><text x="89" y="122" text-anchor="middle" class="t-t">2 · measure Y</text><text x="89" y="146" text-anchor="middle" class="t-t">3 · regulate the rest</text><text x="89" y="178" text-anchor="middle" class="t-s">three levers</text>
+<path d="M166 121 L196 121" stroke="#a8854a" stroke-width="3"/><path d="M194 114 L206 121 L194 128Z" fill="#a8854a"/>
+<rect x="208" y="46" width="150" height="150" rx="16" fill="#e3ecf7" stroke="#34466b" stroke-width="2"/><text x="283" y="70" text-anchor="middle" class="t-b" font-size="13">THREE CRITERIA</text>
+<text x="283" y="98" text-anchor="middle" class="t-t">covariation</text><text x="283" y="122" text-anchor="middle" class="t-t">temporal order</text><text x="283" y="146" text-anchor="middle" class="t-t">no rival explanation</text><text x="283" y="178" text-anchor="middle" class="t-s">three gates</text>
+<path d="M360 121 L390 121" stroke="#a8854a" stroke-width="3"/><path d="M388 114 L400 121 L388 128Z" fill="#a8854a"/>
+<rect x="402" y="46" width="144" height="150" rx="16" fill="#e2f1e6" stroke="#2f8a57" stroke-width="2"/><text x="474" y="70" text-anchor="middle" class="t-ok" font-size="13">CONCLUSION</text>
+<text x="474" y="108" text-anchor="middle" font-size="20" font-weight="700" fill="#2f8a57">X → Y</text><text x="474" y="140" text-anchor="middle" class="t-t">X is the most</text><text x="474" y="158" text-anchor="middle" class="t-t">plausible cause</text>
+<rect x="14" y="214" width="532" height="150" rx="16" fill="#fbecea" stroke="#c0392b" stroke-width="2"/>
+<text x="280" y="238" text-anchor="middle" class="t-r" font-size="13">THE ENEMY: A CONFOUNDING VARIABLE (travels together with X)</text>
+<rect x="30" y="252" width="244" height="98" rx="12" fill="#fff" stroke="#c0392b"/><text x="152" y="274" text-anchor="middle" class="t-b">From the setting</text><text x="152" y="296" text-anchor="middle" class="t-t">hold constant · balance</text><text x="152" y="316" text-anchor="middle" class="t-t">train and mask the experimenter</text><text x="152" y="338" text-anchor="middle" class="t-s">room, time, experimenter</text>
+<rect x="286" y="252" width="244" height="98" rx="12" fill="#fff" stroke="#c0392b"/><text x="408" y="274" text-anchor="middle" class="t-b">From the people</text><text x="408" y="296" text-anchor="middle" class="t-t">different people: random assignment</text><text x="408" y="316" text-anchor="middle" class="t-t">same people: counterbalancing</text><text x="408" y="338" text-anchor="middle" class="t-s">ability, confidence, fatigue</text>
+</svg><figcaption>Our summary of the section "The logic of experimentation".</figcaption></figure>
+<div class="teach"><p>You started with a claim that sounded unlikely: a red number in the corner of a page lowers performance. You now have everything needed to say why the claim deserves to be taken seriously.</p><p>The researcher controlled three things: what was changed (the ink colour), what was measured and when (anagrams solved, at a moment they chose), and everything else (same instructions, random assignment). Together, those three levers open the three gates to a causal conclusion: the scores differed with colour, the colour came before the test, and other explanations were made implausible.</p><p>The third gate is the one that has to be defended. Any factor that travels together with the independent variable is a confounding variable, and it leaves you unable to say what caused the difference. Confounds come from the setting and from the people. Against the setting you hold constant or balance. Against people differences you assign at random, or you use the same people and counterbalance the order.</p><p>This is the foundation for the rest of the chapter. Section 2 looks more closely at the first lever: how to create the conditions of an independent variable. Sections 3 and 4 work out the two routes from step 7, between-subjects and within-subjects designs. Section 5 returns to the first gate and asks how researchers decide that a difference is unlikely to be due to chance.</p>
+<div class="verdict" style="background:#fff;border:2px solid var(--gold);border-radius:16px;padding:14px 16px;margin:14px 0"><div class="eyebrow">📌 The verdict in plain words · the questions this section answers</div>
+<p class="mini" style="margin:.3em 0 .6em">Each row is one question from this section, its answer, how the colour study shows it, and what the chapter still has to work out.</p>
+<div class="tw"><table class="tb"><thead><tr><th>The question</th><th>Answer</th><th>How the colour study shows it</th><th>Still to come</th></tr></thead><tbody>
+<tr><td><b>1 · What is experimental control?</b></td><td>The ability to manipulate the independent variable, to choose how and when the dependent variable is measured, and to regulate the rest of the research environment.</td><td>Ink colour was manipulated, anagram performance was measured after exposure, instructions were the same for all and assignment was random. <i>(Step 3)</i></td><td>How to build the conditions of an independent variable: section 2.</td></tr>
+<tr><td><b>2 · How does control allow a causal conclusion?</b></td><td>The parts of control together make it possible to meet the three criteria: covariation, temporal order, and no plausible alternative explanation.</td><td>Scores differed significantly by colour; colour came before the test; other factors were kept from varying with colour. <i>(Step 4)</i></td><td>How researchers decide a difference is statistically significant: section 5.</td></tr>
+<tr><td><b>3 · What can still go wrong?</b></td><td>A confounding variable: a factor that covaries with the independent variable, so you cannot tell which one caused the change.</td><td>The thought experiment in Table 8.1: one colour per week, with midterms in the red week. <i>(Step 5)</i></td><td>Further threats to validity and special control groups: chapter 10.</td></tr>
+<tr><td><b>4 · How are confounds reduced?</b></td><td>Hold extraneous factors constant; balance the ones that cannot be held constant. For people: random assignment (different people) or counterbalancing (same people).</td><td>Same task and instructions for all; students randomly assigned to a colour. Passer adds how he would balance time slots and weeks. <i>(Steps 6 and 7)</i></td><td>Between-subjects designs: section 3. Within-subjects designs: section 4.</td></tr>
+</tbody></table></div>
+<div class="goldb" style="margin:12px 0 4px">★ Overall conclusion: because the experimenter decides what changes, what is measured and what stays the same, an experiment offers the best opportunity to examine how an independent variable causally influences a dependent variable (chapter summary, first point).</div>
+<p class="mini" style="margin:.4em 0 0"><b>Why this matters:</b> from here on, every design in the chapter is a different way of protecting the third gate. If you can name what else differed between the conditions, you have found the weak spot of any study.</p></div>
+</div></div>
+<div class="endb"><h3>🔒 Lock it in</h3><div class="lock"><div class="f"><b>💬 SAY IT TO A FRIEND</b>"In an experiment you change one thing on purpose, measure what happens afterwards, and keep everything else equal. If the groups then differ, the thing you changed is the most plausible cause. The whole trick is making sure nothing else differed between the groups, like the week they were tested in or how good they already were."</div><div class="h"><b>🔑 MEMORY HOOK</b>Three levers, three gates: change it, measure it after, keep the rest equal.</div><div class="t"><b>✎ EXAM TIP</b>When a question describes a study and asks whether a causal conclusion is justified, look for anything that differs between the conditions besides the independent variable. If you find it, name it and call it a confounding variable.</div></div>
+<div class="think" style="margin-top:12px"><b>🧠 Think of it this way.</b> You want to know whether a new fertilizer makes tomato plants grow taller. You give it to the plants by the sunny window and not to the plants in the dark corner. The fertilized plants grow taller. Was it the fertilizer or the sun? You cannot know, because sunlight travelled together with fertilizer. Mix the pots over both spots by the toss of a coin, and the sun can no longer take the credit.</div>
+<h4>Comprehension check</h4>
+<details class="qc"><summary>1 · A room that is a little too warm for everyone in the study: is that an extraneous variable or a confounding variable?</summary><p>Extraneous, and here it is under control: it is the same for every participant, so it cannot explain a difference between conditions. It would become a confounding variable only if one condition were tested in a warmer room than another.</p></details>
+<details class="qc"><summary>2 · Which two of the three criteria for cause are handled by manipulating first and measuring afterwards?</summary><p>Covariation (you create distinct conditions and compare the scores; the data show whether they differ) and temporal order (the exposure comes before the measurement). The third, no plausible alternative explanation, has to be defended by holding constant, balancing, random assignment or counterbalancing.</p></details>
+<details class="qc"><summary>3 · In a study where every participant does all conditions, why is random assignment to groups not the tool that protects against confounds?</summary><p>There are no separate groups: the same people are in every condition, so stable differences between people cannot confound the result. The risk is the order of the conditions (fatigue, boredom, experience), and the tool for that is counterbalancing.</p></details>
+<div class="conn"><b>🔗 Connection.</b> Keep the colour study in mind. In section 2 it returns as an example of a qualitative manipulation, in section 3 as the example of an independent-groups design and as the basis for Passer's worked illustration of block randomization, and Figure 8.1 is used again in section 5 as an example of descriptive statistics.</div>
+</div>
+</section>
+
+</div></section>
+</main></div>
+
+<script>
+(function(){
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+const store={get(k,d){try{const v=localStorage.getItem('psysci1_'+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('psysci1_'+k,JSON.stringify(v))}catch(e){}}};
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const K={N:'#34466b',G:'#c9a96e',D:'#a8854a',C:'#2f8a57',R:'#c0392b',mu:'#6b7280',B:'#222'};
+const T=(x,y,s,o='')=>`<text x="${x}" y="${y}" ${o}>${s}</text>`;
+const R=(x,y,w,h,f,s='none',r=12,e='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${f}" stroke="${s}" ${e}/>`;
+const mid='text-anchor="middle"';
+const ORDER=['r-logic'];
+const NEXTL={'r-logic':'Back to the chapter map →'};
+
+/* ---------- lightbox ---------- */
+const lb=document.createElement('div');lb.id='lbox';lb.hidden=true;lb.innerHTML='<button class="x" type="button">✕ Close</button><div class="in"></div>';document.body.appendChild(lb);
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.closest('.x'))lb.hidden=true});
+
+/* ---------- navigation ---------- */
+function show(p){let st=0;const m=String(p).match(/^(.*)-(\d+)$/);if(m&&$('#p-'+m[1])){p=m[1];st=+m[2]}if(!$('#p-'+p))p='start';$$('.panel').forEach(x=>x.classList.toggle('on',x.id==='p-'+p));$$('.nb[data-p]').forEach(b=>b.classList.toggle('on',b.dataset.p===p));if(!st&&location.hash!=='#'+p)history.replaceState(null,'','#'+p);if(window.psWalk)window.psWalk(p,st);scrollTo(0,0)}
+window.psShow=show;
+document.addEventListener('click',e=>{const b=e.target.closest('[data-p],[data-go]');if(!b)return;show(b.dataset.p||b.dataset.go)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.hidden=true});
+
+/* ---------- walk-through engine ---------- */
+const seen=new Set(store.get('seen',[]));
+const TOTAL=$$('.walk .step').length;
+function prog(){const t=$('#progT'),b=$('#progB');if(t)t.textContent=seen.size+' of '+TOTAL+' walk-through steps visited';if(b)b.style.width=(100*seen.size/Math.max(1,TOTAL))+'%';if(typeof gotProg==='function')try{gotProg()}catch(e){}}
+const WALK={};
+$$('.walk').forEach(w=>{
+  const id=w.id.slice(2),steps=$$('.step',w),rail=$('.rail[data-walk="'+id+'"]');
+  const W={i:0,go(i){i=Math.max(0,Math.min(steps.length-1,i));W.i=i;steps.forEach((s,k)=>s.classList.toggle('on',k===i));
+    const rb=$$('button',rail);rb.forEach((b,k)=>{b.classList.toggle('on',k===i);b.classList.toggle('done',seen.has(id+':'+(k+1))&&k!==i)});
+    if(rb[i])rb[i].scrollIntoView({block:'nearest',inline:'center'});
+    if($('#p-'+id).classList.contains('on')){seen.add(id+':'+(i+1));store.set('seen',[...seen]);prog()}}};
+  steps.forEach((s,i)=>{
+    const b=document.createElement('button');b.type='button';b.innerHTML='<i>'+(i+1)+'</i>'+esc(s.dataset.t);b.onclick=()=>{W.go(i);history.replaceState(null,'','#'+id+'-'+(i+1))};rail.appendChild(b);
+    const nav=document.createElement('div');nav.className='snav';
+    nav.innerHTML=(i?'<button class="btn ghost" data-d="-1">← '+esc(steps[i-1].dataset.t)+'</button>':'<span></span>')+(i<steps.length-1?'<button class="btn" data-d="1">'+esc(steps[i+1].dataset.t)+' →</button>':'<button class="btn" data-next="1">'+(NEXTL[id]||'Next →')+'</button>');
+    s.appendChild(nav);
+    nav.querySelectorAll('[data-d]').forEach(x=>x.onclick=()=>{W.go(i+(+x.dataset.d));history.replaceState(null,'','#'+id+'-'+(i+1+(+x.dataset.d)));rail.scrollIntoView({behavior:'smooth'})});
+    const nx=nav.querySelector('[data-next]');if(nx)nx.onclick=()=>show(ORDER[ORDER.indexOf(id)+1]||'start');
+  });
+  WALK[id]=W;W.go(0);
+});
+prog();
+
+/* ---------- teaching extras per step ---------- */
+const TT={
+'r-logic-1':{fit:'The theme asks how a researcher can be sure that the one thing they changed caused the difference. This step gives the plan in one sentence; the rest of the section shows why the plan works.',
+ think:'A cooking test. You bake the same cake twice and change only the oven temperature. If the second cake is drier, the temperature did it, because nothing else was different.',
+ friend:'"Chapter 8 is about the simplest experiment: you change one thing, keep the rest the same and measure what happens. The first section explains why that lets you talk about cause and effect."',
+ hook:'Change one, hold the rest, measure.',
+ tip:'"Single-factor" means one independent variable. It does not mean two conditions: the colour study has one factor (colour) with three conditions.'},
+'r-logic-2':{fit:'This is the case the whole chapter leans on. Colour is the "one thing changed"; every later step asks why we may believe it, and nothing else, caused the lower scores.',
+ key:'One small change (the ink of a code), three groups formed by chance, one measure: the red group solved fewer anagrams, and the result came back in every replication.',
+ think:'A taste test where three groups get the same soup in a red, green or black bowl, and nobody is told the bowl matters. If the red-bowl group rates the soup lower, the bowl is the only thing that differed systematically.',
+ friend:'"Students did a short puzzle test. Each had a number in the corner of the pages, written in red, green or black. Nobody knew colour was the point. The red group solved fewer puzzles, and the same happened when the study was repeated in other countries with other tasks."',
+ hook:'Red pen, red warning, red code: fewer solved.',
+ tip:'Know the three roles by heart: independent variable = colour of the ID code, dependent variable = number of anagrams solved, design = different students per colour, assigned at random.'},
+'r-logic-3':{fit:'Being sure that "the one thing you changed" caused the difference starts with being the one who decides what changes, what is measured and what stays the same.',
+ key:'Experimental control has three parts: manipulate the independent variable, choose how and when the dependent variable is measured, and regulate everything else.',
+ think:'A sound engineer at a mixing desk: one slider is moved on purpose, one meter is watched, and every other slider is taped down.',
+ friend:'"Control in an experiment means three things: you decide what gets changed, you decide what gets measured and when, and you keep the rest of the situation the same for everyone."',
+ hook:'Manipulate, measure, regulate.',
+ tip:'Random assignment belongs to the third lever. It is part of regulating how participants are exposed to the conditions.'},
+'r-logic-4':{fit:'This is the heart of the theme question. "Being sure" has a precise meaning: all three criteria are met.',
+ key:'Manipulating and measuring let you test covariation and fix the temporal order. Ruling out alternative explanations is the hard part, and it is why control over "everything else" matters.',
+ think:'A detective needs three things: the suspect is linked to the crime, was there before it happened, and nobody else fits the facts.',
+ friend:'"To say X causes Y you need three things: Y changes when X changes, X came first, and nothing else can explain it. An experiment is built to check the first and to guarantee the second. The third one you have to earn."',
+ hook:'Together, before, nothing else.',
+ tip:'If a question says a study "found a relationship" or "a difference", that is only the first criterion. Check time order and alternative explanations before accepting a causal claim.'},
+'r-logic-5':{fit:'A confound is exactly the situation in which the researcher changed two things at once without meaning to. Then the theme question cannot be answered.',
+ key:'An extraneous variable becomes a confounding variable only when it changes together with the independent variable.',
+ think:'You test a new running shoe, but you wear it only on days with wind in your back. Faster times: the shoe or the wind? The wind travelled together with the shoe.',
+ friend:'"A confound is a second difference between your groups that rides along with the one you created. If all the red-code students were tested in exam week, you cannot tell whether red or exam stress lowered their scores."',
+ hook:'A confound is a stowaway: it travels with X.',
+ tip:'To show that something is a confound, show that it differs between the conditions. A factor that is the same in all conditions, or spread equally, is not a confound.'},
+'r-logic-6':{fit:'Here the theme question gets its first practical answer: for everything around the participant, make it the same, or give every condition an equal share.',
+ key:'What can be the same for everyone is held constant. What cannot be the same, such as the time of testing, is balanced across the conditions.',
+ think:'A fair race. Everyone runs the same distance on the same track (held constant). Lanes cannot be the same for all, so runners rotate lanes over the heats (balanced).',
+ friend:'"You keep the room, the task and the instructions the same for everybody. Things like the time of day cannot be the same, so you make sure each condition is tested equally often in the morning and in the afternoon."',
+ hook:'Same where you can, equal shares where you cannot.',
+ tip:'Balancing does not remove the influence of a factor. It makes the influence equal across conditions. Experimenter bias is a problem only when it is systematic, meaning tied to the condition.'},
+'r-logic-7':{fit:'The last rival explanation for any difference between groups is that the groups were different people. This step shows the two ways to take that explanation away.',
+ key:'Different people in each condition: use random assignment. The same people in every condition: use counterbalancing.',
+ think:'Picking two football teams. If the captains choose, one team may end up stronger. If you shuffle name cards and deal them, skill is spread by chance and neither team is favoured.',
+ friend:'"Maybe the red group was just worse at puzzles. Random assignment answers that: chance decides who gets which colour, so strong and weak students are spread over all groups. If you use the same people for all colours instead, you mix up the order so no colour always comes last."',
+ hook:'Shuffle the people, or shuffle the order.',
+ tip:'Do not write that random assignment makes groups "identical" or "equal". Write "equivalent overall" or "differences are distributed in an unbiased way".'},
+'r-logic-8':{fit:'You now test the theme question yourself: is colour the one thing that differed, and is the difference more than chance?'},
+'r-logic-9':{fit:'This step gathers the full answer to the theme question for the simplest case: one independent variable, well controlled.'}
+};
+setTimeout(()=>$$('.walk').forEach(w=>{const id=w.id.slice(2);$$('.step',w).forEach((st,i)=>{const d=TT[id+'-'+(i+1)];if(!d)return;
+ const vq=st.querySelector('.vq');if(vq&&d.fit&&!vq.querySelector('.fit')){const f=document.createElement('div');f.className='fit';f.innerHTML='↳ <b>How it fits the theme:</b> '+d.fit;vq.appendChild(f)}
+ if(!d.think)return;
+ const anchor=st.querySelector(':scope>.afterbox')||st.querySelector(':scope>.scr');if(!anchor)return;
+ const wrap=document.createElement('div');wrap.className='ttx';let h='';
+ if(d.key&&![...st.querySelectorAll('.goldb')].some(g=>!g.closest('.verdict')))h+='<div class="keyl"><b>★ KEY INSIGHT</b> · '+d.key+'</div>';
+ const k=id+'-'+(i+1);
+ h+='<div class="chipbar"><span class="tapl">Tap to open ▸</span><button class="cbtn" type="button" data-td="'+k+'-a" aria-expanded="false">🧠 Think of it like…</button><button class="cbtn" type="button" data-td="'+k+'-b" aria-expanded="false">💬 Say it to a friend · 🔑 Memory hook · ✎ Exam tip</button></div>'
+  +'<div class="tdrawer" id="td-'+k+'-a">🧠 '+d.think+'</div>'
+  +'<div class="tdrawer" id="td-'+k+'-b"><div class="row3"><div><b>💬 Say it to a friend</b>'+d.friend+'</div><div><b>🔑 Memory hook</b>'+d.hook+'</div><div><b>✎ Exam tip</b>'+d.tip+'</div></div></div>';
+ wrap.innerHTML=h;anchor.after(wrap)})}),0);
+document.addEventListener('click',e=>{const b=e.target.closest('.cbtn[data-td]');if(!b)return;const dr=document.getElementById('td-'+b.dataset.td);const on=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',on);dr.classList.toggle('on',on)});
+
+/* ---------- "I got this" per step ---------- */
+const GOT=store.get('got',{});
+function gotRow(key,label,onch){const r=document.createElement('div');r.className='gotrow';
+ r.innerHTML='<span>'+label+'</span><button type="button" class="g">✓ I got this</button><button type="button" class="r">🔁 Review again</button>';
+ const paint=()=>{r.querySelector('.g').classList.toggle('on',GOT[key]===1);r.querySelector('.r').classList.toggle('on',GOT[key]===0)};
+ r.querySelectorAll('button').forEach(b=>b.onclick=()=>{const v=b.classList.contains('g')?1:0;if(GOT[key]===v)delete GOT[key];else GOT[key]=v;store.set('got',GOT);paint();onch&&onch()});
+ paint();return r}
+function paintRail(id){const rail=$('.rail[data-walk="'+id+'"]');if(!rail)return;$$('button',rail).forEach((b,k)=>{const v=GOT[id+':'+(k+1)];b.classList.toggle('got',v===1);b.classList.toggle('rev',v===0);b.querySelector('i').textContent=v===1?'✓':(k+1)})}
+function gotProg(){const n=Object.keys(GOT).filter(k=>GOT[k]===1).length;const t=$('#progT');if(t)t.textContent=seen.size+' of '+TOTAL+' walk-through steps visited · '+n+' marked "I got this"'}
+$$('.walk').forEach(w=>{const id=w.id.slice(2);$$('.step',w).forEach((st,i)=>{const nav=st.querySelector(':scope>.snav');const r=gotRow(id+':'+(i+1),'How did this section go?',()=>{paintRail(id);gotProg()});if(nav)nav.before(r);else st.appendChild(r)});paintRail(id)});
+gotProg();
+window.psWalk=(p,st)=>{if(WALK[p])WALK[p].go(st?st-1:WALK[p].i)};
+
+/* ---------- glossary: tap a dotted term ---------- */
+const GLOSS={
+experiment:['Experiment','A study in which the researcher changes (manipulates) one or more variables, tries to control other factors, and then measures how the change affects participants\' responses.'],
+iv:['Independent variable','The variable the researcher manipulates. In the colour study: the colour of the ID code (red, green or black).'],
+dv:['Dependent variable','The response that is measured to see whether the independent variable had an effect. In the colour study: the number of anagrams solved.'],
+control:['Experimental control','The researcher\'s ability to (1) manipulate independent variables, (2) choose which dependent variables are measured, and how and when, and (3) regulate other aspects of the research environment.'],
+extraneous:['Extraneous variable','A factor that is not the focus of interest in a particular study, but that could influence the outcome of the study if left uncontrolled. Example: how noisy the room is.'],
+confound:['Confounding variable','A factor that covaries with (changes together with) the independent variable, so that we can no longer determine which one caused the changes in the dependent variable.'],
+covariation:['Covariation','Two things vary together: as X changes, Y changes too. The first criterion for a causal conclusion.'],
+temporal:['Temporal order','The order in time. For X to cause Y, the change in X must come before the change in Y. The second criterion for a causal conclusion.'],
+between:['Between-subjects design','An experimental design in which different participants are assigned to each of the conditions. Each person takes part in only one condition.'],
+within:['Within-subjects design','An experimental design in which each participant takes part in every condition of the experiment, one or more times.'],
+randassign:['Random assignment','A procedure in which each participant has an equal probability of being assigned to any one of the conditions in the experiment. Chance, not the researcher or the participant, decides.'],
+counterbal:['Counterbalancing','A procedure in a within-subjects design in which the order of conditions is varied, so that no condition has an overall advantage relative to the other conditions.'],
+masking:['Masking (blinding)','One or both of: keeping the experimenter unaware of the hypothesis being tested, and, when possible, keeping the experimenter unaware of the condition to which an individual participant has been assigned. Covered further in chapter 10.'],
+classcond:['Classical conditioning','A form of learning in which a neutral signal comes to trigger a reaction because it has repeatedly gone together with something meaningful. Pavlov\'s dogs learned to salivate to the sound of a tone.'],
+anagram:['Anagram','A word with its letters scrambled. The task is to put the letters back in order. NIDRK becomes DRINK.'],
+hypothesis:['Hypothesis','A specific prediction that a study can test. Here: perceiving the colour red will impair achievement on cognitive tasks.'],
+replicate:['Replication','Running a study again to see whether the result comes back. Here the experiment was repeated with other participants, colours, tasks and ways of showing the colour.'],
+debrief:['Debriefing','The talk at the end of a study in which the researcher explains its real purpose to the participant.'],
+errorbar:['Error bars','The thin I-shaped lines that straddle the top of each bar in a graph. In Figure 8.1 they are 95% confidence interval bars; they reflect the variability of the scores within each condition.'],
+significant:['Statistically significant','A finding that is unlikely to be due simply to chance. Traditionally: less than a 5% probability that chance factors alone could be responsible for the result.'],
+h0:['Null hypothesis (H0)','The "nothing happens" statement that a statistical test tries to knock down. Here: colour makes no difference to the mean number of anagrams solved.'],
+h1:['Alternative hypothesis (H1)','The statement that goes against H0: colour does make a difference to the mean number of anagrams solved. The researchers\' prediction adds a direction: students who see red solve fewer.']
+};
+let gpop=document.getElementById('gpop');if(!gpop){gpop=document.createElement('div');gpop.id='gpop';gpop.hidden=true;document.body.appendChild(gpop)}
+document.addEventListener('click',e=>{const t=e.target.closest('.tm');if(!t){if(!e.target.closest('#gpop'))gpop.hidden=true;return}
+ const d=GLOSS[t.dataset.g];if(!d)return;gpop.innerHTML='<b>'+d[0]+'</b>'+esc(d[1]);gpop.hidden=false;
+ const r=t.getBoundingClientRect(),w=Math.min(320,window.innerWidth-24);gpop.style.maxWidth=w+'px';
+ let x=r.left+window.scrollX;if(x+w>window.scrollX+window.innerWidth-12)x=window.scrollX+window.innerWidth-12-w;gpop.style.left=Math.max(12,x)+'px';gpop.style.top=(r.bottom+window.scrollY+6)+'px'});
+
+/* ---------- From zero: first-time-learner card per step ---------- */
+const ZERO={
+'r-logic-1':'Start with the basics. This theme is one chapter from a textbook about how psychologists do research. The chapter is about <b>experiments</b>: studies in which the researcher changes something on purpose and then measures what happens. A <b>variable</b> is anything that can differ, such as a colour or a test score. A <b>single-factor design</b> is an experiment that changes only one variable. <b>In the picture:</b> the chapter as five stops. The blue stop on the left is where you are now: the reasoning behind every experiment. The four other stops are the practical choices that build on it.',
+'r-logic-2':'To explain experiments, the chapter opens with a real one, by the psychologist Andrew Elliot and his colleagues in 2007. An <b>anagram</b> is a scrambled word that you have to unscramble. An <b>ID code</b> is just a participant number. <b>Undergraduates</b> are university students who have not yet graduated. A <b>replication</b> is a repeat of a study to check that the result comes back. <b>In the picture:</b> the top row shows the four things every participant went through, from left to right. The three pages below show the one thing the researchers changed between participants: the ink of the number in the corner.',
+'r-logic-3':'The word <b>control</b> is used in a special way in research. It does not mean a "control group" here. It means the three things a researcher gets to decide. The <b>independent variable</b> is what the researcher changes on purpose. The <b>dependent variable</b> is what the researcher measures to see whether the change had an effect. <b>In the picture:</b> three panels, one per lever. The top half of each panel names the lever. The bottom half shows what Elliot and his colleagues did with it. The arrows lead to the goal at the bottom.',
+'r-logic-4':'A <b>causal</b> claim says that one thing makes another thing happen. <b>X</b> is the letter researchers use for the possible cause and <b>Y</b> for the possible effect. Here X is the colour and Y is the puzzle score. A <b>criterion</b> is a condition that must be met (plural: criteria). <b>In the picture:</b> a road from X to Y with three gates. A causal claim only gets through if all three gates open. The gold boxes under the gates show which part of the experiment opens each one.',
+'r-logic-5':'<b>Extraneous</b> means "coming from outside": something that is not what you are studying. To <b>covary</b> means to change together. <b>Midterms</b> are the exams halfway through a term. <b>In the picture:</b> on the left, a calendar of three weeks with the test sessions as coloured dots. Week 1 is midterm week. On the right, the average puzzle score of each colour group. Use the buttons to plan the sessions in two ways and to switch between two imaginary worlds: one where red does nothing, one where red really lowers scores.',
+'r-logic-6':'The <b>research environment</b> is everything around the participant during the study: the room, the time, the materials and the person running the session (the <b>experimenter</b>). <b>Systematic</b> means "following a pattern", as opposed to random ups and downs. <b>In the picture:</b> the blue box holds things that can be kept the same for everyone. The gold box holds things that cannot be the same and are spread equally instead. The purple band shows the four tools that keep the experimenter from treating conditions differently.',
+'r-logic-7':'<b>Participant characteristics</b> are the ways people differ before the study starts, such as ability, confidence or intelligence. A <b>design</b> is the plan of a study: who does what, in which condition. <b>In the picture:</b> three boxes, one per colour group. Each dot is a volunteer; darker dots are better at anagrams. Under each box you see the average ability of that group. Use the buttons to assign the volunteers in two ways and to change how many there are.',
+'r-logic-9':'This last step repeats nothing new. It puts the pieces of steps 3 to 7 in one picture. <b>In the picture:</b> the top row reads from left to right: the three levers of control make it possible to meet the three criteria, which allows the conclusion that X influences Y. The red box below shows what threatens that conclusion, a confounding variable, and the protection against each of its two sources.'
+};
+$$('.walk').forEach(w=>{const id=w.id.slice(2);$$('.step',w).forEach((st,i)=>{const z=ZERO[id+'-'+(i+1)];if(!z)return;const t=st.querySelector('.scr>.teach');
+ const ps=t?Array.from(t.children).filter(x=>x.tagName==='P'):[];
+ if(ps.length>=2){const p=document.createElement('p');p.className='zero';p.innerHTML=z;ps[0].before(p)}
+ else{const b=document.createElement('div');b.className='zerobox';b.innerHTML='<b>🧭 From zero</b>'+z;const sc=st.querySelector(':scope>.scr');(sc||st.lastElementChild).before(b)}})});
+
+/* ---------- Figure 8.1 redraw (values approximate, read from the figure) ---------- */
+const F81={a:{y0:3.5,y1:6.5,st:0.5,lab:['Mean number of','anagrams solved'],bars:[['Red',4.4,4.0,4.85],['Green',5.65,5.3,6.05],['Black',5.8,5.45,6.2]]},
+           b:{y0:9.5,y1:14,st:0.5,lab:['Mean number of','analogies solved'],bars:[['Red',10.4,9.9,10.95],['Green',13.2,12.7,13.75],['White',12.75,12.25,13.25]]}};
+function barPanel(d,x0,w,top,bot,tag,hi){const Y=v=>bot-(v-d.y0)/(d.y1-d.y0)*(bot-top);let h='';
+ for(let v=d.y0;v<=d.y1+1e-6;v+=d.st){const y=Y(v);h+=`<line x1="${x0-4}" y1="${y}" x2="${x0}" y2="${y}" stroke="#6b7280"/>`+T(x0-8,y+4,v.toFixed(1),'text-anchor="end" font-size="11" fill="#6b7280"')}
+ h+=`<line x1="${x0}" y1="${top-6}" x2="${x0}" y2="${bot}" stroke="#6b7280"/><line x1="${x0}" y1="${bot}" x2="${x0+w}" y2="${bot}" stroke="#6b7280"/>`;
+ const bw=w/3*0.5;d.bars.forEach((b,i)=>{const cx=x0+w/3*(i+.5),y=Y(b[1]);
+  h+=`<rect x="${cx-bw/2}" y="${y}" width="${bw}" height="${bot-y}" fill="${hi&&i===0?'#e9c9c3':'#cfd8ea'}" stroke="#8fa0c4"/>`
+   +`<path d="M${cx} ${Y(b[2])} L${cx} ${Y(b[3])} M${cx-7} ${Y(b[2])} L${cx+7} ${Y(b[2])} M${cx-7} ${Y(b[3])} L${cx+7} ${Y(b[3])}" stroke="#222" stroke-width="1.6" fill="none"/>`
+   +T(cx,bot+17,b[0],`${mid} font-size="12" fill="#2b2f3a"`)});
+ if(tag)h+=T(x0-44,top-14,tag,'font-size="13" font-weight="700" fill="#2b2f3a"');
+ h+=T(x0+w/2,bot+38,d.lab[0]+' '+d.lab[1],`${mid} class="t-s"`);return h}
+(function(){const s=$('#fig81');if(!s)return;
+ s.innerHTML=barPanel(F81.a,62,190,40,236,'(a)')+barPanel(F81.b,340,190,40,236,'(b)')+T(157,292,'U.S. undergraduates · ID code colour',`${mid} class="t-s"`)+T(435,292,'German undergraduates · cover colour',`${mid} class="t-s"`)})();
+
+/* ---------- Step 5: the confound lab ---------- */
+(function(){const s=$('#cfSvg');if(!s)return;let plan='week',world=0;const seenW={week:new Set(),bal:new Set()};
+ const COL=[K.R,K.C,K.B],NM=['Red','Green','Black'];
+ function draw(){seenW[plan].add(world);
+  let h=T(280,26,plan==='week'?'Plan: one colour per week':'Plan: every colour in every week',`${mid} class="t-h"`);
+  ['Week 1','Week 2','Week 3'].forEach((wk,i)=>{const x=16+i*84;
+   h+=R(x,46,78,214,i===0?'#fbecea':'#fff',i===0?K.R:'#d9d2c3',12)+T(x+39,68,wk,`${mid} class="t-b"`)+T(x+39,84,i===0?'midterms':(i===1?'1 week after':'2 weeks after'),`${mid} class="${i===0?'t-r':'t-s'}" font-size="11"`);
+   for(let r=0;r<3;r++)for(let c=0;c<3;c++){const col=plan==='week'?COL[i]:COL[r];h+=`<circle cx="${x+18+c*21}" cy="${116+r*44}" r="8.5" fill="${col}"/>`}});
+  h+=T(138,282,'each dot = a group of test sessions',`${mid} class="t-s"`);
+  const base=5.8,mt=1.2,red=1.3;const m=plan==='week'?[base-mt-(world?red:0),base,base]:[base-.4-(world?red:0),base-.4,base-.4];
+  const x0=318,bot=260,top=60,Y=v=>bot-v/7*(bot-top);
+  for(let v=0;v<=7;v++){h+=`<line x1="${x0-4}" y1="${Y(v)}" x2="${x0}" y2="${Y(v)}" stroke="#6b7280"/>`+T(x0-8,Y(v)+4,v,'text-anchor="end" font-size="11" fill="#6b7280"')}
+  h+=`<line x1="${x0}" y1="${top}" x2="${x0}" y2="${bot}" stroke="#6b7280"/><line x1="${x0}" y1="${bot}" x2="544" y2="${bot}" stroke="#6b7280"/>`;
+  m.forEach((v,i)=>{const cx=x0+38+i*74;h+=`<rect x="${cx-24}" y="${Y(v)}" width="48" height="${bot-Y(v)}" rx="4" fill="${COL[i]}" opacity=".85"/>`+T(cx,Y(v)-6,v.toFixed(1),`${mid} class="t-b"`)+T(cx,bot+17,NM[i],`${mid} font-size="12" fill="#2b2f3a"`)});
+  h+=T(430,54,'Mean anagrams solved (illustrative)',`${mid} class="t-s"`);
+  h+=R(16,298,528,58,'#fff','#d9d2c3',12)+T(280,320,world?'World B: red truly lowers scores':'World A: red has no effect at all',`${mid} class="t-b"`)+T(280,340,'In both worlds, midterm stress lowers the score of anyone tested in week 1.',`${mid} class="t-s"`);
+  s.innerHTML=h;
+  $('#cfA').classList.toggle('ghost',plan!=='week');$('#cfB').classList.toggle('ghost',plan!=='bal');$('#cfW0').classList.toggle('ghost',world!==0);$('#cfW1').classList.toggle('ghost',world!==1);
+  const o=$('#cfOut');let t;
+  if(plan==='week'){t='<b style="color:'+K.R+'">Confounded plan.</b> '+(world?'Red is lowest, and here red really does hurt.':'Red is lowest, although in this world red does nothing. Midterm stress did it.')+(seenW.week.size<2?' <b>Now switch to the other world</b> and compare the picture.':' <b>Compare the two worlds:</b> in both, the red bar is the lowest. A researcher who only sees the bars cannot know which world is the real one. Colour and midterm week changed together, so their effects cannot be separated.');o.className='out no'}
+  else{t='<b style="color:'+K.C+'">Balanced plan.</b> '+(world?'Red is lower than green and black. Midterm stress pulled all three bars down by the same amount, so it cannot explain the gap.':'All three bars are equal. Midterm stress is still there (every bar is a little lower), but it weighs equally on each colour.')+(seenW.bal.size<2?' <b>Now switch to the other world.</b>':' <b>Compare the two worlds:</b> now the bars differ only when red really has an effect. With this plan, the picture tells you which world you are in.');o.className='out ok'}
+  o.innerHTML=t}
+ $('#cfA').onclick=()=>{plan='week';draw()};$('#cfB').onclick=()=>{plan='bal';draw()};$('#cfW0').onclick=()=>{world=0;draw()};$('#cfW1').onclick=()=>{world=1;draw()};draw()})();
+
+/* ---------- Step 7: the random assignment lab ---------- */
+(function(){const s=$('#raSvg');if(!s)return;let N=30,mode='rand',deals=0,gaps=[];
+ const COL=[K.R,K.C,K.B],NM=['Red group','Green group','Black group'];
+ const rn=()=>{let u=0;for(let i=0;i<6;i++)u+=Math.random();return Math.max(1,Math.min(10,6+(u-3)*2.1))};
+ const shade=a=>{const t=(a-1)/9;const c=(p,q)=>Math.round(p+(q-p)*t);return `rgb(${c(226,40)},${c(232,58)},${c(244,100)})`};
+ function deal(){let P=Array.from({length:N},rn);let G=[[],[],[]];
+  if(mode==='rand'){for(let i=P.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[P[i],P[j]]=[P[j],P[i]]}P.forEach((a,i)=>G[i%3].push(a))}
+  else{P=P.map(a=>[a+ (Math.random()-.5)*2.5,a]).sort((x,y)=>y[0]-x[0]).map(x=>x[1]);const g=N/3;P.forEach((a,i)=>G[i<g?1:(i<2*g?2:0)].push(a))}
+  const M=G.map(g=>g.reduce((p,q)=>p+q,0)/g.length),gap=Math.max(...M)-Math.min(...M);deals++;gaps.push(gap);
+  let h=T(280,26,mode==='rand'?'Random assignment: chance deals the volunteers':'By sign-up order: early birds green, latecomers red',`${mid} class="t-h"`);
+  G.forEach((g,i)=>{const x=16+i*180;h+=R(x,44,168,196,'#fff',COL[i],14,'stroke-width="2"')+T(x+84,64,NM[i]+' · '+g.length,`${mid} font-size="12" font-weight="700" fill="${COL[i]}"`);
+   const per=g.length<=10?5:(g.length<=30?6:10),rows=Math.ceil(g.length/per),r=Math.min(13,Math.min(150/per/2-1.5,160/rows/2-1.5)),gx=150/per,gy=Math.min(40,160/rows);
+   g.forEach((a,k)=>{h+=`<circle cx="${x+9+gx*(k%per+.5)}" cy="${76+gy*(Math.floor(k/per)+.5)}" r="${r.toFixed(1)}" fill="${shade(a)}" stroke="#8fa0c4" stroke-width=".6"/>`});
+   h+=T(x+84,262,'average ability',`${mid} class="t-s"`)+R(x+14,270,140,14,'#eef0f3','none',7)+R(x+14,270,(M[i]/10*140).toFixed(1),14,COL[i],'none',7,'opacity=".8"')+T(x+84,304,M[i].toFixed(1)+' out of 10',`${mid} class="t-b"`)});
+  h+=R(60,318,440,32,gap>1?'#fbecea':'#e2f1e6',gap>1?K.R:K.C,10)+T(280,339,'Gap between the strongest and the weakest group: '+gap.toFixed(1)+' points',`${mid} class="t-b"`);
+  s.innerHTML=h;
+  $('#raBias').classList.toggle('ghost',mode!=='bias');$('#raRand').classList.toggle('ghost',mode!=='rand');$$('[data-ran]').forEach(b=>b.classList.toggle('ghost',+b.dataset.ran!==N));
+  const o=$('#raOut');
+  if(mode==='bias'){o.className='out no';o.innerHTML='<b style="color:'+K.R+'">Biased assignment.</b> In this illustration the keenest puzzle solvers sign up first and get green; the latecomers get red. Before anyone has seen a colour, the red group is already weaker. If red then scores lowest, you cannot tell whether colour or ability did it: ability has become a confounding variable.'}
+  else{const big=N>=300,small=N<=6;o.className='out ok';o.innerHTML='<b style="color:'+K.C+'">Random assignment'+(deals>1?' · deal '+deals:'')+'.</b> Darker dots are stronger solvers. Chance has spread them over the three groups'+(small?', but with only 6 volunteers one strong or weak person can tilt a whole group. Deal a few times and watch the gap jump.':big?'. With 300 volunteers the three averages are almost the same on every deal.':'. The averages are close, not identical. Deal again a few times: the gap changes, but there is no pattern in who is favoured.')+' <span class="mini">The chapter returns to this in the section on between-subjects designs: the more participants, the more likely random assignment creates equivalent groups.</span>'}}
+ $('#raBias').onclick=()=>{mode='bias';deal()};$('#raRand').onclick=()=>{mode='rand';deal()};$$('[data-ran]').forEach(b=>b.onclick=()=>{N=+b.dataset.ran;deals=0;deal()});deal()})();
+
+/* ---------- Step 8: Study Replay Lab · Elliot et al. (2007), experiment 1 ---------- */
+(function(){const box=$('#rpLab');if(!box)return;
+ const ST=['🎬 Mission','🧪 Hypotheses','🕹️ Do it','📊 Predict, reveal','⚖️ Verdict on H0','🧠 So what','🎯 Transfer'];
+ const S=Object.assign({stage:0,max:0,color:null,score:null,noticed:null},store.get('rp',{}));
+ const save=()=>store.set('rp',{stage:S.stage,max:S.max,color:S.color,score:S.score,noticed:S.noticed});
+ const INK={red:K.R,green:K.C,black:'#222'};
+ let timer=null;
+ function head(){return '<div class="chips" style="margin:6px 0 12px">'+ST.map((t,i)=>'<button type="button" data-st="'+i+'" class="'+(i===S.stage?'on':'')+'" '+(i>S.max?'disabled style="opacity:.45;cursor:default"':'')+'>'+(i<S.max&&i!==S.stage?'✓ ':'')+t+'</button>').join('')+'</div><div class="pbar" style="margin:0 0 14px"><i style="width:'+(100*(S.stage+1)/ST.length)+'%"></i></div>'}
+ function go(i){if(timer){clearInterval(timer);timer=null}S.stage=i;S.max=Math.max(S.max,i);save();render()}
+ const nextBtn=(lbl)=>'<p style="margin:14px 0 0"><button class="btn" type="button" data-next>'+lbl+'</button></p>';
+ /* generic single-answer question: opts=[text,isCorrect,feedback] */
+ function ask(el,q,opts,done){el.innerHTML='<div class="card-q">'+q+'</div><div class="opts" style="flex-direction:column;align-items:stretch"></div><div class="out" hidden></div>';
+  const ob=el.querySelector('.opts'),out=el.querySelector('.out');let solved=false;
+  opts.forEach(o=>{const b=document.createElement('button');b.type='button';b.style.textAlign='left';b.innerHTML=o[0];b.onclick=()=>{if(solved)return;out.hidden=false;
+    if(o[1]){solved=true;b.classList.add('ok');out.className='out ok';out.innerHTML='<b style="color:'+K.C+'">Yes.</b> '+o[2];done&&done()}
+    else{b.classList.add('no');out.className='out no';out.innerHTML='<b style="color:'+K.R+'">Not this one.</b> '+o[2]+' <i>Try again.</i>'}};ob.appendChild(b)})}
+ function render(){let h=head();const s=S.stage;
+  if(s===0){h+='<div class="card-q"><b>You are the researcher. Your question:</b> does seeing the colour red, without thinking about it, make people do worse on a thinking task?</div>'
+   +'<p>You will go through the first colour experiment of Elliot et al. (2007) in the order a study is really run. First you write down what you expect. Then you sit in the participant\'s chair and take a short version of the test. Then you return to the researcher\'s desk, predict the result, see the real one and decide what it allows you to say.</p>'
+   +'<p class="mini">By the end you can say in your own words: what was asked, what H0 and H1 were, how it was tested, what was found, and what it does and does not mean.</p>'+nextBtn('Write down the hypotheses →')}
+  else if(s===1){h+='<p>Elliot and his colleagues reasoned from classical conditioning: from childhood, red goes together with danger and with mistakes marked by a teacher. A <b class="tm" data-g="hypothesis">hypothesis</b> turns such an idea into a prediction you can check. A statistical test needs two of them. <b class="tm" data-g="h0">H0</b> is the "nothing happens" statement that the test tries to knock down. <b class="tm" data-g="h1">H1</b> is the statement that goes against it, and it carries the researchers\' prediction. The chapter gives the prediction in words; the H0 and H1 labels are added here because your statistics course uses them.</p>'
+   +'<h4>1 · Build H1, the researchers\' prediction</h4><div id="rpQ1"></div><div id="rpQ2w" hidden><h4>2 · Now H0, the statement the test tries to knock down</h4><div id="rpQ2"></div></div><div id="rpQ3w" hidden><h4>3 · What kind of prediction is H1?</h4><div id="rpQ3"></div></div><div id="rpN1"></div>'}
+  else if(s===2){h+='<div id="rpDo"></div>'}
+  else if(s===3){h+='<p>Back at the researcher\'s desk. All participants have been tested, and you have the mean (average) number of anagrams solved in each colour group. <b>Before you look: which picture do you expect</b> if the researchers\' prediction is right?</p><div id="rpPred" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px"></div><div class="out" id="rpPredOut" hidden></div><div id="rpReveal" hidden></div>'}
+  else if(s===4){h+='<p>A difference between bars is not yet a finding. Groups of people always differ a little by chance, as you saw in the random assignment lab. So the researcher asks: is this difference bigger than chance alone would easily produce?</p><p>The chapter reports the outcome of that check for the first experiment: the number of anagrams solved <b>differed significantly</b> depending on the colour condition.</p><div id="rpV1"></div><div id="rpV2w" hidden><h4>What does "statistically significant" tell you? Judge each sentence.</h4><div id="rpV2"></div></div><div id="rpN4"></div>'}
+  else if(s===5){h+='<div id="rpSo"></div>'}
+  else if(s===6){h+='<p>Two practice questions in exam wording, in new settings. Answer first; the explanation comes after. <span class="mini">Both studies and the figure are made up for practice.</span></p><div id="rpT1"></div><div id="rpT2w" hidden style="margin-top:18px"><div id="rpT2"></div></div><div id="rpEnd"></div>'}
+  box.innerHTML=h;
+  $$('[data-st]',box).forEach(b=>b.onclick=()=>{const i=+b.dataset.st;if(i<=S.max)go(i)});
+  const nb=box.querySelector('[data-next]');if(nb)nb.onclick=()=>go(s+1);
+  if(s===1)stageHyp();if(s===2)stageDo();if(s===3)stagePred();if(s===4)stageVerdict();if(s===5)stageSo();if(s===6)stageTransfer()}
+
+ function stageHyp(){
+  ask($('#rpQ1'),'Students who see a <b style="color:'+K.R+'">red</b> ID code will solve <b>_____</b> anagrams than students who see a green or black code.',[
+   ['more',0,'That would also be a prediction, but not theirs. Their idea is that red signals danger and failure, which should hurt performance.'],
+   ['the same number of',0,'That is the "nothing happens" statement. Keep it in mind for the next question.'],
+   ['fewer',1,'This is the researchers\' prediction: perceiving red impairs achievement on a cognitive task.']],()=>{$('#rpQ2w').hidden=false});
+  ask($('#rpQ2'),'Which sentence is H0 for this study?',[
+   ['Students with a red code solve fewer anagrams than students with a green or black code.',0,'That is H1 itself, the prediction.'],
+   ['The colour of the code makes no difference: the mean number of anagrams solved is the same in the red, green and black conditions.',1,'H0 says the independent variable (colour) does nothing to the dependent variable (anagrams solved). Formally, the statement against it (H1) is "the means are not all the same". The researchers go one step further and say which way: red lower.'],
+   ['Colour makes no difference for students who are good at anagrams.',0,'H0 is about the same people and the same variables as H1. It does not add a new variable such as ability.'],
+   ['Students who solve fewer anagrams prefer red.',0,'That turns cause and effect around. In this study colour comes first and performance is measured afterwards.']],()=>{$('#rpQ3w').hidden=false});
+  ask($('#rpQ3'),'H1 says: the red group will solve <i>fewer</i> anagrams than the other groups. What kind of prediction is that?',[
+   ['A relationship between two scores measured on the same people, with no direction given',0,'Nothing here is measured twice on the same people. Colour is a condition people are put in, and the prediction names a direction.'],
+   ['A difference between groups, with the direction given (red lower)',1,'It compares group means (a difference) and says which way the difference goes (directional). A prediction that only said "the groups will differ" would be two-sided.'],
+   ['A difference between groups, with no direction given',0,'Look at the word "fewer". The prediction says which group will be lower.']],()=>{$('#rpN1').innerHTML=nextBtn('Now take the test yourself →');$('#rpN1 [data-next]').onclick=()=>go(2)})}
+
+ const ITEMS=[['NIDRK','DRINK'],['OSUEH','HOUSE'],['RTAIN','TRAIN'],['HCRIA','CHAIR'],['TLIGH','LIGHT'],['CSMUI','MUSIC']];
+ function stageDo(){const el=$('#rpDo');
+  if(S.score!==null&&S.noticed!==null){return afterDo(el)}
+  if(S.score!==null){return debrief(el)}
+  el.innerHTML='<div class="card-q"><b>You are now a participant.</b> You have signed up for a study on "solving word puzzles". The experimenter gives you a page with six five-letter anagrams and asks you to check that your participant code is on the page. You have 60 seconds. Type each solution and solve as many as you can.</div><p class="mini">The real test had 15 anagrams and lasted five minutes. NIDRK is the chapter\'s example; the other five items, the cover story and the question you get afterwards are ours.</p><p><button class="btn" type="button" id="rpGo">I have checked my code. Start →</button></p>';
+  $('#rpGo').onclick=()=>{S.color=['red','green','black'][Math.floor(Math.random()*3)];save();runTest(el)}}
+ function runTest(el){let left=60;
+  el.innerHTML='<div style="background:#fff;border:1px solid #b9b2a3;border-radius:6px;padding:18px 20px;max-width:520px;margin:0 auto;box-shadow:0 6px 18px rgba(52,70,107,.08)"><div style="display:flex;justify-content:space-between;align-items:baseline"><b>Anagram test</b><span style="font-family:\'Segoe Script\',\'Bradley Hand\',cursive;font-size:1.35rem;font-weight:700;color:'+INK[S.color]+'">No. 47</span></div><div id="rpItems" style="display:grid;gap:8px;margin:14px 0 6px"></div><div class="pbar"><i id="rpBar" style="width:100%"></i></div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><span class="mini" id="rpLeft">60 seconds left</span><button class="btn sm" type="button" id="rpStop">I am done</button></div></div>';
+  $('#rpItems').innerHTML=ITEMS.map((it,i)=>'<label style="display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center"><b style="letter-spacing:.2em;font-size:1.05rem">'+it[0]+'</b><input class="inp" data-i="'+i+'" maxlength="5" autocomplete="off" autocapitalize="characters" spellcheck="false" style="text-transform:uppercase;letter-spacing:.15em"></label>').join('');
+  const fin=()=>{if(timer){clearInterval(timer);timer=null}S.score=$$('#rpItems input').filter(x=>x.value.trim().toUpperCase()===ITEMS[+x.dataset.i][1]).length;save();debrief(el)};
+  timer=setInterval(()=>{left--;const b=$('#rpBar');if(!b){clearInterval(timer);timer=null;return}b.style.width=(100*left/60)+'%';$('#rpLeft').textContent=left+' seconds left';if(left<=0)fin()},1000);
+  $('#rpStop').onclick=fin;const f=$('#rpItems input');if(f)f.focus()}
+ function debrief(el){el.innerHTML='<div class="card-q"><b>Time is up. You solved '+S.score+' of 6.</b><br>One question before the experimenter explains the study: what colour was the code number on your page?</div><div class="opts">'+['red','green','black','I did not notice'].map(c=>'<button type="button" data-c="'+c+'">'+c+'</button>').join('')+'</div>';
+  $$('[data-c]',el).forEach(b=>b.onclick=()=>{S.noticed=b.dataset.c;save();afterDo(el)})}
+ function afterDo(el){const right=S.noticed===S.color;
+  el.innerHTML='<div class="out '+(right?'ok':'no')+'" style="margin-top:0"><b>Your code was '+S.color+'.</b> '+(right?'You remembered it. In the real study you would not have known that the colour mattered: in the debriefing sessions, not a single participant suspected the true purpose.':(S.noticed==='I did not notice'?'You did not notice, and that fits the study: the colour was meant to work without conscious awareness, and in the debriefing sessions not a single participant suspected the true purpose.':'You remembered a different colour. In the real study, too, nobody was told that colour mattered, and in the debriefing sessions not a single participant suspected the true purpose.'))+'</div>'
+   +'<h4>What you just went through, and what researchers call it</h4>'
+   +'<div class="tw"><table class="tb"><thead><tr><th>What happened to you</th><th>Its name</th></tr></thead><tbody>'
+   +'<tr><td>The ink of your code was <b style="color:'+INK[S.color]+'">'+S.color+'</b>. Other participants get another colour. This is the one thing the researcher changes.</td><td><b class="tm" data-g="iv">Independent variable</b>: colour of the ID code, with three conditions</td></tr>'
+   +'<tr><td>Your score was counted: '+S.score+' solved.</td><td><b class="tm" data-g="dv">Dependent variable</b>: number of anagrams solved</td></tr>'
+   +'<tr><td>The page chose your colour by chance. You did not choose it and neither did the experimenter.</td><td><b class="tm" data-g="randassign">Random assignment</b></td></tr>'
+   +'<tr><td>You saw one colour only.</td><td><b class="tm" data-g="between">Between-subjects design</b>: different people in each condition</td></tr>'
+   +'<tr><td>You saw the colour first and solved the anagrams afterwards.</td><td><b class="tm" data-g="temporal">Temporal order</b>: the cause comes before the effect</td></tr>'
+   +'<tr><td>Same items, same instructions and same time limit for everyone.</td><td>Extraneous factors <b>held constant</b></td></tr></tbody></table></div>'
+   +'<div class="keyl" style="margin-top:12px"><b>★ NOTICE</b> · Your own score of '+S.score+' says nothing about colour. You may be quick or slow at anagrams whatever the ink. The effect of colour can only show up when the <b>average</b> of many people with red is compared with the average of many people with green or black.</div>'
+   +'<p style="margin:14px 0 0;display:flex;gap:8px;flex-wrap:wrap"><button class="btn" type="button" id="rpNx">Back to the researcher\'s desk →</button><button class="btn ghost" type="button" id="rpAgain">Take the test again</button></p>';
+  $('#rpNx').onclick=()=>go(3);$('#rpAgain').onclick=()=>{S.score=null;S.noticed=null;S.color=null;save();stageDo()}}
+
+ function mini(v,lab){const top=14,bot=92,Y=x=>bot-(x-3)/(7-3)*(bot-top);const C=['#c0392b','#2f8a57','#222'];
+  return '<svg viewBox="0 0 150 122" style="width:100%;display:block">'+`<line x1="14" y1="${bot}" x2="140" y2="${bot}" stroke="#6b7280"/>`+v.map((x,i)=>`<rect x="${24+i*40}" y="${Y(x)}" width="26" height="${bot-Y(x)}" fill="${C[i]}" opacity=".8" rx="3"/>`+T(37+i*40,106,['R','G','B'][i],`${mid} font-size="11" fill="#6b7280"`)).join('')+'</svg><span style="display:block;font-size:.84rem;color:#34466b;font-weight:600">'+lab+'</span>'}
+ function stagePred(){const P=[[[5.6,5.6,5.6],'All three the same',0,'This is what H0 expects: colour does nothing. The researchers predicted something else.'],
+   [[4.4,5.7,5.8],'Red lower, the two others alike',1,'This is the pattern H1 predicts: red stands apart, and nothing is said about a difference between green and black.'],
+   [[6.4,5.2,5.0],'Red higher than the others',0,'That would mean red helps. The conditioning idea says red signals danger and failure, so it should hurt.'],
+   [[3.6,5.0,6.4],'A staircase: red, then green, then black',0,'The prediction is only about red against the other colours. It gives no reason for green and black to differ from each other.']];
+  const g=$('#rpPred'),out=$('#rpPredOut');let done=false;
+  P.forEach(p=>{const b=document.createElement('button');b.type='button';b.className='tile';b.style.textAlign='center';b.innerHTML=mini(p[0],p[1]);b.onclick=()=>{if(done)return;out.hidden=false;
+    if(p[2]){done=true;b.style.borderColor=K.C;b.style.background='#eaf6ee';out.className='out ok';out.innerHTML='<b style="color:'+K.C+'">That is the prediction.</b> '+p[3];reveal()}
+    else{b.style.borderColor=K.R;b.style.background='#fbecea';out.className='out no';out.innerHTML='<b style="color:'+K.R+'">Not this one.</b> '+p[3]+' <i>Try again.</i>'}};g.appendChild(b)})}
+ function reveal(){const r=$('#rpReveal');r.hidden=false;
+  r.innerHTML='<h4 style="margin-top:16px">The real result · Figure 8.1(a), book p. 227</h4><div style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px;align-items:start" class="fig1grid"><figure class="fig" style="margin:0"><svg viewBox="0 0 330 290" role="img" aria-label="Mean number of anagrams solved per colour condition">'+barPanel(F81.a,84,220,40,236,'',true)+'</svg><figcaption>Redrawn after Figure 8.1(a) in Passer (2021), from Elliot et al. (2007). U.S. undergraduates. Values approximate, read from the figure.</figcaption></figure><div><p style="margin-top:0">Read each bar as a sentence. Students with a <b style="color:'+K.R+'">red</b> code solved about 4.4 anagrams on average. Students with a green code solved about 5.7 and students with a black code about 5.8.</p><p class="mini">The thin I-shaped lines are 95% confidence interval bars. They reflect how much the scores vary within each condition. Note that the axis starts at 3.5. Comparing whether the lines overlap is our reading aid, not a rule from the chapter: overlap alone does not prove that two groups are the same.</p><div id="rpRead"></div></div></div><div id="rpN3"></div>';
+  ask($('#rpRead'),'Use the I-shaped lines. Which statement fits the figure best?',[
+   ['All three colours clearly differ from each other.',0,'Look at green and black: their intervals overlap almost completely.'],
+   ['Green and black clearly differ; red is in between.',0,'Red is the lowest bar, not the middle one, and green and black overlap.'],
+   ['Red stands apart from both other colours; green and black look alike.',1,'The red interval lies below the two others, while the green and black intervals overlap almost completely. That is the pattern H1 predicted.']],()=>{$('#rpN3').innerHTML=nextBtn('Decide about H0 →');$('#rpN3 [data-next]').onclick=()=>go(4)})}
+
+ function stageVerdict(){
+  ask($('#rpV1'),'<b>Do you reject H0</b> ("colour makes no difference to the mean number of anagrams solved")?',[
+   ['No. The three groups were different people, so the difference could be anything.',0,'Different people is exactly what random assignment deals with: it spreads their differences over the groups without bias. What remains is chance, and the test says chance is an unlikely explanation.'],
+   ['Yes. The difference between the colour conditions was statistically significant.',1,'A statistically significant difference is one that is unlikely to be due simply to chance. So "no difference" is rejected: the means are not all the same. The figure shows which way they differ: red was the lowest, as the researchers predicted.'],
+   ['No. H0 can only be rejected when every red participant scores below every other participant.',0,'The comparison is between group averages. Individual scores in the groups overlap; that is normal.']],()=>{$('#rpV2w').hidden=false});
+  const st=[['It is unlikely that chance alone produced the difference between the colour groups.',true,'That is the meaning of statistically significant. Traditionally, a finding counts as significant when there is less than a 5% probability that chance factors alone could be responsible.'],
+   ['Every student with a red code solved fewer anagrams than every student with a green code.',false,'Significance is about the means of the groups. Many individual scores overlap. Your own score in stage 3 showed that one person tells you nothing.'],
+   ['It is now certain that red harms performance.',false,'"Unlikely to be chance" is not "certain". That is why it matters that the team repeated the experiment several times and found the same result each time.']];
+  const box2=$('#rpV2');let ok=0;
+  st.forEach((x,i)=>{const d=document.createElement('div');d.style.margin='8px 0';d.innerHTML='<div class="card-q">'+x[0]+'</div><div class="opts"><button type="button" data-v="1">True</button><button type="button" data-v="0">False</button></div><div class="out" hidden></div>';
+   let fin=false;d.querySelectorAll('button').forEach(b=>b.onclick=()=>{if(fin)return;const pick=b.dataset.v==='1',o=d.querySelector('.out');o.hidden=false;
+     if(pick===x[1]){fin=true;b.classList.add('ok');o.className='out ok';o.innerHTML='<b style="color:'+K.C+'">Right.</b> '+x[2];if(++ok===st.length){$('#rpN4').innerHTML='<p class="mini" style="margin-top:10px">With three conditions, researchers typically first test whether the overall pattern of differences among the means is significant (analysis of variance). If it is, they often go on to compare specific conditions (post-hoc tests). Section 5 of the chapter explains this common approach, and notes it is not the only one. The chapter does not say which tests Elliot\'s team used.</p>'+nextBtn('So what does it mean? →');$('#rpN4 [data-next]').onclick=()=>go(5)}}
+     else{b.classList.add('no');o.className='out no';o.innerHTML='<b style="color:'+K.R+'">Look again.</b> '+x[2]}});box2.appendChild(d)})}
+
+ function stageSo(){const el=$('#rpSo');
+  el.innerHTML='<p>The red group scored lower and chance is an unlikely explanation. Before concluding that <i>colour</i> did it, a careful researcher asks the gate 3 question: could something else explain the difference?</p><div id="rpS1"></div><div id="rpS2" hidden></div>';
+  ask($('#rpS1'),'Which of these rival explanations still fits the experiment as the chapter describes it?',[
+   ['The red group contained the weaker students.',0,'Random assignment spread strong and weak students over the three groups in an unbiased way, so this is not a plausible explanation.'],
+   ['The red group had a different task or different instructions.',0,'Task instructions were always the same, and the chapter notes that all participants got the same, single set of anagrams.'],
+   ['Low scores made participants get a red code.',0,'The colour came first and the task afterwards. Performance cannot have caused the colour.'],
+   ['None of these. The design rules each of them out.',1,'Covariation: the scores differed by colour. Temporal order: colour first. Alternative explanations: made implausible by constant instructions and random assignment.']],()=>{const d=$('#rpS2');d.hidden=false;
+   d.innerHTML='<div class="goldb">★ The conclusion: the variation in ink colour, rather than some other aspect of the situation, was the most plausible explanation for why performance differed across the three colour conditions (section "Exercising control over variables").</div>'
+    +'<p><b>In plain words:</b> the only thing that differed systematically between the groups was the colour of a number, and the red group did worse by more than chance would easily produce. So seeing red is the best explanation for the lower scores.</p>'
+    +'<p><b>What supports it further:</b> the team repeated the experiment with American, German and French undergraduates and German high school students, with other comparison colours, with numerical, analogy and memory tasks, and with a coloured cover sheet. Participants exposed to red performed worse overall every time.</p>'
+    +'<div class="trapb"><b>⚠ What this experiment does not show</b><span class="w">✗ It does not show <i>why</i> red lowers performance. The idea that red raises a sense of threat is the theory behind the prediction; this chapter reports only performance scores.</span><span class="w" style="margin-top:4px">✗ It does not show that every person is affected. The finding is about group averages, in students who took part in these studies.</span><span class="r">✓ It does show that, in this setting, colour was the most plausible cause of the difference between the groups.</span></div>'
+    +'<p><b>How it fits the theme:</b> this is what "being sure that the one thing you changed caused the difference" looks like in practice. Not certainty, but a design in which every other explanation has been made implausible.</p>'+nextBtn('Try two exam-style questions →');d.querySelector('[data-next]').onclick=()=>go(6)})}
+
+ function stageTransfer(){
+  ask($('#rpT1'),'<b>Question 1.</b> A researcher wants to know whether the scent of a room affects reading speed. Ninety volunteers each read the same text in a room that smells of lemon, of lavender or of nothing. A computer decides at random which scent each volunteer gets. All lemon sessions are held on Monday mornings, all lavender sessions on Wednesday afternoons and all no-scent sessions on Friday evenings. Volunteers in the lemon room read fastest. Which conclusion is best supported?',[
+   ['Lemon scent increases reading speed, because the volunteers were assigned at random.',0,'Random assignment protects against differences between the people in the groups. It does not protect against something in the setting that differs between the conditions.'],
+   ['No causal conclusion about scent can be drawn, because each volunteer experienced only one scent.',0,'Using different people per condition is a normal design and does not block a causal conclusion, as long as assignment is random and nothing else differs.'],
+   ['No causal conclusion about scent can be drawn, because the time of testing differed along with the scent.',1,'<b>Symptom:</b> a second thing (day and time) changes together with the scent. <b>Diagnosis:</b> a confounding variable. <b>Treatment:</b> balance it, by running every scent in every time slot. As it stands, Monday-morning freshness explains the result as well as lemon does.'],
+   ['Lemon scent increases reading speed, because the same text was used for everyone.',0,'Holding the text constant removes one rival explanation, but another one is left wide open: look at when each scent was tested.']],()=>{$('#rpT2w').hidden=false});
+  const d={y0:8,y1:14,st:1,lab:['Mean number of','words recalled'],bars:[['Silence',12.1,11.3,12.9],['Rain',11.8,11.0,12.6],['Speech',9.2,8.4,10.0]]};
+  $('#rpT2').innerHTML='<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:16px;align-items:start" class="fig1grid"><figure class="fig" style="margin:0"><svg viewBox="0 0 330 290" role="img" aria-label="Practice figure: mean words recalled for three sound conditions">'+barPanel(d,84,220,40,236,'')+'</svg><figcaption>Practice figure, made-up data. Bars show means; I-shaped lines show 95% confidence intervals.</figcaption></figure><div id="rpT2q"></div></div>';
+  ask($('#rpT2q'),'<b>Question 2.</b> Participants were randomly assigned to learn a word list in silence, with the sound of rain, or with background speech. The figure shows the mean number of words recalled per group. Which statement does the figure support best?',[
+   ['Recall in silence was more than twice as high as with background speech.',0,'Check the vertical axis: it starts at 8. The means are about 12.1 and 9.2, nowhere near double.'],
+   ['Rain improved recall compared with silence.',0,'The rain bar is slightly lower than the silence bar, and the two intervals overlap almost completely.'],
+   ['Each participant recalled the most words in silence.',0,'Each participant was in one condition only, and the bars are group means. Nothing can be said about what an individual would do in another condition.'],
+   ['Background speech lowered recall compared with both other conditions, which do not clearly differ from each other.',1,'<b>Symptom:</b> a bar chart with interval bars and three groups. <b>Diagnosis:</b> read the means and, as a reading aid, whether the intervals overlap. <b>Treatment:</b> the speech interval lies below the other two; silence and rain overlap. It is the same reading you used for the red, green and black bars.']],()=>{S.max=6;save();
+   $('#rpEnd').innerHTML='<div class="endb" style="margin-bottom:0"><h3>✅ Your replay in five lines</h3><p><b>The question:</b> does perceiving red impair performance on a cognitive task?</p><p><b>H0 and H1:</b> H0: colour makes no difference to the mean number of anagrams solved. H1: colour does make a difference, and the researchers predicted the direction: students who see red solve fewer.</p><p><b>How it was tested:</b> students were randomly assigned to a red, green or black ID code (independent variable) and the number of anagrams solved in five minutes was counted (dependent variable), with everything else kept as constant as possible.</p><p><b>What was found:</b> the red group solved fewer anagrams (about 4.4 against about 5.7 and 5.8, read from Figure 8.1), a statistically significant difference, replicated several times.</p><p><b>What it means, and does not:</b> colour is the most plausible cause of the difference. It is not proof beyond doubt, it is about averages, and the chapter gives no data on why red has this effect.</p></div>'})}
+ render()})();
+
+/* ---------- enlarge buttons on walk-through figures ---------- */
+$$('.walk .scr>.fig').forEach(f=>{if(!f.querySelector('svg'))return;const b=document.createElement('button');b.type='button';b.className='zoom';b.textContent='⤢ Enlarge';f.appendChild(b);
+ b.onclick=()=>{const svgs=$$('svg',f).map(s=>s.outerHTML).join('');const cap=f.querySelector('figcaption');lb.querySelector('.in').innerHTML=svgs+(cap?'<p class="mini" style="text-align:center">'+cap.innerHTML+'</p>':'');lb.hidden=false}});
+
+/* ---------- guided reading ---------- */
+const LBL={4:['Context','The idea','The evidence','So what'],3:['Context','The idea','So what'],2:['Context','The idea'],5:['Context','The idea','The evidence','More evidence','So what']};
+$$('.walk .scr>.teach').forEach(t=>{let ps=Array.from(t.children).filter(x=>x.tagName==='P');if(ps.length<2)return;
+ t.classList.add('guided');const zp=ps[0].classList.contains('zero')?ps.shift():null;let L=t.dataset.lbl?t.dataset.lbl.split('|'):(LBL[ps.length]||ps.map((_,i)=>'Part '+(i+1)));
+ const card=t.querySelector(':scope>dl.idcard');if(card){const w=document.createElement('div');card.before(w);w.appendChild(card);ps=[w].concat(ps);L=['The section at a glance'].concat(L)}
+ if(zp){ps=[zp].concat(ps);L=['🧭 From zero'].concat(L)}
+ const pg=document.createElement('div');pg.className='pager';
+ pg.innerHTML='<div class="pl"><i>1</i><span></span></div>';ps[0].before(pg);
+ ps.forEach(p=>{p.classList.add('pg');pg.appendChild(p)});
+ const nav=document.createElement('div');nav.className='pn2';nav.innerHTML='<div class="dots">'+ps.map((_,i)=>'<button type="button" aria-label="'+L[i]+'"></button>').join('')+'</div><span class="cnt"></span><button type="button" class="pv">◀</button><button type="button" class="nx">Next ▶</button>';pg.appendChild(nav);
+ let i=0;const seenP=new Set([0]);
+ function go(k){i=Math.max(0,Math.min(ps.length-1,k));seenP.add(i);ps.forEach((p,j)=>p.classList.toggle('on',j===i));
+  pg.querySelector('.pl i').textContent=i+1;pg.querySelector('.pl span').textContent=L[i];
+  $$('.dots button',pg).forEach((d,j)=>{d.classList.toggle('on',j===i);d.classList.toggle('seen',seenP.has(j)&&j!==i)});
+  pg.querySelector('.cnt').textContent=(i+1)+' / '+ps.length;pg.querySelector('.pv').disabled=i===0;
+  const nx=pg.querySelector('.nx');nx.textContent=i===ps.length-1?'✓ Done':'Next ▶';nx.disabled=i===ps.length-1}
+ pg.go=go;pg.cur=()=>i;
+ $$('.dots button',pg).forEach((d,j)=>d.onclick=()=>go(j));pg.querySelector('.pv').onclick=()=>go(i-1);pg.querySelector('.nx').onclick=()=>go(i+1);go(0);
+ const extra=Array.from(t.children).filter(x=>x.matches('.trapb,.exq,.goldb,.tiles,.verdict,.vtiles'));
+ if(extra.length){const ab=document.createElement('div');ab.className='afterbox';extra.forEach(x=>ab.appendChild(x));t.closest('.scr').after(ab)}
+});
+document.addEventListener('keydown',e=>{if(e.target.closest('input,textarea,select'))return;if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
+ const st=document.querySelector('.panel.on .step.on');if(!st)return;const pg=st.querySelector('.pager');if(!pg)return;e.preventDefault();pg.go(pg.cur()+(e.key==='ArrowRight'?1:-1))});
+
+/* ---------- My notebook (assets/notebook.js, private, in this browser only) ---------- */
+const NBSHORT={start:'Start here','r-logic':'Section 1 · The logic of experimentation'};
+window.SezNotebookHere=function(){const pn=document.querySelector('.panel.on');if(!pn)return null;const id=pn.id.slice(2),steps=$$('.step',pn),on=pn.querySelector('.step.on');
+ let label='Theme 1 · '+(NBSHORT[id]||id),hash=id;if(on){label+=' · '+on.dataset.t;hash=id+'-'+(steps.indexOf(on)+1)}
+ return {label,hash,course:'Psychological Science'}};
+window.SezNotebookGo=function(h){show(h||'start');history.replaceState(null,'','#'+(h||'start'))};
+const nbBtn=document.querySelector('.nb[data-nb]');if(nbBtn)nbBtn.addEventListener('click',()=>{if(window.SezNotebook)window.SezNotebook.open()});
+if(location.hash==='#words'||location.hash==='#notebook'){history.replaceState(null,'','#start');const t=setInterval(()=>{if(window.SezNotebook){clearInterval(t);window.SezNotebook.open()}},200);setTimeout(()=>clearInterval(t),8000)}
+
+if(location.hash)show(location.hash.slice(1));
+})();
+
+</script>
+<script src="https://sezsaracoglu-lab.github.io/dashshboard-/assets/sitenav.js" defer></script>
+</body></html>

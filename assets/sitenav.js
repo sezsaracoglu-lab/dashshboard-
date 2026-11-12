@@ -16,6 +16,8 @@
       themes: [["1", D + "edpsy-theme1/"]] },
     { title: "Year 2 · Block 2 · World of Work", links: [["All study links", D + "study/#wow"], ["Course story", D + "wow-course/"], ["Practice exams", D + "wow-exams/"]],
       themes: [["1", D + "wow-theme1/"]] },
+    { title: "Year 2 · Block 2 · Psychological Science", links: [["All study links", D + "study/#psysci"]],
+      themes: [["1", D + "psysci-theme1/"]] },
     { title: "Year 3", links: [["Year 3 plan", D + "study/#year3"]] }
   ];
   function el(t, a, kids) { var e = document.createElement(t); if (a) for (var k in a) { if (k === "text") e.textContent = a[k]; else e.setAttribute(k, a[k]); } (kids || []).forEach(function (c) { e.appendChild(c); }); return e; }
