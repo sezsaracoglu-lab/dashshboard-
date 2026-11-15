@@ -2491,7 +2491,7 @@ document.addEventListener('click',e=>{const t=e.target.closest('.tile');if(t)t.c
 /* ---------- one-at-a-time quiz ---------- */
 function shuf(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function seqGame(boxId,outId,items,opts){
-  const box=$('#'+boxId),out=$('#'+outId);if(!box)return;let i=0,score=0,order=items;
+  const box=$('#'+boxId),out=$('#'+outId);if(!box)return;let i=0,score=0,order=shuf(items);
   function render(){
     if(i>=order.length){box.innerHTML='<div class="card-q"><span class="score">Score: '+score+' / '+order.length+'</span> '+(score===order.length?'Perfect. 🎉':score>=order.length*.7?'Strong. Re-read the ones you missed.':'Worth another round after re-reading this step.')+'</div><div class="opts"><button class="btn sm" id="'+boxId+'R">↻ Play again</button></div>';
       out.className='out';out.innerHTML='';$('#'+boxId+'R').onclick=()=>{i=0;score=0;order=shuf(items);render()};return}
