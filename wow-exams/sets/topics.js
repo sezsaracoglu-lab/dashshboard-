@@ -12,7 +12,7 @@ const TOPICS = {
   craft:  { name: "Job crafting: forms, predictors, outcomes, interventions", where: "Theme 1 · Reading 5", links: [["JD-R version", T1 + "#r-craft-4"], ["Causes and results", T1 + "#r-craft-5"], ["Training and limits", T1 + "#r-craft-6"]] },
   ev:     { name: "Evidence and limits of JD-R: methods, falsifiability, measurement, culture", where: "Theme 1 · Reading 1", links: [["FAQ: how they test it", T1 + "#r-faq-6"], ["FAQ: limits and reach", T1 + "#r-faq-10"]] },
   pro:    { name: "Proactive behaviours, work and home, and what organizations can do", where: "Theme 1 · Reading 2", links: [["Ten Years Later: proactive and home", T1 + "#r-ten-8"], ["Misuse and practice", T1 + "#r-ten-9"]] },
-  pwd:    { name: "Playful work design", where: "Theme 1 · Reading 6", links: [["Fun and competition", T1 + "#r-play-3"], ["When it helps", T1 + "#r-play-6"], ["Why it works", T1 + "#r-play-7"]] }
+  pwd:    { name: "Playful work design", where: "Theme 1 · Reading 6", links: [["Fun and competition", T1 + "#r-play-3"], ["Who, when and why", T1 + "#r-play-5"], ["Training and limits", T1 + "#r-play-6"]] }
 };
 const SKILLS = { def: "Key concepts and definitions", find: "Main findings", fig: "Reading figures and tables", comp: "Comparing theories", app: "Applying to new situations" };
 window.EXAMS = window.EXAMS || [];
