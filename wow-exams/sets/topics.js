@@ -9,7 +9,7 @@ const TOPICS = {
   ml:     { name: "Multilevel JD-R and the person × situation approach", where: "Theme 1 · Reading 2", links: [["Levels", T1 + "#r-ten-7"]] },
   spiral: { name: "Loss and gain spirals", where: "Theme 1 · Readings 1, 2 and 3", links: [["FAQ: spirals", T1 + "#r-faq-9"], ["Nine propositions", T1 + "#r-ten-6"]] },
   team:   { name: "Team resource mobilization and agile work practices", where: "Theme 1 · Reading 4", links: [["The question", T1 + "#r-team-2"], ["Challenges and hindrances", T1 + "#r-team-7"], ["The model", T1 + "#r-team-8"]] },
-  craft:  { name: "Job crafting: forms, predictors, outcomes, interventions", where: "Theme 1 · Reading 5", links: [["JD-R version", T1 + "#r-craft-4"], ["Outcomes", T1 + "#r-craft-6"], ["Interventions", T1 + "#r-craft-8"]] },
+  craft:  { name: "Job crafting: forms, predictors, outcomes, interventions", where: "Theme 1 · Reading 5", links: [["JD-R version", T1 + "#r-craft-4"], ["Causes and results", T1 + "#r-craft-5"], ["Training and limits", T1 + "#r-craft-6"]] },
   ev:     { name: "Evidence and limits of JD-R: methods, falsifiability, measurement, culture", where: "Theme 1 · Reading 1", links: [["FAQ: how they test it", T1 + "#r-faq-6"], ["FAQ: limits and reach", T1 + "#r-faq-10"]] },
   pro:    { name: "Proactive behaviours, work and home, and what organizations can do", where: "Theme 1 · Reading 2", links: [["Ten Years Later: proactive and home", T1 + "#r-ten-8"], ["Misuse and practice", T1 + "#r-ten-9"]] },
   pwd:    { name: "Playful work design", where: "Theme 1 · Reading 6", links: [["Fun and competition", T1 + "#r-play-3"], ["When it helps", T1 + "#r-play-6"], ["Why it works", T1 + "#r-play-7"]] }
