@@ -18,17 +18,18 @@ s1=s1.replace('edpsy2_gotst','wow2_gotst')
 s2=rep(s2,"localStorage.getItem('edpsy2_'+k)","localStorage.getItem('wow2_'+k)")
 s2=rep(s2,"localStorage.setItem('edpsy2_'+k","localStorage.setItem('wow2_'+k")
 s2=re.sub(r"const ORDER=\[[^\n]*\n",lambda m:"const ORDER=['r-egb','r-lead','r-age','r-aging','r-ghrm','r-champ','r-fb','r-self'];\n",s2,count=1)
-s2=re.sub(r"const NEXTL=\{[^\n]*\n",lambda m:"const NEXTL={'r-egb':'Back to Start here →'};\n",s2,count=1)
+s2=re.sub(r"const NEXTL=\{[^\n]*\n",lambda m:"const NEXTL={'r-egb':'Next: reading 2 · Leadership →','r-lead':'Back to Start here →'};\n",s2,count=1)
 s2=rep(s2,"window.wowShow(ORDER[ORDER.indexOf(id)+1]||'start')","window.wowShow(NEXTL[id]&&NEXTL[id].startsWith('Back')?'start':(ORDER[ORDER.indexOf(id)+1]||'start'))")
 a=s2.index('/* ---------- step 2 · the map: six theories');b=s2.index('/* Side panels: first sentence visible')
 scenes=''.join(rd(f) for f in sorted(os.listdir(HERE)) if re.fullmatch(r'scenes\d*\.js',f))
 s2=s2[:a]+scenes+'\n'+s2[b:]
 s2=rep(s2,'/* ================= THEME 2 · READING 1 · MOTIVATION (Linnenbrink-Garcia & Patall, 2015) ================= */','/* ================= WORLD OF WORK · THEME 2 ================= */')
 s2=rep(s2,"t.closest('#w-r-mot,#w-r-prac')","t.closest('#w-r-age')")
-s2=re.sub(r"const NBSHORT=\{[^\n]*\n",lambda m:"const NBSHORT={start:'Start here','r-egb':'Reading 1 · Employee green behavior'};\n",s2,count=1)
+s2=re.sub(r"const NBSHORT=\{[^\n]*\n",lambda m:"const NBSHORT={start:'Start here','r-egb':'Reading 1 · Employee green behavior','r-lead':'Reading 2 · Leadership and sustainability'};\n",s2,count=1)
 s2=rep(s2,"course:'Educational Psychology'","course:'World of Work'")
-body=''.join(rd(f) for f in sorted(os.listdir(HERE)) if re.fullmatch(r'body\d*\.html',f))
-assert '<div id="readingPanels"></div>' in body
+body=rd('body.html')
+assert body.count('<div id="readingPanels"></div>')==1
+body=body.replace('<div id="readingPanels"></div>',''.join(rd(f) for f in sorted(os.listdir(HERE)) if re.fullmatch(r'body\d+\.html',f))+'\n<div id="readingPanels"></div>')
 head=rep(head,'<title>Theme 2 · Motivation</title>','<title>World of Work · Theme 2</title>')
 head=re.sub(r'<meta name="description" content="[^"]*">','<meta name="description" content="World of Work Theme 2: the psychology of sustainability in organizations. The readings as interactive walk-throughs: scenes to act on, teaching text in short cards, traps and exam-style questions.">',head)
 out=head+body+'\n<script>'+s1+'</script>\n<script>'+s2+'</script>'+tail
