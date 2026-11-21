@@ -44,7 +44,7 @@ window.SezNotebookHere=function(){const pn=document.querySelector('.panel.on');i
 nbtail=full[full.index("window.SezNotebookGo=function"):]
 script2=J([prelude,eng,ttcode,helpers,scenes,side,gl,zero,nb,nbtail])
 body=open('body.html',encoding='utf-8').read()
-extra=open('body2.html',encoding='utf-8').read()+(open('body3.html',encoding='utf-8').read() if os.path.exists('body3.html') else '')+open('body4.html',encoding='utf-8').read()
+extra=open('body2.html',encoding='utf-8').read()+(open('body3.html',encoding='utf-8').read() if os.path.exists('body3.html') else '')+open('body4.html',encoding='utf-8').read()+open('body5.html',encoding='utf-8').read()
 assert '<div id="readingPanels"></div>' in body
 body=body.replace('<div id="readingPanels"></div>',extra+'\n<div id="readingPanels"></div>')
 head=head.replace('<title>World of Work · Theme 1</title>','<title>Theme 2 · Motivation</title>')
