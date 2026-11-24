@@ -7,7 +7,7 @@ const out={};let n=0;
 // story map picture
 for(let i=0;i<2;i++){await pg.click('#stNx');await pg.waitForTimeout(80)}
 await (await pg.$('#stSvg')).screenshot({path:'img_map.png'});
-for(const rid of ['r-srl']){
+for(const rid of (process.argv[2]||'r-srl').split(',')){
  const cnt=await pg.evaluate(r=>document.querySelectorAll('#w-'+r+' .step').length,rid);const steps=[];
  for(let s=1;s<=cnt;s++){
   await pg.evaluate(a=>window.wowShow(a),rid+'-'+s);await pg.waitForTimeout(150);
@@ -22,7 +22,7 @@ for(const rid of ['r-srl']){
       exq:u.querySelector('.exq')?[u.querySelector('.exq summary span').textContent,u.querySelector('.exq p').innerHTML]:null,
       tbl:u.querySelector('.afterbox .verdict table')?{title:u.querySelector('.afterbox .verdict .eyebrow').textContent,rows:[...u.querySelectorAll('.afterbox .verdict table tr')].map(r=>[...r.children].map(c=>c.textContent))}:null,box:u.querySelector('details.box table')?[...u.querySelectorAll('details.box table tr')].map(r=>[...r.children].map(c=>c.textContent)):null})),
     verdict:st.querySelector(':scope>.verdict table')?[...st.querySelectorAll(':scope>.verdict table tr')].map(r=>[...r.children].map(c=>c.innerText.replace(/\n+/g,' · '))):null,
-    gold:st.querySelector('.verdict .goldb')?st.querySelector('.verdict .goldb').textContent:'',
+    gold:st.querySelector('.verdict .goldb')?st.querySelector('.verdict .goldb').textContent:(st.querySelector(':scope>.goldb')?st.querySelector(':scope>.goldb').textContent:''),
     wide:[...st.querySelectorAll('.teach.wide p')].map(p=>p.innerHTML),
     take:[...st.querySelectorAll(':scope>.tw table tr')].map(r=>[...r.children].map(c=>c.textContent)),
     lock:[...st.querySelectorAll('.endb .lock>div')].map(d=>d.textContent),think:(st.querySelector('.endb .think')||{}).textContent||'',
@@ -37,9 +37,9 @@ for(const rid of ['r-srl']){
      const o=await pg.$(sel+' [data-k="o0"]')||await pg.$(sel+' [data-k^="z"]');if(!o)break;await o.dispatchEvent('click');await pg.waitForTimeout(30)}
     el=await pg.$(sel);const bb=await el.boundingBox();const vb=await pg.evaluate(s=>document.querySelector(s).viewBox.baseVal.height,sel);
     const top=258;const h=bb.width*(top+4)/640;
-    U.img=`img_${++n}.png`;await pg.screenshot({path:U.img,clip:{x:bb.x,y:bb.y,width:bb.width,height:h}});U.ratio=h/bb.width;
-   }else{el=(await pg.$$('.panel.on .step.on .fig svg'))[0];const bb=await el.boundingBox();U.img=`img_${++n}.png`;await el.screenshot({path:U.img});U.ratio=bb.height/bb.width}
+    U.img=`img_${rid}_${++n}.png`;await pg.screenshot({path:U.img,clip:{x:bb.x,y:bb.y,width:bb.width,height:h}});U.ratio=h/bb.width;
+   }else{el=(await pg.$$('.panel.on .step.on .fig svg'))[0];const bb=await el.boundingBox();U.img=`img_${rid}_${++n}.png`;await el.screenshot({path:U.img});U.ratio=bb.height/bb.width}
   }
   steps.push(info)}
  out[rid]=steps}
-fs.writeFileSync('dom.json',JSON.stringify(out));console.log('steps',Object.values(out).map(s=>s.length),'imgs',n);await b.close()})();
+fs.writeFileSync('dom_'+(process.argv[2]||'r-srl')+'.json',JSON.stringify(out));console.log('steps',Object.values(out).map(s=>s.length),'imgs',n);await b.close()})();

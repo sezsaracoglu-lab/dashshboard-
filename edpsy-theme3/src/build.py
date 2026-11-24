@@ -17,11 +17,11 @@ const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>Array.from(r.query
 const store={get(k,d){try{const v=localStorage.getItem('edpsy3_'+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('edpsy3_'+k,JSON.stringify(v))}catch(e){}}};
 const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const ORDER=['r-srl','r-read','r-sct'];
-const NEXTL={'r-srl':'Next reading: Self-regulated learning in reading →','r-read':'Next reading: Social cognitive perspective →','r-sct':'Back to Start here →'};
+const NEXTL={'r-srl':'Next reading: Self-regulated learning in reading →','r-read':'Next reading: Social cognitive perspective →','r-sct':'Put it together: compare and apply →'};
 const TT={},ZERO={},GLOSS={};
 """
-eng=(L(10,10)+'\n'+L(13,33)).replace("window.wowShow(id==='lg2'?'nut':(ORDER[ORDER.indexOf(id)+1]||'lg'))","window.wowShow(ORDER[ORDER.indexOf(id)+1]||'start')")
-assert "'start')" in eng
+eng=(L(10,10)+'\n'+L(13,33)).replace("window.wowShow(id==='lg2'?'nut':(ORDER[ORDER.indexOf(id)+1]||'lg'))","window.wowShow(ORDER[ORDER.indexOf(id)+1]||'apply')")
+assert "'apply')" in eng
 full=J(s2)
 ttcode=between(full,"setTimeout(()=>$$('.walk').forEach(w=>{const id=w.id.slice(2);$$('.step',w).forEach((st,i)=>{const d=TT[","/* ---------- tables and figures from the readings ---------- */")
 a1="const vq=st.querySelector('.vq');if(vq&&d.fit&&!vq.querySelector('.fit')){const f=document.createElement('div');f.className='fit';f.innerHTML='↳ <b>How it fits the theme:</b> '+d.fit;vq.appendChild(f)}"
@@ -36,7 +36,7 @@ gl=between(full,"let gpop=document.getElementById('gpop')","/* ---------- From z
 zero=between(full,"$$('.walk').forEach(w=>{const id=w.id.slice(2);$$('.step',w).forEach((st,i)=>{const z=ZERO[","/* ---------- My notebook").replace("t.closest('#w-r-craft,#w-r-play')","t.closest('#w-r-srl,#w-r-read,#w-r-sct')")
 assert '#w-r-srl' in zero
 nb="""/* ---------- My notebook (assets/notebook.js, private, in this browser only) ---------- */
-const NBSHORT={start:'Start here','r-srl':'Reading 1 · Self-regulation and learning','r-read':'Reading 2 · Self-regulated learning in reading','r-sct':'Reading 3 · Social cognitive perspective'};
+const NBSHORT={start:'Start here','r-srl':'Reading 1 · Self-regulation and learning','r-read':'Reading 2 · Self-regulated learning in reading','r-sct':'Reading 3 · Social cognitive perspective',apply:'Compare and apply'};
 window.SezNotebookHere=function(){const pn=document.querySelector('.panel.on');if(!pn)return null;const id=pn.id.slice(2),steps=$$('.step',pn),on=pn.querySelector('.step.on');
  let label='Theme 3 · '+(NBSHORT[id]||id),hash=id;if(on){label+=' · '+on.dataset.t;hash=id+'-'+(steps.indexOf(on)+1)}else if(id==='start'){const t=$('#stTitle');if(t&&t.textContent)label+=' · '+t.textContent}
  return {label,hash,course:'Educational Psychology'}};

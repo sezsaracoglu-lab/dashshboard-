@@ -2,6 +2,7 @@
 const B = "https://sezsaracoglu-lab.github.io/dashshboard-/";
 const T1 = B + "edpsy-theme1/";
 const T2 = B + "edpsy-theme2/";
+const T3 = B + "edpsy-theme3/";
 const TOPICS = {
   icap:    { name: "ICAP: the four modes and the I > C > A > P hypothesis (Chi & Wylie, 2014)", where: "Theme 1 · Article 1", links: [["ICAP key concepts", T1 + "#icap-3"], ["ICAP findings", T1 + "#icap-7"]] },
   icapuse: { name: "Using ICAP to design activities and choose control conditions", where: "Theme 1 · Article 1", links: [["ICAP as a tool", T1 + "#icap-9"], ["Assumptions", T1 + "#icap-5"]] },
@@ -29,12 +30,34 @@ const TOPICS = {
   grow:  { name: "Growth mindset, attributions and mastery goals in class", where: "Theme 2 · Reading 3", links: [["Growth and mastery", T2 + "#r-prac-6"]] },
   bel:   { name: "Relatedness and belonging", where: "Theme 2 · Reading 3", links: [["Belonging", T2 + "#r-prac-7"]] },
   use:   { name: "Combining and tailoring practices; strength of evidence", where: "Theme 2 · Reading 3", links: [["Use it, and its limits", T2 + "#r-prac-8"]] },
-  cmp:   { name: "Comparing the theories and applying them to a case", where: "Theme 2 · Compare and apply", links: [["Compare and apply", T2 + "#apply"]] }
+  cmp:   { name: "Comparing the theories and applying them to a case", where: "Theme 2 · Compare and apply", links: [["Compare and apply", T2 + "#apply"]] },
+  srldef: { name: "What self-regulated learning is, and the features all theories share", where: "Theme 3 · Reading 1", links: [["What it is", T3 + "#r-srl-1"]] },
+  theo5:  { name: "The five theories of self-regulation (Table 3.1)", where: "Theme 3 · Reading 1", links: [["The map", T3 + "#r-srl-2"], ["Compare and apply", T3 + "#apply"]] },
+  oper:   { name: "Operant theory: self-monitoring, self-instruction, self-reinforcement", where: "Theme 3 · Reading 1", links: [["Operant theory", T3 + "#r-srl-3"]] },
+  ip:     { name: "Information processing theory: TOTE, Winne and Hadwin, strategies", where: "Theme 3 · Reading 1", links: [["Information processing", T3 + "#r-srl-4"]] },
+  devcon: { name: "Developmental and social constructivist theory: private speech, ZPD", where: "Theme 3 · Reading 1", links: [["Development and construction", T3 + "#r-srl-5"]] },
+  sct:    { name: "Social cognitive theory in reading 1: reciprocal interactions, three phases", where: "Theme 3 · Reading 1", links: [["Social cognitive", T3 + "#r-srl-6"]] },
+  proc:   { name: "Research on goals, monitoring, models and self-talk", where: "Theme 3 · Reading 1", links: [["Goals and monitoring", T3 + "#r-srl-7"], ["Models and self-talk", T3 + "#r-srl-8"]] },
+  srsd:   { name: "Teaching self-regulation: SRSD and self-reflection programmes", where: "Theme 3 · Reading 1", links: [["Two interventions", T3 + "#r-srl-9"]] },
+  acc:    { name: "Metacomprehension accuracy: absolute and relative (Table 8.1)", where: "Theme 3 · Reading 2", links: [["Measuring accuracy", T3 + "#r-read-2"]] },
+  cue:    { name: "Cues, the situation model and why judgments go wrong", where: "Theme 3 · Reading 2", links: [["Cues and levels", T3 + "#r-read-3"]] },
+  ret:    { name: "Delayed retrieval: summaries, keywords, diagrams", where: "Theme 3 · Reading 2", links: [["Delayed retrieval", T3 + "#r-read-4"]] },
+  sit:    { name: "Building the situation model: concept maps, self-explanation, test expectancy", where: "Theme 3 · Reading 2", links: [["Build the situation model", T3 + "#r-read-5"]] },
+  reg:    { name: "From monitoring to regulation: discrepancy reduction, restudy choices", where: "Theme 3 · Reading 2", links: [["Monitoring to learning", T3 + "#r-read-6"]] },
+  rtch:   { name: "Reading: future research and implications for teachers", where: "Theme 3 · Reading 2", links: [["Next and now", T3 + "#r-read-7"]] },
+  agency: { name: "Social cognitive theory, agency and environments", where: "Theme 3 · Reading 3", links: [["What it is", T3 + "#r-sct-1"], ["Environments", T3 + "#r-sct-2"]] },
+  subf:   { name: "The three subfunctions of self-regulation", where: "Theme 3 · Reading 3", links: [["Three subfunctions", T3 + "#r-sct-3"]] },
+  cyc:    { name: "Zimmerman's cycle (Figure 2.1)", where: "Theme 3 · Reading 3", links: [["The cycle", T3 + "#r-sct-4"]] },
+  dev3:   { name: "Development of self-regulation: social-self progression", where: "Theme 3 · Reading 3", links: [["How it develops", T3 + "#r-sct-5"]] },
+  comp6:  { name: "The six components of self-regulation and their research", where: "Theme 3 · Reading 3", links: [["Six components", T3 + "#r-sct-6"]] },
+  impl:   { name: "Supporting self-regulation: implications for practice", where: "Theme 3 · Reading 3", links: [["Next and now", T3 + "#r-sct-7"]] },
+  cmp3:   { name: "Comparing the readings and applying them to a case", where: "Theme 3 · Compare and apply", links: [["Compare and apply", T3 + "#apply"]] }
 };
 const SKILLS = { def: "Key concepts and definitions", find: "Main findings", fig: "Reading figures and tables", comp: "Comparing theories", app: "Applying to new situations" };
 window.EXAMS = window.EXAMS || [];
 const GROUPS = [
   { id: "hy", name: "★ High-yield", sub: "Most likely exam questions" },
   { id: "t1", name: "Theme 1", sub: "Learning strategies" },
-  { id: "t2", name: "Theme 2", sub: "Motivation" }
+  { id: "t2", name: "Theme 2", sub: "Motivation" },
+  { id: "t3", name: "Theme 3", sub: "Self-regulation" }
 ];
