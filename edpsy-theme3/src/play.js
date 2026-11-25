@@ -2,7 +2,7 @@ const {chromium}=require('playwright');
 const W=+process.argv[2]||1400;
 const SC2=[['r-read',2,0,'accScene'],['r-read',3,0,'cueScene'],['r-read',4,0,'delScene'],['r-read',5,0,'sitScene'],['r-read',6,0,'chainScene'],['r-read',7,0,'tchScene']];
 const SC3=[['r-sct',2,0,'envScene'],['r-sct',3,0,'subScene'],['r-sct',4,0,'cycScene'],['r-sct',5,0,'devScene'],['r-sct',6,0,'compScene'],['r-sct',7,0,'clinScene']];
-const SC4=[['apply',0,0,'clinic3']];
+const SC4=[['apply',0,0,'clinic3'],['r-srl',1,0,'srlScene'],['r-read',1,0,'loopScene'],['r-sct',1,0,'triScene']];
 const SC=[[2,0,'mapScene'],[3,0,'opScene'],[4,0,'ipLoop'],[4,1,'ipStrat'],[5,0,'dvScene'],[5,1,'scScene'],[6,0,'triScene'],[6,1,'cyScene'],[6,2,'lvScene'],[7,0,'catScene'],[7,1,'glScene'],[7,2,'mnScene'],[8,0,'mdScene'],[8,1,'vbScene'],[9,0,'srsdScene'],[9,1,'refScene'],[10,0,'fdScene']];
 const only=process.argv[3]?process.argv[3].split(','):null;
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:W,height:1000}});const errs=[];p.on('pageerror',e=>errs.push(e.message));p.on('console',m=>{if(m.type()==='error')errs.push(m.text())});

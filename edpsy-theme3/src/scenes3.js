@@ -180,3 +180,26 @@ envs:['Imposed, selected and created environments','Bandura\'s (1986) distinctio
 subf:['Subfunctions of self-regulation','Self-observation, self-evaluation (self-judgment) and self-reaction: the three cognitive processes that produce self-regulated action (Bandura, 1986).'],
 ssp:['Social-self progression','Schunk and Zimmerman\'s four levels of self-regulatory development (observation, emulation, self-control, self-regulation): influence is social first, then internalized.']
 });
+
+/* ---------- reading 3 · step 1 · three co-determinants, agency, self-efficacy (Sofia is ours) ---------- */
+(function(){
+const N={P:[320,78,'🧠','PERSON','#6d5a9e','#efeaf7'],B:[110,214,'🏃','BEHAVIOUR','#2f8a57','#e2f1e6'],E:[530,214,'🏫','ENVIRONMENT','#34466b','#e3ecf7']};
+const A=[['t1','B','P','low grade → self-doubt'],['t2','P','B','doubt → skips practice'],['t3','B','E','teacher pairs her up'],['t4','E','P','partner → "I can"']];
+const R=[
+ {k:'t1',ic:'📉',c:['Sofia fails her first statistics quiz (behaviour).'],q:'What might happen inside her (person)?',o:[['She starts to doubt she','can do statistics'],['Nothing: results never','affect people'],['The school changes','its rules']],say:`<b>Behaviour → person.</b> What she does, and how it turns out, shapes her thoughts and feelings.`},
+ {k:'t2',ic:'🙈',c:['Sofia now doubts herself.'],q:'What might she do next?',o:[['Avoid the extra','practice exercises'],['Practise more,','because doubt helps'],['Change her','teacher']],say:`<b>Person → behaviour.</b> Her beliefs steer what she does. People who doubt their capability are less motivated and give up more easily.`},
+ {k:'t3',ic:'🤝',c:['Her teacher notices the skipped exercises and pairs her with a','supportive study partner.'],q:'Why did her environment change?',o:[['Because of her behaviour:','behaviour shapes environment'],['By chance:','environments are fixed'],['Because of a','school rule']],say:`<b>Behaviour → environment.</b> The influence runs both ways: what she does changes the situation around her.`},
+ {k:'t4',ic:'💪',c:['The partner shows her, step by step, how to solve the problems.'],q:'What changes in Sofia?',o:[['Her belief that she','can do it grows'],['Nothing: only','grades matter'],['She becomes','dependent on him']],say:`<b>Environment → person.</b> The circle closes: person, behaviour and environment are <b>co-determinants</b> whose influence runs in both directions (Bandura, 1986, 2001).`},
+ {k:'t5',ic:'🧭',c:['A behaviourist would explain Sofia only through rewards and','influences from outside.'],q:'What does social cognitive theory add?',o:[['Her own thoughts, and her','power to steer (agency)'],['Hidden drives','from childhood'],['Pure free choice,','apart from the situation']],set:{ag:1},say:`<b>Agency.</b> People can intentionally steer events in their lives and choose their reactions, through four capacities: generating new thoughts, forethought, self-reaction and reflective self-consciousness. The theory says none of the older views alone explains people: not only outside rewards (behaviourism), not only hidden drives (Freud), not only free choice.`},
+ {k:'t6',ic:'🎯',c:['Two students are equally skilled. One believes she can master','statistics; the other doubts it.'],q:'Who sets harder goals and keeps going when it gets hard?',o:[['The one who','believes she can'],['Both equally:','skill decides'],['The one who','doubts it']],set:{se:1},say:`<b>Self-efficacy:</b> belief in one's capability to reach what one wants. It is a critical determinant of self-regulated behaviour: efficacious learners set challenging goals, monitor, correct and persist.`}];
+SEQ('triScene','triOut',{title:'Sofia\'s first statistics month',hook:'Hook: person · behaviour · environment, all pushing on each other',unit:'Link',
+ draw(S){const g=S.got;let s='';
+  A.forEach(([k,a,b,lab],i)=>{if(!(g[k]||S.end))return;const [x1,y1]=N[a],[x2,y2]=N[b],off=(i%2?1:-1)*10,dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy),nx=-dy/L*off,ny=dx/L*off,sx=x1+dx*.32+nx,sy=y1+dy*.32+ny,ex=x1+dx*.68+nx,ey=y1+dy*.68+ny,ang=Math.atan2(ey-sy,ex-sx)*180/Math.PI;
+   const LP={t1:[150,130],t2:[282,178],t3:[320,238],t4:[490,130]}[k];s+=`<path d="M${sx} ${sy} L${ex} ${ey}" stroke="#c9a96e" stroke-width="3"/><path d="M0 0 l-10 -6 v12z" fill="#c9a96e" transform="translate(${ex} ${ey}) rotate(${ang})"/><text x="${LP[0]}" y="${LP[1]}" ${mid} font-size="10.5" font-weight="700" fill="#a8854a">${lab}</text>`});
+  Object.values(N).forEach(([x,y,ic,nm,c,f])=>{s+=BX(x-80,y-24,160,48,f,c,1.8,12)+`<text x="${x-52}" y="${y+7}" ${mid} font-size="20">${ic}</text><text x="${x-32}" y="${y+5}" font-weight="700" font-size="12" fill="${c}">${nm}</text>`});
+  if(g.t5||S.end)s+=`<text x="330" y="136" ${mid} font-weight="700" font-size="11" fill="#6d5a9e">🧭 agency: she can steer</text>`;
+    return s},
+ rounds:R,end:['Person, behaviour and environment shape each other, and people can steer','that process; belief in your own capability decides how hard you try.'],
+ endOut:`<b>🏁 Social cognitive theory:</b> three co-determinants, human agency, and self-efficacy as a critical determinant of self-regulation. For Bandura (2016), self-efficacy is the bedrock of what people aspire to, how motivated they are and what they achieve.`,
+ extras:[]});
+})();
