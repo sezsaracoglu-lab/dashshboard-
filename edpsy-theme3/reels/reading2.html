@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Reels · Self-regulated learning in reading · Theme 3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--ink:#1d2433;--muted:#5d6472;--navy:#2b3a5c;--gold:#b8923a;--sage:#4f7a5a;--clay:#a8553d;--line:#e4e0d6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#ece7dc;font-family:'Instrument Sans',system-ui,sans-serif;color:var(--ink);overflow:hidden}
+.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;font-size:13px;pointer-events:none}
+.top a{pointer-events:auto;color:var(--navy);text-decoration:none;font-weight:600;background:#fffc;border:1px solid var(--line);padding:6px 12px;border-radius:99px}
+.feed{height:100%;overflow-y:scroll;scroll-snap-type:y mandatory;scrollbar-width:none}
+.feed::-webkit-scrollbar{display:none}
+.reel{height:100%;scroll-snap-align:start;scroll-snap-stop:always;display:flex;justify-content:center;align-items:center}
+.phone{position:relative;width:min(100%,430px);height:100%;max-height:900px;overflow:hidden;background:var(--c1);display:flex;flex-direction:column;box-shadow:0 0 40px #0001}
+@media(min-width:500px){.phone{height:94%;border-radius:28px}}
+.bars{display:flex;gap:4px;padding:56px 14px 0}
+.bars i{flex:1;height:3px;border-radius:3px;background:#0002;overflow:hidden}
+.bars i b{display:block;height:100%;width:0;background:var(--navy)}
+.who{display:flex;align-items:center;gap:8px;padding:10px 16px 0;font-size:12.5px;color:var(--muted)}
+.who .av{width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:12px}
+.who b{color:var(--ink)}
+.hook{font-family:Fraunces,serif;font-weight:700;font-size:26px;line-height:1.12;padding:14px 20px 0;color:var(--navy)}
+.stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;padding:8px 16px}
+.cap{min-height:132px;padding:0 70px 22px 20px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px}
+.cap span{display:inline-block;align-self:flex-start;background:#fff;border-radius:10px;padding:6px 10px;font-weight:600;font-size:16.5px;line-height:1.3;box-shadow:0 2px 0 #0001;opacity:0;transform:translateY(10px);transition:.35s}
+.cap span{display:none}.cap span.on,.cap span.prev{display:inline-block}.cap span.on{opacity:1;transform:none;font-size:18px}.cap span.prev{opacity:.45;transform:none;font-size:14px}
+.cap span em{font-style:normal;color:var(--clay)}.cap span u{text-decoration:none;color:var(--sage)}
+.src{font-size:11.5px;color:var(--muted);padding:0 70px 26px 20px}
+.side{position:absolute;right:10px;bottom:150px;display:flex;flex-direction:column;gap:14px;z-index:5}
+.side button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:20px;cursor:pointer;box-shadow:0 2px 6px #0001}
+.side button small{display:block;font-size:9px;color:var(--muted);margin-top:-2px}
+.side button.on{background:#fde8e6;border-color:#e8b4ad}
+.poll{position:absolute;left:14px;right:14px;bottom:14px;background:#fff;border-radius:18px;padding:14px;box-shadow:0 8px 30px #0002;transform:translateY(130%);transition:.45s;z-index:6}
+.poll.show{transform:none}
+.poll h4{font-size:15px;margin-bottom:10px}
+.poll button{display:block;width:100%;text-align:left;margin-top:7px;padding:10px 12px;border-radius:12px;border:1.5px solid var(--line);background:#faf8f3;font:600 14px 'Instrument Sans';cursor:pointer;color:var(--ink)}
+.poll button.ok{background:#e8f1ea;border-color:var(--sage)}.poll button.no{background:#f8e9e3;border-color:var(--clay)}
+.poll p{margin-top:9px;font-size:13.5px;line-height:1.4;color:var(--ink);display:none}
+.tap{position:absolute;inset:0;z-index:1}
+.pause{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:46px;opacity:0;transition:.2s;z-index:4;pointer-events:none}
+.paused .pause{opacity:.75}
+.next{position:absolute;bottom:4px;left:0;right:0;text-align:center;font-size:12px;color:var(--muted);animation:bob 1.4s infinite;z-index:3}
+@keyframes bob{50%{transform:translateY(-4px)}}
+/* visuals */
+.v{width:100%;max-width:360px;position:relative}
+.box{background:#fff;border-radius:16px;padding:12px 14px;border:2px solid var(--line);font-weight:600;text-align:center;transition:.4s}
+.row{display:flex;gap:10px;align-items:center;justify-content:center}
+.arr{color:var(--gold);font-size:22px;font-weight:700}
+.big{font-size:46px;line-height:1}
+.pop{opacity:0;transform:scale(.8);transition:.4s}.pop.on{opacity:1;transform:none}
+.red{border-color:#d9a197!important;background:#fbecea!important}.grn{border-color:#9cc4a6!important;background:#e2f1e6!important}.gld{border-color:#d9c08a!important;background:#fbf3df!important}
+.bar{display:flex;align-items:flex-end;gap:2px;height:110px}
+.bar i{width:10px;border-radius:4px 4px 0 0;transition:height .8s}
+.ice{display:flex;flex-direction:column;align-items:center;gap:6px}
+.ice div{border-radius:12px;padding:10px;font-weight:700;text-align:center;width:var(--w)}
+.thermo{display:flex;gap:16px;justify-content:center}
+.thermo .box{width:150px}
+.chain .box{flex:1;font-size:13px;padding:10px 6px}
+.chk{display:flex;flex-direction:column;gap:9px}
+.chk .box{text-align:left;display:flex;gap:10px;align-items:center}
+.end{position:absolute;inset:0;background:#f7f5f0f2;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;z-index:30;padding:30px;text-align:center}
+.end.show{display:flex}.end h2{font-family:Fraunces,serif;color:var(--navy);font-size:26px}
+.end a{background:var(--navy);color:#fff;padding:12px 18px;border-radius:99px;text-decoration:none;font-weight:600}
+</style></head><body>
+<div class="top"><a href="../#r-read-1">← Reading 2 walk-through</a><a href="../">Theme 3</a></div>
+<div class="feed" id="feed"></div>
+<script>
+const R=[
+{c1:'#fbf3df',hook:'You read it. It made sense. You still failed the questions. Why?',
+ v:`<div class="v"><div class="row"><div class="box" style="font-size:40px">📖</div><div class="arr">→</div><div class="box pop" data-at="1">😌<br><small>"Got it"</small></div><div class="arr pop" data-at="2">→</div><div class="box red pop" data-at="2">📉<br><small>exam</small></div></div></div>`,
+ beats:['Feeling that you understood is <em>not</em> the same as understanding.','Two researchers looked at exactly this: Thiede and de Bruin (2017).','Their question: how well do readers <u>judge</u> their own understanding?','And what helps them judge better? Swipe on. 👆'],
+ src:'Thiede &amp; de Bruin (2017), Handbook of SRL, ch. 8, pp. 124–137'},
+{c1:'#e3ecf7',hook:'The reading loop: check, then fix',
+ v:`<div class="v"><div class="row"><div class="box">📖<br><small>Read</small></div><div class="arr">→</div><div class="box gld" id="mon">🔍<br><small>Monitor</small></div><div class="arr">→</div><div class="box grn">🔁<br><small>Reread</small></div></div>
+ <div class="row pop" data-at="2" style="margin-top:18px"><div class="box red" style="flex:1"><small>Thinks "got it", isn't</small><br>⏹️ stops too early</div><div class="box red" style="flex:1"><small>Thinks "hard", isn't</small><br>🎯 rereads the wrong text</div></div></div>`,
+ beats:['You read, you <u>monitor</u> ("do I get it?"), then you <u>regulate</u>: reread or stop.','That loop only works if the monitoring is <em>accurate</em>.','Wrong judgment → you stop too early, or reread the wrong text.','The chapter calls it <u>metacomprehension accuracy</u>.'],
+ poll:{q:'Lina rereads diligently, but always the wrong texts. What is broken?',o:['Her judgment of what she understood','Her effort','Her reading speed'],why:'Her judgment. Readers already reread what seems less learned; the weak link is the judgment of what they understood.'}},
+{c1:'#f6eedd',hook:'Two ways to be right about yourself',
+ v:`<div class="v"><div class="row" style="gap:26px"><div><div class="bar" id="b2"></div><div style="text-align:center;font-weight:700;margin-top:6px">Student 2</div></div><div><div class="bar" id="b3"></div><div style="text-align:center;font-weight:700;margin-top:6px">Student 3</div></div></div><div style="text-align:center;font-size:12px;color:#5d6472;margin-top:8px">▯ gold = predicted · ▮ navy = actual · 5 texts (Table 8.1, p. 125)</div></div>`,
+ beats:['<u>Absolute</u> accuracy: is your confidence the right <em>size</em>?','<u>Relative</u> accuracy: can you tell <em>which</em> texts you understood best?','Student 2: 3 points too high on every text, but the order is perfect.','Student 3: no bias on average, but the order is exactly backwards.','They are independent. The chapter focuses on relative accuracy.'],
+ poll:{q:'Who would reread the WRONG texts?',o:['Student 3','Student 2','Neither'],why:'Student 3: her ranking is reversed (relative accuracy −1.0), so her "least understood" text is really her best one.'}},
+{c1:'#efeaf7',hook:'Why we misjudge: we judge by clues',
+ v:`<div class="v ice"><div style="--w:62%;background:#fff;border:2px solid #e4e0d6">🔤 Surface: the words</div><div style="--w:80%;background:#f6eedd;border:2px solid #d9c08a">🔗 Textbase: the ideas</div><div class="pop" data-at="2" style="--w:100%;background:#e2f1e6;border:2px solid #9cc4a6">🧠 Situation model: ideas + what you know<br><small>this is what comprehension tests ask</small></div></div>`,
+ beats:['You can\'t see your own understanding, so you judge by clues.','"It felt easy" 🪞 is a <em>surface</em> clue: it misleads.','"I can explain it" 💡 comes from the <u>situation model</u>, the deep level.','Students who judged by "can I explain it?" were more accurate than those using other clues (Thiede et al., 2010).'],
+ poll:{q:'Which clue predicts a comprehension test best?',o:['"I could explain it to a friend"','"The text was short and easy"','"I knew all the words"'],why:'Explaining comes from the situation model, which comprehension tests depend on. Ease and vocabulary are surface features.'}},
+{c1:'#e2f1e6',hook:'Trick 1: test yourself, but LATER',
+ v:`<div class="v thermo"><div class="box red">🔥<br>Right after reading<br><small>everything still "warm": all texts feel the same</small></div><div class="box grn pop" data-at="2">❄️<br>After a delay<br><small>only what stuck comes back: the weak texts show</small></div></div>`,
+ beats:['Write a summary, 5 keywords or complete a cause-and-effect diagram <u>before</u> you judge.','But do it right after reading and it doesn\'t help.','After a delay, only long-term memory is left: your weak texts reveal themselves.','In the chapter\'s retrieval studies, the <u>delayed</u> groups judged best.'],
+ poll:{q:'Six texts. When should you write the keywords?',o:['After reading all six','Right after each text','While reading each text'],why:'Delayed. In Thiede et al. (2003) and Thiede &amp; Anderson (2003), the delayed groups were the most accurate; the delay between reading and writing is the crucial part (Thiede et al., 2005).'}},
+{c1:'#fbf3df',hook:'Trick 2: build it yourself',
+ v:`<div class="v"><div class="row"><div class="box grn" style="flex:1">✍️🗺️<br>make your own map<br><b style="color:#4f7a5a">better judgment</b></div><div class="box red pop" data-at="2" style="flex:1">📋🗺️<br>get a ready-made map<br><b style="color:#a8553d">no better than nothing</b></div></div><div class="box pop" data-at="3" style="margin-top:12px">🗣️ self-explain each sentence &gt; reading twice</div></div>`,
+ beats:['Making a concept map while reading helped readers judge better.','Getting a ready-made map? 7th graders were <em>no more accurate</em> than without (Redford et al., 2012).','The <u>making</u> is what matters.','Same for self-explaining: it beat reading the text twice (Griffin et al., 2008).']},
+{c1:'#e3ecf7',hook:'Trick 3: know what the test asks',
+ v:`<div class="v"><div class="row"><div class="box" style="flex:1">🧾 Expect a <b>facts</b> test<br><small>→ better at predicting facts</small></div><div class="box grn pop" data-at="1" style="flex:1">🧩 Expect an <b>inference</b> test<br><small>→ better at predicting understanding</small></div></div></div>`,
+ beats:['After practice tests, students read new texts and predicted their scores.','Expecting inference questions made them better judges of their <u>understanding</u> (Thiede, Griffin &amp; Wiley, 2011).','What you expect to be tested on changes how you read.','Teachers: show the exam style early.']},
+{c1:'#f6eedd',hook:'Does judging better actually pay off?',
+ v:`<div class="v chain"><div class="row"><div class="box gld">🔍 judge right</div><div class="arr">→</div><div class="box pop" data-at="1">🔁 reread the right text</div><div class="arr pop" data-at="2">→</div><div class="box grn pop" data-at="2">📈 understand more</div></div></div>`,
+ beats:['Yes. Delayed-keyword students judged better, picked their weaker texts to reread...','...and ended with better overall comprehension (Thiede et al., 2003, the first evidence).','Even children in grade 1 give harder items more time: regulating is in place early.','The weak link is <em>monitoring</em>. That is what to train.']},
+{c1:'#fbecea',hook:'Still open: pictures and screens',
+ v:`<div class="v"><div class="row"><div class="box" style="flex:1">🖼️ decorative pictures<br><small>inflate the <b>feeling</b> of understanding without better scores</small></div><div class="box" style="flex:1">📱 vs 📄<br><small>judgments were better calibrated on <b>paper</b></small></div></div></div>`,
+ beats:['Pictures that explain nothing can inflate your feeling of understanding.','That hurt lower performers\' judgments; higher performers even profited (Ackerman &amp; Leiser, 2014).','On screen, students judged themselves less well than on paper, with the same scores (Ackerman &amp; Goldsmith, 2011).','Why exactly is still being researched.']},
+{c1:'#e2f1e6',hook:'Your 3-step routine for tomorrow',
+ v:`<div class="v chk"><div class="box pop" data-at="0">1️⃣ Read today. Tomorrow: 5 keywords per reading.</div><div class="box pop" data-at="1">2️⃣ Rate each reading: could I explain it?</div><div class="box pop" data-at="2">3️⃣ Reread the weakest first. Make your own map.</div></div>`,
+ beats:['Test yourself later.','Judge by "can I explain it?", not by "it felt easy".','Reread what you understand least.','Judge right, then reread right. ✅'],
+ src:'This routine is ours, built from the chapter\'s findings.'}];
+const feed=document.getElementById('feed');
+R.forEach((r,i)=>{const el=document.createElement('section');el.className='reel';el.innerHTML=`<div class="phone" style="--c1:${r.c1}"><div class="bars">${R.map((_,j)=>`<i><b style="width:${j<i?100:0}%"></b></i>`).join('')}</div>
+<div class="who"><div class="av">ST</div><div><b>Theme 3 · Reading 2</b> · ${i+1}/${R.length}</div></div><div class="hook">${r.hook}</div>
+<div class="stage">${r.v}<div class="tap"></div><div class="pause">⏸</div></div>
+<div class="cap">${r.beats.map(b=>`<span>${b}</span>`).join('')}</div>${r.src?`<div class="src">${r.src}</div>`:''}
+<div class="side"><button class="like" title="Got it">❤️<small>got it</small></button><button class="rep" title="Replay">↻<small>replay</small></button>${r.poll?'<button class="pl" title="Quiz">❓<small>quiz</small></button>':''}</div>
+${r.poll?`<div class="poll"><h4>❓ ${r.poll.q}</h4>${r.poll.o.map((o,k)=>`<button data-k="${k}">${o}</button>`).join('')}<p>${r.poll.why}</p></div>`:''}
+${i<R.length-1?'<div class="next">swipe up ↑</div>':''}</div>`;feed.appendChild(el)});
+const end=document.createElement('div');end.className='end';end.innerHTML='<div class="big">🎬</div><h2>That\'s reading 2 in 10 reels</h2><p>Now go deeper in the full walk-through, or replay a reel.</p><a href="../#r-read-1">Open the walk-through</a>';document.body.appendChild(end);
+let cur=-1,timer=null,paused=false;
+function shuffle(p){const bs=[...p.querySelectorAll('button[data-k]')];const par=bs[0].parentNode,pp=par.querySelector('p');bs.sort(()=>Math.random()-.5).forEach(b=>par.insertBefore(b,pp))}
+function play(i,restart){const reel=feed.children[i],ph=reel.querySelector('.phone'),r=R[i];clearInterval(timer);cur=i;paused=false;ph.classList.remove('paused');
+ const spans=[...ph.querySelectorAll('.cap span')],pops=[...ph.querySelectorAll('.pop')],bar=ph.querySelectorAll('.bars b')[i];
+ spans.forEach(s=>s.classList.remove('on'));pops.forEach(p=>p.classList.remove('on'));const poll=ph.querySelector('.poll');if(poll&&restart!==false){poll.classList.remove('show')}
+ if(i===2)drawBars(ph);
+ const n=spans.length,step=3200,total=n*step+600;let t=0;
+ const tick=()=>{if(paused)return;t+=100;const k=Math.floor(t/step);spans.forEach((s,j)=>{s.classList.toggle('on',j===Math.min(k,n-1));s.classList.toggle('prev',j===Math.min(k,n-1)-1)});pops.forEach(p=>p.classList.toggle('on',+p.dataset.at<=k));bar.style.width=Math.min(100,t/total*100)+'%';
+  if(t>=total){clearInterval(timer);if(poll)poll.classList.add('show');if(i===R.length-1)setTimeout(()=>end.classList.add('show'),1500)}};
+ tick();timer=setInterval(tick,100)}
+function drawBars(ph){const P=[7,7,6,5,3],A2=[4,4,3,2,0],A3=[3,5,6,7,7];[['b2',A2],['b3',A3]].forEach(([id,A])=>{const b=ph.querySelector('#'+id);b.innerHTML=P.map((p,k)=>`<i style="background:#e8d7ae;height:0" data-h="${p*14}"></i><i style="background:#2b3a5c;height:0;margin-right:5px" data-h="${Math.max(A[k]*14,2)}"></i>`).join('');setTimeout(()=>b.querySelectorAll('i').forEach(x=>x.style.height=x.dataset.h+'px'),200)})}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&e.intersectionRatio>.6){const i=[...feed.children].indexOf(e.target);if(i!==cur)play(i)}}),{threshold:[.6]});
+[...feed.children].forEach(c=>io.observe(c));
+feed.addEventListener('click',e=>{const ph=e.target.closest('.phone');if(!ph)return;
+ if(e.target.classList.contains('tap')){paused=!paused;ph.classList.toggle('paused',paused)}
+ const btn=e.target.closest('button');if(!btn)return;
+ if(btn.classList.contains('like'))btn.classList.toggle('on');
+ if(btn.classList.contains('rep'))play(cur);
+ if(btn.classList.contains('pl')){const p=ph.querySelector('.poll');p.classList.toggle('show')}
+ if(btn.dataset.k!==undefined){const p=btn.closest('.poll');if(p.dataset.done)return;p.dataset.done=1;btn.classList.add(btn.dataset.k==='0'?'ok':'no');p.querySelector('button[data-k="0"]').classList.add('ok');p.querySelector('p').style.display='block'}});
+end.addEventListener('click',e=>{if(e.target.tagName!=='A')end.classList.remove('show')});
+document.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();const i=Math.max(0,Math.min(R.length-1,cur+(e.key==='ArrowDown'?1:-1)));feed.children[i].scrollIntoView({behavior:'smooth'})}if(e.key===' '){paused=!paused;feed.children[cur].querySelector('.phone').classList.toggle('paused',paused)}});
+document.querySelectorAll('.poll').forEach(shuffle);
+</script></body></html>
