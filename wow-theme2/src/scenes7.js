@@ -5,7 +5,7 @@ const SF_D={
  l:{t:'Switching off workstation lights',max:80,b:[68.9,58.2,40.8,50.2,42.7,41.6,59.5],c:[74.1,40.7,42.6,49.6,24.4,13.3,22.6],gb:17.2,gc:18.2,tab:'Table 3 · Figure 2'},
  r:{t:'Remaining energy behaviors',max:40,b:[38.4,22.4,9.8,15.3,22.8,34.6,20.9],c:[34.1,21.5,16.3,26.7,7.4,6.9,11.9],gb:9.6,gc:8.5,tab:'Table 4 · Figure 3'}};
 /* line chart of energy-wasting behavior: show = 'b' (basic only), 'bc' (both), upto = last period index drawn for the comparative line */
-function SFCHART(key,showC,upto){const d=SF_D[key],x0=86,x1=600,y0=236,y1=74,X=i=>x0+i*(x1-x0)/6,Y=v=>y0-(v/d.max)*(y0-y1);let s='';
+function SFCHART(key,showC,upto){const d=SF_D[key],x0=86,x1=600,y0=222,y1=74,X=i=>x0+i*(x1-x0)/6,Y=v=>y0-(v/d.max)*(y0-y1);let s='';
  s+=`<text x="${(x0+x1)/2}" y="66" ${mid} font-weight="700" font-size="12" fill="#34466b">${d.t} · % of observations that were wasteful</text>`;
  [0,.5,1].forEach(f=>{const v=d.max*f,y=Y(v);s+=`<line x1="${x0}" x2="${x1}" y1="${y}" y2="${y}" stroke="#e8e1d3"/><text x="${x0-8}" y="${y+4}" text-anchor="end" font-size="10.5" fill="#6b7280">${v}%</text>`});
  SF_P.forEach((p,i)=>{s+=`<text x="${X(i)}" y="${y0+16}" ${mid} font-size="10.5" fill="#6b7280">${p}</text>`});
@@ -13,7 +13,7 @@ function SFCHART(key,showC,upto){const d=SF_D[key],x0=86,x1=600,y0=236,y1=74,X=i
  const line=(arr,n,c,dash)=>`<polyline points="${arr.slice(0,n+1).map((v,i)=>X(i)+','+Y(v)).join(' ')}" fill="none" stroke="${c}" stroke-width="2.6" ${dash?'stroke-dasharray="6 4"':''}/>`+arr.slice(0,n+1).map((v,i)=>`<circle cx="${X(i)}" cy="${Y(v)}" r="3.4" fill="${c}"/>`).join('');
  s+=line(d.b,6,'#6b7280',1);s+=`<text x="${X(6)+6}" y="${Y(d.b[6])+4}" font-size="10.5" font-weight="700" fill="#6b7280">${d.b[6]}</text>`;
  if(showC){s+=line(d.c,upto,'#2f8a57');if(upto===6)s+=`<text x="${X(6)+6}" y="${Y(d.c[6])+4}" font-size="10.5" font-weight="700" fill="#2f8a57">${d.c[6]}</text>`}
- s+=`<line x1="96" x2="118" y1="252" y2="252" stroke="#6b7280" stroke-width="2.6" stroke-dasharray="6 4"/><text x="122" y="256" font-size="10.5" fill="#2b2f3a">Basic programme only</text>`+(showC?`<line x1="300" x2="322" y1="252" y2="252" stroke="#2f8a57" stroke-width="2.6"/><text x="326" y="256" font-size="10.5" fill="#2b2f3a">Basic programme + comparative feedback</text>`:'');
+ s+=`<line x1="96" x2="118" y1="254" y2="254" stroke="#6b7280" stroke-width="2.6" stroke-dasharray="6 4"/><text x="122" y="258" font-size="10.5" fill="#2b2f3a">Basic programme only</text>`+(showC?`<line x1="300" x2="322" y1="254" y2="254" stroke="#2f8a57" stroke-width="2.6"/><text x="326" y="258" font-size="10.5" fill="#2b2f3a">Basic programme + comparative feedback</text>`:'');
  return s}
 
 /* ---------- step 1 · the question ---------- */
@@ -108,9 +108,9 @@ const RS=[
 SEQ('sfWhy','swOut',{title:'Behavior moved. Did minds move too?',hook:'Table 1 · the checks · the critic · the limits',unit:'Question',
  draw(S){const E=S.end;let s='';
   const row=(y,ic,lab,b0,b1,c0,c1,on)=>{s+=`<text x="16" y="${y+14}" font-size="11" font-weight="700" fill="#2b2f3a">${ic} ${lab}</text>`;if(!on){s+=`<text x="420" y="${y+14}" ${mid} font-size="10.5" class="t-s">answer to reveal</text>`;return}
-   const X=v=>300+(v-3)*120;s+=`<line x1="${X(3)}" x2="${X(5)}" y1="${y+10}" y2="${y+10}" stroke="#e8e1d3"/>`+`<line x1="${X(b0)}" x2="${X(b1)}" y1="${y+4}" y2="${y+4}" stroke="#6b7280" stroke-width="3" marker-end="url(#sfa)"/><line x1="${X(c0)}" x2="${X(c1)}" y1="${y+16}" y2="${y+16}" stroke="#2f8a57" stroke-width="3" marker-end="url(#sfg)"/>`+`<text x="${X(Math.max(b0,b1))+8}" y="${y+8}" font-size="10.5" fill="#6b7280">${b0}→${b1}</text><text x="${X(Math.max(c0,c1))+8}" y="${y+20}" font-size="10.5" fill="#2f8a57">${c0}→${c1}</text>`};
-  s+=`<defs><marker id="sfa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7280"/></marker><marker id="sfg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2f8a57"/></marker></defs>`;
-  s+=`<text x="16" y="66" font-size="10.5" class="t-s">Table 1 (p. 241): mean scores before → after, scale 1 to 5</text><text x="300" y="66" font-size="10.5" fill="#6b7280">grey = basic</text><text x="400" y="66" font-size="10.5" fill="#2f8a57">green = comparison</text>`;
+   const X=v=>250+(v-3)*150,F=v=>v.toFixed(1);s+=`<line x1="${X(3)}" x2="${X(5)}" y1="${y+10}" y2="${y+10}" stroke="#e8e1d3"/>`+`<line x1="${X(b0)}" x2="${X(b1)}" y1="${y+4}" y2="${y+4}" stroke="#6b7280" stroke-width="3" marker-end="url(#sfa)"/><line x1="${X(c0)}" x2="${X(c1)}" y1="${y+16}" y2="${y+16}" stroke="#2f8a57" stroke-width="3" marker-end="url(#sfg)"/>`+`<text x="${X(Math.max(b0,b1))+8}" y="${y+8}" font-size="10.5" fill="#6b7280">${F(b0)} → ${F(b1)}</text><text x="${X(Math.max(c0,c1))+8}" y="${y+20}" font-size="10.5" fill="#2f8a57">${F(c0)} → ${F(c1)}</text>`};
+  s+=`<defs><marker id="sfa" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7280"/></marker><marker id="sfg" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2f8a57"/></marker></defs>`;
+  s+=`<text x="16" y="66" font-size="10.5" class="t-s">Table 1 (p. 241): mean before → after (1 to 5)</text><text x="330" y="66" font-size="10.5" font-weight="700" fill="#6b7280">grey = basic</text><text x="430" y="66" font-size="10.5" font-weight="700" fill="#2f8a57">green = comparison</text>`;
   row(76,'⚙️','Machines yield saving',4.2,4.0,4.2,4.6,S.a||E);row(104,'💡','Lights yield saving',4.4,4.1,4.5,4.6,S.a||E);row(132,'🗣️','Reported behavior',3.4,3.5,3.1,3.7,S.a||E);row(160,'🪢','Identification',4.2,3.6,3.8,4.0,S.b||E);
   const chip=(x,on,t,c)=>`<text x="${x}" y="214" ${mid} font-size="11" font-weight="700" fill="${on?c:'#c9cfd9'}">${on?t:'?'}</text>`;
   s+=chip(110,S.c||E,'✅ checks: it worked','#2f8a57')+chip(320,S.d||E,'🧐 size: not the cause','#34466b')+chip(530,S.e||E,'⚠️ demoralization: untested','#c0392b');
