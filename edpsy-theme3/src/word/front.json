@@ -1,0 +1,40 @@
+{
+ "note": [
+  "Sezen, this reading is the map of Theme 3. Theme 1 taught you how to study, and Theme 2 why a student starts and keeps going. Self-regulated learning puts the two together: the learner steers her own strategies <b>and</b> her own motivation. The big question of these notes is: <b>how does a learner take charge of her own learning, and how can a teacher help?</b>",
+  "The notes follow the ten steps of the reading 1 walk-through on your dashboard, as ten lectures. Lecture 1.1 defines self-regulated learning, lectures 1.2 to 1.6 explain the five theories, lectures 1.7 and 1.8 the research on what self-regulating students do, lecture 1.9 two programmes that teach self-regulation, and lecture 1.10 what is still open. Every study is told as a short story, every lecture ends with the trap, an exam-style question and a box to lock it in.",
+  "These are notes for reading 1 only. Readings 2 and 3 of the theme get their own notes when their walk-throughs are ready."
+ ],
+ "story": [
+  "<b>Chapter 1 · The puzzle: same lesson, two different afterwards.</b> Start with a puzzle. A teacher shows the whole class a good reading strategy. Anna uses it again at home, notices when it does not work for a new kind of text and adjusts it. David uses it in class, because he is told to, and drops it the day after. Both were taught the same thing. The difference is not what they were taught; it is what they do with their own learning afterwards. That is the subject of this theme. (Anna and David are our examples.)",
+  "<b>Chapter 2 · Self-regulation: the learner as her own coach.</b> <b>Self-regulated learning</b> is learning that comes from the student's own thoughts and behaviours, systematically aimed at her own learning goals (Zimmerman, 2000, in reading 1). Theories differ, but they share three features. Self-regulated learners are <b>active</b> in their behaviour, their thinking about their thinking (metacognition) and their motivation. Self-regulation is <b>cyclical</b>: you set a goal, check your progress, and change what you do. And it asks <b>why</b> people choose to regulate themselves, because knowing what to do is not enough; you also have to manage your motivation and feelings.",
+  "<b>Chapter 3 · Five lenses on the same learner.</b> Reading 1 explains self-regulation through <b>five theories</b>. <b>Operant</b> theory looks at behaviour, cues and rewards. <b>Information processing</b> theory looks at how the mind monitors and steers its own processing. <b>Developmental</b> theory looks at what children can control as they grow up. <b>Social constructivist</b> theory looks at the theories learners build about themselves, tasks and strategies, with the help of others and the tools of their culture. <b>Social cognitive</b> theory looks at how the person, her behaviour and her environment keep influencing each other. Each has a solid theoretical and empirical base, the authors say, which is why they chose these five.",
+  "<b>Chapter 4 · Before, during, after: the cycle.</b> The model you will meet most often is Barry Zimmerman's <b>three phases</b>. <b>Forethought</b> comes before the task: setting goals, planning a strategy, believing you can learn it. <b>Performance control</b> happens during the task: using the strategy, monitoring and recording how it goes. <b>Self-reflection</b> comes after, and in pauses: judging your progress, explaining the result, deciding whether to keep or change the strategy, and setting a new goal. Then the circle starts again. Reading 1 introduces the cycle; reading 3 works it out in depth.",
+  "<b>Chapter 5 · From others to self.</b> Nobody starts as a self-regulated learner. Social cognitive theory describes four levels. At the <b>observation</b> level a novice watches a model use a strategy. At the <b>emulation</b> level she does it in the general style of the model, with guidance and feedback. At the <b>self-control</b> level she uses the strategy on her own. At the <b>self-regulation</b> level she adapts it to new situations. The source of the skill moves from other people to the learner herself, but social help never disappears: self-regulation is not the same as doing everything alone.",
+  "<b>Chapter 6 · In a real subject, and in a real classroom.</b> The theme then takes two more steps. Reading 2 (Thiede and de Bruin) shows self-regulation in one subject, reading: a reader must judge whether she has understood a text, and that judgment decides what she rereads. Reading 3 (Usher and Schunk) returns to the social cognitive view in depth. Together they lead to the theme's last question: how can teachers and other professionals help students regulate their own learning? Back to Anna and David: the answer is not \"tell David to try harder\", but teach him to set goals, watch his own progress and adjust, until the strategy becomes his own."
+ ],
+ "lgintro": "These are the five learning goals of Theme 3 as listed in the Pass the Year summary you shared. Reading 1 answers most of them; the table shows where. The goal about reading is answered mainly by reading 2.",
+ "lg": [
+  [
+   "How is self-regulated learning (SRL) defined, and what are its key components?",
+   "Lecture 1.1 (definition, three shared features); the components appear in 1.6 (the three phases) and 1.7 (the fourteen processes of Table 3.2)."
+  ],
+  [
+   "How do the five theoretical perspectives explain SRL? What are their limitations?",
+   "Lectures 1.2 to 1.6, one theory at a time, and the table \"five theories side by side\" in \"Reading 1 in one minute\", with the limits the chapter names."
+  ],
+  [
+   "Can you give examples of instructional practices derived from each of the five SRL theories?",
+   "The column \"Teaching that follows\" in the side-by-side table, with the practices in lectures 1.3 to 1.9."
+  ],
+  [
+   "How can SRL be applied in reading?",
+   "Mainly reading 2 (notes to follow). In reading 1: comprehension monitoring (1.4), the reading strategy of Schunk and Rice (1.3) and automatic decoding (1.5)."
+  ],
+  [
+   "How can educational professionals effectively support the development of SRL in students?",
+   "Lectures 1.7 to 1.9 (goals, feedback, monitoring, models, self-talk, the SRSD programme and self-reflection training) and 1.10 (what is still open)."
+  ]
+ ],
+ "oneintro": "The whole reading in order, in plain words. Each row gives one lecture: the idea, and the key insight that says how it works and why it matters.",
+ "friend": "\"Self-regulated learning means you steer your own learning: you set a goal, you keep an eye on how it goes, and you adjust, and you also manage your own motivation. There are five theories of it, from 'cues and rewards' to 'person, behaviour and setting influence each other in a cycle'. The research says near, concrete goals, watching your progress, and learning from someone who struggles a bit like you all help. And the good news: it can be taught, step by step, from watching a model to doing it on your own.\""
+}
