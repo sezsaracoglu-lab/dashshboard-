@@ -29,6 +29,10 @@ assert a1 in ttcode
 ttcode=ttcode.replace(a1,"if(d.fit)st.querySelectorAll('.vq').forEach(vq=>{if(vq.querySelector('.fit'))return;const f=document.createElement('div');f.className='fit';f.innerHTML='↳ <b>How it fits the theme:</b> '+d.fit;vq.appendChild(f)});")
 assert "if(!anchor)return;" in ttcode and "wrap.innerHTML=h;anchor.after(wrap)" in ttcode
 ttcode=ttcode.replace("if(!anchor)return;","").replace("wrap.innerHTML=h;anchor.after(wrap)","wrap.innerHTML=h;if(anchor)anchor.after(wrap);else{const g=st.querySelector(':scope>.gotrow')||st.querySelector(':scope>.snav');if(g)g.before(wrap);else st.appendChild(wrap)}")
+# V2EXTRAS: steps marked data-v2 keep only Think of it like + Exam tip
+a=" h+='<div class=\"chipbar\">"
+assert a in ttcode
+ttcode=ttcode.replace(a," if(st.dataset.v2){h+='<div class=\"chipbar\"><span class=\"tapl\">Tap to open ▸</span><button class=\"cbtn\" type=\"button\" data-td=\"'+k+'-a\" aria-expanded=\"false\">🧠 Think of it like…</button><button class=\"cbtn\" type=\"button\" data-td=\"'+k+'-b\" aria-expanded=\"false\">✎ Exam tip</button></div><div class=\"tdrawer\" id=\"td-'+k+'-a\">🧠 '+d.think+'</div><div class=\"tdrawer\" id=\"td-'+k+'-b\">✎ '+d.tip+'</div>';wrap.innerHTML=h;if(anchor)anchor.after(wrap);else{const g=st.querySelector(':scope>.gotrow')||st.querySelector(':scope>.snav');if(g)g.before(wrap);else st.appendChild(wrap)}return}\n"+a,1)
 helpers=L(405,445)
 scenes='\n'.join(open(f,encoding='utf-8').read() for f in ['scenes.js','scenes2.js','scenes3.js','scenes4.js'] if os.path.exists(f))
 side=L(1423,1431)
@@ -50,6 +54,7 @@ V2CSS='''.pager .pl.q{flex-wrap:nowrap;align-items:flex-start}.pager .pl.q span{
 .pager .pg.qstart{background:transparent;padding:0}.pager .pg .qq{display:block;font-family:'Cormorant Garamond',serif;font-size:1.38rem;line-height:1.25;font-weight:700;color:var(--navy);margin:0 0 12px;padding:12px 14px;background:var(--pgold);border-radius:12px}
 .pager .pg .rm{display:flex;flex-direction:column;gap:6px;margin:12px 0 4px}.pager .pg .rm>b{margin-bottom:2px}.pager .pg .rm>span{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 11px;font-size:.96rem}
 .pager .pg .rm>span>i{font-style:normal;min-width:22px;height:22px;margin-right:8px;vertical-align:1px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700}
+.qguide{background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:12px;padding:10px 14px;margin:10px 0 6px;font-size:.95rem;line-height:1.5}.qguide>b{display:block;color:var(--navy);margin-bottom:4px}.qguide ol{margin:0;padding-left:1.2em}.qguide li{margin:3px 0}
 .pager .pg.recap .rm>span>i{background:var(--ok)}
 .pager .pg .rm.tl>span>i{min-width:46px;border-radius:8px;padding:0 6px;background:var(--gold)}
 '''
