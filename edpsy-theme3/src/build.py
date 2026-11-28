@@ -35,6 +35,25 @@ side=L(1423,1431)
 gl=between(full,"let gpop=document.getElementById('gpop')","/* ---------- From zero")
 zero=between(full,"$$('.walk').forEach(w=>{const id=w.id.slice(2);$$('.step',w).forEach((st,i)=>{const z=ZERO[","/* ---------- My notebook").replace("t.closest('#w-r-craft,#w-r-play')","t.closest('#w-r-srl,#w-r-read,#w-r-sct')")
 assert '#w-r-srl' in zero
+# TEACHV2: question headers, 'What this step answers' opener
+a="if(zp){ps=[zp].concat(ps);L=['🧭 From zero'].concat(L)}"
+assert a in zero
+zero=zero.replace(a,"if(zp){ps=[zp].concat(ps);L=[zp.classList.contains('qstart')?'🧭 What this step answers':'🧭 From zero'].concat(L)}")
+b="pg.querySelector('.pl span').textContent=L[i];"
+assert b in zero
+zero=zero.replace(b,b+"pg.querySelector('.pl').classList.toggle('q',/\\?$/.test(L[i]));")
+V2CSS='''.pager .pl.q{flex-wrap:nowrap;align-items:flex-start}.pager .pl.q span{font-family:'Cormorant Garamond',serif;text-transform:none;letter-spacing:0;font-size:1.32rem;line-height:1.2;color:var(--navy);font-weight:700}
+.pager .pg .ans{display:block;background:var(--pgold);border-left:4px solid var(--gold);border-radius:10px;padding:9px 13px;margin:0 0 12px;font-weight:600;color:var(--ink)}
+.pager .pg .soth{display:block;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)}
+.pager .pg .look{display:block;margin-top:10px;background:var(--blue);border-radius:10px;padding:7px 12px;font-size:.95rem}
+.pager .pg .bridge{display:block;margin-top:10px;color:var(--dgold);font-weight:600;font-size:.95rem}
+.pager .pg.qstart{background:transparent;padding:0}.pager .pg .qq{display:block;font-family:'Cormorant Garamond',serif;font-size:1.38rem;line-height:1.25;font-weight:700;color:var(--navy);margin:0 0 12px;padding:12px 14px;background:var(--pgold);border-radius:12px}
+.pager .pg .rm{display:flex;flex-direction:column;gap:6px;margin:12px 0 4px}.pager .pg .rm>b{margin-bottom:2px}.pager .pg .rm>span{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 11px;font-size:.96rem}
+.pager .pg .rm>span>i{font-style:normal;min-width:22px;height:22px;margin-right:8px;vertical-align:1px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700}
+.pager .pg.recap .rm>span>i{background:var(--ok)}
+.pager .pg .rm.tl>span>i{min-width:46px;border-radius:8px;padding:0 6px;background:var(--gold)}
+'''
+head=head.replace('</style>',V2CSS+'</style>',1)
 nb="""/* ---------- My notebook (assets/notebook.js, private, in this browser only) ---------- */
 const NBSHORT={start:'Start here','r-srl':'Reading 1 · Self-regulation and learning','r-read':'Reading 2 · Self-regulated learning in reading','r-sct':'Reading 3 · Social cognitive perspective',apply:'Compare and apply'};
 window.SezNotebookHere=function(){const pn=document.querySelector('.panel.on');if(!pn)return null;const id=pn.id.slice(2),steps=$$('.step',pn),on=pn.querySelector('.step.on');
