@@ -25,14 +25,20 @@ scenes=''.join(rd(f) for f in sorted(os.listdir(HERE)) if re.fullmatch(r'scenes\
 s2=s2[:a]+scenes+'\n'+s2[b:]
 s2=rep(s2,'/* ================= THEME 2 · READING 1 · MOTIVATION (Linnenbrink-Garcia & Patall, 2015) ================= */','/* ================= WORLD OF WORK · THEME 2 ================= */')
 s2=rep(s2,"t.closest('#w-r-mot,#w-r-prac')","t.closest('#w-r-age')")
+# TEACHV2: question-led teaching cards (qstart opener, question headers, gold answers)
+s2=rep(s2,"if(zp){ps=[zp].concat(ps);L=['🧭 From zero'].concat(L)}","if(zp){ps=[zp].concat(ps);L=[zp.classList.contains('qstart')?'🧭 What this step answers':'🧭 From zero'].concat(L)}")
+s2=rep(s2,"L=[t.closest('#w-r-age')?'The chapter at a glance':'The article at a glance'].concat(L)}","const qs=zp&&zp.classList.contains('qstart'),ch=t.closest('#w-r-age');L=[qs?(ch?'Which chapter is this, at a glance?':'Which article is this, at a glance?'):(ch?'The chapter at a glance':'The article at a glance')].concat(L)}")
+s2=rep(s2,"pg.querySelector('.pl span').textContent=L[i];","pg.querySelector('.pl span').textContent=L[i];pg.querySelector('.pl').classList.toggle('q',/\\?$/.test(L[i]));")
 s2=re.sub(r"const NBSHORT=\{[^\n]*\n",lambda m:"const NBSHORT={start:'Start here','r-egb':'Reading 1 · Employee green behavior','r-lead':'Reading 2 · Leadership and sustainability','r-age':'Reading 3 · Engaging aging','r-aging':'Reading 4 · Supporting the aging workforce','r-ghrm':'Reading 5 · Green HR practices','r-champ':'Reading 6 · Sustainability champions','r-fb':'Reading 7 · Comparative feedback','r-self':'Reading 8 · Self-concordance',apply:'Compare and apply'};\n",s2,count=1)
 s2=rep(s2,"course:'Educational Psychology'","course:'World of Work'")
 body=rd('body.html')
 assert body.count('<div id="readingPanels"></div>')==1
 body=body.replace('<div id="readingPanels"></div>',''.join(rd(f) for f in sorted(os.listdir(HERE)) if re.fullmatch(r'body\d+\.html',f))+'\n<div id="readingPanels"></div>')
+head=rep(head,'</style>','/* TEACHV2 CSS */'+rd('v2css.css')+'.walk details.exq.tb1{display:block!important}</style>')
 head=rep(head,'<title>Theme 2 · Motivation</title>','<title>World of Work · Theme 2</title>')
 head=re.sub(r'<meta name="description" content="[^"]*">','<meta name="description" content="World of Work Theme 2: the psychology of sustainability in organizations. The readings as interactive walk-throughs: scenes to act on, teaching text in short cards, traps and exam-style questions.">',head)
 out=head+body+'\n<script>'+s1+'</script>\n<script>'+s2+'</script>'+tail
+out=rep(out,"!c.classList.contains('exq')","!(c.classList.contains('exq')&&!c.classList.contains('tb1'))")
 for bad in ['edpsy','Motivation','r-mot','r-sdt','r-prac','Educational Psychology']:
     n=out.count(bad)
     if n: print('LEFTOVER',bad,n)
