@@ -1,0 +1,136 @@
+# Theme 2 · reading 6 (Pekaar, Demerouti & van Gool, 2024, Sustainability champions): TEACHV2 cards, steps 1-5 (step 6 = take-aways)
+import sys,os
+sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),'../../wow-theme1/src'))
+from v2lib import apply_step,G,Q,CARD,RECAP,UL
+W='r-champ';S={}
+
+S[1]=dict(lbl="What is supply chain sustainability?|Why is it so hard?|Who can move it, and how?|What does the article add?|What can you now answer?",cards=[
+Q("What problem does the article start from, what is its idea, and what does it add to earlier research?",
+ "The authors are Keri Pekaar (Tilburg University and Eindhoven University of Technology), Evangelia Demerouti and Piet van Gool (Eindhoven University of Technology), in <i>Organizational Psychology Review</i> (2024). So far the theme looked inside one organization. This reading looks between organizations, where a firm's sustainability depends on partners it does not control. It is a <b>conceptual</b> article: it develops ten <b>propositions</b> (predictions for others to test) and collects no data.",
+ ["What supply chain sustainability means","Why it is hard","The idea: sustainability champions at the border","The three contributions"]),
+CARD("Taking people, planet and profit into account during a product's whole journey: raw materials, production, storage, delivery and transport.",
+ "A <b>supply chain</b> is the row of organizations a product passes through; a <b>supplier</b> sells to a <b>buying firm</b>, and the large firm leading a chain is the <b>focal firm</b>. <b>Sustainable development</b> meets present needs without compromising future generations (Brundtland Report, 1987); Elkington (1997) turned it into the <b>triple bottom line</b>: people, planet and profit. Most supply chain research covered only one of the three.",
+ "a firm is only as sustainable as the chain behind it.",
+ "why that is hard."),
+CARD("Several players must change, it is costly, and people lack the resources; and most management is demand-focused.",
+ "These are the three reasons in the authors' plain language summary; partners may lack the expertise, know-how, means or motivation to change (Villena &amp; Gioia, 2020). Good intentions are not enough: operational managers' intentions to contribute were unrelated to sustainability-promoting behavior (Masudin and colleagues, 2018). Management is <b>demand-focused</b> (steering by what is asked): it relies on regulations, policies and managerial decisions; on their own these often fail, because the employees who must act lack the resources. <i>Our analogy:</i> a group project where your grade depends on a teammate with no time and no laptop: reminders will not help; lending your laptop might.",
+ "rules from the top, on their own, often do not change what happens at the supplier's desk.",
+ "who can change it."),
+CARD("Motivated employees at the border between organizations, sustainability champions, may steer it from the bottom up by regulating their own and especially their partner's balance of sustainability demands and resources.",
+ "People who work at the border are <b>boundary spanners</b>; the motivated ones are <b>sustainability champions</b>, <b>change agents</b> where sourcing decisions are made. Central claim: a champion should improve the <b>partner's</b> balance, and so indirectly the own balance, because both are linked. The framework is <b>triadic</b>: the initiating actor, the partner, and the exchange of demands and resources between them. \"Actor\" and \"partner\" are <b>individuals</b>, not companies; implementation can start on either side.",
+ "the authors add a bottom-up route; they do not throw out top-down management.",
+ "the contributions."),
+CARD("A bottom-up solution for supply chain research, an extension of JD-R across organizations, and concrete roles for change research.",
+ UL([("1","<b>Supply chain research:</b> a behavioral, bottom-up solution, a possible missing link in a field with little work on individuals (Table 1 shows micro-level topics studied so far)."),("2","<b>JD-R theory:</b> one employee's crafting can activate an employee in <b>another organization</b>, which may build into gain or loss spirals."),("3","<b>Change research:</b> concrete roles for individuals (the initiator, the resource-providing partner).")]),
+ "every proposition is proposed, not shown.",
+ "check what you can now answer."),
+RECAP("Supply chain sustainability is hard because partners lack resources; motivated boundary spanners, sustainability champions, may steer it bottom-up by balancing their partner's demands and resources.",
+ [("What is it?","People, planet, profit along the whole chain."),("Why hard?","Many players, costly, lacking resources; demand-focused management."),("Who can move it?","Sustainability champions at the border; triadic framework."),("Adds?","Bottom-up route; JD-R across organizations; roles for change.")],
+ ["Which statement is wrong? \"Actor and partner are the two companies.\" (they are individuals)","Is this article empirical? (no: conceptual, ten propositions)"])],
+ guides=G("Five short decisions appear one at a time.","<b>Think along with the authors</b> and choose.","Each answer fills in a part of the picture."))
+
+S[2]=dict(lbl="What are sustainability demands and resources?|Why are actor and partner tied together?|What does this extend in JD-R?|What can you now answer?",cards=[
+Q("What are sustainability demands and resources, and why are those of actor and partner tied together?",
+ "The framework is built from JD-R theory (theme 1): <b>job demands</b> cost sustained effort; <b>job resources</b> help reach goals, reduce demands or support growth. People thrive when the two are in balance.",
+ ["Sustainability demands and resources (proposition 2)","How the two sides are linked (proposition 3)","What this extends in JD-R"]),
+CARD("Implementing sustainability adds extra demands and requires specific extra resources, on top of regular duties, for both actor and partner (proposition 2).",
+ "<b>Demands</b> in the article: sourcing new products, extra information, new ways of storage and transport, cultural differences, hazardous working conditions in manufacturing, compliance checks, time and money pressure. <b>Resources</b>: capital, sustainability training, autonomy, know-how, a network, managerial support. They come on top of deadlines and quality.",
+ "sustainability is extra work that needs extra resources, on both sides.",
+ "the link between the two sides."),
+CARD("Because the exchange between their firms links them: a change on one side prompts an update on the other, and demands and resources may change nature when they cross (proposition 3).",
+ "Sustainability expertise is spread over several firms, so one firm's resources are not enough: knowledge and resources have to be shared, so they cross the border. <i>The article's example:</i> a buyer asks for more sustainable packaging, so the supplier's manager gets a new demand and must find know-how, time and money. <i>Our illustration:</i> if the buyer helps with her knowledge, her own desk gets a new demand; a higher price is a resource for the supplier and a demand on the buyer's budget. <i>Our analogy:</i> a seesaw: whatever one end does moves the other.",
+ "an exam option saying a resource helps everybody's balance is wrong: across a boundary, what one receives the other may have to provide.",
+ "where this comes from in JD-R."),
+CARD("JD-R was mostly applied to one person; studies of colleagues already showed linked balances, and the authors move this across organizations.",
+ "When one employee's hindering demands (demands that only obstruct, such as administrative tasks) decreased, a colleague who took them over got more work (Tims and colleagues, 2015; Tims &amp; Parker, 2020). Here the two people work in <b>different</b> organizations and negotiate the costs. That is why proposition 3 says \"(inversely)\": what one side gains as a resource can become the other side's demand.",
+ "the seesaw now spans two companies.",
+ "check what you can now answer."),
+RECAP("Sustainability adds demands and needs resources on both sides (P2); the two sides' demands and resources are linked, sometimes inversely, and items may change nature across the border (P3).",
+ [("Demands and resources?","Sourcing, information, compliance; capital, training, autonomy, know-how."),("Linked?","Demands and resources are linked, sometimes inversely: a change on one side prompts an update on the other; a resource for one may be a demand for the other."),("JD-R extension?","From colleagues to people in different organizations.")],
+ ["Why does proposition 3 say \"(inversely) related\"?","Classify: sustainability training from the buyer, for the supplier (resource)"])],
+ guides=G("Six situations appear one at a time.","<b>Sort each</b>: a demand or a resource?","In the last three, watch <b>for whom</b> it is a demand or a resource."))
+
+S[3]=dict(lbl="Which two processes can a demand start?|When does a demand raise motivation?|When does a demand lead to undermining?|What decides the route?|What can you now answer?",cards=[
+Q("What happens in the partner when an initiator brings sustainability demands, and what decides whether the result is promoting or undermining behavior?",
+ "This is the right-hand side of the framework: inside the partner. The same demand can lead to two very different results. <i>Our analogy:</i> a teacher who raises the bar: with tutoring, students rise to it; with only extra tests and penalties, some start to cheat.",
+ ["JD-R's two processes","Proposition 4: the motivational route","Proposition 5: the impairment route","What decides between them"]),
+CARD("The motivational process (resources build motivation and performance) and the health-impairment process (chronic demands drain people and cause strain).",
+ "<b>Strain</b> is the wear from demands that keep draining a person. Resources soften the drain of demands: the <b>buffer hypothesis</b>. Proposition 4 is the motivational process and proposition 5 the impairment process, both running inside the partner.",
+ "the partner's resources decide which process wins.",
+ "the good route."),
+CARD("When the partner has high access to sustainability resources: then the demand is buffered and leads to motivation and sustainability-promoting behavior (proposition 4).",
+ "A <b>code of conduct</b> is a set of rules a buyer asks suppliers to follow; an <b>audit</b> is a formal check; a <b>price premium</b> means paying more for sustainably made goods. <b>Among colleagues:</b> an employee who raised challenging (stretching) demands together with resources seemed to increase co-workers' work enjoyment and willingness to collaborate (Fong and colleagues, 2022). <b>Among firms:</b> suppliers reduced violations when buyers gave training or price premiums along with codes of conduct and audits (Porteous and colleagues, 2015; Yawar &amp; Seuring, 2018).",
+ "demands plus resources can turn a request into motivation.",
+ "the bad route."),
+CARD("When the partner has low access to resources: then the demand may lead to strain and sustainability-undermining behavior, such as hiding practices or audit fraud (proposition 5).",
+ "<b>Sustainability-undermining behavior</b> creates obstacles and may undermine sustainability performance (Bakker &amp; Costa, 2014). Among colleagues, an employee who gave unbalanced demands and resources lowered both people's work enjoyment and raised relationship conflict (Fong and colleagues, 2022). Many buyers manage with codes, audits, fines or ending the contract. Relying on sticks (demands such as audits and fines) without carrots (resources such as training and price premiums) often fails in the long term and can push suppliers with few resources to hide information from auditors (Plambeck &amp; Taylor, 2016).",
+ "demands alone can produce the opposite of what the buyer wants.",
+ "the decisive factor."),
+CARD("The balance: the initiator's demand starts the process, the partner's resources decide the route.",
+ "The trigger sits in another organization. Both routes are propositions: until now these dynamics were only theorized or studied at the level of firms (p. 603), not tested between individual employees; proposition 5 is even worded with \"may\".",
+ "an exam option saying sustainability demands on suppliers are simply bad is wrong: the lesson is not \"ask less\" but \"give as well\".",
+ "check what you can now answer."),
+RECAP("A sustainability demand raises motivation and promoting behavior when the partner has resources (P4), but may cause strain and undermining when resources are low (P5).",
+ [("Two processes?","Motivational and health-impairment; buffer."),("P4?","High resources → motivation → promoting behavior."),("P5?","Low resources → strain → undermining (hiding, audit fraud)."),("Decides?","The balance; ask and give.")],
+ ["A supplier with few resources gets strict audits and starts hiding problems. Which proposition? (5)","Which statement is wrong? \"Sustainability demands are bad for suppliers.\""])],
+ guides=G("Six cases appear one at a time: two suppliers get the same demand.","<b>Predict first</b>: which route will it take?","Watch which route lights up, then read why."))
+
+S[4]=dict(lbl="What does it take to start?|What is partner-focused regulation?|Why is helping the partner costly?|Why should the champion regulate her own balance first?|What can you now answer?",cards=[
+Q("Which proactive strategies can a sustainability champion use, why do they cost something, and what has to be in place first?",
+ "This is the left-hand side of the framework: what the champion does. <b>Proactive</b> means acting on your own initiative. <b>Job crafting</b> (theme 1) is changing your own job demands and resources to fit your job better (Tims &amp; Bakker, 2010); the authors call crafting aimed at yourself or someone else <b>regulation</b>. <i>Our analogy:</i> the oxygen-mask rule: put on your own mask first, then help your neighbour.",
+ ["What it takes to start (proposition 1)","Partner-focused regulation (proposition 6)","Its costs (proposition 7)","Self-focused regulation first (proposition 8)"]),
+CARD("A motivated, proactive initiator who can mobilize enough sustainability resources in her own work environment (proposition 1).",
+ "It starts with a spark: the individual's own wish to work sustainably, shaped by attitudes, social norms and perceived control, especially influential when the organization's objectives are unclear (Swaim and colleagues, 2016). But a spark needs tools: autonomy, support, room to grow.",
+ "a champion needs both motivation and her own resources.",
+ "helping the partner."),
+CARD("Intentionally changing the demands and resources of a person in another organization: imposing sustainability demands and providing resources (proposition 6).",
+ "Firms call this <b>supplier development</b>: direct (investments, training) or indirect (certification, auditing). Done well, it improves the partner's balance and triggers motivation and promoting behavior. Direct strategies are the most effective in building collaboration, the long-term relationship and supplier motivation (Yawar &amp; Seuring, 2020). It requires <b>meta-knowledge</b>: knowing what the partner can handle and lacks. Unlike ordinary job crafting, the change in the other person is <b>intended</b>, and the other person works in a <b>different organization</b>.",
+ "an exam option calling partner-focused regulation just job crafting with a side effect is wrong.",
+ "the price."),
+CARD("Because what you give you no longer have: it may draw on the actor's own resources and cause an initial disbalance (proposition 7).",
+ "Crafting also takes energy and can bring role conflict, disappointment and regret in the short term, and the payoff of crafting someone else's job is even less certain. Firms that start supplier development also pay for technical support and training (Praxmarer-Carus and colleagues, 2013); it pays off in the long term (Yawar &amp; Seuring, 2020), but at first it unbalances the initiator. <i>In plain words:</i> helping the supplier can hurt your own targets at first.",
+ "partner-focused regulation is an investment with an upfront cost (the article calls it a disbalance; we would say imbalance).",
+ "the first step."),
+CARD("Self-focused regulation (optimizing own demands, seeking own resources) comes first because people with few resources protect what they have; only with a starting pool do they invest (conservation of resources theory, Hobfoll, 1989) (proposition 8).",
+ "Buyers often lack autonomy, managerial support, training, capital and room to decide, and their sustainability effort is voluntary, so the organization does not replace what they spend. <b>Self-focused regulation</b> repairs this: <b>optimizing</b> own demands and <b>seeking</b> own resources. An earlier study found these behaviors went with more daily proactive sustainability behavior (Pekaar &amp; Demerouti, 2023).",
+ "four strategies: two for me (optimize, seek) and two for my partner (impose demands, provide resources).",
+ "check what you can now answer."),
+RECAP("A champion needs motivation and resources (P1), improves the partner's balance (P6) at a cost to herself (P7), so she first regulates her own balance (P8).",
+ [("Start?","Motivated, proactive initiator with own resources."),("Partner-focused?","Intended demands and resources for a person in another firm; meta-knowledge."),("Costly?","Initial disbalance for the actor."),("Self-focused first?","Optimize demands, seek resources; COR theory.")],
+ ["Why should a champion first use self-focused regulation? (COR: invest only with a starting pool)","What is meta-knowledge here? (knowing what the partner can handle and lacks)"])],
+ guides=G("Follow Noor, a buyer (our example).","<b>Match each thing she does</b> to a tile: self-focused or partner-focused, demands or resources.","Then answer two questions about what it takes."))
+
+S[5]=dict(lbl="What happens over many exchanges?|When does a gain spiral start?|When does a loss spiral start?|How can it spread through the chain?|How could the framework be tested?|What can you now answer?",cards=[
+Q("What does the framework expect over many exchanges, how does it spread through a longer chain, and how could it be tested?",
+ "JD-R already has loops inside one person: demands, resources, behavior and outcomes strengthen each other over time (Bakker &amp; Demerouti, 2018). The article moves them between two people in different organizations. A <b>spiral</b> is a loop that strengthens itself.",
+ ["Gain spirals (proposition 9)","Loss spirals (proposition 10)","Spreading through the chain","How to test it"]),
+CARD("Each exchange changes the next one, so over many rounds the two people can lift each other up (gain spiral) or drag each other down (loss spiral).",
+ "A one-time response is not enough; sustainability needs partners who keep strengthening each other over time (Da Silva &amp; Figueiredo, 2020). Sustainability, as the authors put it citing Bouchery and colleagues (2024), is a journey, not a destination. <i>Our analogy:</i> a tennis rally: if both return playable balls the rally grows; if one only smashes, the other starts missing.",
+ "each exchange sets up the next one.",
+ "the good loop."),
+CARD("Balanced exchange is expected to build a gain spiral: the initiator shares resources and raises challenging demands while removing hindering ones through support, the partner promotes sustainability and shares back (proposition 9).",
+ "<b>Challenging</b> demands stretch people and can motivate; <b>hindering</b> demands only obstruct. By the <b>boosting hypothesis</b>, a challenging demand makes the partner's resources more valuable and prompts a search for more, which the partner then shares back. The authors cite reading 5 (Luu, 2019) as an example inside organizations, and add that in today's resource-poor supply chains gain spirals are <b>not likely</b>.",
+ "balance in the exchange is what makes the rally grow.",
+ "the bad loop."),
+CARD("With an unbalanced exchange of high demands and low resources, low sharing and undermining behavior are expected to feed each other (proposition 10).",
+ "People with few resources defend what they have; under strain they use poor strategies (poor communication, careless mistakes, conflict) that add demands. Between the two, demands without resources push the partner toward undermining and the initiator toward sharing less, which raises demands for both. Among colleagues, crafting driven by avoidance- and prevention-driven goals reduced cooperation and raised conflict (Fong and colleagues, 2022). Suppliers audited by many buyers can develop <b>audit fatigue</b>, which distracts from real improvement and may end in audit fraud (suppliers hiding information through deceptive or corrupt practices; Plambeck &amp; Taylor, 2016).",
+ "demands without resources can lock both sides into a downward loop.",
+ "beyond one pair."),
+CARD("The framework is reversible: a motivated partner can become the initiator toward its own supplier, so effects can ripple up and down the chain.",
+ "The framework looks at a <b>dyad</b> (a pair), but people in the chain have a dual role: meeting demands from above and passing demands and resources on. Fitting finding: first-tier suppliers' resources decide whether they can drive sustainability to second-tier suppliers (Wilhelm and colleagues, 2016). A <b>first-tier supplier</b> delivers directly to the focal firm.",
+ "one champion may start a chain reaction.",
+ "testing the framework."),
+CARD("With data from both sides, repeated over time, analysed with Actor-Partner Interdependence Models or simulations.",
+ "Short-term: a <b>diary</b> or event-sampling study (short questions every day or after each event). Long-term: a <b>longitudinal</b> panel (the same people measured a few times, months apart); spirals need several measurements. <b>Actor-Partner Interdependence Models</b> separate what my behavior does for me from what it does for my partner; agent-based modelling and system dynamics simulate the loops.",
+ "an exam option saying the article shows balanced exchange produces gain spirals is wrong: it proposes this.",
+ "check what you can now answer."),
+RECAP("Balanced exchange may build gain spirals (P9), unbalanced exchange loss spirals (P10); effects can ripple through the chain; testing needs dyadic, repeated data.",
+ [("Over time?","Loops between people; a journey."),("Gain spiral?","Balanced sharing and challenging demands; unlikely in resource-poor chains."),("Loss spiral?","High demands, low resources; audit fatigue."),("Chain?","Reversible; dual roles; ripple effects."),("Testing?","Both sides, repeated; APIM, simulations.")],
+ ["What is audit fatigue, and where can it lead? (distraction; audit fraud)","Which statement is wrong? \"The article shows gain spirals occur.\""])],
+ guides=G("Six rounds of exchange appear one at a time.","<b>Choose what the initiator does</b> in each round.","Watch which spiral grows."))
+
+def run(path):
+    s=open(path,encoding='utf-8').read()
+    for n,d in S.items(): s=apply_step(s,W,n,d['lbl'],d['cards'],guides=d.get('guides'))
+    open(path,'w',encoding='utf-8').write(s);print('ok',list(S))
+if __name__=='__main__': run(sys.argv[1])
