@@ -29,7 +29,9 @@ def _children(h):
 def rebuild_teach(block,lbl,cards):
     ti=block.index('<div class="teach"')
     end_candidates=[x for x in [block.find('<div class="trapb">',ti),block.find('<details class="exq',ti)] if x>=0]
-    tj=min(end_candidates)
+    if end_candidates: tj=min(end_candidates)
+    else:
+        kids=_children(block[ti:]);tj=ti+len(kids[0][1])-6  # before the teach's own </div>
     head=block[ti:tj]
     o=head.index('>')+1
     # inner = up to the teach's own closing </div> if present inside head
