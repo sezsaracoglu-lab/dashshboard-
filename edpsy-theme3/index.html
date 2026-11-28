@@ -2073,6 +2073,35 @@ setTimeout(()=>document.querySelectorAll('.step[data-v2] .scr').forEach(scr=>{co
   go('🎮 Play the game',open)}
 }),400);
 })();
+/* ---------- bottom-of-step trial (only with ?after=1|2|3) ---------- */
+(function(){const AF=new URLSearchParams(location.search).get('after');if(!['1','2','3'].includes(AF))return;
+const css=`.afbox{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;margin:18px auto 0;max-width:880px;box-shadow:0 6px 18px rgba(52,70,107,.05)}
+.afh{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;color:var(--navy);margin:0 0 10px}
+.afkey{background:var(--pgold);border-left:4px solid var(--gold);border-radius:10px;padding:10px 14px;margin:0 0 10px}.afkey>b:first-child{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dgold);margin-bottom:2px}
+.aftrap{background:var(--rose);border-radius:12px;padding:10px 14px;margin:0 0 10px}.aftrap>b:first-child{display:block;color:var(--bad);margin-bottom:2px}.aftrap .w,.aftrap .r{display:block}.aftrap .r{color:var(--ok);font-weight:600}
+.aftiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}.aftiles details{border:1.5px solid var(--line);border-radius:12px;background:#fbfaf6}.aftiles summary{cursor:pointer;padding:10px 14px;font-weight:700;color:var(--navy);list-style:none}.aftiles summary::after{content:' ▸';color:var(--muted)}.aftiles details[open] summary::after{content:' ▾'}.aftiles details>div{padding:0 14px 12px;font-size:.95rem}
+.t4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.t4 button{border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:14px 8px;font:inherit;font-weight:700;color:var(--navy);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;box-shadow:0 3px 8px rgba(52,70,107,.06)}.t4 button span{font-size:1.5rem}.t4 button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.t4p{margin-top:10px;border-radius:12px;padding:12px 16px;display:none}.t4p.on{display:block}.t4p.k{background:var(--pgold)}.t4p.t{background:var(--rose)}.t4p.t .w,.t4p.t .r{display:block}.t4p.t .r{color:var(--ok);font-weight:600}.t4p.t>b:first-child{display:none}.t4p.h,.t4p.x{background:#fbfaf6;border:1px solid var(--line)}
+.snav.affoot{align-items:center;flex-wrap:wrap}.snav.affoot .gotrow{margin:0;border:0;padding:0;background:none;flex:1}
+.lyB:not(.play)>.afbox{display:none}
+@media(max-width:700px){.aftiles{grid-template-columns:1fr}.t4{grid-template-columns:1fr 1fr}.snav.affoot .gotrow{order:-1;flex-basis:100%}}`;
+const s=document.createElement('style');s.textContent=css;document.head.appendChild(s);
+setTimeout(()=>document.querySelectorAll('.step[data-v2]').forEach(st=>{const ttx=st.querySelector(':scope>.ttx');if(!ttx)return;
+ const key=ttx.querySelector('.keyl'),dr=ttx.querySelectorAll('.tdrawer');
+ const keyH=key?key.innerHTML.replace(/^<b>★ KEY INSIGHT<\/b> · /,''):'',think=dr[0]?dr[0].innerHTML.replace(/^🧠 /,''):'',tip=dr[1]?dr[1].innerHTML.replace(/^✎ /,''):'';
+ ttx.style.display='none';
+ const panes=st.querySelectorAll(':scope>.pane'),hosts=panes.length?[...panes]:[st];
+ hosts.forEach(h=>{const ab=h.querySelector('.afterbox'),trap=ab&&ab.querySelector('.trapb'),trapH=trap?trap.innerHTML:'';if(ab)ab.style.display='none';
+  const box=document.createElement('div');box.className='afbox';
+  if(AF==='1'||AF==='2')box.innerHTML=(AF==='2'?'<div class="afh">✅ After playing: lock it in</div>':'<div class="afh">✅ Before you move on</div>')+(keyH?'<div class="afkey"><b>★ Key insight</b>'+keyH+'</div>':'')+(trapH?'<div class="aftrap">'+trapH+'</div>':'')+'<div class="aftiles"><details><summary>🧠 Think of it like…</summary><div>'+think+'</div></details><details><summary>✎ Exam tip</summary><div>'+tip+'</div></details></div>';
+  if(AF==='3'){const P=[['k','★','Key insight',keyH],['t','⚠️','The trap',trapH],['h','🧠','Think of it like',think],['x','✎','Exam tip',tip]];
+   box.innerHTML='<div class="afh">✅ Before you move on <small style="font-family:DM Sans,sans-serif;font-size:.85rem;color:var(--muted);font-weight:500">· tap a tile</small></div><div class="t4">'+P.map(p=>'<button type="button" data-k="'+p[0]+'"><span>'+p[1]+'</span>'+p[2]+'</button>').join('')+'</div>'+P.map(p=>'<div class="t4p '+p[0]+'" data-k="'+p[0]+'">'+p[3]+'</div>').join('');
+   box.querySelectorAll('.t4 button').forEach(b=>b.onclick=()=>{const on=!b.classList.contains('on');box.querySelectorAll('.t4 button').forEach(x=>x.classList.toggle('on',x===b&&on));box.querySelectorAll('.t4p').forEach(x=>x.classList.toggle('on',x.dataset.k===b.dataset.k&&on))})}
+  const scr=h.querySelector('.scr');
+  if(AF==='2'&&scr&&scr.classList.contains('lyB'))scr.appendChild(box);else if(ab)ab.after(box);else if(scr)scr.after(box)});
+ const gr=st.querySelector(':scope>.gotrow'),sn=st.querySelector(':scope>.snav');if(gr&&sn&&sn.children.length===2){sn.insertBefore(gr,sn.children[1]);sn.classList.add('affoot');const sp=gr.querySelector('span');if(sp)sp.textContent='How did it go?'}
+}),700);
+})();
 
 </script>
 <script src="https://sezsaracoglu-lab.github.io/dashshboard-/assets/sitenav.js" defer></script>
