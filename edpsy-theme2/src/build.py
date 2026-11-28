@@ -43,6 +43,8 @@ window.SezNotebookHere=function(){const pn=document.querySelector('.panel.on');i
 """
 nbtail=full[full.index("window.SezNotebookGo=function"):]
 script2=J([prelude,eng,ttcode,helpers,scenes,side,gl,zero,nb,nbtail])
+if os.path.exists('layout_b.js'):
+    _k=script2.rindex('</script>');script2=script2[:_k]+open('layout_b.js',encoding='utf-8').read()+'\n'+script2[_k:]
 body=open('body.html',encoding='utf-8').read()
 extra=open('body2.html',encoding='utf-8').read()+(open('body3.html',encoding='utf-8').read() if os.path.exists('body3.html') else '')+open('body4.html',encoding='utf-8').read()+open('body5.html',encoding='utf-8').read()
 assert '<div id="readingPanels"></div>' in body
